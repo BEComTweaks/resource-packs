@@ -1,0 +1,53 @@
+//If an item has a prefix # followed by a letter, it conflicts with those with the packs that have the same prefix
+//If an item has a prefix [] with a letter in it, it requires compatibility for other packs with the same prefix
+//If an item has a word prefix with a : followed, it is a subcategory of the main category
+- Aesthetic
+Alternate Block Destruction
+Black Nether Bricks
+Cherry Picking
+Unbundled Hay Bales
+Unbundled Dried Kelp
+Solid Honey
+Solid Slime
+Desaturated Dark Oak
+Horizontal Golden Nuggets
+Vertical Iron Nuggets
+Softer Wool
+Brown Leather
+Red Iron Golem Flowers
+Rename 'Stem' to 'Log'
+Colourful Enchanting Table Particles
+HD Shield Banner Patterns
+[a]Endless End Rods
+[a]Pink End Rods
+Unique Dyes
+Animated Campfire Items
+Ashless Campfires
+Glass Doors
+Glass Trapdoors
+Flint Tipped Arrows
+Splash Botle o' Enchanting
+[b]2D Spyglass
+[b]Accurate Spyglass
+Fencier Fences
+Smoother Warped Planks
+Consistent Bamboo Planks
+Alternate Cut Copper
+Polished Stone to Bricks
+Singular Glazed Terracotta
+Plain Leather Armor
+Golden Crown
+Classic Style Netherite Armor
+#bAllay Elytra
+#bPhantom Elytra
+#bVex Elytra
+#bDragon Elytra
+[c]MZ:Steve Zombies
+[c]MZ:Alex Zombies
+[c]MZ:Ari Zombies
+[c]MZ:Efe Zombies
+[c]MZ:Kai Zombies
+[c]MZ:Makena Zombies
+[c]MZ:Noor Zombies
+[c]MZ:Sunny Zombies
+[c]MZ:Zuri Zombies
