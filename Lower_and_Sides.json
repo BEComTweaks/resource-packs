@@ -39,7 +39,6 @@
       "pack_description": "Completely covers the sides of Mycelium Blocks to provide a smoother and mushroomier landscape.",
       "conflict": [
         "LowerMycelium",
-        "VariatedMycelium",
         "DungeonsDirt"
       ],
       "compatability": []
