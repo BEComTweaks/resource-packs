@@ -115,7 +115,8 @@
         "OldOres"
       ],
       "compatability": [
-        "BrighterNether"
+        "BrighterNether",
+        "OreBorders"
       ]
     },
     {
