@@ -204,6 +204,13 @@
       "compatability": []
     },
     {
+      "pack_id": "AccurateScaffolding",
+      "pack_name": "Accurate Scaffolding",
+      "pack_description": "Recolors Scaffolding to use Bamboo and String colors to reflect its crafting recipe.",
+      "conflict": [],
+      "compatability": ["UnobstrusiveScaffolding"]
+    },
+    {
       "pack_id": "FencierFences",
       "pack_name": "Fencier Fences",
       "pack_description": "Makes fences and fence gates less harsh by making them use a vertical plank texture rather than horizontal.",
