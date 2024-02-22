@@ -76,7 +76,7 @@
       "pack_name": "Unobstrusive Scaffolding",
       "pack_description": "Creates a hole in the top of scaffolding, allowing you to traverse up and down them more comfortably.",
       "conflict": [],
-      "compatability": []
+      "compatability": ["AccurateScaffolding"]
     },
     {
       "pack_id": "UnobstrusiveEnchantmentGlint",
