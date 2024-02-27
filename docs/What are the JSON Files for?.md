@@ -1,4 +1,6 @@
-In each JSON, you have many categories
+This is an explanation to how the JSON in the jsons folder work.
+
+In each file, you may see something like shown below
 ```json
 {
   "topic": "Category",
@@ -23,15 +25,16 @@ From the image,
 3. `Test Description` refers to `"pack_description"`
 
 However, other things that need mentioning
-1. Pack 3 and Pack 4 are green when selected.
-
-    As shown in `"conflict"`, Pack4 is there, so when both Pack 3 and Pack 4 are selected, they turn into other colors to show conflicts
-2. Pack ID and Pack Name are nearly the same
+show conflicts
+1. Pack ID and Pack Name are nearly the same
     
     VT uses a different format for Pack IDs, which make them a bit small. I wanted to finish the JSON quick, so the Pack ID is basically Pack Name without any spaces
+2. Pack 3 and Pack 4 are green when selected.
+
+    As shown in `"conflict"`, Pack4 is there, so when both Pack 3 and Pack 4 are selected, they turn into other colors to 
 3. Compatability modes do not appear
 
-    I feel compatability modes would not need marking, rather let it be automatic. If they do not conflict, then why the extra colors?
+    I feel compatability modes would not need marking, rather let it be automatic. If they do not conflict, then why the extra colors? It may be confusing after a while
 
 The folder structure should hypothetically be like this
 
@@ -45,4 +48,4 @@ The folder structure should hypothetically be like this
 
 That should be how the repository would be arranged.
 
-I plan on making a Text User Interface, rather than jumping straight to websites. I have barely any experience with HTML and Javascript, so I feel if I make a bare-bones version as a TUI with Python, it would be easier to build on top of it.
+I plan on making a [Text User Interface](https://en.wikipedia.org/wiki/Text-based_user_interface), rather than jumping straight to websites. I have barely any experience with `HTML` and `Javascript`, so I feel if I make a bare-bones version as a TUI with Python, it would be easier to build on top of it.
