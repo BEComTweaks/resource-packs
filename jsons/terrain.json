@@ -1,163 +1,142 @@
 {
-  "topic": "Terrain",
-  "packs": [
-    {
-      "pack_id": "DarkerDarkOakLeaves",
-      "pack_name": "Darker Dark Oak Leaves",
-      "pack_description": "Makes Dark Oak Leaves darker than Oak Leaves",
-      "conflict": [],
-      "compatability": []
-    },
-    {
-      "pack_id": "GoldenSavanna",
-      "pack_name": "Golden Savanna",
-      "pack_description": "Recolors Savanna biomes to have beautiful golden grass.",
-      "conflict": [],
-      "compatability": [
-        "LushGrassAllRound"
-      ]
-    },
-    {
-      "pack_id": "LushGrassAllRound",
-      "pack_name": "Lush Grass All Round",
-      "pack_description": "Makes most of the world use a lush green colormap.",
-      "conflict": [],
-      "compatability": [
-        "GoldenSavanna"
-      ]
-    },
-    {
-      "pack_id": "AlternateBedrock",
-      "pack_name": "Alternate Bedrock",
-      "pack_description": "Retextures bedrock to be closer to deepslate, making it darker and have less contrast.",
-      "conflict": [],
-      "compatability": []
-    },
-    {
-      "pack_id": "CircularSunandMoon",
-      "pack_name": "Circular Sun and Moon",
-      "pack_description": "Replaces the default sun and moon, with a circular sun and moon.",
-      "conflict": [
-        "3DSunandMoon"
-      ],
-      "compatability": []
-    },
-    {
-      "pack_id": "3DSunandMoon",
-      "pack_name": "3D Sun and Moon",
-      "pack_description": "Retextures the Sun and Moon textures to give the illusion of being 3D.",
-      "conflict": [
-        "CircularSunandMoon"
-      ],
-      "compatability": []
-    },
-    {
-      "pack_id": "CircularLogTops",
-      "pack_name": "Circular Log Tops",
-      "pack_description": "Tweaks all Log and Stripped Log tops to be circular, including Nether Fungi Stems",
-      "conflict": [],
-      "compatability": []
-    },
-    {
-      "pack_id": "SmootherOakLog",
-      "pack_name": "Smoother Oak Log",
-      "pack_description": "Smoothens the Oak Logs by reducing contrast.",
-      "conflict": [],
-      "compatability": []
-    },
-    {
-      "pack_id": "SmootherStones",
-      "pack_name": "Smoother Stones",
-      "pack_description": "Smoothens the textures of Diorite and Granite by reducing contrast.",
-      "conflict": [
-        "PolishedStonesToBricks",
-        "VariatedUnpolishedStones"
-      ],
-      "compatability": []
-    },
-    {
-      "pack_id": "PebblelessDirt",
-      "pack_name": "Pebbleless Dirt",
-      "pack_description": "Gets rid of the pebbles in Dirt, Rooted Dirt and all Grass Block types.",
-      "conflict": [
-        "AlphaFoilage",
-        "VariatedMycelium",
-        "VariatedGrass",
-        "VariatedDirt"
-      ],
-      "compatability": []
-    },
-    {
-      "pack_id": "PebblelessCoarseDirt",
-      "pack_name": "Pebbleless Coarse Dirt",
-      "pack_description": "Gets rid of the pebbles in Coarse Dirt.",
-      "conflict": [],
-      "compatability": []
-    },
-    {
-      "pack_id": "BrigherNether",
-      "pack_name": "Brigher Nether",
-      "pack_description": "Brightens the textures of blocks commonly found in the Nether.",
-      "conflict": [
-        "BlackNetherBricks",
-        "OldNetherrack"
-      ],
-      "compatability": [
-        "UniformOres",
-        "OreBorders",
-        "LowerCrimsonNylium",
-        "LowerWarpedNylium"
-      ]
-    },
-    {
-      "pack_id": "ClearerWater",
-      "pack_name": "Clearer Water",
-      "pack_description": "Makes Water clearer.",
-      "conflict": [],
-      "compatability": []
-    },
-    {
-      "pack_id": "UniformOres",
-      "pack_name": "Uniform Ores",
-      "pack_description": "Makes all ores take on the pattern of Diamond Ore.",
-      "conflict": [
-        "OldOres"
-      ],
-      "compatability": [
-        "BrighterNether",
-        "OreBorders"
-      ]
-    },
-    {
-      "pack_id": "FancySunflowers",
-      "pack_name": "Fancy Sunflowers",
-      "pack_description": "Retextures the heads of Sunflowers to bloom a bit more.",
-      "conflict": [],
-      "compatability": []
-    },
-    {
-      "pack_id": "ShorterShortGrass",
-      "pack_name": "Shorter Short Grass",
-      "pack_description": "Makes Short Grass slightly shorter.",
-      "conflict": [],
-      "compatability": []
-    },
-    {
-      "pack_id": "ShorterTallGrass",
-      "pack_name": "Shorter Tall Grass",
-      "pack_description": "Makes Tall Grass slightly shorter.",
-      "conflict": [],
-      "compatability": []
-    },
-    {
-      "pack_id": "WhiterSnow",
-      "pack_name": "Whiter Snow",
-      "pack_description": "Removes the blue tint from Snow.",
-      "conflict": [
-        "DungeonsDirt",
-        "LegacySnowball"
-      ],
-      "compatability": []
-    }
-  ]
+ "topic": "Terrain",
+ "packs": [
+  {
+   "pack_id": "DarkerDarkOakLeaves",
+   "pack_name": "Darker Dark Oak Leaves",
+   "pack_description": "Makes Dark Oak Leaves darker than Oak Leaves",
+   "conflict": [],
+   "compatability": []
+  },
+  {
+   "pack_id": "GoldenSavanna",
+   "pack_name": "Golden Savanna",
+   "pack_description": "Recolors Savanna biomes to have beautiful golden grass.",
+   "conflict": [],
+   "compatability": ["LushGrassAllRound"]
+  },
+  {
+   "pack_id": "LushGrassAllRound",
+   "pack_name": "Lush Grass All Round",
+   "pack_description": "Makes most of the world use a lush green colormap.",
+   "conflict": [],
+   "compatability": ["GoldenSavanna"]
+  },
+  {
+   "pack_id": "AlternateBedrock",
+   "pack_name": "Alternate Bedrock",
+   "pack_description": "Retextures bedrock to be closer to deepslate, making it darker and have less contrast.",
+   "conflict": [],
+   "compatability": []
+  },
+  {
+   "pack_id": "CircularSunandMoon",
+   "pack_name": "Circular Sun and Moon",
+   "pack_description": "Replaces the default sun and moon, with a circular sun and moon.",
+   "conflict": ["3DSunandMoon"],
+   "compatability": []
+  },
+  {
+   "pack_id": "3DSunandMoon",
+   "pack_name": "3D Sun and Moon",
+   "pack_description": "Retextures the Sun and Moon textures to give the illusion of being 3D.",
+   "conflict": ["CircularSunandMoon"],
+   "compatability": []
+  },
+  {
+   "pack_id": "CircularLogTops",
+   "pack_name": "Circular Log Tops",
+   "pack_description": "Tweaks all Log and Stripped Log tops to be circular, including Nether Fungi Stems",
+   "conflict": [],
+   "compatability": []
+  },
+  {
+   "pack_id": "SmootherOakLog",
+   "pack_name": "Smoother Oak Log",
+   "pack_description": "Smoothens the Oak Logs by reducing contrast.",
+   "conflict": [],
+   "compatability": []
+  },
+  {
+   "pack_id": "SmootherStones",
+   "pack_name": "Smoother Stones",
+   "pack_description": "Smoothens the textures of Diorite and Granite by reducing contrast.",
+   "conflict": ["PolishedStonesToBricks", "VariatedUnpolishedStones"],
+   "compatability": []
+  },
+  {
+   "pack_id": "PebblelessDirt",
+   "pack_name": "Pebbleless Dirt",
+   "pack_description": "Gets rid of the pebbles in Dirt, Rooted Dirt and all Grass Block types.",
+   "conflict": [
+    "AlphaFoilage",
+    "VariatedMycelium",
+    "VariatedGrass",
+    "VariatedDirt"
+   ],
+   "compatability": []
+  },
+  {
+   "pack_id": "PebblelessCoarseDirt",
+   "pack_name": "Pebbleless Coarse Dirt",
+   "pack_description": "Gets rid of the pebbles in Coarse Dirt.",
+   "conflict": [],
+   "compatability": []
+  },
+  {
+   "pack_id": "BrighterNether",
+   "pack_name": "Brighter Nether",
+   "pack_description": "Brightens the textures of blocks commonly found in the Nether.",
+   "conflict": ["BlackNetherBricks", "OldNetherrack"],
+   "compatability": [
+    "UniformOres",
+    "OreBorders",
+    "LowerCrimsonNylium",
+    "LowerWarpedNylium",
+    "ClassicOres"
+   ]
+  },
+  {
+   "pack_id": "ClearerWater",
+   "pack_name": "Clearer Water",
+   "pack_description": "Makes Water clearer.",
+   "conflict": [],
+   "compatability": []
+  },
+  {
+   "pack_id": "UniformOres",
+   "pack_name": "Uniform Ores",
+   "pack_description": "Makes all ores take on the pattern of Diamond Ore.",
+   "conflict": ["ClassicOres"],
+   "compatability": ["BrighterNether", "OreBorders"]
+  },
+  {
+   "pack_id": "FancySunflowers",
+   "pack_name": "Fancy Sunflowers",
+   "pack_description": "Retextures the heads of Sunflowers to bloom a bit more.",
+   "conflict": [],
+   "compatability": []
+  },
+  {
+   "pack_id": "ShorterShortGrass",
+   "pack_name": "Shorter Short Grass",
+   "pack_description": "Makes Short Grass slightly shorter.",
+   "conflict": [],
+   "compatability": []
+  },
+  {
+   "pack_id": "ShorterTallGrass",
+   "pack_name": "Shorter Tall Grass",
+   "pack_description": "Makes Tall Grass slightly shorter.",
+   "conflict": [],
+   "compatability": []
+  },
+  {
+   "pack_id": "WhiterSnow",
+   "pack_name": "Whiter Snow",
+   "pack_description": "Removes the blue tint from Snow.",
+   "conflict": ["DungeonsDirt", "LegacySnowball"],
+   "compatability": []
+  }
+ ]
 }

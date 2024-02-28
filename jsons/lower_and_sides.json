@@ -1,143 +1,103 @@
 {
-  "topic": "Lower and Sides",
-  "packs": [
-    {
-      "pack_id": "LowerGrass",
-      "pack_name": "Lower Grass",
-      "pack_description": "Lowers the sides of Grass Blocks  to provide a smoother and greener landscape.",
-      "conflict": [
-        "AlphaFoilage",
-        "GrassSides",
-        "DungeonsDirt"
-      ],
-      "compatability": []
-    },
-    {
-      "pack_id": "GrassSides",
-      "pack_name": "Grass Sides",
-      "pack_description": "Completely covers the sides of Grass Blocks to provide a smoother and greener landscape.",
-      "conflict": [
-        "AlphaFoilage",
-        "LowerGrass"
-      ],
-      "compatability": []
-    },
-    {
-      "pack_id": "LowerMycelium",
-      "pack_name": "Lower Mycelium",
-      "pack_description": "Lowers the sides of Mycelium Blocks to provide a smoother and mushroomier landscape.",
-      "conflict": [
-        "MyceliumSides",
-        "VariatedMycelium",
-        "DungeonsDirt"
-      ],
-      "compatability": []
-    },
-    {
-      "pack_id": "MyceliumSides",
-      "pack_name": "Mycelium Sides",
-      "pack_description": "Completely covers the sides of Mycelium Blocks to provide a smoother and mushroomier landscape.",
-      "conflict": [
-        "LowerMycelium",
-        "DungeonsDirt"
-      ],
-      "compatability": []
-    },
-    {
-      "pack_id": "LowerGrassPath",
-      "pack_name": "Lower Grass Path",
-      "pack_description": "Lowers the sides of Path Blocks to provide a smoother-looking pathway.",
-      "conflict": [
-        "GrassPathSides"
-      ],
-      "compatability": []
-    },
-    {
-      "pack_id": "GrassPathSides",
-      "pack_name": "Grass Path Sides",
-      "pack_description": "Completely covers the sides of Path Blocks to provide a smoother-looking pathway",
-      "conflict": [
-        "LowerGrassPaths"
-      ],
-      "compatability": []
-    },
-    {
-      "pack_id": "LowerPodzol",
-      "pack_name": "Lower Podzol",
-      "pack_description": "Lowers the sides of Podzol Blocks to provide a smoother and more consistent landscape.",
-      "conflict": [
-        "PodzolSides",
-        "DungeonsDirt"
-      ],
-      "compatability": []
-    },
-    {
-      "pack_id": "PodzolSides",
-      "pack_name": "Podzol Sides",
-      "pack_description": "Completely covers the sides of Podzol Blocks to provide a smoother and more consistent landscape.",
-      "conflict": [
-        "LowerPodzol",
-        "DungeonsDirt"
-      ],
-      "compatability": []
-    },
-    {
-      "pack_id": "LowerSnow",
-      "pack_name": "Lower Snow",
-      "pack_description": "Lowers the sides of Grass Blocks to provide a smoother and whiter snowy landscape.",
-      "conflict": [
-        "SnowSides",
-        "DungeonsDirt"
-      ],
-      "compatability": []
-    },
-    {
-      "pack_id": "SnowSides",
-      "pack_name": "Snow Sides",
-      "pack_description": "Completely covers the sides of Grass Blocks to provide a smoother and whiter snowy landscape.",
-      "conflict": [
-        "LowerSnow",
-        "DungeonsDirt"
-      ],
-      "compatability": []
-    },
-    {
-      "pack_id": "LowerCrimsonNylium",
-      "pack_name": "Lower Crimson Nylium",
-      "pack_description": "Lowers the sides of Crimson Nylium to provide a smoother and redder landscape.",
-      "conflict": [
-        "CrimsonNyliumSides",
-        "OldNetherrack"
-      ],
-      "compatability": []
-    },
-    {
-      "pack_id": "CrimsonNyliumSides",
-      "pack_name": "Crimson Nylium Sides",
-      "pack_description": "Completely covers the sides of Crimson Nylium to provide a smoother and redder landscape.",
-      "conflict": [
-        "LowerCrimsonNylium"
-      ],
-      "compatability": []
-    },
-    {
-      "pack_id": "LowerWarpedNylium",
-      "pack_name": "Lower Warped Nylium",
-      "pack_description": "Lowers the sides of Warped Nylium to provide a smoother and bluer landscape.",
-      "conflict": [
-        "WarpedNyliumSides",
-        "OldNetherrack"
-      ],
-      "compatability": []
-    },
-    {
-      "pack_id": "WarpedNyliumSides",
-      "pack_name": "Warped Nylium Sides",
-      "pack_description": "Completely covers the sides of Warped Nylium to provide a smoother and bluer landscape.",
-      "conflict": [
-        "LowerWarpedNylium"
-      ],
-      "compatability": []
-    }
-  ]
+ "topic": "Lower and Sides",
+ "packs": [
+  {
+   "pack_id": "LowerGrass",
+   "pack_name": "Lower Grass",
+   "pack_description": "Lowers the sides of Grass Blocks  to provide a smoother and greener landscape.",
+   "conflict": ["AlphaFoilage", "GrassSides", "DungeonsDirt"],
+   "compatability": []
+  },
+  {
+   "pack_id": "GrassSides",
+   "pack_name": "Grass Sides",
+   "pack_description": "Completely covers the sides of Grass Blocks to provide a smoother and greener landscape.",
+   "conflict": ["LowerGrass"],
+   "compatability": []
+  },
+  {
+   "pack_id": "LowerMycelium",
+   "pack_name": "Lower Mycelium",
+   "pack_description": "Lowers the sides of Mycelium Blocks to provide a smoother and mushroomier landscape.",
+   "conflict": ["MyceliumSides", "VariatedMycelium", "DungeonsDirt"],
+   "compatability": []
+  },
+  {
+   "pack_id": "MyceliumSides",
+   "pack_name": "Mycelium Sides",
+   "pack_description": "Completely covers the sides of Mycelium Blocks to provide a smoother and mushroomier landscape.",
+   "conflict": ["LowerMycelium", "DungeonsDirt"],
+   "compatability": []
+  },
+  {
+   "pack_id": "LowerGrassPath",
+   "pack_name": "Lower Grass Path",
+   "pack_description": "Lowers the sides of Path Blocks to provide a smoother-looking pathway.",
+   "conflict": ["GrassPathSides"],
+   "compatability": []
+  },
+  {
+   "pack_id": "GrassPathSides",
+   "pack_name": "Grass Path Sides",
+   "pack_description": "Completely covers the sides of Path Blocks to provide a smoother-looking pathway",
+   "conflict": ["LowerGrassPaths"],
+   "compatability": []
+  },
+  {
+   "pack_id": "LowerPodzol",
+   "pack_name": "Lower Podzol",
+   "pack_description": "Lowers the sides of Podzol Blocks to provide a smoother and more consistent landscape.",
+   "conflict": ["PodzolSides", "DungeonsDirt"],
+   "compatability": []
+  },
+  {
+   "pack_id": "PodzolSides",
+   "pack_name": "Podzol Sides",
+   "pack_description": "Completely covers the sides of Podzol Blocks to provide a smoother and more consistent landscape.",
+   "conflict": ["LowerPodzol", "DungeonsDirt"],
+   "compatability": []
+  },
+  {
+   "pack_id": "LowerSnow",
+   "pack_name": "Lower Snow",
+   "pack_description": "Lowers the sides of Grass Blocks to provide a smoother and whiter snowy landscape.",
+   "conflict": ["SnowSides", "DungeonsDirt"],
+   "compatability": []
+  },
+  {
+   "pack_id": "SnowSides",
+   "pack_name": "Snow Sides",
+   "pack_description": "Completely covers the sides of Grass Blocks to provide a smoother and whiter snowy landscape.",
+   "conflict": ["LowerSnow", "DungeonsDirt"],
+   "compatability": []
+  },
+  {
+   "pack_id": "LowerCrimsonNylium",
+   "pack_name": "Lower Crimson Nylium",
+   "pack_description": "Lowers the sides of Crimson Nylium to provide a smoother and redder landscape.",
+   "conflict": ["CrimsonNyliumSides", "OldNetherrack"],
+   "compatability": []
+  },
+  {
+   "pack_id": "CrimsonNyliumSides",
+   "pack_name": "Crimson Nylium Sides",
+   "pack_description": "Completely covers the sides of Crimson Nylium to provide a smoother and redder landscape.",
+   "conflict": ["LowerCrimsonNylium"],
+   "compatability": []
+  },
+  {
+   "pack_id": "LowerWarpedNylium",
+   "pack_name": "Lower Warped Nylium",
+   "pack_description": "Lowers the sides of Warped Nylium to provide a smoother and bluer landscape.",
+   "conflict": ["WarpedNyliumSides", "OldNetherrack"],
+   "compatability": []
+  },
+  {
+   "pack_id": "WarpedNyliumSides",
+   "pack_name": "Warped Nylium Sides",
+   "pack_description": "Completely covers the sides of Warped Nylium to provide a smoother and bluer landscape.",
+   "conflict": ["LowerWarpedNylium"],
+   "compatability": []
+  }
+ ]
 }
