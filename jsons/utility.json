@@ -9,7 +9,7 @@
    "compatability": [
     "ClassicOres",
     "BrigherNether",
-    "EmeraldtoRuby",
+    "EmeraldstoRubies",
     "UniformOres",
     "UnlitRedstoneOre"
    ]
@@ -18,7 +18,7 @@
    "pack_id": "SusSandGravelBorders",
    "pack_name": "Suspicious Sand & Gravel Borders",
    "pack_description": "Places a border around Suspicious Sand and Suspicious Gravel for easier visibility.",
-   "conflict": ["SusSandGravel"],
+   "conflict": ["SusSandandGravel"],
    "compatability": []
   },
   {
@@ -67,13 +67,6 @@
    "pack_id": "DifferentStems",
    "pack_name": "Different Stems",
    "pack_description": "Changes Melon and Pumpkin stems to reflect their fruit color.",
-   "conflict": [],
-   "compatability": []
-  },
-  {
-   "pack_id": "Age25Kelp",
-   "pack_name": "Age 25 Kelp",
-   "pack_description": "Adds flowers to the top of kelp plants when they are fully grown. [age=25].",
    "conflict": [],
    "compatability": []
   },

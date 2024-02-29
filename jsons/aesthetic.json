@@ -21,13 +21,6 @@
    "pack_description": ""
   },
   {
-   "pack_id": "CherryPicking",
-   "pack_name": "Cherry Picking",
-   "pack_description": "Changes the texture of cake to remove the large cherry in the center.",
-   "conflict": [],
-   "compatability": []
-  },
-  {
    "pack_id": "UnbundledHayBales",
    "pack_name": "Unbundled Hay Bales",
    "pack_description": "Gets rid of the red strings around the Hay Bales.",
@@ -80,7 +73,7 @@
    "pack_id": "SofterWool",
    "pack_name": "Softer Wool",
    "pack_description": "Lowers the contrast and smoothens all wool blocks.",
-   "conflict": [],
+   "conflict": ["OldWoolColors"],
    "compatability": []
   },
   {
@@ -98,7 +91,7 @@
    "compatability": []
   },
   {
-   "pack_id": "Rename'Stem'to'Log'",
+   "pack_id": "RenameStemtoLog",
    "pack_name": "Rename 'Stem' to 'Log'",
    "pack_description": "Renames 'Crimson/Warped Stem/Hyphae' to 'Crimson/Warped Log/Wood'",
    "conflict": [],
