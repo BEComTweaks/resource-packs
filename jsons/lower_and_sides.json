@@ -12,7 +12,7 @@
    "pack_id": "GrassSides",
    "pack_name": "Grass Sides",
    "pack_description": "Completely covers the sides of Grass Blocks to provide a smoother and greener landscape.",
-   "conflict": ["LowerGrass"],
+   "conflict": ["LowerGrass", "DungeonsDirt"],
    "compatability": []
   },
   {
@@ -33,14 +33,14 @@
    "pack_id": "LowerGrassPath",
    "pack_name": "Lower Grass Path",
    "pack_description": "Lowers the sides of Path Blocks to provide a smoother-looking pathway.",
-   "conflict": ["GrassPathSides"],
+   "conflict": ["GrassPathSides", "DungeonsDirt"],
    "compatability": []
   },
   {
    "pack_id": "GrassPathSides",
    "pack_name": "Grass Path Sides",
    "pack_description": "Completely covers the sides of Path Blocks to provide a smoother-looking pathway",
-   "conflict": ["LowerGrassPaths"],
+   "conflict": ["LowerGrassPaths", "DungeonsDirt"],
    "compatability": []
   },
   {
@@ -75,28 +75,28 @@
    "pack_id": "LowerCrimsonNylium",
    "pack_name": "Lower Crimson Nylium",
    "pack_description": "Lowers the sides of Crimson Nylium to provide a smoother and redder landscape.",
-   "conflict": ["CrimsonNyliumSides", "OldNetherrack"],
+   "conflict": ["CrimsonNyliumSides", "OldNetherrack", "DungeonsDirt"],
    "compatability": []
   },
   {
    "pack_id": "CrimsonNyliumSides",
    "pack_name": "Crimson Nylium Sides",
    "pack_description": "Completely covers the sides of Crimson Nylium to provide a smoother and redder landscape.",
-   "conflict": ["LowerCrimsonNylium"],
+   "conflict": ["LowerCrimsonNylium", "DungeonsDirt"],
    "compatability": []
   },
   {
    "pack_id": "LowerWarpedNylium",
    "pack_name": "Lower Warped Nylium",
    "pack_description": "Lowers the sides of Warped Nylium to provide a smoother and bluer landscape.",
-   "conflict": ["WarpedNyliumSides", "OldNetherrack"],
+   "conflict": ["WarpedNyliumSides", "OldNetherrack", "DungeonsDirt"],
    "compatability": []
   },
   {
    "pack_id": "WarpedNyliumSides",
    "pack_name": "Warped Nylium Sides",
    "pack_description": "Completely covers the sides of Warped Nylium to provide a smoother and bluer landscape.",
-   "conflict": ["LowerWarpedNylium"],
+   "conflict": ["LowerWarpedNylium", "DungeonsDirt"],
    "compatability": []
   }
  ]

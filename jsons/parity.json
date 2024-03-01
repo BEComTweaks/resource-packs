@@ -1,0 +1,97 @@
+[
+ {
+  "pack_id": "JavaBoom",
+  "pack_name": "Java Boom",
+  "pack_description": "Gives Explosion particles their texture from Minecraft: Java Edition.",
+  "conflict": ["UnobstrusiveParticles"],
+  "compatability": []
+ },
+ {
+  "pack_id": "JavaMap",
+  "pack_name": "Java Map",
+  "pack_description": "Gives all Map item variants their textures from Minecraft: Java Edition.",
+  "conflict": [],
+  "compatability": []
+ },
+ {
+  "pack_id": "JavaEnderDragonBall",
+  "pack_name": "Java Ender Dragon Ball",
+  "pack_description": "Gives the Ender Dragon's projectile its texture from Minecraft: Java Edition.",
+  "conflict": [],
+  "compatability": []
+ },
+ {
+  "pack_id": "DungeonsCreepers",
+  "pack_name": "Dungeons Creepers",
+  "pack_description": "Gives the Creeper its texture from Minecraft: Dungeons.",
+  "conflict": [],
+  "compatability": []
+ },
+ {
+  "pack_id": "DungeonsDirt",
+  "pack_name": "Dungeons Dirt",
+  "pack_description": "Gives Dirt its texture from Minecraft: Dungeons.",
+  "conflict": [
+   "LowerCrimsonNylium",
+   "CrimsonNyliumSides",
+   "LowerGrass",
+   "GrassSides",
+   "LowerMycelium",
+   "MyceliumSides",
+   "LowerPaths",
+   "PathSides",
+   "LowerPodzol",
+   "PodzolSides",
+   "LowerSnow",
+   "SnowSides",
+   "LowerWarpedNylium",
+   "WarpedNylium",
+   "WhiterSnow",
+   "VariatedDirt",
+   "SmoothCoarseDirt"
+  ],
+  "compatability": []
+ },
+ {
+  "pack_id": "DungeonsStone",
+  "pack_name": "Dungeons Stone",
+  "pack_description": "Gives Stone its texture from Minecraft: Dungeons (with 12 texture variants).",
+  "conflict": ["VariatedStone"],
+  "compatability": []
+ },
+ {
+  "pack_id": "DungeonsTerracotta",
+  "pack_name": "Dungeons Terracotta",
+  "pack_description": "Gives Terracotta its texture from Minecraft: Dungeons.",
+  "conflict": ["VariatedTerracotta"],
+  "compatability": []
+ },
+ {
+  "pack_id": "SuperSmashBrosEnderman",
+  "pack_name": "Super Smash Bros Enderman",
+  "pack_description": "Recolors and remodels Endermen to have the same palette and size as they do in 'Super Smash Bros Ultimate' .",
+  "conflict": [],
+  "compatability": []
+ },
+ {
+  "pack_id": "JavaDriedKelp",
+  "pack_name": "Java Dried Kelp",
+  "pack_description": "Gives the Dried Kelp item its texture from Minecraft: Java Edition.",
+  "conflict": [],
+  "compatability": []
+ },
+ {
+  "pack_id": "LegacyConsoleEmerald",
+  "pack_name": "Legacy Console Emerald",
+  "pack_description": "Gives the Emerald its texture from old legacy console editions of Minecraft.",
+  "conflict": ["EmeraldToRuby"],
+  "compatability": []
+ },
+ {
+  "pack_id": "LegacyConsoleSnowball",
+  "pack_name": "Legacy Console Snowball",
+  "pack_description": "Gives the Snowball its texture from old legacy console editions of Minecraft.",
+  "conflict": ["WhiterSnow"],
+  "compatability": []
+ }
+]
