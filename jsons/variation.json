@@ -19,7 +19,7 @@
    "pack_id": "VariatedGrass",
    "pack_name": "Variated Grass",
    "pack_description": "Grass will be randomized using a selection of 16 textures.",
-   "conflict": ["PebblelessDirt", "AlphaFoilage"],
+   "conflict": ["PebblelessDirt"],
    "compatability": []
   },
   {

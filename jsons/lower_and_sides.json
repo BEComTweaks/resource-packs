@@ -5,7 +5,7 @@
    "pack_id": "LowerGrass",
    "pack_name": "Lower Grass",
    "pack_description": "Lowers the sides of Grass Blocks  to provide a smoother and greener landscape.",
-   "conflict": ["AlphaFoilage", "GrassSides", "DungeonsDirt"],
+   "conflict": ["GrassSides", "DungeonsDirt"],
    "compatability": []
   },
   {

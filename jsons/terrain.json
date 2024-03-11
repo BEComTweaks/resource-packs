@@ -68,12 +68,7 @@
    "pack_id": "PebblelessDirt",
    "pack_name": "Pebbleless Dirt",
    "pack_description": "Gets rid of the pebbles in Dirt, Rooted Dirt and all Grass Block types.",
-   "conflict": [
-    "AlphaFoilage",
-    "VariatedMycelium",
-    "VariatedGrass",
-    "VariatedDirt"
-   ],
+   "conflict": ["VariatedMycelium", "VariatedGrass", "VariatedDirt"],
    "compatability": []
   },
   {

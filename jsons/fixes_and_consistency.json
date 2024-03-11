@@ -103,7 +103,7 @@
    "pack_id": "NicerFastLeaves",
    "pack_name": "Nicer Fast Leaves",
    "pack_description": "Replaces the solid block parts in leaves to a darker green when having fancy leaves disabled.",
-   "conflict": ["AlphaFoilage"],
+   "conflict": [],
    "compatability": []
   },
   {

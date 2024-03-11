@@ -23,19 +23,6 @@
    "compatability": []
   },
   {
-   "pack_id": "AlphaFoilage",
-   "pack_name": "Alpha Foilage",
-   "pack_description": "Changes the foilage textures to those of Alpha Minecraft.",
-   "conflict": [
-    "PebblelessDirt",
-    "LowerGrass",
-    "VariatedGrass",
-    "NicerFastLeaves",
-    "LushGrassAllRound"
-   ],
-   "compatability": []
-  },
-  {
    "pack_id": "ClassicOres",
    "pack_name": "Classic Ores",
    "pack_description": "Revert all ores to their pre-1.17 textures, including Copper and Deepslate ores.",
