@@ -28,13 +28,13 @@ However, other things that need mentioning
 show conflicts
 1. Pack ID and Pack Name are nearly the same
     
-    VT uses a different format for Pack IDs, which make them a bit small. I wanted to finish the JSON quick, so the Pack ID is basically Pack Name without any spaces
+    VT uses a different format for Pack IDs, which make them a bit small. I wanted to finish the JSON quick, so the Pack ID is basically Pack Name without any spaces.
 2. Pack 3 and Pack 4 are green when selected.
 
-    As shown in `"conflict"`, Pack4 is there, so when both Pack 3 and Pack 4 are selected, they turn into other colors to 
+    As shown in `"conflict"`, Pack4 is there, so when both Pack 3 and Pack 4 are selected, they turn into other colors to indicate the conflict. They should prevent the download from occuring as they conflict, so unlike Vanilla Tweaks, which allows conflicting packs to be downloaded, it is best to prevent it from being downloaded.
 3. Compatability modes do not appear
 
-    I feel compatability modes would not need marking, rather let it be automatic. If they do not conflict, then why the extra colors? It may be confusing after a while
+    I feel compatability modes would not need marking, rather let it be automatic. If they do not conflict, then why the extra colors? It may be confusing after a while.
 
 The folder structure should hypothetically be like this
 
@@ -45,6 +45,8 @@ The folder structure should hypothetically be like this
 `{pack_id}` is the pack_id from the JSON. `{pack_name}` won't be used because it has spaces in it
 
 `{compatability}` is optional as the pack may not have compatability with other packs. This may not be the same with vanillatweaks as I can't see whether there is compatability with other packs, so I have to infer them.
+
+`{compatability}` is not 1 folder, it may contain sub folders, to show every possible version, because I am not exactly sure how to combine them. If I can, I'll try, but for now, it will have every possible mode
 
 That should be how the repository would be arranged.
 
