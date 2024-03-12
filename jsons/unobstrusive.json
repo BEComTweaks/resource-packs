@@ -5,176 +5,180 @@
    "pack_id": "UnobstrusiveRain",
    "pack_name": "Unobstrusive Rain",
    "pack_description": "Reduces the amount of rain particles for easier vision.",
-   "conflict": ["PhantomRain"],
-   "compatability": []
+   "conflict": { "PhantomRain": "fun.json" },
+   "compatability": {}
   },
   {
    "pack_id": "UnobstrusiveSnow",
    "pack_name": "Unobstrusive Snow",
    "pack_description": "Reduces the amount of snow particles for easier vision.",
-   "conflict": [],
-   "compatability": []
+   "conflict": {},
+   "compatability": {}
   },
   {
    "pack_id": "UnobstrusiveParticles",
    "pack_name": "Unobstrusive Particles",
    "pack_description": "Makes many particles transparent or hollow for easier vision.",
-   "conflict": [],
-   "compatability": ["BedrockExplosion"]
+   "conflict": {},
+   "compatability": { "BedrockExplosion": "parity.json" }
   },
   {
    "pack_id": "NoCherryLeavesParticles",
    "pack_name": "No Cherry Leaves Particles",
    "pack_description": "Removes cherry leaves particles for easier visibility in cherry groves.",
-   "conflict": [],
-   "compatability": []
+   "conflict": {},
+   "compatability": {}
   },
   {
    "pack_id": "BorderlessGlass",
    "pack_name": "Borderless Glass",
    "pack_description": "Gets rid of the border on the edges of Glass to make it cleaner and more transparent.",
-   "conflict": ["CleanGlass"],
-   "compatability": []
+   "conflict": { "CleanGlass": "unobstrusive.json" },
+   "compatability": {}
   },
   {
    "pack_id": "BorderlessStainedGlass",
    "pack_name": "Borderless Stained Glass",
    "pack_description": "Gets rid of the border on the edges of Stained Glass to make them cleaner and more transparent.",
-   "conflict": ["CleanStainedGlass"],
-   "compatability": []
+   "conflict": { "CleanStainedGlass": "unobstrusive.json" },
+   "compatability": {}
   },
   {
    "pack_id": "BorderlessTintedGlass",
    "pack_name": "Borderless Tinted Glass",
    "pack_description": "Gets rid of the border on the edges of Tinted Glass to make it cleaner and more transparent.",
-   "conflict": ["CleanTintedGlass"],
-   "compatability": []
+   "conflict": { "CleanTintedGlass": "unobstrusive.json" },
+   "compatability": {}
   },
   {
    "pack_id": "CleanGlass",
    "pack_name": "Clean Glass",
    "pack_description": "Gets rid of the streaks in Glass, making it look cleaner.",
-   "conflict": ["BorderlessGlass"],
-   "compatability": []
+   "conflict": { "BorderlessGlass": "unobstrusive.json" },
+   "compatability": {}
   },
   {
    "pack_id": "CleanStainedGlass",
    "pack_name": "Clean Stained Glass",
    "pack_description": "Gets rid of the streaks in Stained Glass, making them look cleaner.",
-   "conflict": ["BorderlessStainedGlass"],
-   "compatability": []
+   "conflict": { "BorderlessStainedGlass": "unobstrusive.json" },
+   "compatability": {}
   },
   {
    "pack_id": "CleanTintedGlass",
    "pack_name": "Clean Tinted Glass",
    "pack_description": "Gets rid of the streaks in Tinted Glass, making it look cleaner.",
-   "conflict": [],
-   "compatability": []
+   "conflict": { "BorderlessTintedGlass": "unobstrusive.json" },
+   "compatability": {}
   },
   {
    "pack_id": "UnobstrusiveScaffolding",
    "pack_name": "Unobstrusive Scaffolding",
    "pack_description": "Creates a hole in the top of scaffolding, allowing you to traverse up and down them more comfortably.",
-   "conflict": [],
-   "compatability": ["AccurateScaffolding"]
+   "conflict": {},
+   "compatability": { "AccurateScaffolding": "fixes_and_consistency.json" }
   },
   {
    "pack_id": "UnobstrusiveEnchantmentGlint",
    "pack_name": "Unobstrusive Enchantment Glint",
    "pack_description": "Changes the enchantment glint to a much more sleek and less overpowering glint.",
-   "conflict": [],
-   "compatability": []
+   "conflict": {},
+   "compatability": {}
   },
   {
    "pack_id": "LowerFire",
    "pack_name": "Lower Fire",
    "pack_description": "Lowers fire for easier vision when you are burning.",
-   "conflict": [],
-   "compatability": []
+   "conflict": {},
+   "compatability": {}
   },
   {
    "pack_id": "LowerShield",
    "pack_name": "Lower Shield",
    "pack_description": "Lowers Shields in the first-person perspective to provide for wider visibility.",
-   "conflict": [],
-   "compatability": []
+   "conflict": {},
+   "compatability": {}
   },
   {
    "pack_id": "NoFog",
    "pack_name": "No Fog",
    "pack_description": "Removes the render distance fog effect.",
-   "conflict": [],
-   "compatability": []
+   "conflict": {},
+   "compatability": {}
   },
   {
    "pack_id": "TranslucentPumpkinOverlay",
    "pack_name": "Translucent Pumpkin Overlay",
    "pack_description": "Increases visibility when wearing a Pumpkin.",
-   "conflict": ["NoPumpkinOverlay"],
-   "compatability": []
+   "conflict": { "NoPumpkinOverlay": "unobstrusive.json" },
+   "compatability": {}
   },
   {
    "pack_id": "NoPumpkinOverlay",
    "pack_name": "No Pumpkin Overlay",
    "pack_description": "Removes the Pumpkin overlay completes when worn.",
-   "conflict": ["TranslucentPumpkin"],
-   "compatability": []
+   "conflict": { "TranslucentPumpkin": "unobstrusive.json" },
+   "compatability": {}
   },
   {
    "pack_id": "TranslucentSpyglassOverlay",
    "pack_name": "Translucent Spyglass Overlay",
    "pack_description": "Increases visibility when zooming in with a Spyglass.",
-   "conflict": ["WHAT", "NoSpyglassOverlay", "UselessSpyglassOverlay"],
-   "compatability": []
+   "conflict": {
+    "WHAT": "fun.json",
+    "NoSpyglassOverlay": "unobstrusive.json",
+    "UselessSpyglassOverlay": "fun.json"
+   },
+   "compatability": {}
   },
   {
    "pack_id": "NoSpyglassOverlay",
    "pack_name": "No Spyglass Overlay",
    "pack_description": "Removes the Spyglass overlay completely when zooming in.",
-   "conflict": ["WHAT", "TranslucentSpyglassOverlay", "UselessSpyglassOverlay"],
-   "compatability": []
+   "conflict": {
+    "WHAT": "fun.json",
+    "TranslucentSpyglassOverlay": "unobstrusive.json",
+    "UselessSpyglassOverlay": "fun.json"
+   },
+   "compatability": {}
   },
   {
    "pack_id": "NoVignette",
    "pack_name": "No Vignette",
    "pack_description": "Removes the darkened corners of the screen in Fancy mode.",
-   "conflict": [],
-   "compatability": []
+   "conflict": {},
+   "compatability": {}
   },
   {
    "pack_id": "NoBeaconBeam",
    "pack_name": "No Beacon Beam",
    "pack_description": "Makes the Beacon Beam invisible.",
-   "conflict": ["PixelConsistentBeaconBeam", "BaconBeam"],
-   "compatability": []
+   "conflict": {
+    "PixelConsistentBeaconBeam": "fixes_and_consistency.json",
+    "BaconBeam": "fun.json"
+   },
+   "compatability": {}
   },
   {
    "pack_id": "InvisibleTotem",
    "pack_name": "Invisible Totem",
    "pack_description": "Renders the Totem of Undying as completely invisible when in first person mode.",
-   "conflict": ["TotemShield"],
-   "compatability": []
-  },
-  {
-   "pack_id": "TotemShield",
-   "pack_name": "TotemShield",
-   "pack_description": "Renders a yellow sphere around a player if they are holding a totem. Useful in PVP.",
-   "conflict": ["InvisibleTotem"],
-   "compatability": []
+   "conflict": { "TotemShield": "utility.json" },
+   "compatability": {}
   },
   {
    "pack_id": "SmallerUtilities",
    "pack_name": "Smaller Utilities",
-   "pack_description": "Makes utility items such as Food, Totems, Firework Rockets and Potions smaller in your mainhand and offhand in first person.",
-   "conflict": ["InvisibleTotem"],
-   "compatability": []
+   "pack_description": "Makes utility items such as Food, Totems, Firework Rockets and Potions smaller.",
+   "conflict": {},
+   "compatability": {}
   },
   {
    "pack_id": "ShorterSwords",
    "pack_name": "Shorter Swords",
    "pack_description": "Moves the sword lower for easier visibility.",
-   "conflict": [],
-   "compatability": []
+   "conflict": {},
+   "compatability": {}
   }
  ]
 }

@@ -5,309 +5,309 @@
    "pack_id": "QuieterAllays",
    "pack_name": "Quieter Allays",
    "pack_description": "Decreases Allays sounds by 95%.",
-   "conflict": [],
-   "compatability": []
+   "conflict": {},
+   "compatability": {}
   },
   {
    "pack_id": "QuieterAxolotls",
    "pack_name": "Quieter Axolotls",
    "pack_description": "Decreases Axolotls sounds by 95%.",
-   "conflict": [],
-   "compatability": []
+   "conflict": {},
+   "compatability": {}
   },
   {
    "pack_id": "QuieterBats",
    "pack_name": "Quieter Bats",
    "pack_description": "Decreases Bats sounds by 95%.",
-   "conflict": [],
-   "compatability": []
+   "conflict": {},
+   "compatability": {}
   },
   {
    "pack_id": "QuieterBees",
    "pack_name": "Quieter Bees",
    "pack_description": "Decreases Bees sounds by 95%.",
-   "conflict": [],
-   "compatability": []
+   "conflict": {},
+   "compatability": {}
   },
   {
    "pack_id": "QuieterBlazes",
    "pack_name": "Quieter Blazes",
    "pack_description": "Decreases Blazes sounds by 95%. Blaze's fire crackling sounds aren't affected. Install Quiter Fire to quiten those sounds",
-   "conflict": [],
-   "compatability": []
+   "conflict": {},
+   "compatability": {}
   },
   {
    "pack_id": "QuieterCamels",
    "pack_name": "Quieter Camels",
    "pack_description": "Decreases Camels sounds by 95%.",
-   "conflict": [],
-   "compatability": []
+   "conflict": {},
+   "compatability": {}
   },
   {
    "pack_id": "QuieterChickens",
    "pack_name": "Quieter Chickens",
    "pack_description": "Decreases Chickens sounds by 95%.",
-   "conflict": [],
-   "compatability": []
+   "conflict": {},
+   "compatability": {}
   },
   {
    "pack_id": "QuieterDolphins",
    "pack_name": "Quieter Dolphins",
    "pack_description": "Decreases Dolphins sounds by 95%.",
-   "conflict": [],
-   "compatability": []
+   "conflict": {},
+   "compatability": {}
   },
   {
    "pack_id": "QuieterEnderDragon",
    "pack_name": "Quieter Ender Dragon",
    "pack_description": "Decreases Ender Dragon sounds by 95%.",
-   "conflict": [],
-   "compatability": []
+   "conflict": {},
+   "compatability": {}
   },
   {
    "pack_id": "QuieterEndermen",
    "pack_name": "Quieter Endermen",
    "pack_description": "Decreases Endermen sounds by 95%.",
-   "conflict": [],
-   "compatability": []
+   "conflict": {},
+   "compatability": {}
   },
   {
    "pack_id": "QuieterGoats",
    "pack_name": "Quieter Goats",
    "pack_description": "Decreases Goats sounds by 95%.",
-   "conflict": [],
-   "compatability": []
+   "conflict": {},
+   "compatability": {}
   },
   {
    "pack_id": "QuieterGuardians",
    "pack_name": "Quieter Guardians",
    "pack_description": "Decreases Guardians sounds by 95%.",
-   "conflict": [],
-   "compatability": []
+   "conflict": {},
+   "compatability": {}
   },
   {
    "pack_id": "QuieterHoglins",
    "pack_name": "Quieter Hoglins",
    "pack_description": "Decreases Hoglins sounds by 95%.",
-   "conflict": [],
-   "compatability": []
+   "conflict": {},
+   "compatability": {}
   },
   {
    "pack_id": "QuieterHorses",
    "pack_name": "Quieter Horses",
    "pack_description": "Decreases Horses sounds by 95%.",
-   "conflict": [],
-   "compatability": []
+   "conflict": {},
+   "compatability": {}
   },
   {
    "pack_id": "QuieterIllagers",
    "pack_name": "Quieter Illagers",
    "pack_description": "Decreases Illagers sounds by 95%.",
-   "conflict": [],
-   "compatability": []
+   "conflict": {},
+   "compatability": {}
   },
   {
    "pack_id": "QuieterIronGolems",
    "pack_name": "Quieter Iron Golems",
    "pack_description": "Decreases Iron Golems sounds by 95%.",
-   "conflict": [],
-   "compatability": []
+   "conflict": {},
+   "compatability": {}
   },
   {
    "pack_id": "QuieterLlamas",
    "pack_name": "Quieter Llamas",
    "pack_description": "Decreases Llamas sounds by 95%.",
-   "conflict": [],
-   "compatability": []
+   "conflict": {},
+   "compatability": {}
   },
   {
    "pack_id": "QuieterPandas",
    "pack_name": "Quieter Pandas",
    "pack_description": "Decreases Pandas sounds by 95%.",
-   "conflict": [],
-   "compatability": []
+   "conflict": {},
+   "compatability": {}
   },
   {
    "pack_id": "QuieterParrots",
    "pack_name": "Quieter Parrots",
    "pack_description": "Decreases Parrots sounds by 95%.",
-   "conflict": [],
-   "compatability": []
+   "conflict": {},
+   "compatability": {}
   },
   {
    "pack_id": "QuieterPhantoms",
    "pack_name": "Quieter Phantoms",
    "pack_description": "Decreases Phantoms sounds by 95%.",
-   "conflict": [],
-   "compatability": []
+   "conflict": {},
+   "compatability": {}
   },
   {
    "pack_id": "QuieterPigs",
    "pack_name": "Quieter Pigs",
    "pack_description": "Decreases Pigs sounds by 95%.",
-   "conflict": [],
-   "compatability": []
+   "conflict": {},
+   "compatability": {}
   },
   {
    "pack_id": "QuieterPiglins",
    "pack_name": "Quieter Piglins",
    "pack_description": "Decreases Piglins sounds by 95%.",
-   "conflict": [],
-   "compatability": []
+   "conflict": {},
+   "compatability": {}
   },
   {
    "pack_id": "QuieterPolarBears",
    "pack_name": "Quieter Polar Bears",
    "pack_description": "Decreases Polar Bears sounds by 95%.",
-   "conflict": [],
-   "compatability": []
+   "conflict": {},
+   "compatability": {}
   },
   {
    "pack_id": "QuieterRabbits",
    "pack_name": "Quieter Rabbits",
    "pack_description": "Decreases Rabbits sounds by 95%.",
-   "conflict": [],
-   "compatability": []
+   "conflict": {},
+   "compatability": {}
   },
   {
    "pack_id": "QuieterRavagers",
    "pack_name": "Quieter Ravagers",
    "pack_description": "Decreases Ravagers sounds by 95%.",
-   "conflict": [],
-   "compatability": []
+   "conflict": {},
+   "compatability": {}
   },
   {
    "pack_id": "QuieterSheep",
    "pack_name": "Quieter Sheep",
    "pack_description": "Decreases Sheep sounds by 95%.",
-   "conflict": [],
-   "compatability": []
+   "conflict": {},
+   "compatability": {}
   },
   {
    "pack_id": "QuieterShulkers",
    "pack_name": "Quieter Shulkers",
    "pack_description": "Decreases Shulkers sounds by 95%.",
-   "conflict": [],
-   "compatability": []
+   "conflict": {},
+   "compatability": {}
   },
   {
    "pack_id": "QuieterSilverfish",
    "pack_name": "Quieter Silverfish",
    "pack_description": "Decreases Silverfish sounds by 95%.",
-   "conflict": [],
-   "compatability": []
+   "conflict": {},
+   "compatability": {}
   },
   {
    "pack_id": "QuieterSkeletons",
    "pack_name": "Quieter Skeletons",
    "pack_description": "Decreases Skeletons sounds by 95%.",
-   "conflict": [],
-   "compatability": []
+   "conflict": {},
+   "compatability": {}
   },
   {
    "pack_id": "QuieterSlimes",
    "pack_name": "Quieter Slimes",
    "pack_description": "Decreases Slimes sounds by 95%.",
-   "conflict": [],
-   "compatability": []
+   "conflict": {},
+   "compatability": {}
   },
   {
    "pack_id": "QuieterSniffers",
    "pack_name": "Quieter Sniffers",
    "pack_description": "Decreases Sniffers sounds by 95%.",
-   "conflict": [],
-   "compatability": []
+   "conflict": {},
+   "compatability": {}
   },
   {
    "pack_id": "QuieterSnowGolems",
    "pack_name": "Quieter Snow Golems",
    "pack_description": "Decreases Snow Golems sounds by 95%.",
-   "conflict": [],
-   "compatability": []
+   "conflict": {},
+   "compatability": {}
   },
   {
    "pack_id": "QuieterSpiders",
    "pack_name": "Quieter Spiders",
    "pack_description": "Decreases Spiders sounds by 95%.",
-   "conflict": [],
-   "compatability": []
+   "conflict": {},
+   "compatability": {}
   },
   {
    "pack_id": "QuieterSquids",
    "pack_name": "Quieter Squids",
    "pack_description": "Decreases Squids sounds by 95%.",
-   "conflict": [],
-   "compatability": []
+   "conflict": {},
+   "compatability": {}
   },
   {
    "pack_id": "QuieterStriders",
    "pack_name": "Quieter Striders",
    "pack_description": "Decreases Striders sounds by 95%.",
-   "conflict": [],
-   "compatability": []
+   "conflict": {},
+   "compatability": {}
   },
   {
    "pack_id": "QuieterTadpoles",
    "pack_name": "Quieter Tadpoles",
    "pack_description": "Decreases Tadpoles sounds by 95%.",
-   "conflict": [],
-   "compatability": []
+   "conflict": {},
+   "compatability": {}
   },
   {
    "pack_id": "QuieterTurtles",
    "pack_name": "Quieter Turtles",
    "pack_description": "Decreases Turtles sounds by 95%.",
-   "conflict": [],
-   "compatability": []
+   "conflict": {},
+   "compatability": {}
   },
   {
    "pack_id": "QuieterVexes",
    "pack_name": "Quieter Vexes",
    "pack_description": "Decreases Vexes sounds by 95%.",
-   "conflict": [],
-   "compatability": []
+   "conflict": {},
+   "compatability": {}
   },
   {
    "pack_id": "QuieterVillagers",
    "pack_name": "Quieter Villagers",
    "pack_description": "Decreases Villagers sounds by 95%.",
-   "conflict": [],
-   "compatability": []
+   "conflict": {},
+   "compatability": {}
   },
   {
    "pack_id": "QuieterWardens",
    "pack_name": "Quieter Wardens",
    "pack_description": "Decreases Wardens sounds by 95%.",
-   "conflict": [],
-   "compatability": []
+   "conflict": {},
+   "compatability": {}
   },
   {
    "pack_id": "QuieterWitches",
    "pack_name": "Quieter Witches",
    "pack_description": "Decreases Witches sounds by 95%.",
-   "conflict": [],
-   "compatability": []
+   "conflict": {},
+   "compatability": {}
   },
   {
    "pack_id": "QuieterWither",
    "pack_name": "Quieter Wither",
    "pack_description": "Decreases Wither sounds by 95%.",
-   "conflict": [],
-   "compatability": []
+   "conflict": {},
+   "compatability": {}
   },
   {
    "pack_id": "QuieterWolves",
    "pack_name": "Quieter Wolves",
    "pack_description": "Decreases Wolves sounds by 95%.",
-   "conflict": [],
-   "compatability": []
+   "conflict": {},
+   "compatability": {}
   },
   {
    "pack_id": "QuieterZombies",
    "pack_name": "Quieter Zombies",
    "pack_description": "Decreases Zombies sounds by 95%.",
-   "conflict": [],
-   "compatability": []
+   "conflict": {},
+   "compatability": {}
   }
  ]
 }
