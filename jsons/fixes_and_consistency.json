@@ -75,7 +75,7 @@
    "pack_id": "ConsistentHelmets",
    "pack_name": "Consistent Helmets",
    "pack_description": "Adds nose-pieces to the helmet items that are missing them (iron, gold & diamond).",
-   "conflict": {},
+   "conflict": { "GoldenCrown": "aesthetic.json" },
    "compatability": {}
   },
   {
