@@ -1,6 +1,7 @@
-This is an explanation to how the JSON in the jsons folder work.
+# This is an explanation to how the JSON in the jsons folder work.
 
 In each file, you may see something like shown below
+
 ```json
 {
   "topic": "Category",
@@ -15,19 +16,22 @@ In each file, you may see something like shown below
   ]
 }
 ```
+
 From the example above, there is a lot going on in the json file. Even though, the objects should be self-explanatory, I will still attempt to explain them.
 > How I hope the UI would look like
 ![Alt text](image-1.png)
 
 From the image,
+
 1. `Category` refers to `"topic"`
 2. `Pack 3` refers to `"pack_name"`
 3. `Test Description` refers to `"pack_description"`
 
 However, other things that need mentioning
 show conflicts
+
 1. Pack ID and Pack Name are nearly the same
-    
+
     VT uses a different format for Pack IDs, which make them a bit small. I wanted to finish the JSON quick, so the Pack ID is basically Pack Name without any spaces.
 2. Pack 3 and Pack 4 are green when selected.
 
