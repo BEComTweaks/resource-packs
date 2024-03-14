@@ -1,7 +1,7 @@
 # Bedrock Tweaks Base
 
 A repo containing every single tweak ported from vanillatweaks.net
-Currently, it isn't exactly completed. I am currently finishing up on the JSON files required for indexing the packs. Hopefully I get that done before I start on the folders for each topic and pack.
+Currently, it isn't exactly completed. Starting on the packs related to Aesthetic
 
 Tutorial on how this works is in [`docs`](https://github.com/NSPC911/Bedrock-Tweaks-Base/tree/json-of-packs/docs)
 
