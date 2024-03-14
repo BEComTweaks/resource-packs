@@ -5,211 +5,202 @@
    "pack_id": "ClassicMinecraftLogo",
    "pack_name": "Classic Minecraft Logo",
    "pack_description": "Brings back the classic pixelated Minecraft logo from before 1.20!",
-   "conflict": {
-    "AlphaMinecraftLogo": "retro.json",
-    "BedrockEditionSubtitle": "hud_and_gui.json"
-   },
-   "compatability": {}
+   "conflict": ["AlphaMinecraftLogo", "BedrockEditionSubtitle"],
+   "compatability": []
   },
   {
    "pack_id": "AlphaMinecraftLogo",
    "pack_name": "Alpha Minecraft Logo",
    "pack_description": "Brings back the old hand-built cobblestone Minecraft logo from the alpha days!",
-   "conflict": {
-    "ClassicMinecraftLogo": "retro.json",
-    "BedrockEditionSubtitle": "hud_and_gui.json"
-   },
-   "compatability": {}
+   "conflict": ["ClassicMinecraftLogo", "BedrockEditionSubtitle"],
+   "compatability": []
   },
   {
    "pack_id": "DirtBackground",
    "pack_name": "Dirt Background",
    "pack_description": "Replaces the menu panorama with a dirt background, like in the classic versions of Minecraft. (This will appear on top of the rotating panorama, so any selected menu panorama will not appear).",
-   "conflict": {},
-   "compatability": {}
+   "conflict": [],
+   "compatability": []
   },
   {
    "pack_id": "ClassicOres",
    "pack_name": "Classic Ores",
    "pack_description": "Revert all ores to their pre-1.17 textures, including Copper and Deepslate ores.",
-   "conflict": { "UniformOres": "terrain.json" },
-   "compatability": {
-    "OreBorders": "utility.json",
-    "UnlitRedstoneOre": "utility.json"
-   }
+   "conflict": ["UniformOres"],
+   "compatability": ["OreBorders", "UnlitRedstoneOre"]
   },
   {
    "pack_id": "OldCobblestone",
    "pack_name": "Old Cobblestone",
    "pack_description": "Reverts Cobblestone to its Alpha texture.",
-   "conflict": { "VariatedCobblestone": "variation.json" },
-   "compatability": {}
+   "conflict": ["VariatedCobblestone"],
+   "compatability": []
   },
   {
    "pack_id": "Pre1.18StrippedDarkOak",
    "pack_name": "Pre-1.18 Stripped Dark Oak",
    "pack_description": "Reverts stripped dark oak to use its pre-1.18 color.",
-   "conflict": {},
-   "compatability": {}
+   "conflict": [],
+   "compatability": []
   },
   {
    "pack_id": "OldPlanks",
    "pack_name": "Old Planks",
    "pack_description": "Reverts all planks and signs to their old textures, including modern plank types.",
-   "conflict": { "SmootherWarpedPlanks": "aesthetic.json" },
-   "compatability": {}
+   "conflict": ["SmootherWarpedPlanks"],
+   "compatability": []
   },
   {
    "pack_id": "OldGravel",
    "pack_name": "Old Gravel",
    "pack_description": "Reverts Gravel to its Alpha texture.",
-   "conflict": {},
-   "compatability": {}
+   "conflict": [],
+   "compatability": []
   },
   {
    "pack_id": "OldNetherrack",
    "pack_name": "Old Netherrack",
    "pack_description": "Reverts Netherrack to its old texture, including Ores and Nylium.",
-   "conflict": {
-    "OreBorders": "utility.json",
-    "Brighter Nether": "terrain.json",
-    "LowerWarpedNylium": "lower_and_sides.json",
-    "LowerCrimsonNylium": "lower_and_sides.json"
-   },
-   "compatability": { "ClassicOres": "retro.json" }
+   "conflict": [
+    "OreBorders",
+    "Brighter Nether",
+    "LowerWarpedNylium",
+    "LowerCrimsonNylium"
+   ],
+   "compatability": ["ClassicOres"]
   },
   {
    "pack_id": "OldLava",
    "pack_name": "Old Lava",
    "pack_description": "Reverts Lava to its Alpha texture. Best with Old Netherrack.",
-   "conflict": {},
-   "compatability": {}
+   "conflict": [],
+   "compatability": []
   },
   {
    "pack_id": "OldObsidian",
    "pack_name": "Old Obsidian",
    "pack_description": "Revers Obsidian and Crying Obsidian to their old textures.",
-   "conflict": {},
-   "compatability": {}
+   "conflict": [],
+   "compatability": []
   },
   {
    "pack_id": "OldMetalBlocks",
    "pack_name": "Old Metal Blocks",
    "pack_description": "Reverts Iron Blocks, Gold Blocks, and Diamond Blocks to their Alpha textures.",
-   "conflict": {},
-   "compatability": {}
+   "conflict": [],
+   "compatability": []
   },
   {
    "pack_id": "OldWater",
    "pack_name": "Old Water",
    "pack_description": "Reverts Water to its old texture.",
-   "conflict": {},
-   "compatability": {}
+   "conflict": [],
+   "compatability": []
   },
   {
    "pack_id": "OldIce",
    "pack_name": "Old Ice",
    "pack_description": "Reverts all Ice blocks to their old textures.",
-   "conflict": {},
-   "compatability": {}
+   "conflict": [],
+   "compatability": []
   },
   {
    "pack_id": "OldLapis",
    "pack_name": "Old Lapis",
    "pack_description": "Reverts the texture of Lapis Lazuli Blocks to the Beta texture.",
-   "conflict": {},
-   "compatability": {}
+   "conflict": [],
+   "compatability": []
   },
   {
    "pack_id": "OldSponge",
    "pack_name": "Old Sponge",
    "pack_description": "Reverts the texture of Sponges to the beta texture.",
-   "conflict": {},
-   "compatability": {}
+   "conflict": [],
+   "compatability": []
   },
   {
    "pack_id": "OldWoolColors",
    "pack_name": "Old Wool Colors",
    "pack_description": "Recolors Wool and Carpet to their pre-Java 1.12 colors.",
-   "conflict": {},
-   "compatability": { "SofterWool": "aesthetic.json" }
+   "conflict": [],
+   "compatability": ["SofterWool"]
   },
   {
    "pack_id": "OldShulkerColors",
    "pack_name": "Old Shulker Colors",
    "pack_description": "Recolors Shulkers and Shulker Boxes to their pre-Java 1.12 colors.",
-   "conflict": {},
-   "compatability": {}
+   "conflict": [],
+   "compatability": []
   },
   {
    "pack_id": "PoppytoRose",
    "pack_name": "Poppy to Rose",
    "pack_description": "Changes the texture of the Poppy to the Rose from before Java 1.7.2.",
-   "conflict": {},
-   "compatability": {}
+   "conflict": [],
+   "compatability": []
   },
   {
    "pack_id": "RenameTerracottatoHardenedClay",
    "pack_name": "Rename 'Terracotta' to 'Hardened Clay'",
    "pack_description": "Renames Terracotta back to 'Hardened Clay'.",
-   "conflict": {},
-   "compatability": {}
+   "conflict": [],
+   "compatability": []
   },
   {
    "pack_id": "RenameDirtPathtoGrassPath",
    "pack_name": "Rename 'Dirt Path' to 'Grass Path'",
    "pack_description": "Renames 'Dirt Path' back to 'Grass Path'.",
-   "conflict": {},
-   "compatability": {}
+   "conflict": [],
+   "compatability": []
   },
   {
    "pack_id": "RenamePotterySherdtoPotteryShard",
    "pack_name": "Rename 'Pottery Sherd' to 'Pottery Shard'",
    "pack_description": "Renames 'Pottery Sherds' back to 'Pottery Shards'.",
-   "conflict": {},
-   "compatability": {}
+   "conflict": [],
+   "compatability": []
   },
   {
    "pack_id": "ZombiePigman",
    "pack_name": "Zombie Pigman",
    "pack_description": "Changes the texture and model of the Zombified Piglin to be closer to the old Zombie Pigman.",
-   "conflict": { "DarthXisumaPiglins": "fun.json" },
-   "compatability": {}
+   "conflict": ["DarthXisumaPiglins"],
+   "compatability": []
   },
   {
    "pack_id": "OarlessBoats",
    "pack_name": "Oarless Boats",
    "pack_description": "Removes the oars from all boat types from their item textures and entity models.",
-   "conflict": {},
-   "compatability": {}
+   "conflict": [],
+   "compatability": []
   },
   {
    "pack_id": "OldDoorSound",
    "pack_name": "Old Door Sound",
    "pack_description": "Reverts all door, trapdoor and fence gate sounds to that of before Java 1.0.",
-   "conflict": {},
-   "compatability": {}
+   "conflict": [],
+   "compatability": []
   },
   {
    "pack_id": "OldDamageSound",
    "pack_name": "Old Damage Sound",
    "pack_description": "Oof!",
-   "conflict": {},
-   "compatability": {}
+   "conflict": [],
+   "compatability": []
   },
   {
    "pack_id": "OldExplosionSound",
    "pack_name": "Old Explosion Sound",
    "pack_description": "Brings back the old explosion sounds from Alpha and Beta versions of Minecraft.",
-   "conflict": {},
-   "compatability": {}
+   "conflict": [],
+   "compatability": []
   },
   {
    "pack_id": "OldLevelUpSound",
    "pack_name": "Old Level Up Sound",
    "pack_description": "Brings back the old level up jingle when you hit increment of 5 XP levels.",
-   "conflict": {},
-   "compatability": {}
+   "conflict": [],
+   "compatability": []
   }
  ]
 }
