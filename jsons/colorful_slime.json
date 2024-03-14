@@ -26,7 +26,7 @@
    "compatability": []
   },
   {
-   "pack_id": " WhiteSlime",
+   "pack_id": "WhiteSlime",
    "pack_name": "White Slime",
    "pack_description": "Changes the color of all slime related items, blocks and entities to white.",
    "conflict": [
@@ -50,7 +50,7 @@
    "compatability": []
   },
   {
-   "pack_id": " LightGraySlime",
+   "pack_id": "LightGraySlime",
    "pack_name": "Light Gray Slime",
    "pack_description": "Changes the color of all slime related items, blocks and entities to light gray.",
    "conflict": [
@@ -74,7 +74,7 @@
    "compatability": []
   },
   {
-   "pack_id": " GraySlime",
+   "pack_id": "GraySlime",
    "pack_name": "Gray Slime",
    "pack_description": "Changes the color of all slime related items, blocks and entities to gray.",
    "conflict": [
@@ -98,7 +98,7 @@
    "compatability": []
   },
   {
-   "pack_id": " BlackSlime",
+   "pack_id": "BlackSlime",
    "pack_name": "Black Slime",
    "pack_description": "Changes the color of all slime related items, blocks and entities to black.",
    "conflict": [
@@ -122,7 +122,7 @@
    "compatability": []
   },
   {
-   "pack_id": " BrownSlime",
+   "pack_id": "BrownSlime",
    "pack_name": "Brown Slime",
    "pack_description": "Changes the color of all slime related items, blocks and entities to brown.",
    "conflict": [
@@ -146,7 +146,7 @@
    "compatability": []
   },
   {
-   "pack_id": " RedSlime",
+   "pack_id": "RedSlime",
    "pack_name": "Red Slime",
    "pack_description": "Changes the color of all slime related items, blocks and entities to red.",
    "conflict": [
@@ -170,7 +170,7 @@
    "compatability": []
   },
   {
-   "pack_id": " OrangeSlime",
+   "pack_id": "OrangeSlime",
    "pack_name": "Orange Slime",
    "pack_description": "Changes the color of all slime related items, blocks and entities to orange.",
    "conflict": [
@@ -194,7 +194,7 @@
    "compatability": []
   },
   {
-   "pack_id": " YellowSlime",
+   "pack_id": "YellowSlime",
    "pack_name": "Yellow Slime",
    "pack_description": "Changes the color of all slime related items, blocks and entities to yellow.",
    "conflict": [
@@ -218,7 +218,7 @@
    "compatability": []
   },
   {
-   "pack_id": " GreenSlime",
+   "pack_id": "GreenSlime",
    "pack_name": "Green Slime",
    "pack_description": "Changes the color of all slime related items, blocks and entities to green.",
    "conflict": [
@@ -242,7 +242,7 @@
    "compatability": []
   },
   {
-   "pack_id": " CyanSlime",
+   "pack_id": "CyanSlime",
    "pack_name": "Cyan Slime",
    "pack_description": "Changes the color of all slime related items, blocks and entities to cyan.",
    "conflict": [
@@ -266,7 +266,7 @@
    "compatability": []
   },
   {
-   "pack_id": " LightBlueSlime",
+   "pack_id": "LightBlueSlime",
    "pack_name": "Light Blue Slime",
    "pack_description": "Changes the color of all slime related items, blocks and entities to light blue.",
    "conflict": [
@@ -290,7 +290,7 @@
    "compatability": []
   },
   {
-   "pack_id": " BlueSlime",
+   "pack_id": "BlueSlime",
    "pack_name": "Blue Slime",
    "pack_description": "Changes the color of all slime related items, blocks and entities to blue.",
    "conflict": [
@@ -314,7 +314,7 @@
    "compatability": []
   },
   {
-   "pack_id": " PurpleSlime",
+   "pack_id": "PurpleSlime",
    "pack_name": "Purple Slime",
    "pack_description": "Changes the color of all slime related items, blocks and entities to purple.",
    "conflict": [
@@ -338,7 +338,7 @@
    "compatability": []
   },
   {
-   "pack_id": " MagentaSlime",
+   "pack_id": "MagentaSlime",
    "pack_name": "Magenta Slime",
    "pack_description": "Changes the color of all slime related items, blocks and entities to magenta.",
    "conflict": [
@@ -362,7 +362,7 @@
    "compatability": []
   },
   {
-   "pack_id": " PinkSlime",
+   "pack_id": "PinkSlime",
    "pack_name": "Pink Slime",
    "pack_description": "Changes the color of all slime related items, blocks and entities to pink.",
    "conflict": [

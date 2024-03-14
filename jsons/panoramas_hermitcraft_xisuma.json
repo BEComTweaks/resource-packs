@@ -29,7 +29,8 @@
     "Xisuma'sHermitcraftBaseSeason7",
     "Xisuma'sHermitcraftBaseSeason8",
     "Xisuma'sHermitcraftBaseSeason9"
-   ]
+   ],
+   "compatability": []
   },
   {
    "pack_id": "Xisuma'sHermitcraftBaseSeason2",
@@ -59,7 +60,8 @@
     "Xisuma'sHermitcraftBaseSeason7",
     "Xisuma'sHermitcraftBaseSeason8",
     "Xisuma'sHermitcraftBaseSeason9"
-   ]
+   ],
+   "compatability": []
   },
   {
    "pack_id": "Xisuma'sHermitcraftBaseSeason3",
@@ -89,7 +91,8 @@
     "Xisuma'sHermitcraftBaseSeason7",
     "Xisuma'sHermitcraftBaseSeason8",
     "Xisuma'sHermitcraftBaseSeason9"
-   ]
+   ],
+   "compatability": []
   },
   {
    "pack_id": "Xisuma'sHermitcraftBaseSeason4",
@@ -119,7 +122,8 @@
     "Xisuma'sHermitcraftBaseSeason7",
     "Xisuma'sHermitcraftBaseSeason8",
     "Xisuma'sHermitcraftBaseSeason9"
-   ]
+   ],
+   "compatability": []
   },
   {
    "pack_id": "Xisuma'sHermitcraftBaseSeason5",
@@ -149,7 +153,8 @@
     "Xisuma'sHermitcraftBaseSeason7",
     "Xisuma'sHermitcraftBaseSeason8",
     "Xisuma'sHermitcraftBaseSeason9"
-   ]
+   ],
+   "compatability": []
   },
   {
    "pack_id": "Xisuma'sHermitcraftBaseSeason6",
@@ -179,7 +184,8 @@
     "Xisuma'sHermitcraftBaseSeason7",
     "Xisuma'sHermitcraftBaseSeason8",
     "Xisuma'sHermitcraftBaseSeason9"
-   ]
+   ],
+   "compatability": []
   },
   {
    "pack_id": "Xisuma'sHermitcraftBaseSeason7",
@@ -209,7 +215,8 @@
     "Xisuma'sHermitcraftBaseSeason6",
     "Xisuma'sHermitcraftBaseSeason8",
     "Xisuma'sHermitcraftBaseSeason9"
-   ]
+   ],
+   "compatability": []
   },
   {
    "pack_id": "Xisuma'sHermitcraftBaseSeason8",
@@ -239,7 +246,8 @@
     "Xisuma'sHermitcraftBaseSeason6",
     "Xisuma'sHermitcraftBaseSeason7",
     "Xisuma'sHermitcraftBaseSeason9"
-   ]
+   ],
+   "compatability": []
   },
   {
    "pack_id": "Xisuma'sHermitcraftBaseSeason9",
@@ -269,7 +277,8 @@
     "Xisuma'sHermitcraftBaseSeason6",
     "Xisuma'sHermitcraftBaseSeason7",
     "Xisuma'sHermitcraftBaseSeason8"
-   ]
+   ],
+   "compatability": []
   }
  ]
 }
