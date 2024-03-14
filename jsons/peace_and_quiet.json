@@ -1,0 +1,96 @@
+{
+ "topic": "Peace and Quiet",
+ "packs": [
+  {
+   "pack_id": "QuieterRain",
+   "pack_name": "Quieter Rain",
+   "pack_description": "Decreases Rain sounds by 95%.",
+   "conflict": [],
+   "compatability": []
+  },
+  {
+   "pack_id": "QuieterThunder",
+   "pack_name": "Quieter Thunder",
+   "pack_description": "Decreases Thunder sounds by 95%.",
+   "conflict": [],
+   "compatability": []
+  },
+  {
+   "pack_id": "QuieterExplosions",
+   "pack_name": "Quieter Explosions",
+   "pack_description": "Decreases Explosions sounds by 95%.",
+   "conflict": [],
+   "compatability": []
+  },
+  {
+   "pack_id": "QuieterDispensersandDroppers",
+   "pack_name": "Quieter Dispensers and Droppers",
+   "pack_description": "Decreases Dispensers and Droppers sounds by 95%.",
+   "conflict": [],
+   "compatability": []
+  },
+  {
+   "pack_id": "QuieterMinecarts",
+   "pack_name": "Quieter Minecarts",
+   "pack_description": "Decreases Minecarts sounds by 95%.",
+   "conflict": [],
+   "compatability": []
+  },
+  {
+   "pack_id": "QuieterFire",
+   "pack_name": "Quieter Fire",
+   "pack_description": "Decreases Fire sounds by 95%.",
+   "conflict": [],
+   "compatability": []
+  },
+  {
+   "pack_id": "QuieterNetherPortals",
+   "pack_name": "Quieter Nether Portals",
+   "pack_description": "Decreases Nether Portals sounds by 95%.",
+   "conflict": [],
+   "compatability": []
+  },
+  {
+   "pack_id": "QuieterWater",
+   "pack_name": "Quieter Water",
+   "pack_description": "Decreases Water sounds by 95%.",
+   "conflict": [],
+   "compatability": []
+  },
+  {
+   "pack_id": "QuieterConsumables",
+   "pack_name": "Quieter Consumables",
+   "pack_description": "Decreases Consumables sounds by 95%.",
+   "conflict": [],
+   "compatability": []
+  },
+  {
+   "pack_id": "QuieterSculkSensors",
+   "pack_name": "Quieter Sculk Sensors",
+   "pack_description": "Decreases Sculk Sensors sounds by 95%.",
+   "conflict": [],
+   "compatability": []
+  },
+  {
+   "pack_id": "QuieterSculkShriekers",
+   "pack_name": "Quieter Sculk Shriekers",
+   "pack_description": "Decreases Sculk Shriekers sounds by 95%.",
+   "conflict": [],
+   "compatability": []
+  },
+  {
+   "pack_id": "QuieterPistons",
+   "pack_name": "Quieter Pistons",
+   "pack_description": "Decreases Pistons sounds by 95%.",
+   "conflict": [],
+   "compatability": []
+  },
+  {
+   "pack_id": "NoCaveSounds",
+   "pack_name": "No Cave Sounds",
+   "pack_description": "Mutes the spooky cave sounds.",
+   "conflict": [],
+   "compatability": []
+  }
+ ]
+}
