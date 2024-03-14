@@ -1,4 +1,4 @@
-# This is an explanation to how the JSON in the jsons folder work.
+# This is an explanation to how the JSON in the jsons folder work
 
 In each file, you may see something like shown below
 
