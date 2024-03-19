@@ -1,4 +1,4 @@
-from module_checker import module_checker as mc
+from custom_functions import module_checker as mc
 from json import *
 from os import mkdir,getcwd,listdir
 mc("clrprint") #Check for clrprint module
