@@ -131,7 +131,7 @@
     "HeartCrosshair",
     "ArrowCrosshair"
    ],
-   "compatabilities": []
+   "compatability": []
   },
   {
    "pack_id": "SquareCrosshair",
@@ -151,7 +151,7 @@
     "HeartCrosshair",
     "ArrowCrosshair"
    ],
-   "compatabilities": []
+   "compatability": []
   },
   {
    "pack_id": "SquareDotCrosshair",
@@ -171,7 +171,7 @@
     "HeartCrosshair",
     "ArrowCrosshair"
    ],
-   "compatabilities": []
+   "compatability": []
   },
   {
    "pack_id": "SquarePlusCrosshair",
@@ -191,7 +191,7 @@
     "HeartCrosshair",
     "ArrowCrosshair"
    ],
-   "compatabilities": []
+   "compatability": []
   },
   {
    "pack_id": "SquarePlusDotCrosshair",
@@ -211,7 +211,7 @@
     "HeartCrosshair",
     "ArrowCrosshair"
    ],
-   "compatabilities": []
+   "compatability": []
   },
   {
    "pack_id": "4AngledCrosshair",
@@ -231,7 +231,7 @@
     "HeartCrosshair",
     "ArrowCrosshair"
    ],
-   "compatabilities": []
+   "compatability": []
   },
   {
    "pack_id": "4AngledDotCrosshair",
@@ -251,7 +251,7 @@
     "HeartCrosshair",
     "ArrowCrosshair"
    ],
-   "compatabilities": []
+   "compatability": []
   },
   {
    "pack_id": "HeartCrosshair",
@@ -271,7 +271,7 @@
     "4AngledDotCrosshair",
     "ArrowCrosshair"
    ],
-   "compatabilities": []
+   "compatability": []
   },
   {
    "pack_id": "ArrowCrosshair",
@@ -291,7 +291,7 @@
     "4AngledDotCrosshair",
     "HeartCrosshair"
    ],
-   "compatabilities": []
+   "compatability": []
   },
   {
    "pack_id": "WitherHearts",
