@@ -44,6 +44,30 @@
    "compatability": []
   },
   {
+   "pack_id": "SolidSlime",
+   "pack_name": "Solid Slime",
+   "pack_description": "Eliminates Slime Block transparency.",
+   "conflict": [],
+   "compatability": [
+    "WhiteSlime",
+    "LightGraySlime",
+    "GraySlime",
+    "BlackSlime",
+    "BrownSlime",
+    "RedSlime",
+    "OrangeSlime",
+    "YellowSlime",
+    "GreenSlime",
+    "CyanSlime",
+    "LightBlueSlime",
+    "BlueSlime",
+    "PurpleSlime",
+    "MagentaSlime",
+    "PinkSlime",
+    "RainbowSlime"
+   ]
+  },
+  {
    "pack_id": "DesaturatedPurpur",
    "pack_name": "Desaturated Purpur",
    "pack_description": "Desaturates the color of all purpur blocks.",
