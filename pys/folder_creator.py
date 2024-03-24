@@ -19,35 +19,47 @@ for i in range(len(listdir(f'{cdir}/jsons'))):
     file = loads(js.read())
     js.close()
     
+    # Main Topic Directory
     try:
         mkdir(f'{cdir}/packs/{file["topic"].lower()}')
-        clrprint(f'Made Directory {file["topic"].lower()}',clr='purple')
+        clrprint('Made directory',f'{file["topic"].lower()}',clr='p,w')
     except FileExistsError:
-        clrprint(f'{file["topic"].lower()} already exists!',clr='red')
+        clrprint(f'{file["topic"].lower()}','already exists!',clr='w,r')
 
     for i in range(len(file["packs"])):
         print("\n")
-        #wait(0.1)
-        try:
-            mkdir(f'{cdir}/packs/{file["topic"].lower()}/{file["packs"][i]["pack_id"]}')
-            clrprint(f'Made Sub-Directory {file["packs"][i]["pack_id"]}',clr='magenta')
-            x = open(f'{cdir}/packs/{file["topic"].lower()}/{file["packs"][i]["pack_id"]}/pack_icon.png','w')
-            x.write(icon.read())
-            x.close()
-            clrprint(f'Made `pack_icon.png` at {cdir}/packs/{file["topic"].lower()}/{file["packs"][i]["pack_id"]}/',clr='green')
-        except FileExistsError:
-            clrprint(f'{file["packs"][i]["pack_id"]} already exists!',clr='red')
         
+        # Pack Name Directory
+        try:
+            mkdir(f'{cdir}/packs/{file["topic"].lower()}/{file["packs"][i]["pack_id"]}/')
+            clrprint('Made folder',f'`{file["packs"][i]["pack_id"]}`',clr='m,w')
+        except FileExistsError:
+            clrprint('Folder',f'`{file["packs"][i]["pack_id"]}`','already exists!',clr='r,w,r')
+
+        # Pack Default Directory
+        try:
+            mkdir(f'{cdir}/packs/{file["topic"].lower()}/{file["packs"][i]["pack_id"]}/default')
+            clrprint(f'|--> Made folder','`default`',clr='b,w')
+        except FileExistsError:
+            clrprint(f'|--> Folder','`default`','already exists!',clr='y,w,y')
+
+        # Pack Default Directory temporary image
+        x = open(f'{cdir}/packs/{file["topic"].lower()}/{file["packs"][i]["pack_id"]}/default/pack_icon.png','w')
+        x.write(icon.read())
+        x.close()
+        clrprint('|--|--> Made','`pack_icon.png`',clr='g,w')
 
         for c in file["packs"][i]["compatability"]:
-            #wait(0.1)
+            # Pack Name Compatabilities Directory
             try:
                 mkdir(f'{cdir}/packs/{file["topic"].lower()}/{file["packs"][i]["pack_id"]}/{c}')
-                clrprint(f'|--> Made Sub-Sub-Directory {c}',clr='blue')
-                x = open(f'{cdir}/packs/{file["topic"].lower()}/{file["packs"][i]["pack_id"]}/{c}/pack_icon.png','w')
-                x.write(icon.read())
-                x.close()
-                clrprint(f'|--> Made `pack_icon.png` at {cdir}/packs/{file["topic"].lower()}/{file["packs"][i]["pack_id"]}/{c}/',clr='green')
+                clrprint('|--> Made folder',f'`{c}`',clr='b,w')
             except FileExistsError:
-                clrprint(f'|--> Conflict {c} already exists!',clr='yellow')
+                clrprint('|--> Folder',f'`{c}`','already exists!',clr='y,w,y')
+            
+            # Pack Compatabilities Directory temporary file
+            x = open(f'{cdir}/packs/{file["topic"].lower()}/{file["packs"][i]["pack_id"]}/{c}/pack_icon.png','w')            
+            x.write(icon.read())
+            x.close()
+            clrprint('|--|--> Made file','`pack_icon.png`',clr='g,w')
     print("\n","="*40,"\n")
