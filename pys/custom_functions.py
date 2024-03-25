@@ -1,31 +1,28 @@
+from os import getcwd
 import importlib
-import subprocess
 import pip
 from pip import main
-from time import sleep as wait
-def module_checker(module):
+import time
+# If I need a module that isn't installed
+def check(module):
     try:
         importlib.import_module(module)
     except ModuleNotFoundError:
         print(f"{module} is not installed!")
-        wait(0.25)
-        print("Installing with subprocess...")
-        try:
-            subprocess.check_call(["pip", "install", module])
-            print(f"{module} has been installed!")
-            print("Exiting to main program...")
-            wait(1)
-        except ModuleNotFoundError and FileNotFoundError:
-            # Invoked from CMD
-            print("")
-            print("Subprocess failed!")
-            wait(0.25)
-            print("Installing with pip...")
-            try:
-                pip.main(["install",module])
-                print(f"{module} has been installed!")
-                print("Exiting to main program...")
-                wait(1)
+        # Using pip instead of subprocess as calling
+        # with terminal results in an error
+        pip.main(["install",module])
+        time.sleep(1)
 
-            except:
-                raise Exception("Installation failed!")
+# For module to be easy to use and not require
+# the start of the program to be cluttered
+currentdir,currentdirs = "",getcwd()
+for i in currentdirs:
+    if ord(i) == 92:
+        currentdir += "/"
+    else:
+        currentdir += i
+currentdir = currentdir[:-4]
+# Yeah...
+def cdir():
+    return currentdir
