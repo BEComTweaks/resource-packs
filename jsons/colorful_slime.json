@@ -21,7 +21,8 @@
     "PurpleSlime",
     "MagentaSlime",
     "PinkSlime",
-    "RainbowSlime"
+    "RainbowSlime",
+    "MonochromeSlime"
    ],
    "compatability": []
   },
@@ -45,7 +46,8 @@
     "PurpleSlime",
     "MagentaSlime",
     "PinkSlime",
-    "RainbowSlime"
+    "RainbowSlime",
+    "MonochromeSlime"
    ],
    "compatability": []
   },
@@ -69,7 +71,8 @@
     "PurpleSlime",
     "MagentaSlime",
     "PinkSlime",
-    "RainbowSlime"
+    "RainbowSlime",
+    "MonochromeSlime"
    ],
    "compatability": []
   },
@@ -93,7 +96,8 @@
     "PurpleSlime",
     "MagentaSlime",
     "PinkSlime",
-    "RainbowSlime"
+    "RainbowSlime",
+    "MonochromeSlime"
    ],
    "compatability": []
   },
@@ -117,7 +121,8 @@
     "PurpleSlime",
     "MagentaSlime",
     "PinkSlime",
-    "RainbowSlime"
+    "RainbowSlime",
+    "MonochromeSlime"
    ],
    "compatability": []
   },
@@ -141,7 +146,8 @@
     "PurpleSlime",
     "MagentaSlime",
     "PinkSlime",
-    "RainbowSlime"
+    "RainbowSlime",
+    "MonochromeSlime"
    ],
    "compatability": []
   },
@@ -165,7 +171,8 @@
     "PurpleSlime",
     "MagentaSlime",
     "PinkSlime",
-    "RainbowSlime"
+    "RainbowSlime",
+    "MonochromeSlime"
    ],
    "compatability": []
   },
@@ -189,7 +196,8 @@
     "PurpleSlime",
     "MagentaSlime",
     "PinkSlime",
-    "RainbowSlime"
+    "RainbowSlime",
+    "MonochromeSlime"
    ],
    "compatability": []
   },
@@ -213,7 +221,8 @@
     "PurpleSlime",
     "MagentaSlime",
     "PinkSlime",
-    "RainbowSlime"
+    "RainbowSlime",
+    "MonochromeSlime"
    ],
    "compatability": []
   },
@@ -237,7 +246,8 @@
     "PurpleSlime",
     "MagentaSlime",
     "PinkSlime",
-    "RainbowSlime"
+    "RainbowSlime",
+    "MonochromeSlime"
    ],
    "compatability": []
   },
@@ -261,7 +271,8 @@
     "PurpleSlime",
     "MagentaSlime",
     "PinkSlime",
-    "RainbowSlime"
+    "RainbowSlime",
+    "MonochromeSlime"
    ],
    "compatability": []
   },
@@ -285,7 +296,8 @@
     "PurpleSlime",
     "MagentaSlime",
     "PinkSlime",
-    "RainbowSlime"
+    "RainbowSlime",
+    "MonochromeSlime"
    ],
    "compatability": []
   },
@@ -309,7 +321,8 @@
     "PurpleSlime",
     "MagentaSlime",
     "PinkSlime",
-    "RainbowSlime"
+    "RainbowSlime",
+    "MonochromeSlime"
    ],
    "compatability": []
   },
@@ -333,7 +346,8 @@
     "BlueSlime",
     "MagentaSlime",
     "PinkSlime",
-    "RainbowSlime"
+    "RainbowSlime",
+    "MonochromeSlime"
    ],
    "compatability": []
   },
@@ -357,7 +371,8 @@
     "BlueSlime",
     "PurpleSlime",
     "PinkSlime",
-    "RainbowSlime"
+    "RainbowSlime",
+    "MonochromeSlime"
    ],
    "compatability": []
   },
@@ -381,14 +396,15 @@
     "BlueSlime",
     "PurpleSlime",
     "MagentaSlime",
-    "RainbowSlime"
+    "RainbowSlime",
+    "MonochromeSlime"
    ],
    "compatability": []
   },
   {
    "pack_id": "RainbowSlime",
    "pack_name": "Rainbow Slime",
-   "pack_description": "Changes the color of all slime related items, blocks and entities to a random color.\nAll of them changes texture when rejoining world/reloading chunks!",
+   "pack_description": "Changes the color of all slime related items, blocks and entities to a random rainbow color.\nAll of them changes texture when rejoining world/reloading chunks!",
    "conflict": [
     "HoneySlime",
     "WhiteSlime",
@@ -406,7 +422,32 @@
     "PurpleSlime",
     "MagentaSlime",
     "PinkSlime",
-    "RainbowSlime"
+    "MonochromeSlime"
+   ],
+   "compatability": []
+  },
+  {
+   "pack_id": "MonochromeSlime",
+   "pack_name": "Monochrome Slime",
+   "pack_description": "Changes the color of all slime related items, blocks and entities to a random monochromatic color.\nAll of them changes texture when rejoining world/reloading chunks!",
+   "conflict": [
+    "HoneySlime",
+    "WhiteSlime",
+    "LightGraySlime",
+    "GraySlime",
+    "BlackSlime",
+    "BrownSlime",
+    "RedSlime",
+    "OrangeSlime",
+    "YellowSlime",
+    "GreenSlime",
+    "CyanSlime",
+    "LightBlueSlime",
+    "BlueSlime",
+    "PurpleSlime",
+    "MagentaSlime",
+    "PinkSlime",
+    "MonochromeSlime"
    ],
    "compatability": []
   }
