@@ -1,0 +1,20 @@
+"slime_block" : {
+	"textures" : [
+		{
+			"variations": [
+				{
+					"path":"textures/blocks/slime_white"
+				},
+				{
+					"path": "textures/blocks/slime_lightgray"
+				},
+				{
+					"path": "textures/blocks/slime_gray"
+				},
+				{
+					"path": "textures/blocks/slime_black"
+				}
+			]
+		}
+	]
+}
