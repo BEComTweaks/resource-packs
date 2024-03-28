@@ -100,8 +100,15 @@
    "pack_id": "SofterWool",
    "pack_name": "Softer Wool",
    "pack_description": "Lowers the contrast and smoothens all wool blocks.",
-   "conflict": [],
-   "compatability": ["OldWoolColors"]
+   "conflict": ["CleanWool", "OldWoolColors"],
+   "compatability": []
+  },
+  {
+   "pack_id": "CleanWool",
+   "pack_name": "Clean Wool",
+   "pack_description": "Makes all wool blocks have a clean texture.",
+   "conflict": ["SofterWool", "OldWoolColors"],
+   "compatability": []
   },
   {
    "pack_id": "BrownLeather",

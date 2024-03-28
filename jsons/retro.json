@@ -122,8 +122,8 @@
    "pack_id": "OldWoolColors",
    "pack_name": "Old Wool Colors",
    "pack_description": "Recolors Wool and Carpet to their pre-Java 1.12 colors.",
-   "conflict": [],
-   "compatability": ["SofterWool"]
+   "conflict": ["CleanWool", "SofterWool"],
+   "compatability": []
   },
   {
    "pack_id": "OldShulkerColors",
