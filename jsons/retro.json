@@ -126,6 +126,13 @@
    "compatability": []
   },
   {
+   "pack_id": "OldBedIcons",
+   "pack_name": "Old Bed Icons",
+   "pack_description": "Changes Bed item models to look like regular items (with updated textures) like before 1.12.",
+   "conflict": [],
+   "compatability": []
+  },
+  {
    "pack_id": "OldShulkerColors",
    "pack_name": "Old Shulker Colors",
    "pack_description": "Recolors Shulkers and Shulker Boxes to their pre-Java 1.12 colors.",
