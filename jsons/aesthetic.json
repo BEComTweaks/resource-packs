@@ -230,13 +230,20 @@
    "compatability": []
   },
   {
-   "pack_id": "SmootherWarpedPlanks",
-   "pack_name": "Smoother Warped Planks",
-   "pack_description": "Removes that harsh contrast from Warped Planks",
-   "conflict": ["OldPlanks"],
-   "compatability": []
-  },
-  {
+    "pack_id": "SmootherWarpedPlanks",
+    "pack_name": "Smoother Warped Planks",
+    "pack_description": "Removes that harsh contrast from Warped Planks",
+    "conflict": ["OldPlanks"],
+    "compatability": []
+   },
+   {
+    "pack_id": "CrimsonerCrimson",
+    "pack_name": "Crimsoner Crimson",
+    "pack_description": "Recolours all Crimson Wood related blocks and items to be redder, matching the shades in Crimson Nylium and Wart blocks closer.",
+    "conflict": ["OldPlanks"],
+    "compatability": []
+   },
+   {
    "pack_id": "AlternateCutCopper",
    "pack_name": "Alternate Cut Copper",
    "pack_description": "Retextures Cut Copper blocks to resemble their look from their first appearance on Minecraft Live.",
