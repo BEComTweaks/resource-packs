@@ -7,7 +7,6 @@ from clrprint import *
 from shutil import copy as copyfile
 
 print("="*40, "\n")
-icon = open(f'{cdir()}/pack_icon.png',"r")
 showerror = bool(int(input("Show error?\n(0 = No, 1 = Yes)\n")))
 for c in range(len(os.listdir(f'{cdir()}/jsons'))):
     js = open(f"{cdir()}/jsons/{os.listdir(f'{cdir()}/jsons')[c]}","r")
@@ -67,4 +66,3 @@ for c in range(len(os.listdir(f'{cdir()}/jsons'))):
                 else:
                     pass
     print("\n","="*40,"\n")
-icon.close()
