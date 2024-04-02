@@ -44,6 +44,31 @@
    "compatability": []
   },
   {
+   "pack_id": "SolidSlime",
+   "pack_name": "Solid Slime",
+   "pack_description": "Eliminates Slime Block transparency.",
+   "conflict": [],
+   "compatability": [
+    "WhiteSlime",
+    "OrangeSlime",
+    "MagentaSlime",
+    "LightBlueSlime",
+    "YellowSlime",
+    "PinkSlime",
+    "GraySlime",
+    "LightGraySlime",
+    "CyanSlime",
+    "PurpleSlime",
+    "BlueSlime",
+    "BrownSlime",
+    "GreenSlime",
+    "RedSlime",
+    "BlackSlime",
+    "RainbowSlime",
+    "MonochromeSlime"
+   ]
+  },
+  {
    "pack_id": "DesaturatedPurpur",
    "pack_name": "Desaturated Purpur",
    "pack_description": "Desaturates the color of all purpur blocks.",
@@ -75,8 +100,15 @@
    "pack_id": "SofterWool",
    "pack_name": "Softer Wool",
    "pack_description": "Lowers the contrast and smoothens all wool blocks.",
-   "conflict": [],
-   "compatability": ["OldWoolColors"]
+   "conflict": ["CleanWool", "OldWoolColors"],
+   "compatability": []
+  },
+  {
+   "pack_id": "CleanWool",
+   "pack_name": "Clean Wool",
+   "pack_description": "Makes all wool blocks have a clean texture.",
+   "conflict": ["SofterWool", "OldWoolColors"],
+   "compatability": []
   },
   {
    "pack_id": "BrownLeather",
@@ -198,13 +230,20 @@
    "compatability": []
   },
   {
-   "pack_id": "SmootherWarpedPlanks",
-   "pack_name": "Smoother Warped Planks",
-   "pack_description": "Removes that harsh contrast from Warped Planks",
-   "conflict": ["OldPlanks"],
-   "compatability": []
-  },
-  {
+    "pack_id": "SmootherWarpedPlanks",
+    "pack_name": "Smoother Warped Planks",
+    "pack_description": "Removes that harsh contrast from Warped Planks",
+    "conflict": ["OldPlanks"],
+    "compatability": []
+   },
+   {
+    "pack_id": "CrimsonerCrimson",
+    "pack_name": "Crimsoner Crimson",
+    "pack_description": "Recolours all Crimson Wood related blocks and items to be redder, matching the shades in Crimson Nylium and Wart blocks closer.",
+    "conflict": ["OldPlanks"],
+    "compatability": []
+   },
+   {
    "pack_id": "AlternateCutCopper",
    "pack_name": "Alternate Cut Copper",
    "pack_description": "Retextures Cut Copper blocks to resemble their look from their first appearance on Minecraft Live.",
