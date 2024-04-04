@@ -1,0 +1,12 @@
+"podzol": {
+	"isotropic": {
+		"down": true,
+		"up": true
+	},
+	"sound": "gravel",
+	"textures": {
+		"down": "dirt_podzol_bottom",
+		"side": "dirt_podzol_top",
+		"up": "dirt_podzol_top"
+	}
+}

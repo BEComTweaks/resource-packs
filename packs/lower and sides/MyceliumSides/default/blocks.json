@@ -1,0 +1,12 @@
+"mycelium": {
+	"isotropic": {
+		"down": true,
+		"up": true
+	},
+	"sound": "grass",
+	"textures": {
+		"down": "mycelium_bottom",
+		"side": "mycelium_top",
+		"up": "mycelium_top"
+	}
+}
