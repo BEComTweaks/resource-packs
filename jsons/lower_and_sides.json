@@ -30,8 +30,8 @@
    "compatability": []
   },
   {
-   "pack_id": "LowerGrassPath",
-   "pack_name": "Lower Grass Path",
+   "pack_id": "LowerGrassPaths",
+   "pack_name": "Lower Grass Paths",
    "pack_description": "Lowers the sides of Path Blocks to provide a smoother-looking pathway.",
    "conflict": ["GrassPathSides", "DungeonsDirt"],
    "compatability": []
