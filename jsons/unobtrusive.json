@@ -1,23 +1,23 @@
 {
- "topic": "Unobstrusive",
+ "topic": "Unobtrusive",
  "packs": [
   {
-   "pack_id": "UnobstrusiveRain",
-   "pack_name": "Unobstrusive Rain",
+   "pack_id": "UnobtrusiveRain",
+   "pack_name": "Unobtrusive Rain",
    "pack_description": "Reduces the amount of rain particles for easier vision.",
    "conflict": ["PhantomRain"],
    "compatability": []
   },
   {
-   "pack_id": "UnobstrusiveSnow",
-   "pack_name": "Unobstrusive Snow",
+   "pack_id": "UnobtrusiveSnow",
+   "pack_name": "Unobtrusive Snow",
    "pack_description": "Reduces the amount of snow particles for easier vision.",
    "conflict": [],
    "compatability": []
   },
   {
-   "pack_id": "UnobstrusiveParticles",
-   "pack_name": "Unobstrusive Particles",
+   "pack_id": "UnobtrusiveParticles",
+   "pack_name": "Unobtrusive Particles",
    "pack_description": "Makes many particles transparent or hollow for easier vision.",
    "conflict": [],
    "compatability": ["BedrockExplosion"]
@@ -72,15 +72,15 @@
    "compatability": []
   },
   {
-   "pack_id": "UnobstrusiveScaffolding",
-   "pack_name": "Unobstrusive Scaffolding",
+   "pack_id": "UnobtrusiveScaffolding",
+   "pack_name": "Unobtrusive Scaffolding",
    "pack_description": "Creates a hole in the top of scaffolding, allowing you to traverse up and down them more comfortably.",
    "conflict": [],
    "compatability": ["AccurateScaffolding"]
   },
   {
-   "pack_id": "UnobstrusiveEnchantmentGlint",
-   "pack_name": "Unobstrusive Enchantment Glint",
+   "pack_id": "UnobtrusiveEnchantmentGlint",
+   "pack_name": "Unobtrusive Enchantment Glint",
    "pack_description": "Changes the enchantment glint to a much more sleek and less overpowering glint.",
    "conflict": [],
    "compatability": []
