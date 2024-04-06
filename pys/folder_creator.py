@@ -73,5 +73,5 @@ for c in range(len(os.listdir(f'{cdir()}/jsons'))):
                         clrprint('|-------> Folder',f'`{c}`','already exists!',clr='y,w,y')
                     else:
                         pass
-            if showerror != 0:
-                print("\n","="*40,"\n")
+        if showerror != 0:
+            print("\n","="*40,"\n")
