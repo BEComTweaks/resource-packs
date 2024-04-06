@@ -110,14 +110,21 @@
    "pack_id": "TranslucentPumpkinOverlay",
    "pack_name": "Translucent Pumpkin Overlay",
    "pack_description": "Increases visibility when wearing a Pumpkin.",
-   "conflict": ["NoPumpkinOverlay"],
+   "conflict": ["NoPumpkinOverlay","OrangePumpkinOverlay"],
+   "compatability": []
+  },
+  {
+   "pack_id": "OrangePumpkinOverlay",
+   "pack_name": "Orange Pumpkin Overlay",
+   "pack_description": "Makes Pumpkin overlay orange tinted.",
+   "conflict": ["NoPumpkinOverlay","TranslucentPumpkinOverlay"],
    "compatability": []
   },
   {
    "pack_id": "NoPumpkinOverlay",
    "pack_name": "No Pumpkin Overlay",
    "pack_description": "Removes the Pumpkin overlay completes when worn.",
-   "conflict": ["TranslucentPumpkin"],
+   "conflict": ["TranslucentPumpkin","OrangePumpkinOverlay"],
    "compatability": []
   },
   {
@@ -166,6 +173,13 @@
    "pack_id": "ShorterSwords",
    "pack_name": "Shorter Swords",
    "pack_description": "Moves the sword lower for easier visibility.",
+   "conflict": [],
+   "compatability": []
+  },
+  {
+   "pack_id": "InvisibleItemFrames",
+   "pack_name": "Invisible Item Frames",
+   "pack_description": "Makes normal and glowing item frames invisible. (Careful, you might loose them :P)",
    "conflict": [],
    "compatability": []
   }
