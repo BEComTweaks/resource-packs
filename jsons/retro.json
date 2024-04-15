@@ -2,9 +2,9 @@
     "topic": "Retro",
     "packs": [
      {
-      "pack_id": "ClassicMinecraftLogo",
-      "pack_name": "Classic Minecraft Logo",
-      "pack_description": "Brings back the classic pixelated Minecraft logo from before 1.20!",
+      "pack_id": "OldBedrockMenu",
+      "pack_name": "Old Bedrock Menu",
+      "pack_description": "Brings back the pre-1.17.30 Minecraft title.",
       "conflict": ["AlphaMinecraftLogo", "BedrockEditionSubtitle"],
       "compatability": []
      },
@@ -12,7 +12,7 @@
       "pack_id": "AlphaMinecraftLogo",
       "pack_name": "Alpha Minecraft Logo",
       "pack_description": "Brings back the old hand-built cobblestone Minecraft logo from the alpha days!",
-      "conflict": ["ClassicMinecraftLogo", "BedrockEditionSubtitle"],
+      "conflict": ["OldBedrockMenu", "BedrockEditionSubtitle"],
       "compatability": []
      },
      {
