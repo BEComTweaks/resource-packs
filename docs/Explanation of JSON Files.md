@@ -19,6 +19,7 @@ In each file, you may see something like shown below
 
 From the example above, there is a lot going on in the json file. Even though, the objects should be self-explanatory, I will still attempt to explain them.
 > How I hope the UI would look like
+
 ![Alt text](image-1.png)
 
 From the image,
@@ -28,7 +29,6 @@ From the image,
 3. `Test Description` refers to `"pack_description"`
 
 However, other things that need mentioning
-show conflicts
 
 1. Pack ID and Pack Name are nearly the same
 
@@ -42,15 +42,38 @@ show conflicts
 
 The folder structure should hypothetically be like this
 
-`{topic}/{pack_id}/{compatability}`
+`/packs/{topic}/{pack_id}/{compatability}`
 
-`{topic}` is the topic from the JSON
+- `{topic}`
+	
+	Topic from the JSON
+	
+- `{pack_id}`
+	
+	Pack ID from the JSON. `{pack_name}` won't be used because it has spaces in it
+	
+- `{compatability}`
+	
+	This is hard to explain.
+	
+	Here is an example of the json of a pack
+	
+  ```json
+  {
+     "pack_id": "UpdatedObserverTexture",
+     "pack_name": "Updated Observer Texture",
+     "pack_description": "Changes the Observer's top texture to fit in-line with the 1.14 default textures, as it was left out in that update.",
+     "conflict": [],
+     "compatability": ["DirectionalObservers"]
+  }
+  ```
+	
+  In this example, Updated Observer Texture has a compatability mode with Directional Observers
+	
+  This means that the folder structure would be like this
 
-`{pack_id}` is the pack_id from the JSON. `{pack_name}` won't be used because it has spaces in it
-
-`{compatability}` is optional as the pack may not have compatability with other packs. This may not be the same with vanillatweaks as I can't see whether there is compatability with other packs, so I have to infer them.
-
-`{compatability}` is not 1 folder, it may contain sub folders, to show every possible version, because I am not exactly sure how to combine them. If I can, I'll try, but for now, it will have every possible mode
+  ![structure](https://github.com/NSPC911/Bedrock-Tweaks-Base/assets/87571998/8cae8ab6-9b80-40e6-bd59-08a7ad5ad856)
+	
 
 That should be how the repository would be arranged.
 
