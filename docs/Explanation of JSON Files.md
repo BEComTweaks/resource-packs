@@ -72,7 +72,7 @@ The folder structure should hypothetically be like this
 	
   This means that the folder structure would be like this
 
-  ![structure](https://github.com/NSPC911/Bedrock-Tweaks-Base/assets/87571998/8cae8ab6-9b80-40e6-bd59-08a7ad5ad856)
+  ![structure](image-2.png)
 	
 
 That should be how the repository would be arranged.
