@@ -2,7 +2,7 @@ name: Nightly Script Run Test
 
 on:
   schedule:
-    - cron: '*/2 * * * *' # Runs every 2 minutes
+    - cron: '0 */2 * * *' # Runs every 2 minutes
 
 jobs:
   check_and_run_script:
