@@ -10,7 +10,7 @@ jobs:
     
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@v3  # Make sure it's properly aligned
+        uses: actions/checkout@v4  # Make sure it's properly aligned
 
       - name: Check for Commits
         id: check_commits
