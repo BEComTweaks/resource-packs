@@ -11,7 +11,7 @@ jobs:
     
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@v3  # Note: This should be updated to Node.js 20 soon.
+        uses: actions/checkout@v4  # Note: This should be updated to Node.js 20 soon.
 
       - name: Check for Commits
         id: check_commits
