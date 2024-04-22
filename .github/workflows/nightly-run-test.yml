@@ -1,0 +1,32 @@
+name: Nightly Script Run Test
+
+on:
+  schedule:
+    - cron: '*/10 * * * *'  # Run every 10 minutes for testing
+
+jobs:
+  check_and_run_script:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3  # Check out the repository to the runner
+
+      - name: Check for Commits
+        id: check_commits
+        run: |
+          # Get the list of commits from the past 24 hours
+          RECENT_COMMITS=$(git log --since=yesterday --pretty=format:'%H')
+          
+          if [ -z "$RECENT_COMMITS" ]; then
+            echo "No recent commits found. Workflow will end."
+            exit 0  # Exit if no commits found
+          else
+            echo "Commits found in the last 24 hours."
+            echo "::set-output name=has_commits::true"
+
+      - name: Run Python Script
+        if: steps.check_commits.outputs.has_commits == 'true'  # Run only if there are commits
+        run: |
+          cd pys  # Navigate to the `pys` folder
+          python incomplete_packs_updater.py  # Execute the script
