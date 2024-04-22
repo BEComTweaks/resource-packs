@@ -1,9 +1,8 @@
 name: Nightly Script Run Test
 
-# Define the trigger to run at midnight UTC daily
 on:
   schedule:
-    - cron: '0 0 * * *'
+    - cron: '*/2 * * * *' # Runs every 2 minutes
 
 jobs:
   check_and_run_script:
@@ -11,23 +10,23 @@ jobs:
     
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@v4  # Note: This should be updated to Node.js 20 soon.
+        uses: actions/checkout@v3  # Make sure it's properly aligned
 
       - name: Check for Commits
         id: check_commits
         run: |
-          # Get the list of commits from the past 24 hours
-          RECENT_COMMITS=$(git log --since=yesterday --pretty=format:'%H')
-          
+          # Ensure the script is properly formatted
+          RECENT_COMMITS=$(git log --since=yesterday --pretty=format:'%H')  # Ensure this ends with a newline
+
           if [ -z "$RECENT_COMMITS" ]; then
-            echo "No recent commits found. Exiting."
-            exit 0  # No commits, exit
+            echo "No recent commits found."
+            exit 0  # Properly close with newline
           else
             echo "Commits found."
             echo "::set-output name=has_commits::true"
 
       - name: Run Python Script
-        if: steps.check_commits.outputs.has_commits == 'true'  # Only if there are commits
+        if: steps.check_commits.outputs.has_commits == 'true'
         run: |
-          cd pys
-          python incomplete_packs_updater.py  # Ensure this is the correct path
+          cd pys  # Ensure each block is separated by a newline
+          python incomplete_packs_updater.py
