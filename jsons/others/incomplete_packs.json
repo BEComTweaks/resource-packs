@@ -125,29 +125,8 @@
     "QuieterSculkShriekers"
   ],
   "Retro": [
-    "OldPlanks",
-    "OldGravel",
-    "OldNetherrack",
-    "OldLava",
-    "OldObsidian",
-    "OldMetalBlocks",
-    "OldWater",
-    "OldIce",
-    "OldLapis",
-    "OldSponge",
-    "OldWoolColors",
-    "OnlyBedIcons",
-    "OldShulkerColors",
-    "PoppytoRose",
-    "RenameTerracottatoHardenedClay",
-    "RenameDirtPathtoGrassPath",
-    "RenamePotterySherdtoPotteryShard",
-    "ZombiePigman",
-    "OarlessBoats",
-    "OldDoorSound",
-    "OldDamageSound",
-    "OldExplosionSound",
-    "OldLevelUpSound"
+    "OldBedIcons",
+    "RenamePotterySherdtoPotteryShard"
   ],
   "Terrain": [
     "GoldenSavanna",
