@@ -29,7 +29,7 @@ for c in range(len(os.listdir(f'{cdir()}/jsons/packs'))):
 # Just some fancy code to update README.md
 with open(f"{cdir()}/README.md", "r") as file:
     content = file.read()
-badge_pattern = r"(https://img.shields.io/badge/Completed_Packs-)(\d+%2F\d+)(-yellow)"
+badge_pattern = r"(https://img.shields.io/badge/Completed_Packs-)(\d+%2F\d+)(-blue)"
 badge_match = re.search(badge_pattern, content)
 if badge_match:
     new_badge_url = f"{badge_match.group(1)}{stats[0]}%2F{stats[0]+stats[1]}{badge_match.group(3)}"
