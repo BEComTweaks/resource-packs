@@ -7,7 +7,10 @@ stats = [0,0]
 incomplete_packs = {}
 for c in range(len(os.listdir(f'{cdir()}/jsons/packs'))):
     with open(f"{cdir()}/jsons/packs/{os.listdir(f'{cdir()}/jsons/packs')[c]}","r") as js:
-        file = loads(js.read())
+        try:
+            file = loads(js.read())
+        except JSONDecodeError:
+            raise SyntaxError(f"{os.listdir(f'{cdir()}/jsons/packs')[c]} has a skill issue.\nPerhaps you are missing a comma?")
     for i in range(len(file["packs"])):
         try:
             if os.listdir(f'{cdir()}/packs/{file["topic"].lower()}/{file["packs"][i]["pack_id"]}/default') == []:

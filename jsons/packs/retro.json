@@ -5,14 +5,14 @@
       "pack_id": "OldBedrockMenuTitle",
       "pack_name": "Old Bedrock Menu Title",
       "pack_description": "Brings back the pre-1.17.30 Minecraft title.",
-      "conflict": ["AlphaMinecraftLogo", "BedrockEditionSubtitle"],
+      "conflict": ["AlphaMinecraftLogo", "BedrockEditionSubtitle","JavaMenuTitle"],
       "compatability": []
      },
      {
       "pack_id": "AlphaMinecraftLogo",
       "pack_name": "Alpha Minecraft Logo",
       "pack_description": "Brings back the old hand-built cobblestone Minecraft logo from the alpha days!",
-      "conflict": ["OldBedrockMenuTitle", "BedrockEditionSubtitle"],
+      "conflict": ["OldBedrockMenuTitle", "BedrockEditionSubtitle","JavaMenuTitle"],
       "compatability": []
      },
      {

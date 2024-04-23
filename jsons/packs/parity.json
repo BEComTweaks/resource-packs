@@ -1,7 +1,14 @@
 {
  "topic": "Parity",
  "packs": [
-  {
+ {
+    "pack_id": "JavaMenuTitle",
+	"pack_name": "Java Menu Title",
+	"pack_description": "Gives the title on the main menu screen its look from Minecraft: Java Edition.",
+	"conflict": ["AlphaMinecraftLogo", "BedrockEditionSubtitle","OldBedrockMenuTitle"],
+	"compatability": []
+ },
+ {
    "pack_id": "JavaBoom",
    "pack_name": "Java Boom",
    "pack_description": "Gives Explosion particles their texture from Minecraft: Java Edition.",
@@ -28,6 +35,13 @@
    "pack_description": "Gives the Creeper its texture from Minecraft: Dungeons.",
    "conflict": [],
    "compatability": []
+  },
+  {
+    "pack_id": "DungeonsAlexSteve",
+	"pack_name": "Dungeons Alex & Steve",
+	"pack_description": "Gives Alex and Steve their textures from Minecraft: Dungeons.",
+	"conflict": [],
+	"compatability": []
   },
   {
    "pack_id": "DungeonsDirt",
