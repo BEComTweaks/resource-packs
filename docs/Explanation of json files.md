@@ -1,4 +1,4 @@
-# This is an explanation to how the JSON in the jsons folder work
+# Explanation of how .json files in the jsons/packs folder work
 
 In each file, you may see something like shown below
 
@@ -18,9 +18,10 @@ In each file, you may see something like shown below
 ```
 
 From the example above, there is a lot going on in the json file. Even though, the objects should be self-explanatory, I will still attempt to explain them.
-> How I hope the UI would look like
 
-![Alt text](image-1.png)
+![Alt text](json-1.png)
+
+> Test Image of a GUI
 
 From the image,
 
@@ -72,9 +73,9 @@ The folder structure should hypothetically be like this
 	
   This means that the folder structure would be like this
 
-  ![structure](image-2.png)
+  ![structure](json-2.png)
 	
 
 That should be how the repository would be arranged.
 
-I plan on making a [Text User Interface](https://en.wikipedia.org/wiki/Text-based_user_interface), rather than jumping straight to websites. I have barely any experience with `HTML` and `Javascript`, so I feel if I make a bare-bones version as a TUI with Python, it would be easier to build on top of it.
+I plan on making a [Text User Interface](https://en.wikipedia.org/wiki/Text-based_user_interface), rather than jumping straight to websites. I have barely any experience with ~~`HTML`~~ and `Javascript`, so I feel if I make a bare-bones version as a TUI with Python, it would be easier to build on top of it.
