@@ -22,7 +22,8 @@ for i in currentdirs:
         currentdir += "/"
     else:
         currentdir += i
-currentdir = currentdir[:-4]
+if currentdir[:-4] == "/pys":
+    currentdir = currentdir[:-4]
 # Yeah...
 def cdir():
     return currentdir
