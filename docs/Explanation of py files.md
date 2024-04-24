@@ -46,6 +46,10 @@ What it does upon execution:
             - Prints successes, like creation of directories, in blue and magenta
         - Relatively Slow Execution
         - Pretty Debuggable
+2. It iterates through each JSON file in [jsons/packs](https://github.com/NSPC911/Bedrock-Tweaks-Base/blob/main/jsons/packs) for the Pack ID
+3. If the folder at `packs/{category}/{packid}` exists, with `packs/{category}/{packid}/default` not being empty, it prints an error if mode = 2
+4. If the folder at `packs/{category}/{packid}` is empty or does not exist, it prints the process if mode = 1 or 2
+5. I can't explain further with text, better you experiment out since you can't push anyways (⌐■_■)
 
 ## [incomplete_packs_updater.py](https://github.com/NSPC911/Bedrock-Tweaks-Base/blob/main/pys/incomplete_packs_updater.py)
 
