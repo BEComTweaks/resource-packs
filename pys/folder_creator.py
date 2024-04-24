@@ -10,9 +10,8 @@ showerror = int(input("Print process?\n0 = Don't show anything\n1 = Don't show e
 if showerror != 0:
     print("="*40, "\n")
 for c in range(len(os.listdir(f'{cdir()}/jsons/packs'))):
-    js = open(f"{cdir()}/jsons/packs/{os.listdir(f'{cdir()}/jsons/packs/')[c]}","r")
-    pack_json = loads(js.read())
-    js.close()
+    with open(f"{cdir()}/jsons/packs/{os.listdir(f'{cdir()}/jsons/packs/')[c]}","r") as js:
+        pack_json = loads(js.read())
     if showerror != 0:
         print(pack_json["topic"].lower())
     # Main Topic Directory
