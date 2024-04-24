@@ -6,6 +6,7 @@
    "pack_name": "Honey Slime",
    "pack_description": "Changes the color of all slime related items, blocks and entities to honey.",
    "conflict": [
+    "StickyPistonSides",
     "WhiteSlime",
     "LightGraySlime",
     "GraySlime",
@@ -31,6 +32,7 @@
    "pack_name": "White Slime",
    "pack_description": "Changes the color of all slime related items, blocks and entities to white.",
    "conflict": [
+    "StickyPistonSides",
     "HoneySlime",
     "LightGraySlime",
     "GraySlime",
@@ -56,6 +58,7 @@
    "pack_name": "Light Gray Slime",
    "pack_description": "Changes the color of all slime related items, blocks and entities to light gray.",
    "conflict": [
+    "StickyPistonSides",
     "HoneySlime",
     "WhiteSlime",
     "GraySlime",
@@ -81,6 +84,7 @@
    "pack_name": "Gray Slime",
    "pack_description": "Changes the color of all slime related items, blocks and entities to gray.",
    "conflict": [
+    "StickyPistonSides",
     "HoneySlime",
     "WhiteSlime",
     "LightGraySlime",
@@ -106,6 +110,7 @@
    "pack_name": "Black Slime",
    "pack_description": "Changes the color of all slime related items, blocks and entities to black.",
    "conflict": [
+    "StickyPistonSides",
     "HoneySlime",
     "WhiteSlime",
     "LightGraySlime",
@@ -131,6 +136,7 @@
    "pack_name": "Brown Slime",
    "pack_description": "Changes the color of all slime related items, blocks and entities to brown.",
    "conflict": [
+    "StickyPistonSides",
     "HoneySlime",
     "WhiteSlime",
     "LightGraySlime",
@@ -156,6 +162,7 @@
    "pack_name": "Red Slime",
    "pack_description": "Changes the color of all slime related items, blocks and entities to red.",
    "conflict": [
+    "StickyPistonSides",
     "HoneySlime",
     "WhiteSlime",
     "LightGraySlime",
@@ -181,6 +188,7 @@
    "pack_name": "Orange Slime",
    "pack_description": "Changes the color of all slime related items, blocks and entities to orange.",
    "conflict": [
+    "StickyPistonSides",
     "HoneySlime",
     "WhiteSlime",
     "LightGraySlime",
@@ -206,6 +214,7 @@
    "pack_name": "Yellow Slime",
    "pack_description": "Changes the color of all slime related items, blocks and entities to yellow.",
    "conflict": [
+    "StickyPistonSides",
     "HoneySlime",
     "WhiteSlime",
     "LightGraySlime",
@@ -231,6 +240,7 @@
    "pack_name": "Green Slime",
    "pack_description": "Changes the color of all slime related items, blocks and entities to green.",
    "conflict": [
+    "StickyPistonSides",
     "HoneySlime",
     "WhiteSlime",
     "LightGraySlime",
@@ -256,6 +266,7 @@
    "pack_name": "Cyan Slime",
    "pack_description": "Changes the color of all slime related items, blocks and entities to cyan.",
    "conflict": [
+    "StickyPistonSides",
     "HoneySlime",
     "WhiteSlime",
     "LightGraySlime",
@@ -281,6 +292,7 @@
    "pack_name": "Light Blue Slime",
    "pack_description": "Changes the color of all slime related items, blocks and entities to light blue.",
    "conflict": [
+    "StickyPistonSides",
     "HoneySlime",
     "WhiteSlime",
     "LightGraySlime",
@@ -306,6 +318,7 @@
    "pack_name": "Blue Slime",
    "pack_description": "Changes the color of all slime related items, blocks and entities to blue.",
    "conflict": [
+    "StickyPistonSides",
     "HoneySlime",
     "WhiteSlime",
     "LightGraySlime",
@@ -331,6 +344,7 @@
    "pack_name": "Purple Slime",
    "pack_description": "Changes the color of all slime related items, blocks and entities to purple.",
    "conflict": [
+    "StickyPistonSides",
     "HoneySlime",
     "WhiteSlime",
     "LightGraySlime",
@@ -356,6 +370,7 @@
    "pack_name": "Magenta Slime",
    "pack_description": "Changes the color of all slime related items, blocks and entities to magenta.",
    "conflict": [
+    "StickyPistonSides",
     "HoneySlime",
     "WhiteSlime",
     "LightGraySlime",
@@ -381,6 +396,7 @@
    "pack_name": "Pink Slime",
    "pack_description": "Changes the color of all slime related items, blocks and entities to pink.",
    "conflict": [
+    "StickyPistonSides",
     "HoneySlime",
     "WhiteSlime",
     "LightGraySlime",
@@ -406,6 +422,7 @@
    "pack_name": "Rainbow Slime",
    "pack_description": "Changes the color of all slime related items, blocks and entities to a random rainbow color.\nAll of them changes texture when rejoining world/reloading chunks!",
    "conflict": [
+    "StickyPistonSides",
     "HoneySlime",
     "WhiteSlime",
     "LightGraySlime",
@@ -431,6 +448,7 @@
    "pack_name": "Monochrome Slime",
    "pack_description": "Changes the color of all slime related items, blocks and entities to a random monochromatic color.\nAll of them changes texture when rejoining world/reloading chunks!",
    "conflict": [
+    "StickyPistonSides",
     "HoneySlime",
     "WhiteSlime",
     "LightGraySlime",

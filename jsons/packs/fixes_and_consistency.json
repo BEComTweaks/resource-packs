@@ -2,6 +2,39 @@
  "topic": "Fixes and Consistency",
  "packs": [
   {
+   "pack_id": "PistonInnerFix",
+   "pack_name": "Piston Inner Fix",
+   "pack_description": "Fixes Inner Piston texture hole to match the arm size.\nColorful Slimes have this enabled by default, so no need to select this if you have selected colorful slimes!",
+   "conflict": [
+   "HoneySlime",
+    "WhiteSlime",
+    "LightGraySlime",
+    "GraySlime",
+    "BlackSlime",
+    "BrownSlime",
+    "RedSlime",
+    "OrangeSlime",
+    "YellowSlime",
+    "GreenSlime",
+    "CyanSlime",
+    "LightBlueSlime",
+    "BlueSlime",
+    "PurpleSlime",
+    "MagentaSlime",
+    "PinkSlime",
+    "RainbowSlime",
+    "MonochromeSlime"
+	],
+   "compatability": ["StickyPistonSides"]
+  },
+  {
+	"pack_id": "SmokerBottomFix",
+	"pack_name": "Smoker Bottom Fix",
+	"pack_description": "Fixes miss placed pixel in the bottom of the smoker.",
+	"conflict": [],
+	"compatability": []
+  },
+  {
    "pack_id": "UpdatedObserverTexture",
    "pack_name": "Updated Observer Texture",
    "pack_description": "Changes the Observer's top texture to fit in-line with the 1.14 default textures, as it was left out in that update.",
@@ -51,11 +84,25 @@
    "compatability": []
   },
   {
+	"pack_id": "ConsistentOars",
+	"pack_name": "Consistent Oars",
+	"pack_description": "Recolors the oars on all boat items to match the boat color itself.",
+	"conflict": [],
+	"compatability": ["OarlessBoats"]
+  },
+  {
    "pack_id": "CactusBottomFix",
    "pack_name": "Cactus Bottom Fix",
    "pack_description": "Recolors the bottom of cacti to match the rest of the cactus.",
    "conflict": [],
    "compatability": []
+  },
+  {
+	"pack_id": "CocoaBeansFix",
+	"pack_name": "Cocoa Beans Fix",
+	"pack_description": "Changes the textures on all the cocoa beans stages to use proper proportions.",
+	"conflict": [],
+	"compatability": []
   },
   {
    "pack_id": "ConsistentBambooPlanks",
@@ -196,6 +243,13 @@
    "pack_description": "Retextures the Guardian beam's textures to be consistent with its sizes.",
    "conflict": [],
    "compatability": []
+  },
+  {
+   "pack_id": "CloakFix",
+   "pack_name": "Cloak Fix",
+   "pack_description": "Fixes model of Villagers, Witches and Evokers so the cloak includes the missing bottom pixels.",
+   "conflict": [],
+   "compatability": ["VariatedVillager"]
   }
  ]
 }

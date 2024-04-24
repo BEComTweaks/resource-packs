@@ -128,7 +128,7 @@
     "RainbowSlime",
     "MonochromeSlime"
    ],
-   "compatability": []
+   "compatability": ["PistonInnerFix"]
   },
   {
    "pack_id": "DirectionalHoppers",

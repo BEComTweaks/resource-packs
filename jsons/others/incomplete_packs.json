@@ -8,33 +8,14 @@
     "MonochromeSlime"
   ],
   "Fixes and Consistency": [
-    "UpdatedObserverTexture",
-    "RedstoneWireFix",
     "BigDripleafStemFix",
     "SmallDripleafStemFix",
     "ConsistentBlankDecoratedPot",
-    "ConsistentBuckets",
-    "ConsistentTadpoleBucket",
-    "CactusBottomFix",
     "ConsistentBambooPlanks",
     "AccurateScaffolding",
-    "ConsistentHelmets",
     "BrighterRibArmorTrim",
     "HangingSignLogs",
-    "SoulSoilSoulCampfire",
-    "Blaze'sRodsFix",
-    "ConsistentSmoothStone",
-    "DoubleSlabFix",
-    "HoeFix",
-    "PixelConsistentBat",
-    "PixelConsistentGhast",
-    "PixelConsistentElderGuardian",
-    "PixelConsistentWither",
-    "PixelConsistentSigns",
-    "PixelConsistentExperienceOrbs",
-    "PixelConsistentBeaconBeam",
-    "PixelConsistentSonicBoom",
-    "PixelConsistentGuardianBeam"
+    "ConsistentSmoothStone"
   ],
   "Fun": [
     "SusSandandGravel"

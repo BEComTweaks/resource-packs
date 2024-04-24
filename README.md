@@ -1,7 +1,7 @@
 <h1 align=center>Bedrock Tweaks Base</h1>
 <p align=center>
     <img alt="GitHub commit activity" src="https://img.shields.io/github/commit-activity/w/NSPC911/Bedrock-Tweaks-Base?style=for-the-badge&color=green">
-    <img alt="Completed Packs" src="https://img.shields.io/badge/Completed_Packs-299%2F377-blue?style=for-the-badge&color=blue">
+    <img alt="Completed Packs" src="https://img.shields.io/badge/Completed_Packs-323%2F382-blue?style=for-the-badge&color=blue">
     <img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/NSPC911/Bedrock-Tweaks-Base?style=for-the-badge&color=purple">
 </p>
 <p align=left>

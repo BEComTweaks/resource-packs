@@ -118,7 +118,7 @@
    "pack_name": "Variated Villagers",
    "pack_description": "Adds varying skin tones to Villagers depending on the heat of the biome.",
    "conflict": [],
-   "compatability": []
+   "compatability": ["CloakFix"]
   }
  ]
 }
