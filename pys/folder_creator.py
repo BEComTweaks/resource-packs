@@ -11,7 +11,10 @@ if showerror != 0:
     print("="*40, "\n")
 for c in range(len(os.listdir(f'{cdir()}/jsons/packs'))):
     with open(f"{cdir()}/jsons/packs/{os.listdir(f'{cdir()}/jsons/packs/')[c]}","r") as js:
-        pack_json = loads(js.read())
+        try:
+            pack_json = loads(js.read())
+        except JSONDecodeError:
+            raise SyntaxError(f"{cdir()}/jsons/packs/{os.listdir(f'{cdir()}/jsons/packs/')[c]} has a skill issue.\nPerhaps you are missing a comma?")
     if showerror != 0:
         print(pack_json["topic"].lower())
     # Main Topic Directory
