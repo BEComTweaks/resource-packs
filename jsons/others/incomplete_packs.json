@@ -12,7 +12,6 @@
     "SmallDripleafStemFix",
     "ConsistentBlankDecoratedPot",
     "ConsistentBambooPlanks",
-    "AccurateScaffolding",
     "BrighterRibArmorTrim",
     "HangingSignLogs",
     "ConsistentSmoothStone"
@@ -81,7 +80,6 @@
     "VisualNoteBlockPitchParticle"
   ],
   "Variation": [
-    "VariatedCoarseDirt",
-    "VariatedVillagers"
+    "VariatedCoarseDirt"
   ]
 }
