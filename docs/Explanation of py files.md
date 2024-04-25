@@ -49,13 +49,25 @@ What it does upon execution:
 2. It iterates through each JSON file in [jsons/packs](https://github.com/NSPC911/Bedrock-Tweaks-Base/blob/main/jsons/packs) for the Pack ID
 3. If the folder at `packs/{category}/{packid}` exists, with `packs/{category}/{packid}/default` not being empty, it prints an error if mode = 2
 4. If the folder at `packs/{category}/{packid}` is empty or does not exist, it prints the process if mode = 1 or 2
-5. I can't explain further with text, better you experiment out since you can't push anyways (⌐■_■)
+5. I can't explain further with text, better you experiment out (⌐■_■)
 
 ## [incomplete_packs_updater.py](https://github.com/NSPC911/Bedrock-Tweaks-Base/blob/main/pys/incomplete_packs_updater.py)
 
 Updates [jsons/others/incomplete_packs.json](https://github.com/NSPC911/Bedrock-Tweaks-Base/blob/main/jsons/others/incomplete_packs.json) with the addition/removal of packs.
 
-Updates [README.md](https://github.com/NSPC911/Bedrock-Tweaks-Base/blob/main/README.md) [Line 4](https://github.com/NSPC911/Bedrock-Tweaks-Base/blob/main/README.md?plain=1#L4) with progress on packs completed
+Prints all in the current template
+
+`[+/-] [category] [packid] [packid_of_compatibility]`
+
+It prints either `+` or `-` depending on the status of the directory
+- If the directory for compatibility is empty, it starts with `-`
+- If the directory for compatability has something inside, it starts with `+`
+
+Updates [README.md](https://github.com/NSPC911/Bedrock-Tweaks-Base/blob/main/README.md) [Line 7](https://github.com/NSPC911/Bedrock-Tweaks-Base/blob/main/README.md?plain=1#L7) with progress on packs completed
+
+## [incomplete_compatibility.py](https://github.com/NSPC911/Bedrock-Tweaks-Base/blob/main/pys/incomplete_compatibility.py)
+
+Updates [README.md](https://github.com/NSPC911/Bedrock-Tweaks-Base/blob/main/README.md) [Line 8](https://github.com/NSPC911/Bedrock-Tweaks-Base/blob/main/README.md?plain=1#L8) with progress on pack **compatibilities** completed
 
 ## [manifestgenerator.py](https://github.com/NSPC911/Bedrock-Tweaks-Base/blob/main/pys/manifestgenerator.py)
 
