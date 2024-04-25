@@ -21,24 +21,24 @@ for c in range(len(os.listdir(f'{cdir()}/jsons/packs'))):
     try:
         os.mkdir(f'{cdir()}/packs/{pack_json["topic"].lower()}')
         if showerror != 0:
-            clrprint('Made directory',f'{pack_json["topic"].lower()}',clr='p,w')
+            clrprint('+ Made directory',f'{pack_json["topic"].lower()}',clr='p,w')
     except FileExistsError:
         if showerror == 2:
-            clrprint(f'{pack_json["topic"].lower()}','already exists!',clr='w,r')
+            clrprint(f'- {pack_json["topic"].lower()}','already exists!',clr='w,r')
         else:
             pass
 
     for i in range(len(pack_json["packs"])):
         # Pack Name Directory
         if showerror != 0:
-            clrprint(f'|--> {pack_json["packs"][i]["pack_id"]}')
+            clrprint(f'= |--> {pack_json["packs"][i]["pack_id"]}')
         try:
             os.mkdir(f'{cdir()}/packs/{pack_json["topic"].lower()}/{pack_json["packs"][i]["pack_id"]}/')
             if showerror != 0:
-                clrprint('|----> Made folder',clr='m')
+                clrprint('+ |----> Made folder',clr='m')
         except FileExistsError:
             if showerror == 2:
-                clrprint('|----> Folder already exists!',clr='r')
+                clrprint('- |----> Folder already exists!',clr='r')
             else:
                 pass
 
@@ -46,10 +46,10 @@ for c in range(len(os.listdir(f'{cdir()}/jsons/packs'))):
         try:
             os.mkdir(f'{cdir()}/packs/{pack_json["topic"].lower()}/{pack_json["packs"][i]["pack_id"]}/default')
             if showerror != 0:
-                clrprint(f'|-------> Made folder','`default`',clr='b,w')
+                clrprint(f'+ |-------> Made folder','`default`',clr='b,w')
         except FileExistsError:
             if showerror == 2:
-                clrprint(f'|-------> Folder','`default`','already exists!',clr='y,w,y')
+                clrprint(f'- |-------> Folder','`default`','already exists!',clr='y,w,y')
             else:
                 pass
 
@@ -59,19 +59,19 @@ for c in range(len(os.listdir(f'{cdir()}/jsons/packs'))):
         if len(os.listdir(f'{cdir()}/packs/{pack_json["topic"].lower()}/{pack_json["packs"][i]["pack_id"]}')) == 2 and os.path.getsize(f'{cdir()}/packs/{pack_json["topic"].lower()}/{pack_json["packs"][i]["pack_id"]}/pack_icon.png') == 0:
             copyfile(f'{cdir()}/pack_icon.png',f'{cdir()}/packs/{pack_json["topic"].lower()}/{pack_json["packs"][i]["pack_id"]}/pack_icon.png')
             if showerror != 0:
-                clrprint('|----------> Made','`pack_icon.png`',clr='g,w')
+                clrprint('+ |----------> Made','`pack_icon.png`',clr='g,w')
         elif os.path.getsize(f'{cdir()}/packs/{pack_json["topic"].lower()}/{pack_json["packs"][i]["pack_id"]}/pack_icon.png') != 0 and showerror == 2:
-            clrprint('|---------->','`pack_icon.png`','has been modified!',clr='m,w,m')
+            clrprint('- |---------->','`pack_icon.png`','has been modified!',clr='m,w,m')
         
-        for c in pack_json["packs"][i]["compatability"]:
-            # Pack Name Compatabilities Directory
+        for c in pack_json["packs"][i]["compatibility"]:
+            # Pack Name Compatibilities Directory
             try:
                 os.mkdir(f'{cdir()}/packs/{pack_json["topic"].lower()}/{pack_json["packs"][i]["pack_id"]}/{c}')
                 if showerror != 0:
-                    clrprint('|-------> Made folder',f'`{c}`',clr='b,w')
+                    clrprint('+ |-------> Made folder',f'`{c}`',clr='b,w')
             except FileExistsError:
                 if showerror == 2:
-                    clrprint('|-------> Folder',f'`{c}`','already exists!',clr='y,w,y')
+                    clrprint('- |-------> Folder',f'`{c}`','already exists!',clr='y,w,y')
                 else:
                     pass
     if showerror != 0:

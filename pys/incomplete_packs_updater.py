@@ -14,12 +14,8 @@ for c in range(len(os.listdir(f'{cdir()}/jsons/packs'))):
     for i in range(len(file["packs"])):
         try:
             if os.listdir(f'{cdir()}/packs/{file["topic"].lower()}/{file["packs"][i]["pack_id"]}/default') == []:
-                try:
-                    # Adds the packid to the topic list
-                    incomplete_packs[file["topic"]].append(file["packs"][i]["pack_id"])
-                except KeyError:
-                    # If the topic doesn't exist in the dictionary
-                    incomplete_packs[file["topic"]] = [file["packs"][i]["pack_id"]]
+                # Adds the packid to the topic list
+                incomplete_packs[file["topic"]].append(file["packs"][i]["pack_id"])
                 stats[1] += 1
             else:
                 # When the packid directory has stuff inside
@@ -28,6 +24,10 @@ for c in range(len(os.listdir(f'{cdir()}/jsons/packs'))):
             # If the packs have not updated with the new directory type
             stats[1] += 1
             incomplete_packs[file["topic"]].append(file["packs"][i]["pack_id"])
+        except KeyError:
+            # If the topic doesn't exist in the dictionary
+            incomplete_packs[file["topic"]] = [file["packs"][i]["pack_id"]]
+            stats[1] += 1
 
 # Just some fancy code to update README.md
 with open(f"{cdir()}/README.md", "r") as file:

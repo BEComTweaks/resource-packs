@@ -1,16 +1,28 @@
-<h1 align=center>Bedrock Tweaks Base</h1>
-<p align=center>
-    <img alt="GitHub commit activity" src="https://img.shields.io/github/commit-activity/w/NSPC911/Bedrock-Tweaks-Base?style=for-the-badge&color=green">
-    <img alt="Packs" src="https://img.shields.io/badge/Packs-323%2F382-blue?style=for-the-badge&color=blue">
-	<img alt="Compatabilities" src="https://img.shields.io/badge/Compatabilities-17%2F50-blue?style=for-the-badge&color=blue">
-    <img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/NSPC911/Bedrock-Tweaks-Base?style=for-the-badge&color=purple">
-</p>
-<p align=left>
-    A repo containing every single tweak ported from <a href="https://vanillatweaks.net/picker/resource-packs">vanillatweaks.net</a>
-    <br>
-    Currently, it isn't exactly completed. Starting on the packs related to Aesthetic
-    <br>
-    Tutorial on how this works is in <a href="https://github.com/NSPC911/Bedrock-Tweaks-Base/tree/json-of-packs/docs"><code>docs</code></a>
-    <br>
-    Pull Requests are greatly appreciated as I do not want this to be a single person project. I can get pretty drained out from projects.
-</p>
+<div align="center">
+	
+# Bedrock Tweaks Base
+
+![Commit Activity](https://img.shields.io/github/commit-activity/w/NSPC911/Bedrock-Tweaks-Base?style=for-the-badge&label=Commits&color=purple)
+![GitHub repo size](https://img.shields.io/github/repo-size/NSPC911/Bedrock-Tweaks-Base?style=for-the-badge&label=Size&color=pink)
+![Completed Packs](https://img.shields.io/badge/Packs-324%2F382-blue?style=for-the-badge&color=green)
+![Completed Compatibilities for Packs](https://img.shields.io/badge/Compatibilities-17%2F49-blue?style=for-the-badge&color=red)
+
+</div>
+<div align="left">
+
+A repo containing every single tweak ported from <a href="https://vanillatweaks.net/picker/resource-packs">vanillatweaks.net</a>
+
+Tutorial on how this works is in <a href="https://github.com/NSPC911/Bedrock-Tweaks-Base/tree/json-of-packs/docs"><code>docs</code></a>
+
+How to clone:
+
+```bash
+git clone https://github.com/NSPC911/Bedrock-Tweaks-Base/
+cd Bedrock-Tweaks-Base/pys
+echo 0 | python3 folder_creator.py
+```
+
+<sub>echo is to instantly start the script with no printing. For more information, refer to [Explanation of py files](https://github.com/NSPC911/Bedrock-Tweaks-Base/blob/main/docs/Explanation%20of%20py%20files.md)</sub>
+
+Pull Requests are greatly appreciated as I do not want this to be a single person project. I can get pretty drained out from projects.
+</div>
