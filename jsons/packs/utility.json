@@ -6,7 +6,7 @@
    "pack_name": "Ore Borders",
    "pack_description": "Places a border around ores for easier visibility within caves.",
    "conflict": ["OldNetherrack"],
-   "compatability": [
+   "compatibility": [
     "ClassicOres",
     "EmeraldstoRubies",
     "UniformOres",
@@ -18,91 +18,91 @@
    "pack_name": "Suspicious Sand & Gravel Borders",
    "pack_description": "Places a border around Suspicious Sand and Suspicious Gravel for easier visibility.",
    "conflict": ["SusSandandGravel"],
-   "compatability": []
+   "compatibility": []
   },
   {
    "pack_id": "BuddingAmethystBorders",
    "pack_name": "Budding Amethyst Borders",
    "pack_description": "Places a border around Budding Amethyst blocks for easier visibility within geodes.",
    "conflict": [],
-   "compatability": []
+   "compatibility": []
   },
   {
    "pack_id": "InfestedStoneItems",
    "pack_name": "Visual Infested Stone Items",
    "pack_description": "Adds a border around Infested Stone in the inventory. This will NOT affect the placed blocks.",
    "conflict": ["InfestedStoneBlocks"],
-   "compatability": []
+   "compatibility": []
   },
   {
    "pack_id": "InfestedStoneBlocks",
    "pack_name": "Infested Stone Blocks",
    "pack_description": "Adds small eyes to infested stones to indicate silverfish. Affects placed blocks as well.",
    "conflict": ["InfestedStoneItems"],
-   "compatability": []
+   "compatibility": []
   },
   {
    "pack_id": "WaxedCopperItems",
    "pack_name": "Visual Waxed Copper Items",
    "pack_description": "Adds a border around Waxed Copper in the inventory. This will NOT affect the placed blocks.",
    "conflict": ["WaxedCopperBlocks"],
-   "compatability": []
+   "compatibility": []
   },
   {
    "pack_id": "WaxedCopperBlocks",
    "pack_name": "Waxed Copper Blocks",
    "pack_description": "Makes the Waxed Copper Block and variants a lot shinier. Affects placed blocks as well.",
    "conflict": ["WaxedCopperItems"],
-   "compatability": []
+   "compatibility": []
   },
   {
    "pack_id": "ShinyAgedAmethystCluster",
    "pack_name": "Shiny Aged Amethyst Cluster",
    "pack_description": "Makes all fully aged Amethyst clusters have a shining texture.",
    "conflict": [],
-   "compatability": []
+   "compatibility": []
   },
   {
    "pack_id": "DifferentStems",
    "pack_name": "Different Stems",
    "pack_description": "Changes Melon and Pumpkin stems to reflect their fruit color.",
    "conflict": [],
-   "compatability": []
+   "compatibility": []
   },
   {
    "pack_id": "Age25Kelp",
    "pack_name": "Age 25 Kelp",
    "pack_description": "Adds flowers to the top of kelp plants when they are fully grown. {age=25}.",
    "conflict": [],
-   "compatability": []
+   "compatibility": []
   },
   {
    "pack_id": "MineProgressBar",
    "pack_name": "Mine Progress Bar",
    "pack_description": "Changes the breaking texture of blocks to a clean ring around the outside.",
    "conflict": ["AlternateBlockDestruction"],
-   "compatability": []
+   "compatibility": []
   },
   {
    "pack_id": "ClearBannerPatterns",
    "pack_name": "Clear Banner Patterns",
    "pack_description": "Gives all the Banner Pattern items unique and appropriate textures.",
    "conflict": [],
-   "compatability": []
+   "compatibility": []
   },
   {
    "pack_id": "HungerPreview",
    "pack_name": "Hunger Preview",
    "pack_description": "Displays hunger bar icons on all food names to show how much it will fill you up.",
    "conflict": [],
-   "compatability": ["MusicDiscRedstoneLevelPreview"]
+   "compatibility": ["MusicDiscRedstoneLevelPreview"]
   },
   {
    "pack_id": "MusicDiscRedstoneLevelPreview",
    "pack_name": "Music Disc Redstone Level Preview",
    "pack_description": "Displays the redstone power level on all Music Disc names.",
    "conflict": [],
-   "compatability": ["HungerPreview"]
+   "compatibility": ["HungerPreview"]
   },
   {
    "pack_id": "StickyPistonSides",
@@ -128,91 +128,91 @@
     "RainbowSlime",
     "MonochromeSlime"
    ],
-   "compatability": ["PistonInnerFix"]
+   "compatibility": ["PistonInnerFix"]
   },
   {
    "pack_id": "DirectionalHoppers",
    "pack_name": "Directional Hoppers",
    "pack_description": "Gives Hoppers arrows all around to indicate which direction they are facing.",
    "conflict": [],
-   "compatability": []
+   "compatibility": []
   },
   {
    "pack_id": "DirectionalDispensersandDroppers",
    "pack_name": "Directional Dispensers and Droppers",
    "pack_description": "Gives Dispensers and Droppers arrows all around to indicate which direction they are facing. Note: The opposite side of where it is facing is not accurate and unfixable.",
    "conflict": [],
-   "compatability": []
+   "compatibility": []
   },
   {
    "pack_id": "DirectionalObservers",
    "pack_name": "Directional Observers",
    "pack_description": "Gives Observers arrows all around to indicate which direction they are facing and display updates.",
    "conflict": [],
-   "compatability": []
+   "compatibility": []
   },
   {
    "pack_id": "CleanRedstoneDust",
    "pack_name": "Clean Redstone Dust",
    "pack_description": "Changes the texture of Redstone Dust to a clean solid line.",
    "conflict": ["RedstoneWireFix"],
-   "compatability": []
+   "compatibility": []
   },
   {
    "pack_id": "UnlitRedstoneOre",
    "pack_name": "Unlit Redstone Ore",
    "pack_description": "Makes unlit Redstone Ore use the same palette as unlit Redstone Wire until its lit, when it then returns to its default, bright red colour.",
    "conflict": [],
-   "compatability": ["UniformOres", "OreBorders", "ClassicOres"]
+   "compatibility": ["UniformOres", "OreBorders", "ClassicOres"]
   },
   {
    "pack_id": "VisibleTripwires",
    "pack_name": "Visible Tripwires",
    "pack_description": "Makes tripwire a bright blue so you can see them.",
    "conflict": [],
-   "compatability": []
+   "compatibility": []
   },
   {
    "pack_id": "TotemShield",
    "pack_name": "TotemShield",
    "pack_description": "Renders a yellow sphere around a player if they are holding a totem. Useful in PVP.",
    "conflict": ["InvisibleTotem"],
-   "compatability": []
+   "compatibility": []
   },
   {
    "pack_id": "CompassLodestone",
    "pack_name": "Compass Lodestone",
    "pack_description": "Adds North, East, South and West markings on the sides of the Lodestone, so you can use it as a stationary compass.",
    "conflict": [],
-   "compatability": []
+   "compatibility": []
   },
   {
    "pack_id": "BrewingGuide",
    "pack_name": "Brewing Guide",
    "pack_description": "Adds a cheat sheet to the Brewing Staand interface.",
    "conflict": [],
-   "compatability": []
+   "compatibility": []
   },
   {
    "pack_id": "VisualHoneyStage",
    "pack_name": "Visual Honey Stage",
    "pack_description": "Visualizes the empty and full honey stages in Bee Nests and Beehives.",
    "conflict": [],
-   "compatability": []
+   "compatibility": []
   },
   {
    "pack_id": "VisualNoteBlockPitchParticle",
    "pack_name": "Visual Note Block Pitch Particle",
    "pack_description": "Modifies the note block pitch particle to show the pitch.",
    "conflict": [],
-   "compatability": []
+   "compatibility": []
   },
   {
    "pack_id": "ArabicNumerals",
    "pack_name": "Arabic Numerals",
    "pack_description": "Translates the Roman Numerals for enchantments and potions to Arabic Numerals. (I, II, III -> 1, 2, 3).",
    "conflict": [],
-   "compatability": []
+   "compatibility": []
   }
  ]
 }

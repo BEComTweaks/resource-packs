@@ -11,7 +11,7 @@ In each file, you may see something like shown below
       "pack_name": "Pack 3",
       "pack_description": "Test Description",
       "conflict": ["Pack4"],
-      "compatability": ["Pack1"]
+      "compatibility": ["Pack1"]
     }
   ]
 }
@@ -37,13 +37,13 @@ However, other things that need mentioning
 2. Pack 3 and Pack 4 are green when selected.
 
     As shown in `"conflict"`, Pack4 is there, so when both Pack 3 and Pack 4 are selected, they turn into other colors to indicate the conflict. They should prevent the download from occuring as they conflict, so unlike Vanilla Tweaks, which allows conflicting packs to be downloaded, it is best to prevent it from being downloaded.
-3. Compatability modes do not appear
+3. Compatibility modes do not appear
 
-    I feel compatability modes would not need marking, rather let it be automatic. If they do not conflict, then why the extra colors? It may be confusing after a while.
+    I feel compatibility modes would not need marking, rather let it be automatic. If they do not conflict, then why the extra colors? It may be confusing after a while.
 
 The folder structure should hypothetically be like this
 
-`/packs/{topic}/{pack_id}/{compatability}`
+`/packs/{topic}/{pack_id}/{compatibility}`
 
 - `{topic}`
 	
@@ -53,7 +53,7 @@ The folder structure should hypothetically be like this
 	
 	Pack ID from the JSON. `{pack_name}` won't be used because it has spaces in it
 	
-- `{compatability}`
+- `{compatibility}`
 	
 	This is hard to explain.
 	
@@ -65,11 +65,11 @@ The folder structure should hypothetically be like this
      "pack_name": "Updated Observer Texture",
      "pack_description": "Changes the Observer's top texture to fit in-line with the 1.14 default textures, as it was left out in that update.",
      "conflict": [],
-     "compatability": ["DirectionalObservers"]
+     "compatibility": ["DirectionalObservers"]
   }
   ```
 	
-  In this example, Updated Observer Texture has a compatability mode with Directional Observers
+  In this example, Updated Observer Texture has a compatibility mode with Directional Observers
 	
   This means that the folder structure would be like this
 

@@ -16,7 +16,7 @@
     "ZuriZombies",
     "AllZombies"
    ],
-   "compatability": []
+   "compatibility": []
   },
   {
    "pack_id": "AlexZombies",
@@ -33,7 +33,7 @@
     "ZuriZombies",
     "AllZombies"
    ],
-   "compatability": []
+   "compatibility": []
   },
   {
    "pack_id": "AriZombies",
@@ -50,7 +50,7 @@
     "ZuriZombies",
     "AllZombies"
    ],
-   "compatability": []
+   "compatibility": []
   },
   {
    "pack_id": "EfeZombies",
@@ -67,7 +67,7 @@
     "ZuriZombies",
     "AllZombies"
    ],
-   "compatability": []
+   "compatibility": []
   },
   {
    "pack_id": "KaiZombies",
@@ -84,7 +84,7 @@
     "ZuriZombies",
     "AllZombies"
    ],
-   "compatability": []
+   "compatibility": []
   },
   {
    "pack_id": "MakenaZombies",
@@ -101,7 +101,7 @@
     "ZuriZombies",
     "AllZombies"
    ],
-   "compatability": []
+   "compatibility": []
   },
   {
    "pack_id": "NoorZombies",
@@ -118,7 +118,7 @@
     "ZuriZombies",
     "AllZombies"
    ],
-   "compatability": []
+   "compatibility": []
   },
   {
    "pack_id": "SunnyZombies",
@@ -135,7 +135,7 @@
     "ZuriZombies",
     "AllZombies"
    ],
-   "compatability": []
+   "compatibility": []
   },
   {
    "pack_id": "ZuriZombies",
@@ -152,7 +152,7 @@
     "SunnyZombies",
     "AllZombies"
    ],
-   "compatability": []
+   "compatibility": []
   },
   {
    "pack_id": "AllZombies",
@@ -169,7 +169,7 @@
     "SunnyZombies",
     "AllZombies"
    ],
-   "compatability": []
+   "compatibility": []
   }
  ]
 }
