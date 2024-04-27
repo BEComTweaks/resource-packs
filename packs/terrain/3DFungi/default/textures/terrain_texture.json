@@ -1,0 +1,123 @@
+{
+	"num_mip_levels": 4,
+	"padding": 8,
+	"resource_pack_name": "vanilla",
+	"texture_data": {
+		"reeds_top": {
+			"textures": [
+				"textures/blocks/reeds_top"
+			]
+		},
+		"reeds_side": {
+			"textures": [
+				"textures/blocks/reeds_side"
+			]
+		},
+		"crimson_mushroom": {
+			"textures": [
+				"textures/blocks/crimson_mushroom"
+			]
+		},
+		"crimson_mushroom_pot": {
+			"textures": [
+				"textures/blocks/crimson_mushroom_pot"
+			]
+		},
+		"crimson_mushroom_top": {
+			"textures": [
+				"textures/blocks/crimson_mushroom_top"
+			]
+		},
+		"crimson_mushroom_side": {
+			"textures": [
+				"textures/blocks/crimson_mushroom_side"
+			]
+		},
+		"crimson_mushroom_side_pot": {
+			"textures": [
+				"textures/blocks/crimson_mushroom_side_pot"
+			]
+		},
+		"warped_mushroom": {
+			"textures": [
+				"textures/blocks/warped_mushroom"
+			]
+		},
+		"warped_mushroom_pot": {
+			"textures": [
+				"textures/blocks/warped_mushroom_pot"
+			]
+		},
+		"warped_mushroom_side": {
+			"textures": [
+				"textures/blocks/warped_mushroom_side"
+			]
+		},
+		"warped_mushroom_side_pot": {
+			"textures": [
+				"textures/blocks/warped_mushroom_side_pot"
+			]
+		},
+		"warped_mushroom_top": {
+			"textures": [
+				"textures/blocks/warped_mushroom_top"
+			]
+		},
+		"brown_mushroom": {
+			"textures": [
+				"textures/blocks/brown_mushroom"
+			]
+		},
+		"brown_mushroom_pot": {
+			"textures": [
+				"textures/blocks/brown_mushroom_pot"
+			]
+		},
+		"brown_mushroom_top": {
+			"textures": [
+				"textures/blocks/brown_mushroom_top"
+			]
+		},
+		"brown_mushroom_side": {
+			"textures": [
+				"textures/blocks/brown_mushroom_side"
+			]
+		},
+		"brown_mushroom_side_pot": {
+			"textures": [
+				"textures/blocks/brown_mushroom_side_pot"
+			]
+		},
+		"red_mushroom": {
+			"textures": [
+				"textures/blocks/red_mushroom"
+			]
+		},
+		"red_mushroom_pot": {
+			"textures": [
+				"textures/blocks/red_mushroom_pot"
+			]
+		},
+		"red_mushroom_top": {
+			"textures": [
+				"textures/blocks/red_mushroom_top"
+			]
+		},
+		"red_mushroom_side": {
+			"textures": [
+				"textures/blocks/red_mushroom_side"
+			]
+		},
+		"red_mushroom_side_pot": {
+			"textures": [
+				"textures/blocks/red_mushroom_side_pot"
+			]
+		},
+		"none": {
+			"textures": [
+				"textures/blocks/none"
+			]
+		}
+	},
+	"texture_name": "atlas.terrain"
+}
