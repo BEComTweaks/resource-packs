@@ -2,7 +2,7 @@ import os
 from json import *
 import re
 
-if os.getcwd() == "C:\u005CWindows\u005Csystem32":
+if str(os.getcwd()).endswith("system32"):
     doubleclicked = True
     # This has to be in every script to prevent FileNotFoundError
     # Because for some reason, it runs it at C:/Program Files/System32
@@ -29,17 +29,20 @@ for c in range(len(os.listdir(f'{cdir()}/jsons/packs'))):
             # But not the file, so this brings it up as well
             # Hence why if there is an issue with the JSON, it brings up two errors at once
             raise SyntaxError(f"{os.listdir(f'{cdir()}/jsons/packs')[c]} has a skill issue.\nPerhaps you are missing a comma?")
+    clrprint(f'= {file["topic"]}',clr="white")
     for i in range(len(file["packs"])):
+        if file["packs"][i]["compatibility"] != []:
+            clrprint(f'= \t{file["packs"][i]["pack_id"]}',clr="yellow")
         for comp in range(len(file["packs"][i]["compatibility"])):
             if os.listdir(f'{cdir()}/packs/{file["topic"].lower()}/{file["packs"][i]["pack_id"]}/{file["packs"][i]["compatibility"][comp]}') == []:
+                clrprint(f'- \t\t{file["packs"][i]["compatibility"][comp]}',clr="red")
                 # Adds the packid to the list of incomplete compatibilities
                 compatibilities.append(file["packs"][i]["compatibility"])
                 cstats[1] += 1
             else:
+                clrprint(f'+ \t\t{file["packs"][i]["compatibility"][comp]}',clr="green")
                 # When the compatibility Directory has something inside
-                print(f'+\t{file["topic"]}\t{file["packs"][i]["pack_id"]}\t{file["packs"][i]["compatibility"][comp]}')
                 cstats[0] += 1
-print(cstats)
 
 # Just some fancy code to update README.md
 with open(f"{cdir()}/README.md", "r") as file:
@@ -59,5 +62,6 @@ else:
     raise IndexError("Regex Failed")
 
 if doubleclicked:
+    clrprint("Updated README.md",clr="green")
     clrprint("Press Enter to exit.",clr="green",end="")
     input()

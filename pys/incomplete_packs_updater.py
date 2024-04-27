@@ -3,7 +3,7 @@ import time
 from json import *
 import re
 
-if os.getcwd() == "C:\u005CWindows\u005Csystem32":
+if str(os.getcwd()).endswith("system32"):
     doubleclicked = True
     # This has to be in every script to prevent FileNotFoundError
     # Because for some reason, it runs it at C:/Program Files/System32
@@ -71,5 +71,6 @@ with open(f"{cdir()}/jsons/others/incomplete_packs.json","w") as incomplete_pack
     incomplete_packs_file.write(dumps(incomplete_packs,indent=2))
 
 if doubleclicked:
+    clrprint("Updated README.md and incomplete_packs.json.")
     clrprint("Press Enter to exit.",clr="green",end="")
     input()

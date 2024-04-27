@@ -4,7 +4,7 @@ from uuid import uuid4
 from random import randint
 from PIL import Image
 
-if os.getcwd() == "C:\u005CWindows\u005Csystem32":
+if str(os.getcwd()).endswith("system32"):
     doubleclicked = True
     # This has to be in every script to prevent FileNotFoundError
     # Because for some reason, it runs it at C:/Program Files/System32
