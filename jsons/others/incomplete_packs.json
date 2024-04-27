@@ -1,7 +1,6 @@
 {
   "Aesthetic": [
-    "AnimatedCampfireItems",
-    "AllayElytra"
+    "AnimatedCampfireItems"
   ],
   "Colorful Slime": [
     "RainbowSlime",
@@ -23,7 +22,6 @@
     "HighContrastUI"
   ],
   "Menu Panoramas": [
-    "MangroveSwamp",
     "Xisuma'sHermitcraftBaseSeason9"
   ],
   "More Zombies": [
@@ -38,29 +36,10 @@
     "ZuriZombies",
     "AllZombies"
   ],
-  "Peace and Quiet": [
-    "QuieterAllays",
-    "QuieterCamels",
-    "QuieterIronGolems",
-    "QuieterSniffers",
-    "QuieterSnowGolems",
-    "QuieterTadpoles",
-    "QuieterWardens",
-    "QuieterThunder",
-    "QuieterExplosions",
-    "QuieterConsumables",
-    "QuieterSculkSensors",
-    "QuieterSculkShriekers"
-  ],
   "Retro": [
-    "OldBedIcons",
-    "RenamePotterySherdtoPotteryShard"
-  ],
-  "Terrain": [
-    "GoldenSavanna"
+    "OldBedIcons"
   ],
   "Unobtrusive": [
-    "NoCherryLeavesParticles",
     "NoFog",
     "NoBeaconBeam"
   ],
