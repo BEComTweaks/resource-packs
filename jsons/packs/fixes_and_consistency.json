@@ -116,7 +116,7 @@
    "pack_name": "Accurate Scaffolding",
    "pack_description": "Recolors Scaffolding to use Bamboo and String colors to reflect its crafting recipe.",
    "conflict": [],
-   "compatibility": ["unobtrusiveScaffolding"]
+   "compatibility": ["UnobtrusiveScaffolding"]
   },
   {
    "pack_id": "ConsistentHelmets",
