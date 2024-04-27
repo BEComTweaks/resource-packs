@@ -16,9 +16,6 @@
     "HangingSignLogs",
     "ConsistentSmoothStone"
   ],
-  "Fun": [
-    "SusSandandGravel"
-  ],
   "HUD and GUI": [
     "SmootherFont",
     "NumberdHotbar",
@@ -69,7 +66,6 @@
     "NoBeaconBeam"
   ],
   "Utility": [
-    "SusSandGravelBorders",
     "InfestedStoneBlocks",
     "WaxedCopperBlocks",
     "ShinyAgedAmethystCluster",

@@ -80,14 +80,13 @@ try:
                 # 1. Create a pack_icon.png as /packs/topic/packid/
                 # 2. Make no changes to /packs/topic/packid/pack_icon.png if it is already made/modified
                 pass
-            if len(os.listdir(f'{cdir()}/packs/{pack_json["topic"].lower()}/{pack_json["packs"][i]["pack_id"]}')) == 2 and os.path.getsize(f'{cdir()}/packs/{pack_json["topic"].lower()}/{pack_json["packs"][i]["pack_id"]}/pack_icon.png') == 0:
-                # Basically checks whether /packs/topic/packid has two items, specifically
-                # pack_icon.png and default. It also checks whether pack_icon.png is empty,
-                # and if so, it copies the pack_icon.png to /packs/topic/packid
+            if os.path.getsize(f'{cdir()}/packs/{pack_json["topic"].lower()}/{pack_json["packs"][i]["pack_id"]}/pack_icon.png') == 0:
+                # Basically checks whether pack_icon.png is empty, and
+                # if so, it copies the pack_icon.png to /packs/topic/packid
                 copyfile(f'{cdir()}/pack_icon.png',f'{cdir()}/packs/{pack_json["topic"].lower()}/{pack_json["packs"][i]["pack_id"]}/pack_icon.png')
                 if showerror != 0:
                     clrprint('+ |----------> Made','`pack_icon.png`',clr='g,w')
-            elif os.path.getsize(f'{cdir()}/packs/{pack_json["topic"].lower()}/{pack_json["packs"][i]["pack_id"]}/pack_icon.png') != 0 and showerror == 2:
+            elif showerror == 2:
                 # When length of pack_icon.png is larger than 0
                 clrprint('- |---------->','`pack_icon.png`','has been modified!',clr='m,w,m')
 
