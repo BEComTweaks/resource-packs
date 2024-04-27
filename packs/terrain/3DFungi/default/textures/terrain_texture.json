@@ -3,16 +3,6 @@
 	"padding": 8,
 	"resource_pack_name": "vanilla",
 	"texture_data": {
-		"reeds_top": {
-			"textures": [
-				"textures/blocks/reeds_top"
-			]
-		},
-		"reeds_side": {
-			"textures": [
-				"textures/blocks/reeds_side"
-			]
-		},
 		"crimson_mushroom": {
 			"textures": [
 				"textures/blocks/crimson_mushroom"
@@ -111,11 +101,6 @@
 		"red_mushroom_side_pot": {
 			"textures": [
 				"textures/blocks/red_mushroom_side_pot"
-			]
-		},
-		"none": {
-			"textures": [
-				"textures/blocks/none"
 			]
 		}
 	},
