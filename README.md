@@ -12,7 +12,7 @@
 
 A repo containing every single tweak ported from <a href="https://vanillatweaks.net/picker/resource-packs">vanillatweaks.net</a>
 
-Tutorial on how this works is in <a href="https://github.com/NSPC911/Bedrock-Tweaks-Base/tree/json-of-packs/docs"><code>docs</code></a>
+Tutorial on how this works is in <a href="https://github.com/NSPC911/Bedrock-Tweaks-Base/tree/main/docs"><code>docs</code></a>
 
 How to clone:
 
