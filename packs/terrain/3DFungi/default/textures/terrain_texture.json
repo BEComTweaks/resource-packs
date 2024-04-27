@@ -5,52 +5,52 @@
 	"texture_data": {
 		"crimson_mushroom": {
 			"textures": [
-				"textures/blocks/crimson_mushroom"
+				"textures/blocks/crimson_fungus"
 			]
 		},
 		"crimson_mushroom_pot": {
 			"textures": [
-				"textures/blocks/crimson_mushroom_pot"
+				"textures/blocks/crimson_fungus_pot"
 			]
 		},
 		"crimson_mushroom_top": {
 			"textures": [
-				"textures/blocks/crimson_mushroom_top"
+				"textures/blocks/crimson_fungus_top"
 			]
 		},
 		"crimson_mushroom_side": {
 			"textures": [
-				"textures/blocks/crimson_mushroom_side"
+				"textures/blocks/crimson_fungus_side"
 			]
 		},
 		"crimson_mushroom_side_pot": {
 			"textures": [
-				"textures/blocks/crimson_mushroom_side_pot"
+				"textures/blocks/crimson_fungus_side_pot"
 			]
 		},
 		"warped_mushroom": {
 			"textures": [
-				"textures/blocks/warped_mushroom"
+				"textures/blocks/warped_fungus"
 			]
 		},
 		"warped_mushroom_pot": {
 			"textures": [
-				"textures/blocks/warped_mushroom_pot"
+				"textures/blocks/warped_fungus_pot"
 			]
 		},
 		"warped_mushroom_side": {
 			"textures": [
-				"textures/blocks/warped_mushroom_side"
+				"textures/blocks/warped_fungus_side"
 			]
 		},
 		"warped_mushroom_side_pot": {
 			"textures": [
-				"textures/blocks/warped_mushroom_side_pot"
+				"textures/blocks/warped_fungus_side_pot"
 			]
 		},
 		"warped_mushroom_top": {
 			"textures": [
-				"textures/blocks/warped_mushroom_top"
+				"textures/blocks/warped_fungus_top"
 			]
 		},
 		"brown_mushroom": {
