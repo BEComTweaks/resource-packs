@@ -1,0 +1,2 @@
+# Ignore Python cache files as it forms merge conflicts
+pys/__pycache__/
