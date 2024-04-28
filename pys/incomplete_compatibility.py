@@ -5,11 +5,11 @@ import re
 if str(os.getcwd()).endswith("system32"):
     doubleclicked = True
     # This has to be in every script to prevent FileNotFoundError
-    # Because for some reason, it runs it at C:/Program Files/System32
+    # Because for some reason, it runs it at C:/Windows/System32
     # Yeah, it is stupid, but I can't put these lines in custom_functions
     # Because that still brings up an error
-    script_dir = os.path.dirname(os.path.realpath(__file__))
-    os.chdir(script_dir)
+    
+    os.chdir(os.path.dirname(os.path.realpath(__file__)))
 else:
     doubleclicked = False
 
