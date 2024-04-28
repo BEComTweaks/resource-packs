@@ -149,14 +149,14 @@
    "pack_id": "EndlessEndRods",
    "pack_name": "Endless End Rods",
    "pack_description": "Removes the purple nub from End Rods altogether.",
-   "conflict": ["PinkEndRods"],
+   "conflict": [],
    "compatibility": []
   },
   {
    "pack_id": "PinkEndRods",
    "pack_name": "Pink End Rods",
    "pack_description": "Changes the gray base of End Rods to pink.",
-   "conflict": ["EndlessEndRods"],
+   "conflict": [],
    "compatibility": []
   },
   {
