@@ -1,0 +1,28 @@
+{
+   "entity_sounds" : {
+      "entities" : {
+         "lightning_bolt" : {
+            "events" : {
+               "explode" : {
+                  "pitch" : [ 0.30, 0.70 ],
+                  "sound" : "ambient.weather.lightning.impact"
+               },
+               "thunder" : {
+                  "pitch" : [ 0.60, 1.0 ],
+                  "sound" : "ambient.weather.thunder"
+               }
+            },
+            "volume" : 50.0
+         }
+	  }
+   },
+   "individual_event_sounds" : {
+      "events" : {
+         "item.trident.thunder" : {
+            "pitch" : 1.0,
+            "sound" : "item.trident.thunder",
+            "volume" : 0.05
+         }
+      }
+   }
+}
