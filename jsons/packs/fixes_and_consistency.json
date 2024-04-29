@@ -56,13 +56,6 @@
    "compatibility": []
   },
   {
-   "pack_id": "SmallDripleafStemFix",
-   "pack_name": "Small Dripleaf Stem Fix",
-   "pack_description": "Fixes an issue where the bottom half of the Small Dripleaf's stem texture is incorrectly stretched.",
-   "conflict": [],
-   "compatibility": []
-  },
-  {
    "pack_id": "ConsistentBlankDecoratedPot",
    "pack_name": "Consistent Blank Decorated Pot",
    "pack_description": "Adds the gold trim to blank decorated pot sides to match the decorated sides.",
