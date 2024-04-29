@@ -29,13 +29,14 @@
     "NoBeaconBeam"
   ],
   "Utility": [
-    "InfestedStoneBlocks",
-    "WaxedCopperBlocks",
+    "CrumbledInfestedStoneBlocks",
+    "BoltlessWaxedCopperBlocks",
+    "EquallyBrightCopperBulbs",
     "ShinyAgedAmethystCluster",
     "MusicDiscRedstoneLevelPreview",
     "DirectionalDispensersandDroppers",
     "TotemShield",
-    "VisualHoneyStage",
+    "VisualFullHoneyStage",
     "VisualNoteBlockPitchParticle"
   ],
   "Variation": [

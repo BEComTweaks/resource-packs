@@ -35,25 +35,32 @@
    "compatibility": []
   },
   {
-   "pack_id": "InfestedStoneBlocks",
-   "pack_name": "Infested Stone Blocks",
-   "pack_description": "Adds small eyes to infested stones to indicate silverfish. Affects placed blocks as well.",
+   "pack_id": "CrumbledInfestedStoneBlocks",
+   "pack_name": "Crumbled Infested Stone Blocks",
+   "pack_description": "Makes infested stone blocks appear crumbled and cracked, matching how easy it is to break the block.",
    "conflict": ["InfestedStoneItems"],
    "compatibility": []
   },
   {
    "pack_id": "WaxedCopperItems",
    "pack_name": "Visual Waxed Copper Items",
-   "pack_description": "Adds a border around Waxed Copper in the inventory. This will NOT affect the placed blocks.",
-   "conflict": ["WaxedCopperBlocks"],
+   "pack_description": "Adds a border around Waxed Copper and variants in the inventory. This will NOT affect the placed blocks.",
+   "conflict": ["BoltlessWaxedCopperBlocks"],
    "compatibility": []
   },
   {
-   "pack_id": "WaxedCopperBlocks",
-   "pack_name": "Waxed Copper Blocks",
-   "pack_description": "Makes the Waxed Copper Block and variants a lot shinier. Affects placed blocks as well.",
+   "pack_id": "BoltlessWaxedCopperBlocks",
+   "pack_name": "Boltless Waxed Copper Blocks",
+   "pack_description": "Removes the bolts in the corner of Waxed Copper blocks and variants.",
    "conflict": ["WaxedCopperItems"],
-   "compatibility": []
+   "compatibility": ["EquallyBrightCopperBulbs"]
+  },
+  {
+   "pack_id": "EquallyBrightCopperBulbs",
+   "pack_name": "Equally Bright Copper Bulbs",
+   "pack_description": "Makes Lit Copper bulb variants have the same texture brightness as default copper bulb. This will not increase the brightness they emit.",
+   "conflict": [],
+   "compatibility": ["BoltlessWaxedCopperBlocks"]
   },
   {
    "pack_id": "ShinyAgedAmethystCluster",
@@ -140,7 +147,7 @@
   {
    "pack_id": "DirectionalDispensersandDroppers",
    "pack_name": "Directional Dispensers and Droppers",
-   "pack_description": "Gives Dispensers and Droppers arrows all around to indicate which direction they are facing. Note: The opposite side of where it is facing is not accurate and unfixable.",
+   "pack_description": "Gives Dispensers and Droppers arrows all around to indicate which direction they are facing.\nNote: The opposite side of where it is facing is not accurate and unfixable.",
    "conflict": [],
    "compatibility": []
   },
@@ -194,9 +201,9 @@
    "compatibility": []
   },
   {
-   "pack_id": "VisualHoneyStage",
-   "pack_name": "Visual Honey Stage",
-   "pack_description": "Visualizes the empty and full honey stages in Bee Nests and Beehives.",
+   "pack_id": "VisualFullHoneyStage",
+   "pack_name": "Visual Full Honey Stage",
+   "pack_description": "Visualizes the empty and full honey stages in Bee Nests and Beehives on all sides.",
    "conflict": [],
    "compatibility": []
   },
