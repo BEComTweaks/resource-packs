@@ -1,0 +1,108 @@
+{
+	"num_mip_levels": 4,
+	"padding": 8,
+	"resource_pack_name": "vanilla",
+	"texture_data": {
+		"crimson_mushroom": {
+			"textures": [
+				"textures/blocks/crimson_fungus"
+			]
+		},
+		"crimson_mushroom_pot": {
+			"textures": [
+				"textures/blocks/crimson_fungus_pot"
+			]
+		},
+		"crimson_mushroom_top": {
+			"textures": [
+				"textures/blocks/crimson_fungus_top"
+			]
+		},
+		"crimson_mushroom_side": {
+			"textures": [
+				"textures/blocks/crimson_fungus_side"
+			]
+		},
+		"crimson_mushroom_side_pot": {
+			"textures": [
+				"textures/blocks/crimson_fungus_side_pot"
+			]
+		},
+		"warped_mushroom": {
+			"textures": [
+				"textures/blocks/warped_fungus"
+			]
+		},
+		"warped_mushroom_pot": {
+			"textures": [
+				"textures/blocks/warped_fungus_pot"
+			]
+		},
+		"warped_mushroom_side": {
+			"textures": [
+				"textures/blocks/warped_fungus_side"
+			]
+		},
+		"warped_mushroom_side_pot": {
+			"textures": [
+				"textures/blocks/warped_fungus_side_pot"
+			]
+		},
+		"warped_mushroom_top": {
+			"textures": [
+				"textures/blocks/warped_fungus_top"
+			]
+		},
+		"brown_mushroom": {
+			"textures": [
+				"textures/blocks/brown_mushroom"
+			]
+		},
+		"brown_mushroom_pot": {
+			"textures": [
+				"textures/blocks/brown_mushroom_pot"
+			]
+		},
+		"brown_mushroom_top": {
+			"textures": [
+				"textures/blocks/brown_mushroom_top"
+			]
+		},
+		"brown_mushroom_side": {
+			"textures": [
+				"textures/blocks/brown_mushroom_side"
+			]
+		},
+		"brown_mushroom_side_pot": {
+			"textures": [
+				"textures/blocks/brown_mushroom_side_pot"
+			]
+		},
+		"red_mushroom": {
+			"textures": [
+				"textures/blocks/red_mushroom"
+			]
+		},
+		"red_mushroom_pot": {
+			"textures": [
+				"textures/blocks/red_mushroom_pot"
+			]
+		},
+		"red_mushroom_top": {
+			"textures": [
+				"textures/blocks/red_mushroom_top"
+			]
+		},
+		"red_mushroom_side": {
+			"textures": [
+				"textures/blocks/red_mushroom_side"
+			]
+		},
+		"red_mushroom_side_pot": {
+			"textures": [
+				"textures/blocks/red_mushroom_side_pot"
+			]
+		}
+	},
+	"texture_name": "atlas.terrain"
+}
