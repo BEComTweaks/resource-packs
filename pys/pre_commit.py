@@ -91,6 +91,10 @@ for c in range(len(os.listdir(f'{cdir()}\\jsons\\packs'))):
                 cstats[0] += 1
 
 clrprint("Finished Counting!",clr="green")
+# Update incomplete_packs.json
+with open(f"{cdir()}\\jsons\\others\\incomplete_packs.json","w") as incomplete_packs_file:
+    incomplete_packs_file.write(dumps(incomplete_packs,indent=2))
+clrprint("Updated incomplete_packs.json",clr="green")
 clrprint("Updating README.md...",clr="yellow")
 
 # Just some fancy code with regex to update README.md
