@@ -4,7 +4,7 @@
 
 ![Commit Activity](https://img.shields.io/github/commit-activity/w/NSPC911/Bedrock-Tweaks-Base?style=for-the-badge&label=Commits&color=purple)
 ![GitHub repo size](https://img.shields.io/github/repo-size/NSPC911/Bedrock-Tweaks-Base?style=for-the-badge&label=Size&color=pink)
-![Completed Packs](https://img.shields.io/badge/Packs-355%2F382-blue?style=for-the-badge&color=green)
+![Completed Packs](https://img.shields.io/badge/Packs-356%2F382-blue?style=for-the-badge&color=green)
 ![Completed Compatibilities for Packs](https://img.shields.io/badge/Compatibilities-20%2F49-blue?style=for-the-badge&color=red)
 
 </div>

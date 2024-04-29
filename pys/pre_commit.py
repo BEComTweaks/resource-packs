@@ -26,7 +26,7 @@ incomplete_packs = {}
 cstats = [0,0]
 compatibilities = []
 
-if input("Show Compatibility Progress? [y/n] ") == "y":
+if input("Show Compatibility Progress? [y/n]\n") == "y":
     showcomp = True
 else:
     showcomp = False
