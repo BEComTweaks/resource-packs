@@ -16,23 +16,18 @@ def check(module,module_name=""):
             time.sleep(1)
     else:
         try:
-            importlib.import_module(module_name)
+            importlib.import_module(module)
         except ModuleNotFoundError:
             print(f"{module} is not installed!")
             # Using pip instead of subprocess as calling
             # with terminal results in an error
-            pip.main(["install",module])
+            pip.main(["install",module_name])
             time.sleep(1)
 
 # For module to be easy to use and not require
 # the start of the program to be cluttered
-currentdir,currentdirs = "",getcwd()
-for i in currentdirs:
-    if ord(i) == 92:
-        currentdir += "/"
-    else:
-        currentdir += i
-if currentdir[-4:] == "/pys":
+currentdir = getcwd()
+if currentdir[-4:] == "\\pys":
     currentdir = currentdir[:-4]
 # Yeah...
 def cdir():
