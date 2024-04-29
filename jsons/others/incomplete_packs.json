@@ -17,7 +17,6 @@
   ],
   "HUD and GUI": [
     "SmootherFont",
-    "NumberdHotbar",
     "TransparentUI",
     "HighContrastUI"
   ],

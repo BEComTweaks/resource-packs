@@ -2,13 +2,6 @@
  "topic": "HUD and GUI",
  "packs": [
   {
-   "pack_id": "NumberedHotbar",
-   "pack_name": "Numbered Hotbar",
-   "pack_description": "Adds numbers to the hotbar slots.",
-   "conflict": [],
-   "compatibility": []
-  },
-  {
    "pack_id": "NoCrosshair",
    "pack_name": "No Crosshair",
    "pack_description": "Removes the '+' crosshair.",
@@ -329,8 +322,8 @@
    "compatibility": []
   },
   {
-   "pack_id": "NumberdHotbar",
-   "pack_name": "Numberd Hotbar",
+   "pack_id": "NumberedHotbar",
+   "pack_name": "Numbered Hotbar",
    "pack_description": "Adds numbers to the hotbar slots.",
    "conflict": [],
    "compatibility": []
