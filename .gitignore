@@ -1,2 +1,6 @@
 # Ignore Python cache files as it forms merge conflicts
 pys/__pycache__/
+# Stuff in my folder
+gitignore
+# Created Packs
+BTRP-??????

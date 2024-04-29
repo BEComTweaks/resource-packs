@@ -1,1 +1,6 @@
-"vignette_renderer": {"renderer": "flying_item_renderer"}
+{
+	"namespace": "hud",
+	"vignette_renderer": {
+		"renderer": "flying_item_renderer"
+	}
+}
