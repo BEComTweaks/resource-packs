@@ -13,17 +13,23 @@
     "HangingSignLogs",
     "ConsistentSmoothStone"
   ],
+  "Fun": [],
   "HUD and GUI": [
     "SmootherFont",
     "TransparentUI",
     "HighContrastUI"
   ],
+  "Lower and Sides": [],
   "Menu Panoramas": [
     "Xisuma'sHermitcraftBaseSeason9"
   ],
+  "More Zombies": [],
+  "Parity": [],
+  "Peace and Quiet": [],
   "Retro": [
     "OldBedIcons"
   ],
+  "Terrain": [],
   "Unobtrusive": [
     "NoBeaconBeam"
   ],

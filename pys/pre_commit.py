@@ -22,7 +22,7 @@ from clrprint import clrprint
 
 
 stats = [0,0]
-incomplete_packs = {}
+incomplete_packs = {"Aesthetic":[],"Colorful Slime":[],"Fixes and Consistency":[],"Fun":[],"HUD and GUI":[],"Lower and Sides":[],"Menu Panoramas":[],"More Zombies":[],"Parity":[],"Peace and Quiet":[],"Retro":[],"Terrain":[],"Unobtrusive":[],"Utility":[],"Variation":[]}
 cstats = [0,0]
 compatibilities = []
 
@@ -66,10 +66,6 @@ for c in range(len(os.listdir(f'{cdir()}\\jsons\\packs'))):
             # If the packs have not updated with the new directory type
             stats[1] += 1
             incomplete_packs[file["topic"]].append(file["packs"][i]["pack_id"])
-        except KeyError:
-            # If the topic doesn't exist in the dictionary
-            incomplete_packs[file["topic"]] = [file["packs"][i]["pack_id"]]
-            stats[1] += 1
         
         
         # Updates Pack Compatibilities
