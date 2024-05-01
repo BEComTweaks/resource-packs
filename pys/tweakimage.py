@@ -71,14 +71,16 @@ def modify_images_in_directory(directory):
         # Modify the image and overwrite the original file
         modify_image(png_file)
         print(f"Modified {png_file}")
-
-clrprint(f"Enter the directory to the folder with PNG Files.\nExample: packs\\aesthetic\\AlternateCutCopper\\default\\textures\\blocks\\ \n",clr='b',end='')
-directory = f"{cdir()}\\{input()}"
+if os.name == "nt":
+    clrprint(f"Enter the directory to the folder with PNG Files.\nExample: packs\\aesthetic\\AlternateCutCopper\\default\\textures\\blocks\\ \n",clr='b',end='')
+else:
+    clrprint(f"Enter the directory to the folder with PNG Files.\nExample: packs/aesthetic/AlternateCutCopper/default/textures/blocks/ \n",clr='b',end='')
+directory = f"{cdir()}/{input()}"
 # Changes each pixel withing a range of -6 to +6
 min,max =  -6,6
 while not os.path.isdir(directory):
     clrprint(f"{directory} is not valid. Re-enter the directory to the folder with PNG Files.",clr="yellow")
-    directory = f"{cdir()}\\{input()}"
+    directory = f"{cdir()}/{input()}"
     
 modify_images_in_directory(directory)
 clrprint(f"Modified all PNG files in {directory}")

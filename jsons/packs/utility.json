@@ -208,8 +208,8 @@
    "compatibility": []
   },
   {
-   "pack_id": "VisualNoteBlockPitchParticle",
-   "pack_name": "Visual Note Block Pitch Particle",
+   "pack_id": "NoteBlockPitchParticle",
+   "pack_name": "Note Block Pitch Particle",
    "pack_description": "Modifies the note block pitch particle to show the pitch.",
    "conflict": [],
    "compatibility": []

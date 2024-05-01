@@ -22,8 +22,8 @@ showerror = int(input("Print process?\n0 = Don't show anything\n1 = Don't show e
 if showerror != 0:
     # Seperator
     print("="*40, "\n")
-for c in range(len(os.listdir(f'{cdir()}\\jsons\\packs'))):
-    with open(f"{cdir()}\\jsons\\packs\\{os.listdir(f'{cdir()}/jsons/packs/')[c]}","r") as js:
+for c in range(len(os.listdir(f'{cdir()}/jsons/packs'))):
+    with open(f"{cdir()}/jsons/packs/{os.listdir(f'{cdir()}/jsons/packs/')[c]}","r") as js:
         try:
             pack_json = loads(js.read())
         except JSONDecodeError:
@@ -31,13 +31,13 @@ for c in range(len(os.listdir(f'{cdir()}\\jsons\\packs'))):
             # JSONDecodeError normally prints where I am missing a comma/bracket
             # But not the file, so this brings it up as well
             # Hence why if there is an issue with the JSON, it brings up two errors at once
-            raise SyntaxError(f"{cdir()}\\jsons\\packs\\{os.listdir(f'{cdir()}/jsons/packs/')[c]} has a skill issue.\nPerhaps you are missing a comma?")
+            raise SyntaxError(f"{cdir()}/jsons/packs/{os.listdir(f'{cdir()}/jsons/packs/')[c]} has a skill issue.\nPerhaps you are missing a comma?")
     if showerror != 0:
         print(pack_json["topic"].lower())
     # Main Topic Directory
     try:
         # Makes the topic folder
-        os.mkdir(f'{cdir()}\\packs\\{pack_json["topic"].lower()}')
+        os.mkdir(f'{cdir()}/packs/{pack_json["topic"].lower()}')
         if showerror != 0:
             clrprint('+ Made directory',f'{pack_json["topic"].lower()}',clr='p,w')
     except FileExistsError:
@@ -52,7 +52,7 @@ for c in range(len(os.listdir(f'{cdir()}\\jsons\\packs'))):
             clrprint(f'= |--> {pack_json["packs"][i]["pack_id"]}')
         try:
             # Makes the PackID Directory in Topic
-            os.mkdir(f'{cdir()}\\packs\\{pack_json["topic"].lower()}\\{pack_json["packs"][i]["pack_id"]}\\')
+            os.mkdir(f'{cdir()}/packs/{pack_json["topic"].lower()}/{pack_json["packs"][i]["pack_id"]}/')
             if showerror != 0:
                 clrprint('+ |----> Made folder',clr='m')
         except FileExistsError:
@@ -64,7 +64,7 @@ for c in range(len(os.listdir(f'{cdir()}\\jsons\\packs'))):
         # Pack Default Directory
         try:
             # Makes the default directory in PackID
-            os.mkdir(f'{cdir()}\\packs\\{pack_json["topic"].lower()}\\{pack_json["packs"][i]["pack_id"]}\\default')
+            os.mkdir(f'{cdir()}/packs/{pack_json["topic"].lower()}/{pack_json["packs"][i]["pack_id"]}/default')
             if showerror != 0:
                 clrprint(f'+ |-------> Made folder','`default`',clr='b,w')
         except FileExistsError:
@@ -74,15 +74,15 @@ for c in range(len(os.listdir(f'{cdir()}\\jsons\\packs'))):
                 pass
 
         # Pack Directory pack_icon.png
-        with open(f'{cdir()}\\packs\\{pack_json["topic"].lower()}\\{pack_json["packs"][i]["pack_id"]}\\pack_icon.png','a') as r:
+        with open(f'{cdir()}/packs/{pack_json["topic"].lower()}/{pack_json["packs"][i]["pack_id"]}/pack_icon.png','a') as r:
             # The main purpose of doing this is to
             # 1. Create a pack_icon.png as  \packs\topic\packid\
             # 2. Make no changes to \packs\topic\packid\pack_icon.png if it is already made/modified
             pass
-        if os.path.getsize(f'{cdir()}\\packs\\{pack_json["topic"].lower()}\\{pack_json["packs"][i]["pack_id"]}\\pack_icon.png') == 0:
+        if os.path.getsize(f'{cdir()}/packs/{pack_json["topic"].lower()}/{pack_json["packs"][i]["pack_id"]}/pack_icon.png') == 0:
             # Basically checks whether pack_icon.png is empty, and
             # if so, it copies the pack_icon.png to \packs\topic\packid
-            copyfile(f'{cdir()}\\pack_icon.png',f'{cdir()}\\packs\\{pack_json["topic"].lower()}\\{pack_json["packs"][i]["pack_id"]}\\pack_icon.png')
+            copyfile(f'{cdir()}/pack_icon.png',f'{cdir()}/packs/{pack_json["topic"].lower()}/{pack_json["packs"][i]["pack_id"]}/pack_icon.png')
             if showerror != 0:
                 clrprint('+ |----------> Made','`pack_icon.png`',clr='g,w')
         elif showerror == 2:
@@ -93,7 +93,7 @@ for c in range(len(os.listdir(f'{cdir()}\\jsons\\packs'))):
             # Pack Name Compatibilities Directory
             try:
                 # Creates compatability directory
-                os.mkdir(f'{cdir()}\\packs\\{pack_json["topic"].lower()}\\{pack_json["packs"][i]["pack_id"]}\\{c}')
+                os.mkdir(f'{cdir()}/packs/{pack_json["topic"].lower()}/{pack_json["packs"][i]["pack_id"]}/{c}')
                 if showerror != 0:
                     clrprint('+ |-------> Made folder',f'`{c}`',clr='b,w')
             except FileExistsError:

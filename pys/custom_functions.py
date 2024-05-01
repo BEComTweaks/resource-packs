@@ -33,7 +33,7 @@ from clrprint import clrprint
 # For module to be easy to use and not require
 # the start of the program to be cluttered
 currentdir = os.getcwd()
-if currentdir[-4:] == "\\pys":
+if currentdir[-3:] == "pys":
     currentdir = currentdir[:-4]
 # Yeah...
 def cdir():
