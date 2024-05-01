@@ -32,8 +32,8 @@ else:
     showcomp = False
 clrprint("Counting Packs and Compatibilities...",clr="yellow")
 # Main Loop
-for c in range(len(os.listdir(f'{cdir()}\\jsons\\packs'))):
-    with open(f"{cdir()}\\jsons\\packs\\{os.listdir(f'{cdir()}/jsons/packs')[c]}","r") as js:
+for c in range(len(os.listdir(f'{cdir()}/jsons/packs'))):
+    with open(f"{cdir()}/jsons/packs/{os.listdir(f'{cdir()}/jsons/packs')[c]}","r") as js:
         
         # Load JSON file in jsons\packs\
         try:
@@ -55,7 +55,7 @@ for c in range(len(os.listdir(f'{cdir()}\\jsons\\packs'))):
     for i in range(len(file["packs"])):
         # Updates Incomplete Packs
         try:
-            if os.listdir(f'{cdir()}\\packs\\{file["topic"].lower()}\\{file["packs"][i]["pack_id"]}\\default') == []:
+            if os.listdir(f'{cdir()}/packs/{file["topic"].lower()}/{file["packs"][i]["pack_id"]}/default') == []:
                 # Adds the packid to the topic list
                 incomplete_packs[file["topic"]].append(file["packs"][i]["pack_id"])
                 stats[1] += 1
@@ -74,7 +74,7 @@ for c in range(len(os.listdir(f'{cdir()}\\jsons\\packs'))):
                 clrprint(f'= \t{file["packs"][i]["pack_id"]}',clr="yellow")
         for comp in range(len(file["packs"][i]["compatibility"])): # If it is empty, it just skips
             # Looks at compatibility folders
-            if os.listdir(f'{cdir()}\\packs\\{file["topic"].lower()}\\{file["packs"][i]["pack_id"]}\\{file["packs"][i]["compatibility"][comp]}') == []:
+            if os.listdir(f'{cdir()}/packs/{file["topic"].lower()}/{file["packs"][i]["pack_id"]}/{file["packs"][i]["compatibility"][comp]}') == []:
                 if showcomp:
                     clrprint(f'- \t\t{file["packs"][i]["compatibility"][comp]}',clr="red")
                 # Adds the packid to the list of incomplete compatibilities
@@ -88,13 +88,13 @@ for c in range(len(os.listdir(f'{cdir()}\\jsons\\packs'))):
 
 clrprint("Finished Counting!",clr="green")
 # Update incomplete_packs.json
-with open(f"{cdir()}\\jsons\\others\\incomplete_packs.json","w") as incomplete_packs_file:
+with open(f"{cdir()}/jsons/others/incomplete_packs.json","w") as incomplete_packs_file:
     incomplete_packs_file.write(dumps(incomplete_packs,indent=2))
 clrprint("Updated incomplete_packs.json",clr="green")
 clrprint("Updating README.md...",clr="yellow")
 
 # Just some fancy code with regex to update README.md
-with open(f"{cdir()}\\README.md", "r") as file:
+with open(f"{cdir()}/README.md", "r") as file:
     content = file.read()
 # Regex to update link
 pack_pattern = r"(https://img.shields.io/badge/Packs-)(\d+%2F\d+)(.*)"
@@ -108,7 +108,7 @@ if pack_match and comp_match:
     updated_content = content.replace(pack_match.group(0), new_pack_url)
     new_comp_url = f"{comp_match.group(1)}{cstats[0]}%2F{cstats[0]+cstats[1]}{comp_match.group(3)}"
     updated_content = updated_content.replace(comp_match.group(0), new_comp_url)
-    with open(f"{cdir()}\\README.md", "w") as file:
+    with open(f"{cdir()}/README.md", "w") as file:
         # Update the file
         file.write(updated_content)
 else:
