@@ -1,17 +1,45 @@
 {
-  "Aesthetic": ["AccurateSpyglass"],
-  "Colorful Slime": ["BlackSlime"],
-  "Fixes and Consistency": ["AccurateScaffolding"],
-  "Fun": ["SusSandandGravel"],
-  "HUD and GUI": ["BedrockEditionSubtitle"],
-  "Lower and Sides": ["WarpedNyliumSides"],
-  "Menu Panoramas": ["pack.png"],
-  "More Zombies": ["AllZombies"],
-  "Parity": ["JavaBoom"],
-  "Peace and Quiet": ["QuieterDispensersandDroppers"],
-  "Retro": ["OldCobblestone"],
-  "Terrain": ["SmootherOakLog"],
-  "Unobtrusive": ["ShorterSwords"],
-  "Utility": ["BuddingAmethystBorders"],
-  "Variation": ["VariatedRedMushroomBlocks"]
+    "Aesthetic": [],
+    "Colorful Slime": [
+        "BlackSlime"
+    ],
+    "Fixes and Consistency": [
+        "AccurateScaffolding"
+    ],
+    "Fun": [
+        "SusSandandGravel"
+    ],
+    "HUD and GUI": [
+        "BedrockEditionSubtitle"
+    ],
+    "Lower and Sides": [
+        "WarpedNyliumSides"
+    ],
+    "Menu Panoramas": [
+        "pack.png"
+    ],
+    "More Zombies": [
+        "AllZombies"
+    ],
+    "Parity": [
+        "JavaBoom"
+    ],
+    "Peace and Quiet": [
+        "QuieterDispensersandDroppers"
+    ],
+    "Retro": [
+        "OldCobblestone"
+    ],
+    "Terrain": [
+        "SmootherOakLog"
+    ],
+    "Unobtrusive": [
+        "ShorterSwords"
+    ],
+    "Utility": [
+        "BuddingAmethystBorders"
+    ],
+    "Variation": [
+        "VariatedRedMushroomBlocks"
+    ]
 }

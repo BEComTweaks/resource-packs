@@ -2,7 +2,6 @@
 import os
 import random
 import glob
-from PIL import Image
 
 if str(os.getcwd()).endswith("system32"):
     doubleclicked = True
@@ -17,6 +16,8 @@ else:
 from custom_functions import *
 check("clrprint")
 from clrprint import clrprint
+check("PIL","pillow")
+from PIL import Image
 
 def randrand(var, min, max):
     if var + max >  255:
