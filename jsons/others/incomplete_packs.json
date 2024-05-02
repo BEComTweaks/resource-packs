@@ -36,7 +36,7 @@
     "DirectionalDispensersandDroppers",
     "TotemShield",
     "VisualFullHoneyStage",
-    "VisualNoteBlockPitchParticle"
+    "NoteBlockPitchParticle"
   ],
   "Variation": [
     "VariatedCoarseDirt"
