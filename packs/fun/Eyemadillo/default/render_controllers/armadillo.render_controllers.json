@@ -1,0 +1,17 @@
+{
+ "format_version": "1.10.0",
+ "render_controllers": {
+  "controller.render.armadillo_eyes": {
+   "geometry": "Geometry.default",
+   "materials": [{"*": "Material.default"}],
+   "textures": ["query.get_name == 'Eyemadillo' ? Texture.cursed : Texture.default"],
+   "part_visibility": [
+    {"body": "!variable.use_rolled_up_model"},
+    {"tail": "!variable.use_rolled_up_model"},
+    {"back_r_leg": "!variable.use_rolled_up_model"},
+    {"back_l_leg": "!variable.use_rolled_up_model"},
+    {"body_rolled_up": "variable.use_rolled_up_model"}
+   ]
+  }
+ }
+}

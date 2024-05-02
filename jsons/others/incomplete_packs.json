@@ -20,7 +20,9 @@
   "More Zombies": [],
   "Parity": [],
   "Peace and Quiet": [],
-  "Retro": [],
+  "Retro": [
+    "OldBedIcons"
+  ],
   "Terrain": [],
   "Unobtrusive": [
     "NoBeaconBeam"

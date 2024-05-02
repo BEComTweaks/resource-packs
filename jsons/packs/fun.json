@@ -151,6 +151,13 @@
    "pack_description": "Gives Chests and Trapped Chests their Christmas textures all year-round.",
    "conflict": [],
    "compatibility": []
+  },
+  {
+   "pack_id": "Eyemadillo",
+   "pack_name": "Eyemadillo",
+   "pack_description": "The nightmare fuel from January Minecraft Monthly is real.",
+   "conflict": [],
+   "compatibility": []
   }
  ]
 }
