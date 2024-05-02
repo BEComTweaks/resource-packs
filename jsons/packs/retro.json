@@ -161,8 +161,8 @@
       "compatibility": []
      },
      {
-      "pack_id": "RenamePotterySherdtoPotteryShard",
-      "pack_name": "Rename 'Pottery Sherd' to 'Pottery Shard'",
+      "pack_id": "RenamePotterySherdtoShard",
+      "pack_name": "Rename Pottery 'Sherd' to 'Shard'",
       "pack_description": "Renames 'Pottery Sherds' back to 'Pottery Shards'.",
       "conflict": [],
       "compatibility": []

@@ -134,7 +134,7 @@
   },
   {
    "pack_id": "SoulSoilSoulCampfire",
-   "pack_name": " Soul Soil Soul Campfire",
+   "pack_name": "Soul Soil Soul Campfire",
    "pack_description": "Replaces the Soul Campfire's 'ash' texture with Soul Soil for consistency.",
    "conflict": [],
    "compatibility": ["AshlessCampfires"]
