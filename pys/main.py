@@ -109,20 +109,22 @@ def main_menu():
         clrprint("Categories",clr="blue")
         menu_commands = [""]
         
-        for i in range(len(os.listdir(f"{cdir()}/jsons/packs"))):
+        # Sort the list of files before iterating over them
+        pack_files = sorted(os.listdir(f"{cdir()}/jsons/packs"))
+        for i, filename in enumerate(pack_files):
             clmthing()
-            loadpackjson = load_json(f'{cdir()}/jsons/packs/{os.listdir(f"{cdir()}/jsons/packs")[i]}')
+            loadpackjson = load_json(f'{cdir()}/jsons/packs/{filename}')
             print(f'{i+1}. {loadpackjson["topic"]}', end="")
             print(" "*(min_clm - len(f'{i+1}. {loadpackjson["topic"]}')),end="")
-            menu_commands.append(os.listdir(f"{cdir()}/jsons/packs")[i].lower())
+            menu_commands.append(filename.lower())
         clrprint("\n\nOthers",clr="purple")
         
-        clrprint(f"{i+2}. Show Selected Packs",end="")
+        clrprint(f"{len(pack_files) + 1}. Show Selected Packs",end="")
         print(" "*(min_clm - 23),end="")
         menu_commands.append("show selected packs")
         clmthing()
         
-        print(f"{i+3}. Exit Program")
+        print(f"{len(pack_files) + 2}. Exit Program")
         menu_commands.append("exit")
         
         choice = input("\nEnter your choice.\n").lower()
