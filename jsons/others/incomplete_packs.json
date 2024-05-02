@@ -20,9 +20,7 @@
   "More Zombies": [],
   "Parity": [],
   "Peace and Quiet": [],
-  "Retro": [
-    "OldBedIcons"
-  ],
+  "Retro": [],
   "Terrain": [],
   "Unobtrusive": [
     "NoBeaconBeam"
@@ -36,7 +34,7 @@
     "DirectionalDispensersandDroppers",
     "TotemShield",
     "VisualFullHoneyStage",
-    "VisualNoteBlockPitchParticle"
+    "NoteBlockPitchParticle"
   ],
   "Variation": [
     "VariatedCoarseDirt"
