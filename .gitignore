@@ -6,3 +6,5 @@ gitignore
 BTRP-??????
 # Logs from main.py
 logs
+# Save file of main.py  incase of merge conflicts of README.md
+pys/main_saved.py

@@ -25,7 +25,7 @@ def update_size():
     global clm,lins,min_clm,clms,pclms
     clm = shutil.get_terminal_size().columns
     lins = shutil.get_terminal_size().lines
-    min_clm = 41
+    min_clm = 42
     clms = clm//min_clm
     pclms = -1
 update_size()
@@ -65,8 +65,7 @@ def val_command(menu,command):
             selpackjson = load_json(f"{cdir()}/jsons/others/selected_packs.json")
             selpackjson[topic].append("".join(command[2].split()))
             
-            with open(f"{cdir()}/jsons/others/selected_packs.json","w") as selpacks:
-                selpacks.write(dumps(selpackjson,indent=4))
+            dump_json(f"{cdir()}/jsons/others/selected_packs.json",selpackjson)
             
             clrprint(f"{command[2]} has been added to Selected Packs!",clr="green")
             return ["page",up[menu],f'{"".join(topic.replace(" ","_").lower().split())}.json']
@@ -80,8 +79,7 @@ def val_command(menu,command):
                     selpackjson[topic].pop(i)
                     break
             
-            with open(f"{cdir()}/jsons/others/selected_packs.json","w") as selpacks:
-                selpacks.write(dumps(selpackjson,indent=4))
+            dump_json(f"{cdir()}/jsons/others/selected_packs.json",selpackjson)
             clrprint(f"{command[2]} has been removed from Selected Packs!",clr="green")
             
             return ["page",up[menu],f'{"".join(topic.replace(" ","_").lower().split())}.json']
@@ -104,9 +102,9 @@ def main_menu():
     while choice == None:
         update_size()
         clear()
-        clrprint("Use numbers to select options!\n",clr="yellow")
-        clrprint("Main Menu:\n",clr="blue")
-        clrprint("Categories",clr="blue")
+        clrprint("Main Menu",clr="default")
+        
+        clrprint("\nCategories",clr="purple")
         menu_commands = [""]
         
         # Sort the list of files before iterating over them
@@ -128,13 +126,14 @@ def main_menu():
         menu_commands.append("exit")
         
         choice = input("\nEnter your choice.\n").lower()
+        progged = prog_search(choice,menu_commands)
         if choice.isnumeric():
             try:
                 choice = menu_commands[int(choice)]
             except IndexError:
                 choice = None
-        elif choice.lower() == "exit":
-            pass
+        elif progged:
+            choice = menu_commands[progged]
         else:
             choice = None
     return choice
@@ -148,11 +147,10 @@ def pack_select(topic):
         selpacks = load_json(f"{cdir()}/jsons/others/selected_packs.json")
         
         clear()
-        clrprint("Use numbers to select options!\n",clr="yellow")
-        clrprint(packs["topic"],clr="blue")
+        clrprint(f'Main Menu -> {packs["topic"]}\n',clr="default")
         clrprint("Green","means this pack has been selected",clr="g,w")
         clrprint("Red","means this pack has not been finished and cannot be selected\n",clr="r,w")
-        clrprint("Packs",clr="blue")
+        clrprint("Packs",clr="purple")
         menu_commands = [""]
         
         for i in range(len(packs["packs"])):
@@ -177,16 +175,14 @@ def pack_select(topic):
         print(f'{i+3}. Exit Program')
         menu_commands.append("exit")
         choice = input("Enter your choice.\n")
+        progged = prog_search(choice,menu_commands);
         if choice.isnumeric():
             try:
-                if menu_commands[int(choice)] == "":
-                    choice = None
-                else:
-                    choice = menu_commands[int(choice)]
+                choice = menu_commands[int(choice)]
             except IndexError:
                 choice = None
-        elif choice in ["back","exit"]:
-            pass
+        elif progged:
+            choice = menu_commands[progged]
         else:
             choice = None
     if choice.lower() in ["exit","back"]:
@@ -199,7 +195,7 @@ def selected_packs():
     while choice == None:
         update_size()
         clear()
-        clrprint("Selected Packs\n",clr="blue")
+        clrprint("Main Menu -> Selected Packs\n",clr="default")
         menu_commands = [""]
         selpacks = load_json(f"{cdir()}/jsons/others/selected_packs.json")
         
@@ -215,7 +211,7 @@ def selected_packs():
                     print(f"\t- {item}")
         if not hasitem:
             clrprint("There is nothing selected ._.\nMaybe head back and select some packs!",clr="yellow")
-        clrprint("\nOptions",clr="pink")
+        clrprint("\nOptions",clr="purple")
         print(f"1. Go Back (back)")
         menu_commands.append("back")
         
@@ -239,8 +235,7 @@ def select_pack(topic,pack,index):
         selpacks = load_json(f"{cdir()}/jsons/others/selected_packs.json")
         
         clear()
-        clrprint("Use numbers to select options!\n",clr="yellow")
-        clrprint(f'{packs["topic"]} -> {pack}\n',clr="blue")
+        clrprint(f'Main Menu -> {packs["topic"]} -> {pack}\n',clr="default")
         print(packs["packs"][int(index)-1]["pack_description"])
         menu_commands = [""]
         
@@ -249,7 +244,7 @@ def select_pack(topic,pack,index):
             clrprint(f"{pack} has already been selected!",clr="green")
             uns = "Uns"
         
-        clrprint("\nOptions",clr="pink")
+        clrprint("\nOptions",clr="purple")
         print(f"\n1. {uns}elect {pack} ({uns.lower()}elect)")
         menu_commands.append(f"{uns.lower()}elect")
         
@@ -260,13 +255,14 @@ def select_pack(topic,pack,index):
         menu_commands.append("exit")
         
         choice = input("\nEnter your choice.\n").lower()
+        progged = prog_search(choice,menu_commands)
         if choice.isnumeric():
             try:
                 choice = menu_commands[int(choice)]
             except IndexError:
                 choice = None
-        elif choice in ["back","exit"] or choice == f"{uns.lower()}elect":
-            pass
+        elif progged:
+            choice = menu_commands[progged]
         else:
             choice = None
     if choice == "back":

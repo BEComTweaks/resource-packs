@@ -43,7 +43,7 @@
   },
   {
    "pack_id": "WaxedCopperItems",
-   "pack_name": "Visual Waxed Copper Items",
+   "pack_name": "Waxed Copper Items",
    "pack_description": "Adds a border around Waxed Copper and variants in the inventory. This will NOT affect the placed blocks.",
    "conflict": ["BoltlessWaxedCopperBlocks"],
    "compatibility": []
@@ -53,14 +53,7 @@
    "pack_name": "Boltless Waxed Copper Blocks",
    "pack_description": "Removes the bolts in the corner of Waxed Copper blocks and variants.",
    "conflict": ["WaxedCopperItems"],
-   "compatibility": ["EquallyBrightCopperBulbs"]
-  },
-  {
-   "pack_id": "EquallyBrightCopperBulbs",
-   "pack_name": "Equally Bright Copper Bulbs",
-   "pack_description": "Makes Lit Copper bulb variants have the same texture brightness as default copper bulb. This will not increase the brightness they emit.",
-   "conflict": [],
-   "compatibility": ["BoltlessWaxedCopperBlocks"]
+   "compatibility": ["AlternateCutCopper"]
   },
   {
    "pack_id": "ShinyAgedAmethystCluster",
