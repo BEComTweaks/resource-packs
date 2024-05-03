@@ -6,14 +6,18 @@
    "pack_name": "Smiley Axolotls",
    "pack_description": "Gives Axolotls a smiley face :).",
    "conflict": [],
-   "compatibility": ["GreenAxolotl"]
+   "compatibility": [
+    "GreenAxolotl"
+   ]
   },
   {
    "pack_id": "GreenAxolotl",
    "pack_name": "Green Axolotl",
    "pack_description": "Replaces the rare blue variant of the Axolotl with the unused green Axolotl skin.",
    "conflict": [],
-   "compatibility": ["SmileyAxolotls"]
+   "compatibility": [
+    "SmileyAxolotls"
+   ]
   },
   {
    "pack_id": "Beeralis",
@@ -26,7 +30,9 @@
    "pack_id": "SusSandandGravel",
    "pack_name": "Sus Sand and Gravel",
    "pack_description": "GET OUT OF MY HEAD GET OUT OF MY HEAD GET OUT OF MY HEAD.",
-   "conflict": ["SusSandGravelBorders"],
+   "conflict": [
+    "SuspiciousSand&GravelBorders"
+   ],
    "compatibility": []
   },
   {
@@ -54,7 +60,9 @@
    "pack_id": "DarthXisumaPiglins",
    "pack_name": "Darth Xisuma Piglins",
    "pack_description": "Changes Piglins, Zombified Piglins and Piglin Brutes' textures to Xisuma's Darth Vader Skin.",
-   "conflict": ["ZombiePigman"],
+   "conflict": [
+    "ZombiePigman"
+   ],
    "compatibility": []
   },
   {
@@ -75,14 +83,22 @@
    "pack_id": "EmeraldstoRubies",
    "pack_name": "Emeralds to Rubies",
    "pack_description": "Replace all Emerald items and blocks with Rubies!",
-   "conflict": ["LegacyConsoleEmerald"],
-   "compatibility": ["UniformOres", "ClassicOres", "OreBorders"]
+   "conflict": [
+    "LegacyConsoleEmerald"
+   ],
+   "compatibility": [
+    "UniformOres",
+    "ClassicOres",
+    "OreBorders"
+   ]
   },
   {
    "pack_id": "WitherBee",
    "pack_name": "Wither Bee",
    "pack_description": "Changes the Wither Boss texture to a Bee.",
-   "conflict": ["PixelConsistentWither"],
+   "conflict": [
+    "PixelConsistentWither"
+   ],
    "compatibility": []
   },
   {
@@ -96,28 +112,37 @@
    "pack_id": "EnglishEnchantingTable",
    "pack_name": "English Enchanting Table",
    "pack_description": "Changes the Enchanting Table language (AKA Standard Galactic) to use English alphabet characters. This will not help you with enchanting, as the words and phrases used in the Enchanting Table are randomly generated gibberish.",
-   "conflict": ["SmootherFont"],
+   "conflict": [
+    "SmootherFont"
+   ],
    "compatibility": []
   },
   {
    "pack_id": "StandardGalacticAlphabet",
    "pack_name": "Standard Galactic Alphabet",
    "pack_description": "Changes English alphabet characters to Standard Galactic alphabet characters (AKA the Enchanting Table language).",
-   "conflict": ["SmootherFont"],
+   "conflict": [
+    "SmootherFont"
+   ],
    "compatibility": []
   },
   {
    "pack_id": "BaconBeam",
    "pack_name": "Bacon Beam",
    "pack_description": "Adds the almighty Baacon Beam to beacons! All hail the Bacon Beam!",
-   "conflict": ["PixelConsistentBeaconBeam", "NoBeaconBeam"],
+   "conflict": [
+    "PixelConsistentBeaconBeam",
+    "NoBeaconBeam"
+   ],
    "compatibility": []
   },
   {
    "pack_id": "PhantomRain",
    "pack_name": "Phantom Rain",
    "pack_description": "Merges two of the most annoying features into one :).",
-   "conflict": ["UnobstrusiveRain"],
+   "conflict": [
+    "UnobstrusiveRain"
+   ],
    "compatibility": []
   },
   {
@@ -135,7 +160,11 @@
    "pack_id": "UselessSpyglass",
    "pack_name": "Useless Spyglass",
    "pack_description": "Reverses the Spyglass overlay, making the middle opaque and the sides transparent. It's useless, what did you expect?.",
-   "conflict": ["TransparentSpyglassOverlay", "NoSpyglassOverlay", "WHAT"],
+   "conflict": [
+    "TransparentSpyglassOverlay",
+    "NoSpyglassOverlay",
+    "WHAT"
+   ],
    "compatibility": []
   },
   {

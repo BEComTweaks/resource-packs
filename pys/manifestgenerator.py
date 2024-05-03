@@ -2,7 +2,6 @@ import os
 import json
 from uuid import uuid4
 from random import randint
-from PIL import Image
 
 if str(os.getcwd()).endswith("system32"):
     doubleclicked = True
@@ -17,9 +16,10 @@ else:
 from custom_functions import *
 check("clrprint") # Check for clrprint module
 import clrprint
+check("PIL","pillow") # Check for Python Image Library
+from PIL import Image
 
-with open(f"{cdir()}/jsons/others/manifest.json","r") as manifest:
-    mf = json.loads(manifest.read())
+mf = load_json(f"{cdir()}/jsons/others/manifest.json")
 # Pack Name
 mf["header"]["name"] = f"BTRP-{randint(0,999999)}"
 with open(f"{cdir()}/jsons/others/selected_packs.json","r") as selectedpacks:
@@ -41,9 +41,9 @@ try:
     os.mkdir(f'{cdir()}/{mf["header"]["name"]}')
 except:
     pass
-with open(f'{cdir()}/{mf["header"]["name"]}/manifest.json',"w") as manifest:
-    # Dumps JSON with formatting
-    manifest.write(json.dumps(mf,indent="  "))
+# Dumps JSON with formatting
+dump_json(f'{cdir()}/{mf["header"]["name"]}/manifest.json',mf)
+
 with Image.open(f'{cdir()}/pack_icon.png') as img:
     # Adds a pack icon for good measure
     img.save(f'{cdir()}/{mf["header"]["name"]}/pack_icon.png')

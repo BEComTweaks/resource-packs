@@ -1,18 +1,24 @@
 {
  "topic": "Parity",
  "packs": [
- {
-    "pack_id": "JavaMenuTitle",
-	"pack_name": "Java Menu Title",
-	"pack_description": "Gives the title on the main menu screen its look from Minecraft: Java Edition.",
-	"conflict": ["AlphaMinecraftLogo", "BedrockEditionSubtitle","OldBedrockMenuTitle"],
-	"compatibility": []
- },
- {
+  {
+   "pack_id": "JavaMenuTitle",
+   "pack_name": "Java Menu Title",
+   "pack_description": "Gives the title on the main menu screen its look from Minecraft: Java Edition.",
+   "conflict": [
+    "AlphaMinecraftLogo",
+    "BedrockEditionSubtitle",
+    "OldBedrockMenuTitle"
+   ],
+   "compatibility": []
+  },
+  {
    "pack_id": "JavaBoom",
    "pack_name": "Java Boom",
    "pack_description": "Gives Explosion particles their texture from Minecraft: Java Edition.",
-   "conflict": ["UnobstrusiveParticles"],
+   "conflict": [
+    "UnobstrusiveParticles"
+   ],
    "compatibility": []
   },
   {
@@ -37,11 +43,11 @@
    "compatibility": []
   },
   {
-    "pack_id": "DungeonsAlexSteve",
-	"pack_name": "Dungeons Alex & Steve",
-	"pack_description": "Gives Alex and Steve their textures from Minecraft: Dungeons.",
-	"conflict": [],
-	"compatibility": []
+   "pack_id": "DungeonsAlex&Steve",
+   "pack_name": "DungeonsAlex&Steve",
+   "pack_description": "Gives Alex and Steve their textures from Minecraft: Dungeons.",
+   "conflict": [],
+   "compatibility": []
   },
   {
    "pack_id": "DungeonsDirt",
@@ -69,14 +75,18 @@
    "pack_id": "DungeonsStone",
    "pack_name": "Dungeons Stone",
    "pack_description": "Gives Stone its texture from Minecraft: Dungeons (with 12 texture variants).",
-   "conflict": ["VariatedStone"],
+   "conflict": [
+    "VariatedStone"
+   ],
    "compatibility": []
   },
   {
    "pack_id": "DungeonsTerracotta",
    "pack_name": "Dungeons Terracotta",
    "pack_description": "Gives Terracotta its texture from Minecraft: Dungeons.",
-   "conflict": ["VariatedTerracotta"],
+   "conflict": [
+    "VariatedTerracotta"
+   ],
    "compatibility": []
   },
   {
@@ -97,14 +107,18 @@
    "pack_id": "LegacyConsoleEmerald",
    "pack_name": "Legacy Console Emerald",
    "pack_description": "Gives the Emerald its texture from old legacy console editions of Minecraft.",
-   "conflict": ["EmeraldToRuby"],
+   "conflict": [
+    "EmeraldToRuby"
+   ],
    "compatibility": []
   },
   {
    "pack_id": "LegacyConsoleSnowball",
    "pack_name": "Legacy Console Snowball",
    "pack_description": "Gives the Snowball its texture from old legacy console editions of Minecraft.",
-   "conflict": ["WhiterSnow"],
+   "conflict": [
+    "WhiterSnow"
+   ],
    "compatibility": []
   }
  ]

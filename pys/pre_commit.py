@@ -33,21 +33,7 @@ else:
 clrprint("Counting Packs and Compatibilities...",clr="yellow")
 # Main Loop
 for c in range(len(os.listdir(f'{cdir()}/jsons/packs'))):
-    with open(f"{cdir()}/jsons/packs/{os.listdir(f'{cdir()}/jsons/packs')[c]}","r") as js:
-        
-        # Load JSON file in jsons\packs\
-        try:
-            file = loads(js.read())
-        except JSONDecodeError as e:
-            # When it has an error
-            # JSONDecodeError normally prints where I am missing a comma/bracket
-            # But not the file, so this brings it up as well
-            # Hence why if there is an issue with the JSON, it brings up two errors at once
-            clrprint(f"{os.listdir(f'{cdir()}/jsons/packs')[c]} has a skill issue.\n{e}?",clr="red")
-            if doubleclicked:
-                input("Press enter to exit.")
-            exit(1)
-    
+    file = load_json(f"{cdir()}/jsons/packs/{os.listdir(f'{cdir()}/jsons/packs')[c]}")
     # For compatabilities, as it doesn't have a file
     if showcomp:
         clrprint(f'= {file["topic"]}',clr="white") 
@@ -88,8 +74,7 @@ for c in range(len(os.listdir(f'{cdir()}/jsons/packs'))):
 
 clrprint("Finished Counting!",clr="green")
 # Update incomplete_packs.json
-with open(f"{cdir()}/jsons/others/incomplete_packs.json","w") as incomplete_packs_file:
-    incomplete_packs_file.write(dumps(incomplete_packs,indent=2))
+dump_json(f"{cdir()}/jsons/others/incomplete_packs.json",incomplete_packs)
 clrprint("Updated incomplete_packs.json",clr="green")
 clrprint("Updating README.md...",clr="yellow")
 

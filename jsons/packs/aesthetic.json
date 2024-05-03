@@ -5,14 +5,18 @@
    "pack_id": "AlternateBlockDestruction",
    "pack_name": "Alternate Block Destruction",
    "pack_description": "Changes the breaking texture of blocks to be a messy ring around the outside.",
-   "conflict": ["MineProgressBar"],
+   "conflict": [
+    "MineProgressBar"
+   ],
    "compatibility": []
   },
   {
    "pack_id": "BlackNetherBricks",
    "pack_name": "Black Nether Bricks",
    "pack_description": "Changes texture of Nether Bricks to make them black.",
-   "conflict": ["BrighterNether"],
+   "conflict": [
+    "BrighterNether"
+   ],
    "compatibility": []
   },
   {
@@ -100,14 +104,20 @@
    "pack_id": "SofterWool",
    "pack_name": "Softer Wool",
    "pack_description": "Lowers the contrast and smoothens all wool blocks.",
-   "conflict": ["CleanWool", "OldWoolColors"],
+   "conflict": [
+    "CleanWool",
+    "OldWoolColors"
+   ],
    "compatibility": []
   },
   {
    "pack_id": "CleanWool",
    "pack_name": "Clean Wool",
    "pack_description": "Makes all wool blocks have a clean texture.",
-   "conflict": ["SofterWool", "OldWoolColors"],
+   "conflict": [
+    "SofterWool",
+    "OldWoolColors"
+   ],
    "compatibility": []
   },
   {
@@ -125,7 +135,7 @@
    "compatibility": []
   },
   {
-   "pack_id": "RenameStemtoLog",
+   "pack_id": "Rename'Stem'to'Log'",
    "pack_name": "Rename 'Stem' to 'Log'",
    "pack_description": "Renames 'Crimson/Warped Stem/Hyphae' to 'Crimson/Warped Log/Wood'",
    "conflict": [],
@@ -202,7 +212,7 @@
    "compatibility": []
   },
   {
-   "pack_id": "SplashBottleoEnchanting",
+   "pack_id": "SplashBottleo'Enchanting",
    "pack_name": "Splash Bottle o' Enchanting",
    "pack_description": "Makes the Bottle o' Enchanting take the same shape as a splash potion",
    "conflict": [],
@@ -230,31 +240,40 @@
    "compatibility": []
   },
   {
-    "pack_id": "SmootherWarpedPlanks",
-    "pack_name": "Smoother Warped Planks",
-    "pack_description": "Removes that harsh contrast from Warped Planks",
-    "conflict": ["OldPlanks"],
-    "compatibility": []
-   },
-   {
-    "pack_id": "CrimsonerCrimson",
-    "pack_name": "Crimsoner Crimson",
-    "pack_description": "Recolours all Crimson Wood related blocks and items to be redder, matching the shades in Crimson Nylium and Wart blocks closer.",
-    "conflict": ["OldPlanks"],
-    "compatibility": []
-   },
-   {
+   "pack_id": "SmootherWarpedPlanks",
+   "pack_name": "Smoother Warped Planks",
+   "pack_description": "Removes that harsh contrast from Warped Planks",
+   "conflict": [
+    "OldPlanks"
+   ],
+   "compatibility": []
+  },
+  {
+   "pack_id": "CrimsonerCrimson",
+   "pack_name": "Crimsoner Crimson",
+   "pack_description": "Recolours all Crimson Wood related blocks and items to be redder, matching the shades in Crimson Nylium and Wart blocks closer.",
+   "conflict": [
+    "OldPlanks"
+   ],
+   "compatibility": []
+  },
+  {
    "pack_id": "AlternateCutCopper",
    "pack_name": "Alternate Cut Copper",
    "pack_description": "Retextures Cut Copper blocks to resemble their look from their first appearance on Minecraft Live.",
    "conflict": [],
-   "compatibility": ["WaxedCopperItems","BoltlessWaxedCopperBlocks"]
+   "compatibility": [
+    "WaxedCopperItems",
+    "BoltlessWaxedCopperBlocks"
+   ]
   },
   {
    "pack_id": "PolishedStonestoBricks",
    "pack_name": "Polished Stones to Bricks",
    "pack_description": "Retextures Polished Granite, Andesite and Diorite to look like bricks.",
-   "conflict": ["SmootherStones"],
+   "conflict": [
+    "SmootherStones"
+   ],
    "compatibility": []
   },
   {
@@ -275,7 +294,9 @@
    "pack_id": "GoldenCrown",
    "pack_name": "Golden Crown",
    "pack_description": "Retextures the Golden Helmet to look like a crown. Also affects the look of some helmet Armor Trims.",
-   "conflict": ["ConsistentHelmets"],
+   "conflict": [
+    "ConsistentHelmets"
+   ],
    "compatibility": []
   },
   {
@@ -289,28 +310,44 @@
    "pack_id": "AllayElytra",
    "pack_name": "Allay Elytra",
    "pack_description": "",
-   "conflict": ["DragonElytra", "PhantomElytra", "VexElytra"],
+   "conflict": [
+    "DragonElytra",
+    "PhantomElytra",
+    "VexElytra"
+   ],
    "compatibility": []
   },
   {
    "pack_id": "DragonElytra",
    "pack_name": "Dragon Elytra",
    "pack_description": "",
-   "conflict": ["AllayElytra", "PhantomElytra", "VexElytra"],
+   "conflict": [
+    "AllayElytra",
+    "PhantomElytra",
+    "VexElytra"
+   ],
    "compatibility": []
   },
   {
    "pack_id": "PhantomElytra",
    "pack_name": "Phantom Elytra",
    "pack_description": "",
-   "conflict": ["AllayElytra", "DragonElytra", "VexElytra"],
+   "conflict": [
+    "AllayElytra",
+    "DragonElytra",
+    "VexElytra"
+   ],
    "compatibility": []
   },
   {
    "pack_id": "VexElytra",
    "pack_name": "Vex Elytra",
    "pack_description": "",
-   "conflict": ["AllayElytra", "DragonElytra", "PhantomElytra"],
+   "conflict": [
+    "AllayElytra",
+    "DragonElytra",
+    "PhantomElytra"
+   ],
    "compatibility": []
   }
  ]

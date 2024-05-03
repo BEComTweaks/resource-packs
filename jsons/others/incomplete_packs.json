@@ -1,41 +1,41 @@
 {
-  "Aesthetic": [
-    "AnimatedCampfireItems"
-  ],
-  "Colorful Slime": [
-    "RainbowSlime",
-    "MonochromeSlime"
-  ],
-  "Fixes and Consistency": [
-    "BigDripleafStemFix"
-  ],
-  "Fun": [],
-  "HUD and GUI": [
-    "SmootherFont",
-    "TransparentUI",
-    "HighContrastUI"
-  ],
-  "Lower and Sides": [],
-  "Menu Panoramas": [],
-  "More Zombies": [],
-  "Parity": [],
-  "Peace and Quiet": [],
-  "Retro": [],
-  "Terrain": [],
-  "Unobtrusive": [
-    "NoBeaconBeam"
-  ],
-  "Utility": [
-    "CrumbledInfestedStoneBlocks",
-    "BoltlessWaxedCopperBlocks",
-    "ShinyAgedAmethystCluster",
-    "MusicDiscRedstoneLevelPreview",
-    "DirectionalDispensersandDroppers",
-    "TotemShield",
-    "VisualFullHoneyStage",
-    "NoteBlockPitchParticle"
-  ],
-  "Variation": [
-    "VariatedCoarseDirt"
-  ]
+ "Aesthetic": [
+  "AnimatedCampfireItems"
+ ],
+ "Colorful Slime": [
+  "RainbowSlime",
+  "MonochromeSlime"
+ ],
+ "Fixes and Consistency": [
+  "BigDripleafStemFix"
+ ],
+ "Fun": [],
+ "HUD and GUI": [
+  "SmootherFont",
+  "TransparentUI",
+  "HighContrastUI"
+ ],
+ "Lower and Sides": [],
+ "Menu Panoramas": [],
+ "More Zombies": [],
+ "Parity": [],
+ "Peace and Quiet": [],
+ "Retro": [],
+ "Terrain": [],
+ "Unobtrusive": [
+  "NoBeaconBeam"
+ ],
+ "Utility": [
+  "CrumbledInfestedStoneBlocks",
+  "BoltlessWaxedCopperBlocks",
+  "ShinyAgedAmethystCluster",
+  "MusicDiscRedstoneLevelPreview",
+  "DirectionalDispensersandDroppers",
+  "TotemShield",
+  "VisualFullHoneyStage",
+  "NoteBlockPitchParticle"
+ ],
+ "Variation": [
+  "VariatedCoarseDirt"
+ ]
 }

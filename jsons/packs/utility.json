@@ -5,7 +5,9 @@
    "pack_id": "OreBorders",
    "pack_name": "Ore Borders",
    "pack_description": "Places a border around ores for easier visibility within caves.",
-   "conflict": ["OldNetherrack"],
+   "conflict": [
+    "OldNetherrack"
+   ],
    "compatibility": [
     "ClassicOres",
     "EmeraldstoRubies",
@@ -14,10 +16,12 @@
    ]
   },
   {
-   "pack_id": "SusSandGravelBorders",
+   "pack_id": "SuspiciousSand&GravelBorders",
    "pack_name": "Suspicious Sand & Gravel Borders",
    "pack_description": "Places a border around Suspicious Sand and Suspicious Gravel for easier visibility.",
-   "conflict": ["SusSandandGravel"],
+   "conflict": [
+    "SusSandandGravel"
+   ],
    "compatibility": []
   },
   {
@@ -28,32 +32,42 @@
    "compatibility": []
   },
   {
-   "pack_id": "InfestedStoneItems",
+   "pack_id": "VisualInfestedStoneItems",
    "pack_name": "Visual Infested Stone Items",
    "pack_description": "Adds a border around Infested Stone in the inventory. This will NOT affect the placed blocks.",
-   "conflict": ["InfestedStoneBlocks"],
+   "conflict": [
+    "CrumbledInfestedStoneBlocks"
+   ],
    "compatibility": []
   },
   {
    "pack_id": "CrumbledInfestedStoneBlocks",
    "pack_name": "Crumbled Infested Stone Blocks",
    "pack_description": "Makes infested stone blocks appear crumbled and cracked, matching how easy it is to break the block.",
-   "conflict": ["InfestedStoneItems"],
+   "conflict": [
+    "VisualInfestedStoneItems"
+   ],
    "compatibility": []
   },
   {
    "pack_id": "WaxedCopperItems",
    "pack_name": "Waxed Copper Items",
    "pack_description": "Adds a border around Waxed Copper and variants in the inventory. This will NOT affect the placed blocks.",
-   "conflict": ["BoltlessWaxedCopperBlocks"],
+   "conflict": [
+    "BoltlessWaxedCopperBlocks"
+   ],
    "compatibility": []
   },
   {
    "pack_id": "BoltlessWaxedCopperBlocks",
    "pack_name": "Boltless Waxed Copper Blocks",
    "pack_description": "Removes the bolts in the corner of Waxed Copper blocks and variants.",
-   "conflict": ["WaxedCopperItems"],
-   "compatibility": ["AlternateCutCopper"]
+   "conflict": [
+    "WaxedCopperItems"
+   ],
+   "compatibility": [
+    "AlternateCutCopper"
+   ]
   },
   {
    "pack_id": "ShinyAgedAmethystCluster",
@@ -80,7 +94,9 @@
    "pack_id": "MineProgressBar",
    "pack_name": "Mine Progress Bar",
    "pack_description": "Changes the breaking texture of blocks to a clean ring around the outside.",
-   "conflict": ["AlternateBlockDestruction"],
+   "conflict": [
+    "AlternateBlockDestruction"
+   ],
    "compatibility": []
   },
   {
@@ -95,14 +111,18 @@
    "pack_name": "Hunger Preview",
    "pack_description": "Displays hunger bar icons on all food names to show how much it will fill you up.",
    "conflict": [],
-   "compatibility": ["MusicDiscRedstoneLevelPreview"]
+   "compatibility": [
+    "MusicDiscRedstoneLevelPreview"
+   ]
   },
   {
    "pack_id": "MusicDiscRedstoneLevelPreview",
    "pack_name": "Music Disc Redstone Level Preview",
    "pack_description": "Displays the redstone power level on all Music Disc names.",
    "conflict": [],
-   "compatibility": ["HungerPreview"]
+   "compatibility": [
+    "HungerPreview"
+   ]
   },
   {
    "pack_id": "StickyPistonSides",
@@ -128,7 +148,9 @@
     "RainbowSlime",
     "MonochromeSlime"
    ],
-   "compatibility": ["PistonInnerFix"]
+   "compatibility": [
+    "PistonInnerFix"
+   ]
   },
   {
    "pack_id": "DirectionalHoppers",
@@ -155,7 +177,9 @@
    "pack_id": "CleanRedstoneDust",
    "pack_name": "Clean Redstone Dust",
    "pack_description": "Changes the texture of Redstone Dust to a clean solid line.",
-   "conflict": ["RedstoneWireFix"],
+   "conflict": [
+    "RedstoneWireFix"
+   ],
    "compatibility": []
   },
   {
@@ -163,7 +187,11 @@
    "pack_name": "Unlit Redstone Ore",
    "pack_description": "Makes unlit Redstone Ore use the same palette as unlit Redstone Wire until its lit, when it then returns to its default, bright red colour.",
    "conflict": [],
-   "compatibility": ["UniformOres", "OreBorders", "ClassicOres"]
+   "compatibility": [
+    "UniformOres",
+    "OreBorders",
+    "ClassicOres"
+   ]
   },
   {
    "pack_id": "VisibleTripwires",
@@ -176,7 +204,9 @@
    "pack_id": "TotemShield",
    "pack_name": "TotemShield",
    "pack_description": "Renders a yellow sphere around a player if they are holding a totem. Useful in PVP.",
-   "conflict": ["InvisibleTotem"],
+   "conflict": [
+    "InvisibleTotem"
+   ],
    "compatibility": []
   },
   {

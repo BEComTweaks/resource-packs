@@ -23,15 +23,8 @@ if showerror != 0:
     # Seperator
     print("="*40, "\n")
 for c in range(len(os.listdir(f'{cdir()}/jsons/packs'))):
-    with open(f"{cdir()}/jsons/packs/{os.listdir(f'{cdir()}/jsons/packs/')[c]}","r") as js:
-        try:
-            pack_json = loads(js.read())
-        except JSONDecodeError:
-            # When it has an error
-            # JSONDecodeError normally prints where I am missing a comma/bracket
-            # But not the file, so this brings it up as well
-            # Hence why if there is an issue with the JSON, it brings up two errors at once
-            raise SyntaxError(f"{cdir()}/jsons/packs/{os.listdir(f'{cdir()}/jsons/packs/')[c]} has a skill issue.\nPerhaps you are missing a comma?")
+    pack_json = load_json(f"{cdir()}/jsons/packs/{os.listdir(f'{cdir()}/jsons/packs/')[c]}")
+    
     if showerror != 0:
         print(pack_json["topic"].lower())
     # Main Topic Directory
