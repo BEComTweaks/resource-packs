@@ -33,7 +33,7 @@ Returns JSON loaded as dictionary from file path
 
 Saves JSON with indentation to path
 
-### [prog_search(string,list_search)](https://github.com/NSPC911/Bedrock-Tweaks-Base/blob/main/pys/custom_functions.py#L62-95)
+### [prog_search(string,list_search)](https://github.com/NSPC911/Bedrock-Tweaks-Base/blob/main/pys/custom_functions.py#L62-L95)
 
 Checks first n letters of string with each item in list_search
 - If there is more than one item that matches the first n letters of string, n is increased by 1
