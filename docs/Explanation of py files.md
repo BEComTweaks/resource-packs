@@ -6,11 +6,11 @@ Currently, it has 6 Python Scripts inside.
 
 ## [custom_functions.py](https://github.com/NSPC911/Bedrock-Tweaks-Base/blob/main/pys/custom_functions.py)
 
-Simply a housing for two functions that I use.
+Simply a housing for six functions that I use.
 
 ### [check(module)](https://github.com/NSPC911/Bedrock-Tweaks-Base/blob/main/pys/custom_functions.py#L8-L21)
 
-Like what it says. When this function is called, it checks whether `module` is installed. If it is, it uses [pip](https://pypi.org/project/pip/) to install that specified function.
+Like what it says. When this function is called, it checks whether `module` is installed. If it isn't, it uses [pip](https://pypi.org/project/pip/) to install that specified function.
 
 I am not using [subprocess](https://docs.python.org/3/library/subprocess.html) to run `pip install module` as subprocess does not work when invoked in terminal, unlike pip.
 
