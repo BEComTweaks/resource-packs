@@ -66,7 +66,7 @@ def prog_search(string:str,list_search:list):
     for i in list_search:
         temp_list.append(i.lower())
     list_search = temp_list
-    i,found,found_at=0
+    i,found,found_at=0,0,0
     for i in range(1,len(string)):
         found = 0
         found_at = 0
