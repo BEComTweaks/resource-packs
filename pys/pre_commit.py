@@ -31,10 +31,10 @@ if input("Show Compatibility Progress? [y/n]\n") == "y":
 else:
     showcomp = False
 clrprint("Counting Packs and Compatibilities...",clr="yellow")
-# Main Loop
+# Counts Packs and Compatibilities
 for c in range(len(os.listdir(f'{cdir()}/jsons/packs'))):
     file = load_json(f"{cdir()}/jsons/packs/{os.listdir(f'{cdir()}/jsons/packs')[c]}")
-    # For compatabilities, as it doesn't have a file
+    # For compatibilities, as it doesn't have a file
     if showcomp:
         clrprint(f'= {file["topic"]}',clr="white") 
     # Runs through the packs

@@ -91,5 +91,5 @@ def prog_search(string:str,list_search:list):
         if found == 1:
             return found_at
     # There isn't anything that matches
-    if found == 0:
+    if found != 1:
         return None
