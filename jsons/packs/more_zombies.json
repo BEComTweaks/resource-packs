@@ -1,175 +1,175 @@
 {
- "topic": "More Zombies",
- "packs": [
-  {
-   "pack_id": "SteveZombies",
-   "pack_name": "Steve Zombies",
-   "pack_description": "Retextures zombies to look like more like Steve",
-   "conflict": [
-    "AlexZombies",
-    "AriZombies",
-    "EfeZombies",
-    "KaiZombies",
-    "MakenaZombies",
-    "NoorZombies",
-    "SunnyZombies",
-    "ZuriZombies",
-    "AllZombies"
-   ],
-   "compatibility": []
-  },
-  {
-   "pack_id": "AlexZombies",
-   "pack_name": "Alex Zombies",
-   "pack_description": "Retextures zombies to look like Alex rather than Steve",
-   "conflict": [
-    "SteveZombies",
-    "AriZombies",
-    "EfeZombies",
-    "KaiZombies",
-    "MakenaZombies",
-    "NoorZombies",
-    "SunnyZombies",
-    "ZuriZombies",
-    "AllZombies"
-   ],
-   "compatibility": []
-  },
-  {
-   "pack_id": "AriZombies",
-   "pack_name": "Ari Zombies",
-   "pack_description": "Retextures zombies to look like Ari rather than Steve",
-   "conflict": [
-    "SteveZombies",
-    "AlexZombies",
-    "EfeZombies",
-    "KaiZombies",
-    "MakenaZombies",
-    "NoorZombies",
-    "SunnyZombies",
-    "ZuriZombies",
-    "AllZombies"
-   ],
-   "compatibility": []
-  },
-  {
-   "pack_id": "EfeZombies",
-   "pack_name": "Efe Zombies",
-   "pack_description": "Retextures zombies to look like Efe rather than Steve",
-   "conflict": [
-    "SteveZombies",
-    "AlexZombies",
-    "AriZombies",
-    "KaiZombies",
-    "MakenaZombies",
-    "NoorZombies",
-    "SunnyZombies",
-    "ZuriZombies",
-    "AllZombies"
-   ],
-   "compatibility": []
-  },
-  {
-   "pack_id": "KaiZombies",
-   "pack_name": "Kai Zombies",
-   "pack_description": "Retextures zombies to look like Kai rather than Steve",
-   "conflict": [
-    "SteveZombies",
-    "AlexZombies",
-    "AriZombies",
-    "EfeZombies",
-    "MakenaZombies",
-    "NoorZombies",
-    "SunnyZombies",
-    "ZuriZombies",
-    "AllZombies"
-   ],
-   "compatibility": []
-  },
-  {
-   "pack_id": "MakenaZombies",
-   "pack_name": "Makena Zombies",
-   "pack_description": "Retextures zombies to look like Makena rather than Steve",
-   "conflict": [
-    "SteveZombies",
-    "AlexZombies",
-    "AriZombies",
-    "EfeZombies",
-    "KaiZombies",
-    "NoorZombies",
-    "SunnyZombies",
-    "ZuriZombies",
-    "AllZombies"
-   ],
-   "compatibility": []
-  },
-  {
-   "pack_id": "NoorZombies",
-   "pack_name": "Noor Zombies",
-   "pack_description": "Retextures zombies to look like Noor rather than Steve",
-   "conflict": [
-    "SteveZombies",
-    "AlexZombies",
-    "AriZombies",
-    "EfeZombies",
-    "KaiZombies",
-    "MakenaZombies",
-    "SunnyZombies",
-    "ZuriZombies",
-    "AllZombies"
-   ],
-   "compatibility": []
-  },
-  {
-   "pack_id": "SunnyZombies",
-   "pack_name": "Sunny Zombies",
-   "pack_description": "Retextures zombies to look like Sunny rather than Steve",
-   "conflict": [
-    "SteveZombies",
-    "AlexZombies",
-    "AriZombies",
-    "EfeZombies",
-    "KaiZombies",
-    "MakenaZombies",
-    "NoorZombies",
-    "ZuriZombies",
-    "AllZombies"
-   ],
-   "compatibility": []
-  },
-  {
-   "pack_id": "ZuriZombies",
-   "pack_name": "Zuri Zombies",
-   "pack_description": "Retextures zombies to look like Zuri rather than Steve",
-   "conflict": [
-    "SteveZombies",
-    "AlexZombies",
-    "AriZombies",
-    "EfeZombies",
-    "KaiZombies",
-    "MakenaZombies",
-    "NoorZombies",
-    "SunnyZombies",
-    "AllZombies"
-   ],
-   "compatibility": []
-  },
-  {
-   "pack_id": "AllZombies",
-   "pack_name": "All Zombies",
-   "pack_description": "Randomizes zombie textures.\nThey change textures when rejoining world!",
-   "conflict": [
-    "SteveZombies",
-    "AlexZombies",
-    "AriZombies",
-    "EfeZombies",
-    "KaiZombies",
-    "MakenaZombies",
-    "NoorZombies",
-    "SunnyZombies",
-    "AllZombies"
-   ],
-   "compatibility": []
-  }
- ]
+  "topic": "More Zombies",
+  "packs": [
+    {
+      "pack_id": "SteveZombies",
+      "pack_name": "Steve Zombies",
+      "pack_description": "Retextures zombies to look like more like Steve",
+      "conflict": [
+        "AlexZombies",
+        "AriZombies",
+        "EfeZombies",
+        "KaiZombies",
+        "MakenaZombies",
+        "NoorZombies",
+        "SunnyZombies",
+        "ZuriZombies",
+        "AllZombies"
+      ],
+      "compatibility": []
+    },
+    {
+      "pack_id": "AlexZombies",
+      "pack_name": "Alex Zombies",
+      "pack_description": "Retextures zombies to look like Alex rather than Steve",
+      "conflict": [
+        "SteveZombies",
+        "AriZombies",
+        "EfeZombies",
+        "KaiZombies",
+        "MakenaZombies",
+        "NoorZombies",
+        "SunnyZombies",
+        "ZuriZombies",
+        "AllZombies"
+      ],
+      "compatibility": []
+    },
+    {
+      "pack_id": "AriZombies",
+      "pack_name": "Ari Zombies",
+      "pack_description": "Retextures zombies to look like Ari rather than Steve",
+      "conflict": [
+        "SteveZombies",
+        "AlexZombies",
+        "EfeZombies",
+        "KaiZombies",
+        "MakenaZombies",
+        "NoorZombies",
+        "SunnyZombies",
+        "ZuriZombies",
+        "AllZombies"
+      ],
+      "compatibility": []
+    },
+    {
+      "pack_id": "EfeZombies",
+      "pack_name": "Efe Zombies",
+      "pack_description": "Retextures zombies to look like Efe rather than Steve",
+      "conflict": [
+        "SteveZombies",
+        "AlexZombies",
+        "AriZombies",
+        "KaiZombies",
+        "MakenaZombies",
+        "NoorZombies",
+        "SunnyZombies",
+        "ZuriZombies",
+        "AllZombies"
+      ],
+      "compatibility": []
+    },
+    {
+      "pack_id": "KaiZombies",
+      "pack_name": "Kai Zombies",
+      "pack_description": "Retextures zombies to look like Kai rather than Steve",
+      "conflict": [
+        "SteveZombies",
+        "AlexZombies",
+        "AriZombies",
+        "EfeZombies",
+        "MakenaZombies",
+        "NoorZombies",
+        "SunnyZombies",
+        "ZuriZombies",
+        "AllZombies"
+      ],
+      "compatibility": []
+    },
+    {
+      "pack_id": "MakenaZombies",
+      "pack_name": "Makena Zombies",
+      "pack_description": "Retextures zombies to look like Makena rather than Steve",
+      "conflict": [
+        "SteveZombies",
+        "AlexZombies",
+        "AriZombies",
+        "EfeZombies",
+        "KaiZombies",
+        "NoorZombies",
+        "SunnyZombies",
+        "ZuriZombies",
+        "AllZombies"
+      ],
+      "compatibility": []
+    },
+    {
+      "pack_id": "NoorZombies",
+      "pack_name": "Noor Zombies",
+      "pack_description": "Retextures zombies to look like Noor rather than Steve",
+      "conflict": [
+        "SteveZombies",
+        "AlexZombies",
+        "AriZombies",
+        "EfeZombies",
+        "KaiZombies",
+        "MakenaZombies",
+        "SunnyZombies",
+        "ZuriZombies",
+        "AllZombies"
+      ],
+      "compatibility": []
+    },
+    {
+      "pack_id": "SunnyZombies",
+      "pack_name": "Sunny Zombies",
+      "pack_description": "Retextures zombies to look like Sunny rather than Steve",
+      "conflict": [
+        "SteveZombies",
+        "AlexZombies",
+        "AriZombies",
+        "EfeZombies",
+        "KaiZombies",
+        "MakenaZombies",
+        "NoorZombies",
+        "ZuriZombies",
+        "AllZombies"
+      ],
+      "compatibility": []
+    },
+    {
+      "pack_id": "ZuriZombies",
+      "pack_name": "Zuri Zombies",
+      "pack_description": "Retextures zombies to look like Zuri rather than Steve",
+      "conflict": [
+        "SteveZombies",
+        "AlexZombies",
+        "AriZombies",
+        "EfeZombies",
+        "KaiZombies",
+        "MakenaZombies",
+        "NoorZombies",
+        "SunnyZombies",
+        "AllZombies"
+      ],
+      "compatibility": []
+    },
+    {
+      "pack_id": "AllZombies",
+      "pack_name": "All Zombies",
+      "pack_description": "Randomizes zombie textures.\nThey change textures when rejoining world!",
+      "conflict": [
+        "SteveZombies",
+        "AlexZombies",
+        "AriZombies",
+        "EfeZombies",
+        "KaiZombies",
+        "MakenaZombies",
+        "NoorZombies",
+        "SunnyZombies",
+        "AllZombies"
+      ],
+      "compatibility": []
+    }
+  ]
 }

@@ -1,1 +1,15 @@
-{"help_button_panel":{"modifications":[{"control_name":"help","operation":"remove"},{"control_name":"help_divider","operation":"remove"}]},"namespace":"structure_editor"}
+{
+  "help_button_panel": {
+    "modifications": [
+      {
+        "control_name": "help",
+        "operation": "remove"
+      },
+      {
+        "control_name": "help_divider",
+        "operation": "remove"
+      }
+    ]
+  },
+  "namespace": "structure_editor"
+}

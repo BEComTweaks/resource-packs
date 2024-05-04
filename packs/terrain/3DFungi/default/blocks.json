@@ -1,51 +1,51 @@
 {
-	"format_version": [
-		1,
-		1,
-		0
-	],
-	"crimson_fungus": {
-		"blockshape": "azalea",
-		"textures": {
-			"up": "crimson_mushroom_top",
-			"east": "crimson_mushroom",
-			"north": "crimson_mushroom_side",
-			"down": "crimson_mushroom_top",
-			"west": "crimson_mushroom_pot",
-			"south": "crimson_mushroom_side_pot"
-		}
-	},
-	"warped_fungus": {
-		"blockshape": "azalea",
-		"textures": {
-			"up": "warped_mushroom_top",
-			"east": "warped_mushroom",
-			"north": "warped_mushroom_side",
-			"down": "warped_mushroom_top",
-			"west": "warped_mushroom_pot",
-			"south": "warped_mushroom_side_pot"
-		}
-	},
-	"brown_mushroom": {
-		"blockshape": "azalea",
-		"textures": {
-			"up": "brown_mushroom_top",
-			"east": "brown_mushroom",
-			"north": "brown_mushroom_side",
-			"down": "brown_mushroom_top",
-			"west": "brown_mushroom_pot",
-			"south": "brown_mushroom_side_pot"
-		}
-	},
-	"red_mushroom": {
-		"blockshape": "azalea",
-		"textures": {
-			"up": "red_mushroom_top",
-			"east": "red_mushroom",
-			"north": "red_mushroom_side",
-			"down": "red_mushroom_top",
-			"west": "red_mushroom_pot",
-			"south": "red_mushroom_side_pot"
-		}
-	}
+  "format_version": [
+    1,
+    1,
+    0
+  ],
+  "crimson_fungus": {
+    "blockshape": "azalea",
+    "textures": {
+      "up": "crimson_mushroom_top",
+      "east": "crimson_mushroom",
+      "north": "crimson_mushroom_side",
+      "down": "crimson_mushroom_top",
+      "west": "crimson_mushroom_pot",
+      "south": "crimson_mushroom_side_pot"
+    }
+  },
+  "warped_fungus": {
+    "blockshape": "azalea",
+    "textures": {
+      "up": "warped_mushroom_top",
+      "east": "warped_mushroom",
+      "north": "warped_mushroom_side",
+      "down": "warped_mushroom_top",
+      "west": "warped_mushroom_pot",
+      "south": "warped_mushroom_side_pot"
+    }
+  },
+  "brown_mushroom": {
+    "blockshape": "azalea",
+    "textures": {
+      "up": "brown_mushroom_top",
+      "east": "brown_mushroom",
+      "north": "brown_mushroom_side",
+      "down": "brown_mushroom_top",
+      "west": "brown_mushroom_pot",
+      "south": "brown_mushroom_side_pot"
+    }
+  },
+  "red_mushroom": {
+    "blockshape": "azalea",
+    "textures": {
+      "up": "red_mushroom_top",
+      "east": "red_mushroom",
+      "north": "red_mushroom_side",
+      "down": "red_mushroom_top",
+      "west": "red_mushroom_pot",
+      "south": "red_mushroom_side_pot"
+    }
+  }
 }

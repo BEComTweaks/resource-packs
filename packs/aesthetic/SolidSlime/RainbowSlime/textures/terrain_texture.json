@@ -1,1 +1,49 @@
-{"num_mip_levels":4,"padding":8,"resource_pack_name":"vanilla","texture_data":{"slime_block":{"textures":[{"variations":[{"path":"textures/blocks/slime_red"},{"path":"textures/blocks/slime_orange"},{"path":"textures/blocks/slime_yellow"},{"path":"textures/blocks/slime_green"},{"path":"textures/blocks/slime_cyan"},{"path":"textures/blocks/slime_lightblue"},{"path":"textures/blocks/slime_blue"},{"path":"textures/blocks/slime_purple"},{"path":"textures/blocks/slime_pink"},{"path":"textures/blocks/slime_magenta"},{"path":"textures/blocks/slime_brown"}]}]}},"texture_name":"atlas.terrain"}
+{
+  "num_mip_levels": 4,
+  "padding": 8,
+  "resource_pack_name": "vanilla",
+  "texture_data": {
+    "slime_block": {
+      "textures": [
+        {
+          "variations": [
+            {
+              "path": "textures\/blocks\/slime_red"
+            },
+            {
+              "path": "textures\/blocks\/slime_orange"
+            },
+            {
+              "path": "textures\/blocks\/slime_yellow"
+            },
+            {
+              "path": "textures\/blocks\/slime_green"
+            },
+            {
+              "path": "textures\/blocks\/slime_cyan"
+            },
+            {
+              "path": "textures\/blocks\/slime_lightblue"
+            },
+            {
+              "path": "textures\/blocks\/slime_blue"
+            },
+            {
+              "path": "textures\/blocks\/slime_purple"
+            },
+            {
+              "path": "textures\/blocks\/slime_pink"
+            },
+            {
+              "path": "textures\/blocks\/slime_magenta"
+            },
+            {
+              "path": "textures\/blocks\/slime_brown"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "texture_name": "atlas.terrain"
+}

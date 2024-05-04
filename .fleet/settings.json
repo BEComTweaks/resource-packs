@@ -1,0 +1,13 @@
+{
+  "editor.formatOnSave": true,
+  "plugins": [
+    {
+      "type": "add",
+      "pluginName": "fleet.json"
+    },
+    {
+      "type": "add",
+      "pluginName": "fleet.python"
+    }
+  ]
+}

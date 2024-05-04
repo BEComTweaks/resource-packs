@@ -1,1 +1,19 @@
-{"format_version":"1.1.0","infested_deepslate":{"carried_textures":{"down":"infested_deepslate_top","side":"infested_deepslate","up":"infested_deepslate_top"},"isotropic":{"down":true,"up":true},"sound":"deepslate"},"monster_egg":{"carried_textures":"infested_blocks","textures":"monster_egg"}}
+{
+  "format_version": "1.1.0",
+  "infested_deepslate": {
+    "carried_textures": {
+      "down": "infested_deepslate_top",
+      "side": "infested_deepslate",
+      "up": "infested_deepslate_top"
+    },
+    "isotropic": {
+      "down": true,
+      "up": true
+    },
+    "sound": "deepslate"
+  },
+  "monster_egg": {
+    "carried_textures": "infested_blocks",
+    "textures": "monster_egg"
+  }
+}

@@ -1,6 +1,7 @@
 import os
 from json import *
 import re
+from shutil import get_terminal_size
 
 
 if str(os.getcwd()).endswith("system32"):
@@ -16,8 +17,6 @@ else:
 
 from custom_functions import *
 check("clrprint") # Check for clrprint module
-check("json5","json-five")
-import json5
 from clrprint import clrprint
 
 
@@ -103,24 +102,22 @@ else:
 clrprint("Updated README.md!",clr="green")
 clrprint("Validating JSON Files...",clr="yellow")
 
+longest_path = 0
 # JSON files validator
 for root, _, files in os.walk(cdir()):
     for file in files:
         if file.lower().endswith('.json'):
             file_path = os.path.join(root, file)
+            if longest_path < len(file_path):
+                longest_path = len(file_path)
             try:
-                with open(file_path, 'r', encoding='utf-8') as f:
-                    json5.load(f)
-                    error_message = None
+                dump_json(file_path,load_json(file_path))
+                print(f'\r{file_path}{" " * (longest_path - len(file_path))}',end="")
             except Exception as e:
-                error_message = str(e)
-            
-            if error_message:
-                # If there's an error, print it and exit with code 1
-                print(f"Error in file '{file_path}': {error_message}")
+                print(f"Error in file '{file_path}': {str(e)}")
                 exit(1)
 
-clrprint("JSON Files are valid!",clr="green")
+clrprint("\nJSON Files are valid!",clr="green")
 if doubleclicked:
     clrprint("Press Enter to exit.",clr="green",end="")
     input()

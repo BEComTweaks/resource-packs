@@ -39,6 +39,7 @@ def clrinput(message,clr:str="white"):
     clrprint(f"{message} ",clr=clr,end="")
     return input()
 
+# Clears terminal screen
 def clear():
     if os.name == "nt":
         # Windows
@@ -55,31 +56,40 @@ def load_json(path):
 # Simple function to save json into file
 def dump_json(path,dictionary):
     with open(path,"w") as file:
-        file.write(dumps(dictionary,indent=1))
+        file.write(dumps(dictionary,indent=2))
 
+# Uses a progressive searching algorithm to match an input
 def prog_search(string:str,list_search:list):
+    # Makes both lower to make life easier
     string = string.lower()
     temp_list = []
     for i in list_search:
         temp_list.append(i.lower())
     list_search = temp_list
-    i=0
-    found = 0
-    found_at = 0
+    i,found,found_at=0
     for i in range(1,len(string)):
         found = 0
         found_at = 0
         for s in range(0,len(list_search)):
             try:
                 if list_search[s][:i] == string[:i]:
+                    # First n letters of item in list_search
+                    # matches with first n letters of string
                     found += 1
                     if found == 1:
                         found_at = s
+                # When more than two have been found_at
+                # Exists to prevent searching for too
+                # long
                 if found == 2:
                     break
+            # Some items in the list are too small,
+            # so fail safe
             except IndexError:
                 pass
+        # There is something that matches
         if found == 1:
             return found_at
+    # There isn't anything that matches
     if found == 0:
         return None

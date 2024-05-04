@@ -1,22 +1,26 @@
 {
-	"namespace": "crafting",
-
-	"crafting_arrow": {
-		"controls": [
-			{
-				"quick_craft_button@bt_quick_crafting.quick_craft_button": {}
-			}
-		]
-	},
-
-	"crafting_arrow_large": {
-		"controls": [
-			{
-				"quick_craft_button@bt_quick_crafting.quick_craft_button": {
-					"size": [26, 26],
-					"offset": [4, 10]
-				}
-			}
-		]
-	}
+  "namespace": "crafting",
+  "crafting_arrow": {
+    "controls": [
+      {
+        "quick_craft_button@bt_quick_crafting.quick_craft_button": {}
+      }
+    ]
+  },
+  "crafting_arrow_large": {
+    "controls": [
+      {
+        "quick_craft_button@bt_quick_crafting.quick_craft_button": {
+          "size": [
+            26,
+            26
+          ],
+          "offset": [
+            4,
+            10
+          ]
+        }
+      }
+    ]
+  }
 }

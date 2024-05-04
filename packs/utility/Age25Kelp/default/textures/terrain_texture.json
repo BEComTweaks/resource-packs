@@ -1,1 +1,68 @@
-{"num_mip_levels":4,"padding":8,"resource_pack_name":"vanilla","texture_data":{"kelp_top":{"textures":["textures/blocks/kelp_top","textures/blocks/kelp_top","textures/blocks/kelp_top","textures/blocks/kelp_top","textures/blocks/kelp_top","textures/blocks/kelp_top","textures/blocks/kelp_top","textures/blocks/kelp_top","textures/blocks/kelp_top","textures/blocks/kelp_top","textures/blocks/kelp_top","textures/blocks/kelp_top","textures/blocks/kelp_top","textures/blocks/kelp_top","textures/blocks/kelp_top","textures/blocks/kelp_top","textures/blocks/kelp_top","textures/blocks/kelp_top","textures/blocks/kelp_top","textures/blocks/kelp_top","textures/blocks/kelp_top","textures/blocks/kelp_top","textures/blocks/kelp_top","textures/blocks/kelp_top","textures/blocks/kelp_top","textures/blocks/age_25_kelp"]},"kelp_top_bulb":{"textures":["textures/blocks/kelp_top_bulb","textures/blocks/kelp_top_bulb","textures/blocks/kelp_top_bulb","textures/blocks/kelp_top_bulb","textures/blocks/kelp_top_bulb","textures/blocks/kelp_top_bulb","textures/blocks/kelp_top_bulb","textures/blocks/kelp_top_bulb","textures/blocks/kelp_top_bulb","textures/blocks/kelp_top_bulb","textures/blocks/kelp_top_bulb","textures/blocks/kelp_top_bulb","textures/blocks/kelp_top_bulb","textures/blocks/kelp_top_bulb","textures/blocks/kelp_top_bulb","textures/blocks/kelp_top_bulb","textures/blocks/kelp_top_bulb","textures/blocks/kelp_top_bulb","textures/blocks/kelp_top_bulb","textures/blocks/kelp_top_bulb","textures/blocks/kelp_top_bulb","textures/blocks/kelp_top_bulb","textures/blocks/kelp_top_bulb","textures/blocks/kelp_top_bulb","textures/blocks/kelp_top_bulb","textures/blocks/age_25_kelp"]}},"texture_name":"atlas.terrain"}
+{
+  "num_mip_levels": 4,
+  "padding": 8,
+  "resource_pack_name": "vanilla",
+  "texture_data": {
+    "kelp_top": {
+      "textures": [
+        "textures\/blocks\/kelp_top",
+        "textures\/blocks\/kelp_top",
+        "textures\/blocks\/kelp_top",
+        "textures\/blocks\/kelp_top",
+        "textures\/blocks\/kelp_top",
+        "textures\/blocks\/kelp_top",
+        "textures\/blocks\/kelp_top",
+        "textures\/blocks\/kelp_top",
+        "textures\/blocks\/kelp_top",
+        "textures\/blocks\/kelp_top",
+        "textures\/blocks\/kelp_top",
+        "textures\/blocks\/kelp_top",
+        "textures\/blocks\/kelp_top",
+        "textures\/blocks\/kelp_top",
+        "textures\/blocks\/kelp_top",
+        "textures\/blocks\/kelp_top",
+        "textures\/blocks\/kelp_top",
+        "textures\/blocks\/kelp_top",
+        "textures\/blocks\/kelp_top",
+        "textures\/blocks\/kelp_top",
+        "textures\/blocks\/kelp_top",
+        "textures\/blocks\/kelp_top",
+        "textures\/blocks\/kelp_top",
+        "textures\/blocks\/kelp_top",
+        "textures\/blocks\/kelp_top",
+        "textures\/blocks\/age_25_kelp"
+      ]
+    },
+    "kelp_top_bulb": {
+      "textures": [
+        "textures\/blocks\/kelp_top_bulb",
+        "textures\/blocks\/kelp_top_bulb",
+        "textures\/blocks\/kelp_top_bulb",
+        "textures\/blocks\/kelp_top_bulb",
+        "textures\/blocks\/kelp_top_bulb",
+        "textures\/blocks\/kelp_top_bulb",
+        "textures\/blocks\/kelp_top_bulb",
+        "textures\/blocks\/kelp_top_bulb",
+        "textures\/blocks\/kelp_top_bulb",
+        "textures\/blocks\/kelp_top_bulb",
+        "textures\/blocks\/kelp_top_bulb",
+        "textures\/blocks\/kelp_top_bulb",
+        "textures\/blocks\/kelp_top_bulb",
+        "textures\/blocks\/kelp_top_bulb",
+        "textures\/blocks\/kelp_top_bulb",
+        "textures\/blocks\/kelp_top_bulb",
+        "textures\/blocks\/kelp_top_bulb",
+        "textures\/blocks\/kelp_top_bulb",
+        "textures\/blocks\/kelp_top_bulb",
+        "textures\/blocks\/kelp_top_bulb",
+        "textures\/blocks\/kelp_top_bulb",
+        "textures\/blocks\/kelp_top_bulb",
+        "textures\/blocks\/kelp_top_bulb",
+        "textures\/blocks\/kelp_top_bulb",
+        "textures\/blocks\/kelp_top_bulb",
+        "textures\/blocks\/age_25_kelp"
+      ]
+    }
+  },
+  "texture_name": "atlas.terrain"
+}

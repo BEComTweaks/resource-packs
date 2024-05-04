@@ -8,22 +8,22 @@
         "default": "zombie"
       },
       "textures": {
-        "default": "textures/entity/zombie/zombie",
-        "default2": "textures/entity/zombie/zombie2",
-        "default3": "textures/entity/zombie/zombie3",
-        "default4": "textures/entity/zombie/zombie4",
-        "default5": "textures/entity/zombie/zombie5",
-        "default6": "textures/entity/zombie/zombie6",
-        "default7": "textures/entity/zombie/zombie7",
-        "default8": "textures/entity/zombie/zombie8",
-        "default9": "textures/entity/zombie/zombie9"
+        "default": "textures\/entity\/zombie\/zombie",
+        "default2": "textures\/entity\/zombie\/zombie2",
+        "default3": "textures\/entity\/zombie\/zombie3",
+        "default4": "textures\/entity\/zombie\/zombie4",
+        "default5": "textures\/entity\/zombie\/zombie5",
+        "default6": "textures\/entity\/zombie\/zombie6",
+        "default7": "textures\/entity\/zombie\/zombie7",
+        "default8": "textures\/entity\/zombie\/zombie8",
+        "default9": "textures\/entity\/zombie\/zombie9"
       },
       "geometry": {
         "default": "geometry.zombie.v1.8"
       },
       "scripts": {
         "pre_animation": [
-          "variable.tcos0 = (Math.cos(query.modified_distance_moved * 38.17) * query.modified_move_speed / variable.gliding_speed_value) * 57.3;",
+          "variable.tcos0 = (Math.cos(query.modified_distance_moved * 38.17) * query.modified_move_speed \/ variable.gliding_speed_value) * 57.3;",
           "variable.Xvar = (variable.Xvar ?? Math.random(0,999));"
         ]
       },

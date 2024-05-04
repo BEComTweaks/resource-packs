@@ -1,16 +1,16 @@
 {
-	"format_version": "1.16.100",
-	"minecraft:fog_settings": {
-		"description": {
-			"identifier": "bt:no_fog"
-		},
-		"distance": {
-			"air": {
-				"fog_start": 99999,
-				"fog_end": 99999,
-				"fog_color": "#FFFFFF",
-				"render_distance_type": "fixed"
-			}
-		}
-	}
+  "format_version": "1.16.100",
+  "minecraft:fog_settings": {
+    "description": {
+      "identifier": "bt:no_fog"
+    },
+    "distance": {
+      "air": {
+        "fog_start": 99999,
+        "fog_end": 99999,
+        "fog_color": "#FFFFFF",
+        "render_distance_type": "fixed"
+      }
+    }
+  }
 }

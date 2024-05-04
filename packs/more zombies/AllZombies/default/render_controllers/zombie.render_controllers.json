@@ -3,8 +3,14 @@
   "render_controllers": {
     "controller.render.zombie": {
       "geometry": "Geometry.default",
-      "materials": [{"*": "Material.default"}],
-      "textures": ["Array.Xskins[variable.Xvar]"],
+      "materials": [
+        {
+          "*": "Material.default"
+        }
+      ],
+      "textures": [
+        "Array.Xskins[variable.Xvar]"
+      ],
       "arrays": {
         "textures": {
           "Array.Xskins": [

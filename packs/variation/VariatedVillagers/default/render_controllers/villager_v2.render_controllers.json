@@ -81,7 +81,6 @@
       },
       "rebuild_animation_matrices": true,
       "geometry": "Geometry.default",
-      // If we are not babies, unskilled, or nitwits we can have a job level
       "part_visibility": [
         {
           "*": "!query.is_baby && variable.profession_index != 0 && variable.profession_index != 14"

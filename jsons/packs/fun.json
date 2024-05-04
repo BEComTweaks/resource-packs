@@ -1,192 +1,192 @@
 {
- "topic": "Fun",
- "packs": [
-  {
-   "pack_id": "SmileyAxolotls",
-   "pack_name": "Smiley Axolotls",
-   "pack_description": "Gives Axolotls a smiley face :).",
-   "conflict": [],
-   "compatibility": [
-    "GreenAxolotl"
-   ]
-  },
-  {
-   "pack_id": "GreenAxolotl",
-   "pack_name": "Green Axolotl",
-   "pack_description": "Replaces the rare blue variant of the Axolotl with the unused green Axolotl skin.",
-   "conflict": [],
-   "compatibility": [
-    "SmileyAxolotls"
-   ]
-  },
-  {
-   "pack_id": "Beeralis",
-   "pack_name": "Beeralis",
-   "pack_description": "Look into my eyes, and nothing but my eyes!",
-   "conflict": [],
-   "compatibility": []
-  },
-  {
-   "pack_id": "SusSandandGravel",
-   "pack_name": "Sus Sand and Gravel",
-   "pack_description": "GET OUT OF MY HEAD GET OUT OF MY HEAD GET OUT OF MY HEAD.",
-   "conflict": [
-    "SuspiciousSand&GravelBorders"
-   ],
-   "compatibility": []
-  },
-  {
-   "pack_id": "XisumaTurtle",
-   "pack_name": "Xisuma Turtle",
-   "pack_description": "Retextures Turtles to look like Xisuma!",
-   "conflict": [],
-   "compatibility": []
-  },
-  {
-   "pack_id": "XisumaSquids",
-   "pack_name": "Xisuma Squids",
-   "pack_description": "Retextures Squids and Glow Squids to look like Xisuma!",
-   "conflict": [],
-   "compatibility": []
-  },
-  {
-   "pack_id": "WanderingXisuma",
-   "pack_name": "Wandering Xisuma",
-   "pack_description": "Changes the Wandering Trader texture to Xisuma's Green Team skin from Hermitcraft!",
-   "conflict": [],
-   "compatibility": []
-  },
-  {
-   "pack_id": "DarthXisumaPiglins",
-   "pack_name": "Darth Xisuma Piglins",
-   "pack_description": "Changes Piglins, Zombified Piglins and Piglin Brutes' textures to Xisuma's Darth Vader Skin.",
-   "conflict": [
-    "ZombiePigman"
-   ],
-   "compatibility": []
-  },
-  {
-   "pack_id": "TechnobladePigs",
-   "pack_name": "Technoblade Pigs",
-   "pack_description": "In honor of Technoblade. RIP.",
-   "conflict": [],
-   "compatibility": []
-  },
-  {
-   "pack_id": "StrideyStriders",
-   "pack_name": "Stridey Striders",
-   "pack_description": "Awful pack that makes Striders look like Stridey. Sorry.",
-   "conflict": [],
-   "compatibility": []
-  },
-  {
-   "pack_id": "EmeraldstoRubies",
-   "pack_name": "Emeralds to Rubies",
-   "pack_description": "Replace all Emerald items and blocks with Rubies!",
-   "conflict": [
-    "LegacyConsoleEmerald"
-   ],
-   "compatibility": [
-    "UniformOres",
-    "ClassicOres",
-    "OreBorders"
-   ]
-  },
-  {
-   "pack_id": "WitherBee",
-   "pack_name": "Wither Bee",
-   "pack_description": "Changes the Wither Boss texture to a Bee.",
-   "conflict": [
-    "PixelConsistentWither"
-   ],
-   "compatibility": []
-  },
-  {
-   "pack_id": "ilmangoGoldenApples",
-   "pack_name": "ilmango Golden Apples",
-   "pack_description": "Changes Golden Apples to ilmango's icon to celebrate the digging of a perimeter in under 12 hours.",
-   "conflict": [],
-   "compatibility": []
-  },
-  {
-   "pack_id": "EnglishEnchantingTable",
-   "pack_name": "English Enchanting Table",
-   "pack_description": "Changes the Enchanting Table language (AKA Standard Galactic) to use English alphabet characters. This will not help you with enchanting, as the words and phrases used in the Enchanting Table are randomly generated gibberish.",
-   "conflict": [
-    "SmootherFont"
-   ],
-   "compatibility": []
-  },
-  {
-   "pack_id": "StandardGalacticAlphabet",
-   "pack_name": "Standard Galactic Alphabet",
-   "pack_description": "Changes English alphabet characters to Standard Galactic alphabet characters (AKA the Enchanting Table language).",
-   "conflict": [
-    "SmootherFont"
-   ],
-   "compatibility": []
-  },
-  {
-   "pack_id": "BaconBeam",
-   "pack_name": "Bacon Beam",
-   "pack_description": "Adds the almighty Baacon Beam to beacons! All hail the Bacon Beam!",
-   "conflict": [
-    "PixelConsistentBeaconBeam",
-    "NoBeaconBeam"
-   ],
-   "compatibility": []
-  },
-  {
-   "pack_id": "PhantomRain",
-   "pack_name": "Phantom Rain",
-   "pack_description": "Merges two of the most annoying features into one :).",
-   "conflict": [
-    "UnobstrusiveRain"
-   ],
-   "compatibility": []
-  },
-  {
-   "pack_id": "WHAT",
-   "pack_name": "WHAT",
-   "pack_description": "Replaces the Spyglass overlay with the 'WHAT' meme template, including Earthbound's 'Sanctuary Guardian' music.",
-   "conflict": [
-    "TransparentSpyglassOverlay",
-    "NoSpyglassOverlay",
-    "UselessSpyglass"
-   ],
-   "compatibility": []
-  },
-  {
-   "pack_id": "UselessSpyglass",
-   "pack_name": "Useless Spyglass",
-   "pack_description": "Reverses the Spyglass overlay, making the middle opaque and the sides transparent. It's useless, what did you expect?.",
-   "conflict": [
-    "TransparentSpyglassOverlay",
-    "NoSpyglassOverlay",
-    "WHAT"
-   ],
-   "compatibility": []
-  },
-  {
-   "pack_id": "ScreamingGoatsMeme",
-   "pack_name": "Screaming Goats Meme",
-   "pack_description": "Changes the screaming goat sounds to the Screaming Goat meme from 2012.",
-   "conflict": [],
-   "compatibility": []
-  },
-  {
-   "pack_id": "IwishItCouldBeChristmasEveryday",
-   "pack_name": "I wish It Could Be Christmas Everyday",
-   "pack_description": "Gives Chests and Trapped Chests their Christmas textures all year-round.",
-   "conflict": [],
-   "compatibility": []
-  },
-  {
-   "pack_id": "Eyemadillo",
-   "pack_name": "Eyemadillo",
-   "pack_description": "The nightmare fuel from January Minecraft Monthly is real.",
-   "conflict": [],
-   "compatibility": []
-  }
- ]
+  "topic": "Fun",
+  "packs": [
+    {
+      "pack_id": "SmileyAxolotls",
+      "pack_name": "Smiley Axolotls",
+      "pack_description": "Gives Axolotls a smiley face :).",
+      "conflict": [],
+      "compatibility": [
+        "GreenAxolotl"
+      ]
+    },
+    {
+      "pack_id": "GreenAxolotl",
+      "pack_name": "Green Axolotl",
+      "pack_description": "Replaces the rare blue variant of the Axolotl with the unused green Axolotl skin.",
+      "conflict": [],
+      "compatibility": [
+        "SmileyAxolotls"
+      ]
+    },
+    {
+      "pack_id": "Beeralis",
+      "pack_name": "Beeralis",
+      "pack_description": "Look into my eyes, and nothing but my eyes!",
+      "conflict": [],
+      "compatibility": []
+    },
+    {
+      "pack_id": "SusSandandGravel",
+      "pack_name": "Sus Sand and Gravel",
+      "pack_description": "GET OUT OF MY HEAD GET OUT OF MY HEAD GET OUT OF MY HEAD.",
+      "conflict": [
+        "SuspiciousSand&GravelBorders"
+      ],
+      "compatibility": []
+    },
+    {
+      "pack_id": "XisumaTurtle",
+      "pack_name": "Xisuma Turtle",
+      "pack_description": "Retextures Turtles to look like Xisuma!",
+      "conflict": [],
+      "compatibility": []
+    },
+    {
+      "pack_id": "XisumaSquids",
+      "pack_name": "Xisuma Squids",
+      "pack_description": "Retextures Squids and Glow Squids to look like Xisuma!",
+      "conflict": [],
+      "compatibility": []
+    },
+    {
+      "pack_id": "WanderingXisuma",
+      "pack_name": "Wandering Xisuma",
+      "pack_description": "Changes the Wandering Trader texture to Xisuma's Green Team skin from Hermitcraft!",
+      "conflict": [],
+      "compatibility": []
+    },
+    {
+      "pack_id": "DarthXisumaPiglins",
+      "pack_name": "Darth Xisuma Piglins",
+      "pack_description": "Changes Piglins, Zombified Piglins and Piglin Brutes' textures to Xisuma's Darth Vader Skin.",
+      "conflict": [
+        "ZombiePigman"
+      ],
+      "compatibility": []
+    },
+    {
+      "pack_id": "TechnobladePigs",
+      "pack_name": "Technoblade Pigs",
+      "pack_description": "In honor of Technoblade. RIP.",
+      "conflict": [],
+      "compatibility": []
+    },
+    {
+      "pack_id": "StrideyStriders",
+      "pack_name": "Stridey Striders",
+      "pack_description": "Awful pack that makes Striders look like Stridey. Sorry.",
+      "conflict": [],
+      "compatibility": []
+    },
+    {
+      "pack_id": "EmeraldstoRubies",
+      "pack_name": "Emeralds to Rubies",
+      "pack_description": "Replace all Emerald items and blocks with Rubies!",
+      "conflict": [
+        "LegacyConsoleEmerald"
+      ],
+      "compatibility": [
+        "UniformOres",
+        "ClassicOres",
+        "OreBorders"
+      ]
+    },
+    {
+      "pack_id": "WitherBee",
+      "pack_name": "Wither Bee",
+      "pack_description": "Changes the Wither Boss texture to a Bee.",
+      "conflict": [
+        "PixelConsistentWither"
+      ],
+      "compatibility": []
+    },
+    {
+      "pack_id": "ilmangoGoldenApples",
+      "pack_name": "ilmango Golden Apples",
+      "pack_description": "Changes Golden Apples to ilmango's icon to celebrate the digging of a perimeter in under 12 hours.",
+      "conflict": [],
+      "compatibility": []
+    },
+    {
+      "pack_id": "EnglishEnchantingTable",
+      "pack_name": "English Enchanting Table",
+      "pack_description": "Changes the Enchanting Table language (AKA Standard Galactic) to use English alphabet characters. This will not help you with enchanting, as the words and phrases used in the Enchanting Table are randomly generated gibberish.",
+      "conflict": [
+        "SmootherFont"
+      ],
+      "compatibility": []
+    },
+    {
+      "pack_id": "StandardGalacticAlphabet",
+      "pack_name": "Standard Galactic Alphabet",
+      "pack_description": "Changes English alphabet characters to Standard Galactic alphabet characters (AKA the Enchanting Table language).",
+      "conflict": [
+        "SmootherFont"
+      ],
+      "compatibility": []
+    },
+    {
+      "pack_id": "BaconBeam",
+      "pack_name": "Bacon Beam",
+      "pack_description": "Adds the almighty Baacon Beam to beacons! All hail the Bacon Beam!",
+      "conflict": [
+        "PixelConsistentBeaconBeam",
+        "NoBeaconBeam"
+      ],
+      "compatibility": []
+    },
+    {
+      "pack_id": "PhantomRain",
+      "pack_name": "Phantom Rain",
+      "pack_description": "Merges two of the most annoying features into one :).",
+      "conflict": [
+        "UnobstrusiveRain"
+      ],
+      "compatibility": []
+    },
+    {
+      "pack_id": "WHAT",
+      "pack_name": "WHAT",
+      "pack_description": "Replaces the Spyglass overlay with the 'WHAT' meme template, including Earthbound's 'Sanctuary Guardian' music.",
+      "conflict": [
+        "TransparentSpyglassOverlay",
+        "NoSpyglassOverlay",
+        "UselessSpyglass"
+      ],
+      "compatibility": []
+    },
+    {
+      "pack_id": "UselessSpyglass",
+      "pack_name": "Useless Spyglass",
+      "pack_description": "Reverses the Spyglass overlay, making the middle opaque and the sides transparent. It's useless, what did you expect?.",
+      "conflict": [
+        "TransparentSpyglassOverlay",
+        "NoSpyglassOverlay",
+        "WHAT"
+      ],
+      "compatibility": []
+    },
+    {
+      "pack_id": "ScreamingGoatsMeme",
+      "pack_name": "Screaming Goats Meme",
+      "pack_description": "Changes the screaming goat sounds to the Screaming Goat meme from 2012.",
+      "conflict": [],
+      "compatibility": []
+    },
+    {
+      "pack_id": "IwishItCouldBeChristmasEveryday",
+      "pack_name": "I wish It Could Be Christmas Everyday",
+      "pack_description": "Gives Chests and Trapped Chests their Christmas textures all year-round.",
+      "conflict": [],
+      "compatibility": []
+    },
+    {
+      "pack_id": "Eyemadillo",
+      "pack_name": "Eyemadillo",
+      "pack_description": "The nightmare fuel from January Minecraft Monthly is real.",
+      "conflict": [],
+      "compatibility": []
+    }
+  ]
 }
