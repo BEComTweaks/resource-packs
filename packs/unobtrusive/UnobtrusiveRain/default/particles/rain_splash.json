@@ -5,7 +5,7 @@
       "identifier": "minecraft:rain_splash_particle",
       "basic_render_parameters": {
         "material": "particles_alpha",
-        "texture": "textures\/environment\/rain_splash"
+        "texture": "textures/environment/rain_splash"
       }
     },
     "components": {

@@ -4,10 +4,10 @@
   "resource_pack_name": "vanilla",
   "texture_data": {
     "piston_side_sticky": {
-      "textures": "textures\/blocks\/piston_side_sticky"
+      "textures": "textures/blocks/piston_side_sticky"
     },
     "piston_top_sticky": {
-      "textures": "textures\/blocks\/piston_top_sticky"
+      "textures": "textures/blocks/piston_top_sticky"
     }
   },
   "texture_name": "atlas.terrain"

@@ -1,12 +1,12 @@
 [
   {
     "atlas_tile": "ancient_debris_side",
-    "flipbook_texture": "textures\/blocks\/ancient_debris_side",
+    "flipbook_texture": "textures/blocks/ancient_debris_side",
     "ticks_per_frame": 3
   },
   {
     "atlas_tile": "ancient_debris_top",
-    "flipbook_texture": "textures\/blocks\/ancient_debris_top",
+    "flipbook_texture": "textures/blocks/ancient_debris_top",
     "ticks_per_frame": 3
   }
 ]

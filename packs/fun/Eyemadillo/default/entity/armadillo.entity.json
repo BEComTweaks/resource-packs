@@ -10,8 +10,8 @@
         "default": "geometry.armadillo"
       },
       "textures": {
-        "default": "textures\/entity\/armadillo",
-        "cursed": "textures\/entity\/eyemadillo"
+        "default": "textures/entity/armadillo",
+        "cursed": "textures/entity/eyemadillo"
       },
       "render_controllers": [
         "controller.render.armadillo_eyes"

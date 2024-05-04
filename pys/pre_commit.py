@@ -18,7 +18,8 @@ else:
 from custom_functions import *
 check("clrprint") # Check for clrprint module
 from clrprint import clrprint
-
+check("json5","json-five")
+from json5 import loads
 
 stats = [0,0]
 incomplete_packs = {"Aesthetic":[],"Colorful Slime":[],"Fixes and Consistency":[],"Fun":[],"HUD and GUI":[],"Lower and Sides":[],"Menu Panoramas":[],"More Zombies":[],"Parity":[],"Peace and Quiet":[],"Retro":[],"Terrain":[],"Unobtrusive":[],"Utility":[],"Variation":[]}
@@ -111,7 +112,8 @@ for root, _, files in os.walk(cdir()):
             if longest_path < len(file_path):
                 longest_path = len(file_path)
             try:
-                dump_json(file_path,load_json(file_path))
+                with open(file_path,"r") as file:
+                    loads(file.read())
                 print(f'\r{file_path}{" " * (longest_path - len(file_path))}',end="")
             except Exception as e:
                 print(f"Error in file '{file_path}': {str(e)}")

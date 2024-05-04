@@ -8,7 +8,7 @@
         "default": "zombie"
       },
       "textures": {
-        "default": "textures\/entity\/pig\/pigzombie"
+        "default": "textures/entity/pig/pigzombie"
       },
       "geometry": {
         "default": "geometry.pigzombie.v1.8"
@@ -19,7 +19,7 @@
       },
       "scripts": {
         "pre_animation": [
-          "variable.tcos0 = (Math.cos(query.modified_distance_moved * 38.17) * query.modified_move_speed \/ variable.gliding_speed_value) * 57.3;"
+          "variable.tcos0 = (Math.cos(query.modified_distance_moved * 38.17) * query.modified_move_speed / variable.gliding_speed_value) * 57.3;"
         ]
       },
       "animations": {

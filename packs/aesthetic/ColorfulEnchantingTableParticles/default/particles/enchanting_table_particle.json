@@ -5,7 +5,7 @@
       "identifier": "minecraft:enchanting_table_particle",
       "basic_render_parameters": {
         "material": "particles_alpha",
-        "texture": "textures\/particle\/enchanting_table_particles"
+        "texture": "textures/particle/enchanting_table_particles"
       }
     },
     "components": {
@@ -19,7 +19,7 @@
       },
       "minecraft:particle_motion_parametric": {
         "relative_position": [
-          "variable.pos = 1 - (variable.particle_age \/ variable.particle_lifetime); return variable.direction.x * variable.pos;",
+          "variable.pos = 1 - (variable.particle_age / variable.particle_lifetime); return variable.direction.x * variable.pos;",
           "variable.direction.y * variable.pos - Math.pow((1 - variable.pos), 3) * 1.2",
           "variable.direction.z * variable.pos"
         ]

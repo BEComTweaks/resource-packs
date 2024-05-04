@@ -7,22 +7,22 @@
       "textures": {
         "variations": [
           {
-            "path": "textures\/blocks\/end_stone\/0"
+            "path": "textures/blocks/end_stone/0"
           },
           {
-            "path": "textures\/blocks\/end_stone\/1"
+            "path": "textures/blocks/end_stone/1"
           },
           {
-            "path": "textures\/blocks\/end_stone\/2"
+            "path": "textures/blocks/end_stone/2"
           },
           {
-            "path": "textures\/blocks\/end_stone\/3"
+            "path": "textures/blocks/end_stone/3"
           },
           {
-            "path": "textures\/blocks\/end_stone\/4"
+            "path": "textures/blocks/end_stone/4"
           },
           {
-            "path": "textures\/blocks\/end_stone\/5"
+            "path": "textures/blocks/end_stone/5"
           }
         ]
       }

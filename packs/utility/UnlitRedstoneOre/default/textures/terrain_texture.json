@@ -4,10 +4,10 @@
   "resource_pack_name": "vanilla",
   "texture_data": {
     "deepslate_redstone_ore_off": {
-      "textures": "textures\/blocks\/deepslate\/deepslate_redstone_ore_off"
+      "textures": "textures/blocks/deepslate/deepslate_redstone_ore_off"
     },
     "redstone_ore_off": {
-      "textures": "textures\/blocks\/redstone_ore_off"
+      "textures": "textures/blocks/redstone_ore_off"
     }
   },
   "texture_name": "atlas.terrain"

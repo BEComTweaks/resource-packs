@@ -420,7 +420,7 @@
     {
       "pack_id": "RainbowSlime",
       "pack_name": "Rainbow Slime",
-      "pack_description": "Changes the color of all slime related items, blocks and entities to a random rainbow color.\nAll of them changes texture when rejoining world\/reloading chunks!",
+      "pack_description": "Changes the color of all slime related items, blocks and entities to a random rainbow color.\nAll of them changes texture when rejoining world/reloading chunks!",
       "conflict": [
         "StickyPistonSides",
         "HoneySlime",
@@ -446,7 +446,7 @@
     {
       "pack_id": "MonochromeSlime",
       "pack_name": "Monochrome Slime",
-      "pack_description": "Changes the color of all slime related items, blocks and entities to a random monochromatic color.\nAll of them changes texture when rejoining world\/reloading chunks!",
+      "pack_description": "Changes the color of all slime related items, blocks and entities to a random monochromatic color.\nAll of them changes texture when rejoining world/reloading chunks!",
       "conflict": [
         "StickyPistonSides",
         "HoneySlime",

@@ -1,6 +1,6 @@
 {
   "namespace": "trade2",
-  "top_half_stack_panel\/how_to_play_button_holder": {
+  "top_half_stack_panel/how_to_play_button_holder": {
     "modifications": [
       {
         "control_name": "how_to_play_button",

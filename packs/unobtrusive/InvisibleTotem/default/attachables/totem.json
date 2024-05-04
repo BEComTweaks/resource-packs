@@ -8,8 +8,8 @@
         "enchanted": "entity_alphatest_glint"
       },
       "textures": {
-        "default": "textures\/items\/totem",
-        "enchanted": "textures\/misc\/enchanted_item_glint"
+        "default": "textures/items/totem",
+        "enchanted": "textures/misc/enchanted_item_glint"
       },
       "geometry": {
         "default": "geometry.totem"

@@ -5,7 +5,7 @@
       "identifier": "minecraft:large_explosion",
       "basic_render_parameters": {
         "material": "particles_alpha",
-        "texture": "textures\/particle\/explosion"
+        "texture": "textures/particle/explosion"
       }
     },
     "components": {
