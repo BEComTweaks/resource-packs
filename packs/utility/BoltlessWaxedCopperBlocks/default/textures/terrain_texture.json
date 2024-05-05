@@ -1,0 +1,111 @@
+{
+  "num_mip_levels": 4,
+  "padding": 8,
+  "resource_pack_name": "vanilla",
+  "texture_data": {
+    "boltless_chiseled_copper": {
+      "textures": "textures/blocks/boltless/chiseled_copper"
+    },
+    "boltless_copper_block": {
+      "textures": "textures/blocks/boltless/copper_block"
+    },
+    "boltless_copper_bulb": {
+      "textures": [
+        "textures/blocks/boltless/copper_bulb",
+        "textures/blocks/boltless/copper_bulb_lit",
+        "textures/blocks/boltless/copper_bulb_powered",
+        "textures/blocks/boltless/copper_bulb_lit_powered"
+      ]
+    },
+    "boltless_copper_door_bottom": {
+      "textures": "textures/blocks/boltless/copper_door_bottom"
+    },
+    "boltless_copper_door_top": {
+      "textures": "textures/blocks/boltless/copper_door_top"
+    },
+    "boltless_copper_grate": {
+      "textures": "textures/blocks/boltless/copper_grate"
+    },
+    "boltless_copper_trapdoor": {
+      "textures": "textures/blocks/boltless/copper_trapdoor"
+    },
+    "boltless_exposed_chiseled_copper": {
+      "textures": "textures/blocks/boltless/exposed_chiseled_copper"
+    },
+    "boltless_exposed_copper": {
+      "textures": "textures/blocks/boltless/exposed_copper"
+    },
+    "boltless_exposed_copper_bulb": {
+      "textures": [
+        "textures/blocks/boltless/exposed_copper_bulb",
+        "textures/blocks/boltless/exposed_copper_bulb_lit",
+        "textures/blocks/boltless/exposed_copper_bulb_powered",
+        "textures/blocks/boltless/exposed_copper_bulb_lit_powered"
+      ]
+    },
+    "boltless_exposed_copper_door_bottom": {
+      "textures": "textures/blocks/boltless/exposed_copper_door_bottom"
+    },
+    "boltless_exposed_copper_door_top": {
+      "textures": "textures/blocks/boltless/exposed_copper_door_top"
+    },
+    "boltless_exposed_copper_grate": {
+      "textures": "textures/blocks/boltless/exposed_copper_grate"
+    },
+    "boltless_exposed_copper_trapdoor": {
+      "textures": "textures/blocks/boltless/exposed_copper_trapdoor"
+    },
+    "boltless_oxidized_chiseled_copper": {
+      "textures": "textures/blocks/boltless/oxidized_chiseled_copper"
+    },
+    "boltless_oxidized_copper": {
+      "textures": "textures/blocks/boltless/oxidized_copper"
+    },
+    "boltless_oxidized_copper_bulb": {
+      "textures": [
+        "textures/blocks/boltless/oxidized_copper_bulb",
+        "textures/blocks/boltless/oxidized_copper_bulb_lit",
+        "textures/blocks/boltless/oxidized_copper_bulb_powered",
+        "textures/blocks/boltless/oxidized_copper_bulb_lit_powered"
+      ]
+    },
+    "boltless_oxidized_copper_door_bottom": {
+      "textures": "textures/blocks/boltless/oxidized_copper_door_bottom"
+    },
+    "boltless_oxidized_copper_door_top": {
+      "textures": "textures/blocks/boltless/oxidized_copper_door_top"
+    },
+    "boltless_oxidized_copper_grate": {
+      "textures": "textures/blocks/boltless/oxidized_copper_grate"
+    },
+    "boltless_oxidized_copper_trapdoor": {
+      "textures": "textures/blocks/boltless/oxidized_copper_trapdoor"
+    },
+    "boltless_weathered_chiseled_copper": {
+      "textures": "textures/blocks/boltless/weathered_chiseled_copper"
+    },
+    "boltless_weathered_copper": {
+      "textures": "textures/blocks/boltless/weathered_copper"
+    },
+    "boltless_weathered_copper_bulb": {
+      "textures": [
+        "textures/blocks/boltless/weathered_copper_bulb",
+        "textures/blocks/boltless/weathered_copper_bulb_lit",
+        "textures/blocks/boltless/weathered_copper_bulb_powered",
+        "textures/blocks/boltless/weathered_copper_bulb_lit_powered"
+      ]
+    },
+    "boltless_weathered_copper_door_bottom": {
+      "textures": "textures/blocks/boltless/weathered_copper_door_bottom"
+    },
+    "boltless_weathered_copper_door_top": {
+      "textures": "textures/blocks/boltless/weathered_copper_door_top"
+    },
+    "boltless_weathered_copper_grate": {
+      "textures": "textures/blocks/boltless/weathered_copper_grate"
+    },
+    "boltless_weathered_copper_trapdoor": {
+      "textures": "textures/blocks/boltless/weathered_copper_trapdoor"
+    }
+  }
+}

@@ -53,20 +53,16 @@
       "pack_id": "WaxedCopperItems",
       "pack_name": "Waxed Copper Items",
       "pack_description": "Adds a border around Waxed Copper and variants in the inventory. This will NOT affect the placed blocks.",
-      "conflict": [
-        "BoltlessWaxedCopperBlocks"
-      ],
-      "compatibility": []
+      "conflict": [],
+      "compatibility": ["BoltlessWaxedCopperBlocks","AlternateCutCopper"]
     },
     {
       "pack_id": "BoltlessWaxedCopperBlocks",
       "pack_name": "Boltless Waxed Copper Blocks",
-      "pack_description": "Removes the bolts in the corner of Waxed Copper blocks and variants.",
-      "conflict": [
-        "WaxedCopperItems"
-      ],
+      "pack_description": "Removes the bolts in the corner of Waxed Copper blocks and variants.\nThis does NOT change anything with Cut Copper, so Waxed Copper Items is recommended.",
+      "conflict": [],
       "compatibility": [
-        "AlternateCutCopper"
+        "WaxedCopperItems"
       ]
     },
     {
