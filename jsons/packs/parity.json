@@ -17,7 +17,7 @@
       "pack_name": "Java Boom",
       "pack_description": "Gives Explosion particles their texture from Minecraft: Java Edition.",
       "conflict": [
-        "UnobstrusiveParticles"
+        "UnobtrusiveParticles"
       ],
       "compatibility": []
     },

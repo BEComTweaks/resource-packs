@@ -3,6 +3,7 @@ import importlib
 import pip
 from pip import main
 import time
+import traceback
 
 # If I need a module that isn't installed
 def check(module,module_name=""):
@@ -51,7 +52,12 @@ def clear():
 # Simple function to load json from file
 def load_json(path):
     with open(path,"r") as file:
-        return loads(file.read())
+        try:
+            return loads(file.read())
+        except JSONDecodeError:
+            clrprint(f"\n{path} got a JSON Decode Error",clr="red")
+            clrprint(traceback.format_exc(),clr="yellow")
+            exit()
 
 # Simple function to save json into file
 def dump_json(path,dictionary):

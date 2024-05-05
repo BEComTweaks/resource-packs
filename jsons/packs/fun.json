@@ -141,7 +141,7 @@
       "pack_name": "Phantom Rain",
       "pack_description": "Merges two of the most annoying features into one :).",
       "conflict": [
-        "UnobstrusiveRain"
+        "UnobtrusiveRain"
       ],
       "compatibility": []
     },
@@ -150,7 +150,7 @@
       "pack_name": "WHAT",
       "pack_description": "Replaces the Spyglass overlay with the 'WHAT' meme template, including Earthbound's 'Sanctuary Guardian' music.",
       "conflict": [
-        "TransparentSpyglassOverlay",
+        "TranslucentSpyglassOverlay",
         "NoSpyglassOverlay",
         "UselessSpyglass"
       ],

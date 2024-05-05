@@ -188,7 +188,9 @@
       "pack_name": "Ashless Campfires",
       "pack_description": "Removes the 'ash' from unlit Campfires and Soul Campfires.",
       "conflict": [],
-      "compatibility": []
+      "compatibility": [
+        "SoulSoilSoulCampfires"
+      ]
     },
     {
       "pack_id": "GlassDoors",

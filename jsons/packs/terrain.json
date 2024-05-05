@@ -12,19 +12,19 @@
       "pack_id": "GoldenSavanna",
       "pack_name": "Golden Savanna",
       "pack_description": "Recolors Savanna biomes to have beautiful golden grass.",
-      "conflict": [],
-      "compatibility": [
+      "conflict": [
         "LushGrassAllRound"
-      ]
+      ],
+      "compatibility": []
     },
     {
       "pack_id": "LushGrassAllRound",
       "pack_name": "Lush Grass All Round",
       "pack_description": "Makes most of the world use a lush green colormap.",
-      "conflict": [],
-      "compatibility": [
+      "conflict": [
         "GoldenSavanna"
-      ]
+      ],
+      "compatibility": []
     },
     {
       "pack_id": "AlternateBedrock",
@@ -80,7 +80,9 @@
         "PolishedStonesToBricks",
         "VariatedUnpolishedStones"
       ],
-      "compatibility": []
+      "compatibility": [
+        "DoubleSlabFix"
+      ]
     },
     {
       "pack_id": "PebblelessDirt",
@@ -128,7 +130,8 @@
       ],
       "compatibility": [
         "OreBorders",
-        "EmeraldstoRubies"
+        "EmeraldstoRubies",
+        "UnlitRedstoneOre"
       ]
     },
     {

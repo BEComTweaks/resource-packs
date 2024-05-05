@@ -167,7 +167,7 @@
       "pack_name": "Directional Observers",
       "pack_description": "Gives Observers arrows all around to indicate which direction they are facing and display updates.",
       "conflict": [],
-      "compatibility": []
+      "compatibility": ["UpdatedObserverTexture"]
     },
     {
       "pack_id": "CleanRedstoneDust",

@@ -107,7 +107,8 @@
       "pack_description": "Lowers the sides of Crimson Nylium to provide a smoother and redder landscape.",
       "conflict": [
         "CrimsonNyliumSides",
-        "OldNetherrack"
+        "OldNetherrack",
+        "BrighterNether"
       ],
       "compatibility": []
     },
@@ -126,7 +127,8 @@
       "pack_description": "Lowers the sides of Warped Nylium to provide a smoother and bluer landscape.",
       "conflict": [
         "WarpedNyliumSides",
-        "OldNetherrack"
+        "OldNetherrack",
+        "BrighterNether"
       ],
       "compatibility": []
     },

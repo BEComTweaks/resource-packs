@@ -21,10 +21,8 @@
       "pack_id": "UnobtrusiveParticles",
       "pack_name": "Unobtrusive Particles",
       "pack_description": "Makes many particles transparent or hollow for easier vision.",
-      "conflict": [],
-      "compatibility": [
-        "BedrockExplosion"
-      ]
+      "conflict": ["JavaBoom"],
+      "compatibility": []
     },
     {
       "pack_id": "NoCherryLeavesParticles",

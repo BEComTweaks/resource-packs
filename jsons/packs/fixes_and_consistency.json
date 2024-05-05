@@ -260,9 +260,7 @@
       "pack_name": "Cloak Fix",
       "pack_description": "Fixes model of Villagers, Witches and Evokers so the cloak includes the missing bottom pixels.",
       "conflict": [],
-      "compatibility": [
-        "VariatedVillager"
-      ]
+      "compatibility": []
     }
   ]
 }

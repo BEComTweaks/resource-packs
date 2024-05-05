@@ -38,6 +38,7 @@
         "UniformOres"
       ],
       "compatibility": [
+        "EmeraldstoRubies",
         "OreBorders",
         "UnlitRedstoneOre"
       ]
@@ -80,13 +81,11 @@
       "pack_description": "Reverts Netherrack to its old texture, including Ores and Nylium.",
       "conflict": [
         "OreBorders",
-        "Brighter Nether",
+        "BrighterNether",
         "LowerWarpedNylium",
         "LowerCrimsonNylium"
       ],
-      "compatibility": [
-        "ClassicOres"
-      ]
+      "compatibility": []
     },
     {
       "pack_id": "OldLava",

@@ -1,0 +1,69 @@
+{
+  "AshlessCampfires": [
+    "SoulSoilSoulCampfires"
+  ],
+  "PistonInnerFix": [
+    "StickyPistonSides"
+  ],
+  "UpdatedObserverTexture": [
+    "DirectionalObservers"
+  ],
+  "ConsistentOars": [
+    "OarlessBoats"
+  ],
+  "SoulSoilSoulCampfire": [
+    "AshlessCampfires"
+  ],
+  "DoubleSlabFix": [
+    "SmootherStones"
+  ],
+  "SmileyAxolotls": [
+    "GreenAxolotl"
+  ],
+  "GreenAxolotl": [
+    "SmileyAxolotls"
+  ],
+  "EmeraldstoRubies": [
+    "UniformOres",
+    "ClassicOres",
+    "OreBorders"
+  ],
+  "ClassicOres": [
+    "EmeraldstoRubies",
+    "OreBorders",
+    "UnlitRedstoneOre"
+  ],
+  "OarlessBoats": [
+    "ConsistentOars"
+  ],
+  "SmootherStones": [
+    "DoubleSlabFix"
+  ],
+  "UniformOres": [
+    "OreBorders",
+    "EmeraldstoRubies"
+  ],
+  "OreBorders": [
+    "ClassicOres",
+    "EmeraldstoRubies",
+    "UniformOres",
+    "UnlitRedstoneOre"
+  ],
+  "HungerPreview": [
+    "MusicDiscRedstoneLevelPreview"
+  ],
+  "MusicDiscRedstoneLevelPreview": [
+    "HungerPreview"
+  ],
+  "StickyPistonSides": [
+    "PistonInnerFix"
+  ],
+  "DirectionalObservers": [
+    "UpdatedObserverTexture"
+  ],
+  "UnlitRedstoneOre": [
+    "UniformOres",
+    "OreBorders",
+    "ClassicOres"
+  ]
+}

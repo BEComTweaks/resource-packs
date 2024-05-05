@@ -24,7 +24,8 @@ from json5 import loads
 stats = [0,0]
 incomplete_packs = {"Aesthetic":[],"Colorful Slime":[],"Fixes and Consistency":[],"Fun":[],"HUD and GUI":[],"Lower and Sides":[],"Menu Panoramas":[],"More Zombies":[],"Parity":[],"Peace and Quiet":[],"Retro":[],"Terrain":[],"Unobtrusive":[],"Utility":[],"Variation":[]}
 cstats = [0,0]
-compatibilities = []
+compatibilities = {}
+conflicts = {}
 
 if input("Show Compatibility Progress? [y/n]\n") == "y":
     showcomp = True
@@ -60,22 +61,37 @@ for c in range(len(os.listdir(f'{cdir()}/jsons/packs'))):
                 clrprint(f'= \t{file["packs"][i]["pack_id"]}',clr="yellow")
         for comp in range(len(file["packs"][i]["compatibility"])): # If it is empty, it just skips
             # Looks at compatibility folders
-            if os.listdir(f'{cdir()}/packs/{file["topic"].lower()}/{file["packs"][i]["pack_id"]}/{file["packs"][i]["compatibility"][comp]}') == []:
+            try:
+                if os.listdir(f'{cdir()}/packs/{file["topic"].lower()}/{file["packs"][i]["pack_id"]}/{file["packs"][i]["compatibility"][comp]}') == []:
+                    if showcomp:
+                        clrprint(f'- \t\t{file["packs"][i]["compatibility"][comp]}',clr="red")
+                    # Adds the packid to the list of incomplete compatibilities
+                    try:
+                        compatibilities[file["packs"][i]["pack_id"]].append(file["packs"][i]["compatibility"][comp])
+                    except KeyError:
+                        compatibilities[file["packs"][i]["pack_id"]] = [file["packs"][i]["compatibility"][comp]]
+                    cstats[1] += 1
+                else:
+                    if showcomp:
+                        clrprint(f'+ \t\t{file["packs"][i]["compatibility"][comp]}',clr="green")
+                    # When the compatibility directory has something inside
+                    cstats[0] += 1
+            except FileNotFoundError:
+                # When the compatibility folder isn't there
                 if showcomp:
                     clrprint(f'- \t\t{file["packs"][i]["compatibility"][comp]}',clr="red")
                 # Adds the packid to the list of incomplete compatibilities
-                compatibilities.append(file["packs"][i]["compatibility"])
+                try:
+                    compatibilities[file["packs"][i]["pack_id"]].append(file["packs"][i]["compatibility"][comp])
+                except KeyError:
+                    compatibilities[file["packs"][i]["pack_id"]] = [file["packs"][i]["compatibility"][comp]]
                 cstats[1] += 1
-            else:
-                if showcomp:
-                    clrprint(f'+ \t\t{file["packs"][i]["compatibility"][comp]}',clr="green")
-                # When the compatibility directory has something inside
-                cstats[0] += 1
 
 clrprint("Finished Counting!",clr="green")
 # Update incomplete_packs.json
 dump_json(f"{cdir()}/jsons/others/incomplete_packs.json",incomplete_packs)
-clrprint("Updated incomplete_packs.json",clr="green")
+dump_json(f"{cdir()}/jsons/others/incomplete_compatibilities.json",compatibilities)
+clrprint("Updated incomplete_packs.json and incomplete_compatibilities.json",clr="green")
 clrprint("Updating README.md...",clr="yellow")
 
 # Just some fancy code with regex to update README.md
@@ -114,12 +130,12 @@ for root, _, files in os.walk(cdir()):
             try:
                 with open(file_path,"r") as file:
                     loads(file.read())
-                print(f'\r{file_path}{" " * (longest_path - len(file_path))}',end="")
+                print(f'\r{str(file_path)[len(cdir()):]}{" " * (longest_path - len(file_path))}',end="")
             except Exception as e:
                 print(f"Error in file '{file_path}': {str(e)}")
                 exit(1)
 
-clrprint("\nJSON Files are valid!",clr="green")
+clrprint(f"\rJSON Files are valid!{' ' * (longest_path - 21)}",clr="green")
 if doubleclicked:
     clrprint("Press Enter to exit.",clr="green",end="")
     input()
