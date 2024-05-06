@@ -1,8 +1,6 @@
 # Explanation of how .py files work in pys work
 
-Currently, it has 7 Python Scripts inside.
-
-[main.py](https://github.com/NSPC911/Bedrock-Tweaks-Base/blob/main/pys/main.py) and [selector.py](https://github.com/NSPC911/Bedrock-Tweaks-Base/blob/main/pys/selector.py) will not have a section here as there is too much going on there. I will recommend reading the comments in the code to know what is going on.
+Currently, it has 7 Python Scripts inside, 3 of which are still not complete.
 
 ## [custom_functions.py](https://github.com/NSPC911/Bedrock-Tweaks-Base/blob/main/pys/custom_functions.py)
 
@@ -53,12 +51,6 @@ This continues until only one item matches the first n characters of the string,
 ## [folder_creator.py](https://github.com/NSPC911/Bedrock-Tweaks-Base/blob/main/pys/folder_creator.py)
 
 Creates folders based on the [json files](https://github.com/NSPC911/Bedrock-Tweaks-Base/tree/jsons/packs).
-
-## [manifestgenerator.py](https://github.com/NSPC911/Bedrock-Tweaks-Base/blob/main/pys/manifestgenerator.py)
-
-Generates a `manifest.json` file in a random directory in the following template `BTRP-xxxxxx`
-
-Uses [jsons/others/manifest.json](https://github.com/NSPC911/Bedrock-Tweaks-Base/blob/jsons/others/manifest.json) as the template to create the manifest.json. Description is not ready yet, as I need to set up the selection of packs for the description to work.
 
 ## [pre_commit.py](https://github.com/NSPC911/Bedrock-Tweaks-Base/blob/main/pys/pre_commit.py)
 

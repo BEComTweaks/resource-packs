@@ -41,7 +41,8 @@
   ],
   "UniformOres": [
     "OreBorders",
-    "EmeraldstoRubies"
+    "EmeraldstoRubies",
+    "UnlitRedstoneOre"
   ],
   "OreBorders": [
     "ClassicOres",

@@ -1,17 +1,15 @@
 import os
 import shutil
 
-if str(os.getcwd()).endswith("system32") or __name__ != "__main__":
-    doubleclicked = True
+if str(os.getcwd()).endswith("system32"):
     # This has to be in every script to prevent FileNotFoundError
     # Because for some reason, it runs it at C:\Windows\System32
     # Yeah, it is stupid, but I can't put these lines in custom_functions
     # Because that still brings up an error
 
     os.chdir(os.path.dirname(os.path.realpath(__file__)))
-else:
-    doubleclicked = False
 
+from custom_functions import *
 check("clrprint")
 from clrprint import clrprint
 
@@ -320,9 +318,9 @@ def selected_packs():
 
         print(f"\n2. Go Back (back)")
         menu_commands.append("back")
-
-        print("\n3. Exit Program (exit)")
-        menu_commands.append("exit")
+        if __name__ == "__main__":
+            print("\n3. Exit Program (exit)")
+            menu_commands.append("exit")
 
         choice = input("Enter your choice.\n")
         progged = prog_search(choice,menu_commands)
@@ -413,38 +411,35 @@ def select_pack(topic, pack, index, issue):
     else:
         return [choice, f'{topic.replace(" ", "_").lower()}', pack]
 
-
-command = ["main_menu"]
-loop = True
-# Main Loop
-try:
-    while loop:
-        if command[0] == "main_menu":
-            # Main Menu
-            command = main_menu()
-            command = val_command("main_menu", command)
-        elif command[0] == "pack_select":
-            # Pack Selection
-            command = pack_select(command[1])
-            command = val_command("pack_select", command)
-        elif command[0] == "select_pack":
-            # More info on pack and if to
-            # (un)select or not
-            command = select_pack(command[1], command[2], command[3], command[4])
-            command = val_command("select_pack", command)
-        elif command[0] == "selected_packs":
-            # Show Selected Packs
-            command = selected_packs()
-            command = val_command("selected_packs", command)
-        # Shows up for like 10ms, to show my suffering
-        if loop:
-            clrprint("If you can see this, I suffered about 11 hours in total for this", clr="purple")
-            clrprint("Please send help by putting a star on the repo!", clr="purple")
-except KeyboardInterrupt:
-    # I don't like seeing massive errors when
-    # I stop the program with Ctrl+C, so neat
-    # exit instead of spam
-    val_command("keyboard_interrupt", "exit")
-if doubleclicked:
-    clrinput("Press Enter to exit.", clr="g")
-    clear()
+if __name__ == "__main__":
+    command = ["main_menu"]
+    loop = True
+    # Main Loop
+    try:
+        while loop:
+            if command[0] == "main_menu":
+                # Main Menu
+                command = main_menu()
+                command = val_command("main_menu", command)
+            elif command[0] == "pack_select":
+                # Pack Selection
+                command = pack_select(command[1])
+                command = val_command("pack_select", command)
+            elif command[0] == "select_pack":
+                # More info on pack and if to
+                # (un)select or not
+                command = select_pack(command[1], command[2], command[3], command[4])
+                command = val_command("select_pack", command)
+            elif command[0] == "selected_packs":
+                # Show Selected Packs
+                command = selected_packs()
+                command = val_command("selected_packs", command)
+            # Shows up for like 10ms, to show my suffering
+            if loop:
+                clrprint("If you can see this, I suffered about 11 hours in total for this", clr="purple")
+                clrprint("Please send help by putting a star on the repo!", clr="purple")
+    except KeyboardInterrupt:
+        # I don't like seeing massive errors when
+        # I stop the program with Ctrl+C, so neat
+        # exit instead of spam
+        val_command("keyboard_interrupt", "exit")
