@@ -21,19 +21,29 @@ pip does spawn some yellow text saying not to invoke, but if it works, it works 
 When this function is called, a string is returned, with the exact path to the repository (If it is run in either [root](https://github.com/NSPC911/Bedrock-Tweaks-Base/tree/main) or [pys](https://github.com/NSPC911/Bedrock-Tweaks-Base/tree/main/pys)).
 It is just a QOL function to prevent extra code at the start of other scripts
 
-### [clear()](https://github.com/NSPC911/Bedrock-Tweaks-Base/blob/main/pys/custom_functions.py#L43-L49)
+### [expand(string)](https://github.com/NSPC911/Bedrock-Tweaks-Base/blob/main/pys/custom_functions.py#L43-L53)
+
+Does the opposite of `"".join(string.split())`
+
+Takes a string, and adds spaces in front of character thsat are uppercase
+
+### [contract(string)](https://github.com/NSPC911/Bedrock-Tweaks-Base/blob/main/pys/custom_functions.py#L55-L57)
+
+Only does `"".join(string.split())`. It exists for a neater code
+
+### [clear()](https://github.com/NSPC911/Bedrock-Tweaks-Base/blob/main/pys/custom_functions.py#L59-L66)
 
 Clears the terminal when the function is called
 
-### [load_json(path)](https://github.com/NSPC911/Bedrock-Tweaks-Base/blob/main/pys/custom_functions.py#L52-L54)
+### [load_json(path)](https://github.com/NSPC911/Bedrock-Tweaks-Base/blob/main/pys/custom_functions.py#L68-L76)
 
 Returns JSON loaded as dictionary from file path
 
-### [dump_json(path,dictionary)](https://github.com/NSPC911/Bedrock-Tweaks-Base/blob/main/pys/custom_functions.py#L57-L59)
+### [dump_json(path,dictionary)](https://github.com/NSPC911/Bedrock-Tweaks-Base/blob/main/pys/custom_functions.py#L78-L81)
 
 Saves JSON with indentation to path
 
-### [prog_search(string,list_search)](https://github.com/NSPC911/Bedrock-Tweaks-Base/blob/main/pys/custom_functions.py#L62-L95)
+### [prog_search(string,list_search)](https://github.com/NSPC911/Bedrock-Tweaks-Base/blob/main/pys/custom_functions.py#L83-L117)
 
 Checks first n letters of string with each item in list_search
 - If there is more than one item that matches the first n letters of string, n is increased by 1
