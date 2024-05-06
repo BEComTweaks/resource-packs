@@ -3,7 +3,7 @@ import json
 from uuid import uuid4
 from random import randint
 
-if str(os.getcwd()).endswith("system32"):
+if str(os.getcwd()).endswith("system32") or __name__ != "__main__":
     doubleclicked = True
     # This has to be in every script to prevent FileNotFoundError
     # Because for some reason, it runs it at C:\Windows\System32
@@ -49,5 +49,5 @@ with Image.open(f'{cdir()}/pack_icon.png') as img:
     img.save(f'{cdir()}/{mf["header"]["name"]}/pack_icon.png')
 
 if doubleclicked:
-    clrprint("Press Enter to exit.",clr="green",end="")
-    input()
+    clrinput("Press Enter to exit.",clr="green")
+    clear()

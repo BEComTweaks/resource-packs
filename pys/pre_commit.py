@@ -4,7 +4,7 @@ import re
 from shutil import get_terminal_size
 
 
-if str(os.getcwd()).endswith("system32"):
+if str(os.getcwd()).endswith("system32") or __name__ != "__main__":
     doubleclicked = True
     # This has to be in every script to prevent FileNotFoundError
     # Because for some reason, it runs it at C:\Windows\System32
@@ -137,5 +137,5 @@ for root, _, files in os.walk(cdir()):
 
 clrprint(f"\rJSON Files are valid!{' ' * (longest_path - 21)}",clr="green")
 if doubleclicked:
-    clrprint("Press Enter to exit.",clr="green",end="")
-    input()
+    clrinput("Press Enter to exit.",clr="green")
+    clear()

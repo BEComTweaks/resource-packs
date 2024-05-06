@@ -3,7 +3,7 @@ import os
 import random
 import glob
 
-if str(os.getcwd()).endswith("system32"):
+if str(os.getcwd()).endswith("system32") or __name__ != "__main__":
     doubleclicked = True
     # This has to be in every script to prevent FileNotFoundError
     # Because for some reason, it runs it at C:\Windows\System32
@@ -86,5 +86,5 @@ while not os.path.isdir(directory):
 modify_images_in_directory(directory)
 clrprint(f"Modified all PNG files in {directory}")
 if doubleclicked:
-    clrprint("Press Enter to exit.",clr="green",end="")
-    input()
+    clrinput("Press Enter to exit.",clr="green",end="")
+clear()

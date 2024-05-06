@@ -1,8 +1,8 @@
 # Explanation of how .py files work in pys work
 
-Currently, it has 6 Python Scripts inside.
+Currently, it has 7 Python Scripts inside.
 
-[main.py](https://github.com/NSPC911/Bedrock-Tweaks-Base/blob/main/pys/main.py) will not have a section here as there is too much going on there. I will recommend reading the comments in the code to know what is going on.
+[main.py](https://github.com/NSPC911/Bedrock-Tweaks-Base/blob/main/pys/main.py) and [selector.py](https://github.com/NSPC911/Bedrock-Tweaks-Base/blob/main/pys/selector.py) will not have a section here as there is too much going on there. I will recommend reading the comments in the code to know what is going on.
 
 ## [custom_functions.py](https://github.com/NSPC911/Bedrock-Tweaks-Base/blob/main/pys/custom_functions.py)
 
