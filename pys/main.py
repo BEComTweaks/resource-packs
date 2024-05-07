@@ -5,15 +5,13 @@ import time
 import traceback
 
 if str(os.getcwd()).endswith("system32"):
-    doubleclicked = True
     # This has to be in every script to prevent FileNotFoundError
     # Because for some reason, it runs it at C:\Windows\System32
     # Yeah, it is stupid, but I can't put these lines in custom_functions
     # Because that still brings up an error
 
     os.chdir(os.path.dirname(os.path.realpath(__file__)))
-else:
-    doubleclicked = False
+
 try:
     from custom_functions import *
     from selector import selected_packs, val_command, selector
@@ -29,43 +27,39 @@ except ModuleNotFoundError:
 check("clrprint")
 from clrprint import clrprint
 
-# Updates Terminal Size for flexible list
-# placements
 try:
     while True:
-        if shutil.get_terminal_size().columns < 52:
-            print("The minimum terminal width recommended is 52.")
-            print(f"|{'-'*50}|")
-            print("Maximise the terminal to increase the width")
-            while shutil.get_terminal_size().columns < 52:
+        if shutil.get_terminal_size().columns < 47:
+            print("The minimum terminal width recommended is 47.")
+            print("Make sure the bar below is in a single line.")
+            print(f"[{'='*45}]")
+            while shutil.get_terminal_size().columns < 47:
                 pass
             clrprint("Success!",clr="g")
             time.sleep(1)
         clear()
         if shutil.get_terminal_size().columns > 100:
-            print("    ____              __                        __  ",end="")
-            print("  ______                            __          ")
-            print("   / __ )  ___   ____/ / _____  ____    _____  / /__",end="")
-            print(" /_  __/ _      __  ___   ____ _   / /__  _____")
-            print("  / __  | / _ \ / __  / / ___/ / __ \  / ___/ / //_/",end="")
-            print("  / /   | | /| / / / _ \ / __  /  / //_/ / ___/")
-            print(" / /_/ / /  __// /_/ / / /    / /_/ / / /__  / ,<   ",end="")
-            print(" / /    | |/ |/ / /  __// /_/ /  / / |  /__  / ")
-            print("/_____/  \___/ \____/ /_/     \____/  \___/ /_/|_|  ",end="")
-            print("/_/     |__/|__/  \___/ \__,_/\ /_/|_| /____/  ")
+            print("    _____              __                        __  ",end="   ")
+            print("  ______                             __         ")
+            print("   / __ /  ___    ____/ / _____  ____    _____  / /__",end="   ")
+            print(" /_  __/ _      __  ___    ____ _   / /__  _____")
+            print("  / __  | / _ \  / __  / / ___/ / __ \  / ___/ / //_/",end="   ")
+            print("  / /   | | /| / / / _ \  / __  /  / //_/ / ___/")
+            print(" / /_/ / /  __/ / /_/ / / /    / /_/ / / /__  / / |  ",end="   ")
+            print(" / /    | |/ |/ / /  __/ / /_/ /  / / |  /__  / ")
+            print("/_____/  \___/  \____/ /_/     \____/  \___/ /_/|_|  ",end="   ")
+            print("/_/     |__/|__/  \___/  \__,_/\ /_/|_| /____/  ")
         else:
-            print("Recommended Size = 100 characters!")
-            print(f"|{'-'*98}|")
-            print("    ____              __                        __  ")
-            print("   / __ )  ___   ____/ / _____  ____    _____  / /__")
-            print("  / __  | / _ \ / __  / / ___/ / __ \  / ___/ / //_/")
-            print(" / /_/ / /  __// /_/ / / /    / /_/ / / /__  / ,<   ")
-            print("/_____/  \___/ \____/ /_/     \____/  \___/ /_/|_|  ")
-            print("  ______                            __          ")
-            print(" /_  __/ _      __  ___   ____ _   / /__  _____")
-            print("  / /   | | /| / / / _ \ / __  /  / //_/ / ___/")
-            print(" / /    | |/ |/ / /  __// /_/ /  / / |  /__  / ")
-            print("/_/     |__/|__/  \___/ \__,_/\ /_/|_| /____/  ")
+            print("    _____            __                    __  ")
+            print("   / __ / ___   ____/ /_____ ____   _____ / /__")
+            print("  / __  |/ _ \ / __  // ___// __ \ / ___// //_/")
+            print(" / /_/ //  __// /_/ // /   / /_/ // /__ / / |  ")
+            print("/_____/ \___/ \____//_/    \____/ \___//_/|_|  ")
+            print("  ______                         __        ")
+            print(" /_  __/_      __ ___   ____ _  / /__ _____")
+            print("  / /  | | /| / // _ \ / __  / / //_// ___/")
+            print(" / /   | |/ |/ //  __// /_/ / / / | /__  / ")
+            print("/_/    |__/|__/ \___/ \__,_/\/_/|_|/____/  ")
         clrprint("\n\nOptions:",clr="p")
         menu_commands = [""]
 

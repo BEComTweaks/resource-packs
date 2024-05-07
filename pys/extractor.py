@@ -4,14 +4,11 @@ from uuid import uuid4
 from random import randint
 
 if str(os.getcwd()).endswith("system32") or __name__ != "__main__":
-    doubleclicked = True
     # This has to be in every script to prevent FileNotFoundError
     # Because for some reason, it runs it at C:\Windows\System32
     # Yeah, it is stupid, but I can't put these lines in custom_functions
     # Because that still brings up an error
     os.chdir(os.path.dirname(os.path.realpath(__file__)))
-else:
-    doubleclicked = False
 
 from custom_functions import *
 check("clrprint") # Check for clrprint module
@@ -49,9 +46,7 @@ def manifestgenerator():
         # Adds a pack icon for good measure
         img.save(f'{cdir()}/{mf["header"]["name"]}/pack_icon.png')
 
-    if doubleclicked:
-        clrinput("Press Enter to exit.",clr="green")
-    clear()
+    clrinput("Press Enter to exit.",clr="green")
 
 def extractor():
     manifestgenerator()

@@ -3,8 +3,6 @@ Vanilla Tweaks - https://vanillatweaks.net
 - Without them, Bedrock Tweaks would have not been this way
 Bedrock Tweaks - https://bedrocktweaks.net
 - Without DrAV, this would have taken a long time to complete
-ChatGPT - https://chat.openai.com
-- Without it, most my automated processes would be simple and wouldn't be working now
 
 Credits to the following individuals:
 JWForever5504 - https://github.com/JWForever5504

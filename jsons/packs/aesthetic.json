@@ -264,9 +264,7 @@
       "pack_name": "Alternate Cut Copper",
       "pack_description": "Retextures Cut Copper blocks to resemble their look from their first appearance on Minecraft Live.",
       "conflict": [],
-      "compatibility": [
-        "WaxedCopperItems"
-      ]
+      "compatibility": []
     },
     {
       "pack_id": "PolishedStonestoBricks",

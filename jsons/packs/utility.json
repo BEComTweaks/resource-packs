@@ -54,7 +54,7 @@
       "pack_name": "Waxed Copper Items",
       "pack_description": "Adds a border around Waxed Copper and variants in the inventory. This will NOT affect the placed blocks.",
       "conflict": [],
-      "compatibility": ["BoltlessWaxedCopperBlocks","AlternateCutCopper"]
+      "compatibility": ["BoltlessWaxedCopperBlocks"]
     },
     {
       "pack_id": "BoltlessWaxedCopperBlocks",

@@ -5,14 +5,11 @@ from shutil import get_terminal_size
 import time
 
 if str(os.getcwd()).endswith("system32"):
-    doubleclicked = True
     # This has to be in every script to prevent FileNotFoundError
     # Because for some reason, it runs it at C:\Windows\System32
     # Yeah, it is stupid, but I can't put these lines in custom_functions
     # Because that still brings up an error
     os.chdir(os.path.dirname(os.path.realpath(__file__)))
-else:
-    doubleclicked = False
 
 
 from custom_functions import *
@@ -137,9 +134,7 @@ def pre_commit():
                     exit(1)
 
     clrprint(f"\rJSON Files are valid!{' ' * (longest_path - 21)}",clr="green")
-    if doubleclicked:
-        clrinput("Press Enter to exit.",clr="green")
-    time.sleep(1)
+    clrinput("Press Enter to exit.",clr="green")
     clear()
 if __name__ == "__main__":
     pre_commit()
