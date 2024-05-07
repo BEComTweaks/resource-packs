@@ -109,7 +109,9 @@ try:
             elif choice == "start pack selection":
                 selector()
             elif choice == "view selected packs":
-                selected_packs()
+                opt = selected_packs()
+                if opt == "clear selected packs":
+                    val_command("selected_packs",opt)
             elif choice == "export":
                 pass
             elif choice == "create folders":

@@ -263,7 +263,7 @@
     {
       "pack_id": "MangroveSwamp",
       "pack_name": "Mangrove Swamp",
-      "pack_description": "",
+      "pack_description": "Replaces the default Minecraft menu panorama with a 360\u00b0 view of a mangrove swamp from 1.19",
       "conflict": [
         "Classic",
         "Ocean",

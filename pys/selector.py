@@ -64,10 +64,9 @@ def val_command(menu, command):
 
             # Adds pack to selected packs
             selpackjson = load_json(f"{cdir()}/jsons/others/selected_packs.json")
-            selpackjson[topic].append(contract(command[2]))
-            selpackjson[topic].sort()
+            selpackjson[topic]["packs"].append(contract(command[2]))
+            selpackjson[topic]["index"].append(command[3])
             selpackjson["raw"].append(contract(command[2]))
-            selpackjson["raw"].sort()
 
             # Dumps dictionary
             dump_json(f"{cdir()}/jsons/others/selected_packs.json", selpackjson)
@@ -84,9 +83,11 @@ def val_command(menu, command):
 
             # Checks each item in the list for the pack
             # to be unselected
+            # yes i can change it to index, but im lazy
             for i in range(len(selpackjson[topic])):
-                if selpackjson[topic][i] == contract(command[2]):
-                    selpackjson[topic].pop(i)
+                if selpackjson[topic]["packs"][i] == contract(command[2]):
+                    selpackjson[topic]["packs"].pop(i)
+                    selpackjson[topic]["index"].pop(i)
                     break
             for i in range(len(selpackjson["raw"])):
                 if selpackjson["raw"][i] == contract(command[2]):
@@ -116,9 +117,12 @@ def val_command(menu, command):
             # Loads JSON
             selpacks = load_json(f"{cdir()}/jsons/others/selected_packs.json")
 
-            for key, value in selpacks.items():
-                # Clear all items in the list
-                value.clear()
+            for key,_ in selpacks.items():
+                if key == "raw":
+                    selpacks["raw"] = []
+                else:
+                    selpacks[key]["packs"] = []
+                    selpacks[key]["index"] = []
 
             # Dumps JSON
             dump_json(f"{cdir()}/jsons/others/selected_packs.json",selpacks)
@@ -211,7 +215,7 @@ def pack_select(topic):
                 # Pack is not finished
                 clrprint(f'{i + 1}. {packs["packs"][i]["pack_name"]}', end="", clr="red")
                 issue.append("incomplete")
-            elif packs["packs"][i]["pack_id"] in selpacks[packs["topic"]]:
+            elif packs["packs"][i]["pack_id"] in selpacks[packs["topic"]]["packs"]:
                 # Pack is already selected
                 clrprint(f'{i + 1}. {packs["packs"][i]["pack_name"]}', end="", clr="green")
                 issue.append("selected")
@@ -226,11 +230,15 @@ def pack_select(topic):
                         conflict = True
                         break
                 for c in packs["packs"][i]["compatibility"]:
-                    if c in selpacks["raw"] and c in inccomp[packs["packs"][i]["pack_id"]]:
-                        clrprint(f'{i + 1}. {packs["packs"][i]["pack_name"]}', end="", clr="yellow")
-                        issue.append(["incompatible",c])
-                        compatible = False
-                        break
+                    try:
+                        if c in selpacks["raw"] and c in inccomp[packs["packs"][i]["pack_id"]]:
+                            clrprint(f'{i + 1}. {packs["packs"][i]["pack_name"]}', end="", clr="yellow")
+                            issue.append(["incompatible",c])
+                            compatible = False
+                            break
+                    except KeyError:
+                        # It is complete i guess
+                        pass
                 if not conflict and compatible:
                     # Pack is finished, not selected and has no conflicts
                     clrprint(f'{i + 1}. {packs["packs"][i]["pack_name"]}', end="", clr="white")
@@ -264,9 +272,10 @@ def pack_select(topic):
             choice = menu_commands[progged]
         else:
             choice = None
-        progged = menu_commands.index(choice)
-        if issue[progged] == "incomplete":
-            choice = None
+        if choice != None:
+            progged = menu_commands.index(choice)
+            if issue[progged] == "incomplete":
+                choice = None
     if choice.lower() in ["exit", "back"]:
         # Returns only choice
         return choice
@@ -291,13 +300,13 @@ def selected_packs():
         menu_commands = [""]
 
         hasitem = False
-        for key, value in selpacks.items():
-            # Passes through the if statement only
-            # if the list has something inside, and
-            # its name isn't "raw"
-            if value != [] and key != "raw":
+        for key, _ in selpacks.items():
+            if key != "raw" and selpacks[key]["packs"] != []:
+                # Passes through the if statement only
+                # if the list has something inside, and
+                # its name isn't "raw"
                 hasitem = True
-                sortedsel = sorted(value)
+                sortedsel = sorted(selpacks[key]["packs"])
                 clrprint(key, clr="green")
                 for item in sortedsel:
                     print(f"\t- {item}")
@@ -338,7 +347,7 @@ def selected_packs():
             choice = None
     return choice
 
-
+# More info about pack and (un)select pack
 def select_pack(topic, pack, index, issue):
     choice = None
     while choice == None:
@@ -347,12 +356,11 @@ def select_pack(topic, pack, index, issue):
         clear()
         # Loading JSON Files
         packs = load_json(f"{cdir()}/jsons/packs/{topic}")
-        selpacks = load_json(f"{cdir()}/jsons/others/selected_packs.json")
         inccomp = load_json(f"{cdir()}/jsons/others/incomplete_compatibilities.json")
         # Navigation Bar
         clrprint(f'Main Menu -> {packs["topic"]} -> {pack}\n', clr="default")
         # Pack Description
-        print(f'{packs["packs"][int(index) - 1]["pack_description"]}\n')
+        print(packs["packs"][int(index) - 1]["pack_description"])
 
         menu_commands = [""]
         uns = "S"
@@ -371,6 +379,7 @@ def select_pack(topic, pack, index, issue):
             # When the current pack is already selected
             clrprint(f"{pack} has already been selected!", clr="green")
             uns = "Uns"
+        clrprint("\nOptions", clr="purple")
         if conflict or not compatible:
             # Prevents selection of pack
             clrprint(f"\n1. {uns}elect {pack} ({uns.lower()}elect)", clr="red")
@@ -407,7 +416,7 @@ def select_pack(topic, pack, index, issue):
     elif choice == "exit":
         return "exit"
     else:
-        return [choice, f'{topic.replace(" ", "_").lower()}', pack]
+        return [choice, f'{topic.replace(" ", "_").lower()}', pack, int(index) - 1]
 
 def selector():
     command = ["main_menu"]

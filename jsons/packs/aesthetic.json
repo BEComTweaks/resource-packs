@@ -308,7 +308,7 @@
     {
       "pack_id": "AllayElytra",
       "pack_name": "Allay Elytra",
-      "pack_description": "",
+      "pack_description": "Retextures the Elytra to match the Allay's wings!",
       "conflict": [
         "DragonElytra",
         "PhantomElytra",
@@ -319,7 +319,7 @@
     {
       "pack_id": "DragonElytra",
       "pack_name": "Dragon Elytra",
-      "pack_description": "",
+      "pack_description": "Retextures the Elytra to match the Ender Dragon's wings!",
       "conflict": [
         "AllayElytra",
         "PhantomElytra",
@@ -330,7 +330,7 @@
     {
       "pack_id": "PhantomElytra",
       "pack_name": "Phantom Elytra",
-      "pack_description": "",
+      "pack_description": "Retextures the Elytra to match the Phantom's wings!",
       "conflict": [
         "AllayElytra",
         "DragonElytra",
@@ -341,7 +341,7 @@
     {
       "pack_id": "VexElytra",
       "pack_name": "Vex Elytra",
-      "pack_description": "",
+      "pack_description": "Retextures the Elytra to match the Vex's wings!",
       "conflict": [
         "AllayElytra",
         "DragonElytra",

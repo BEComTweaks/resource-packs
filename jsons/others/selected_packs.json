@@ -1,18 +1,63 @@
 {
-  "Aesthetic": [],
-  "Colorful Slime": [],
-  "Fixes and Consistency": [],
-  "Fun": [],
-  "HUD and GUI": [],
-  "Lower and Sides": [],
-  "Menu Panoramas": [],
-  "More Zombies": [],
-  "Parity": [],
-  "Peace and Quiet": [],
-  "Retro": [],
-  "Terrain": [],
-  "Unobtrusive": [],
-  "Utility": [],
-  "Variation": [],
+  "Aesthetic": {
+    "packs": [],
+    "index": []
+  },
+  "Colorful Slime": {
+    "packs": [],
+    "index": []
+  },
+  "Fixes and Consistency": {
+    "packs": [],
+    "index": []
+  },
+  "Fun": {
+    "packs": [],
+    "index": []
+  },
+  "HUD and GUI": {
+    "packs": [],
+    "index": []
+  },
+  "Lower and Sides": {
+    "packs": [],
+    "index": []
+  },
+  "Menu Panoramas": {
+    "packs": [],
+    "index": []
+  },
+  "More Zombies": {
+    "packs": [],
+    "index": []
+  },
+  "Parity": {
+    "packs": [],
+    "index": []
+  },
+  "Peace and Quiet": {
+    "packs": [],
+    "index": []
+  },
+  "Retro": {
+    "packs": [],
+    "index": []
+  },
+  "Terrain": {
+    "packs": [],
+    "index": []
+  },
+  "Unobtrusive": {
+    "packs": [],
+    "index": []
+  },
+  "Utility": {
+    "packs": [],
+    "index": []
+  },
+  "Variation": {
+    "packs": [],
+    "index": []
+  },
   "raw": []
 }
