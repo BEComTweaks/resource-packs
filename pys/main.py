@@ -16,7 +16,7 @@ else:
     doubleclicked = False
 try:
     from custom_functions import *
-    from selector import selected_packs, val_command
+    from selector import selected_packs, val_command, selector
     from folder_creator import folder_creator
     from pre_commit import pre_commit
     from tweakimage import tweakimage
@@ -31,61 +31,54 @@ from clrprint import clrprint
 
 # Updates Terminal Size for flexible list
 # placements
-def update_size():
-    global clm, min_clm, clms, pclms
-    clm = shutil.get_terminal_size().columns
-    min_clm = 42
-    clms = clm // min_clm
-    pclms = -1
 try:
     while True:
-        update_size()
-        if shutil.get_terminal_size().columns < 54:
-            print("The minimum terminal width recommended is 54.")
-            print(f"|{'-'*52}|")
+        if shutil.get_terminal_size().columns < 52:
+            print("The minimum terminal width recommended is 52.")
+            print(f"|{'-'*50}|")
             print("Maximise the terminal to increase the width")
-            while shutil.get_terminal_size().columns < 54:
+            while shutil.get_terminal_size().columns < 52:
                 pass
             clrprint("Success!",clr="g")
             time.sleep(1)
         clear()
-        if shutil.get_terminal_size().columns > 105:
-            print("    ____              __                          __  ",end="  ")
+        if shutil.get_terminal_size().columns > 100:
+            print("    ____              __                        __  ",end="")
             print("  ______                            __          ")
-            print("   / __ )  ___   ____/ /   _____  ____   _____   / /__",end="  ")
-            print(" /_  __/ _      __  ___   ____ _   / /__   _____")
-            print("  / __  | / _ \ / __  /   / ___/ / __ \ / ___/  / //_/",end="  ")
-            print("  / /   | | /| / / / _ \ / __ `/  / //_/  / ___/")
-            print(" / /_/ / /  __// /_/ /   / /    / /_/ // /__   / ,<   ",end="  ")
-            print(" / /    | |/ |/ / /  __// /_/ /  / ,<    (__  ) ")
-            print("/_____/  \___/ \____/   /_/     \____/ \___/  /_/|_|  ",end="  ")
-            print("/_/     |__/|__/  \___/ \__,_/  /_/|_|  /____/  ")
+            print("   / __ )  ___   ____/ / _____  ____    _____  / /__",end="")
+            print(" /_  __/ _      __  ___   ____ _   / /__  _____")
+            print("  / __  | / _ \ / __  / / ___/ / __ \  / ___/ / //_/",end="")
+            print("  / /   | | /| / / / _ \ / __  /  / //_/ / ___/")
+            print(" / /_/ / /  __// /_/ / / /    / /_/ / / /__  / ,<   ",end="")
+            print(" / /    | |/ |/ / /  __// /_/ /  / / |  /__  / ")
+            print("/_____/  \___/ \____/ /_/     \____/  \___/ /_/|_|  ",end="")
+            print("/_/     |__/|__/  \___/ \__,_/\ /_/|_| /____/  ")
         else:
-            print("    ____              __                          __  ")
-            print("   / __ )  ___   ____/ /   _____  ____   _____   / /__")
-            print("  / __  | / _ \ / __  /   / ___/ / __ \ / ___/  / //_/")
-            print(" / /_/ / /  __// /_/ /   / /    / /_/ // /__   / ,<   ")
-            print("/_____/  \___/ \____/   /_/     \____/ \___/  /_/|_|  ")
+            print("Recommended Size = 100 characters!")
+            print(f"|{'-'*98}|")
+            print("    ____              __                        __  ")
+            print("   / __ )  ___   ____/ / _____  ____    _____  / /__")
+            print("  / __  | / _ \ / __  / / ___/ / __ \  / ___/ / //_/")
+            print(" / /_/ / /  __// /_/ / / /    / /_/ / / /__  / ,<   ")
+            print("/_____/  \___/ \____/ /_/     \____/  \___/ /_/|_|  ")
             print("  ______                            __          ")
-            print(" /_  __/ _      __  ___   ____ _   / /__   _____")
-            print("  / /   | | /| / / / _ \ / __ `/  / //_/  / ___/")
-            print(" / /    | |/ |/ / /  __// /_/ /  / ,<    (__  ) ")
-            print("/_/     |__/|__/  \___/ \__,_/  /_/|_|  /____/  ")
+            print(" /_  __/ _      __  ___   ____ _   / /__  _____")
+            print("  / /   | | /| / / / _ \ / __  /  / //_/ / ___/")
+            print(" / /    | |/ |/ / /  __// /_/ /  / / |  /__  / ")
+            print("/_/     |__/|__/  \___/ \__,_/\ /_/|_| /____/  ")
         clrprint("\n\nOptions:",clr="p")
         menu_commands = [""]
 
         i = 1
-        clrprint(f"{i}. Start Pack Selection",clr="r")
-        # menu_commands.append("start pack selection")
-        menu_commands.append("")
+        print(f"{i}. Start Pack Selection")
+        menu_commands.append("start pack selection")
         i += 1
         print(f"{i}. View Selected Packs")
         menu_commands.append("view selected packs")
         i += 1
         clrprint(f"{i}. Export Pack",clr="r")
-        # menu_commands.append("export pack")
+        #menu_commands.append("export pack")
         menu_commands.append("")
-
         if contributor:
             i += 1
             print(f"{i}. Create Folders")
@@ -99,12 +92,10 @@ try:
         i += 1
         print(f"{i}. Credits")
         menu_commands.append("credits")
-
         i += 1
         print(f"{i}. Exit Program")
         menu_commands.append("exit")
 
-        execute = False
         choice = clrinput("Enter your choice:",clr="yellow")
         progged = prog_search(choice,menu_commands)
         if choice.isnumeric():
@@ -122,7 +113,7 @@ try:
             if choice == "exit":
                 raise KeyboardInterrupt
             elif choice == "start pack selection":
-                pass
+                selector()
             elif choice == "view selected packs":
                 selected_packs()
             elif choice == "export":
@@ -134,6 +125,7 @@ try:
             elif choice == "pre commit":
                 pre_commit()
             elif choice == "credits":
+                clear()
                 with open(f"{cdir()}/credits.txt","r") as credits:
                     print(credits.read())
                     clrinput("Press Enter to go back",clr="g")

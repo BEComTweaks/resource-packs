@@ -168,9 +168,7 @@ def main_menu():
         choice = input("\nEnter your choice.\n").lower()
         progged = prog_search(choice, menu_commands)
         # Validates the input/choice
-        if choice in ["back", "exit"]:
-            pass
-        elif choice.isnumeric():
+        if choice.isnumeric():
             try:
                 choice = menu_commands[int(choice)]
             except IndexError:
@@ -411,7 +409,7 @@ def select_pack(topic, pack, index, issue):
     else:
         return [choice, f'{topic.replace(" ", "_").lower()}', pack]
 
-if __name__ == "__main__":
+def selector():
     command = ["main_menu"]
     loop = True
     # Main Loop
@@ -420,26 +418,45 @@ if __name__ == "__main__":
             if command[0] == "main_menu":
                 # Main Menu
                 command = main_menu()
+                # I really did not know how to fix TypeError
+                # so this exists I guess
+                if command == "exit":
+                    raise KeyboardInterrupt
+
                 command = val_command("main_menu", command)
             elif command[0] == "pack_select":
                 # Pack Selection
                 command = pack_select(command[1])
+                # I really did not know how to fix TypeError
+                # so this exists I guess
+                if command == "exit":
+                    raise KeyboardInterrupt
                 command = val_command("pack_select", command)
             elif command[0] == "select_pack":
                 # More info on pack and if to
                 # (un)select or not
                 command = select_pack(command[1], command[2], command[3], command[4])
+                # I really did not know how to fix TypeError
+                # so this exists I guess
+                if command == "exit":
+                    raise KeyboardInterrupt
                 command = val_command("select_pack", command)
             elif command[0] == "selected_packs":
                 # Show Selected Packs
                 command = selected_packs()
+                # I really did not know how to fix TypeError
+                # so this exists I guess
+                if command == "exit":
+                    raise KeyboardInterrupt
                 command = val_command("selected_packs", command)
             # Shows up for like 10ms, to show my suffering
-            if loop:
-                clrprint("If you can see this, I suffered about 11 hours in total for this", clr="purple")
-                clrprint("Please send help by putting a star on the repo!", clr="purple")
+            clrprint("If you can see this, I suffered about 11 hours in total for this", clr="purple")
+            clrprint("Please send help by putting a star on the repo!", clr="purple")
     except KeyboardInterrupt:
         # I don't like seeing massive errors when
         # I stop the program with Ctrl+C, so neat
         # exit instead of spam
         val_command("keyboard_interrupt", "exit")
+
+if __name__ == "__main__":
+    selector()
