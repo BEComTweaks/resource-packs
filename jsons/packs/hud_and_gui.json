@@ -111,6 +111,7 @@
       "pack_name": "Circle Dot Crosshair",
       "pack_description": "Changes the '+' crosshair to a circle with a dot in the middle.",
       "conflict": [
+        "NoCrosshair",
         "SmallerCrosshair",
         "DotCrosshair",
         "PlusDotCrosshair",
@@ -131,6 +132,7 @@
       "pack_name": "Square Crosshair",
       "pack_description": "Changes the '+' crosshair to asquare.",
       "conflict": [
+        "NoCrosshair",
         "SmallerCrosshair",
         "DotCrosshair",
         "PlusDotCrosshair",
@@ -151,6 +153,7 @@
       "pack_name": "Square Dot Crosshair",
       "pack_description": "Changes the '+' crosshair to asquare with a dot in the middle.",
       "conflict": [
+        "NoCrosshair",
         "SmallerCrosshair",
         "DotCrosshair",
         "PlusDotCrosshair",
@@ -171,6 +174,7 @@
       "pack_name": "Square Plus Crosshair",
       "pack_description": "Changes the '+' crosshair to asquare with a plus in the middle.",
       "conflict": [
+        "NoCrosshair",
         "SmallerCrosshair",
         "DotCrosshair",
         "PlusDotCrosshair",
@@ -191,6 +195,7 @@
       "pack_name": "Square Plus Dot Crosshair",
       "pack_description": "Changes the '+' crosshair to a square with a plus in the middle.",
       "conflict": [
+        "NoCrosshair",
         "SmallerCrosshair",
         "DotCrosshair",
         "PlusDotCrosshair",
@@ -211,6 +216,7 @@
       "pack_name": "4 Angled Crosshair",
       "pack_description": "Changes the '+' crosshair to 4 lines coming out from the middle.",
       "conflict": [
+        "NoCrosshair",
         "SmallerCrosshair",
         "DotCrosshair",
         "PlusDotCrosshair",
@@ -231,6 +237,7 @@
       "pack_name": "4 Angled Dot Crosshair",
       "pack_description": "Changes the '+' crosshair to a dot with 4 lines coming out from the middle.",
       "conflict": [
+        "NoCrosshair",
         "SmallerCrosshair",
         "DotCrosshair",
         "PlusDotCrosshair",
@@ -251,6 +258,7 @@
       "pack_name": "Heart Crosshair",
       "pack_description": "Changes the '+' crosshair to a heart.",
       "conflict": [
+        "NoCrosshair",
         "SmallerCrosshair",
         "DotCrosshair",
         "PlusDotCrosshair",
@@ -271,6 +279,7 @@
       "pack_name": "Arrow Crosshair",
       "pack_description": "Changes the '+' crosshair to an arrow.",
       "conflict": [
+        "NoCrosshair",
         "SmallerCrosshair",
         "DotCrosshair",
         "PlusDotCrosshair",

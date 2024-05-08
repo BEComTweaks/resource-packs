@@ -1,63 +1,206 @@
 {
   "Aesthetic": {
-    "packs": [],
-    "index": []
+    "packs": [
+      "AlternateBlockDestruction",
+      "SolidSlime"
+    ],
+    "index": [
+      0,
+      6
+    ]
   },
   "Colorful Slime": {
-    "packs": [],
-    "index": []
+    "packs": [
+      "BlueSlime"
+    ],
+    "index": [
+      12
+    ]
   },
   "Fixes and Consistency": {
-    "packs": [],
-    "index": []
+    "packs": [
+      "SmokerBottomFix",
+      "PixelConsistentSonicBoom",
+      "CloakFix",
+      "DoubleSlabFix"
+    ],
+    "index": [
+      1,
+      29,
+      31,
+      20
+    ]
   },
   "Fun": {
-    "packs": [],
-    "index": []
+    "packs": [
+      "SmileyAxolotls",
+      "Beeralis",
+      "SusSandandGravel"
+    ],
+    "index": [
+      0,
+      2,
+      3
+    ]
   },
   "HUD and GUI": {
-    "packs": [],
-    "index": []
+    "packs": [
+      "PlusDotCrosshair",
+      "BedrockEditionSubtitle",
+      "DarkUI"
+    ],
+    "index": [
+      3,
+      26,
+      21
+    ]
   },
   "Lower and Sides": {
-    "packs": [],
-    "index": []
+    "packs": [
+      "LowerWarpedNylium",
+      "LowerCrimsonNylium"
+    ],
+    "index": [
+      12,
+      10
+    ]
   },
   "Menu Panoramas": {
-    "packs": [],
-    "index": []
+    "packs": [
+      "Halloween2021"
+    ],
+    "index": [
+      16
+    ]
   },
   "More Zombies": {
-    "packs": [],
-    "index": []
+    "packs": [
+      "AllZombies"
+    ],
+    "index": [
+      9
+    ]
   },
   "Parity": {
-    "packs": [],
-    "index": []
+    "packs": [
+      "JavaBoom",
+      "LegacyConsoleSnowball"
+    ],
+    "index": [
+      1,
+      12
+    ]
   },
   "Peace and Quiet": {
-    "packs": [],
-    "index": []
+    "packs": [
+      "QuieterPistons",
+      "QuieterSculkShriekers",
+      "QuieterSculkSensors",
+      "QuieterConsumables",
+      "QuieterWater",
+      "QuieterNetherPortals",
+      "QuieterFire",
+      "QuieterMinecarts",
+      "QuieterDispensersandDroppers",
+      "QuieterExplosions"
+    ],
+    "index": [
+      58,
+      57,
+      56,
+      55,
+      54,
+      53,
+      52,
+      51,
+      50,
+      49
+    ]
   },
   "Retro": {
-    "packs": [],
-    "index": []
+    "packs": [
+      "Rename'Terracotta'to'HardenedClay'",
+      "OldShulkerColors"
+    ],
+    "index": [
+      20,
+      18
+    ]
   },
   "Terrain": {
-    "packs": [],
-    "index": []
+    "packs": [
+      "GoldenSavanna",
+      "AlternateBedrock",
+      "3DFungi"
+    ],
+    "index": [
+      1,
+      3,
+      6
+    ]
   },
   "Unobtrusive": {
-    "packs": [],
-    "index": []
+    "packs": [
+      "UnobtrusiveRain",
+      "NoFog"
+    ],
+    "index": [
+      0,
+      14
+    ]
   },
   "Utility": {
-    "packs": [],
-    "index": []
+    "packs": [
+      "HungerPreview",
+      "DirectionalObservers"
+    ],
+    "index": [
+      12,
+      17
+    ]
   },
   "Variation": {
     "packs": [],
     "index": []
   },
-  "raw": []
+  "raw": [
+    "AlternateBlockDestruction",
+    "SmokerBottomFix",
+    "PixelConsistentSonicBoom",
+    "CloakFix",
+    "DoubleSlabFix",
+    "SmileyAxolotls",
+    "Beeralis",
+    "SusSandandGravel",
+    "PlusDotCrosshair",
+    "BedrockEditionSubtitle",
+    "DarkUI",
+    "LowerWarpedNylium",
+    "LowerCrimsonNylium",
+    "Halloween2021",
+    "AllZombies",
+    "JavaBoom",
+    "LegacyConsoleSnowball",
+    "QuieterPistons",
+    "QuieterSculkShriekers",
+    "QuieterSculkSensors",
+    "QuieterConsumables",
+    "QuieterWater",
+    "QuieterNetherPortals",
+    "QuieterFire",
+    "QuieterMinecarts",
+    "QuieterDispensersandDroppers",
+    "QuieterExplosions",
+    "Rename'Terracotta'to'HardenedClay'",
+    "OldShulkerColors",
+    "GoldenSavanna",
+    "AlternateBedrock",
+    "3DFungi",
+    "UnobtrusiveRain",
+    "NoFog",
+    "HungerPreview",
+    "DirectionalObservers",
+    "BlueSlime",
+    "SolidSlime"
+  ]
 }

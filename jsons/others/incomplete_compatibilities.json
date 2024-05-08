@@ -1,6 +1,18 @@
 {
+  "SolidSlime": [
+    "HoneySlime"
+  ],
   "AshlessCampfires": [
     "SoulSoilSoulCampfires"
+  ],
+  "HoneySlime": [
+    "SolidSlime"
+  ],
+  "RainbowSlime": [
+    "SolidSlime"
+  ],
+  "MonochromeSlime": [
+    "SolidSlime"
   ],
   "PistonInnerFix": [
     "StickyPistonSides"
