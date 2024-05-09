@@ -1,5 +1,4 @@
 import os
-import json
 from uuid import uuid4
 from random import randint
 from pathlib import Path
@@ -12,15 +11,19 @@ if str(os.getcwd()).endswith("system32") or __name__ != "__main__":
     # Because that still brings up an error
     os.chdir(os.path.dirname(os.path.realpath(__file__)))
 from custom_functions import *
-check("clrprint") # Check for clrprint module
+
+check("clrprint")  # Check for clrprint module
 from clrprint import clrprint
-check("PIL","pillow") # Check for Python Image Library
+
+check("PIL", "pillow")  # Check for Python Image Library
 from PIL import Image
 
-def merge(dict1:dict, dict2:dict):
+
+def merge(dict1: dict, dict2: dict):
     return dict1 | dict2
 
-def lsdir(directory:str):
+
+def lsdir(directory: str):
     folder_list = []
 
     # Traverse the directory structure recursively
@@ -45,12 +48,13 @@ def lsdir(directory:str):
 
     return folder_list
 
+
 def manifestgenerator():
     global mf
     mf = load_json(f"{cdir()}/jsons/others/manifest.json")
     # Pack Name
-    mf["header"]["name"] = f"BTRP-{randint(0,999999)}"
-    with open(f"{cdir()}/jsons/others/selected_packs.json","r") as selectedpacks:
+    mf["header"]["name"] = f"BTRP-{randint(0, 999999)}"
+    with open(f"{cdir()}/jsons/others/selected_packs.json", "r") as selectedpacks:
         # Puts Selected Packs into Description
         # This part is just temporary, I have
         # not finished it yet, since the selection
@@ -64,46 +68,81 @@ def manifestgenerator():
                 sps += i
         mf["header"]["description"] = sps
     mf["header"]["uuid"] = str(uuid4())
-    mf["modules"][0]["uuid"] =str(uuid4())
+    mf["modules"][0]["uuid"] = str(uuid4())
     try:
         os.mkdir(f'{cdir()}/{mf["header"]["name"]}')
     except:
         pass
     # Dumps JSON with formatting
-    dump_json(f'{cdir()}/{mf["header"]["name"]}/manifest.json',mf)
+    dump_json(f'{cdir()}/{mf["header"]["name"]}/manifest.json', mf)
 
     with Image.open(f'{cdir()}/pack_icon.png') as img:
         # Adds a pack icon for good measure
         img.save(f'{cdir()}/{mf["header"]["name"]}/pack_icon.png')
 
 
-# nice name
-def other_stuff_in_extractor_in_seperate_function():
+def list_of_from_directories():
     selpacks = load_json(f"{cdir()}/jsons/others/selected_packs.json")
-    inccomp = load_json(f"{cdir()}/jsons/others/incomplete_compatibilities.json")
+    added_packs = []
+    from_dir = []
     for category in selpacks:
         if category != "raw":
-            ctopic = load_json(f"{cdir()}/jsons/packs/{category.replace(' ','_').lower()}.json")
-            clrprint(category,clr="yellow")
+            # Pack JSON
+            ctopic = load_json(f"{cdir()}/jsons/packs/{category.replace(' ', '_').lower()}.json")
+
             for index in range(len(selpacks[category]["packs"])):
                 compatible = False
-                print(f"{selpacks[category]['packs'][index]}",end="\n")
-                for k in ctopic["packs"][selpacks[category]["index"][index]]["compatibility"]:
-                    try:
-                        if k in selpacks["raw"] and k not in inccomp[selpacks[category]["packs"][index]]:
-                            clrprint(f'\t{k}',clr="g")
-                            clrprint(lsdir(f"{cdir()}/packs/{category.lower()}/{selpacks[category]['packs'][index]}/{k}"),clr="g")
-                            compatible = True
-                    except KeyError:
-                        pass
-                if not compatible:
-                    print()
+                # Removes compatible packs since they are accounted
+                # for in compatiblity
+                if ctopic["packs"][selpacks[category]["index"][index]]["pack_id"] in added_packs:
+                    compatible = True
 
+                if not compatible:
+                    for k in ctopic["packs"][selpacks[category]["index"][index]]["compatibility"]:
+                        try:
+                            if k in selpacks["raw"]:
+                                from_dir.append(
+                                    f"{cdir()}/packs/{category.lower()}/{selpacks[category]['packs'][index]}/{k}")
+                                added_packs.append(selpacks[category]['packs'][index])
+                                added_packs.append(k)
+                                compatible = True
+                                break
+                        except KeyError:
+                            pass
+                if not compatible:
+                    from_dir.append(f"{cdir()}/packs/{category.lower()}/{selpacks[category]['packs'][index]}/default")
+                    added_packs.append(selpacks[category]['packs'][index])
+    return from_dir
+
+
+def main_copyfile(from_dir):
+    from_list_dir = lsdir(from_dir)
+    to_dir = f"{cdir()}/{mf["header"]["name"]}"
+    to_list_dir = lsdir(to_dir)
+    for i in from_list_dir:
+        if i.endswith("/"):
+            os.mkdir(f'{to_dir}/{i}')
+        else:
+            if i in to_list_dir:
+                if i.endswith(".json"):
+                    to_json = load_json(f'{to_list_dir}/{i}')
+                    from_json = load_json(f'{from_list_dir}/{i}')
+                    to_json = to_json | from_json
+                    dump_json(f'{to_list_dir}/{i}', to_json)
+                else:
+                    raise FileExistsError(
+                        f'{from_list_dir}/{i} cannot be copied to {to_list_dir}/{i} as it is cannot be merged')
+            else:
+                shutil.copy
 
 
 def extractor():
-    #manifestgenerator()
-    other_stuff_in_extractor_in_seperate_function()
-    clrinput("Press Enter to exit.",clr="green")
+    manifestgenerator()
+    from_dir = list_of_from_directories()
+    for i in from_dir:
+        main_copyfile(i)
+    clrinput("Press Enter to exit.", clr="green")
+
+
 if __name__ == "__main__":
     extractor()

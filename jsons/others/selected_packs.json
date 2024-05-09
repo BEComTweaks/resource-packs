@@ -22,13 +22,15 @@
       "SmokerBottomFix",
       "PixelConsistentSonicBoom",
       "CloakFix",
-      "DoubleSlabFix"
+      "DoubleSlabFix",
+      "AccurateScaffolding"
     ],
     "index": [
       1,
       29,
       31,
-      20
+      20,
+      12
     ]
   },
   "Fun": {
@@ -142,11 +144,13 @@
   "Unobtrusive": {
     "packs": [
       "UnobtrusiveRain",
-      "NoFog"
+      "NoFog",
+      "UnobtrusiveScaffolding"
     ],
     "index": [
       0,
-      14
+      14,
+      10
     ]
   },
   "Utility": {
@@ -201,6 +205,8 @@
     "HungerPreview",
     "DirectionalObservers",
     "BlueSlime",
-    "SolidSlime"
+    "SolidSlime",
+    "AccurateScaffolding",
+    "UnobtrusiveScaffolding"
   ]
 }
