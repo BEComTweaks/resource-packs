@@ -116,24 +116,35 @@ def list_of_from_directories():
 
 
 def main_copyfile(from_dir):
+    print(from_dir.split("/")[-2])
     from_list_dir = lsdir(from_dir)
     to_dir = f"{cdir()}/{mf["header"]["name"]}"
     to_list_dir = lsdir(to_dir)
     for i in from_list_dir:
-        if i.endswith("/"):
-            os.mkdir(f'{to_dir}/{i}')
+        if i == "./":
+            pass
+        elif i.endswith("/"):
+            try:
+                os.mkdir(f'{to_dir}/{i}')
+            except FileExistsError:
+                pass
         else:
             if i in to_list_dir:
                 if i.endswith(".json"):
-                    to_json = load_json(f'{to_list_dir}/{i}')
-                    from_json = load_json(f'{from_list_dir}/{i}')
+                    to_json = load_json(f'{to_dir}/{i}')
+                    from_json = load_json(f'{from_dir}/{i}')
                     to_json = to_json | from_json
-                    dump_json(f'{to_list_dir}/{i}', to_json)
+                    dump_json(f'{to_dir}/{i}', to_json)
+                elif i.endswith(".lang"):
+                    with open(f'{from_dir}/{i}','r') as from_lang_file:
+                        from_lang = from_lang_file.read()
+                    with open(f'{to_dir}/{i}','a') as to_lang_file:
+                        to_lang_file.write(f'\n{from_lang}')
                 else:
                     raise FileExistsError(
-                        f'{from_list_dir}/{i} cannot be copied to {to_list_dir}/{i} as it is cannot be merged')
+                        f'{from_dir}/{i} cannot be copied to {to_dir}/{i} as it is cannot be merged')
             else:
-                shutil.copy
+                shutil.copy(f'{from_dir}/{i}',f'{to_dir}/{i}')
 
 
 def extractor():
@@ -141,6 +152,7 @@ def extractor():
     from_dir = list_of_from_directories()
     for i in from_dir:
         main_copyfile(i)
+    shutil.copy(f"{cdir()}/jsons/others/selected_packs.json",f"{cdir()}/{mf["header"]["name"]}")
     clrinput("Press Enter to exit.", clr="green")
 
 
