@@ -1,4 +1,4 @@
-contributor = True  # Tools for contributors
+contributor = False  # Tools for contributors
 import os
 import shutil
 import time
