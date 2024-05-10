@@ -53,6 +53,7 @@
       "pack_description": "Eliminates Slime Block transparency.",
       "conflict": [],
       "compatibility": [
+        "HoneySlime",
         "WhiteSlime",
         "OrangeSlime",
         "MagentaSlime",

@@ -1,6 +1,20 @@
 {
+  "SolidSlime": [
+    "HoneySlime",
+    "RainbowSlime",
+    "MonochromeSlime"
+  ],
   "AshlessCampfires": [
     "SoulSoilSoulCampfires"
+  ],
+  "HoneySlime": [
+    "SolidSlime"
+  ],
+  "RainbowSlime": [
+    "SolidSlime"
+  ],
+  "MonochromeSlime": [
+    "SolidSlime"
   ],
   "PistonInnerFix": [
     "StickyPistonSides"
@@ -47,8 +61,7 @@
   "OreBorders": [
     "ClassicOres",
     "EmeraldstoRubies",
-    "UniformOres",
-    "UnlitRedstoneOre"
+    "UniformOres"
   ],
   "HungerPreview": [
     "MusicDiscRedstoneLevelPreview"
@@ -64,7 +77,6 @@
   ],
   "UnlitRedstoneOre": [
     "UniformOres",
-    "OreBorders",
     "ClassicOres"
   ]
 }
