@@ -154,7 +154,6 @@ def export():
     clrprint(f"\rFinished exporting the pack!{' ' * (shutil.get_terminal_size().columns - 28)}", clr="g")
     if clrinput("Clear Selected Packs? [y/n]",clr="y") == "y":
         val_command("selected_packs", "clear selected packs")
-        clrprint("Cleared Selected Packs!", clr="g")
     clrinput("Press Enter to exit.", clr="g")
 
 
