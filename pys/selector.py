@@ -10,8 +10,10 @@ if str(os.getcwd()).endswith("system32"):
     os.chdir(os.path.dirname(os.path.realpath(__file__)))
 
 from custom_functions import *
+
 check("clrprint")
 from clrprint import clrprint
+
 
 # Updates Terminal Size for flexible list
 # placements
@@ -22,7 +24,10 @@ def update_size():
     min_clm = 42
     clms = clm // min_clm
     pclms = -1
+
+
 update_size()
+
 
 # Counts the number of columns and adds a
 # new line if it exceeds the columns available
@@ -117,7 +122,7 @@ def val_command(menu, command):
             # Loads JSON
             selpacks = load_json(f"{cdir()}/jsons/others/selected_packs.json")
 
-            for key,_ in selpacks.items():
+            for key, _ in selpacks.items():
                 if key == "raw":
                     selpacks["raw"] = []
                 else:
@@ -125,7 +130,7 @@ def val_command(menu, command):
                     selpacks[key]["index"] = []
 
             # Dumps JSON
-            dump_json(f"{cdir()}/jsons/others/selected_packs.json",selpacks)
+            dump_json(f"{cdir()}/jsons/others/selected_packs.json", selpacks)
 
             clrprint("Selected Packs have been cleared!")
             return [up[menu]]
@@ -185,6 +190,7 @@ def main_menu():
             choice = None
     return choice
 
+
 # Pack Select Screen showing packs available
 def pack_select(topic):
     choice = None
@@ -226,14 +232,14 @@ def pack_select(topic):
                     if c in selpacks["raw"]:
                         # Pack conflicts with another pack
                         clrprint(f'{i + 1}. {packs["packs"][i]["pack_name"]}', end="", clr="blue")
-                        issue.append(["conflict",c])
+                        issue.append(["conflict", c])
                         conflict = True
                         break
                 for c in packs["packs"][i]["compatibility"]:
                     try:
                         if c in selpacks["raw"] and c in inccomp[packs["packs"][i]["pack_id"]]:
                             clrprint(f'{i + 1}. {packs["packs"][i]["pack_name"]}', end="", clr="yellow")
-                            issue.append(["incompatible",c])
+                            issue.append(["incompatible", c])
                             compatible = False
                             break
                     except KeyError:
@@ -285,6 +291,7 @@ def pack_select(topic):
         progged = menu_commands.index(choice)
         return [topic, choice, progged, issue[progged]]
 
+
 # Selected Packs Screen showing Selected Packs
 # like no shit
 def selected_packs():
@@ -312,7 +319,8 @@ def selected_packs():
                     print(f"\t- {item}")
         # Just a small easter egg
         if not hasitem:
-            clrprint("What is Bedrock Tweaks without any tweaks selected? ._.\nMaybe head back and select some packs!", clr="yellow")
+            clrprint("What is Bedrock Tweaks without any tweaks selected? ._.\nMaybe head back and select some packs!",
+                     clr="yellow")
 
         clrprint("\nOptions", clr="purple")
 
@@ -330,7 +338,7 @@ def selected_packs():
             menu_commands.append("exit")
 
         choice = input("Enter your choice.\n")
-        progged = prog_search(choice,menu_commands)
+        progged = prog_search(choice, menu_commands)
         # Validates input/choice
         if choice in menu_commands:
             pass
@@ -346,6 +354,7 @@ def selected_packs():
         if choice == "":
             choice = None
     return choice
+
 
 # More info about pack and (un)select pack
 def select_pack(topic, pack, index, issue):
@@ -418,6 +427,7 @@ def select_pack(topic, pack, index, issue):
     else:
         return [choice, f'{topic.replace(" ", "_").lower()}', pack, int(index) - 1]
 
+
 def selector():
     command = ["main_menu"]
     loop = True
@@ -466,6 +476,7 @@ def selector():
         # I stop the program with Ctrl+C, so neat
         # exit instead of spam
         val_command("keyboard_interrupt", "exit")
+
 
 if __name__ == "__main__":
     selector()

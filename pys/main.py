@@ -1,4 +1,4 @@
-contributor = True # Tools for contributors
+contributor = True  # Tools for contributors
 import os
 import shutil
 import time
@@ -18,10 +18,12 @@ try:
     from folder_creator import folder_creator
     from pre_commit import pre_commit
     from tweakimage import tweakimage
+    from exporter import export
 except ModuleNotFoundError:
     print(f"main.py is at {os.path.realpath(__file__)} but it is executing at {os.getcwd()}!")
     print("You are likely using a non-Windows device!")
-    print("Send the path where the code is executing at to https://discord.com/channels/567364180857061437/1053415910343462923/threads/1231970599799226388 along with your current device!")
+    print(
+        "Send the path where the code is executing at to https://discord.com/channels/567364180857061437/1053415910343462923/threads/1231970599799226388 along with your current device!")
     exit(1)
 
 check("clrprint")
@@ -32,22 +34,22 @@ try:
         if shutil.get_terminal_size().columns < 47:
             print("The minimum terminal width recommended is 47.")
             print("Make sure the bar below is in a single line.")
-            print(f"[{'='*45}]")
+            print(f"[{'=' * 45}]")
             while shutil.get_terminal_size().columns < 47:
                 pass
-            clrprint("Success!",clr="g")
+            clrprint("Success!", clr="g")
             time.sleep(1)
         clear()
         if shutil.get_terminal_size().columns > 100:
-            print(r"    _____              __                        __  ",end="   ")
+            print(r"    _____              __                        __  ", end="   ")
             print(r"  ______                             __         ")
-            print(r"   / __ /  ___    ____/ / _____  ____    _____  / /__",end="   ")
+            print(r"   / __ /  ___    ____/ / _____  ____    _____  / /__", end="   ")
             print(r" /_  __/ _      __  ___    ____ _   / /__  _____")
-            print(r"  / __  | / _ \  / __  / / ___/ / __ \  / ___/ / //_/",end="   ")
+            print(r"  / __  | / _ \  / __  / / ___/ / __ \  / ___/ / //_/", end="   ")
             print(r"  / /   | | /| / / / _ \  / __  /  / //_/ / ___/")
-            print(r" / /_/ / /  __/ / /_/ / / /    / /_/ / / /__  / / |  ",end="   ")
+            print(r" / /_/ / /  __/ / /_/ / / /    / /_/ / / /__  / / |  ", end="   ")
             print(r" / /    | |/ |/ / /  __/ / /_/ /  / / |  /__  / ")
-            print(r"/_____/  \___/  \____/ /_/     \____/  \___/ /_/|_|  ",end="   ")
+            print(r"/_____/  \___/  \____/ /_/     \____/  \___/ /_/|_|  ", end="   ")
             print(r"/_/     |__/|__/  \___/  \__,_/\ /_/|_| /____/  ")
         else:
             print(r"    _____            __                    __  ")
@@ -60,7 +62,7 @@ try:
             print(r"  / /  | | /| / // _ \ / __  / / //_// ___/")
             print(r" / /   | |/ |/ //  __// /_/ / / / | /__  / ")
             print(r"/_/    |__/|__/ \___/ \__,_/\/_/|_|/____/  ")
-        clrprint("\n\nOptions:",clr="p")
+        clrprint("\n\nOptions:", clr="p")
         menu_commands = [""]
 
         i = 1
@@ -70,9 +72,8 @@ try:
         print(f"{i}. View Selected Packs")
         menu_commands.append("view selected packs")
         i += 1
-        clrprint(f"{i}. Export Pack",clr="r")
-        #menu_commands.append("export pack")
-        menu_commands.append("")
+        print(f"{i}. Export Pack")
+        menu_commands.append("export pack")
         if contributor:
             i += 1
             print(f"{i}. Create Folders")
@@ -90,8 +91,8 @@ try:
         print(f"{i}. Exit Program")
         menu_commands.append("exit")
 
-        choice = clrinput("Enter your choice:",clr="yellow")
-        progged = prog_search(choice,menu_commands)
+        choice = clrinput("Enter your choice:", clr="yellow")
+        progged = prog_search(choice, menu_commands)
         if choice.isnumeric():
             try:
                 choice = menu_commands[int(choice)]
@@ -111,9 +112,9 @@ try:
             elif choice == "view selected packs":
                 opt = selected_packs()
                 if opt == "clear selected packs":
-                    val_command("selected_packs",opt)
-            elif choice == "export":
-                pass
+                    val_command("selected_packs", opt)
+            elif choice == "export pack":
+                export()
             elif choice == "create folders":
                 folder_creator()
             elif choice == "tweak image":
@@ -122,8 +123,8 @@ try:
                 pre_commit()
             elif choice == "credits":
                 clear()
-                with open(f"{cdir()}/credits.txt","r") as credits:
+                with open(f"{cdir()}/credits.txt", "r") as credits:
                     print(credits.read())
-                    clrinput("Press Enter to go back",clr="g")
+                    clrinput("Press Enter to go back", clr="g")
 except KeyboardInterrupt:
-    val_command("KeyboardInterrupt","exit")
+    val_command("KeyboardInterrupt", "exit")

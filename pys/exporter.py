@@ -1,7 +1,6 @@
 import os
 from uuid import uuid4
 from random import randint
-from pathlib import Path
 import shutil
 
 if str(os.getcwd()).endswith("system32") or __name__ != "__main__":
@@ -12,12 +11,9 @@ if str(os.getcwd()).endswith("system32") or __name__ != "__main__":
     os.chdir(os.path.dirname(os.path.realpath(__file__)))
 from custom_functions import *
 
-check("clrprint")  # Check for clrprint module
-from clrprint import clrprint
-
 check("PIL", "pillow")  # Check for Python Image Library
 from PIL import Image
-
+from selector import val_command
 
 def merge(dict1: dict, dict2: dict):
     return dict1 | dict2
@@ -53,30 +49,31 @@ def manifestgenerator():
     global mf
     mf = load_json(f"{cdir()}/jsons/others/manifest.json")
     # Pack Name
-    mf["header"]["name"] = f"BTRP-{randint(0, 999999)}"
-    with open(f"{cdir()}/jsons/others/selected_packs.json", "r") as selectedpacks:
-        # Puts Selected Packs into Description
-        # This part is just temporary, I have
-        # not finished it yet, since the selection
-        # process in incomplete
-        sp = selectedpacks.read()
-        sps = ""
-        for i in sp:
-            if i == '"':
-                sps += "'"
-            else:
-                sps += i
-        mf["header"]["description"] = sps
+    pk_name = input("Enter your pack name\nLeave empty for a template name\n")
+    if pk_name == "":
+        mf["header"]["name"] = f"BTRP-{randint(0, 999999)}"
+    else:
+        mf["header"]["name"] = pk_name
+    selected_packs = load_json(f"{cdir()}/jsons/others/selected_packs.json")
+    description = ""
+    for i in selected_packs:
+        if i != "raw":
+            description += f"\n{i}"
+            for p in selected_packs[i]["packs"]:
+                description += f'\n\t{p}'
+    mf["header"]["description"] = description[1:]
     mf["header"]["uuid"] = str(uuid4())
     mf["modules"][0]["uuid"] = str(uuid4())
     try:
         os.mkdir(f'{cdir()}/{mf["header"]["name"]}')
-    except:
+    except FileExistsError:
         pass
     # Dumps JSON with formatting
     dump_json(f'{cdir()}/{mf["header"]["name"]}/manifest.json', mf)
-
-    with Image.open(f'{cdir()}/pack_icon.png') as img:
+    # It is not supposed to be the template,
+    # but there isn't any icons for the pack
+    # so this is temprary
+    with Image.open(f'{cdir()}/pack_icons/template.png') as img:
         # Adds a pack icon for good measure
         img.save(f'{cdir()}/{mf["header"]["name"]}/pack_icon.png')
 
@@ -116,11 +113,11 @@ def list_of_from_directories():
 
 
 def main_copyfile(from_dir):
-    print(from_dir.split("/")[-2])
     from_list_dir = lsdir(from_dir)
     to_dir = f"{cdir()}/{mf["header"]["name"]}"
     to_list_dir = lsdir(to_dir)
     for i in from_list_dir:
+        print(f'\r{from_dir.split("/")[-2]} {from_list_dir.index(i) + 1}/{len(from_list_dir)}{" " * (shutil.get_terminal_size().columns - len(from_dir.split("/")[-2]) - len(str(from_list_dir.index(i) + 1)) - len(str(len(from_list_dir))) - 2)}',end="")
         if i == "./":
             pass
         elif i.endswith("/"):
@@ -136,25 +133,30 @@ def main_copyfile(from_dir):
                     to_json = to_json | from_json
                     dump_json(f'{to_dir}/{i}', to_json)
                 elif i.endswith(".lang"):
-                    with open(f'{from_dir}/{i}','r') as from_lang_file:
+                    with open(f'{from_dir}/{i}', 'r') as from_lang_file:
                         from_lang = from_lang_file.read()
-                    with open(f'{to_dir}/{i}','a') as to_lang_file:
+                    with open(f'{to_dir}/{i}', 'a') as to_lang_file:
                         to_lang_file.write(f'\n{from_lang}')
                 else:
                     raise FileExistsError(
                         f'{from_dir}/{i} cannot be copied to {to_dir}/{i} as it is cannot be merged')
             else:
-                shutil.copy(f'{from_dir}/{i}',f'{to_dir}/{i}')
+                shutil.copy(f'{from_dir}/{i}', f'{to_dir}/{i}')
 
 
-def extractor():
+def export():
     manifestgenerator()
     from_dir = list_of_from_directories()
+    clrprint(f"Exporting at {cdir()}/{mf['header']['name']}...", clr="y")
     for i in from_dir:
         main_copyfile(i)
-    shutil.copy(f"{cdir()}/jsons/others/selected_packs.json",f"{cdir()}/{mf["header"]["name"]}")
-    clrinput("Press Enter to exit.", clr="green")
+    shutil.copy(f"{cdir()}/jsons/others/selected_packs.json", f"{cdir()}/{mf["header"]["name"]}")
+    clrprint(f"\rFinished exporting the pack!{' ' * (shutil.get_terminal_size().columns - 28)}", clr="g")
+    if clrinput("Clear Selected Packs? [y/n]",clr="y") == "y":
+        val_command("selected packs", "clear selected packs")
+        clrprint("Cleared Selected Packs!", clr="g")
+    clrinput("Press Enter to exit.", clr="g")
 
 
 if __name__ == "__main__":
-    extractor()
+    export()
