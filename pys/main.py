@@ -1,4 +1,5 @@
 contributor = False  # Tools for contributors
+con_clr = "w"
 import os
 import shutil
 import time
@@ -41,27 +42,27 @@ try:
             time.sleep(1)
         clear()
         if shutil.get_terminal_size().columns > 100:
-            print(r"    _____              __                        __  ", end="   ")
-            print(r"  ______                             __         ")
-            print(r"   / __ /  ___    ____/ / _____  ____    _____  / /__", end="   ")
-            print(r" /_  __/ _      __  ___    ____ _   / /__  _____")
-            print(r"  / __  | / _ \  / __  / / ___/ / __ \  / ___/ / //_/", end="   ")
-            print(r"  / /   | | /| / / / _ \  / __  /  / //_/ / ___/")
-            print(r" / /_/ / /  __/ / /_/ / / /    / /_/ / / /__  / / |  ", end="   ")
-            print(r" / /    | |/ |/ / /  __/ / /_/ /  / / |  /__  / ")
-            print(r"/_____/  \___/  \____/ /_/     \____/  \___/ /_/|_|  ", end="   ")
-            print(r"/_/     |__/|__/  \___/  \__,_/\ /_/|_| /____/  ")
+            clrprint(r"    _____              __                        __  ", end="   ", clr=con_clr)
+            clrprint(r"  ______                             __         ", clr=con_clr)
+            clrprint(r"   / __ /  ___    ____/ / _____  ____    _____  / /__", end="   ", clr=con_clr)
+            clrprint(r" /_  __/ _      __  ___    ____ _   / /__  _____", clr=con_clr)
+            clrprint(r"  / __  | / _ \  / __  / / ___/ / __ \  / ___/ / //_/", end="   ", clr=con_clr)
+            clrprint(r"  / /   | | /| / / / _ \  / __  /  / //_/ / ___/", clr=con_clr)
+            clrprint(r" / /_/ / /  __/ / /_/ / / /    / /_/ / / /__  / / |  ", end="   ", clr=con_clr)
+            clrprint(r" / /    | |/ |/ / /  __/ / /_/ /  / / |  /__  / ", clr=con_clr)
+            clrprint(r"/_____/  \___/  \____/ /_/     \____/  \___/ /_/|_|  ", end="   ", clr=con_clr)
+            clrprint(r"/_/     |__/|__/  \___/  \____/\ /_/|_| /____/  ", clr=con_clr)
         else:
-            print(r"    _____            __                    __  ")
-            print(r"   / __ / ___   ____/ /_____ ____   _____ / /__")
-            print(r"  / __  |/ _ \ / __  // ___// __ \ / ___// //_/")
-            print(r" / /_/ //  __// /_/ // /   / /_/ // /__ / / |  ")
-            print(r"/_____/ \___/ \____//_/    \____/ \___//_/|_|  ")
-            print(r"  ______                         __        ")
-            print(r" /_  __/_      __ ___   ____ _  / /__ _____")
-            print(r"  / /  | | /| / // _ \ / __  / / //_// ___/")
-            print(r" / /   | |/ |/ //  __// /_/ / / / | /__  / ")
-            print(r"/_/    |__/|__/ \___/ \__,_/\/_/|_|/____/  ")
+            clrprint(r"    _____            __                    __  ", clr=con_clr)
+            clrprint(r"   / __ / ___   ____/ /_____ ____   _____ / /__", clr=con_clr)
+            clrprint(r"  / __  |/ _ \ / __  // ___// __ \ / ___// //_/", clr=con_clr)
+            clrprint(r" / /_/ //  __// /_/ // /   / /_/ // /__ / / |  ", clr=con_clr)
+            clrprint(r"/_____/ \___/ \____//_/    \____/ \___//_/|_|  ", clr=con_clr)
+            clrprint(r"  ______                         __        ", clr=con_clr)
+            clrprint(r" /_  __/_      __ ___   ____ _  / /__ _____", clr=con_clr)
+            clrprint(r"  / /  | | /| / // _ \ / __  / / //_// ___/", clr=con_clr)
+            clrprint(r" / /   | |/ |/ //  __// /_/ / / / | /__  / ", clr=con_clr)
+            clrprint(r"/_/    |__/|__/ \___/ \____/\/_/|_|/____/  ", clr=con_clr)
         clrprint("\n\nOptions:", clr="p")
         menu_commands = [""]
 
@@ -76,13 +77,13 @@ try:
         menu_commands.append("export pack")
         if contributor:
             i += 1
-            print(f"{i}. Create Folders")
+            clrprint(f"{i}. Create Folders", clr="b")
             menu_commands.append("create folders")
             i += 1
-            print(f"{i}. Tweak Image Pixels")
+            clrprint(f"{i}. Tweak Image Pixels", clr="b")
             menu_commands.append("tweak image")
             i += 1
-            print(f"{i}. Pre Commit Checks")
+            clrprint(f"{i}. Pre Commit Checks", clr="b")
             menu_commands.append("pre commit")
         i += 1
         print(f"{i}. Credits")
@@ -91,6 +92,7 @@ try:
         print(f"{i}. Exit Program")
         menu_commands.append("exit")
 
+        menu_commands.append("contributor")
         choice = clrinput("Enter your choice:", clr="yellow")
         progged = prog_search(choice, menu_commands)
         if choice.isnumeric():
@@ -126,5 +128,8 @@ try:
                 with open(f"{cdir()}/credits.txt", "r") as credits:
                     print(credits.read())
                     clrinput("Press Enter to go back", clr="g")
+            elif choice == "contributor":
+                contributor = not (contributor)
+                con_clr = ["b", "w"][["b", "w"].index(con_clr) - 1]
 except KeyboardInterrupt:
     val_command("KeyboardInterrupt", "exit")

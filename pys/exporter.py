@@ -15,6 +15,7 @@ check("PIL", "pillow")  # Check for Python Image Library
 from PIL import Image
 from selector import val_command
 
+
 def merge(dict1: dict, dict2: dict):
     return dict1 | dict2
 
@@ -114,10 +115,12 @@ def list_of_from_directories():
 
 def main_copyfile(from_dir):
     from_list_dir = lsdir(from_dir)
-    to_dir = f"{cdir()}/{mf["header"]["name"]}"
+    to_dir = f"{cdir()}/{mf['header']['name']}"
     to_list_dir = lsdir(to_dir)
     for i in from_list_dir:
-        print(f'\r{from_dir.split("/")[-2]} {from_list_dir.index(i) + 1}/{len(from_list_dir)}{" " * (shutil.get_terminal_size().columns - len(from_dir.split("/")[-2]) - len(str(from_list_dir.index(i) + 1)) - len(str(len(from_list_dir))) - 2)}',end="")
+        print(
+            f'\r{from_dir.split("/")[-2]} {from_list_dir.index(i) + 1}/{len(from_list_dir)}{" " * (shutil.get_terminal_size().columns - len(from_dir.split("/")[-2]) - len(str(from_list_dir.index(i) + 1)) - len(str(len(from_list_dir))) - 2)}',
+            end="")
         if i == "./":
             pass
         elif i.endswith("/"):
@@ -150,9 +153,9 @@ def export():
     clrprint(f"Exporting at {cdir()}/{mf['header']['name']}...", clr="y")
     for i in from_dir:
         main_copyfile(i)
-    shutil.copy(f"{cdir()}/jsons/others/selected_packs.json", f"{cdir()}/{mf["header"]["name"]}")
+    shutil.copy(f"{cdir()}/jsons/others/selected_packs.json", f"{cdir()}/{mf['header']['name']}")
     clrprint(f"\rFinished exporting the pack!{' ' * (shutil.get_terminal_size().columns - 28)}", clr="g")
-    if clrinput("Clear Selected Packs? [y/n]",clr="y") == "y":
+    if clrinput("Clear Selected Packs? [y/n]", clr="y") == "y":
         val_command("selected_packs", "clear selected packs")
     clrinput("Press Enter to exit.", clr="g")
 
