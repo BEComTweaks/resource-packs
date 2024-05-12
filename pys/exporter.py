@@ -154,6 +154,8 @@ def export():
     for i in from_dir:
         main_copyfile(i)
     shutil.copy(f"{cdir()}/jsons/others/selected_packs.json", f"{cdir()}/{mf['header']['name']}")
+    shutil.make_archive(f"{cdir()}/{mf['header']['name']}",'zip',f"{cdir()}/{mf['header']['name']}")
+    shutil.move(f"{cdir()}/{mf['header']['name']}.zip",f"{cdir()}/{mf['header']['name']}.mcpack")
     clrprint(f"\rFinished exporting the pack!{' ' * (shutil.get_terminal_size().columns - 28)}", clr="g")
     if clrinput("Clear Selected Packs? [y/n]", clr="y") == "y":
         val_command("selected_packs", "clear selected packs")
