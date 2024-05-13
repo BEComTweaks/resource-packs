@@ -21,7 +21,9 @@
       "pack_id": "UnobtrusiveParticles",
       "pack_name": "Unobtrusive Particles",
       "pack_description": "Makes many particles transparent or hollow for easier vision.",
-      "conflict": ["JavaBoom"],
+      "conflict": [
+        "JavaBoom"
+      ],
       "compatibility": []
     },
     {
@@ -179,16 +181,6 @@
       "pack_name": "No Vignette",
       "pack_description": "Removes the darkened corners of the screen in Fancy mode.",
       "conflict": [],
-      "compatibility": []
-    },
-    {
-      "pack_id": "NoBeaconBeam",
-      "pack_name": "No Beacon Beam",
-      "pack_description": "Makes the Beacon Beam invisible.",
-      "conflict": [
-        "PixelConsistentBeaconBeam",
-        "BaconBeam"
-      ],
       "compatibility": []
     },
     {

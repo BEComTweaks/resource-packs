@@ -1,0 +1,12 @@
+{
+  "format_version": "1.0.0",
+  "infested_deepslate": {
+    "isotropic": false,
+    "sound": "deepslate",
+    "textures": {
+      "down": "infested_deepslate_top",
+      "side": "infested_deepslate",
+      "up": "infested_deepslate_top"
+    }
+  }
+}

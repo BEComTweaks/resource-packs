@@ -54,7 +54,9 @@
       "pack_name": "Waxed Copper Items",
       "pack_description": "Adds a border around Waxed Copper and variants in the inventory. This will NOT affect the placed blocks.",
       "conflict": [],
-      "compatibility": ["BoltlessWaxedCopperBlocks"]
+      "compatibility": [
+        "BoltlessWaxedCopperBlocks"
+      ]
     },
     {
       "pack_id": "BoltlessWaxedCopperBlocks",
@@ -167,7 +169,9 @@
       "pack_name": "Directional Observers",
       "pack_description": "Gives Observers arrows all around to indicate which direction they are facing and display updates.",
       "conflict": [],
-      "compatibility": ["UpdatedObserverTexture"]
+      "compatibility": [
+        "UpdatedObserverTexture"
+      ]
     },
     {
       "pack_id": "CleanRedstoneDust",

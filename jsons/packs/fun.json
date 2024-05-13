@@ -131,8 +131,7 @@
       "pack_name": "Bacon Beam",
       "pack_description": "Adds the almighty Baacon Beam to beacons! All hail the Bacon Beam!",
       "conflict": [
-        "PixelConsistentBeaconBeam",
-        "NoBeaconBeam"
+        "PixelConsistentBeaconBeam"
       ],
       "compatibility": []
     },

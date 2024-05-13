@@ -1,0 +1,23 @@
+{
+  "num_mip_levels": 4,
+  "padding": 8,
+  "resource_pack_name": "vanilla",
+  "texture_data": {
+    "monster_egg": {
+      "textures": [
+        "textures/blocks/infested/infested_cobblestone",
+        "textures/blocks/infested/infested_stone_bricks",
+        "textures/blocks/infested/infested_mossy_stone_bricks",
+        "textures/blocks/infested/infested_cracked_stone_bricks",
+        "textures/blocks/infested/infested_chiseled_stone_bricks",
+        "textures/blocks/infested/infested_stone"
+      ]
+    },
+    "infested_deepslate": {
+      "textures": "textures/blocks/infested/infested_deepslate"
+    },
+    "infested_deepslate_top": {
+      "textures": "textures/blocks/infested/infested_deepslate_top"
+    }
+  }
+}

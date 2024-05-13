@@ -26,7 +26,9 @@
         "RainbowSlime",
         "MonochromeSlime"
       ],
-      "compatibility": ["SolidSlime"]
+      "compatibility": [
+        "SolidSlime"
+      ]
     },
     {
       "pack_id": "WhiteSlime",
@@ -53,7 +55,9 @@
         "RainbowSlime",
         "MonochromeSlime"
       ],
-      "compatibility": ["SolidSlime"]
+      "compatibility": [
+        "SolidSlime"
+      ]
     },
     {
       "pack_id": "LightGraySlime",
@@ -80,7 +84,9 @@
         "RainbowSlime",
         "MonochromeSlime"
       ],
-      "compatibility": ["SolidSlime"]
+      "compatibility": [
+        "SolidSlime"
+      ]
     },
     {
       "pack_id": "GraySlime",
@@ -107,7 +113,9 @@
         "RainbowSlime",
         "MonochromeSlime"
       ],
-      "compatibility": ["SolidSlime"]
+      "compatibility": [
+        "SolidSlime"
+      ]
     },
     {
       "pack_id": "BlackSlime",
@@ -134,7 +142,9 @@
         "RainbowSlime",
         "MonochromeSlime"
       ],
-      "compatibility": ["SolidSlime"]
+      "compatibility": [
+        "SolidSlime"
+      ]
     },
     {
       "pack_id": "BrownSlime",
@@ -161,7 +171,9 @@
         "RainbowSlime",
         "MonochromeSlime"
       ],
-      "compatibility": ["SolidSlime"]
+      "compatibility": [
+        "SolidSlime"
+      ]
     },
     {
       "pack_id": "RedSlime",
@@ -188,7 +200,9 @@
         "RainbowSlime",
         "MonochromeSlime"
       ],
-      "compatibility": ["SolidSlime"]
+      "compatibility": [
+        "SolidSlime"
+      ]
     },
     {
       "pack_id": "OrangeSlime",
@@ -215,7 +229,9 @@
         "RainbowSlime",
         "MonochromeSlime"
       ],
-      "compatibility": ["SolidSlime"]
+      "compatibility": [
+        "SolidSlime"
+      ]
     },
     {
       "pack_id": "YellowSlime",
@@ -242,7 +258,9 @@
         "RainbowSlime",
         "MonochromeSlime"
       ],
-      "compatibility": ["SolidSlime"]
+      "compatibility": [
+        "SolidSlime"
+      ]
     },
     {
       "pack_id": "GreenSlime",
@@ -269,7 +287,9 @@
         "RainbowSlime",
         "MonochromeSlime"
       ],
-      "compatibility": ["SolidSlime"]
+      "compatibility": [
+        "SolidSlime"
+      ]
     },
     {
       "pack_id": "CyanSlime",
@@ -296,7 +316,9 @@
         "RainbowSlime",
         "MonochromeSlime"
       ],
-      "compatibility": ["SolidSlime"]
+      "compatibility": [
+        "SolidSlime"
+      ]
     },
     {
       "pack_id": "LightBlueSlime",
@@ -323,7 +345,9 @@
         "RainbowSlime",
         "MonochromeSlime"
       ],
-      "compatibility": ["SolidSlime"]
+      "compatibility": [
+        "SolidSlime"
+      ]
     },
     {
       "pack_id": "BlueSlime",
@@ -350,7 +374,9 @@
         "RainbowSlime",
         "MonochromeSlime"
       ],
-      "compatibility": ["SolidSlime"]
+      "compatibility": [
+        "SolidSlime"
+      ]
     },
     {
       "pack_id": "PurpleSlime",
@@ -377,7 +403,9 @@
         "RainbowSlime",
         "MonochromeSlime"
       ],
-      "compatibility": ["SolidSlime"]
+      "compatibility": [
+        "SolidSlime"
+      ]
     },
     {
       "pack_id": "MagentaSlime",
@@ -404,7 +432,9 @@
         "RainbowSlime",
         "MonochromeSlime"
       ],
-      "compatibility": ["SolidSlime"]
+      "compatibility": [
+        "SolidSlime"
+      ]
     },
     {
       "pack_id": "PinkSlime",
@@ -431,7 +461,9 @@
         "RainbowSlime",
         "MonochromeSlime"
       ],
-      "compatibility": ["SolidSlime"]
+      "compatibility": [
+        "SolidSlime"
+      ]
     },
     {
       "pack_id": "RainbowSlime",
@@ -458,7 +490,9 @@
         "PinkSlime",
         "MonochromeSlime"
       ],
-      "compatibility": ["SolidSlime"]
+      "compatibility": [
+        "SolidSlime"
+      ]
     },
     {
       "pack_id": "MonochromeSlime",
@@ -485,7 +519,9 @@
         "PinkSlime",
         "MonochromeSlime"
       ],
-      "compatibility": ["SolidSlime"]
+      "compatibility": [
+        "SolidSlime"
+      ]
     }
   ]
 }
