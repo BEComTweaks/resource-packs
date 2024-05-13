@@ -98,7 +98,7 @@ def tweakimage():
 
     modify_images_in_directory(directory)
     clrprint(f"Modified all PNG files in {directory}")
-    clrinput("Press Enter to exit.", clr="green", end="")
+    clrinput("Press Enter to exit.", clr="green")
     clear()
 
 
