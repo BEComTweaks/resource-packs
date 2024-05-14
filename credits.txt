@@ -9,7 +9,7 @@ JWForever5504 - https://github.com/JWForever5504
 - He made like 40 of the most of incomplete packs. Helped me focus on the python scripts
 YzaBeast1 - https://github.com/yzabeast1
 - Pointed out an issue with my code preventing Linux Distributions from running the scripts
-MP AADD 2277 - https://www.youtube.com/channel/UCvupd0SBAeNJ-kgXFVeCw4w
+MP AADD 2277 - https://https://github.com/MPAD2277
 - Glass Door, Trapdoors and Circular Logs for 1.20
 
 If you contributed directly or indirectly and want a place here, contact me on Discord at `@nspg911`
