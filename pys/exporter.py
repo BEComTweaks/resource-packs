@@ -16,18 +16,15 @@ from PIL import Image
 from selector import val_command
 
 
-def merge(dict1: dict, dict2: dict):
-    return dict1 | dict2
-
 
 def lsdir(directory: str):
     folder_list = []
 
-    # Traverse the directory structure recursively
+    # Go through the directory structure
     for dirpath, dirnames, filenames in os.walk(directory):
         # Normalize the directory path
         r_dirpath = os.path.relpath(dirpath, directory)
-        # Convert backslashes to forward slashes for platform consistency
+        # Convert backslashes to forward slashes for non-Windows
         r_dirpath = r_dirpath.replace(os.path.sep, "/")
 
         # Add a trailing slash if it's a directory
@@ -39,7 +36,7 @@ def lsdir(directory: str):
         # Add the relative paths of all files in the directory
         for filename in filenames:
             relative_filepath = os.path.relpath(os.path.join(dirpath, filename), directory)
-            # Normalize the file path
+            # Convert backslashes to forward slashes for non-Windows
             relative_filepath = relative_filepath.replace(os.path.sep, "/")
             folder_list.append(relative_filepath)
 
@@ -94,13 +91,13 @@ def list_of_from_directories():
                 # for in compatiblity
                 if ctopic["packs"][selpacks[category]["index"][index]]["pack_id"] in added_packs:
                     compatible = True
-
+                # Honestly can't be bothered to comment this hunk
+                # it just works lol
                 if not compatible:
                     for k in ctopic["packs"][selpacks[category]["index"][index]]["compatibility"]:
                         try:
                             if k in selpacks["raw"]:
-                                from_dir.append(
-                                    f"{cdir()}/packs/{category.lower()}/{selpacks[category]['packs'][index]}/{k}")
+                                from_dir.append(f"{cdir()}/packs/{category.lower()}/{selpacks[category]['packs'][index]}/{k}")
                                 added_packs.append(selpacks[category]['packs'][index])
                                 added_packs.append(k)
                                 compatible = True
@@ -122,41 +119,58 @@ def main_copyfile(from_dir):
             f'\r{from_dir.split("/")[-2]} {from_list_dir.index(i) + 1}/{len(from_list_dir)}{" " * (shutil.get_terminal_size().columns - len(from_dir.split("/")[-2]) - len(str(from_list_dir.index(i) + 1)) - len(str(len(from_list_dir))) - 2)}',
             end="")
         if i == "./":
+            # Root directory
             pass
         elif i.endswith("/"):
+            # Folder
             try:
                 os.mkdir(f'{to_dir}/{i}')
             except FileExistsError:
                 pass
         else:
+            # File
             if i in to_list_dir:
+                # If the file already exists, it attempts to merge
                 if i.endswith(".json"):
+                    # Merges the dictionaries
                     to_json = load_json(f'{to_dir}/{i}')
                     from_json = load_json(f'{from_dir}/{i}')
                     to_json = to_json | from_json
                     dump_json(f'{to_dir}/{i}', to_json)
                 elif i.endswith(".lang"):
+                    # Merges lang files
                     with open(f'{from_dir}/{i}', 'r') as from_lang_file:
                         from_lang = from_lang_file.read()
                     with open(f'{to_dir}/{i}', 'a') as to_lang_file:
                         to_lang_file.write(f'\n{from_lang}')
                 else:
-                    raise FileExistsError(
-                        f'{from_dir}/{i} cannot be copied to {to_dir}/{i} as it is cannot be merged')
+                    # Shouldn't happen, but it is just here
+                    # For PNGs, TGAs and non-text files
+                    raise FileExistsError(f'{from_dir}/{i} cannot be copied to {to_dir}/{i} as it is cannot be merged')
             else:
+                # Copies over the file since it doesn't exist
                 shutil.copy(f'{from_dir}/{i}', f'{to_dir}/{i}')
 
 
 def export():
     manifestgenerator()
     from_dir = list_of_from_directories()
-    clrprint(f"Exporting at {cdir()}/{mf['header']['name']}...", clr="y")
+    clrprint(f"Exporting at {cdir()}{os.path.sep}{mf['header']['name']}...", clr="y")
     for i in from_dir:
         main_copyfile(i)
+    # Keeps selected packs for easy changes
+    print(f"\rselected_packs.json 1/1{' ' * (shutil.get_terminal_size().columns - 23)}",end="")
     shutil.copy(f"{cdir()}/jsons/others/selected_packs.json", f"{cdir()}/{mf['header']['name']}")
-    shutil.make_archive(f"{cdir()}/{mf['header']['name']}",'zip',f"{cdir()}/{mf['header']['name']}")
-    shutil.move(f"{cdir()}/{mf['header']['name']}.zip",f"{cdir()}/{mf['header']['name']}.mcpack")
-    clrprint(f"\rFinished exporting the pack!{' ' * (shutil.get_terminal_size().columns - 28)}", clr="g")
+    # Makes mcpack
+    print(f"\r{mf['header']['name']}.zip 1/2{' ' * (shutil.get_terminal_size().columns - len(mf['header']['name']) - 9)}",end="")
+    shutil.make_archive(f"{cdir()}/{mf['header']['name']}", 'zip', f"{cdir()}/{mf['header']['name']}")
+
+    print(f"\r{mf['header']['name']}.mcpack 2/2{' ' * (shutil.get_terminal_size().columns - len(mf['header']['name']) - 12)}",end="")
+    shutil.move(f"{cdir()}/{mf['header']['name']}.zip", f"{cdir()}/{mf['header']['name']}.mcpack")
+    # Remove folder
+    shutil.rmtree(f"{cdir()}/{mf['header']['name']}")
+    clrprint(f"\rFinished exporting the pack!{' ' * (shutil.get_terminal_size().columns - 29)}", clr="g")
+    clrprint("It is now available at",f"{os.path.sep}{mf['header']['name']}.mcpack",clr="d,g")
     if clrinput("Clear Selected Packs? [y/n]", clr="y") == "y":
         val_command("selected_packs", "clear selected packs")
     clrinput("Press Enter to exit.", clr="g")

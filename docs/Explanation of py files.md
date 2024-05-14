@@ -37,15 +37,15 @@ Only does `"".join(string.split())`. It exists for a neater code
 
 Clears the terminal when the function is called
 
-### [load_json(path)](https://github.com/NSPC911/Bedrock-Tweaks-Base/blob/main/pys/custom_functions.py#L80-L87)
+### [load_json(path)](https://github.com/NSPC911/Bedrock-Tweaks-Base/blob/main/pys/custom_functions.py#L80-L89)
 
 Returns JSON loaded as dictionary from file path
 
-### [dump_json(path,dictionary)](https://github.com/NSPC911/Bedrock-Tweaks-Base/blob/main/pys/custom_functions.py#L91-L94)
+### [dump_json(path,dictionary)](https://github.com/NSPC911/Bedrock-Tweaks-Base/blob/main/pys/custom_functions.py#L93-L96)
 
 Saves JSON with indentation to path
 
-### [prog_search(string,list_search)](https://github.com/NSPC911/Bedrock-Tweaks-Base/blob/main/pys/custom_functions.py#L97-L130)
+### [prog_search(string,list_search)](https://github.com/NSPC911/Bedrock-Tweaks-Base/blob/main/pys/custom_functions.py#L99-L132)
 
 Checks first n letters of string with each item in list_search
 

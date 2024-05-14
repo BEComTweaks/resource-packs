@@ -107,7 +107,7 @@ def pre_commit():
         # Replace the links using regex
         new_pack_url = f"{pack_match.group(1)}{stats[0]}%2F{stats[0] + stats[1]}{pack_match.group(3)}"
         updated_content = content.replace(pack_match.group(0), new_pack_url)
-        new_comp_url = f"{comp_match.group(1)}{cstats[0]}%2F{cstats[0] + cstats[1]}{comp_match.group(3)}"
+        new_comp_url = f"{comp_match.group(1)}{int(cstats[0] / 2)}%2F{int(cstats[0] / 2 + cstats[1] / 2)}{comp_match.group(3)}"
         updated_content = updated_content.replace(comp_match.group(0), new_comp_url)
         with open(f"{cdir()}/README.md", "w") as file:
             # Update the file
@@ -118,25 +118,22 @@ def pre_commit():
 
     clrprint("Updated README.md!", clr="green")
     clrprint("Validating JSON Files...", clr="yellow")
-
-    longest_path = 0
     # JSON files validator
     for root, _, files in os.walk(cdir()):
         for file in files:
             if file.lower().endswith('.json'):
                 file_path = os.path.join(root, file)
-                if longest_path < len(file_path):
-                    longest_path = len(file_path)
                 try:
-                    file = dumps(load_json(file_path), indent=2)
-                    with open(file_path, "w") as towrite:
-                        towrite.write(file.replace(r"\/", "/"))
-                    print(f'\r{str(file_path)[len(cdir()):]}{" " * (longest_path - len(file_path))}', end="")
+                    dump_json(file_path,load_json(file_path))
+                    with open(file_path,"r") as file_replace:
+                        replaced = file_replace.read().replace(r"\/","/")
+                    with open(file_path,"w") as file_replace:
+                        file_replace.write(replaced)
                 except Exception as e:
                     print(f"Error in file '{file_path}': {str(e)}")
                     exit(1)
 
-    clrprint(f"\rJSON Files are valid!{' ' * (longest_path - 21)}", clr="green")
+    clrprint(f"JSON Files are valid!", clr="green")
     clrinput("Press Enter to exit.", clr="green")
     clear()
 

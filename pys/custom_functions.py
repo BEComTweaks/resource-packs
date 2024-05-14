@@ -83,7 +83,10 @@ def load_json(path):
             return loads(file.read())
         except JSONDecodeError:
             clrprint(f"\n{path} got a JSON Decode Error", clr="red")
-            clrprint(traceback.format_exc(), clr="yellow")
+            if file.read() == "":
+                clrprint(f"{path} is empty!")
+            else:
+                clrprint(traceback.format_exc(), clr="yellow")
             exit()
 
 
