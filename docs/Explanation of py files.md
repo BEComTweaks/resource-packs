@@ -64,8 +64,7 @@ Does 3 processes
 
 1. Counts finished packs, and compatibility
    subpacks [Lines 36-90](https://github.com/NSPC911/Bedrock-Tweaks-Base/blob/main/pys/pre_commit.py#L36-L90)
-2.
-Updates [incomplete_packs.json](https://github.com/NSPC911/Bedrock-Tweaks-Base/blob/main/jsons/others/incomplete_packs.json)
+2. Updates [incomplete_packs.json](https://github.com/NSPC911/Bedrock-Tweaks-Base/blob/main/jsons/others/incomplete_packs.json)
 with the incomplete
 packs [Lines 92-94](https://github.com/NSPC911/Bedrock-Tweaks-Base/blob/main/pys/pre_commit.py#L92-L94)
 3. Updates README.md with the numbers from

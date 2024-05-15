@@ -41,7 +41,7 @@ However, other things that need mentioning
 
     I feel compatibility modes would not need marking, rather let it be automatic. If they do not conflict, then why the extra colors? It may be confusing after a while.
 
-The folder structure should hypothetically be like this
+The folder structure looks like this
 
 `/packs/{topic}/{pack_id}/{compatibility}`
 
@@ -78,4 +78,10 @@ The folder structure should hypothetically be like this
 
 That should be how the repository would be arranged.
 
-I plan on making a [Text User Interface](https://en.wikipedia.org/wiki/Text-based_user_interface), rather than jumping straight to websites. I have barely any experience with ~~`HTML`~~ and `Javascript`, so I feel if I make a bare-bones version as a TUI with Python, it would be easier to build on top of it.
+~~I plan on making a [Text User Interface](https://en.wikipedia.org/wiki/Text-based_user_interface), rather than jumping straight to websites. I have barely any experience with ~~`HTML`~~ and `Javascript`, so I feel if I make a bare-bones version as a TUI with Python, it would be easier to build on top of it.~~
+
+TUI is done, the web interface isn't.
+
+# That's it!
+
+<sub>This took along time to finish! I hope it helps!</sub>
