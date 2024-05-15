@@ -1,0 +1,62 @@
+/*@by lonelyang,You can't use it without permission*/ {
+    "format_version": "1.10.0",
+    "particle_effect": {
+        "description": {
+            "identifier": "minecraft:note_particle",
+            "basic_render_parameters": {
+                "material": "particles_alpha",
+                "texture": "img/number"
+            }
+        }, /*@by lonelyang,You can't use it without permission*/
+        "components": {
+            "minecraft:emitter_rate_instant": {
+                "num_particles": 1
+            }, /*@by lonelyang,You can't use it without permission*/
+            "minecraft:emitter_lifetime_once": {
+                "active_time": 0
+            },
+            "minecraft:emitter_shape_sphere": {
+                "radius": 0.025,
+                "direction": [
+                    0,
+                    1.0,
+                    0
+                ]
+            }, /*@by lonelyang,You can't use it without permission*/
+            "minecraft:particle_initial_speed": 2.5,
+            "minecraft:particle_lifetime_expression": {
+                "max_lifetime": 0.3
+            },
+            "minecraft:particle_motion_dynamic": {
+                "linear_drag_coefficient": 2.5
+            },
+            "minecraft:particle_appearance_billboard": {
+                "size": [
+                    0.26,
+                    0.32
+                ],
+                "facing_camera_mode": "lookat_xyz",
+                "uv": {
+                    "texture_width": 312,
+                    "texture_height": 16,
+                    "uv": [
+                        "(((math.round(variable.note_color.g* 100) > 88.9)) ? (((math.round(variable.note_color.g* 100) < 98.6 && math.round(variable.note_color.g* 100) >95 )) ? (((math.round(variable.note_color.g* 100) < 98.6  && math.round(variable.note_color.g* 100) > 95  && math.round(variable.note_color.r* 100) < 0)) ? 273: 299) : ((math.round(variable.note_color.g* 100) == 91 && math.round(variable.note_color.b* 100) < 0) ? 0 : (((math.round(variable.note_color.g* 100) > 79 && math.round(variable.note_color.g* 100) < 93  && math.round(variable.note_color.b* 100) < 50 && math.round(variable.note_color.r* 100) < 0 )) ? 260 :(((math.round(variable.note_color.g* 100) > 89)) ? 286 : 22)))) : (((math.round(variable.note_color.g* 100) > 79 && math.round(variable.note_color.g* 100) < 89  && math.round(variable.note_color.r* 100) < 0 )) ? 247 :(((math.round(variable.note_color.g* 100) >63 && math.round(variable.note_color.b* 100) > 63)) ? 234  : (((math.round(variable.note_color.g* 100) > 30  && math.round(variable.note_color.g* 100) < 70 && math.round(variable.note_color.b* 100) >86 )) ? 208: (((math.round(variable.note_color.g* 100) > 45 && math.round(variable.note_color.g* 100) < 55 && math.round(variable.note_color.b* 100) > 72 && math.round(variable.note_color.b* 100) < 82 )) ? 221 : (((math.round(variable.note_color.g* 100) > 7 && math.round(variable.note_color.g* 100) < 27 && math.round(variable.note_color.b* 100) >80 && math.round(variable.note_color.b* 100) < 100)) ? 195 : (((math.round(variable.note_color.g* 100) < 0 && math.round(variable.note_color.b* 100) > 90)) ? (((math.round(variable.note_color.r* 100) > 25 && math.round(variable.note_color.r* 100) < 40)) ? 156 :169) : (((math.round(variable.note_color.g* 100) > 0 && math.round(variable.note_color.b* 100) > 90)) ? 182 : (((math.round(variable.note_color.r* 100) > 44&& math.round(variable.note_color.r* 100) < 54&& math.round(variable.note_color.b* 100) < 82&& math.round(variable.note_color.b* 100) > 72)) ? 143 :(((math.round(variable.note_color.r* 100) > 59 && math.round(variable.note_color.r* 100) < 69 && math.round(variable.note_color.b* 100) > 59 && math.round(variable.note_color.b* 100) < 69)) ? 130 : (((math.round(variable.note_color.r* 100) > 72 && math.round(variable.note_color.r* 100) < 82 math.round(variable.note_color.b* 100) > 44 && math.round(variable.note_color.b* 100) < 54)) ? (((math.round(variable.note_color.g* 100) > 44 && math.round(variable.note_color.g* 100) < 54)) ? 39 :117) :(((math.round(variable.note_color.r* 100) > 82 && math.round(variable.note_color.r* 100) < 92 && math.round(variable.note_color.b* 100) > 28 && math.round(variable.note_color.b* 100) < 38)) ? 104 : (((math.round(variable.note_color.r* 100) > 87 && math.round(variable.note_color.r* 100) < 99 && math.round(variable.note_color.b* 100) > 12 && math.round(variable.note_color.b* 100) < 22)) ? 91 : (((math.round(variable.note_color.r* 100) > 94.9 )) ? (((math.round(variable.note_color.g* 100) > 12 && math.round(variable.note_color.g* 100) < 22)) ? 65 :78) :(((math.round(variable.note_color.r* 100) > 90 && math.round(variable.note_color.r* 100) < 94.9 && math.round(variable.note_color.g* 100) > 28 && math.round(variable.note_color.g* 100) < 38)) ? 52 : (((math.round(variable.note_color.r* 100) > 59 && math.round(variable.note_color.r* 100) < 69 && math.round(variable.note_color.g* 100) > 59 && math.round(variable.note_color.b* 100) < 69)) ? 26 :13 ))))))))))))))))",
+                        0
+                    ],
+                    "uv_size": [
+                        13,
+                        16
+                    ]
+                }
+            },
+            "minecraft:particle_appearance_tinting": {
+                "color": [
+                    "variable.note_color.r",
+                    "variable.note_color.g",
+                    "variable.note_color.b"
+                ]
+            },
+            "minecraft:particle_appearance_lighting": {}
+        }
+    }
+}
