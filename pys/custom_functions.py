@@ -110,9 +110,10 @@ def prog_search(string: str, list_search: list):
         found_at = 0
         for s in range(0, len(list_search)):
             try:
-                if list_search[s][:i] == string[:i]:
+                if string[:i] in list_search[s]:
                     # First n letters of item in list_search
-                    # matches with first n letters of string
+                    # matches with any specific phrase in the
+                    # string
                     found += 1
                     if found == 1:
                         found_at = s

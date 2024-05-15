@@ -86,7 +86,7 @@ A QOL script that adds variations to pixels instead of just having a smooth pixe
 
 Runs a script that makes neccessary modifications before commiting.
 
-Refer to <a href="https://github.com/NSPC911/Bedrock-Tweaks-Base/blob/main/docs/Explanation%20of%20py%20files.md#L61">Explanation of py files.md</a> for more info on how this works.
+Refer to <a href="https://github.com/NSPC911/Bedrock-Tweaks-Base/blob/main/docs/Explanation%20of%20py%20files.md#L60">Explanation of py files.md</a> for more info on how this works.
 
 </details>
 

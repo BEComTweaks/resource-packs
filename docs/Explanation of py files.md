@@ -51,8 +51,7 @@ Checks first n letters of string with each item in list_search
 
 - If there is more than one item that matches the first n letters of string, n is increased by 1
 
-This continues until only one item matches the first n characters of the string, or the string runs out of characters to
-check for
+This continues until only one item matches the first n characters of the string, or the string runs out of characters tocheck for
 
 ## [folder_creator.py](https://github.com/NSPC911/Bedrock-Tweaks-Base/blob/main/pys/folder_creator.py)
 
