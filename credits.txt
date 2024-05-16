@@ -11,7 +11,7 @@ YzaBeast1 - https://github.com/yzabeast1
 - Pointed out an issue with my code preventing Linux Distributions from running the scripts
 MP AADD 2277 - https://https://github.com/MPAD2277
 - Glass Door, Trapdoors and Circular Logs for 1.20
-lonelyang
+lonelyang - https://github.com/lonelyang
 - Note block pitch particles pack
 
 If you contributed directly or indirectly and want a place here, contact me on Discord at `@nspg911`
