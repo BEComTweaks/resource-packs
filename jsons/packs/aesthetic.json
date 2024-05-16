@@ -51,9 +51,10 @@
       "pack_id": "SolidSlime",
       "pack_name": "Solid Slime",
       "pack_description": "Eliminates Slime Block transparency.",
-      "conflict": [],
+      "conflict": [
+        "HoneySlime"
+      ],
       "compatibility": [
-        "HoneySlime",
         "WhiteSlime",
         "OrangeSlime",
         "MagentaSlime",
@@ -69,8 +70,7 @@
         "GreenSlime",
         "RedSlime",
         "BlackSlime",
-        "RainbowSlime",
-        "MonochromeSlime"
+        "RainbowSlime"
       ]
     },
     {
