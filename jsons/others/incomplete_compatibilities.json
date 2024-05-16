@@ -29,14 +29,7 @@
   "GreenAxolotl": [
     "SmileyAxolotls"
   ],
-  "EmeraldstoRubies": [
-    "UniformOres",
-    "ClassicOres",
-    "OreBorders"
-  ],
   "ClassicOres": [
-    "EmeraldstoRubies",
-    "OreBorders",
     "UnlitRedstoneOre"
   ],
   "OarlessBoats": [
@@ -46,14 +39,7 @@
     "DoubleSlabFix"
   ],
   "UniformOres": [
-    "OreBorders",
-    "EmeraldstoRubies",
     "UnlitRedstoneOre"
-  ],
-  "OreBorders": [
-    "ClassicOres",
-    "EmeraldstoRubies",
-    "UniformOres"
   ],
   "HungerPreview": [
     "MusicDiscRedstoneLevelPreview"

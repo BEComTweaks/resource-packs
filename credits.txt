@@ -13,5 +13,7 @@ MP AADD 2277 - https://https://github.com/MPAD2277
 - Glass Door, Trapdoors and Circular Logs for 1.20
 lonelyang - https://github.com/lonelyang
 - Note block pitch particles pack
+MPAD2277
+- Made most ore packs compatible with each other
 
 If you contributed directly or indirectly and want a place here, contact me on Discord at `@nspg911`
