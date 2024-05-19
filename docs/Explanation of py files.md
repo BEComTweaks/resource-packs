@@ -1,6 +1,7 @@
 # Explanation of how .py files work in pys work
 
-Currently, it has 7 Python Scripts inside, 3 of which are still not complete.
+Currently, it has 7 Python Scripts inside, 3 of which I can't bother to document.
+<br>Read their comments to understand more
 
 ## [custom_functions.py](https://github.com/NSPC911/Bedrock-Tweaks-Base/blob/main/pys/custom_functions.py)
 
@@ -86,3 +87,5 @@ Example:
 
 <sub>If you want a better explanation, there are comments in each script and have a more detailed explanation on what is
 going on.</sub>
+
+[<- Back to docs.md](https://github.com/BedrockTweaks/Bedrock-Tweaks-Base/blob/main/docs/docs.md)

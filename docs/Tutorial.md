@@ -101,3 +101,5 @@ Boy, I wonder what it does...
 # That's it!
 
 <sub>Yep, I lost my sanity with docs</sub>
+
+[<- Back to docs.md](https://github.com/BedrockTweaks/Bedrock-Tweaks-Base/blob/main/docs/docs.md)

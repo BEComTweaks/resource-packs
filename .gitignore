@@ -4,3 +4,5 @@ pys/__pycache__/
 gitignore
 # Remove .fleet folder
 .fleet
+# Ignore my python shortcut because terminal doesnt recognise it
+pys/python.ink

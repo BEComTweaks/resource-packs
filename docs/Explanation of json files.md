@@ -80,8 +80,10 @@ That should be how the repository would be arranged.
 
 ~~I plan on making a [Text User Interface](https://en.wikipedia.org/wiki/Text-based_user_interface), rather than jumping straight to websites. I have barely any experience with ~~`HTML`~~ and `Javascript`, so I feel if I make a bare-bones version as a TUI with Python, it would be easier to build on top of it.~~
 
-TUI is done, the web interface isn't.
+CLI/TUI is done, the web interface isn't.
 
 # That's it!
 
 <sub>This took along time to finish! I hope it helps!</sub>
+
+[<- Back to docs.md](https://github.com/BedrockTweaks/Bedrock-Tweaks-Base/blob/main/docs/docs.md)

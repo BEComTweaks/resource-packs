@@ -2,8 +2,6 @@ contributor = False  # Tools for contributors
 con_clr = "w"
 import os
 import shutil
-import time
-import traceback
 
 if str(os.getcwd()).endswith("system32"):
     # This has to be in every script to prevent FileNotFoundError

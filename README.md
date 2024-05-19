@@ -10,18 +10,20 @@
 </div>
 <div align="left">
 
-A repo containing every single tweak ported from <a href="https://vanillatweaks.net/picker/resource-packs">vanillatweaks.net</a>
+A repo containing every single tweak ported from <a href="https://vanillatweaks.net/picker/resource-packs">vanillatweaks.net</a> with a Command Line Interface as an example.
 
-Tutorial on how this works is in <a href="https://github.com/NSPC911/Bedrock-Tweaks-Base/tree/main/docs/Tutorial.md"><code>docs/Tutorial.md</code></a>
+This can be used as a base for a website that someone can attempt for<br>
+<sub>Hence why it is called <b>Base</b></sub>
+
+Docs are available at [here](https://github.com/BedrockTweaks/Bedrock-Tweaks-Base/blob/main/docs/docs.md), along with a [tutorial](https://github.com/BedrockTweaks/Bedrock-Tweaks-Base/blob/main/docs/Tutorial.md) on the CLI 
 
 How to clone:
 
 ```bash
-git clone https://github.com/NSPC911/Bedrock-Tweaks-Base/
+git clone https://github.com/BedrockTweaks/Bedrock-Tweaks-Base/
 cd Bedrock-Tweaks-Base/pys
 echo 0 | python3 folder_creator.py
 ```
-
 <sub>echo is to instantly start the script with no printing. For more information, refer to [Explanation of py files](https://github.com/NSPC911/Bedrock-Tweaks-Base/blob/main/docs/Explanation%20of%20py%20files.md)</sub>
 
 Pull Requests are greatly appreciated as I do not want this to be a single person project. I can get pretty drained out from projects.
