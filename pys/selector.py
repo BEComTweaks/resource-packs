@@ -50,15 +50,18 @@ up = {
     "selected_packs": "main_menu"
 }
 
+quick_select = False
+
 
 # Command validation for functions
 def val_command(menu, command):
-    if type(command) == list:
+    global quick_select
+    if type(command) is list:
         if command[0] == "back":
             # Heading back to packs if user doesn't
             # select/unselect pack
             return ["pack_select", command[1]]
-        elif menu == "pack_select":
+        elif menu == "pack_select" and not quick_select:
             # Heading into pack_select if user wants
             # to select/unselect a pack
             return ["select_pack", command[0], command[1], command[2], command[3]]
@@ -108,10 +111,20 @@ def val_command(menu, command):
             return [up[menu], f'{contract(topic.replace(" ", "_").lower())}.json']
         else:
             raise ValueError(f"{command} is not a valid command format!")
-    elif type(command) == str:
+    elif type(command) is str:
         if command == "back":
             # Goes up the 'directory'
             return [up[menu]]
+        elif menu == "main_menu" and command.endswith("quick select"):
+            if command[0] == "e":
+                quick_select = True
+            elif command[0] == "d":
+                quick_select = False
+            else:
+                raise ValueError(f"{command} is not a valid command!")
+            print("Quick Select", quick_select)
+            input()
+            return ["main_menu"]
         elif menu == "main_menu" and command not in ["exit", "show selected packs"]:
             # Enters Pack Selection page
             return ["pack_select", command]
@@ -166,13 +179,25 @@ def main_menu():
             menu_commands.append(filename.lower())
         clrprint("\n\nOthers", clr="purple")
 
+        update_size()
         print(f"{len(pack_files) + 1}. Show Selected Packs", end="")
         print(" " * (min_clm - 23), end="")
         menu_commands.append("show selected packs")
         clmthing()
 
-        print(f"{len(pack_files) + 2}. Exit Program")
+        if quick_select:
+            clrprint(f"{len(pack_files) + 2}. Disable Quick Select", clr="g", end="")
+            print(" " * (min_clm - 24), end="")
+            menu_commands.append("disable quick select")
+        else:
+            clrprint(f"{len(pack_files) + 2}. Enable Quick Select", clr="r", end="")
+            print(" " * (min_clm - 23), end="")
+            menu_commands.append("enable quick select")
+        clmthing()
+
+        print(f"{len(pack_files) + 3}. Exit Program")
         menu_commands.append("exit")
+        clmthing()
 
         choice = input("\nEnter your choice.\n").lower()
         progged = prog_search(choice, menu_commands)
@@ -208,6 +233,8 @@ def pack_select(topic):
         # Notices
         clrprint("Red", "-> Pack is incomplete", clr="r,w")
         clrprint("Green", "-> Pack is already selected", clr="g,w")
+        if quick_select:
+            clrprint("Quick Select is enabled! You can't view the packs for more info!")
         clrprint("Yellow", "-> Compatibility with another pack is not completed", clr="y,w")
         clrprint("Blue", "-> Conflicts with another pack\n", clr="b,w")
 
@@ -278,22 +305,29 @@ def pack_select(topic):
             choice = menu_commands[progged]
         else:
             choice = None
-        if choice != None:
+        if choice is not None:
             progged = menu_commands.index(choice)
-            if issue[progged] == "incomplete":
+            if issue[progged] == "incomplete" or (issue[progged] in ["incompatible", "conflict"] and quick_select):
                 choice = None
     if choice.lower() in ["exit", "back"]:
         # Returns only choice
         return choice
-    else:
+    elif not quick_select:
         # Returns category, pack name and index of pack_name
         # in JSON file
         progged = menu_commands.index(choice)
         return [topic, choice, progged, issue[progged]]
+    elif quick_select:
+        # Instantly selects pack unless issue
+        progged = menu_commands.index(choice)
+        if issue[progged] == "selected":
+            select = "unselect"
+        else:
+            select = "select"
+        return [select, f'{topic.replace(" ", "_").lower()}', choice, progged - 1]
 
 
 # Selected Packs Screen showing Selected Packs
-# like no shit
 def selected_packs():
     choice = None
     while choice is None:
@@ -364,9 +398,7 @@ def select_pack(topic, pack, index, issue):
         update_size()
         clear()
         # Loading JSON Files
-        packs = load_json(f"{cdir()}/jsons/packs/{topic}")
-        inccomp = load_json(f"{cdir()}/jsons/others/incomplete_compatibilities.json")
-        # Navigation Bar
+        packs = load_json(f"{cdir()}/jsons/packs/{topic}")  # Navigation Bar
         clrprint(f'Main Menu -> {packs["topic"]} -> {pack}\n', clr="default")
         # Pack Description
         print(packs["packs"][int(index) - 1]["pack_description"])
@@ -441,30 +473,26 @@ def selector():
                 # so this exists I guess
                 if command == "exit":
                     raise KeyboardInterrupt
-
                 command = val_command("main_menu", command)
             elif command[0] == "pack_select":
                 # Pack Selection
                 command = pack_select(command[1])
-                # I really did not know how to fix TypeError
-                # so this exists I guess
                 if command == "exit":
                     raise KeyboardInterrupt
-                command = val_command("pack_select", command)
+                if quick_select and command not in ["exit", "back"]:
+                    command = val_command("select_pack", command)
+                else:
+                    command = val_command("pack_select", command)
             elif command[0] == "select_pack":
                 # More info on pack and if to
                 # (un)select or not
                 command = select_pack(command[1], command[2], command[3], command[4])
-                # I really did not know how to fix TypeError
-                # so this exists I guess
                 if command == "exit":
                     raise KeyboardInterrupt
                 command = val_command("select_pack", command)
             elif command[0] == "selected_packs":
                 # Show Selected Packs
                 command = selected_packs()
-                # I really did not know how to fix TypeError
-                # so this exists I guess
                 if command == "exit":
                     raise KeyboardInterrupt
                 command = val_command("selected_packs", command)
