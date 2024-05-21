@@ -18,9 +18,8 @@ from clrprint import clrprint
 # Updates Terminal Size for flexible list
 # placements
 def update_size():
-    global clm, lins, min_clm, clms, pclms
+    global clm, min_clm, clms, pclms
     clm = shutil.get_terminal_size().columns
-    lins = shutil.get_terminal_size().lines
     min_clm = 42
     clms = clm // min_clm
     pclms = -1
@@ -122,8 +121,6 @@ def val_command(menu, command):
                 quick_select = False
             else:
                 raise ValueError(f"{command} is not a valid command!")
-            print("Quick Select", quick_select)
-            input()
             return ["main_menu"]
         elif menu == "main_menu" and command not in ["exit", "show selected packs"]:
             # Enters Pack Selection page
@@ -193,9 +190,12 @@ def main_menu():
             clrprint(f"{len(pack_files) + 2}. Enable Quick Select", clr="r", end="")
             print(" " * (min_clm - 23), end="")
             menu_commands.append("enable quick select")
+
+        # I need two for some reason
+        clmthing()
         clmthing()
 
-        print(f"{len(pack_files) + 3}. Exit Program")
+        print(f"{len(pack_files) + 3}. Exit Program", end="")
         menu_commands.append("exit")
         clmthing()
 
@@ -307,8 +307,13 @@ def pack_select(topic):
             choice = None
         if choice is not None:
             progged = menu_commands.index(choice)
-            if issue[progged] == "incomplete" or (issue[progged] in ["incompatible", "conflict"] and quick_select):
+            if issue[progged] == "incomplete":
                 choice = None
+            try:
+                if issue[progged][0] in ["conflict", "incompatible"] and quick_select:
+                    choice = None
+            except IndexError:
+                pass
     if choice.lower() in ["exit", "back"]:
         # Returns only choice
         return choice
