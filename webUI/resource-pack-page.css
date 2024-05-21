@@ -1,0 +1,95 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    /* background-color: #f4f4f4;*/
+    background-image: url('background.png');
+    /* Replace 'path_to_your_image.jpg' with the path to your image */
+    background-size: cover;
+    /* Cover the entire background */
+    background-repeat: no-repeat;
+    /* Do not repeat the background image */
+}
+
+header {
+   /* background-color: #333;*/
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.container {
+    padding: 20px;
+}
+
+.category {
+    margin-bottom: 20px;
+}
+
+.category-label {
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.tweaks {
+    display: none;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 10px;
+    align-items: center;
+    text-align: center;
+}
+
+.tweak {
+    background: rgba(255, 255, 255, 0.5);
+   /* background: white;*/
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+}
+
+.tweak.selected {
+    border: 2px solid #007bff;
+}
+
+.tweak-title {
+    font-size: 1.2em;
+}
+
+.download-selected-button {
+    background: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.download-selected-button:hover {
+    background: #0056b3;
+}
+
+.footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+.tweak input[type="checkbox"] {
+    display: none;
+}
