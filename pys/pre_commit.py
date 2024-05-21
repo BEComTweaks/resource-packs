@@ -25,19 +25,17 @@ def pre_commit():
                         "Utility": [], "Variation": []}
     cstats = [0, 0]
     compatibilities = {}
-    conflicts = {}
+    pkicstats = [0, 0]
+    incomplete_pkics = {"Aesthetic": [], "Colorful Slime": [], "Fixes and Consistency": [], "Fun": [],
+                        "HUD and GUI": [], "Lower and Sides": [], "Menu Panoramas": [], "More Zombies": [],
+                        "Parity": [], "Peace and Quiet": [], "Retro": [], "Terrain": [], "Unobtrusive": [],
+                        "Utility": [], "Variation": []}
 
-    if input("Show Compatibility Progress? [y/n]\n") == "y":
-        showcomp = True
-    else:
-        showcomp = False
     clrprint("Counting Packs and Compatibilities...", clr="yellow")
     # Counts Packs and Compatibilities
     for c in range(len(os.listdir(f'{cdir()}/jsons/packs'))):
         file = load_json(f"{cdir()}/jsons/packs/{os.listdir(f'{cdir()}/jsons/packs')[c]}")
         # For compatibilities, as it doesn't have a file
-        if showcomp:
-            clrprint(f'= {file["topic"]}', clr="white")
         # Runs through the packs
         for i in range(len(file["packs"])):
             # Updates Incomplete Packs
@@ -54,17 +52,20 @@ def pre_commit():
                 stats[1] += 1
                 incomplete_packs[file["topic"]].append(file["packs"][i]["pack_id"])
 
+            # Updates Incomplete pack_icon.png
+            if os.path.getsize(f'{cdir()}/packs/{file["topic"].lower()}/{file["packs"][i]["pack_id"]}/pack_icon.png') == os.path.getsize(f'{cdir()}/pack_icons/missing_texture.png'):
+                # Adds packid to topic list
+                incomplete_pkics[file["topic"]].append(file["packs"][i]["pack_id"])
+                pkicstats[1] += 1
+            else:
+                # When pack icon is complete
+                pkicstats[0] += 1
+
             # Updates Pack Compatibilities
-            if file["packs"][i]["compatibility"] != []:
-                if showcomp:
-                    clrprint(f'= \t{file["packs"][i]["pack_id"]}', clr="yellow")
             for comp in range(len(file["packs"][i]["compatibility"])):  # If it is empty, it just skips
                 # Looks at compatibility folders
                 try:
-                    if os.listdir(
-                            f'{cdir()}/packs/{file["topic"].lower()}/{file["packs"][i]["pack_id"]}/{file["packs"][i]["compatibility"][comp]}') == []:
-                        if showcomp:
-                            clrprint(f'- \t\t{file["packs"][i]["compatibility"][comp]}', clr="red")
+                    if os.listdir(f'{cdir()}/packs/{file["topic"].lower()}/{file["packs"][i]["pack_id"]}/{file["packs"][i]["compatibility"][comp]}') == []:
                         # Adds the packid to the list of incomplete compatibilities
                         try:
                             compatibilities[file["packs"][i]["pack_id"]].append(file["packs"][i]["compatibility"][comp])
@@ -72,14 +73,10 @@ def pre_commit():
                             compatibilities[file["packs"][i]["pack_id"]] = [file["packs"][i]["compatibility"][comp]]
                         cstats[1] += 1
                     else:
-                        if showcomp:
-                            clrprint(f'+ \t\t{file["packs"][i]["compatibility"][comp]}', clr="green")
                         # When the compatibility directory has something inside
                         cstats[0] += 1
                 except FileNotFoundError:
                     # When the compatibility folder isn't there
-                    if showcomp:
-                        clrprint(f'- \t\t{file["packs"][i]["compatibility"][comp]}', clr="red")
                     # Adds the packid to the list of incomplete compatibilities
                     try:
                         compatibilities[file["packs"][i]["pack_id"]].append(file["packs"][i]["compatibility"][comp])
@@ -91,7 +88,8 @@ def pre_commit():
     # Update incomplete_packs.json
     dump_json(f"{cdir()}/jsons/others/incomplete_packs.json", incomplete_packs)
     dump_json(f"{cdir()}/jsons/others/incomplete_compatibilities.json", compatibilities)
-    clrprint("Updated incomplete_packs.json and incomplete_compatibilities.json", clr="green")
+    dump_json(f"{cdir()}/jsons/others/incomplete_pack_icons.json", incomplete_pkics)
+    clrprint("Updated incomplete_packs.json, incomplete_compatibilities.json and incomplete_packs.json", clr="green")
     clrprint("Updating README.md...", clr="yellow")
 
     # Just some fancy code with regex to update README.md
@@ -102,13 +100,17 @@ def pre_commit():
     pack_match = re.search(pack_pattern, content)
     comp_pattern = r"(https://img.shields.io/badge/Compatibilities-)(\d+%2F\d+)(.*)"
     comp_match = re.search(comp_pattern, content)
+    pkic_pattern = r"(https://img.shields.io/badge/Pack%20Icons-)(\d+%2F\d+)(.*)"
+    pkic_match = re.search(pkic_pattern, content)
 
-    if pack_match and comp_match:
+    if pack_match and comp_match and pkic_match:
         # Replace the links using regex
         new_pack_url = f"{pack_match.group(1)}{stats[0]}%2F{stats[0] + stats[1]}{pack_match.group(3)}"
         updated_content = content.replace(pack_match.group(0), new_pack_url)
         new_comp_url = f"{comp_match.group(1)}{int(cstats[0] / 2)}%2F{int(cstats[0] / 2 + cstats[1] / 2)}{comp_match.group(3)}"
         updated_content = updated_content.replace(comp_match.group(0), new_comp_url)
+        new_pkic_url = f"{pkic_match.group(1)}{pkicstats[0]}%2F{pkicstats[0] + pkicstats[1]}{pkic_match.group(3)}"
+        updated_content = updated_content.replace(pkic_match.group(0), new_pkic_url)
         with open(f"{cdir()}/README.md", "w") as file:
             # Update the file
             file.write(updated_content)

@@ -1,0 +1,84 @@
+{
+  "Aesthetic": [
+    "AnimatedCampfireItems",
+    "AllayElytra"
+  ],
+  "Colorful Slime": [
+    "RainbowSlime"
+  ],
+  "Fixes and Consistency": [
+    "BigDripleafStemFix",
+    "ConsistentBlankDecoratedPot",
+    "ConsistentBambooPlanks",
+    "BrighterRibArmorTrim",
+    "HangingSignLogs",
+    "ConsistentSmoothStone"
+  ],
+  "Fun": [
+    "Eyemadillo"
+  ],
+  "HUD and GUI": [
+    "PlusDotCrosshair",
+    "SmootherFont",
+    "TransparentUI",
+    "HighContrastUI"
+  ],
+  "Lower and Sides": [],
+  "Menu Panoramas": [
+    "MangroveSwamp",
+    "Xisuma'sHermitcraftBaseSeason9"
+  ],
+  "More Zombies": [
+    "SteveZombies",
+    "AlexZombies",
+    "AriZombies",
+    "EfeZombies",
+    "KaiZombies",
+    "MakenaZombies",
+    "NoorZombies",
+    "SunnyZombies",
+    "ZuriZombies",
+    "AllZombies"
+  ],
+  "Parity": [],
+  "Peace and Quiet": [
+    "QuieterAllays",
+    "QuieterCamels",
+    "QuieterIronGolems",
+    "QuieterSniffers",
+    "QuieterSnowGolems",
+    "QuieterTadpoles",
+    "QuieterWardens",
+    "QuieterThunder",
+    "QuieterExplosions",
+    "QuieterConsumables",
+    "QuieterSculkSensors",
+    "QuieterSculkShriekers"
+  ],
+  "Retro": [
+    "OldBedIcons",
+    "RenamePottery'Sherd'to'Shard'"
+  ],
+  "Terrain": [
+    "GoldenSavanna"
+  ],
+  "Unobtrusive": [
+    "NoCherryLeavesParticles",
+    "UnobtrusiveScaffolding",
+    "NoFog"
+  ],
+  "Utility": [
+    "CrumbledInfestedStoneBlocks",
+    "BoltlessWaxedCopperBlocks",
+    "ShinyAgedAmethystCluster",
+    "MusicDiscRedstoneLevelPreview",
+    "DirectionalDispensersandDroppers",
+    "TotemShield",
+    "VisualFullHoneyStage",
+    "NoteBlockPitchParticle"
+  ],
+  "Variation": [
+    "VariatedCoarseDirt",
+    "VariatedVillagers"
+  ]
+}

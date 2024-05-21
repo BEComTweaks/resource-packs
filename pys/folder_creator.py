@@ -69,17 +69,15 @@ def folder_creator():
                     pass
 
             # Pack Directory pack_icon.png
-            with open(f'{cdir()}/packs/{pack_json["topic"].lower()}/{pack_json["packs"][i]["pack_id"]}/pack_icon.png',
-                      'a') as _:
+            with open(f'{cdir()}/packs/{pack_json["topic"].lower()}/{pack_json["packs"][i]["pack_id"]}/pack_icon.png','a') as _:
                 # The main purpose of doing this is to
                 # 1. Create a pack_icon.png as  \packs\topic\packid\
                 # 2. Make no changes to \packs\topic\packid\pack_icon.png if it is already made/modified
                 pass
-            if os.path.getsize(
-                    f'{cdir()}/packs/{pack_json["topic"].lower()}/{pack_json["packs"][i]["pack_id"]}/pack_icon.png') == 0:
+            if os.path.getsize(f'{cdir()}/packs/{pack_json["topic"].lower()}/{pack_json["packs"][i]["pack_id"]}/pack_icon.png') == 0:
                 # Basically checks whether pack_icon.png is empty, and
                 # if so, it copies the pack_icon.png to \packs\topic\packid
-                copyfile(f'{cdir()}/pack_icon/template.png',
+                copyfile(f'{cdir()}/pack_icons/missing_texture.png',
                          f'{cdir()}/packs/{pack_json["topic"].lower()}/{pack_json["packs"][i]["pack_id"]}/pack_icon.png')
                 if showerror != 0:
                     clrprint('+ |----------> Made', '`pack_icon.png`', clr='g,w')
