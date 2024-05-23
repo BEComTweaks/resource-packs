@@ -5,9 +5,9 @@ body {
     /* background-color: #f4f4f4;*/
     background-image: url('background.png');
     /* Replace 'path_to_your_image.jpg' with the path to your image */
-    background-size: cover;
+    background-size: auto;
     /* Cover the entire background */
-    background-repeat: no-repeat;
+    background-repeat: repeat;
     /* Do not repeat the background image */
 }
 
