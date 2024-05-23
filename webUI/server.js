@@ -5,7 +5,6 @@ const fs = require('fs');
 const path = require('path');
 const { v4: uuidv4 } = require('uuid');
 const { execSync } = require('child_process');
-const { Image } = require('canvas');
 const cors = require('cors');
 
 const app = express();
@@ -65,9 +64,7 @@ function manifestGenerator(selectedPacks) {
         fs.mkdirSync(packDir);
     }
     dumpJson(`${packDir}/manifest.json`, mf);
-    const img = new Image();
-    img.src = `${cdir()}/pack_icons/template.png`;
-    fs.writeFileSync(`${packDir}/pack_icon.png`, img.src);
+    fs.copyFileSync(`${cdir()}/pack_icons/template_82x.png`,`${packDir}/pack_icon.png`);
 }
 
 function listOfFromDirectories(selectedPacks) {
