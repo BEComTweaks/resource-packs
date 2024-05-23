@@ -1,7 +1,5 @@
 # Ignore Python cache files as it forms merge conflicts
 pys/__pycache__/
-# Stuff in my folder
-gitignore
 # Remove .fleet folder
 .fleet
 # Ignore my python shortcut because terminal doesnt recognise it

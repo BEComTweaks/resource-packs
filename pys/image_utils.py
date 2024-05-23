@@ -3,7 +3,7 @@ import os
 import random
 import glob
 import time
-
+from shutil import get_terminal_size
 if str(os.getcwd()).endswith("system32"):
     # This has to be in every script to prevent FileNotFoundError
     # Because for some reason, it runs it at C:\Windows\System32
@@ -19,7 +19,6 @@ from clrprint import clrprint
 check("PIL", "pillow")
 from PIL import Image
 
-
 def randrand(var, mini, maxi):
     if var + maxi > 255:
         maxi = 255 - var
@@ -29,7 +28,6 @@ def randrand(var, mini, maxi):
     while varc == var:
         varc = var + random.randint(mini, maxi)
     return varc
-
 
 def modify_pixel(pixel):
     r, g, b, a = pixel
@@ -41,7 +39,6 @@ def modify_pixel(pixel):
 
     # Keep alpha value unchanged
     return (r, g, b, a)
-
 
 def modify_image(image_path):
     # Open the image
@@ -62,10 +59,8 @@ def modify_image(image_path):
             modified_pixel = modify_pixel(pixel)
             # Set the modified pixel in the new image
             new_img.putpixel((x, y), modified_pixel)
-
-    # Save the modified image to the same file path, replacing the original
+    # Save modified image in original
     new_img.save(image_path)
-
 
 def modify_images_in_directory(directory):
     # Find all PNG files in the specified directory
@@ -75,19 +70,19 @@ def modify_images_in_directory(directory):
     for png_file in png_files:
         # Modify the image and overwrite the original file
         modify_image(png_file)
-        print(f"Modified {png_file}")
+        print(f'\r{png_file}{" " * (get_terminal_size().columns - len(str(png_file))) - 1}')
 
-
-def tweakimage():
+def tweak_images():
     if os.name == "nt":
         clrprint(
             f"Enter the directory to the folder with PNG Files.\nExample: packs\\aesthetic\\AlternateCutCopper\\default\\textures\\blocks\\ \n{cdir()}\\",
             clr='b', end='')
+        directory = f"{cdir()}\\{input()}"
     else:
         clrprint(
             f"Enter the directory to the folder with PNG Files.\nExample: packs/aesthetic/AlternateCutCopper/default/textures/blocks/ \n{cdir()}/",
             clr='b', end='')
-    directory = f"{cdir()}/{input()}"
+        directory = f"{cdir()}/{input()}"
     # Changes each pixel withing a range of -6 to +6
     global mini, maxi
     mini, maxi = -6, 6
@@ -97,10 +92,43 @@ def tweakimage():
         return 0
 
     modify_images_in_directory(directory)
-    clrprint(f"Modified all PNG files in {directory}")
+    clrprint(f"\r\nModified all PNG files in {directory}")
     clrinput("Press Enter to exit.", clr="green")
     clear()
 
+def compress_images():
+    if os.name == "nt":
+        clrprint(
+            f"Enter the directory to the folder with PNG Files.\nExample: packs\\aesthetic\\AlternateCutCopper\\default\\textures\\blocks\\ \n{cdir()}\\",
+            clr='b', end='')
+        input_dir = f"{cdir()}\\{input()}"
+    else:
+        clrprint(
+            f"Enter the directory to the folder with PNG Files.\nExample: packs/aesthetic/AlternateCutCopper/default/textures/blocks/ \n{cdir()}/",
+            clr='b', end='')
+        input_dir = f"{cdir()}/{input()}"
+    compress_by = int(clrinput("Compress the images by:", clr='b'))
+    # Walk through the directory tree
+    for root, dirs, files in os.walk(input_dir):
+        for filename in files:
+            if filename.endswith('.png'):
+                file_path = os.path.join(root, filename)
+                # Open an existing PNG image
+                with Image.open(file_path) as img:
+                    # Save the image with optimization and maximum compression level
+                    img.save(file_path, optimize=True, compress_level=compress_by)
+                    print(f'\r{str(file_path)[len(str(cdir())):]}{" " * (get_terminal_size().columns - len(str(file_path)) - 1)}',end='')
+    clrprint(f"\r\nCompressed all PNG files in {input_dir[len(str(cdir())):]}")
+    clrinput("Press Enter to exit.", clr="green")
+    clear()
+
+def image_utils():
+    clrprint("Options:\n","Tweak Images in Directory\n","Compress Images in Directory\n",clr="p,w,w")
+    progged = prog_search(input(),["tweak","compress"])
+    if progged == 0:
+        tweak_images()
+    else:
+        compress_images()
 
 if __name__ == "__main__":
-    tweakimage()
+    image_utils()

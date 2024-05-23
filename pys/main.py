@@ -16,7 +16,7 @@ try:
     from selector import selected_packs, val_command, selector
     from folder_creator import folder_creator
     from pre_commit import pre_commit
-    from tweakimage import tweakimage
+    from image_utils import image_utils
     from exporter import export
 except ModuleNotFoundError:
     print(f"main.py is at {os.path.realpath(__file__)} but it is executing at {os.getcwd()}!")
@@ -78,8 +78,8 @@ try:
             clrprint(f"{i}. Create Folders", clr="b")
             menu_commands.append("create folders")
             i += 1
-            clrprint(f"{i}. Tweak Image Pixels", clr="b")
-            menu_commands.append("tweak image")
+            clrprint(f"{i}. Launch Image Utilities", clr="b")
+            menu_commands.append("launch image utilities")
             i += 1
             clrprint(f"{i}. Pre Commit Checks", clr="b")
             menu_commands.append("pre commit")
@@ -118,7 +118,7 @@ try:
             elif choice == "create folders":
                 folder_creator()
             elif choice == "tweak image":
-                tweakimage()
+                image_utils()
             elif choice == "pre commit":
                 pre_commit()
             elif choice == "credits":

@@ -76,9 +76,9 @@ Creates folders and sets them up based on JSON files in <a href="https://github.
 
 </details>
 <details>
-<summary><b>5. Tweaks Image Pixels</b> (contributor only)</summary>
+<summary><b>5. Image Utilities</b> (contributor only)</summary>
 
-A QOL script that adds variations to pixels instead of just having a smooth pixel colour
+A QOL script for adding variation to images, or compressing images
 
 </details>
 <details>

@@ -65,23 +65,23 @@ Does 3 processes
 1. Counts finished packs, and compatibility
    subpacks [Lines 36-90](https://github.com/NSPC911/Bedrock-Tweaks-Base/blob/main/pys/pre_commit.py#L36-L90)
 2. Updates [incomplete_packs.json](https://github.com/NSPC911/Bedrock-Tweaks-Base/blob/main/jsons/others/incomplete_packs.json)
-with the incomplete
-packs [Lines 92-94](https://github.com/NSPC911/Bedrock-Tweaks-Base/blob/main/pys/pre_commit.py#L92-L94)
+with the incomplete packs [Lines 92-94](https://github.com/NSPC911/Bedrock-Tweaks-Base/blob/main/pys/pre_commit.py#L92-L94)
 3. Updates README.md with the numbers from
    above [Lines 95-119](https://github.com/NSPC911/Bedrock-Tweaks-Base/blob/main/pys/pre_commit.py#L95-L119)
-4. Validates JSON
-   files [Lines 120-139](https://github.com/NSPC911/Bedrock-Tweaks-Base/blob/main/pys/pre_commit.py#L120-L139) before
+4. Validates JSON files [Lines 120-139](https://github.com/NSPC911/Bedrock-Tweaks-Base/blob/main/pys/pre_commit.py#L120-L139) before
    formatting with 2 spaces
 
-## [tweakimage.py](https://github.com/NSPC911/Bedrock-Tweaks-Base/blob/main/pys/tweakimage.py)
+## [image_utils.py](https://github.com/NSPC911/Bedrock-Tweaks-Base/blob/main/pys/image_utils.py)
 
-Takes a directory as an input.
-
-Opens all PNG files, changes the colour by ±6 **except opacity**
-
-Example:
-
-- If a pixel is rgba(236,185,212,255), it can change it to rgba(237,184,214,255)
+Two options:
+1. Tweak Images<br>
+    Takes a directory as an input.<br>
+    Opens all PNG files, changes the colour by ±6 **except opacity**<br>
+    Example:<br>
+    - If a pixel is rgba(236,185,212,255), it can change it to rgba(237,184,214,255)
+2. Compress Images
+    Takes a directory as an input.<br>
+    Opens all PNG files in directory **and subdirectories**, and compresses it by a number inputted
 
 # That's it!
 
