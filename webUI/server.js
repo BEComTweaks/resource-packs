@@ -8,7 +8,7 @@ const { execSync } = require('child_process');
 const cors = require('cors');
 
 const app = express();
-const port = 3000;
+const port = 80;
 const upload = multer({ dest: 'uploads/' });
 
 app.use(cors());

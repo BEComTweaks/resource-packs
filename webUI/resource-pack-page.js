@@ -125,7 +125,7 @@ function downloadSelectedTweaks() {
         "raw": selectedTweaks.map(tweak => tweak.name)
     };
 
-    fetch('http://localhost:3000/exportPack', {
+    fetch('http://localhost/exportPack', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
