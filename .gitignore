@@ -6,3 +6,5 @@ gitignore
 .fleet
 # Ignore my python shortcut because terminal doesnt recognise it
 pys/python.ink
+
+webUI/node_modules

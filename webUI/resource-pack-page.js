@@ -19,7 +19,7 @@ function downloadSelectedTweaks() {
             index: parseInt(tweak.dataset.index)
         });
     });
-    
+
     const tweaksByCategory = {
         "Aesthetic": [],
         "Colorful Slime": [],
@@ -125,121 +125,28 @@ function downloadSelectedTweaks() {
         "raw": selectedTweaks.map(tweak => tweak.name)
     };
 
-    const jsonFile = new Blob([JSON.stringify(jsonData, null, 2)], { type: 'application/json' });
-    const url = URL.createObjectURL(jsonFile);
-    const link = document.createElement('a');
-    link.href = url;
-    link.setAttribute('download', 'selected_tweaks.json');
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-    URL.revokeObjectURL(url);
-}
-
-function downloadSelectedTweaks1() {
-    const selectedTweaks = [];
-    const tweakElements = document.querySelectorAll('.tweak.selected');
-    tweakElements.forEach(tweak => {
-        selectedTweaks.push({
-            category: tweak.dataset.category,
-            name: tweak.dataset.name,
-            index: parseInt(tweak.dataset.index)
-        });
-    });
-    
-    const tweaksByCategory = {
-        "Aesthetic": [],
-        "Colorful Slime": [],
-        "Fixes and Consistency": [],
-        "Fun": [],
-        "HUD and GUI": [],
-        "Lower and Sides": [],
-        "Menu Panoramas": [],
-        "More Zombies": [],
-        "Parity": [],
-        "Peace and Quiet": [],
-        "Retro": [],
-        "Terrain": [],
-        "Unobtrusive": [],
-        "Utility":[],
-        "Variation": []
-    };
-
-    selectedTweaks.forEach(tweak => {
-        tweaksByCategory[tweak.category].push(tweak.name);
-    });
-
-    const jsonData = {
-        "Aesthetic": {
-            "packs": tweaksByCategory["Aesthetic"],
-            "index": tweaksByCategory["Aesthetic"].map((_, i) => i)
+    fetch('http://localhost:3000/exportPack', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
         },
-        "Colorful Slime": {
-            "packs": tweaksByCategory["Colorful Slime"],
-            "index": tweaksByCategory["Colorful Slime"].map((_, i) => i)
-        },
-        "Fixes and Consistency": {
-            "packs": tweaksByCategory["Fixes and Consistency"],
-            "index": tweaksByCategory["Fixes and Consistency"].map((_, i) => i)
-        },
-        "Fun": {
-            "packs": tweaksByCategory["Fun"],
-            "index": tweaksByCategory["Fun"].map((_, i) => i)
-        },
-        "HUD and GUI": {
-            "packs": tweaksByCategory["HUD and GUI"],
-            "index": tweaksByCategory["HUD and GUI"].map((_, i) => i)
-        },
-        "Lower and Sides": {
-            "packs": tweaksByCategory["Lower and Sides"],
-            "index": tweaksByCategory["Lower and Sides"].map((_, i) => i)
-        },
-        "Menu Panoramas": {
-            "packs": tweaksByCategory["Menu Panoramas"],
-            "index": tweaksByCategory["Menu Panoramas"].map((_, i) => i)
-        },
-        "More Zombies": {
-            "packs": tweaksByCategory["More Zombies"],
-            "index": tweaksByCategory["More Zombies"].map((_, i) => i)
-        },
-        "Parity": {
-            "packs": tweaksByCategory["Parity"],
-            "index": tweaksByCategory["Parity"].map((_, i) => i)
-        },
-        "Peace and Quiet": {
-            "packs": tweaksByCategory["Peace and Quiet"],
-            "index": tweaksByCategory["Peace and Quiet"].map((_, i) => i)
-        },
-        "Retro": {
-            "packs": tweaksByCategory["Retro"],
-            "index": tweaksByCategory["Retro"].map((_, i) => i)
-        },
-        "Terrain": {
-            "packs": tweaksByCategory["Terrain"],
-            "index": tweaksByCategory["Terrain"].map((_, i) => i)
-        },
-        "Unobtrusive": {
-            "packs": tweaksByCategory["Unobtrusive"],
-            "index": tweaksByCategory["Unobtrusive"].map((_, i) => i)
-        },
-        "Utility": {
-            "packs": tweaksByCategory["Utility"],
-            "index": tweaksByCategory["Utility"].map((_, i) => i)
-        },
-        "Variation": {
-            "packs": tweaksByCategory["Variation"],
-            "index": tweaksByCategory["Variation"].map((_, i) => i)
-        },
-        "raw": selectedTweaks.map(tweak => tweak.name)
-    };
-
-    const jsonFile = new Blob([JSON.stringify(jsonData, null, 2)], {type: 'application/json'});
-    const url = URL.createObjectURL(jsonFile);
-    const link = document.createElement('a');
-    link.href = url;
-    link.setAttribute('download', 'selected_tweaks.json');
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-    URL.revokeObjectURL(url);
+        body: JSON.stringify(jsonData)
+    })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.blob();
+        })
+        .then(blob => {
+            const url = window.URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.style.display = 'none';
+            a.href = url;
+            a.download = 'BTRP.mcpack';
+            document.body.appendChild(a);
+            a.click();
+            window.URL.revokeObjectURL(url);
+        })
+        .catch(error => console.error('Error:', error));
 }
