@@ -27,18 +27,23 @@ header {
 }
 
 .category-label {
-    background-color: #007bff;
+    background-color: black;
     color: white;
     padding: 10px;
     border-radius: 5px;
     cursor: pointer;
     user-select: none;
+    border: opaque;
+    border-style: solid;
+	border-width: 2.5px;
+	border-color: #007bff;
+	border-radius: 5px;
 }
 
 .tweaks {
     display: none;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
     margin-top: 10px;
     align-items: center;
     text-align: center;
@@ -64,7 +69,7 @@ header {
 }
 
 .download-selected-button {
-    background: #007bff;
+    background: blue;
     color: white;
     padding: 10px 20px;
     border: none;
