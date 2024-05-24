@@ -29,6 +29,7 @@ from clrprint import clrprint
 check("ujson")
 from ujson import *
 
+
 # For module to be easy to use and not require
 # the start of the program to be cluttered
 currentdir = os.getcwd()
@@ -83,10 +84,7 @@ def load_json(path):
             return loads(file.read())
         except JSONDecodeError:
             clrprint(f"\n{path} got a JSON Decode Error", clr="red")
-            if file.read() == "":
-                clrprint(f"{path} is empty!")
-            else:
-                clrprint(traceback.format_exc(), clr="yellow")
+            clrprint(traceback.format_exc(), clr="yellow")
             exit()
 
 

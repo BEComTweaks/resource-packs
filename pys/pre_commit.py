@@ -16,8 +16,13 @@ from custom_functions import *
 check("clrprint")  # Check for clrprint module
 from clrprint import clrprint
 
+category_start = '\n        <div class="category">\n            <div class="category-label" onclick="toggleCategory(this)">topic_name</div>\n            <div class="tweaks">'
+pack = '\n                <div class="tweak" onclick="toggleSelection(this)" data-category="topic_name"\n                    data-name="pack_id" data-index="pack_index">\n                    <div class="tweak-info">\n                        <input type="checkbox" id="tweaknumber" name="tweak" value="tweaknumber">\n                        <img src="https://raw.githubusercontent.com/BedrockTweaks/Bedrock-Tweaks-Base/main/relloctopackicon"\n                            style="width:82px; height:82px;" alt="pack_name"><br>\n                        <label for="tweaknumber" class="tweak-title">pack_name</label>\n                        <div class="tweak-description">pack_description\n                        </div>\n                    </div>\n                </div>'
+category_end = '\n            </div>\n        </div>'
+html_end = '\n        <button class="download-selected-button" onclick="downloadSelectedTweaks()">Download Selected Tweaks</button>\n    </div>\n    <script src="resource-pack-page.js"></script>\n</body>\n\n</html>'
 
 def pre_commit():
+    html = '<!DOCTYPE html>\n<html lang="en">\n\n<head>\n    <meta charset="UTF-8">\n    <meta name="viewport" content="width=device-width, initial-scale=1.0">\n    <title>Bedrock Tweaks</title>\n    <link rel="stylesheet" href="resource-pack-page.css">\n</head>\n\n<body>\n    <header>\n    <h1>Bedrock Tweaks</h1>\n    </header>\n\n    <div class="container">\n        <!-- Categories -->'
     stats = [0, 0]
     incomplete_packs = {"Aesthetic": [], "Colorful Slime": [], "Fixes and Consistency": [], "Fun": [],
                         "HUD and GUI": [], "Lower and Sides": [], "Menu Panoramas": [], "More Zombies": [],
@@ -30,12 +35,12 @@ def pre_commit():
                         "HUD and GUI": [], "Lower and Sides": [], "Menu Panoramas": [], "More Zombies": [],
                         "Parity": [], "Peace and Quiet": [], "Retro": [], "Terrain": [], "Unobtrusive": [],
                         "Utility": [], "Variation": []}
-
-    clrprint("Counting Packs and Compatibilities...", clr="yellow")
+    packs = -1
+    clrprint("Going through Packs...", clr="yellow")
     # Counts Packs and Compatibilities
     for c in range(len(os.listdir(f'{cdir()}/jsons/packs'))):
         file = load_json(f"{cdir()}/jsons/packs/{os.listdir(f'{cdir()}/jsons/packs')[c]}")
-        # For compatibilities, as it doesn't have a file
+        html += category_start.replace("topic_name", file["topic"])
         # Runs through the packs
         for i in range(len(file["packs"])):
             # Updates Incomplete Packs
@@ -83,13 +88,28 @@ def pre_commit():
                     except KeyError:
                         compatibilities[file["packs"][i]["pack_id"]] = [file["packs"][i]["compatibility"][comp]]
                     cstats[1] += 1
-
+            
+            # Adds respective HTML
+            if file["packs"][i]["pack_id"] not in incomplete_packs[file["topic"]]:
+                packs += 1
+                to_add_pack = pack.replace("topic_name", file["topic"])
+                to_add_pack = to_add_pack.replace("pack_index", str(i))
+                to_add_pack = to_add_pack.replace("pack_id", file["packs"][i]["pack_id"])
+                to_add_pack = to_add_pack.replace("pack_name", file["packs"][i]["pack_name"])
+                to_add_pack = to_add_pack.replace("pack_description", file["packs"][i]["pack_description"])
+                to_add_pack = to_add_pack.replace("tweaknumber", f"tweak{packs}")
+                to_add_pack = to_add_pack.replace("relloctopackicon", f"packs/{file["topic"].lower()}/{file["packs"][i]["pack_id"]}/pack_icon.png")
+                html += to_add_pack
+        html += category_end
+    html += html_end
     clrprint("Finished Counting!", clr="green")
-    # Update incomplete_packs.json
+    # Update files
     dump_json(f"{cdir()}/jsons/others/incomplete_packs.json", incomplete_packs)
     dump_json(f"{cdir()}/jsons/others/incomplete_compatibilities.json", compatibilities)
     dump_json(f"{cdir()}/jsons/others/incomplete_pack_icons.json", incomplete_pkics)
-    clrprint("Updated incomplete_packs.json, incomplete_compatibilities.json and incomplete_packs.json", clr="green")
+    with open(f"{cdir()}/webUI/main.html", "w") as html_file:
+        html_file.write(html)
+    clrprint("Updated a lot of files", clr="green")
     clrprint("Updating README.md...", clr="yellow")
 
     # Just some fancy code with regex to update README.md
@@ -123,18 +143,13 @@ def pre_commit():
     # JSON files validator
     for root, _, files in os.walk(cdir()):
         for file in files:
-            if file.lower().endswith('.json'):
-                file_path = os.path.join(root, file)
-                try:
-                    dump_json(file_path,load_json(file_path))
-                    with open(file_path,"r") as file_replace:
-                        replaced = file_replace.read().replace(r"\/","/")
-                    with open(file_path,"w") as file_replace:
-                        file_replace.write(replaced)
-                except Exception as e:
-                    print(f"Error in file '{file_path}': {str(e)}")
-                    exit(1)
-
+            file_path = os.path.join(root, file)
+            if file.lower().endswith('.json') and 'node_modules' not in str(file_path):
+                dump_json(file_path,load_json(file_path))
+                with open(file_path,"r") as file_replace:
+                    replaced = file_replace.read().replace(r"\/","/")
+                with open(file_path,"w") as file_replace:
+                    file_replace.write(replaced)
     clrprint(f"JSON Files are valid!", clr="green")
     clrinput("Press Enter to exit.", clr="green")
     clear()
