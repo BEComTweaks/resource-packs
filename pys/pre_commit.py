@@ -104,13 +104,12 @@ def pre_commit():
     html += html_end
     clrprint("Finished Counting!", clr="green")
     # Update files
+    clrprint("Updating files...", clr="yellow")
     dump_json(f"{cdir()}/jsons/others/incomplete_packs.json", incomplete_packs)
     dump_json(f"{cdir()}/jsons/others/incomplete_compatibilities.json", compatibilities)
     dump_json(f"{cdir()}/jsons/others/incomplete_pack_icons.json", incomplete_pkics)
     with open(f"{cdir()}/webUI/main.html", "w") as html_file:
         html_file.write(html)
-    clrprint("Updated a lot of files", clr="green")
-    clrprint("Updating README.md...", clr="yellow")
 
     # Just some fancy code with regex to update README.md
     with open(f"{cdir()}/README.md", "r") as file:
@@ -138,7 +137,7 @@ def pre_commit():
         # When the regex fails if I change the link
         raise IndexError("Regex Failed")
 
-    clrprint("Updated README.md!", clr="green")
+    clrprint("Updated a lot of files", clr="green")
     clrprint("Validating JSON Files...", clr="yellow")
     # JSON files validator
     for root, _, files in os.walk(cdir()):

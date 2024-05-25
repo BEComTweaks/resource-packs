@@ -117,7 +117,7 @@ try:
                 export()
             elif choice == "create folders":
                 folder_creator()
-            elif choice == "tweak image":
+            elif choice == "launch image utilities":
                 image_utils()
             elif choice == "pre commit":
                 pre_commit()

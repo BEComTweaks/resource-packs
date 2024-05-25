@@ -24,7 +24,10 @@
     "HighContrastUI"
   ],
   "Lower and Sides": [],
-  "Menu Panoramas": [],
+  "Menu Panoramas": [
+    "MangroveSwamp",
+    "Xisuma'sHermitcraftBaseSeason9"
+  ],
   "More Zombies": [
     "SteveZombies",
     "AlexZombies",

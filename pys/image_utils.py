@@ -12,7 +12,7 @@ if str(os.getcwd()).endswith("system32"):
     os.chdir(os.path.dirname(os.path.realpath(__file__)))
 
 from custom_functions import *
-
+from selector import val_command
 check("clrprint")
 from clrprint import clrprint
 
@@ -70,7 +70,7 @@ def modify_images_in_directory(directory):
     for png_file in png_files:
         # Modify the image and overwrite the original file
         modify_image(png_file)
-        print(f'\r{png_file}{" " * (get_terminal_size().columns - len(str(png_file))) - 1}')
+        print(f'\r{png_file}{" " * (get_terminal_size().columns - len(str(png_file)))}')
 
 def tweak_images():
     if os.name == "nt":
@@ -115,15 +115,21 @@ def compress_images():
                 file_path = os.path.join(root, filename)
                 # Open an existing PNG image
                 with Image.open(file_path) as img:
-                    # Save the image with optimization and maximum compression level
-                    img.save(file_path, optimize=True, compress_level=compress_by)
-                    print(f'\r{str(file_path)[len(str(cdir())):]}{" " * (get_terminal_size().columns - len(str(file_path)) - 1)}',end='')
+                    try:
+                        # Save the image with optimization and maximum compression level
+                        img.save(file_path, optimize=True, compress_level=compress_by)
+                        print(f'\r{str(file_path)[len(str(cdir())):]}{" " * (get_terminal_size().columns - len(str(file_path)[len(str(cdir())):]))}',end='')
+                    except KeyboardInterrupt:
+                        clrprint("KeyboardInterrupt raised!",clr="r")
+                        img.save(file_path)
+                        clrprint(f"Check whether {str(file_path)[len(str(cdir())):]} is still valid!",clr="p")
+                        val_command("KeyboardInterrupt", "exit")
     clrprint(f"\r\nCompressed all PNG files in {input_dir[len(str(cdir())):]}")
     clrinput("Press Enter to exit.", clr="green")
     clear()
 
 def image_utils():
-    clrprint("Options:\n","Tweak Images in Directory\n","Compress Images in Directory\n",clr="p,w,w")
+    clrprint("Options:\n","Tweak Images in Directory\n","Compress Images in Directory","\nEnter your choice: ",clr="p,w,w,y",end="")
     progged = prog_search(input(),["tweak","compress"])
     if progged == 0:
         tweak_images()
