@@ -146,7 +146,13 @@ function exportPack(selectedPacks) {
     console.log(`selected_packs.json 1/1`);
     fs.writeFileSync(path.join(targetPackDir, 'selected_packs.json'), JSON.stringify(selectedPacks))
     console.log(`${mf.header.name}.zip 1/2`);
-    execSync(`cd ${cdir()};zip -r ${mf.header.name}.zip ${mf.header.name}`);
+    let command;
+    if (process.platform === "win32") {
+        command = `cd ${cdir()} && powershell Compress-Archive -Path ${mf.header.name} -DestinationPath ${mf.header.name}.zip`;
+    } else {
+        command = `cd ${cdir()};zip -r ${mf.header.name}.zip ${mf.header.name}`;
+    }
+    execSync(command);
     console.log(`${mf.header.name}.mcpack 2/2`);
     fs.renameSync(`${path.join(cdir(), mf.header.name)}.zip`, `${path.join(cdir(), mf.header.name)}.mcpack`);
     fs.rmdirSync(targetPackDir, { recursive: true });
