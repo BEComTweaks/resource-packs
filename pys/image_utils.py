@@ -113,6 +113,7 @@ def compress_images():
         for filename in files:
             if filename.endswith('.png'):
                 file_path = os.path.join(root, filename)
+                broken = False
                 # Open an existing PNG image
                 with Image.open(file_path) as img:
                     try:
@@ -123,8 +124,10 @@ def compress_images():
                         clrprint("KeyboardInterrupt raised!",clr="r")
                         img.save(file_path)
                         clrprint(f"Check whether {str(file_path)[len(str(cdir())):]} is still valid!",clr="p")
-                        val_command("KeyboardInterrupt", "exit")
-    clrprint(f"\r\nCompressed all PNG files in {input_dir[len(str(cdir())):]}")
+                        broken = True
+                        break
+    if not broken:
+        clrprint(f"\r\nCompressed all PNG files in {input_dir[len(str(cdir())):]}")
     clrinput("Press Enter to exit.", clr="green")
     clear()
 

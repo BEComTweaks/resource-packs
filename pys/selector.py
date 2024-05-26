@@ -149,7 +149,6 @@ def val_command(menu, command):
             global loop
             loop = False
             clrprint("Exited program.", clr="yellow")
-            exit(0)
         else:
             raise ValueError(f"{command} is not a valid command!")
 
