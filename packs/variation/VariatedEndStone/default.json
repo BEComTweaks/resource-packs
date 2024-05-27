@@ -1,0 +1,13 @@
+[
+  "./",
+  "textures/",
+  "textures/terrain_texture.json",
+  "textures/blocks/",
+  "textures/blocks/end_stone/",
+  "textures/blocks/end_stone/0.png",
+  "textures/blocks/end_stone/1.png",
+  "textures/blocks/end_stone/2.png",
+  "textures/blocks/end_stone/3.png",
+  "textures/blocks/end_stone/4.png",
+  "textures/blocks/end_stone/5.png"
+]

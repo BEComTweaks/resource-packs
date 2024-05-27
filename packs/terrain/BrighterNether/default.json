@@ -1,0 +1,16 @@
+[
+  "./",
+  "textures/",
+  "textures/blocks/",
+  "textures/blocks/chiseled_nether_bricks.png",
+  "textures/blocks/cracked_nether_bricks.png",
+  "textures/blocks/crimson_nylium.png",
+  "textures/blocks/crimson_nylium_side.png",
+  "textures/blocks/netherrack.png",
+  "textures/blocks/nether_brick.png",
+  "textures/blocks/nether_gold_ore.png",
+  "textures/blocks/quartz_ore.png",
+  "textures/blocks/soul_sand.png",
+  "textures/blocks/soul_soil.png",
+  "textures/blocks/warped_nylium_side.png"
+]

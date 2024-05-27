@@ -1,0 +1,8 @@
+[
+  "./",
+  "textures/",
+  "textures/entity/",
+  "textures/entity/squid.png",
+  "textures/entity/glow_squid/",
+  "textures/entity/glow_squid/glow_squid.tga"
+]

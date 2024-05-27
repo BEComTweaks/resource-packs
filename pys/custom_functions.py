@@ -90,8 +90,10 @@ def load_json(path):
 
 # Simple function to save json into file
 def dump_json(path, dictionary):
+    the_json = dumps(dictionary, indent=2)
+    the_json = the_json.replace(r"\/","/")
     with open(path, "w") as file:
-        file.write(dumps(dictionary, indent=2))
+        file.write(the_json)
 
 
 # Uses a progressive searching algorithm to match an input

@@ -1,0 +1,18 @@
+[
+  "./",
+  "sounds/",
+  "sounds/mob/",
+  "sounds/mob/silverfish/",
+  "sounds/mob/silverfish/hit1.ogg",
+  "sounds/mob/silverfish/hit2.ogg",
+  "sounds/mob/silverfish/hit3.ogg",
+  "sounds/mob/silverfish/kill.ogg",
+  "sounds/mob/silverfish/say1.ogg",
+  "sounds/mob/silverfish/say2.ogg",
+  "sounds/mob/silverfish/say3.ogg",
+  "sounds/mob/silverfish/say4.ogg",
+  "sounds/mob/silverfish/step1.ogg",
+  "sounds/mob/silverfish/step2.ogg",
+  "sounds/mob/silverfish/step3.ogg",
+  "sounds/mob/silverfish/step4.ogg"
+]

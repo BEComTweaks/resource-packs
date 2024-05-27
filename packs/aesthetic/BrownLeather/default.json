@@ -1,0 +1,16 @@
+[
+  "./",
+  "textures/",
+  "textures/blocks/",
+  "textures/blocks/itemframe_background.png",
+  "textures/entity/",
+  "textures/entity/pig/",
+  "textures/entity/pig/pig_saddle.png",
+  "textures/entity/strider/",
+  "textures/entity/strider/strider_saddled.png",
+  "textures/entity/strider/strider_suffocated_saddled.png",
+  "textures/items/",
+  "textures/items/item_frame.png",
+  "textures/items/leather.png",
+  "textures/items/saddle.png"
+]

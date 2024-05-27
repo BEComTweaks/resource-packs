@@ -156,7 +156,7 @@ function exportPack(selectedPacks) {
     console.log(`${mf.header.name}.mcpack 2/2`);
     fs.renameSync(`${path.join(cdir(), mf.header.name)}.zip`, `${path.join(cdir(), mf.header.name)}.mcpack`);
     fs.rmdirSync(targetPackDir, { recursive: true });
-    console.log(`Finished exporting the pack!${' '.repeat(process.stdout.columns - 29)}`);
+    console.log(`Finished exporting the pack!'`);
     console.log("It is now available at", `${path.sep}${mf.header.name}.mcpack`);
     return `${path.join(cdir(), mf.header.name)}.mcpack`;
 }

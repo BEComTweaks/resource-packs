@@ -1,0 +1,20 @@
+[
+  "./",
+  "sounds/",
+  "sounds/mob/",
+  "sounds/mob/cow/",
+  "sounds/mob/cow/hurt1.ogg",
+  "sounds/mob/cow/hurt2.ogg",
+  "sounds/mob/cow/hurt3.ogg",
+  "sounds/mob/cow/milk1.ogg",
+  "sounds/mob/cow/milk2.ogg",
+  "sounds/mob/cow/milk3.ogg",
+  "sounds/mob/cow/say1.ogg",
+  "sounds/mob/cow/say2.ogg",
+  "sounds/mob/cow/say3.ogg",
+  "sounds/mob/cow/say4.ogg",
+  "sounds/mob/cow/step1.ogg",
+  "sounds/mob/cow/step2.ogg",
+  "sounds/mob/cow/step3.ogg",
+  "sounds/mob/cow/step4.ogg"
+]

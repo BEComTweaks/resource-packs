@@ -1,0 +1,17 @@
+[
+  "./",
+  "sounds/",
+  "sounds/mob/",
+  "sounds/mob/bat/",
+  "sounds/mob/bat/death.ogg",
+  "sounds/mob/bat/hurt1.ogg",
+  "sounds/mob/bat/hurt2.ogg",
+  "sounds/mob/bat/hurt3.ogg",
+  "sounds/mob/bat/hurt4.ogg",
+  "sounds/mob/bat/idle1.ogg",
+  "sounds/mob/bat/idle2.ogg",
+  "sounds/mob/bat/idle3.ogg",
+  "sounds/mob/bat/idle4.ogg",
+  "sounds/mob/bat/loop.ogg",
+  "sounds/mob/bat/takeoff.ogg"
+]

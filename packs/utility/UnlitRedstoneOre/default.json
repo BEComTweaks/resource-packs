@@ -1,0 +1,10 @@
+[
+  "./",
+  "blocks.json",
+  "textures/",
+  "textures/terrain_texture.json",
+  "textures/blocks/",
+  "textures/blocks/redstone_ore_off.png",
+  "textures/blocks/deepslate/",
+  "textures/blocks/deepslate/deepslate_redstone_ore_off.png"
+]

@@ -1,0 +1,14 @@
+[
+  "./",
+  "textures/",
+  "textures/entity/",
+  "textures/entity/wandering_trader.png",
+  "textures/entity/llama/",
+  "textures/entity/llama/llama.png",
+  "textures/entity/llama/llama_brown.png",
+  "textures/entity/llama/llama_creamy.png",
+  "textures/entity/llama/llama_gray.png",
+  "textures/entity/llama/llama_white.png",
+  "textures/entity/llama/decor/",
+  "textures/entity/llama/decor/trader_llama_decor.png"
+]

@@ -1,0 +1,12 @@
+[
+  "./",
+  "particles/",
+  "particles/huge_explosion_lab_misc.json",
+  "particles/huge_explosion_level.json",
+  "particles/large_explosion_level.json",
+  "textures/",
+  "textures/particle/",
+  "textures/particle/campfire_smoke.png",
+  "textures/particle/explosion.png",
+  "textures/particle/particles.png"
+]

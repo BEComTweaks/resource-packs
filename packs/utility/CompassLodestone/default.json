@@ -1,0 +1,11 @@
+[
+  "./",
+  "blocks.json",
+  "textures/",
+  "textures/terrain_texture.json",
+  "textures/blocks/",
+  "textures/blocks/lodestone_east.png",
+  "textures/blocks/lodestone_north.png",
+  "textures/blocks/lodestone_south.png",
+  "textures/blocks/lodestone_west.png"
+]

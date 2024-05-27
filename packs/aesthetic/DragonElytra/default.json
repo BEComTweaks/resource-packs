@@ -1,0 +1,10 @@
+[
+  "./",
+  "textures/",
+  "textures/items/",
+  "textures/items/broken_elytra.png",
+  "textures/items/elytra.png",
+  "textures/models/",
+  "textures/models/armor/",
+  "textures/models/armor/elytra.png"
+]

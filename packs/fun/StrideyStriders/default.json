@@ -1,0 +1,13 @@
+[
+  "./",
+  "models/",
+  "models/entity/",
+  "models/entity/strider.geo.json",
+  "textures/",
+  "textures/entity/",
+  "textures/entity/strider/",
+  "textures/entity/strider/strider.png",
+  "textures/entity/strider/strider_saddled.png",
+  "textures/entity/strider/strider_suffocated.png",
+  "textures/entity/strider/strider_suffocated_saddled.png"
+]

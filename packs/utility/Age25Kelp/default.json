@@ -1,0 +1,8 @@
+[
+  "./",
+  "textures/",
+  "textures/flipbook_textures.json",
+  "textures/terrain_texture.json",
+  "textures/blocks/",
+  "textures/blocks/age_25_kelp.tga"
+]

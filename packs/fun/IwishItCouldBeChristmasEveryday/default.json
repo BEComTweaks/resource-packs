@@ -1,0 +1,15 @@
+[
+  "./",
+  "textures/",
+  "textures/blocks/",
+  "textures/blocks/chest_front.png",
+  "textures/blocks/chest_side.png",
+  "textures/blocks/chest_top.png",
+  "textures/blocks/trapped_chest_front.png",
+  "textures/entity/",
+  "textures/entity/chest/",
+  "textures/entity/chest/double_normal.png",
+  "textures/entity/chest/normal.png",
+  "textures/entity/chest/trapped.png",
+  "textures/entity/chest/trapped_double.png"
+]

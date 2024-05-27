@@ -1,0 +1,8 @@
+[
+  "./",
+  "textures/",
+  "textures/ui/",
+  "textures/ui/panorama_overlay.png",
+  "ui/",
+  "ui/start_screen.json"
+]

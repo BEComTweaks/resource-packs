@@ -1,0 +1,10 @@
+[
+  "./",
+  "sounds/",
+  "sounds/item/",
+  "sounds/item/spyglass/",
+  "sounds/item/spyglass/use.ogg",
+  "textures/",
+  "textures/ui/",
+  "textures/ui/spyglass_scope.png"
+]

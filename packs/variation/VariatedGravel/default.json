@@ -1,0 +1,23 @@
+[
+  "./",
+  "textures/",
+  "textures/terrain_texture.json",
+  "textures/blocks/",
+  "textures/blocks/gravel/",
+  "textures/blocks/gravel/0.png",
+  "textures/blocks/gravel/1.png",
+  "textures/blocks/gravel/10.png",
+  "textures/blocks/gravel/11.png",
+  "textures/blocks/gravel/12.png",
+  "textures/blocks/gravel/13.png",
+  "textures/blocks/gravel/14.png",
+  "textures/blocks/gravel/15.png",
+  "textures/blocks/gravel/2.png",
+  "textures/blocks/gravel/3.png",
+  "textures/blocks/gravel/4.png",
+  "textures/blocks/gravel/5.png",
+  "textures/blocks/gravel/6.png",
+  "textures/blocks/gravel/7.png",
+  "textures/blocks/gravel/8.png",
+  "textures/blocks/gravel/9.png"
+]

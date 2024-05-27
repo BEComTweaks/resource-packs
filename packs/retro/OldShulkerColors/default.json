@@ -1,0 +1,21 @@
+[
+  "./",
+  "textures/",
+  "textures/entity/",
+  "textures/entity/shulker/",
+  "textures/entity/shulker/shulker_black.png",
+  "textures/entity/shulker/shulker_blue.png",
+  "textures/entity/shulker/shulker_brown.png",
+  "textures/entity/shulker/shulker_cyan.png",
+  "textures/entity/shulker/shulker_gray.png",
+  "textures/entity/shulker/shulker_green.png",
+  "textures/entity/shulker/shulker_light_blue.png",
+  "textures/entity/shulker/shulker_lime.png",
+  "textures/entity/shulker/shulker_magenta.png",
+  "textures/entity/shulker/shulker_orange.png",
+  "textures/entity/shulker/shulker_pink.png",
+  "textures/entity/shulker/shulker_red.png",
+  "textures/entity/shulker/shulker_silver.png",
+  "textures/entity/shulker/shulker_white.png",
+  "textures/entity/shulker/shulker_yellow.png"
+]

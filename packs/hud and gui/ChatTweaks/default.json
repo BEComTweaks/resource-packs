@@ -1,0 +1,15 @@
+[
+  "./",
+  "textures/",
+  "textures/ui/",
+  "textures/ui/down_icon.png",
+  "textures/ui/shift_tab_icon.png",
+  "textures/ui/tab_icon.png",
+  "textures/ui/up_icon.png",
+  "ui/",
+  "ui/chat_screen.json",
+  "ui/command_block_screen.json",
+  "ui/_ui_defs.json",
+  "uibt/",
+  "uibt/chat_tweaks.ui"
+]

@@ -1,0 +1,10 @@
+[
+  "./",
+  "textures/",
+  "textures/entity/",
+  "textures/entity/spyglass.png",
+  "textures/items/",
+  "textures/items/spyglass.png",
+  "textures/ui/",
+  "textures/ui/spyglass_scope.png"
+]

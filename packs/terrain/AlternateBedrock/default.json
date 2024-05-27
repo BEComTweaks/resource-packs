@@ -1,0 +1,9 @@
+[
+  "./",
+  "textures/",
+  "textures/blocks/",
+  "textures/blocks/bedrock.png",
+  "textures/entity/",
+  "textures/entity/endercrystal/",
+  "textures/entity/endercrystal/endercrystal.png"
+]

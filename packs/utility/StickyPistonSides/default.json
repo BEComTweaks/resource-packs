@@ -1,0 +1,12 @@
+[
+  "./",
+  "blocks.json",
+  "textures/",
+  "textures/terrain_texture.json",
+  "textures/blocks/",
+  "textures/blocks/piston_side_sticky.png",
+  "textures/blocks/piston_top_sticky.png",
+  "textures/entity/",
+  "textures/entity/pistonarm/",
+  "textures/entity/pistonarm/pistonArmSticky.png"
+]

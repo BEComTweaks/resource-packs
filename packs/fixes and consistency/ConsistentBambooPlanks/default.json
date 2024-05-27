@@ -1,0 +1,9 @@
+[
+  "./",
+  "textures/",
+  "textures/blocks/",
+  "textures/blocks/bamboo_mosaic.png",
+  "textures/blocks/bamboo_planks.png",
+  "textures/entity/",
+  "textures/entity/bamboo_sign.png"
+]

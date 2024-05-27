@@ -1,0 +1,15 @@
+[
+  "./",
+  "textures/",
+  "textures/terrain_texture.json",
+  "textures/blocks/",
+  "textures/blocks/brick/",
+  "textures/blocks/brick/0.png",
+  "textures/blocks/brick/1.png",
+  "textures/blocks/brick/2.png",
+  "textures/blocks/brick/3.png",
+  "textures/blocks/brick/4.png",
+  "textures/blocks/brick/5.png",
+  "textures/blocks/brick/6.png",
+  "textures/blocks/brick/7.png"
+]

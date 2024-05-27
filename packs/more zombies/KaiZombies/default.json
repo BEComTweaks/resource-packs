@@ -1,0 +1,10 @@
+[
+  "./",
+  "models/",
+  "models/entity/",
+  "models/entity/zombie.geo.json",
+  "textures/",
+  "textures/entity/",
+  "textures/entity/zombie/",
+  "textures/entity/zombie/zombie.png"
+]

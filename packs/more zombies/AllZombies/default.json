@@ -1,0 +1,22 @@
+[
+  "./",
+  "entity/",
+  "entity/zombie.entity.json",
+  "models/",
+  "models/entity/",
+  "models/entity/zombie.geo.json",
+  "render_controllers/",
+  "render_controllers/zombie.render_controllers.json",
+  "textures/",
+  "textures/entity/",
+  "textures/entity/zombie/",
+  "textures/entity/zombie/zombie.png",
+  "textures/entity/zombie/zombie2.png",
+  "textures/entity/zombie/zombie3.png",
+  "textures/entity/zombie/zombie4.png",
+  "textures/entity/zombie/zombie5.png",
+  "textures/entity/zombie/zombie6.png",
+  "textures/entity/zombie/zombie7.png",
+  "textures/entity/zombie/zombie8.png",
+  "textures/entity/zombie/zombie9.png"
+]

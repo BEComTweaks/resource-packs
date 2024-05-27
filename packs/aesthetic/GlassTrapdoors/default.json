@@ -1,0 +1,18 @@
+[
+  "./",
+  "textures/",
+  "textures/blocks/",
+  "textures/blocks/acacia_trapdoor.png",
+  "textures/blocks/bamboo_trapdoor.png",
+  "textures/blocks/birch_trapdoor.png",
+  "textures/blocks/cherry_trapdoor.png",
+  "textures/blocks/dark_oak_trapdoor.png",
+  "textures/blocks/iron_trapdoor.png",
+  "textures/blocks/jungle_trapdoor.png",
+  "textures/blocks/mangrove_trapdoor.png",
+  "textures/blocks/spruce_trapdoor.png",
+  "textures/blocks/trapdoor.png",
+  "textures/blocks/huge_fungus/",
+  "textures/blocks/huge_fungus/crimson_trapdoor.png",
+  "textures/blocks/huge_fungus/warped_trapdoor.png"
+]

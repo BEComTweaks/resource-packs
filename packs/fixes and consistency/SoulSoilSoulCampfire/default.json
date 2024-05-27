@@ -1,0 +1,9 @@
+[
+  "./",
+  "blocks.json",
+  "textures/",
+  "textures/terrain_texture.json",
+  "textures/blocks/",
+  "textures/blocks/soul_campfire_log.png",
+  "textures/blocks/soul_campfire_log_lit.png"
+]

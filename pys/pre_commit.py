@@ -12,7 +12,7 @@ if str(os.getcwd()).endswith("system32"):
     os.chdir(os.path.dirname(os.path.realpath(__file__)))
 
 from custom_functions import *
-
+from exporter import lsdir
 check("clrprint")  # Check for clrprint module
 from clrprint import clrprint
 check("markdown")#  Check for markdown module
@@ -105,6 +105,13 @@ def pre_commit():
                 to_add_pack = to_add_pack.replace("tweaknumber", f"tweak{packs}")
                 to_add_pack = to_add_pack.replace("relloctopackicon", f'packs/{file["topic"].lower()}/{file["packs"][i]["pack_id"]}/pack_icon.png')
                 html += to_add_pack
+            
+            # Adds list of items in pack
+            dump_json(f'{cdir()}/packs/{file["topic"].lower()}/{file["packs"][i]["pack_id"]}/default.json',
+            lsdir(f'{cdir()}/packs/{file["topic"].lower()}/{file["packs"][i]["pack_id"]}/default'))
+            for comp in file["packs"][i]["compatibility"]:
+                dump_json(f'{cdir()}/packs/{file["topic"].lower()}/{file["packs"][i]["pack_id"]}/{comp}.json',
+                lsdir(f'{cdir()}/packs/{file["topic"].lower()}/{file["packs"][i]["pack_id"]}/{comp}'))
         html += category_end
     html += html_end
     clrprint("Finished Counting!", clr="green")
@@ -150,10 +157,6 @@ def pre_commit():
             file_path = os.path.join(root, file)
             if file.lower().endswith('.json') and 'node_modules' not in str(file_path):
                 dump_json(file_path,load_json(file_path))
-                with open(file_path,"r") as file_replace:
-                    replaced = file_replace.read().replace(r"\/","/")
-                with open(file_path,"w") as file_replace:
-                    file_replace.write(replaced)
     clrprint(f"JSON Files are valid!", clr="green")
     clrinput("Press Enter to exit.", clr="green")
 

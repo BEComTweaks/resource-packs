@@ -1,0 +1,10 @@
+[
+  "./",
+  "attachables/",
+  "attachables/totem.json",
+  "models/",
+  "models/entity/",
+  "models/entity/totem.geo.json",
+  "render_controllers/",
+  "render_controllers/totem.render_controllers.json"
+]

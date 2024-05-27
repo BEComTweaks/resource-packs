@@ -1,0 +1,14 @@
+[
+  "./",
+  "sounds/",
+  "sounds/mob/",
+  "sounds/mob/chicken/",
+  "sounds/mob/chicken/hurt1.ogg",
+  "sounds/mob/chicken/hurt2.ogg",
+  "sounds/mob/chicken/plop.ogg",
+  "sounds/mob/chicken/say1.ogg",
+  "sounds/mob/chicken/say2.ogg",
+  "sounds/mob/chicken/say3.ogg",
+  "sounds/mob/chicken/step1.ogg",
+  "sounds/mob/chicken/step2.ogg"
+]

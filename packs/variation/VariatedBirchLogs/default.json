@@ -1,0 +1,13 @@
+[
+  "./",
+  "textures/",
+  "textures/terrain_texture.json",
+  "textures/blocks/",
+  "textures/blocks/birch_log/",
+  "textures/blocks/birch_log/0.png",
+  "textures/blocks/birch_log/1.png",
+  "textures/blocks/birch_log/2.png",
+  "textures/blocks/birch_log/3.png",
+  "textures/blocks/birch_log/4.png",
+  "textures/blocks/birch_log/5.png"
+]

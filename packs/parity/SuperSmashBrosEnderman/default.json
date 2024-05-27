@@ -1,0 +1,14 @@
+[
+  "./",
+  "animations/",
+  "animations/enderman.animation.json",
+  "entity/",
+  "entity/enderman.entity.json",
+  "models/",
+  "models/entity/",
+  "models/entity/enderman.geo.json",
+  "textures/",
+  "textures/entity/",
+  "textures/entity/enderman/",
+  "textures/entity/enderman/enderman.tga"
+]

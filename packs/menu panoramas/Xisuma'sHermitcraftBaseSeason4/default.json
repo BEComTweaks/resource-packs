@@ -1,0 +1,13 @@
+[
+  "./",
+  "textures/",
+  "textures/ui/",
+  "textures/ui/panorama_0.png",
+  "textures/ui/panorama_1.png",
+  "textures/ui/panorama_2.png",
+  "textures/ui/panorama_3.png",
+  "textures/ui/panorama_4.png",
+  "textures/ui/panorama_5.png",
+  "ui/",
+  "ui/start_screen.json"
+]

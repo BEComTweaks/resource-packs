@@ -1,0 +1,13 @@
+[
+  "./",
+  "textures/",
+  "textures/terrain_texture.json",
+  "textures/blocks/",
+  "textures/blocks/observer_back.png",
+  "textures/blocks/observer_back_lit.png",
+  "textures/blocks/observer_front_lit.png",
+  "textures/blocks/observer_side.png",
+  "textures/blocks/observer_side_lit.png",
+  "textures/blocks/observer_top.png",
+  "textures/blocks/observer_top_lit.png"
+]
