@@ -25,8 +25,10 @@ header {
 }
 
 .category-label {
+	text-align: center;
+	font-size: 20px;
     background-color: rgb(72,73,74); 
-    padding: 10px;
+    padding: 5px;
     border-radius: 5px;
     cursor: pointer;
     user-select: none;

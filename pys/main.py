@@ -129,6 +129,7 @@ try:
                     credit = credit.replace("]("," - ")
                     credit = credit.replace(")","")
                     credit = credit.replace("#","")
+                    credit = credit.replace("<br>","")
                     print(credit)
                     clrinput("Press Enter to go back", clr="g")
             elif choice == "contributor":
