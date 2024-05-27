@@ -123,8 +123,13 @@ try:
                 pre_commit()
             elif choice == "credits":
                 clear()
-                with open(f"{cdir()}/credits.txt", "r") as credits:
-                    print(credits.read())
+                with open(f"{cdir()}/credits.md", "r") as credits:
+                    credit = credits.read()
+                    credit = credit.replace("[","")
+                    credit = credit.replace("]("," - ")
+                    credit = credit.replace(")","")
+                    credit = credit.replace("#","")
+                    print(credit)
                     clrinput("Press Enter to go back", clr="g")
             elif choice == "contributor":
                 contributor = not (contributor)

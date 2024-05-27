@@ -1,18 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap');
+
 body {
-    font-family: Arial, sans-serif;
+	/* Because I can*/
+    font-family: "Pixelify Sans";
     margin: 0;
     padding: 0;
-    /* background-color: #f4f4f4;*/
     background-image: url('background.png');
-    /* Replace 'path_to_your_image.jpg' with the path to your image */
-    background-size: auto;
-    /* Cover the entire background */
+	background-size: auto;
     background-repeat: repeat;
-    /* Do not repeat the background image */
 }
 
 header {
-   /* background-color: #333;*/
     color: white;
     padding: 10px 0;
     text-align: center;
@@ -27,17 +25,32 @@ header {
 }
 
 .category-label {
-    background-color: black;
-    color: white;
+    background-color: rgb(72,73,74); 
     padding: 10px;
     border-radius: 5px;
     cursor: pointer;
     user-select: none;
     border: opaque;
-    border-style: solid;
-	border-width: 2.5px;
-	border-color: #007bff;
-	border-radius: 5px;
+	border-style: solid;
+	border-width: 5px;
+	border-color: rgb(84,86,88) rgb(49,50,51) rgb(49,50,51) rgb(84,86,88);
+	transition: background-color 0.25s;
+}
+
+.category-label:hover {
+	background-color: rgb(83,84,85); 
+	border: opaque;
+	border-style: solid;
+	border-width: 5px;
+	border-color: rgb(84,86,88) rgb(49,50,51) rgb(49,50,51) rgb(84,86,88);
+}
+
+.category-label:active {
+	background-color: rgb(63,133,39);
+	border: opaque;
+	border-style: solid;
+	border-width: 5px;
+	border-color: rgb(3,3,3);
 }
 
 .tweaks {
@@ -45,23 +58,25 @@ header {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 10px;
     margin-top: 10px;
-    align-items: center;
+    align-items: top;
     text-align: center;
 }
 
 .tweak {
-    background: rgba(255, 255, 255, 0.5);
-   /* background: white;*/
+    background: rgb(72, 73, 74);
     padding: 10px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(49, 50, 51, 1);
     cursor: pointer;
     display: flex;
     flex-direction: column;
+    border: 2px solid #111;
+    border-radius: 5px;
+	transition: background 0.375s;
 }
 
 .tweak.selected {
-    border: 2px solid #007bff;
+	background: rgb(63, 133, 39);
+    border: 2px solid #111;
 }
 
 .tweak-title {
@@ -69,12 +84,11 @@ header {
 }
 
 .download-selected-button {
-    background: blue;
-    color: white;
+    background: rgb(72, 73, 74);
     padding: 10px 20px;
-    border: none;
+    border: 2px solid #111;
     border-radius: 5px;
-    cursor: pointer;
+	cursor: pointer;
     transition: background 0.3s;
     display: block;
     margin: 20px auto;
@@ -82,7 +96,11 @@ header {
 }
 
 .download-selected-button:hover {
-    background: #0056b3;
+    background: rgb(63, 133, 39);
+}
+
+.download-selected-button:active {
+	background: rgb(53, 123, 29);
 }
 
 .footer {
@@ -97,4 +115,12 @@ header {
 
 .tweak input[type="checkbox"] {
     display: none;
+}
+
+.credits-footer {
+	background: rgb(72, 73, 74);
+	border: solid;
+	border-radius: 5px;
+	border-color: rgb(84,86,88) rgb(49,50,51) rgb(49,50,51) rgb(84,86,88);
+	padding: 20px;
 }

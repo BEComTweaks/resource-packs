@@ -15,11 +15,15 @@ from custom_functions import *
 
 check("clrprint")  # Check for clrprint module
 from clrprint import clrprint
+check("markdown")#  Check for markdown module
+from markdown import markdown
 
 category_start = '\n        <div class="category">\n            <div class="category-label" onclick="toggleCategory(this)">topic_name</div>\n            <div class="tweaks">'
 pack = '\n                <div class="tweak" onclick="toggleSelection(this)" data-category="topic_name"\n                    data-name="pack_id" data-index="pack_index">\n                    <div class="tweak-info">\n                        <input type="checkbox" id="tweaknumber" name="tweak" value="tweaknumber">\n                        <img src="https://raw.githubusercontent.com/BedrockTweaks/Bedrock-Tweaks-Base/main/relloctopackicon"\n                            style="width:82px; height:82px;" alt="pack_name"><br>\n                        <label for="tweaknumber" class="tweak-title">pack_name</label>\n                        <div class="tweak-description">pack_description\n                        </div>\n                    </div>\n                </div>'
 category_end = '\n            </div>\n        </div>'
-html_end = '\n        <button class="download-selected-button" onclick="downloadSelectedTweaks()">Download Selected Tweaks</button>\n    </div>\n    <script src="resource-pack-page.js"></script>\n</body>\n\n</html>'
+with open(f"{cdir()}/credits.md","r") as credits:
+    html_end = f'\n        <button class="download-selected-button" onclick="downloadSelectedTweaks()">Download Selected Tweaks</button>\n    </div>\n    <script src="resource-pack-page.js"></script>\n</body>\n<footer style="auto" class="container">\n    <div class="credits-footer">\n{markdown(credits.read())}\n    </div>\n</footer>\n</html>'
+
 
 def pre_commit():
     html = '<!DOCTYPE html>\n<html lang="en">\n\n<head>\n    <meta charset="UTF-8">\n    <meta name="viewport" content="width=device-width, initial-scale=1.0">\n    <title>Bedrock Tweaks</title>\n    <link rel="stylesheet" href="resource-pack-page.css">\n</head>\n\n<body>\n    <header>\n    <h1>Bedrock Tweaks</h1>\n    </header>\n\n    <div class="container">\n        <!-- Categories -->'
@@ -38,9 +42,9 @@ def pre_commit():
     packs = -1
     clrprint("Going through Packs...", clr="yellow")
     # Counts Packs and Compatibilities
-    pack_jsons=sorted(os.listdir(f'{cdir()}/jsons/packs'))
-    for c,_ in enumerate(pack_jsons):
-        file = load_json(f"{cdir()}/jsons/packs/{pack_jsons[c]}")
+    pack_jsons = sorted(os.listdir(f'{cdir()}/jsons/packs'))
+    for c, _ in enumerate(pack_jsons):
+        file = load_json(f"{cdir()}/jsons/packs/{os.listdir(f'{cdir()}/jsons/packs')[c]}")
         html += category_start.replace("topic_name", file["topic"])
         # Runs through the packs
         for i in range(len(file["packs"])):
@@ -152,7 +156,6 @@ def pre_commit():
                     file_replace.write(replaced)
     clrprint(f"JSON Files are valid!", clr="green")
     clrinput("Press Enter to exit.", clr="green")
-    clear()
 
 
 if __name__ == "__main__":

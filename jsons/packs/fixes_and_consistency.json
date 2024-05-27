@@ -4,7 +4,7 @@
     {
       "pack_id": "PistonInnerFix",
       "pack_name": "Piston Inner Fix",
-      "pack_description": "Fixes Inner Piston texture hole to match the arm size.\nColorful Slimes have this enabled by default, so no need to select this if you have selected colorful slimes!",
+      "pack_description": "Fixes Inner Piston texture hole to match the arm size.",
       "conflict": [
         "HoneySlime",
         "WhiteSlime",

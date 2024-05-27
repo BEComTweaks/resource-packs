@@ -125,7 +125,7 @@
     {
       "pack_id": "StickyPistonSides",
       "pack_name": "Sticky Piston Sides",
-      "pack_description": "Displays Slime on the sides of Sticky Pistons to allow players to easily differentiate them from regular pistons.\nColorful Slimes have this enabled by default, so no need to select this if you have selected colorful slimes!",
+      "pack_description": "Displays Slime on the sides of Sticky Pistons to allow players to easily differentiate them from regular pistons.",
       "conflict": [
         "HoneySlime",
         "WhiteSlime",

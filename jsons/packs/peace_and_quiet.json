@@ -32,7 +32,7 @@
     {
       "pack_id": "QuieterBlazes",
       "pack_name": "Quieter Blazes",
-      "pack_description": "Decreases Blazes sounds by 75%. Blaze's fire crackling sounds aren't affected. Install Quiter Fire to quiten those sounds",
+      "pack_description": "Decreases Blazes sounds by 75%. Install Quieter Fire to quieten fire crackling sounds.",
       "conflict": [],
       "compatibility": []
     },

@@ -152,7 +152,7 @@
     {
       "pack_id": "HDShieldBannerPatterns",
       "pack_name": "HD Shield Banner Patterns",
-      "pack_description": "Swaps out the regular pixel consistent shield banner pattern textures with their regular banner counterparts, so you can see your banner patterns on shields in all their glory.",
+      "pack_description": "Swaps out the regular pixel consistent shield banner pattern textures with their regular banner counterparts for a better view.",
       "conflict": [],
       "compatibility": []
     },
