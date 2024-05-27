@@ -1,43 +1,22 @@
 {
   "Aesthetic": [
-    "AnimatedCampfireItems",
-    "AllayElytra"
+    "AnimatedCampfireItems"
   ],
   "Colorful Slime": [
     "RainbowSlime"
   ],
   "Fixes and Consistency": [
-    "BigDripleafStemFix",
-    "ConsistentBlankDecoratedPot",
-    "ConsistentBambooPlanks",
-    "BrighterRibArmorTrim",
-    "HangingSignLogs",
-    "ConsistentSmoothStone"
+    "BigDripleafStemFix"
   ],
-  "Fun": [
-    "Eyemadillo"
-  ],
+  "Fun": [],
   "HUD and GUI": [
-    "PlusDotCrosshair",
-    "SmootherFont",
     "TransparentUI",
     "HighContrastUI"
   ],
   "Lower and Sides": [],
-  "Menu Panoramas": [
-    "MangroveSwamp",
-    "Xisuma'sHermitcraftBaseSeason9"
-  ],
+  "Menu Panoramas": [],
   "More Zombies": [
     "SteveZombies",
-    "AlexZombies",
-    "AriZombies",
-    "EfeZombies",
-    "KaiZombies",
-    "MakenaZombies",
-    "NoorZombies",
-    "SunnyZombies",
-    "ZuriZombies",
     "AllZombies"
   ],
   "Parity": [],
