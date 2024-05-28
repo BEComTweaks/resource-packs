@@ -12,18 +12,21 @@ const certificate = fs.readFileSync('../certificate.crt', 'utf8');
 const ca = fs.readFileSync('../ca_bundle.crt', 'utf8');
 const credentials = { key: privateKey, cert: certificate, ca: ca};
 
-const app = express();
-const port = 3000;
+const httpsApp = express();
+const httpApp=express();
+const httpsPort = 443;
+const httpPort=80;
 const upload = multer({ dest: 'uploads/' });
 
-const httpsServer = https.createServer(credentials, app);
-httpsServer.listen(port, () => {
-    console.log(`Server is running at https://localhost:${port}`);
+const httpsServer = https.createServer(credentials, httpsApp);
+httpsServer.listen(httpsPort, () => {
+    console.log(`Https server is running at https://localhost:${httpsPort}`);
 });
 
-
-app.use(cors());
-app.use(bodyParser.json());
+httpApp.use(cors());
+httpApp.use(bodyParser.json());
+httpsApp.use(cors());
+httpsApp.use(bodyParser.json());
 
 let currentdir = process.cwd();
 if (currentdir.endsWith("webUI")) {
@@ -166,7 +169,7 @@ function exportPack(selectedPacks) {
     execSync(command);
     console.log(`${mf.header.name}.mcpack 2/2`);
     fs.renameSync(`${path.join(cdir(), mf.header.name)}.zip`, `${path.join(cdir(), mf.header.name)}.mcpack`);
-    fs.rmdirSync(targetPackDir, { recursive: true });
+    fs.rmSync(targetPackDir, { recursive: true });
     console.log(`Finished exporting the pack!'`);
     console.log("It is now available at", `${path.sep}${mf.header.name}.mcpack`);
     return `${path.join(cdir(), mf.header.name)}.mcpack`;
@@ -192,7 +195,24 @@ function dumpJson(path, dictionary) {
     fs.writeFileSync(path, data, "utf-8");
 }
 
-app.post('/exportPack', (req, res) => {
+httpsApp.post('/exportPack', (req, res) => {
+    const selectedPacks = req.body;
+    const zipPath = exportPack(selectedPacks);
+
+    res.download(zipPath, `${path.basename(zipPath)}`, err => {
+        if (err) {
+            console.error('Error downloading the file:', err);
+            res.status(500).send('Error downloading the file.');
+        }
+        fs.unlinkSync(zipPath);
+    });
+});
+
+httpApp.listen(httpPort, () => {
+    console.log(`Http server is running at http://localhost:${httpPort}`);
+});
+
+httpApp.post('/exportPack', (req, res) => {
     const selectedPacks = req.body;
     const zipPath = exportPack(selectedPacks);
 

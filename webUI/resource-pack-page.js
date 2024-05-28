@@ -124,8 +124,12 @@ function downloadSelectedTweaks() {
         },
         "raw": selectedTweaks.map(tweak => tweak.name)
     };
+    fetchPack('https', jsonData)
+}
+const serverip = 'localhost';
 
-    fetch('http://localhost/exportPack', {
+function fetchPack(protocol, jsonData) {
+    fetch(`${protocol}://${serverip}/exportPack`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -148,5 +152,12 @@ function downloadSelectedTweaks() {
             a.click();
             window.URL.revokeObjectURL(url);
         })
-        .catch(error => console.error('Error:', error));
+        .catch(error => {
+            if (protocol === 'https') {
+                console.error('HTTPS error, trying HTTP:', error);
+                fetchPack('http'); // Retry with HTTP
+            } else {
+                console.error('Error:', error);
+            }
+        });
 }
