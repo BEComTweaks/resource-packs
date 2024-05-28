@@ -6,10 +6,21 @@ const path = require('path');
 const { v4: uuidv4 } = require('uuid');
 const { execSync } = require('child_process');
 const cors = require('cors');
+const https = require('https');
+const privateKey = fs.readFileSync('../private.key', 'utf8');
+const certificate = fs.readFileSync('../certificate.crt', 'utf8');
+const ca = fs.readFileSync('../ca_bundle.crt', 'utf8');
+const credentials = { key: privateKey, cert: certificate, ca: ca};
 
 const app = express();
-const port = 80;
+const port = 3000;
 const upload = multer({ dest: 'uploads/' });
+
+const httpsServer = https.createServer(credentials, app);
+httpsServer.listen(port, () => {
+    console.log(`Server is running at https://localhost:${port}`);
+});
+
 
 app.use(cors());
 app.use(bodyParser.json());
@@ -192,8 +203,4 @@ app.post('/exportPack', (req, res) => {
         }
         fs.unlinkSync(zipPath);
     });
-});
-
-app.listen(port, () => {
-    console.log(`Server is running at http://localhost:${port}`);
 });

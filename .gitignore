@@ -4,3 +4,8 @@ pys/__pycache__/
 .fleet
 # Ignore my python shortcut because terminal doesnt recognise it
 pys/python.lnk
+
+#https certificate and private key
+certificate.crt
+private.key
+ca_bundle.crt
