@@ -1,9 +1,0 @@
-[
-  "./",
-  "textures/",
-  "textures/blocks/",
-  "textures/blocks/cut_copper.png",
-  "textures/blocks/exposed_cut_copper.png",
-  "textures/blocks/oxidized_cut_copper.png",
-  "textures/blocks/weathered_cut_copper.png"
-]

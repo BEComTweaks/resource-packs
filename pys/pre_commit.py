@@ -34,6 +34,7 @@ def pre_commit():
                         "Utility": [], "Variation": []}
     cstats = [0, 0]
     compatibilities = {}
+    conflicts = {}
     pkicstats = [0, 0]
     incomplete_pkics = {"Aesthetic": [], "Colorful Slime": [], "Fixes and Consistency": [], "Fun": [],
                         "HUD and GUI": [], "Lower and Sides": [], "Menu Panoramas": [], "More Zombies": [],
@@ -71,7 +72,7 @@ def pre_commit():
                 # When pack icon is complete
                 pkicstats[0] += 1
 
-            # Updates Pack Compatibilities
+            # Updates Incomplete Pack Compatibilities
             for comp in range(len(file["packs"][i]["compatibility"])):  # If it is empty, it just skips
                 # Looks at compatibility folders
                 try:
@@ -94,6 +95,10 @@ def pre_commit():
                         compatibilities[file["packs"][i]["pack_id"]] = [file["packs"][i]["compatibility"][comp]]
                     cstats[1] += 1
             
+            # Updates Pack Conflicts
+            conflicts[file["packs"][i]["pack_id"]] = []
+            for conf in range(len(file["packs"][i]["compatibility"])):  # If it is empty, it just skips
+                conflicts[file["packs"][i]["pack_id"]].append(file["packs"][i]["compatibility"][conf])
             # Adds respective HTML
             if file["packs"][i]["pack_id"] not in incomplete_packs[file["topic"]]:
                 packs += 1
@@ -106,12 +111,6 @@ def pre_commit():
                 to_add_pack = to_add_pack.replace("relloctopackicon", f'packs/{file["topic"].lower()}/{file["packs"][i]["pack_id"]}/pack_icon.png')
                 html += to_add_pack
             
-            # Adds list of items in pack
-            dump_json(f'{cdir()}/packs/{file["topic"].lower()}/{file["packs"][i]["pack_id"]}/default.json',
-            lsdir(f'{cdir()}/packs/{file["topic"].lower()}/{file["packs"][i]["pack_id"]}/default'))
-            for comp in file["packs"][i]["compatibility"]:
-                dump_json(f'{cdir()}/packs/{file["topic"].lower()}/{file["packs"][i]["pack_id"]}/{comp}.json',
-                lsdir(f'{cdir()}/packs/{file["topic"].lower()}/{file["packs"][i]["pack_id"]}/{comp}'))
         html += category_end
     html += html_end
     clrprint("Finished Counting!", clr="green")
@@ -120,6 +119,7 @@ def pre_commit():
     dump_json(f"{cdir()}/jsons/others/incomplete_packs.json", incomplete_packs)
     dump_json(f"{cdir()}/jsons/others/incomplete_compatibilities.json", compatibilities)
     dump_json(f"{cdir()}/jsons/others/incomplete_pack_icons.json", incomplete_pkics)
+    dump_json(f"{cdir()}/jsons/others/pack_conflicts.json", conflicts)
     with open(f"{cdir()}/webUI/main.html", "w") as html_file:
         html_file.write(html)
 

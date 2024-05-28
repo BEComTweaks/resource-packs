@@ -2,9 +2,10 @@
 pys/__pycache__/
 # Remove .fleet folder
 .fleet
-# Ignore my python shortcut because terminal doesnt recognise it
+# Ignore my shortcuts because terminal doesnt recognise them
 pys/python.lnk
-
+webUI/node.lnk
+webUI/npm.lnk
 #https certificate and private key
 certificate.crt
 private.key
