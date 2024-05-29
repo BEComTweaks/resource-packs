@@ -15,24 +15,12 @@
   ],
   "Lower and Sides": [],
   "Menu Panoramas": [],
-  "More Zombies": [
-    "SteveZombies",
-    "AllZombies"
-  ],
+  "More Zombies": [],
   "Parity": [],
   "Peace and Quiet": [
-    "QuieterAllays",
-    "QuieterCamels",
-    "QuieterIronGolems",
-    "QuieterSniffers",
-    "QuieterSnowGolems",
-    "QuieterTadpoles",
-    "QuieterWardens",
     "QuieterThunder",
     "QuieterExplosions",
-    "QuieterConsumables",
-    "QuieterSculkSensors",
-    "QuieterSculkShriekers"
+    "QuieterConsumables"
   ],
   "Retro": [
     "OldBedIcons",
