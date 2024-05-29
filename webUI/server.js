@@ -1,6 +1,5 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-const multer = require('multer');
 const fs = require('fs');
 const path = require('path');
 const { v4: uuidv4 } = require('uuid');
@@ -16,7 +15,6 @@ const httpsApp = express();
 const httpApp=express();
 const httpsPort = 443;
 const httpPort=80;
-const upload = multer({ dest: 'uploads/' });
 
 const httpsServer = https.createServer(credentials, httpsApp);
 httpsServer.listen(httpsPort, () => {
