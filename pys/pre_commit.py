@@ -45,8 +45,8 @@ def pre_commit():
     clrprint("Going through Packs...", clr="yellow")
     # Counts Packs and Compatibilities
     pack_jsons = sorted(os.listdir(f'{cdir()}/jsons/packs'))
-    for c, _ in enumerate(pack_jsons):
-        file = load_json(f"{cdir()}/jsons/packs/{os.listdir(f'{cdir()}/jsons/packs')[c]}")
+    for _, j in enumerate(pack_jsons):
+        file = load_json(f"{cdir()}/jsons/packs/{j}")
         html += category_start.replace("topic_name", file["topic"])
         # Runs through the packs
         for i in range(len(file["packs"])):
