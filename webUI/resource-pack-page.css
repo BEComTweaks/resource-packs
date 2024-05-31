@@ -126,3 +126,14 @@ header {
 	border-color: rgb(84,86,88) rgb(49,50,51) rgb(49,50,51) rgb(84,86,88);
 	padding: 20px;
 }
+.file-download {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.file-download input[type="text"],
+.file-download button {
+    margin: 5px;
+    padding: 10px;
+    font-size: 16px;
+}

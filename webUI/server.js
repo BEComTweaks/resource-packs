@@ -57,8 +57,8 @@ function lsdir(directory) {
 }
 
 let mf = loadJson(`${cdir()}/jsons/others/manifest.json`);
-function manifestGenerator(selectedPacks) {
-    mf.header.name = `BTRP-${Math.floor(Math.random() * 1000000)}`;
+function manifestGenerator(selectedPacks,packName) {
+    mf.header.name=packName
     let description = "";
     for (let i in selectedPacks) {
         if (i !== "raw") {
@@ -148,9 +148,8 @@ function mainCopyFile(fromDir) {
     });
 }
 
-function exportPack(selectedPacks) {
-    console.log('test')
-    manifestGenerator(selectedPacks);
+function exportPack(selectedPacks,packName) {
+    manifestGenerator(selectedPacks,packName);
     const fromDir = listOfFromDirectories(selectedPacks);
     console.log(`Exporting at ${cdir()}${path.sep}${mf.header.name}...`);
     fromDir.forEach(from => mainCopyFile(from));
@@ -162,7 +161,7 @@ function exportPack(selectedPacks) {
     if (process.platform === "win32") {
         command = `cd ${cdir()} && powershell Compress-Archive -Path ${mf.header.name} -DestinationPath ${mf.header.name}.zip`;
     } else {
-        command = `cd ${cdir()};zip -r ${mf.header.name}.zip ${mf.header.name}`;
+        command = `cd "${cdir()}";zip -r "${mf.header.name}.zip" "${mf.header.name}"`;
     }
     execSync(command);
     console.log(`${mf.header.name}.mcpack 2/2`);
@@ -194,8 +193,9 @@ function dumpJson(path, dictionary) {
 }
 
 httpsApp.post('/exportPack', (req, res) => {
+    const packName=req.headers.packname
     const selectedPacks = req.body;
-    const zipPath = exportPack(selectedPacks);
+    const zipPath = exportPack(selectedPacks,packName);
 
     res.download(zipPath, `${path.basename(zipPath)}`, err => {
         if (err) {
@@ -211,8 +211,9 @@ httpApp.listen(httpPort, () => {
 });
 
 httpApp.post('/exportPack', (req, res) => {
+    const packName=req.headers.packname
     const selectedPacks = req.body;
-    const zipPath = exportPack(selectedPacks);
+    const zipPath = exportPack(selectedPacks,packName);
 
     res.download(zipPath, `${path.basename(zipPath)}`, err => {
         if (err) {

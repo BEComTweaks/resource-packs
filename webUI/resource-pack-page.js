@@ -10,6 +10,11 @@ function toggleCategory(label) {
 }
 
 function downloadSelectedTweaks() {
+    var packName = document.getElementById('fileNameInput').value;
+    if (!packName) {
+        packName=`BTRP-${String(Math.floor(Math.random()*1000000)).padStart(6,"0")}`
+    }
+    packName=packName.replace(' ','-')
     const selectedTweaks = [];
     const tweakElements = document.querySelectorAll('.tweak.selected');
     tweakElements.forEach(tweak => {
@@ -124,15 +129,16 @@ function downloadSelectedTweaks() {
         },
         "raw": selectedTweaks.map(tweak => tweak.name)
     };
-    fetchPack('https', jsonData)
+    fetchPack('https', jsonData,packName)
 }
 const serverip = 'localhost';
 
-function fetchPack(protocol, jsonData) {
+function fetchPack(protocol, jsonData,packName) {
     fetch(`${protocol}://${serverip}/exportPack`, {
         method: 'POST',
         headers: {
-            'Content-Type': 'application/json'
+            'Content-Type': 'application/json',
+            'packName':packName
         },
         body: JSON.stringify(jsonData)
     })
@@ -147,7 +153,7 @@ function fetchPack(protocol, jsonData) {
             const a = document.createElement('a');
             a.style.display = 'none';
             a.href = url;
-            a.download = 'BTRP.mcpack';
+            a.download = `${packName}.mcpack`;
             document.body.appendChild(a);
             a.click();
             window.URL.revokeObjectURL(url);
@@ -155,7 +161,7 @@ function fetchPack(protocol, jsonData) {
         .catch(error => {
             if (protocol === 'https') {
                 console.error('HTTPS error, trying HTTP:', error);
-                fetchPack('http'); // Retry with HTTP
+                fetchPack('http',jsonData,packName); // Retry with HTTP
             } else {
                 console.error('Error:', error);
             }
