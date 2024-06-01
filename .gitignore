@@ -6,7 +6,9 @@ pys/__pycache__/
 pys/python.lnk
 webUI/node.lnk
 webUI/npm.lnk
-#https certificate and private key
+# https certificate and private key
 certificate.crt
 private.key
-ca_bundle.crt
+ca_bundle.crtcrt
+# node modules
+webUI/node_module
