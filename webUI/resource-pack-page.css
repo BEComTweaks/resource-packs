@@ -71,6 +71,7 @@ header {
     cursor: pointer;
     display: flex;
     flex-direction: column;
+	position: relative;
     border: 2px solid #111;
     border-radius: 5px;
 	transition: background 0.375s;
@@ -79,6 +80,42 @@ header {
 .tweak.selected {
 	background: rgb(63, 133, 39);
     border: 2px solid #111;
+}
+
+.conf-hover-text {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+	transform: translateX(-50%);
+	text-align: center;
+    background: rgb(144, 73, 74);
+    padding: 5px;
+    border-radius: 3px;
+    font-size: 13px;
+    z-index: 1;
+}
+
+.tweak:hover .conf-hover-text {
+    display: block;
+}
+
+.comp-hover-text {
+    display: none;
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+	transform: translateX(-50%);
+	text-align: center;
+    background: rgb(144, 146, 74);
+    padding: 5px;
+    border-radius: 3px;
+    font-size: 13px;
+    z-index: 1;
+}
+
+.tweak:hover .comp-hover-text {
+    display: block;
 }
 
 .tweak-title {
