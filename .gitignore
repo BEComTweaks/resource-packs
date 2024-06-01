@@ -11,4 +11,4 @@ certificate.crt
 private.key
 ca_bundle.crtcrt
 # node modules
-webUI/node_module
+webUI/node_modules
