@@ -27,7 +27,7 @@ header {
 .category-label {
 	text-align: center;
 	font-size: 20px;
-    background-color: rgb(72,73,74); 
+    background-color: var(--dark-one); 
     padding: 5px;
     border-radius: 5px;
     cursor: pointer;
@@ -35,24 +35,20 @@ header {
     border: opaque;
 	border-style: solid;
 	border-width: 5px;
-	border-color: rgb(84,86,88) rgb(49,50,51) rgb(49,50,51) rgb(84,86,88);
+	border-color: var(--category-border);
 	transition: background-color 0.25s;
 }
 
 .category-label:hover {
-	background-color: rgb(83,84,85); 
-	border: opaque;
-	border-style: solid;
-	border-width: 5px;
-	border-color: rgb(84,86,88) rgb(49,50,51) rgb(49,50,51) rgb(84,86,88);
+	background-color: rgb(166,168,170); 
 }
 
 .category-label:active {
-	background-color: rgb(63,133,39);
-	border: opaque;
+	background-color: var(--green-1);
+	/*border: opaque;
 	border-style: solid;
 	border-width: 5px;
-	border-color: rgb(3,3,3);
+	border-color: rgb(3,3,3);*/
 }
 
 .tweaks {
@@ -65,7 +61,7 @@ header {
 }
 
 .tweak {
-    background: rgb(72, 73, 74);
+    background: var(--dark-one);
     padding: 10px;
     box-shadow: 0 0 10px rgba(49, 50, 51, 1);
     cursor: pointer;
@@ -78,7 +74,7 @@ header {
 }
 
 .tweak.selected {
-	background: rgb(63, 133, 39);
+	background: var(--green-1);
     border: 2px solid #111;
 }
 
@@ -90,10 +86,11 @@ header {
 	transform: translateX(-50%);
 	text-align: center;
     background: rgb(144, 73, 74);
-    padding: 5px;
+    padding: 7.5px;
     border-radius: 3px;
     font-size: 13px;
     z-index: 1;
+	white-space: no-wrap;
 }
 
 .tweak:hover .conf-hover-text {
@@ -108,7 +105,7 @@ header {
 	transform: translateX(-50%);
 	text-align: center;
     background: rgb(144, 146, 74);
-    padding: 5px;
+    padding: 0px;
     border-radius: 3px;
     font-size: 13px;
     z-index: 1;
@@ -123,7 +120,7 @@ header {
 }
 
 .download-selected-button {
-    background: rgb(72, 73, 74);
+    background: var(--dark-one);
     padding: 10px 20px;
     border: 2px solid #111;
     border-radius: 5px;
@@ -135,7 +132,7 @@ header {
 }
 
 .download-selected-button:hover {
-    background: rgb(63, 133, 39);
+    background: var(--green-1);
 }
 
 .download-selected-button:active {
@@ -145,8 +142,7 @@ header {
 .footer {
     text-align: center;
     padding: 20px;
-    background-color: #333;
-    color: white;
+    background: var(--dark-one);
     position: fixed;
     width: 100%;
     bottom: 0;
@@ -157,12 +153,13 @@ header {
 }
 
 .credits-footer {
-	background: rgb(72, 73, 74);
+	background: var(--dark-one);
 	border: solid;
 	border-radius: 5px;
-	border-color: rgb(84,86,88) rgb(49,50,51) rgb(49,50,51) rgb(84,86,88);
+	border-color: var(--category-border);
 	padding: 20px;
 }
+
 .file-download {
     margin: 20px 0;
     text-align: center;
@@ -173,4 +170,10 @@ header {
     margin: 5px;
     padding: 10px;
     font-size: 16px;
+}
+
+:root {
+	--category-border: rgb(168,170,172) rgb(98,100,102) rgb(98,100,102) rgb(168,172,176);
+	--dark-one: rgb(144,146,148);
+	--green-1: rgb(126,255,78);
 }

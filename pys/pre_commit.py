@@ -19,8 +19,12 @@ check("markdown")#  Check for markdown module
 from markdown import markdown
 
 category_start = '\n        <div class="category">\n            <div class="category-label" onclick="toggleCategory(this)">topic_name</div>\n            <div class="tweaks">'
-pack = '\n                <div class="tweak" onclick="toggleSelection(this)" data-category="topic_name"\n                    data-name="pack_id" data-index="pack_index">\n                    <div class="tweak-info">\n                        <input type="checkbox" id="tweaknumber" name="tweak" value="tweaknumber">\n                        <img src="https://raw.githubusercontent.com/BedrockTweaks/Bedrock-Tweaks-Base/main/relloctopackicon"\n                            style="width:82px; height:82px;" alt="pack_name"><br>\n                        <label for="tweak" class="tweak-title">pack_name</label>\n                        <div class="tweak-description">pack_description\n                        </div>\n                    </div>\n                </div>'
-#pack = '\n                <div class="tweak" onclick="toggleSelection(this)" data-category="topic_name"\n                    data-name="pack_id" data-index="pack_index">\n                    <div class="tweak-info">\n                        <input type="checkbox" id="tweaknumber" name="tweak" value="tweaknumber">\n                        <img src="../relloctopackicon"\n                            style="width:82px; height:82px;" alt="pack_name"><br>\n                        <label for="tweak" class="tweak-title">pack_name</label>\n                        <div class="tweak-description">pack_description\n                        </div>\n                    </div>\n                </div>'
+pack_start = '\n                <div class="tweak" onclick="toggleSelection(this)" data-category="topic_name"\n                    data-name="pack_id" data-index="pack_index">'
+html_comp = '\n                    <div class="comp-hover-text">Incompatible with: <incompatible></div>'
+pack_mid = '\n                    <div class="tweak-info">\n                        <input type="checkbox" id="tweaknumber" name="tweak" value="tweaknumber">\n                        <img src="https://raw.githubusercontent.com/BedrockTweaks/resource-packs/main/relloctopackicon"\n                            style="width:82px; height:82px;" alt="pack_name"><br>\n                        <label for="tweak" class="tweak-title">pack_name</label>\n                        <div class="tweak-description">pack_description</div>\n                    </div>'
+html_conf = '\n                    <div class="conf-hover-text">Conflicts with: <conflicts></div>'
+pack_end = '\n                </div>'
+
 category_end = '\n            </div>\n        </div>'
 with open(f"{cdir()}/credits.md","r") as credits:
     html_end = f'\n        <button class="download-selected-button" onclick="downloadSelectedTweaks()">Download Selected Tweaks</button>\n    </div>\n    <script src="resource-pack-page.js"></script>\n</body>\n<footer style="auto" class="container">\n    <div class="credits-footer">\n{markdown(credits.read())}\n    </div>\n</footer>\n<footer align="center">\n    <a href="https://github.com/BedrockTweaks/Bedrock-Tweaks-Base">GitHub</a>\n</footer>\n</html>'
@@ -72,7 +76,7 @@ def pre_commit():
             else:
                 # When pack icon is complete
                 pkicstats[0] += 1
-
+            
             # Updates Incomplete Pack Compatibilities
             for comp in range(len(file["packs"][i]["compatibility"])):  # If it is empty, it just skips
                 # Looks at compatibility folders
@@ -98,20 +102,45 @@ def pre_commit():
             
             # Updates Pack Conflicts
             conflicts[file["packs"][i]["pack_id"]] = []
-            for conf in range(len(file["packs"][i]["compatibility"])):  # If it is empty, it just skips
-                conflicts[file["packs"][i]["pack_id"]].append(file["packs"][i]["compatibility"][conf])
+            for conf in range(len(file["packs"][i]["conflict"])):  # If it is empty, it just skips
+                conflicts[file["packs"][i]["pack_id"]].append(file["packs"][i]["conflict"][conf])
+            if conflicts[file["packs"][i]["pack_id"]] == []:
+                del conflicts[file["packs"][i]["pack_id"]]
+            
             # Adds respective HTML
+            compats = ""
+            confs = ""
             if file["packs"][i]["pack_id"] not in incomplete_packs[file["topic"]]:
                 packs += 1
-                to_add_pack = pack.replace("topic_name", file["topic"])
+                to_add_pack = pack_start
+                try:
+                    c = ""
+                    for c in compatibilities[file["packs"][i]["pack_id"]]:
+                        compats += c
+                        compats += ", "
+                    to_add_pack += html_comp.replace('<incompatible>',compats[:-2])
+                except KeyError:
+                    pass
+                to_add_pack += pack_mid
+                try:
+                    c = ""
+                    for c in conflicts[file["packs"][i]["pack_id"]]:
+                        confs += c
+                        confs += ", "
+                    to_add_pack += html_conf.replace('<conflicts>',confs[:-2])
+                except KeyError:
+                    pass
+                to_add_pack += pack_end
+                # Replace vars
+                to_add_pack = to_add_pack.replace("topic_name", file["topic"])
                 to_add_pack = to_add_pack.replace("pack_index", str(i))
                 to_add_pack = to_add_pack.replace("pack_id", file["packs"][i]["pack_id"])
                 to_add_pack = to_add_pack.replace("pack_name", file["packs"][i]["pack_name"])
                 to_add_pack = to_add_pack.replace("pack_description", file["packs"][i]["pack_description"])
                 to_add_pack = to_add_pack.replace("tweaknumber", f"tweak{packs}")
                 to_add_pack = to_add_pack.replace("relloctopackicon", f'packs/{file["topic"].lower()}/{file["packs"][i]["pack_id"]}/pack_icon.png')
+                #to_add_pack = to_add_pack.replace("https://raw.githubusercontent.com/BedrockTweaks/resource-packs/main/","../")
                 html += to_add_pack
-            
         html += category_end
     html += html_end
     clrprint("Finished Counting!", clr="green")
@@ -121,7 +150,7 @@ def pre_commit():
     dump_json(f"{cdir()}/jsons/others/incomplete_compatibilities.json", compatibilities)
     dump_json(f"{cdir()}/jsons/others/incomplete_pack_icons.json", incomplete_pkics)
     dump_json(f"{cdir()}/jsons/others/pack_conflicts.json", conflicts)
-    with open(f"{cdir()}/webUI/main.html", "w") as html_file:
+    with open(f"{cdir()}/webUI/index.html", "w") as html_file:
         html_file.write(html)
 
     # Just some fancy code with regex to update README.md
