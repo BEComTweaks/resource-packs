@@ -12,7 +12,7 @@
 - Made the webUI and backend if we host it
 <br>[JWForever5504](https://github.com/JWForever5504)<br>
 - He made like 40 of the most of incomplete packs. Helped me focus on the python scripts
-<br>[MPAD2277](https://discord.com/users/765852622946435075)<br>
+<br>[MPAD2277/putraanug](https://discord.com/users/765852622946435075)<br>
 - Glass Door, Trapdoors and Circular Logs for 1.20, and most ore pack compatablities
 <br>[lonelyang](https://github.com/lonelyang)<br>
 - Note block pitch particles pack
