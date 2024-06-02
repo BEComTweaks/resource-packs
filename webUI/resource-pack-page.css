@@ -177,3 +177,12 @@ header {
 	--dark-one: rgb(144,146,148);
 	--green-1: rgb(126,255,78);
 }
+.image-container {
+    text-align: center;
+}
+
+#randomTitle {
+    max-width: 100%;
+    height: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
