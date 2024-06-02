@@ -9,6 +9,6 @@ webUI/npm.lnk
 # https certificate and private key
 certificate.crt
 private.key
-ca_bundle.crtcrt
+ca_bundle.crt
 # node modules
 webUI/node_modules

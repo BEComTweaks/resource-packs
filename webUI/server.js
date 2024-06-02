@@ -1,9 +1,32 @@
+const { execSync } = require('child_process');
+const requiredPackages = [
+    'express',
+    'body-parser',
+    'fs',
+    'path',
+    'uuid',
+    'cors',
+    'https'
+];
+
+function checkAndInstallPackages(packages) {
+    packages.forEach(pkg => {
+        try {
+            require.resolve(pkg);
+            console.log(`${pkg} is already installed.`);
+        } catch (e) {
+            console.log(`${pkg} is not installed. Installing...`);
+            execSync(`npm install ${pkg}`, { stdio: 'inherit' });
+        }
+    });
+}
+
+checkAndInstallPackages(requiredPackages);
 const express = require('express');
 const bodyParser = require('body-parser');
 const fs = require('fs');
 const path = require('path');
 const { v4: uuidv4 } = require('uuid');
-const { execSync } = require('child_process');
 const cors = require('cors');
 const https = require('https');
 const privateKey = fs.readFileSync('../private.key', 'utf8');
