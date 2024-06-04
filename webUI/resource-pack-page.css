@@ -20,6 +20,11 @@ header {
     z-index: 1;
 }
 
+.footer-container {
+    position: relative;
+    z-index: 1;
+}
+
 .category {
     margin-bottom: 20px;
 }
@@ -142,6 +147,7 @@ header {
     position: fixed;
     width: 100%;
     bottom: 0;
+    padding: 20px;
 }
 
 .tweak input[type="checkbox"] {
