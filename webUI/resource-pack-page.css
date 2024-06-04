@@ -138,7 +138,6 @@ header {
 
 .footer {
     text-align: center;
-    padding: 20px;
     background: var(--dark-one);
     position: fixed;
     width: 100%;
