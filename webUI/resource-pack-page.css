@@ -5,6 +5,11 @@ body {
     font-family: "Pixelify Sans";
     margin: 0;
     padding: 0;
+    background-image: url('background.png');
+	  background-size: auto;
+    background-repeat: repeat;
+    color: white;
+    link-color: white;
 }
 
 header {
@@ -15,8 +20,6 @@ header {
 
 .container {
     padding: 20px;
-    position: relative;
-    z-index: 1;
 }
 
 .category {
@@ -24,30 +27,30 @@ header {
 }
 
 .category-label {
-	text-align: center;
-	font-size: 20px;
+	  text-align: center;
+  	font-size: 20px;
     background-color: var(--dark-one); 
     padding: 5px;
     border-radius: 5px;
     cursor: pointer;
     user-select: none;
     border: opaque;
-	border-style: solid;
-	border-width: 5px;
-	border-color: var(--category-border);
-	transition: background-color 0.25s;
+  	border-style: solid;
+  	border-width: 5px;
+  	border-color: var(--category-border);
+  	transition: background-color 0.25s;
 }
 
 .category-label:hover {
-	background-color: rgb(166,168,170); 
+		background-color: rgb(83,84,85); 
 }
 
 .category-label:active {
-	background-color: var(--green-1);
-	/*border: opaque;
-	border-style: solid;
-	border-width: 5px;
-	border-color: rgb(3,3,3);*/
+		background-color: var(--green-1);
+		/*border: opaque;
+		border-style: solid;
+		border-width: 5px;
+		border-color: rgb(3,3,3);*/
 }
 
 .tweaks {
@@ -66,30 +69,30 @@ header {
     cursor: pointer;
     display: flex;
     flex-direction: column;
-	position: relative;
+		position: relative;
     border: 2px solid #111;
     border-radius: 5px;
-	transition: background 0.375s;
+		transition: background 0.375s;
 }
 
 .tweak.selected {
-	background: var(--green-1);
+		background: var(--green-1);
     border: 2px solid #111;
 }
 
 .conf-hover-text {
-    display: none;
-    position: absolute;
+  	display: none;
+  	position: absolute;
     top: 100%;
-    left: 50%;
-	transform: translateX(-50%);
-	text-align: center;
+  	left: 50%;
+		transform: translateX(-50%);
+		text-align: center;
     background: rgb(144, 73, 74);
     padding: 7.5px;
     border-radius: 3px;
     font-size: 13px;
     z-index: 1;
-	white-space: no-wrap;
+		white-space: no-wrap;
 }
 
 .tweak:hover .conf-hover-text {
@@ -101,9 +104,9 @@ header {
     position: absolute;
     bottom: 100%;
     left: 50%;
-	transform: translateX(-50%);
-	text-align: center;
-    background: rgb(144, 146, 74);
+		transform: translateX(-50%);
+		text-align: center;
+    background: rgb(144, 146, 37);
     padding: 0px;
     border-radius: 3px;
     font-size: 13px;
@@ -123,7 +126,7 @@ header {
     padding: 10px 20px;
     border: 2px solid #111;
     border-radius: 5px;
-	cursor: pointer;
+		cursor: pointer;
     transition: background 0.3s;
     display: block;
     margin: 20px auto;
@@ -135,7 +138,7 @@ header {
 }
 
 .download-selected-button:active {
-	background: rgb(53, 123, 29);
+		background: rgb(53, 123, 29);
 }
 
 .footer {
@@ -152,11 +155,11 @@ header {
 }
 
 .credits-footer {
-	background: var(--dark-one);
-	border: solid;
-	border-radius: 5px;
-	border-color: var(--category-border);
-	padding: 20px;
+		background: var(--dark-one);
+		border: solid;
+		border-radius: 5px;
+		border-color: var(--category-border);
+		padding: 20px;
 }
 
 .file-download {
@@ -171,11 +174,6 @@ header {
     font-size: 16px;
 }
 
-:root {
-	--category-border: rgb(168,170,172) rgb(98,100,102) rgb(98,100,102) rgb(168,172,176);
-	--dark-one: rgb(144,146,148);
-	--green-1: rgb(126,255,78);
-}
 .image-container {
     text-align: center;
     position: relative;
@@ -189,8 +187,8 @@ header {
 }
 
 #background-container {
-    grid-template-columns: repeat(auto-fill, 100px);
-    grid-template-rows: repeat(auto-fill, 100px);
+    grid-template-columns: repeat(auto-fill, 32px);
+    grid-template-rows: repeat(auto-fill, 32px);
     width: 100%;
     height: 100%;
     background-size: cover;
@@ -205,8 +203,14 @@ header {
 }
 
 .tile {
-    width: 100px;
-    height: 100px;
+    width: 32px;
+    height: 32px;
     background-size: cover;
     overflow: hidden;
+}
+
+:root {
+		--category-border: rgb(84,85,86) rgb(49,50,51) rgb(49,50,51) rgb(84,85,86);
+		--dark-one: rgb(72,73,74);
+		--green-1: rgb(63,146,39);
 }
