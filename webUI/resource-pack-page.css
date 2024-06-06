@@ -145,6 +145,7 @@ header {
 }
 .image-container {
     text-align: center;
+	size: cover;
     position: relative;
     z-index: 1;
 }
