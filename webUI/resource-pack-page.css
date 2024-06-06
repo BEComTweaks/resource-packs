@@ -147,7 +147,6 @@ header {
     text-align: center;
     position: relative;
     z-index: 1;
-    flex: 1;
 }
 .tile {
     width: 100px;
