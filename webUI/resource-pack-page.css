@@ -93,13 +93,13 @@ header {
     z-index: 1;
 }
 .credits-footer {
+	color: black;
     border: solid;
-    border-radius: 5px;
+	border-width: 7.5px;
+    border-radius: 12.5px;
     border-color: var(--category-border);
     padding: 20px;
-    background-image: url('images/blocks/deepslate.png');
-    background-repeat: repeat;
-    background-size: 100px 100px;
+    background: var(--dark-one);
 }
 .download-selected-button {
     font-family: "Pixelify Sans";
