@@ -133,7 +133,7 @@ function downloadSelectedTweaks() {
 const serverip = 'localhost';
 
 function fetchPack(protocol, jsonData,packName) {
-    fetch(`${protocol}://${serverip}/exportPack`, {
+    fetch(`${protocol}://${serverip}/exportResourcePack`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
