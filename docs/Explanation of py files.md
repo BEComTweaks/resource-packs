@@ -1,7 +1,6 @@
 # Explanation of how .py files work in pys work
 
-Currently, it has 7 Python Scripts inside, 3 of which I can't bother to document.
-<br>Read their comments to understand more
+Read their comments to understand more
 
 ## [custom_functions.py](https://github.com/NSPC911/Bedrock-Tweaks-Base/blob/main/pys/custom_functions.py)
 
