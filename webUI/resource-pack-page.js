@@ -1,3 +1,11 @@
+function showLoading() {
+    if (window.innerWidth > 768) {
+        document.getElementById('loading-circle').style.display = 'block';
+    }
+}
+function hideLoading() {
+    document.getElementById('loading-circle').style.display = 'none';
+}
 function toggleSelection(element) {
     element.classList.toggle('selected');
     const checkbox = element.querySelector('input[type="checkbox"]');
@@ -12,10 +20,10 @@ function toggleCategory(label) {
 function downloadSelectedTweaks() {
     var packName = document.getElementById('fileNameInput').value;
     if (!packName) {
-        packName=`BTRP-${String(Math.floor(Math.random()*1000000)).padStart(6,"0")}`
+        packName = `BTRP-${String(Math.floor(Math.random() * 1000000)).padStart(6, "0")}`
     }
     packName = packName.replaceAll('/', '-')
-    const selectedTweaks = [];
+        const selectedTweaks = [];
     const tweakElements = document.querySelectorAll('.tweak.selected');
     tweakElements.forEach(tweak => {
         selectedTweaks.push({
@@ -129,41 +137,43 @@ function downloadSelectedTweaks() {
         },
         "raw": selectedTweaks.map(tweak => tweak.name)
     };
-    fetchPack('https', jsonData,packName)
+    fetchPack('https', jsonData, packName)
 }
 const serverip = 'localhost';
 
-function fetchPack(protocol, jsonData,packName) {
+function fetchPack(protocol, jsonData, packName) {
+    showLoading();
     fetch(`${protocol}://${serverip}/exportResourcePack`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
-            'packName':packName
+            'packName': packName
         },
         body: JSON.stringify(jsonData)
     })
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('Network response was not ok');
-            }
-            return response.blob();
-        })
-        .then(blob => {
-            const url = window.URL.createObjectURL(blob);
-            const a = document.createElement('a');
-            a.style.display = 'none';
-            a.href = url;
-            a.download = `${packName}.mcpack`;
-            document.body.appendChild(a);
-            a.click();
-            window.URL.revokeObjectURL(url);
-        })
-        .catch(error => {
-            if (protocol === 'https') {
-                console.error('HTTPS error, trying HTTP:', error);
-                fetchPack('http',jsonData,packName); // Retry with HTTP
-            } else {
-                console.error('Error:', error);
-            }
-        });
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+        hideLoading();
+        return response.blob();
+    })
+    .then(blob => {
+        const url = window.URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.style.display = 'none';
+        a.href = url;
+        a.download = `${packName}.mcpack`;
+        document.body.appendChild(a);
+        a.click();
+        window.URL.revokeObjectURL(url);
+    })
+    .catch(error => {
+        if (protocol === 'https') {
+            console.error('HTTPS error, trying HTTP:', error);
+            fetchPack('http', jsonData, packName); // Retry with HTTP
+        } else {
+            console.error('Error:', error);
+        }
+    });
 }
