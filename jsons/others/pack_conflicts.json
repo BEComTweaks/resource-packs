@@ -1926,9 +1926,6 @@
     "TranslucentSpyglassOverlay",
     "UselessSpyglassOverlay"
   ],
-  "InvisibleTotem": [
-    "TotemShield"
-  ],
   "OreBorders": [
     "OldNetherrack"
   ],
@@ -1965,9 +1962,6 @@
   ],
   "CleanRedstoneDust": [
     "RedstoneWireFix"
-  ],
-  "TotemShield": [
-    "InvisibleTotem"
   ],
   "VariatedGrass": [
     "PebblelessDirt"

@@ -54,13 +54,6 @@
       "compatibility": []
     },
     {
-      "pack_id": "BigDripleafStemFix",
-      "pack_name": "Big Dripleaf Stem Fix",
-      "pack_description": "Fixes an issue where the Big Dripleaf's stem pokes through the leaf when tilted.",
-      "conflict": [],
-      "compatibility": []
-    },
-    {
       "pack_id": "ConsistentBlankDecoratedPot",
       "pack_name": "Consistent Blank Decorated Pot",
       "pack_description": "Adds the gold trim to blank decorated pot sides to match the decorated sides.",

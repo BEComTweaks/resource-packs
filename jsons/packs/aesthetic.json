@@ -178,13 +178,6 @@
       "compatibility": []
     },
     {
-      "pack_id": "AnimatedCampfireItems",
-      "pack_name": "Animated Campfire Items",
-      "pack_description": "Animates Campfire and Soul Campfire items.",
-      "conflict": [],
-      "compatibility": []
-    },
-    {
       "pack_id": "AshlessCampfires",
       "pack_name": "Ashless Campfires",
       "pack_description": "Removes the 'ash' from unlit Campfires and Soul Campfires.",

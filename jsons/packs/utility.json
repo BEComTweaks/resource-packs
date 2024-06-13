@@ -200,15 +200,6 @@
       "compatibility": []
     },
     {
-      "pack_id": "TotemShield",
-      "pack_name": "TotemShield",
-      "pack_description": "Renders a yellow sphere around a player if they are holding a totem. Useful in PVP.",
-      "conflict": [
-        "InvisibleTotem"
-      ],
-      "compatibility": []
-    },
-    {
       "pack_id": "CompassLodestone",
       "pack_name": "Compass Lodestone",
       "pack_description": "Adds North, East, South and West markings on the sides of the Lodestone, so you can use it as a stationary compass.",

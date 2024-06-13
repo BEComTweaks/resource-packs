@@ -1,13 +1,9 @@
 {
-  "Aesthetic": [
-    "AnimatedCampfireItems"
-  ],
+  "Aesthetic": [],
   "Colorful Slime": [
     "RainbowSlime"
   ],
-  "Fixes and Consistency": [
-    "BigDripleafStemFix"
-  ],
+  "Fixes and Consistency": [],
   "Fun": [],
   "HUD and GUI": [
     "TransparentUI",
@@ -40,7 +36,6 @@
     "ShinyAgedAmethystCluster",
     "MusicDiscRedstoneLevelPreview",
     "DirectionalDispensersandDroppers",
-    "TotemShield",
     "VisualFullHoneyStage",
     "NoteBlockPitchParticle"
   ],

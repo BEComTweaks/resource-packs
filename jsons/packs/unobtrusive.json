@@ -187,9 +187,7 @@
       "pack_id": "InvisibleTotem",
       "pack_name": "Invisible Totem",
       "pack_description": "Renders the Totem of Undying as completely invisible when in first person mode.",
-      "conflict": [
-        "TotemShield"
-      ],
+      "conflict": [],
       "compatibility": []
     },
     {
