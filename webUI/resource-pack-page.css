@@ -224,6 +224,21 @@ header {
     height: auto;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+#selected-tweaks {
+    text-align: center;
+    border: 2px solid #111;
+    border-radius: 5px;
+    margin: auto;
+    background: var(--dark-one);
+    padding: 5px;
+    width:75%;
+    overflow-y: auto;
+    max-height:400px;
+}
+.tweak-list-category {
+    font-size: 1.2em;
+    font-weight: bold;
+}
 @keyframes spin {
     0% {
         transform: rotate(0deg);
