@@ -34,8 +34,11 @@ header {
 .category {
     margin-bottom: 20px;
 }
+.category-container {
+	display: none;
+}
 .category-label {
-    text-align: center;
+    text-align: left;
     font-size: 20px;
     background-color: var(--dark-one);
     padding: 5px;
@@ -149,6 +152,14 @@ header {
     position: relative;
     z-index: 1;
 }
+.subtweaks {
+    display: none;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+    margin-top: 10px;
+    align-items: top;
+    text-align: center;
+}
 .tile {
     width: 100px;
     height: 100px;
@@ -167,6 +178,10 @@ header {
     border-radius: 5px;
     transition: background 0.375s;
 }
+.tweak-list-category {
+    font-size: 1.2em;
+    font-weight: bold;
+}
 .tweak.selected {
     background: var(--green-1);
     border: 2px solid #111;
@@ -174,12 +189,13 @@ header {
 .tweak-title {
     font-size: 1.2em;
 }
+
 .tweak input[type="checkbox"] {
     font-family: "Pixelify Sans";
     display: none;
 }
 .tweaks {
-    display: none;
+    display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 10px;
     margin-top: 10px;
@@ -219,6 +235,17 @@ header {
     animation: spin 2s linear infinite;
     margin: auto;
 }
+#selected-tweaks {
+    text-align: center;
+    border: 2px solid #111;
+    border-radius: 5px;
+    margin: auto;
+    background: var(--dark-one);
+    padding: 5px;
+    width:75%;
+    overflow-y: auto;
+    max-height:400px;
+}
 #title {
     max-width: 100%;
     height: auto;
@@ -252,6 +279,9 @@ header {
         margin-right: var(--margin);
    }
     .tweaks {
+        margin-right: var(--margin);
+   }
+   .subtweaks {
         margin-right: var(--margin);
    }
     body {

@@ -48,6 +48,304 @@
     "DragonElytra",
     "PhantomElytra"
   ],
+  "SteveZombies": [
+    "AlexZombies",
+    "AriZombies",
+    "EfeZombies",
+    "KaiZombies",
+    "MakenaZombies",
+    "NoorZombies",
+    "SunnyZombies",
+    "ZuriZombies",
+    "AllZombies"
+  ],
+  "AlexZombies": [
+    "SteveZombies",
+    "AriZombies",
+    "EfeZombies",
+    "KaiZombies",
+    "MakenaZombies",
+    "NoorZombies",
+    "SunnyZombies",
+    "ZuriZombies",
+    "AllZombies"
+  ],
+  "AriZombies": [
+    "SteveZombies",
+    "AlexZombies",
+    "EfeZombies",
+    "KaiZombies",
+    "MakenaZombies",
+    "NoorZombies",
+    "SunnyZombies",
+    "ZuriZombies",
+    "AllZombies"
+  ],
+  "EfeZombies": [
+    "SteveZombies",
+    "AlexZombies",
+    "AriZombies",
+    "KaiZombies",
+    "MakenaZombies",
+    "NoorZombies",
+    "SunnyZombies",
+    "ZuriZombies",
+    "AllZombies"
+  ],
+  "KaiZombies": [
+    "SteveZombies",
+    "AlexZombies",
+    "AriZombies",
+    "EfeZombies",
+    "MakenaZombies",
+    "NoorZombies",
+    "SunnyZombies",
+    "ZuriZombies",
+    "AllZombies"
+  ],
+  "MakenaZombies": [
+    "SteveZombies",
+    "AlexZombies",
+    "AriZombies",
+    "EfeZombies",
+    "KaiZombies",
+    "NoorZombies",
+    "SunnyZombies",
+    "ZuriZombies",
+    "AllZombies"
+  ],
+  "NoorZombies": [
+    "SteveZombies",
+    "AlexZombies",
+    "AriZombies",
+    "EfeZombies",
+    "KaiZombies",
+    "MakenaZombies",
+    "SunnyZombies",
+    "ZuriZombies",
+    "AllZombies"
+  ],
+  "SunnyZombies": [
+    "SteveZombies",
+    "AlexZombies",
+    "AriZombies",
+    "EfeZombies",
+    "KaiZombies",
+    "MakenaZombies",
+    "NoorZombies",
+    "ZuriZombies",
+    "AllZombies"
+  ],
+  "ZuriZombies": [
+    "SteveZombies",
+    "AlexZombies",
+    "AriZombies",
+    "EfeZombies",
+    "KaiZombies",
+    "MakenaZombies",
+    "NoorZombies",
+    "SunnyZombies",
+    "AllZombies"
+  ],
+  "AllZombies": [
+    "SteveZombies",
+    "AlexZombies",
+    "AriZombies",
+    "EfeZombies",
+    "KaiZombies",
+    "MakenaZombies",
+    "NoorZombies",
+    "SunnyZombies",
+    "ZuriZombies"
+  ],
+  "GoldenSavanna": [
+    "LushGrassAllRound"
+  ],
+  "LushGrassAllRound": [
+    "GoldenSavanna"
+  ],
+  "CircularSunandMoon": [
+    "3DSunandMoon"
+  ],
+  "3DSunandMoon": [
+    "CircularSunandMoon"
+  ],
+  "SmootherStones": [
+    "PolishedStonesToBricks",
+    "VariatedUnpolishedStones"
+  ],
+  "PebblelessDirt": [
+    "VariatedMycelium",
+    "VariatedGrass",
+    "VariatedDirt"
+  ],
+  "BrighterNether": [
+    "BlackNetherBricks",
+    "OldNetherrack",
+    "LowerCrimsonNylium",
+    "LowerWarpedNylium"
+  ],
+  "UniformOres": [
+    "ClassicOres"
+  ],
+  "WhiterSnow": [
+    "DungeonsDirt",
+    "LegacySnowball"
+  ],
+  "LowerGrass": [
+    "GrassSides",
+    "DungeonsDirt"
+  ],
+  "GrassSides": [
+    "LowerGrass",
+    "DungeonsDirt"
+  ],
+  "LowerMycelium": [
+    "MyceliumSides",
+    "DungeonsDirt"
+  ],
+  "MyceliumSides": [
+    "LowerMycelium",
+    "DungeonsDirt"
+  ],
+  "LowerGrassPaths": [
+    "GrassPathSides",
+    "DungeonsDirt"
+  ],
+  "GrassPathSides": [
+    "LowerGrassPaths",
+    "DungeonsDirt"
+  ],
+  "LowerPodzol": [
+    "PodzolSides",
+    "DungeonsDirt"
+  ],
+  "PodzolSides": [
+    "LowerPodzol",
+    "DungeonsDirt"
+  ],
+  "LowerSnow": [
+    "SnowSides",
+    "DungeonsDirt"
+  ],
+  "SnowSides": [
+    "LowerSnow",
+    "DungeonsDirt"
+  ],
+  "LowerCrimsonNylium": [
+    "CrimsonNyliumSides",
+    "OldNetherrack",
+    "BrighterNether"
+  ],
+  "CrimsonNyliumSides": [
+    "LowerCrimsonNylium"
+  ],
+  "LowerWarpedNylium": [
+    "WarpedNyliumSides",
+    "OldNetherrack",
+    "BrighterNether"
+  ],
+  "WarpedNyliumSides": [
+    "LowerWarpedNylium"
+  ],
+  "VariatedGrass": [
+    "PebblelessDirt"
+  ],
+  "VariatedCobblestone": [
+    "OldCobblestone"
+  ],
+  "VariatedStone": [
+    "DungeonsStone"
+  ],
+  "VariatedTerracotta": [
+    "DungeonsTerracotta"
+  ],
+  "VariatedUnpolishedStones": [
+    "SmootherStones"
+  ],
+  "OreBorders": [
+    "OldNetherrack"
+  ],
+  "SuspiciousSand&GravelBorders": [
+    "SusSandandGravel"
+  ],
+  "VisualInfestedStoneItems": [
+    "CrumbledInfestedStoneBlocks"
+  ],
+  "CrumbledInfestedStoneBlocks": [
+    "VisualInfestedStoneItems"
+  ],
+  "MineProgressBar": [
+    "AlternateBlockDestruction"
+  ],
+  "StickyPistonSides": [
+    "HoneySlime",
+    "WhiteSlime",
+    "LightGraySlime",
+    "GraySlime",
+    "BlackSlime",
+    "BrownSlime",
+    "RedSlime",
+    "OrangeSlime",
+    "YellowSlime",
+    "GreenSlime",
+    "CyanSlime",
+    "LightBlueSlime",
+    "BlueSlime",
+    "PurpleSlime",
+    "MagentaSlime",
+    "PinkSlime",
+    "RainbowSlime"
+  ],
+  "CleanRedstoneDust": [
+    "RedstoneWireFix"
+  ],
+  "UnobtrusiveRain": [
+    "PhantomRain"
+  ],
+  "UnobtrusiveParticles": [
+    "JavaBoom"
+  ],
+  "BorderlessGlass": [
+    "CleanGlass"
+  ],
+  "BorderlessStainedGlass": [
+    "CleanStainedGlass"
+  ],
+  "BorderlessTintedGlass": [
+    "CleanTintedGlass"
+  ],
+  "CleanGlass": [
+    "BorderlessGlass"
+  ],
+  "CleanStainedGlass": [
+    "BorderlessStainedGlass"
+  ],
+  "CleanTintedGlass": [
+    "BorderlessTintedGlass"
+  ],
+  "TranslucentPumpkinOverlay": [
+    "NoPumpkinOverlay",
+    "OrangePumpkinOverlay"
+  ],
+  "OrangePumpkinOverlay": [
+    "NoPumpkinOverlay",
+    "TranslucentPumpkinOverlay"
+  ],
+  "NoPumpkinOverlay": [
+    "TranslucentPumpkin",
+    "OrangePumpkinOverlay"
+  ],
+  "TranslucentSpyglassOverlay": [
+    "WHAT",
+    "NoSpyglassOverlay",
+    "UselessSpyglassOverlay"
+  ],
+  "NoSpyglassOverlay": [
+    "WHAT",
+    "TranslucentSpyglassOverlay",
+    "UselessSpyglassOverlay"
+  ],
   "HoneySlime": [
     "PistonInnerFix",
     "StickyPistonSides",
@@ -389,68 +687,6 @@
     "MagentaSlime",
     "PinkSlime"
   ],
-  "PistonInnerFix": [
-    "HoneySlime",
-    "WhiteSlime",
-    "LightGraySlime",
-    "GraySlime",
-    "BlackSlime",
-    "BrownSlime",
-    "RedSlime",
-    "OrangeSlime",
-    "YellowSlime",
-    "GreenSlime",
-    "CyanSlime",
-    "LightBlueSlime",
-    "BlueSlime",
-    "PurpleSlime",
-    "MagentaSlime",
-    "PinkSlime",
-    "RainbowSlime"
-  ],
-  "RedstoneWireFix": [
-    "CleanRedstoneDust"
-  ],
-  "ConsistentHelmets": [
-    "GoldenCrown"
-  ],
-  "PixelConsistentWither": [
-    "WitherBee"
-  ],
-  "SusSandandGravel": [
-    "SuspiciousSand&GravelBorders"
-  ],
-  "DarthXisumaPiglins": [
-    "ZombiePigman"
-  ],
-  "EmeraldstoRubies": [
-    "LegacyConsoleEmerald"
-  ],
-  "WitherBee": [
-    "PixelConsistentWither"
-  ],
-  "EnglishEnchantingTable": [
-    "SmootherFont"
-  ],
-  "StandardGalacticAlphabet": [
-    "SmootherFont"
-  ],
-  "BaconBeam": [
-    "PixelConsistentBeaconBeam"
-  ],
-  "PhantomRain": [
-    "UnobtrusiveRain"
-  ],
-  "WHAT": [
-    "TranslucentSpyglassOverlay",
-    "NoSpyglassOverlay",
-    "UselessSpyglass"
-  ],
-  "UselessSpyglass": [
-    "TransparentSpyglassOverlay",
-    "NoSpyglassOverlay",
-    "WHAT"
-  ],
   "NoCrosshair": [
     "SmallerCrosshair",
     "DotCrosshair",
@@ -681,62 +917,6 @@
     "AlphaMinecraftLogo",
     "OldBedrockMenuTitle",
     "JavaMenuTitle"
-  ],
-  "LowerGrass": [
-    "GrassSides",
-    "DungeonsDirt"
-  ],
-  "GrassSides": [
-    "LowerGrass",
-    "DungeonsDirt"
-  ],
-  "LowerMycelium": [
-    "MyceliumSides",
-    "DungeonsDirt"
-  ],
-  "MyceliumSides": [
-    "LowerMycelium",
-    "DungeonsDirt"
-  ],
-  "LowerGrassPaths": [
-    "GrassPathSides",
-    "DungeonsDirt"
-  ],
-  "GrassPathSides": [
-    "LowerGrassPaths",
-    "DungeonsDirt"
-  ],
-  "LowerPodzol": [
-    "PodzolSides",
-    "DungeonsDirt"
-  ],
-  "PodzolSides": [
-    "LowerPodzol",
-    "DungeonsDirt"
-  ],
-  "LowerSnow": [
-    "SnowSides",
-    "DungeonsDirt"
-  ],
-  "SnowSides": [
-    "LowerSnow",
-    "DungeonsDirt"
-  ],
-  "LowerCrimsonNylium": [
-    "CrimsonNyliumSides",
-    "OldNetherrack",
-    "BrighterNether"
-  ],
-  "CrimsonNyliumSides": [
-    "LowerCrimsonNylium"
-  ],
-  "LowerWarpedNylium": [
-    "WarpedNyliumSides",
-    "OldNetherrack",
-    "BrighterNether"
-  ],
-  "WarpedNyliumSides": [
-    "LowerWarpedNylium"
   ],
   "Classic": [
     "Ocean",
@@ -1668,115 +1848,71 @@
     "Xisuma'sHermitcraftBaseSeason7",
     "Xisuma'sHermitcraftBaseSeason8"
   ],
-  "SteveZombies": [
-    "AlexZombies",
-    "AriZombies",
-    "EfeZombies",
-    "KaiZombies",
-    "MakenaZombies",
-    "NoorZombies",
-    "SunnyZombies",
-    "ZuriZombies",
-    "AllZombies"
+  "OldBedrockMenuTitle": [
+    "AlphaMinecraftLogo",
+    "BedrockEditionSubtitle",
+    "JavaMenuTitle"
   ],
-  "AlexZombies": [
-    "SteveZombies",
-    "AriZombies",
-    "EfeZombies",
-    "KaiZombies",
-    "MakenaZombies",
-    "NoorZombies",
-    "SunnyZombies",
-    "ZuriZombies",
-    "AllZombies"
+  "AlphaMinecraftLogo": [
+    "OldBedrockMenuTitle",
+    "BedrockEditionSubtitle",
+    "JavaMenuTitle"
   ],
-  "AriZombies": [
-    "SteveZombies",
-    "AlexZombies",
-    "EfeZombies",
-    "KaiZombies",
-    "MakenaZombies",
-    "NoorZombies",
-    "SunnyZombies",
-    "ZuriZombies",
-    "AllZombies"
+  "ClassicOres": [
+    "UniformOres"
   ],
-  "EfeZombies": [
-    "SteveZombies",
-    "AlexZombies",
-    "AriZombies",
-    "KaiZombies",
-    "MakenaZombies",
-    "NoorZombies",
-    "SunnyZombies",
-    "ZuriZombies",
-    "AllZombies"
+  "OldCobblestone": [
+    "VariatedCobblestone"
   ],
-  "KaiZombies": [
-    "SteveZombies",
-    "AlexZombies",
-    "AriZombies",
-    "EfeZombies",
-    "MakenaZombies",
-    "NoorZombies",
-    "SunnyZombies",
-    "ZuriZombies",
-    "AllZombies"
+  "OldPlanks": [
+    "SmootherWarpedPlanks"
   ],
-  "MakenaZombies": [
-    "SteveZombies",
-    "AlexZombies",
-    "AriZombies",
-    "EfeZombies",
-    "KaiZombies",
-    "NoorZombies",
-    "SunnyZombies",
-    "ZuriZombies",
-    "AllZombies"
+  "OldNetherrack": [
+    "OreBorders",
+    "BrighterNether",
+    "LowerWarpedNylium",
+    "LowerCrimsonNylium"
   ],
-  "NoorZombies": [
-    "SteveZombies",
-    "AlexZombies",
-    "AriZombies",
-    "EfeZombies",
-    "KaiZombies",
-    "MakenaZombies",
-    "SunnyZombies",
-    "ZuriZombies",
-    "AllZombies"
+  "OldWoolColors": [
+    "CleanWool",
+    "SofterWool"
   ],
-  "SunnyZombies": [
-    "SteveZombies",
-    "AlexZombies",
-    "AriZombies",
-    "EfeZombies",
-    "KaiZombies",
-    "MakenaZombies",
-    "NoorZombies",
-    "ZuriZombies",
-    "AllZombies"
+  "ZombiePigman": [
+    "DarthXisumaPiglins"
   ],
-  "ZuriZombies": [
-    "SteveZombies",
-    "AlexZombies",
-    "AriZombies",
-    "EfeZombies",
-    "KaiZombies",
-    "MakenaZombies",
-    "NoorZombies",
-    "SunnyZombies",
-    "AllZombies"
+  "SusSandandGravel": [
+    "SuspiciousSand&GravelBorders"
   ],
-  "AllZombies": [
-    "SteveZombies",
-    "AlexZombies",
-    "AriZombies",
-    "EfeZombies",
-    "KaiZombies",
-    "MakenaZombies",
-    "NoorZombies",
-    "SunnyZombies",
-    "ZuriZombies"
+  "DarthXisumaPiglins": [
+    "ZombiePigman"
+  ],
+  "EmeraldstoRubies": [
+    "LegacyConsoleEmerald"
+  ],
+  "WitherBee": [
+    "PixelConsistentWither"
+  ],
+  "EnglishEnchantingTable": [
+    "SmootherFont"
+  ],
+  "StandardGalacticAlphabet": [
+    "SmootherFont"
+  ],
+  "BaconBeam": [
+    "PixelConsistentBeaconBeam"
+  ],
+  "PhantomRain": [
+    "UnobtrusiveRain"
+  ],
+  "WHAT": [
+    "TranslucentSpyglassOverlay",
+    "NoSpyglassOverlay",
+    "UselessSpyglass"
+  ],
+  "UselessSpyglass": [
+    "TransparentSpyglassOverlay",
+    "NoSpyglassOverlay",
+    "WHAT"
   ],
   "JavaMenuTitle": [
     "AlphaMinecraftLogo",
@@ -1814,134 +1950,7 @@
   "LegacyConsoleSnowball": [
     "WhiterSnow"
   ],
-  "OldBedrockMenuTitle": [
-    "AlphaMinecraftLogo",
-    "BedrockEditionSubtitle",
-    "JavaMenuTitle"
-  ],
-  "AlphaMinecraftLogo": [
-    "OldBedrockMenuTitle",
-    "BedrockEditionSubtitle",
-    "JavaMenuTitle"
-  ],
-  "ClassicOres": [
-    "UniformOres"
-  ],
-  "OldCobblestone": [
-    "VariatedCobblestone"
-  ],
-  "OldPlanks": [
-    "SmootherWarpedPlanks"
-  ],
-  "OldNetherrack": [
-    "OreBorders",
-    "BrighterNether",
-    "LowerWarpedNylium",
-    "LowerCrimsonNylium"
-  ],
-  "OldWoolColors": [
-    "CleanWool",
-    "SofterWool"
-  ],
-  "ZombiePigman": [
-    "DarthXisumaPiglins"
-  ],
-  "GoldenSavanna": [
-    "LushGrassAllRound"
-  ],
-  "LushGrassAllRound": [
-    "GoldenSavanna"
-  ],
-  "CircularSunandMoon": [
-    "3DSunandMoon"
-  ],
-  "3DSunandMoon": [
-    "CircularSunandMoon"
-  ],
-  "SmootherStones": [
-    "PolishedStonesToBricks",
-    "VariatedUnpolishedStones"
-  ],
-  "PebblelessDirt": [
-    "VariatedMycelium",
-    "VariatedGrass",
-    "VariatedDirt"
-  ],
-  "BrighterNether": [
-    "BlackNetherBricks",
-    "OldNetherrack",
-    "LowerCrimsonNylium",
-    "LowerWarpedNylium"
-  ],
-  "UniformOres": [
-    "ClassicOres"
-  ],
-  "WhiterSnow": [
-    "DungeonsDirt",
-    "LegacySnowball"
-  ],
-  "UnobtrusiveRain": [
-    "PhantomRain"
-  ],
-  "UnobtrusiveParticles": [
-    "JavaBoom"
-  ],
-  "BorderlessGlass": [
-    "CleanGlass"
-  ],
-  "BorderlessStainedGlass": [
-    "CleanStainedGlass"
-  ],
-  "BorderlessTintedGlass": [
-    "CleanTintedGlass"
-  ],
-  "CleanGlass": [
-    "BorderlessGlass"
-  ],
-  "CleanStainedGlass": [
-    "BorderlessStainedGlass"
-  ],
-  "CleanTintedGlass": [
-    "BorderlessTintedGlass"
-  ],
-  "TranslucentPumpkinOverlay": [
-    "NoPumpkinOverlay",
-    "OrangePumpkinOverlay"
-  ],
-  "OrangePumpkinOverlay": [
-    "NoPumpkinOverlay",
-    "TranslucentPumpkinOverlay"
-  ],
-  "NoPumpkinOverlay": [
-    "TranslucentPumpkin",
-    "OrangePumpkinOverlay"
-  ],
-  "TranslucentSpyglassOverlay": [
-    "WHAT",
-    "NoSpyglassOverlay",
-    "UselessSpyglassOverlay"
-  ],
-  "NoSpyglassOverlay": [
-    "WHAT",
-    "TranslucentSpyglassOverlay",
-    "UselessSpyglassOverlay"
-  ],
-  "OreBorders": [
-    "OldNetherrack"
-  ],
-  "SuspiciousSand&GravelBorders": [
-    "SusSandandGravel"
-  ],
-  "VisualInfestedStoneItems": [
-    "CrumbledInfestedStoneBlocks"
-  ],
-  "CrumbledInfestedStoneBlocks": [
-    "VisualInfestedStoneItems"
-  ],
-  "MineProgressBar": [
-    "AlternateBlockDestruction"
-  ],
-  "StickyPistonSides": [
+  "PistonInnerFix": [
     "HoneySlime",
     "WhiteSlime",
     "LightGraySlime",
@@ -1960,22 +1969,13 @@
     "PinkSlime",
     "RainbowSlime"
   ],
-  "CleanRedstoneDust": [
-    "RedstoneWireFix"
+  "RedstoneWireFix": [
+    "CleanRedstoneDust"
   ],
-  "VariatedGrass": [
-    "PebblelessDirt"
+  "ConsistentHelmets": [
+    "GoldenCrown"
   ],
-  "VariatedCobblestone": [
-    "OldCobblestone"
-  ],
-  "VariatedStone": [
-    "DungeonsStone"
-  ],
-  "VariatedTerracotta": [
-    "DungeonsTerracotta"
-  ],
-  "VariatedUnpolishedStones": [
-    "SmootherStones"
+  "PixelConsistentWither": [
+    "WitherBee"
   ]
 }

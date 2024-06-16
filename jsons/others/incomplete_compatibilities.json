@@ -5,36 +5,6 @@
   "AshlessCampfires": [
     "SoulSoilSoulCampfires"
   ],
-  "RainbowSlime": [
-    "SolidSlime"
-  ],
-  "PistonInnerFix": [
-    "StickyPistonSides"
-  ],
-  "UpdatedObserverTexture": [
-    "DirectionalObservers"
-  ],
-  "ConsistentOars": [
-    "OarlessBoats"
-  ],
-  "SoulSoilSoulCampfire": [
-    "AshlessCampfires"
-  ],
-  "DoubleSlabFix": [
-    "SmootherStones"
-  ],
-  "SmileyAxolotls": [
-    "GreenAxolotl"
-  ],
-  "GreenAxolotl": [
-    "SmileyAxolotls"
-  ],
-  "ClassicOres": [
-    "UnlitRedstoneOre"
-  ],
-  "OarlessBoats": [
-    "ConsistentOars"
-  ],
   "SmootherStones": [
     "DoubleSlabFix"
   ],
@@ -56,5 +26,35 @@
   "UnlitRedstoneOre": [
     "UniformOres",
     "ClassicOres"
+  ],
+  "RainbowSlime": [
+    "SolidSlime"
+  ],
+  "ClassicOres": [
+    "UnlitRedstoneOre"
+  ],
+  "OarlessBoats": [
+    "ConsistentOars"
+  ],
+  "SmileyAxolotls": [
+    "GreenAxolotl"
+  ],
+  "GreenAxolotl": [
+    "SmileyAxolotls"
+  ],
+  "PistonInnerFix": [
+    "StickyPistonSides"
+  ],
+  "UpdatedObserverTexture": [
+    "DirectionalObservers"
+  ],
+  "ConsistentOars": [
+    "OarlessBoats"
+  ],
+  "SoulSoilSoulCampfire": [
+    "AshlessCampfires"
+  ],
+  "DoubleSlabFix": [
+    "SmootherStones"
   ]
 }
