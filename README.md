@@ -1,3 +1,6 @@
+> [!IMPORTANT]
+> As of 17/6/24, BEComTweaks and its repositories will be archived in favour of BedrockTweaks.
+
 <div align="center">
 
 # BedrockTweaks/resource-packs
