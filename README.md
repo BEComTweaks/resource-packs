@@ -1,6 +1,3 @@
-> [!IMPORTANT]
-> As of 17/6/24, BEComTweaks and its repositories will be archived in favour of BedrockTweaks.
-
 <div align="center">
 
 # BedrockTweaks/resource-packs
@@ -14,6 +11,10 @@
 
 </div>
 <div align="left">
+
+> [!IMPORTANT]
+> As of 2/7/24, BedrockTweaks/Files will be more favoured compared to BEComTweaks.
+> Contributions here will also be directed to BedrockTweaks/Files.
 
 A repo containing every single tweak **possible** ported from <a href="https://vanillatweaks.net/picker/resource-packs">Vanilla Tweaks' Resource Packs</a> with a Command Line and Web Interface.
 
