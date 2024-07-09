@@ -1,12 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
  <head>
-  <meta charset="utf-8"/>
-  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-  <title>
-   Bedrock Tweaks/resource-packs
-  </title>
-  <link href="resource-pack-page.css" rel="stylesheet"/>
+  <meta content="Bedrock Edition Community Tweaks Resource Packs" name="author"/>
+  <meta content="Resource Pack tweak selector. Unofficially updated by BEComTweaks on GitHub" name="description"/>
+  <meta charset="utf-8">
+   <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>
+     Resource Packs
+    </title>
+    <link href="resource-pack-page.css" rel="stylesheet"/>
+    <link href="images/icon.png" rel="icon" type="image/x-icon"/>
+   </meta>
+  </meta>
  </head>
  <body>
   <br/>
@@ -18,49 +23,7 @@
   <div id="background-container">
   </div>
   <script>
-   const textures = [
-    {src: "images/blocks/stone.png", probability: 0.618 },
-    { src: "images/blocks/copper_ore.png", probability: 0.128 },
-    { src: "images/blocks/coal_ore.png", probability: 0.128 },
-    { src: "images/blocks/iron_ore.png", probability: 0.064 },
-    { src: "images/blocks/lapis_ore.png", probability: 0.032 },
-    { src: "images/blocks/redstone_ore.png", probability: 0.016 },
-    { src: "images/blocks/gold_ore.png", probability: 0.008 },
-    { src: "images/blocks/emerald_ore.png", probability: 0.004 },
-    { src: "images/blocks/diamond_ore.png", probability: 0.002 }
-   ];
-   function selectTexture() {
-    const rand = Math.random();
-    let cumulativeProbability = 0;
-    for (const texture of textures) {
-     cumulativeProbability += texture.probability;
-     if (rand < cumulativeProbability) {
-      return texture.src;
-     }
-    }
-   }
-   function createTiles() {
-    const container = document.getElementById("background-container");
-    const numColumns = Math.ceil(window.innerWidth / 100) + 2;
-    const numRows = Math.ceil(window.innerHeight / 100) + 2;
-    container.innerHTML = "";
-    for (let i = 0; i < numColumns; i++) {
-     const rowDiv = document.createElement("div");
-     rowDiv.className = "row";
-     for (let j = 0; j < numRows; j++) {
-     const tile = document.createElement("div");
-     tile.className = "tile";
-     tile.style.backgroundImage = `url("${selectTexture()}")`;
-     rowDiv.appendChild(tile);
-    }
-    container.appendChild(rowDiv);
-    }
-   }
-   createTiles();
-   window.addEventListener("resize", () => {
-    document.getElementById("background-container").innerHTML = "";
-    createTiles();
-    });
+   const textures = [{src: "images/blocks/stone.png", probability: 0.618 },{ src: "images/blocks/copper_ore.png", probability: 0.128 },{ src: "images/blocks/coal_ore.png", probability: 0.128 },{ src: "images/blocks/iron_ore.png", probability: 0.064 },{ src: "images/blocks/lapis_ore.png", probability: 0.032 },{ src: "images/blocks/redstone_ore.png", probability: 0.016 },{ src: "images/blocks/gold_ore.png", probability: 0.008 },{ src: "images/blocks/emerald_ore.png", probability: 0.004 },{ src: "images/blocks/diamond_ore.png", probability: 0.002 }];function selectTexture() {const rand = Math.random();let cumulativeProbability = 0;for (const texture of textures) {cumulativeProbability += texture.probability;if (rand < cumulativeProbability) {return texture.src;}}}function createTiles() {const container = document.getElementById("background-container");const numColumns = Math.ceil(window.innerWidth / 100) + 2;const numRows = Math.ceil(window.innerHeight / 100) + 2;container.innerHTML = "";for (let i = 0; i < numColumns; i++) {const rowDiv = document.createElement("div");rowDiv.className = "row";for (let j = 0; j < numRows; j++) {const tile = document.createElement("div");tile.className = "tile";tile.style.backgroundImage = `url("${selectTexture()}")`;rowDiv.appendChild(tile);}container.appendChild(rowDiv);}}createTiles();window.addEventListener("resize", () => {document.getElementById("background-container").innerHTML = "";createTiles();});
   </script>
   <div class="container">
    <!-- Categories -->
@@ -3739,7 +3702,7 @@ This does NOT change anything with Cut Copper, so Waxed Copper Items is recommen
         Ocean
        </label>
        <div class="tweak-description">
-        Replaces the default Minecraft menu panorama with a 360ï¿½ view of the ocean. (from 1.13)
+        Replaces the default Minecraft menu panorama with a 360° view of the ocean. (from 1.13)
        </div>
       </div>
       <div class="conf-hover-text">
@@ -3755,7 +3718,7 @@ This does NOT change anything with Cut Copper, so Waxed Copper Items is recommen
         Village
        </label>
        <div class="tweak-description">
-        Replaces the default Minecraft menu panorama with a 360ï¿½ view of a village. (from 1.14)
+        Replaces the default Minecraft menu panorama with a 360° view of a village. (from 1.14)
        </div>
       </div>
       <div class="conf-hover-text">
@@ -3771,7 +3734,7 @@ This does NOT change anything with Cut Copper, so Waxed Copper Items is recommen
         Bees
        </label>
        <div class="tweak-description">
-        Replaces the default Minecraft menu panorama with a 360ï¿½ view of a group of happy bees! (from 1.15)
+        Replaces the default Minecraft menu panorama with a 360° view of a group of happy bees! (from 1.15)
        </div>
       </div>
       <div class="conf-hover-text">
@@ -3787,7 +3750,7 @@ This does NOT change anything with Cut Copper, so Waxed Copper Items is recommen
         Nether
        </label>
        <div class="tweak-description">
-        Replaces the default Minecraft menu panorama with a 360ï¿½ view of the Nether! (from 1.16)
+        Replaces the default Minecraft menu panorama with a 360° view of the Nether! (from 1.16)
        </div>
       </div>
       <div class="conf-hover-text">
@@ -3803,7 +3766,7 @@ This does NOT change anything with Cut Copper, so Waxed Copper Items is recommen
         Amethyst Geode
        </label>
        <div class="tweak-description">
-        Replaces the default Minecraft menu panorama with a 360ï¿½ view of an amethyst geode! (from 1.17)
+        Replaces the default Minecraft menu panorama with a 360° view of an amethyst geode! (from 1.17)
        </div>
       </div>
       <div class="conf-hover-text">
@@ -3819,7 +3782,7 @@ This does NOT change anything with Cut Copper, so Waxed Copper Items is recommen
         Sunset Valley
        </label>
        <div class="tweak-description">
-        Replaces the default Minecraft menu panorama with a 360ï¿½ view of a valley under the setting sun! (from 1.18)
+        Replaces the default Minecraft menu panorama with a 360° view of a valley under the setting sun! (from 1.18)
        </div>
       </div>
       <div class="conf-hover-text">
@@ -3835,7 +3798,7 @@ This does NOT change anything with Cut Copper, so Waxed Copper Items is recommen
         Mangrove Swamp
        </label>
        <div class="tweak-description">
-        Replaces the default Minecraft menu panorama with a 360ï¿½ view of a mangrove swamp from 1.19
+        Replaces the default Minecraft menu panorama with a 360° view of a mangrove swamp from 1.19
        </div>
       </div>
       <div class="conf-hover-text">
@@ -3851,7 +3814,7 @@ This does NOT change anything with Cut Copper, so Waxed Copper Items is recommen
         The End
        </label>
        <div class="tweak-description">
-        Replaces the default Minecraft menu panorama with a 360ï¿½ view of the main End island.
+        Replaces the default Minecraft menu panorama with a 360° view of the main End island.
        </div>
       </div>
       <div class="conf-hover-text">
@@ -3867,7 +3830,7 @@ This does NOT change anything with Cut Copper, so Waxed Copper Items is recommen
         pack.png
        </label>
        <div class="tweak-description">
-        Replaces the default Minecraft menu panorama with a 360ï¿½ view of the classic and iconic 'pack.png' location.
+        Replaces the default Minecraft menu panorama with a 360° view of the classic and iconic 'pack.png' location.
        </div>
       </div>
       <div class="conf-hover-text">
@@ -3883,7 +3846,7 @@ This does NOT change anything with Cut Copper, so Waxed Copper Items is recommen
         Nostalgia
        </label>
        <div class="tweak-description">
-        Replaces the default Minecraft menu panorama with a 360ï¿½ view of a neon green plains biome from Alpha.
+        Replaces the default Minecraft menu panorama with a 360° view of a neon green plains biome from Alpha.
        </div>
       </div>
       <div class="conf-hover-text">
@@ -3899,7 +3862,7 @@ This does NOT change anything with Cut Copper, so Waxed Copper Items is recommen
         Oceanside Extreme Hills
        </label>
        <div class="tweak-description">
-        Replaces the default Minecraft menu panorama with a 360ï¿½ view of an Oceanside Extreme Hills.
+        Replaces the default Minecraft menu panorama with a 360° view of an Oceanside Extreme Hills.
        </div>
       </div>
       <div class="conf-hover-text">
@@ -3915,7 +3878,7 @@ This does NOT change anything with Cut Copper, so Waxed Copper Items is recommen
         Lakeside Sunset
        </label>
        <div class="tweak-description">
-        Replaces the default Minecraft menu panorama with a 360ï¿½ view of a Lakeside Sunset.
+        Replaces the default Minecraft menu panorama with a 360° view of a Lakeside Sunset.
        </div>
       </div>
       <div class="conf-hover-text">
@@ -3931,7 +3894,7 @@ This does NOT change anything with Cut Copper, so Waxed Copper Items is recommen
         Underground Lava Pool
        </label>
        <div class="tweak-description">
-        Replaces the default Minecraft menu panorama with a 360ï¿½ view of an underground lava pool.
+        Replaces the default Minecraft menu panorama with a 360° view of an underground lava pool.
        </div>
       </div>
       <div class="conf-hover-text">
@@ -3947,7 +3910,7 @@ This does NOT change anything with Cut Copper, so Waxed Copper Items is recommen
         Acacia Village
        </label>
        <div class="tweak-description">
-        Replaces the default Minecraft menu panorama with a 360ï¿½ view of an Acacia Village
+        Replaces the default Minecraft menu panorama with a 360° view of an Acacia Village
        </div>
       </div>
       <div class="conf-hover-text">
@@ -3963,7 +3926,7 @@ This does NOT change anything with Cut Copper, so Waxed Copper Items is recommen
         Cherry Grove
        </label>
        <div class="tweak-description">
-        Replaces the default Minecraft menu panorama with a 360ï¿½ view of a Cherry Grove
+        Replaces the default Minecraft menu panorama with a 360° view of a Cherry Grove
        </div>
       </div>
       <div class="conf-hover-text">
@@ -3979,7 +3942,7 @@ This does NOT change anything with Cut Copper, so Waxed Copper Items is recommen
         Halloween 2021
        </label>
        <div class="tweak-description">
-        Replaces the default Minecraft menu panorama with a 360ï¿½ view of a spooky Halloween town
+        Replaces the default Minecraft menu panorama with a 360° view of a spooky Halloween town
        </div>
       </div>
       <div class="conf-hover-text">
@@ -3995,7 +3958,7 @@ This does NOT change anything with Cut Copper, so Waxed Copper Items is recommen
         Halloween 2022
        </label>
        <div class="tweak-description">
-        Replaces the default Minecraft menu panorama with a 360ï¿½ view of a spooky Halloween town
+        Replaces the default Minecraft menu panorama with a 360° view of a spooky Halloween town
        </div>
       </div>
       <div class="conf-hover-text">
@@ -4011,7 +3974,7 @@ This does NOT change anything with Cut Copper, so Waxed Copper Items is recommen
         Trial Chambers
        </label>
        <div class="tweak-description">
-        Replaces the default Minecraft menu panorama with a 360ï¿½ view of the Trial Chambers
+        Replaces the default Minecraft menu panorama with a 360° view of the Trial Chambers
        </div>
       </div>
       <div class="conf-hover-text">
@@ -4027,7 +3990,7 @@ This does NOT change anything with Cut Copper, so Waxed Copper Items is recommen
         TU69 Tutorial World (Legacy Console)
        </label>
        <div class="tweak-description">
-        Replaces the default Minecraft menu panorama with a 360ï¿½ view of Minecraft: Console Edition TU69's tutorial world.
+        Replaces the default Minecraft menu panorama with a 360° view of Minecraft: Console Edition TU69's tutorial world.
        </div>
       </div>
       <div class="conf-hover-text">
@@ -4043,7 +4006,7 @@ This does NOT change anything with Cut Copper, so Waxed Copper Items is recommen
         Stridey's RP Development World
        </label>
        <div class="tweak-description">
-        Replaces the default Minecraft menu panorama with a 360ï¿½ view of Stridey's resource pack development world.
+        Replaces the default Minecraft menu panorama with a 360° view of Stridey's resource pack development world.
        </div>
       </div>
       <div class="conf-hover-text">
@@ -4059,7 +4022,7 @@ This does NOT change anything with Cut Copper, so Waxed Copper Items is recommen
         Xisuma's Hermitcraft Base Season 1
        </label>
        <div class="tweak-description">
-        Replaces the default Minecraft menu panorama with a 360ï¿½ view of Xisuma's base from Hermitcraft Season 1.
+        Replaces the default Minecraft menu panorama with a 360° view of Xisuma's base from Hermitcraft Season 1.
        </div>
       </div>
       <div class="conf-hover-text">
@@ -4075,7 +4038,7 @@ This does NOT change anything with Cut Copper, so Waxed Copper Items is recommen
         Xisuma's Hermitcraft Base Season 2
        </label>
        <div class="tweak-description">
-        Replaces the default Minecraft menu panorama with a 360ï¿½ view of Xisuma's base from Hermitcraft Season 2.
+        Replaces the default Minecraft menu panorama with a 360° view of Xisuma's base from Hermitcraft Season 2.
        </div>
       </div>
       <div class="conf-hover-text">
@@ -4091,7 +4054,7 @@ This does NOT change anything with Cut Copper, so Waxed Copper Items is recommen
         Xisuma's Hermitcraft Base Season 3
        </label>
        <div class="tweak-description">
-        Replaces the default Minecraft menu panorama with a 360ï¿½ view of Xisuma's base from Hermitcraft Season 3.
+        Replaces the default Minecraft menu panorama with a 360° view of Xisuma's base from Hermitcraft Season 3.
        </div>
       </div>
       <div class="conf-hover-text">
@@ -4107,7 +4070,7 @@ This does NOT change anything with Cut Copper, so Waxed Copper Items is recommen
         Xisuma's Hermitcraft Base Season 4
        </label>
        <div class="tweak-description">
-        Replaces the default Minecraft menu panorama with a 360ï¿½ view of Xisuma's base from Hermitcraft Season 4.
+        Replaces the default Minecraft menu panorama with a 360° view of Xisuma's base from Hermitcraft Season 4.
        </div>
       </div>
       <div class="conf-hover-text">
@@ -4123,7 +4086,7 @@ This does NOT change anything with Cut Copper, so Waxed Copper Items is recommen
         Xisuma's Hermitcraft Base Season 5
        </label>
        <div class="tweak-description">
-        Replaces the default Minecraft menu panorama with a 360ï¿½ view of Xisuma's base from Hermitcraft Season 5
+        Replaces the default Minecraft menu panorama with a 360° view of Xisuma's base from Hermitcraft Season 5
        </div>
       </div>
       <div class="conf-hover-text">
@@ -4139,7 +4102,7 @@ This does NOT change anything with Cut Copper, so Waxed Copper Items is recommen
         Xisuma's Hermitcraft Base Season 6
        </label>
        <div class="tweak-description">
-        Replaces the default Minecraft menu panorama with a 360ï¿½ view of Xisuma's base from Hermitcraft Season 6.
+        Replaces the default Minecraft menu panorama with a 360° view of Xisuma's base from Hermitcraft Season 6.
        </div>
       </div>
       <div class="conf-hover-text">
@@ -4155,7 +4118,7 @@ This does NOT change anything with Cut Copper, so Waxed Copper Items is recommen
         Xisuma's Hermitcraft Base Season 7
        </label>
        <div class="tweak-description">
-        Replaces the default Minecraft menu panorama with a 360ï¿½ view of Xisuma's base from Hermitcraft Season 7.
+        Replaces the default Minecraft menu panorama with a 360° view of Xisuma's base from Hermitcraft Season 7.
        </div>
       </div>
       <div class="conf-hover-text">
@@ -4171,7 +4134,7 @@ This does NOT change anything with Cut Copper, so Waxed Copper Items is recommen
         Xisuma's Hermitcraft Base Season 8
        </label>
        <div class="tweak-description">
-        Replaces the default Minecraft menu panorama with a 360ï¿½ view of Xisuma's base from Hermitcraft Season 8.
+        Replaces the default Minecraft menu panorama with a 360° view of Xisuma's base from Hermitcraft Season 8.
        </div>
       </div>
       <div class="conf-hover-text">
@@ -4187,7 +4150,7 @@ This does NOT change anything with Cut Copper, so Waxed Copper Items is recommen
         Xisuma's Hermitcraft Base Season 9
        </label>
        <div class="tweak-description">
-        Replaces the default Minecraft menu panorama with a 360ï¿½ view of Xisuma's base from Hermitcraft Season 9.
+        Replaces the default Minecraft menu panorama with a 360° view of Xisuma's base from Hermitcraft Season 9.
        </div>
       </div>
       <div class="conf-hover-text">
@@ -5582,8 +5545,7 @@ This does NOT change anything with Cut Copper, so Waxed Copper Items is recommen
     </button>
     <div id="loading-circle">
     </div>
-    <div id="selected-tweaks" style="display: none;"></div>
-</div>
+   </div>
   </div>
   <script src="resource-pack-page.js">
   </script>
