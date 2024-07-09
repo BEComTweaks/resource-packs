@@ -19,8 +19,6 @@ from markdown import markdown
 check("bs4","beautifulsoup4")
 check("lxml")
 from bs4 import BeautifulSoup
-check("jsbeautifier")
-import jsbeautifier
 
 category_start = '<div class="category"><div class="category-label" onclick="toggleCategory(this)">topic_name</div><div class="tweaks">'
 pack_start = '<div class="tweak" onclick="toggleSelection(this)" data-category="topic_name"data-name="pack_id" data-index="pack_index">'
@@ -156,7 +154,7 @@ def pre_commit():
                 to_add_pack = to_add_pack.replace("pack_description", file["packs"][i]["pack_description"])
                 to_add_pack = to_add_pack.replace("tweaknumber", f"tweak{packs}")
                 to_add_pack = to_add_pack.replace("relloctopackicon", f'packs/{file["topic"].lower()}/{file["packs"][i]["pack_id"]}/pack_icon.png')
-                #to_add_pack = to_add_pack.replace("https://raw.githubusercontent.com/BedrockTweaks/resource-packs/main/","../")
+                #to_add_pack = to_add_pack.replace("https://raw.githubusercontent.com/BEComTweaks/resource-packs/main/","../")
                 html += to_add_pack
         html += category_end
     clrprint("Finished Counting!", clr="green")
@@ -165,8 +163,7 @@ def pre_commit():
     html += html_end
     soup = BeautifulSoup(html, 'html.parser')
     html = soup.prettify()
-    for i in range(1,10,-1):
-        html = html.replace(f"{' '* i}", f"{' ' * (4 * i)}")
+    
     # Update files
     clrprint("Updating files...", clr="yellow")
     dump_json(f"{cdir()}/jsons/others/incomplete_packs.json", incomplete_packs)
