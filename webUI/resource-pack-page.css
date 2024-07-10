@@ -247,6 +247,7 @@ header {
     max-height:400px;
 }
 #title {
+    margin-top: 35px;
     max-width: 100%;
     height: auto;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -298,4 +299,69 @@ header {
         top: 100px;
         width: 300px;
    }
+   .large-nav {
+     list-style-type: none;
+     margin: 0;
+     padding: 0;
+     overflow: hidden;
+     background-color: #333;
+     position: fixed;
+     top: 0;
+     width: 100%;
+     z-index: 3;
+   }
+}
+@media (max-width: 767px){
+.large-nav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: -1;
+  }
+}
+.small-nav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+}
+li {
+  float: left;
+}
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+.nav-link:link {
+    color: white;
+    background-color: transparent;
+    text-decoration: none;
+}
+.nav-link:visited {
+    color: white;
+    background-color: transparent;
+    text-decoration: none;
+}
+.nav-link:hover {
+    color: white;
+    background-color: transparent;
+    text-decoration: underline;
+}
+.nav-link:active {
+    color: white;
+    background-color: transparent;
+    text-decoration: underline;
 }
