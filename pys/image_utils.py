@@ -12,7 +12,6 @@ if str(os.getcwd()).endswith("system32"):
     os.chdir(os.path.dirname(os.path.realpath(__file__)))
 
 from custom_functions import *
-from selector import val_command
 check("clrprint")
 from clrprint import clrprint
 
@@ -129,7 +128,6 @@ def compress_images():
     if not broken:
         clrprint(f"\r\nCompressed all PNG files in {input_dir[len(str(cdir())):]}")
     clrinput("Press Enter to exit.", clr="green")
-    clear()
 
 def image_utils():
     clrprint("Options:\n","Tweak Images in Directory\n","Compress Images in Directory","\nEnter your choice: ",clr="p,w,w,y",end="")
