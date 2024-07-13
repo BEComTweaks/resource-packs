@@ -5,9 +5,7 @@
       "pack_id": "UnobtrusiveRain",
       "pack_name": "Unobtrusive Rain",
       "pack_description": "Reduces the amount of rain particles for easier vision.",
-      "conflict": [
-        "PhantomRain"
-      ],
+      "conflict": ["PhantomRain"],
       "compatibility": []
     },
     {
@@ -21,9 +19,7 @@
       "pack_id": "UnobtrusiveParticles",
       "pack_name": "Unobtrusive Particles",
       "pack_description": "Makes many particles transparent or hollow for easier vision.",
-      "conflict": [
-        "JavaBoom"
-      ],
+      "conflict": ["JavaBoom"],
       "compatibility": []
     },
     {
@@ -37,54 +33,42 @@
       "pack_id": "BorderlessGlass",
       "pack_name": "Borderless Glass",
       "pack_description": "Gets rid of the border on the edges of Glass to make it cleaner and more transparent.",
-      "conflict": [
-        "CleanGlass"
-      ],
+      "conflict": ["CleanGlass"],
       "compatibility": []
     },
     {
       "pack_id": "BorderlessStainedGlass",
       "pack_name": "Borderless Stained Glass",
       "pack_description": "Gets rid of the border on the edges of Stained Glass to make them cleaner and more transparent.",
-      "conflict": [
-        "CleanStainedGlass"
-      ],
+      "conflict": ["CleanStainedGlass"],
       "compatibility": []
     },
     {
       "pack_id": "BorderlessTintedGlass",
       "pack_name": "Borderless Tinted Glass",
       "pack_description": "Gets rid of the border on the edges of Tinted Glass to make it cleaner and more transparent.",
-      "conflict": [
-        "CleanTintedGlass"
-      ],
+      "conflict": ["CleanTintedGlass"],
       "compatibility": []
     },
     {
       "pack_id": "CleanGlass",
       "pack_name": "Clean Glass",
       "pack_description": "Gets rid of the streaks in Glass, making it look cleaner.",
-      "conflict": [
-        "BorderlessGlass"
-      ],
+      "conflict": ["BorderlessGlass"],
       "compatibility": []
     },
     {
       "pack_id": "CleanStainedGlass",
       "pack_name": "Clean Stained Glass",
       "pack_description": "Gets rid of the streaks in Stained Glass, making them look cleaner.",
-      "conflict": [
-        "BorderlessStainedGlass"
-      ],
+      "conflict": ["BorderlessStainedGlass"],
       "compatibility": []
     },
     {
       "pack_id": "CleanTintedGlass",
       "pack_name": "Clean Tinted Glass",
       "pack_description": "Gets rid of the streaks in Tinted Glass, making it look cleaner.",
-      "conflict": [
-        "BorderlessTintedGlass"
-      ],
+      "conflict": ["BorderlessTintedGlass"],
       "compatibility": []
     },
     {
@@ -92,9 +76,7 @@
       "pack_name": "Unobtrusive Scaffolding",
       "pack_description": "Creates a hole in the top of scaffolding, allowing you to traverse up and down them more comfortably.",
       "conflict": [],
-      "compatibility": [
-        "AccurateScaffolding"
-      ]
+      "compatibility": ["AccurateScaffolding"]
     },
     {
       "pack_id": "UnobtrusiveEnchantmentGlint",
@@ -128,41 +110,28 @@
       "pack_id": "TranslucentPumpkinOverlay",
       "pack_name": "Translucent Pumpkin Overlay",
       "pack_description": "Increases visibility when wearing a Pumpkin.",
-      "conflict": [
-        "NoPumpkinOverlay",
-        "OrangePumpkinOverlay"
-      ],
+      "conflict": ["NoPumpkinOverlay", "OrangePumpkinOverlay"],
       "compatibility": []
     },
     {
       "pack_id": "OrangePumpkinOverlay",
       "pack_name": "Orange Pumpkin Overlay",
       "pack_description": "Makes Pumpkin overlay orange tinted.",
-      "conflict": [
-        "NoPumpkinOverlay",
-        "TranslucentPumpkinOverlay"
-      ],
+      "conflict": ["NoPumpkinOverlay", "TranslucentPumpkinOverlay"],
       "compatibility": []
     },
     {
       "pack_id": "NoPumpkinOverlay",
       "pack_name": "No Pumpkin Overlay",
       "pack_description": "Removes the Pumpkin overlay completes when worn.",
-      "conflict": [
-        "TranslucentPumpkin",
-        "OrangePumpkinOverlay"
-      ],
+      "conflict": ["TranslucentPumpkin", "OrangePumpkinOverlay"],
       "compatibility": []
     },
     {
       "pack_id": "TranslucentSpyglassOverlay",
       "pack_name": "Translucent Spyglass Overlay",
       "pack_description": "Increases visibility when zooming in with a Spyglass.",
-      "conflict": [
-        "WHAT",
-        "NoSpyglassOverlay",
-        "UselessSpyglassOverlay"
-      ],
+      "conflict": ["WHAT", "NoSpyglassOverlay", "UselessSpyglassOverlay"],
       "compatibility": []
     },
     {

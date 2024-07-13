@@ -24,9 +24,7 @@
         "PinkSlime",
         "RainbowSlime"
       ],
-      "compatibility": [
-        "StickyPistonSides"
-      ]
+      "compatibility": ["StickyPistonSides"]
     },
     {
       "pack_id": "SmokerBottomFix",
@@ -40,17 +38,13 @@
       "pack_name": "Updated Observer Texture",
       "pack_description": "Changes the Observer's top texture to fit in-line with the 1.14 default textures, as it was left out in that update.",
       "conflict": [],
-      "compatibility": [
-        "DirectionalObservers"
-      ]
+      "compatibility": ["DirectionalObservers"]
     },
     {
       "pack_id": "RedstoneWireFix",
       "pack_name": "Redstone Wire Fix",
       "pack_description": "Adds some extra pixels to the Redstone Wire texture to make sure the whole line joins up.",
-      "conflict": [
-        "CleanRedstoneDust"
-      ],
+      "conflict": ["CleanRedstoneDust"],
       "compatibility": []
     },
     {
@@ -79,9 +73,7 @@
       "pack_name": "Consistent Oars",
       "pack_description": "Recolors the oars on all boat items to match the boat color itself.",
       "conflict": [],
-      "compatibility": [
-        "OarlessBoats"
-      ]
+      "compatibility": ["OarlessBoats"]
     },
     {
       "pack_id": "CactusBottomFix",
@@ -109,17 +101,13 @@
       "pack_name": "Accurate Scaffolding",
       "pack_description": "Recolors Scaffolding to use Bamboo and String colors to reflect its crafting recipe.",
       "conflict": [],
-      "compatibility": [
-        "UnobtrusiveScaffolding"
-      ]
+      "compatibility": ["UnobtrusiveScaffolding"]
     },
     {
       "pack_id": "ConsistentHelmets",
       "pack_name": "Consistent Helmets",
       "pack_description": "Adds nose-pieces to the helmet items that are missing them (iron, gold & diamond).",
-      "conflict": [
-        "GoldenCrown"
-      ],
+      "conflict": ["GoldenCrown"],
       "compatibility": []
     },
     {
@@ -141,9 +129,7 @@
       "pack_name": "Soul Soil Soul Campfire",
       "pack_description": "Replaces the Soul Campfire's 'ash' texture with Soul Soil for consistency.",
       "conflict": [],
-      "compatibility": [
-        "AshlessCampfires"
-      ]
+      "compatibility": ["AshlessCampfires"]
     },
     {
       "pack_id": "Blaze'sRodsFix",
@@ -171,9 +157,7 @@
       "pack_name": "Double Slab Fix",
       "pack_description": "Gives double slab variants of some blocks a clear line of seperation.",
       "conflict": [],
-      "compatibility": [
-        "SmootherStones"
-      ]
+      "compatibility": ["SmootherStones"]
     },
     {
       "pack_id": "HoeFix",
@@ -207,9 +191,7 @@
       "pack_id": "PixelConsistentWither",
       "pack_name": "Pixel Consistent Wither",
       "pack_description": "Retextures the Wither's texture to be consistent with its size.",
-      "conflict": [
-        "WitherBee"
-      ],
+      "conflict": ["WitherBee"],
       "compatibility": []
     },
     {

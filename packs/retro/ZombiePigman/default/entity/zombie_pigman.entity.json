@@ -93,9 +93,7 @@
           "zombie_attack_bare_hand": "controller.animation.zombie.attack_bare_hand"
         }
       ],
-      "render_controllers": [
-        "controller.render.zombie_pigman"
-      ],
+      "render_controllers": ["controller.render.zombie_pigman"],
       "enable_attachables": true
     }
   }

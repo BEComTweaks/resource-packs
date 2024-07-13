@@ -1,14 +1,6 @@
 # Ignore Python cache files as it forms merge conflicts
 pys/__pycache__/
-# Remove .fleet folder
-.fleet
-# Ignore my shortcuts because terminal doesnt recognise them
-pys/python.lnk
-webUI/node.lnk
-webUI/npm.lnk
-# https certificate and private key
-certificate.crt
-private.key
-ca_bundle.crt
 # node modules
-webUI/node_modules
+package.json
+package-lock.json
+node_modules

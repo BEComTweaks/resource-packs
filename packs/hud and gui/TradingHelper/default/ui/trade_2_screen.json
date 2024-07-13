@@ -13,17 +13,11 @@
   },
   "trade_icons@trade2.toggle_content": {
     "layer": 11,
-    "offset": [
-      0,
-      4
-    ],
+    "offset": [0, 4],
     "$template_toggle": "trade2.toggle_content"
   },
   "trade_toggle_holder": {
-    "size": [
-      "100%",
-      "60%c - 1px"
-    ],
+    "size": ["100%", "60%c - 1px"],
     "modifications": [
       {
         "array_name": "controls",

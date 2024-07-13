@@ -313,10 +313,7 @@
       "pack_id": "SmootherFont",
       "pack_name": "Smoother Font",
       "pack_description": "Changes the Font to be smoother and higher-resolution.",
-      "conflict": [
-        "StandardGalacticAlphabet",
-        "EnglishEnchantingTable"
-      ],
+      "conflict": ["StandardGalacticAlphabet", "EnglishEnchantingTable"],
       "compatibility": []
     },
     {
@@ -351,30 +348,21 @@
       "pack_id": "DarkUI",
       "pack_name": "Dark UI",
       "pack_description": "Changes all inventories and UIs to be darker.",
-      "conflict": [
-        "TransparentUI",
-        "HighContrastUI"
-      ],
+      "conflict": ["TransparentUI", "HighContrastUI"],
       "compatibility": []
     },
     {
       "pack_id": "TransparentUI",
       "pack_name": "Transparent UI",
       "pack_description": "Changes all inventories and UIs to be transparent.",
-      "conflict": [
-        "DarkUI",
-        "HighContrastUI"
-      ],
+      "conflict": ["DarkUI", "HighContrastUI"],
       "compatibility": []
     },
     {
       "pack_id": "HighContrastUI",
       "pack_name": "High Contrast UI",
       "pack_description": "Changes all inventories and UIs to be themed after Minecraft Java Edition's High Contrast pack.",
-      "conflict": [
-        "DarkUI",
-        "TransparentUI"
-      ],
+      "conflict": ["DarkUI", "TransparentUI"],
       "compatibility": []
     },
     {

@@ -8,9 +8,7 @@
           "*": "Material.default"
         }
       ],
-      "textures": [
-        "Array.Xskins[variable.Xvar]"
-      ],
+      "textures": ["Array.Xskins[variable.Xvar]"],
       "arrays": {
         "textures": {
           "Array.Xskins": [

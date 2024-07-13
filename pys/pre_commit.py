@@ -1,8 +1,6 @@
 import os
 from json import *
 import re
-from shutil import get_terminal_size
-import time
 
 if str(os.getcwd()).endswith("system32"):
     # This has to be in every script to prevent FileNotFoundError
@@ -157,7 +155,7 @@ def pre_commit():
     html += html_end
     soup = BeautifulSoup(html, 'html.parser')
     html = soup.prettify()
-    
+    html = html.replace("<br/>", "<br>")
     # Update files
     clrprint("Updating files...", clr="yellow")
     dump_json(f"{cdir()}/jsons/others/incomplete_packs.json", incomplete_packs)
@@ -193,15 +191,11 @@ def pre_commit():
         # When the regex fails if I change the link
         raise IndexError("Regex Failed")
 
-    clrprint("Updated a lot of files", clr="green")
-    clrprint("Validating JSON Files...", clr="yellow")
-    # JSON files validator
-    for root, _, files in os.walk(cdir()):
-        for file in files:
-            file_path = os.path.join(root, file)
-            if file.lower().endswith('.json') and 'node_modules' not in str(file_path):
-                dump_json(file_path,load_json(file_path))
-    clrprint(f"JSON Files are valid!", clr="green")
+    clrprint("Updated a lot of files!", clr="green")
+    clrprint("Making files Prettier", clr="yellow")
+    os.system(f"cd {cdir()}")
+    os.system('npx prettier --write "**/*.{js,ts,css,json,md}" --log-level silent')
+    clrprint("Files are Prettier!", clr="green")
     clrinput("Press Enter to exit.", clr="green")
 
 

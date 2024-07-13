@@ -34,22 +34,14 @@
       "pack_id": "ClassicOres",
       "pack_name": "Classic Ores",
       "pack_description": "Revert all ores to their pre-1.17 textures, including Copper and Deepslate ores.",
-      "conflict": [
-        "UniformOres"
-      ],
-      "compatibility": [
-        "EmeraldstoRubies",
-        "OreBorders",
-        "UnlitRedstoneOre"
-      ]
+      "conflict": ["UniformOres"],
+      "compatibility": ["EmeraldstoRubies", "OreBorders", "UnlitRedstoneOre"]
     },
     {
       "pack_id": "OldCobblestone",
       "pack_name": "Old Cobblestone",
       "pack_description": "Reverts Cobblestone to its Alpha texture.",
-      "conflict": [
-        "VariatedCobblestone"
-      ],
+      "conflict": ["VariatedCobblestone"],
       "compatibility": []
     },
     {
@@ -63,9 +55,7 @@
       "pack_id": "OldPlanks",
       "pack_name": "Old Planks",
       "pack_description": "Reverts all planks and signs to their old textures, including modern plank types.",
-      "conflict": [
-        "SmootherWarpedPlanks"
-      ],
+      "conflict": ["SmootherWarpedPlanks"],
       "compatibility": []
     },
     {
@@ -140,10 +130,7 @@
       "pack_id": "OldWoolColors",
       "pack_name": "Old Wool Colors",
       "pack_description": "Recolors Wool and Carpet to their pre-Java 1.12 colors.",
-      "conflict": [
-        "CleanWool",
-        "SofterWool"
-      ],
+      "conflict": ["CleanWool", "SofterWool"],
       "compatibility": []
     },
     {
@@ -192,9 +179,7 @@
       "pack_id": "ZombiePigman",
       "pack_name": "Zombie Pigman",
       "pack_description": "Changes the texture and model of the Zombified Piglin to be closer to the old Zombie Pigman.",
-      "conflict": [
-        "DarthXisumaPiglins"
-      ],
+      "conflict": ["DarthXisumaPiglins"],
       "compatibility": []
     },
     {
@@ -202,9 +187,7 @@
       "pack_name": "Oarless Boats",
       "pack_description": "Removes the oars from all boat types from their item textures and entity models.",
       "conflict": [],
-      "compatibility": [
-        "ConsistentOars"
-      ]
+      "compatibility": ["ConsistentOars"]
     },
     {
       "pack_id": "OldDoorSound",

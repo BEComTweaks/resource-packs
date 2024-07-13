@@ -49,9 +49,7 @@
           "scary_face": "controller.animation.enderman.scary_face"
         }
       ],
-      "render_controllers": [
-        "controller.render.enderman"
-      ],
+      "render_controllers": ["controller.render.enderman"],
       "spawn_egg": {
         "texture": "spawn_egg",
         "texture_index": 7

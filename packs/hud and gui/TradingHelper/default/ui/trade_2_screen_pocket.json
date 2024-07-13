@@ -2,19 +2,13 @@
   "namespace": "trade2_pocket",
   "toggle_content": {
     "type": "stack_panel",
-    "size": [
-      "100%",
-      "100%cm"
-    ],
+    "size": ["100%", "100%cm"],
     "orientation": "horizontal",
     "controls": [
       {
         "padding_1": {
           "type": "panel",
-          "size": [
-            "fill",
-            0
-          ]
+          "size": ["fill", 0]
         }
       },
       {
@@ -25,19 +19,13 @@
       {
         "padding_2": {
           "type": "panel",
-          "size": [
-            2,
-            0
-          ]
+          "size": [2, 0]
         }
       },
       {
         "padding_2_extra": {
           "type": "panel",
-          "size": [
-            10,
-            0
-          ],
+          "size": [10, 0],
           "bindings": [
             {
               "binding_type": "collection_details"
@@ -57,19 +45,13 @@
       {
         "padding_3": {
           "type": "panel",
-          "size": [
-            2,
-            0
-          ]
+          "size": [2, 0]
         }
       },
       {
         "padding_3_extra": {
           "type": "panel",
-          "size": [
-            6,
-            0
-          ],
+          "size": [6, 0],
           "bindings": [
             {
               "binding_type": "collection_details"
@@ -89,19 +71,13 @@
       {
         "padding_4": {
           "type": "panel",
-          "size": [
-            2,
-            0
-          ]
+          "size": [2, 0]
         }
       },
       {
         "sell_item_holder": {
           "type": "panel",
-          "size": [
-            "200%c",
-            "100%c"
-          ],
+          "size": ["200%c", "100%c"],
           "layer": 2,
           "controls": [
             {
@@ -122,10 +98,7 @@
       {
         "sell_item_holder_with_less_padding": {
           "type": "panel",
-          "size": [
-            "150%c",
-            "100%c"
-          ],
+          "size": ["150%c", "100%c"],
           "layer": 2,
           "controls": [
             {
@@ -146,10 +119,7 @@
       {
         "padding_5": {
           "type": "panel",
-          "size": [
-            "fill",
-            0
-          ]
+          "size": ["fill", 0]
         }
       }
     ]

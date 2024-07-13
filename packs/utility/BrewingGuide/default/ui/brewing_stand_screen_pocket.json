@@ -7,10 +7,7 @@
         "operation": "insert_back",
         "value": {
           "brewing_modifiers_panel@bt_brewing_guide.brewing_modifiers_panel": {
-            "offset": [
-              "2.85%",
-              "-24.5%"
-            ]
+            "offset": ["2.85%", "-24.5%"]
           }
         }
       },
@@ -19,10 +16,7 @@
         "operation": "insert_back",
         "value": {
           "brewing_ingredients_panel@bt_brewing_guide.brewing_ingredients_panel": {
-            "offset": [
-              "8%",
-              "22%"
-            ]
+            "offset": ["8%", "22%"]
           }
         }
       }
@@ -34,10 +28,7 @@
         "control_name": "slots_panel",
         "operation": "remove",
         "where": {
-          "offset": [
-            -5,
-            -10
-          ]
+          "offset": [-5, -10]
         }
       },
       {
@@ -46,10 +37,7 @@
         "value": [
           {
             "slots_panel@slots_panel": {
-              "offset": [
-                15,
-                -10
-              ]
+              "offset": [15, -10]
             }
           }
         ]

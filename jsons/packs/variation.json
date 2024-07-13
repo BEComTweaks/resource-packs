@@ -19,18 +19,14 @@
       "pack_id": "VariatedGrass",
       "pack_name": "Variated Grass",
       "pack_description": "Grass will be randomized using a selection of 16 textures.",
-      "conflict": [
-        "PebblelessDirt"
-      ],
+      "conflict": ["PebblelessDirt"],
       "compatibility": []
     },
     {
       "pack_id": "VariatedCobblestone",
       "pack_name": "Variated Cobblestone",
       "pack_description": "Cobblestone will be randomized using a selection of 7 textures.",
-      "conflict": [
-        "OldCobblestone"
-      ],
+      "conflict": ["OldCobblestone"],
       "compatibility": []
     },
     {
@@ -93,27 +89,21 @@
       "pack_id": "VariatedStone",
       "pack_name": "Variated Stone",
       "pack_description": "Stone will be randomized using a selection of 16 textures.",
-      "conflict": [
-        "DungeonsStone"
-      ],
+      "conflict": ["DungeonsStone"],
       "compatibility": []
     },
     {
       "pack_id": "VariatedTerracotta",
       "pack_name": "Variated Terracotta",
       "pack_description": "Terracotta will be randomized using a selection of 16 textures.",
-      "conflict": [
-        "DungeonsTerracotta"
-      ],
+      "conflict": ["DungeonsTerracotta"],
       "compatibility": []
     },
     {
       "pack_id": "VariatedUnpolishedStones",
       "pack_name": "Variated Unpolished Stones",
       "pack_description": "Unpolished Stones will be randomized using a selection of 16 textures.",
-      "conflict": [
-        "SmootherStones"
-      ],
+      "conflict": ["SmootherStones"],
       "compatibility": []
     },
     {

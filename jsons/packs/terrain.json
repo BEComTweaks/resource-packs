@@ -12,18 +12,14 @@
       "pack_id": "GoldenSavanna",
       "pack_name": "Golden Savanna",
       "pack_description": "Recolors Savanna biomes to have beautiful golden grass.",
-      "conflict": [
-        "LushGrassAllRound"
-      ],
+      "conflict": ["LushGrassAllRound"],
       "compatibility": []
     },
     {
       "pack_id": "LushGrassAllRound",
       "pack_name": "Lush Grass All Round",
       "pack_description": "Makes most of the world use a lush green colormap.",
-      "conflict": [
-        "GoldenSavanna"
-      ],
+      "conflict": ["GoldenSavanna"],
       "compatibility": []
     },
     {
@@ -37,18 +33,14 @@
       "pack_id": "CircularSunandMoon",
       "pack_name": "Circular Sun and Moon",
       "pack_description": "Replaces the default sun and moon, with a circular sun and moon.",
-      "conflict": [
-        "3DSunandMoon"
-      ],
+      "conflict": ["3DSunandMoon"],
       "compatibility": []
     },
     {
       "pack_id": "3DSunandMoon",
       "pack_name": "3D Sun and Moon",
       "pack_description": "Retextures the Sun and Moon textures to give the illusion of being 3D.",
-      "conflict": [
-        "CircularSunandMoon"
-      ],
+      "conflict": ["CircularSunandMoon"],
       "compatibility": []
     },
     {
@@ -76,23 +68,14 @@
       "pack_id": "SmootherStones",
       "pack_name": "Smoother Stones",
       "pack_description": "Smoothens the textures of Diorite and Granite by reducing contrast.",
-      "conflict": [
-        "PolishedStonesToBricks",
-        "VariatedUnpolishedStones"
-      ],
-      "compatibility": [
-        "DoubleSlabFix"
-      ]
+      "conflict": ["PolishedStonesToBricks", "VariatedUnpolishedStones"],
+      "compatibility": ["DoubleSlabFix"]
     },
     {
       "pack_id": "PebblelessDirt",
       "pack_name": "Pebbleless Dirt",
       "pack_description": "Gets rid of the pebbles in Dirt, Rooted Dirt and all Grass Block types.",
-      "conflict": [
-        "VariatedMycelium",
-        "VariatedGrass",
-        "VariatedDirt"
-      ],
+      "conflict": ["VariatedMycelium", "VariatedGrass", "VariatedDirt"],
       "compatibility": []
     },
     {
@@ -125,14 +108,8 @@
       "pack_id": "UniformOres",
       "pack_name": "Uniform Ores",
       "pack_description": "Makes all ores take on the pattern of Diamond Ore.",
-      "conflict": [
-        "ClassicOres"
-      ],
-      "compatibility": [
-        "OreBorders",
-        "EmeraldstoRubies",
-        "UnlitRedstoneOre"
-      ]
+      "conflict": ["ClassicOres"],
+      "compatibility": ["OreBorders", "EmeraldstoRubies", "UnlitRedstoneOre"]
     },
     {
       "pack_id": "FancySunflowers",
@@ -159,10 +136,7 @@
       "pack_id": "WhiterSnow",
       "pack_name": "Whiter Snow",
       "pack_description": "Removes the blue tint from Snow.",
-      "conflict": [
-        "DungeonsDirt",
-        "LegacySnowball"
-      ],
+      "conflict": ["DungeonsDirt", "LegacySnowball"],
       "compatibility": []
     }
   ]

@@ -61,10 +61,10 @@ def folder_creator():
                 # Makes the default directory in PackID
                 os.mkdir(f'{cdir()}/packs/{pack_json["topic"].lower()}/{pack_json["packs"][i]["pack_id"]}/default')
                 if showerror != 0:
-                    clrprint(f'+ |-------> Made folder', '`default`', clr='b,w')
+                    clrprint('+ |-------> Made folder', '`default`', clr='b,w')
             except FileExistsError:
                 if showerror == 2:
-                    clrprint(f'- |-------> Folder', '`default`', 'already exists!', clr='y,w,y')
+                    clrprint('- |-------> Folder', '`default`', 'already exists!', clr='y,w,y')
                 else:
                     pass
 

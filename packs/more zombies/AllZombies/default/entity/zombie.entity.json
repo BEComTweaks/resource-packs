@@ -94,9 +94,7 @@
           "swimming": "controller.animation.zombie.swimming"
         }
       ],
-      "render_controllers": [
-        "controller.render.zombie"
-      ],
+      "render_controllers": ["controller.render.zombie"],
       "enable_attachables": true
     }
   }

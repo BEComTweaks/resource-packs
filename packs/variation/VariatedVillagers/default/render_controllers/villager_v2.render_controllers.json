@@ -21,9 +21,7 @@
           "*": "Material.default"
         }
       ],
-      "textures": [
-        "Array.skins[query.mark_variant]"
-      ]
+      "textures": ["Array.skins[query.mark_variant]"]
     },
     "controller.render.villager_v2_masked": {
       "arrays": {
@@ -91,9 +89,7 @@
           "*": "Material.default"
         }
       ],
-      "textures": [
-        "Array.levels[variable.level_index]"
-      ]
+      "textures": ["Array.levels[variable.level_index]"]
     }
   }
 }

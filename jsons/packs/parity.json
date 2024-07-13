@@ -16,9 +16,7 @@
       "pack_id": "JavaBoom",
       "pack_name": "Java Boom",
       "pack_description": "Gives Explosion particles their texture from Minecraft: Java Edition.",
-      "conflict": [
-        "UnobtrusiveParticles"
-      ],
+      "conflict": ["UnobtrusiveParticles"],
       "compatibility": []
     },
     {
@@ -75,18 +73,14 @@
       "pack_id": "DungeonsStone",
       "pack_name": "Dungeons Stone",
       "pack_description": "Gives Stone its texture from Minecraft: Dungeons (with 12 texture variants).",
-      "conflict": [
-        "VariatedStone"
-      ],
+      "conflict": ["VariatedStone"],
       "compatibility": []
     },
     {
       "pack_id": "DungeonsTerracotta",
       "pack_name": "Dungeons Terracotta",
       "pack_description": "Gives Terracotta its texture from Minecraft: Dungeons.",
-      "conflict": [
-        "VariatedTerracotta"
-      ],
+      "conflict": ["VariatedTerracotta"],
       "compatibility": []
     },
     {
@@ -107,18 +101,14 @@
       "pack_id": "LegacyConsoleEmerald",
       "pack_name": "Legacy Console Emerald",
       "pack_description": "Gives the Emerald its texture from old legacy console editions of Minecraft.",
-      "conflict": [
-        "EmeraldToRuby"
-      ],
+      "conflict": ["EmeraldToRuby"],
       "compatibility": []
     },
     {
       "pack_id": "LegacyConsoleSnowball",
       "pack_name": "Legacy Console Snowball",
       "pack_description": "Gives the Snowball its texture from old legacy console editions of Minecraft.",
-      "conflict": [
-        "WhiterSnow"
-      ],
+      "conflict": ["WhiterSnow"],
       "compatibility": []
     }
   ]

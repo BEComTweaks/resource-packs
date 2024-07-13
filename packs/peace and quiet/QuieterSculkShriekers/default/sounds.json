@@ -3,10 +3,7 @@
     "sculk_shrieker": {
       "events": {
         "break": {
-          "pitch": [
-            0.8,
-            1.0
-          ],
+          "pitch": [0.8, 1.0],
           "sound": "break.sculk_shrieker",
           "volume": 0.05
         },
@@ -17,18 +14,12 @@
           "volume": 0.015
         },
         "item.use.on": {
-          "pitch": [
-            0.8,
-            1.0
-          ],
+          "pitch": [0.8, 1.0],
           "sound": "place.sculk_shrieker",
           "volume": 0.05
         },
         "place": {
-          "pitch": [
-            0.8,
-            1.0
-          ],
+          "pitch": [0.8, 1.0],
           "sound": "break.sculk_shrieker",
           "volume": 0.05
         }
@@ -43,10 +34,7 @@
         "volume": 0.05
       },
       "block.sculk_shrieker.shriek": {
-        "pitch": [
-          0.6,
-          1.0
-        ],
+        "pitch": [0.6, 1.0],
         "sound": "shriek.sculk_shrieker",
         "volume": 0.1
       }

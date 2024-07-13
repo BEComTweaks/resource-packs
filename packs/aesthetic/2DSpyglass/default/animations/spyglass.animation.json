@@ -22,16 +22,8 @@
       "loop": true,
       "bones": {
         "rightitem": {
-          "position": [
-            -1.5,
-            -8.5,
-            0.0
-          ],
-          "rotation": [
-            -45.0,
-            0.0,
-            0.0
-          ]
+          "position": [-1.5, -8.5, 0.0],
+          "rotation": [-45.0, 0.0, 0.0]
         }
       }
     }

@@ -8,10 +8,7 @@
           "*": "variable.is_enchanted ? material.enchanted : material.default"
         }
       ],
-      "textures": [
-        "texture.default",
-        "texture.enchanted"
-      ],
+      "textures": ["texture.default", "texture.enchanted"],
       "part_visibility": [
         {
           "rightitem": "q.get_equipped_item_name('main_hand') == 'totem_of_undying'"
@@ -28,10 +25,7 @@
           "*": "variable.is_enchanted ? material.enchanted : material.default"
         }
       ],
-      "textures": [
-        "texture.default",
-        "texture.enchanted"
-      ],
+      "textures": ["texture.default", "texture.enchanted"],
       "part_visibility": [
         {
           "rightitem": false

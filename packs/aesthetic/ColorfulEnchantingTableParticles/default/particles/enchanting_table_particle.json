@@ -37,10 +37,7 @@
             "variable.particle_random_3 < 0.5 ? Math.round(variable.particle_random_2 * 14) * 8 + 8 : Math.round(variable.particle_random_2 * 10) * 8",
             "variable.particle_random_3 < 0.5 ? 112 : 120"
           ],
-          "uv_size": [
-            8,
-            8
-          ]
+          "uv_size": [8, 8]
         }
       },
       "minecraft:particle_appearance_tinting": {
