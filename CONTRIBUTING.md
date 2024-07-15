@@ -7,6 +7,7 @@ Thank you for considering contributing to BEComTweaks! We appreciate your time a
 ### Apps Needed
 
 To get started with contributing, you will require these apps on desktop
+
 - [Git](https://git-scm.com/)
 - A suitable editor
   - [Fleet](https://www.jetbrains.com/fleet/)
@@ -30,13 +31,14 @@ You can click [here](https://github.com/BEComTweaks/resource-packs/fork) to fork
 
 ### Clone the forked repository to your local copy
 
-Generally the forked repository would be under your account, so cloning it is as simple as 
+Generally the forked repository would be under your account, so cloning it is as simple as
 
 ```bash
 git clone https://github.com/<user>/resource-packs/
 ```
 
 You can also use [GitHub CLI](https://cli.github.com) or [GitHub Desktop](https://github.com/apps/desktop) to clone your repository
+
 - If you do clone with GitHub CLI, remember to set the proper default repository, else you won't be able to push!
 
 If you are using GitHub Dev, the url to it would be https://github.dev/<user>/resource-packs

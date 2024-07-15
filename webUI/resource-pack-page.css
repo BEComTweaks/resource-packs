@@ -43,6 +43,10 @@ header {
   margin-bottom: 20px;
 }
 
+.category-controlled {
+  display: none;
+}
+
 .category-label {
   text-align: center;
   font-size: 20px;
@@ -215,6 +219,16 @@ header {
   transition: background 0.375s;
 }
 
+.tweak-list-category {
+  display: none;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.tweak-list-pack {
+  display: none;
+}
+
 .tweak.selected {
   background: var(--green-1);
   border: 2px solid #111;
@@ -230,7 +244,7 @@ header {
 }
 
 .tweaks {
-  display: none;
+  display: grid;
   grid-template-columns: repeat(auto-fit, minmax(162.5px, 1fr));
   gap: 10px;
   margin-top: 10px;
@@ -296,16 +310,6 @@ header {
   max-height: 400px;
 }
 
-.tweak-list-category {
-  display: none;
-  font-size: 1.2em;
-  font-weight: bold;
-}
-
-.tweak-list-pack {
-  display: none;
-}
-
 @keyframes spin {
   0% {
     transform: rotate(0deg);
@@ -317,10 +321,6 @@ header {
 }
 
 @media (min-width: 768px) {
-  /*.category {
-        margin-right: var(--rightmargin);
-        margin-left: var(--leftmargin);
-    }*/
   .container {
     margin-right: var(--rightmargin);
     margin-left: var(--leftmargin);

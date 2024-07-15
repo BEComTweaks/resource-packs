@@ -1,60 +1,21 @@
 {
-  "SolidSlime": [
-    "RainbowSlime"
-  ],
-  "AshlessCampfires": [
-    "SoulSoilSoulCampfires"
-  ],
-  "SmootherStones": [
-    "DoubleSlabFix"
-  ],
-  "UniformOres": [
-    "UnlitRedstoneOre"
-  ],
-  "HungerPreview": [
-    "MusicDiscRedstoneLevelPreview"
-  ],
-  "MusicDiscRedstoneLevelPreview": [
-    "HungerPreview"
-  ],
-  "StickyPistonSides": [
-    "PistonInnerFix"
-  ],
-  "DirectionalObservers": [
-    "UpdatedObserverTexture"
-  ],
-  "UnlitRedstoneOre": [
-    "UniformOres",
-    "ClassicOres"
-  ],
-  "RainbowSlime": [
-    "SolidSlime"
-  ],
-  "ClassicOres": [
-    "UnlitRedstoneOre"
-  ],
-  "OarlessBoats": [
-    "ConsistentOars"
-  ],
-  "SmileyAxolotls": [
-    "GreenAxolotl"
-  ],
-  "GreenAxolotl": [
-    "SmileyAxolotls"
-  ],
-  "PistonInnerFix": [
-    "StickyPistonSides"
-  ],
-  "UpdatedObserverTexture": [
-    "DirectionalObservers"
-  ],
-  "ConsistentOars": [
-    "OarlessBoats"
-  ],
-  "SoulSoilSoulCampfire": [
-    "AshlessCampfires"
-  ],
-  "DoubleSlabFix": [
-    "SmootherStones"
-  ]
+  "SolidSlime": ["RainbowSlime"],
+  "AshlessCampfires": ["SoulSoilSoulCampfires"],
+  "SmootherStones": ["DoubleSlabFix"],
+  "UniformOres": ["UnlitRedstoneOre"],
+  "HungerPreview": ["MusicDiscRedstoneLevelPreview"],
+  "MusicDiscRedstoneLevelPreview": ["HungerPreview"],
+  "StickyPistonSides": ["PistonInnerFix"],
+  "DirectionalObservers": ["UpdatedObserverTexture"],
+  "UnlitRedstoneOre": ["UniformOres", "ClassicOres"],
+  "RainbowSlime": ["SolidSlime"],
+  "ClassicOres": ["UnlitRedstoneOre"],
+  "OarlessBoats": ["ConsistentOars"],
+  "SmileyAxolotls": ["GreenAxolotl"],
+  "GreenAxolotl": ["SmileyAxolotls"],
+  "PistonInnerFix": ["StickyPistonSides"],
+  "UpdatedObserverTexture": ["DirectionalObservers"],
+  "ConsistentOars": ["OarlessBoats"],
+  "SoulSoilSoulCampfire": ["AshlessCampfires"],
+  "DoubleSlabFix": ["SmootherStones"]
 }
