@@ -25,6 +25,7 @@ pack_mid = '<div class="tweak-info"><input type="checkbox" id="tweaknumber" name
 html_conf = '<div class="conf-hover-text">Conflicts with: <conflicts></div>'
 pack_end = '</div>'
 category_end = '</div></div></div>'
+cat_end_w_subcat = '</div><div class="subcat<index>"></div></div></div>'
 
 with open(f"{cdir()}/credits.md","r") as credits:
     credit_unformatted = credits.read()
@@ -41,6 +42,9 @@ def pre_commit():
     compatibilities = {}
     conflicts = {}
     pkicstats = [0, 0]
+    subcats = 0
+    ignore = False
+    subcat_list = []
     incomplete_pkics = {"Aesthetic": [], "Colorful Slime": [], "Fixes and Consistency": [], "Fun": [],
                         "HUD and GUI": [], "Lower and Sides": [], "Menu Panoramas": [], "More Zombies": [],
                         "Parity": [], "Peace and Quiet": [], "Retro": [], "Terrain": [], "Unobtrusive": [],
@@ -53,103 +57,114 @@ def pre_commit():
             pack_list.append(i)
     # Counts Packs and Compatibilities
     for j in pack_list:
-        if j.endswith("\n"):
-            j = j[:-1]
-        # Subcat not done yet
-        if j.startswith("\t"):
-            j =j[1:]
-        file = load_json(f"{cdir()}/jsons/packs/{j}")
-        html += category_start.replace("topic_name", file["topic"])
-        # Runs through the packs
-        for i in range(len(file["packs"])):
-            # Updates Incomplete Packs
-            try:
-                if os.listdir(f'{cdir()}/packs/{file["topic"].lower()}/{file["packs"][i]["pack_id"]}/default') == []:
-                    # Adds the packid to the topic list
-                    incomplete_packs[file["topic"]].append(file["packs"][i]["pack_id"])
-                    stats[1] += 1
-                else:
-                    # When the packid directory has stuff inside
-                    stats[0] += 1
-            except FileNotFoundError:
-                # If the packs have not updated with the new directory type
-                stats[1] += 1
-                incomplete_packs[file["topic"]].append(file["packs"][i]["pack_id"])
-
-            # Updates Incomplete pack_icon.png
-            if os.path.getsize(f'{cdir()}/packs/{file["topic"].lower()}/{file["packs"][i]["pack_id"]}/pack_icon.png') == os.path.getsize(f'{cdir()}/pack_icons/missing_texture.png'):
-                # Adds packid to topic list
-                incomplete_pkics[file["topic"]].append(file["packs"][i]["pack_id"])
-                pkicstats[1] += 1
-            else:
-                # When pack icon is complete
-                pkicstats[0] += 1
-            
-            # Updates Incomplete Pack Compatibilities
-            for comp in range(len(file["packs"][i]["compatibility"])):  # If it is empty, it just skips
-                # Looks at compatibility folders
+        if not ignore:
+            origj = j
+            if j.endswith("\n"):
+                j = j[:-1]
+            file = load_json(f"{cdir()}/jsons/packs/{j}")
+            html += category_start.replace("topic_name", file["topic"])
+            # Runs through the packs
+            for i in range(len(file["packs"])):
+                # Updates Incomplete Packs
                 try:
-                    if os.listdir(f'{cdir()}/packs/{file["topic"].lower()}/{file["packs"][i]["pack_id"]}/{file["packs"][i]["compatibility"][comp]}') == []:
+                    if os.listdir(f'{cdir()}/packs/{file["topic"].lower()}/{file["packs"][i]["pack_id"]}/default') == []:
+                        # Adds the packid to the topic list
+                        incomplete_packs[file["topic"]].append(file["packs"][i]["pack_id"])
+                        stats[1] += 1
+                    else:
+                        # When the packid directory has stuff inside
+                        stats[0] += 1
+                except FileNotFoundError:
+                    # If the packs have not updated with the new directory type
+                    stats[1] += 1
+                    incomplete_packs[file["topic"]].append(file["packs"][i]["pack_id"])
+
+                # Updates Incomplete pack_icon.png
+                if os.path.getsize(f'{cdir()}/packs/{file["topic"].lower()}/{file["packs"][i]["pack_id"]}/pack_icon.png') == os.path.getsize(f'{cdir()}/pack_icons/missing_texture.png'):
+                    # Adds packid to topic list
+                    incomplete_pkics[file["topic"]].append(file["packs"][i]["pack_id"])
+                    pkicstats[1] += 1
+                else:
+                    # When pack icon is complete
+                    pkicstats[0] += 1
+                
+                # Updates Incomplete Pack Compatibilities
+                for comp in range(len(file["packs"][i]["compatibility"])):  # If it is empty, it just skips
+                    # Looks at compatibility folders
+                    try:
+                        if os.listdir(f'{cdir()}/packs/{file["topic"].lower()}/{file["packs"][i]["pack_id"]}/{file["packs"][i]["compatibility"][comp]}') == []:
+                            # Adds the packid to the list of incomplete compatibilities
+                            try:
+                                compatibilities[file["packs"][i]["pack_id"]].append(file["packs"][i]["compatibility"][comp])
+                            except KeyError:
+                                compatibilities[file["packs"][i]["pack_id"]] = [file["packs"][i]["compatibility"][comp]]
+                            cstats[1] += 1
+                        else:
+                            # When the compatibility directory has something inside
+                            cstats[0] += 1
+                    except FileNotFoundError:
+                        # When the compatibility folder isn't there
                         # Adds the packid to the list of incomplete compatibilities
                         try:
                             compatibilities[file["packs"][i]["pack_id"]].append(file["packs"][i]["compatibility"][comp])
                         except KeyError:
                             compatibilities[file["packs"][i]["pack_id"]] = [file["packs"][i]["compatibility"][comp]]
                         cstats[1] += 1
-                    else:
-                        # When the compatibility directory has something inside
-                        cstats[0] += 1
-                except FileNotFoundError:
-                    # When the compatibility folder isn't there
-                    # Adds the packid to the list of incomplete compatibilities
+                
+                # Updates Pack Conflicts
+                conflicts[file["packs"][i]["pack_id"]] = []
+                for conf in range(len(file["packs"][i]["conflict"])):  # If it is empty, it just skips
+                    conflicts[file["packs"][i]["pack_id"]].append(file["packs"][i]["conflict"][conf])
+                if conflicts[file["packs"][i]["pack_id"]] == []:
+                    del conflicts[file["packs"][i]["pack_id"]]
+                
+                # Adds respective HTML
+                compats = ""
+                confs = ""
+                if file["packs"][i]["pack_id"] not in incomplete_packs[file["topic"]]:
+                    packs += 1
+                    to_add_pack = pack_start
                     try:
-                        compatibilities[file["packs"][i]["pack_id"]].append(file["packs"][i]["compatibility"][comp])
+                        c = ""
+                        for c in compatibilities[file["packs"][i]["pack_id"]]:
+                            compats += c
+                            compats += ", "
+                        to_add_pack += html_comp.replace('<incompatible>',compats[:-2])
                     except KeyError:
-                        compatibilities[file["packs"][i]["pack_id"]] = [file["packs"][i]["compatibility"][comp]]
-                    cstats[1] += 1
-            
-            # Updates Pack Conflicts
-            conflicts[file["packs"][i]["pack_id"]] = []
-            for conf in range(len(file["packs"][i]["conflict"])):  # If it is empty, it just skips
-                conflicts[file["packs"][i]["pack_id"]].append(file["packs"][i]["conflict"][conf])
-            if conflicts[file["packs"][i]["pack_id"]] == []:
-                del conflicts[file["packs"][i]["pack_id"]]
-            
-            # Adds respective HTML
-            compats = ""
-            confs = ""
-            if file["packs"][i]["pack_id"] not in incomplete_packs[file["topic"]]:
-                packs += 1
-                to_add_pack = pack_start
-                try:
-                    c = ""
-                    for c in compatibilities[file["packs"][i]["pack_id"]]:
-                        compats += c
-                        compats += ", "
-                    to_add_pack += html_comp.replace('<incompatible>',compats[:-2])
-                except KeyError:
-                    pass
-                to_add_pack += pack_mid
-                try:
-                    c = ""
-                    for c in conflicts[file["packs"][i]["pack_id"]]:
-                        confs += c
-                        confs += ", "
-                    to_add_pack += html_conf.replace('<conflicts>',confs[:-2])
-                except KeyError:
-                    pass
-                to_add_pack += pack_end
-                # Replace vars
-                to_add_pack = to_add_pack.replace("topic_name", file["topic"])
-                to_add_pack = to_add_pack.replace("pack_index", str(i))
-                to_add_pack = to_add_pack.replace("pack_id", file["packs"][i]["pack_id"])
-                to_add_pack = to_add_pack.replace("pack_name", file["packs"][i]["pack_name"])
-                to_add_pack = to_add_pack.replace("pack_description", file["packs"][i]["pack_description"])
-                to_add_pack = to_add_pack.replace("tweaknumber", f"tweak{packs}")
-                to_add_pack = to_add_pack.replace("relloctopackicon", f'packs/{file["topic"].lower()}/{file["packs"][i]["pack_id"]}/pack_icon.png')
-                #to_add_pack = to_add_pack.replace("https://raw.githubusercontent.com/BEComTweaks/resource-packs/main/","../")
-                html += to_add_pack
-        html += category_end
+                        pass
+                    to_add_pack += pack_mid
+                    try:
+                        c = ""
+                        for c in conflicts[file["packs"][i]["pack_id"]]:
+                            confs += c
+                            confs += ", "
+                        to_add_pack += html_conf.replace('<conflicts>',confs[:-2])
+                    except KeyError:
+                        pass
+                    to_add_pack += pack_end
+                    # Replace vars
+                    to_add_pack = to_add_pack.replace("topic_name", file["topic"])
+                    to_add_pack = to_add_pack.replace("pack_index", str(i))
+                    to_add_pack = to_add_pack.replace("pack_id", file["packs"][i]["pack_id"])
+                    to_add_pack = to_add_pack.replace("pack_name", file["packs"][i]["pack_name"])
+                    to_add_pack = to_add_pack.replace("pack_description", file["packs"][i]["pack_description"])
+                    to_add_pack = to_add_pack.replace("tweaknumber", f"tweak{packs}")
+                    to_add_pack = to_add_pack.replace("relloctopackicon", f'packs/{file["topic"].lower()}/{file["packs"][i]["pack_id"]}/pack_icon.png')
+                    #to_add_pack = to_add_pack.replace("https://raw.githubusercontent.com/BEComTweaks/resource-packs/main/","../")
+                    html += to_add_pack
+            try:
+                if pack_list[pack_list.index(origj) + 1].startswith("\t"):
+                    html += cat_end_w_subcat
+                    html = html.replace("<index>", str(subcats))
+                    subcats += 1
+                    ignore = True
+                    subcat_list.append(pack_list[pack_list.index(origj) + 1][1:])
+                else:
+                    html += category_end
+            except IndexError:
+                html += category_end
+        else:
+            ignore = False
     clrprint("Finished Counting!", clr="green")
     
     # HTML formatting
