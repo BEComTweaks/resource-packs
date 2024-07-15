@@ -19,13 +19,13 @@ check("lxml")
 from bs4 import BeautifulSoup
 
 category_start = '<div class="category"><div class="category-label" onclick="toggleCategory(this)">topic_name</div><div class="category-controlled"><div class="tweaks">'
-pack_start = '<div class="tweak" onclick="toggleSelection(this)" data-category="topic_name"data-name="pack_id" data-index="pack_index">'
+pack_start = '<div class="tweak" onclick="toggleSelection(this)" data-category="topic_name" data-name="pack_id" data-index="pack_index">'
 html_comp = '<div class="comp-hover-text">Incompatible with: <incompatible></div>'
 pack_mid = '<div class="tweak-info"><input type="checkbox" id="tweaknumber" name="tweak" value="tweaknumber"><img src="https://raw.githubusercontent.com/BEComTweaks/resource-packs/main/relloctopackicon"style="width:82px; height:82px;" alt="pack_name"><br><label for="tweak" class="tweak-title">pack_name</label><div class="tweak-description">pack_description</div></div>'
 html_conf = '<div class="conf-hover-text">Conflicts with: <conflicts></div>'
 pack_end = '</div>'
 category_end = '</div></div></div>'
-cat_end_w_subcat = '</div><div class="subcat<index>"></div></div></div>'
+cat_end_w_subcat_no_end = '</div><div class="subcat<index>">'
 
 with open(f"{cdir()}/credits.md","r") as credits:
     credit_unformatted = credits.read()
@@ -57,8 +57,8 @@ def pre_commit():
             pack_list.append(i)
     # Counts Packs and Compatibilities
     for j in pack_list:
+        origj = j
         if not ignore:
-            origj = j
             if j.endswith("\n"):
                 j = j[:-1]
             file = load_json(f"{cdir()}/jsons/packs/{j}")
@@ -152,19 +152,24 @@ def pre_commit():
                     to_add_pack = to_add_pack.replace("relloctopackicon", f'packs/{file["topic"].lower()}/{file["packs"][i]["pack_id"]}/pack_icon.png')
                     #to_add_pack = to_add_pack.replace("https://raw.githubusercontent.com/BEComTweaks/resource-packs/main/","../")
                     html += to_add_pack
-            try:
-                if pack_list[pack_list.index(origj) + 1].startswith("\t"):
-                    html += cat_end_w_subcat
-                    html = html.replace("<index>", str(subcats))
-                    subcats += 1
-                    ignore = True
-                    subcat_list.append(pack_list[pack_list.index(origj) + 1][1:])
-                else:
-                    html += category_end
-            except IndexError:
+        try:
+            if pack_list[pack_list.index(origj) + 1].startswith("\t"):
+                html += cat_end_w_subcat_no_end
+                try:
+                    if not pack_list[pack_list.index(origj) + 2].startswith("\t"):
+                        html += category_end
+                except IndexError:
+                    pass
+                html = html.replace("<index>", str(subcats))
+                subcats += 1
+                ignore = True
+                subcat_list.append(pack_list[pack_list.index(origj) + 1][1:])
+            elif not ignore:
                 html += category_end
-        else:
-            ignore = False
+            else:
+                ignore = False
+        except IndexError:
+            html += category_end
     clrprint("Finished Counting!", clr="green")
     
     # HTML formatting
