@@ -40,15 +40,18 @@ header {
 }
 
 .category {
-  margin-bottom: 20px;
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
 
 .category-controlled {
   display: none;
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
 
 .category-label {
-  text-align: center;
+  text-align: left;
   font-size: 20px;
   background-color: var(--dark-one);
   padding: 5px;
@@ -199,6 +202,41 @@ header {
   z-index: 1;
 }
 
+.subcategory-label {
+  text-align: left;
+  font-size: 20px;
+  width: 90%;
+  background-color: var(--dark-one);
+  padding: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  user-select: none;
+  border: opaque;
+  border-style: solid;
+  border-width: 5px;
+  border-color: var(--category-border);
+  transition: background-color 0.25s;
+}
+
+.subcategory-label:active {
+  background-color: var(--green-1);
+}
+
+.subcategory-label:hover {
+  background-color: rgb(83, 84, 85);
+}
+
+.subcattweaks {
+  position: center;
+  display: none;
+  width: 90%;
+  grid-template-columns: repeat(auto-fit, minmax(162.5px, 1fr));
+  gap: 10px;
+  margin-top: 10px;
+  align-items: top;
+  text-align: center;
+}
+
 .tile {
   width: 100px;
   height: 100px;
@@ -275,19 +313,6 @@ header {
   overflow: visible;
   display: flex;
   flex-wrap: nowrap;
-}
-
-#loading-circle {
-  display: none;
-  border: 16px solid #f3f3f3;
-  /* Light grey */
-  border-top: 16px solid #3498db;
-  /* Blue */
-  border-radius: 50%;
-  width: 120px;
-  height: 120px;
-  animation: spin 2s linear infinite;
-  margin: auto;
 }
 
 #title {

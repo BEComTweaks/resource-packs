@@ -1,11 +1,3 @@
-function showLoading() {
-  if (window.innerWidth > 768) {
-    document.getElementById("loading-circle").style.display = "block";
-  }
-}
-function hideLoading() {
-  document.getElementById("loading-circle").style.display = "none";
-}
 function toggleSelection(element) {
   element.classList.toggle("selected");
   const checkbox = element.querySelector('input[type="checkbox"]');
@@ -50,6 +42,12 @@ window.addEventListener("resize", () => {
     document.getElementById("selected-tweaks").style.display = "block";
   }
 });
+
+function toggleCategory(label) {
+  const tweaksContainer = label.nextElementSibling;
+  tweaksContainer.style.display =
+    tweaksContainer.style.display != "block" ? "block" : "none";
+}
 
 function toggleCategory(label) {
   const tweaksContainer = label.nextElementSibling;
@@ -185,7 +183,6 @@ function downloadSelectedTweaks() {
 const serverip = "localhost";
 
 function fetchPack(protocol, jsonData, packName) {
-  showLoading();
   fetch(`${protocol}://${serverip}/exportResourcePack`, {
     method: "POST",
     headers: {
@@ -198,7 +195,6 @@ function fetchPack(protocol, jsonData, packName) {
       if (!response.ok) {
         throw new Error("Network response was not ok");
       }
-      hideLoading();
       return response.blob();
     })
     .then((blob) => {
