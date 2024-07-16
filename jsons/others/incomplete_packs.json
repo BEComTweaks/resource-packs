@@ -1,9 +1,10 @@
 {
   "Aesthetic": [],
+  "Crosshairs": [],
   "Colorful Slime": ["RainbowSlime"],
   "Fixes and Consistency": [],
   "Fun": [],
-  "HUD and GUI": ["TransparentUI", "HighContrastUI"],
+  "GUI": ["TransparentUI", "HighContrastUI"],
   "Lower and Sides": [],
   "Menu Panoramas": [],
   "More Zombies": [],

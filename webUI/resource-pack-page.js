@@ -76,10 +76,11 @@ function downloadSelectedTweaks() {
 
   const tweaksByCategory = {
     Aesthetic: [],
+    Crosshairs: [],
     "Colorful Slime": [],
     "Fixes and Consistency": [],
     Fun: [],
-    "HUD and GUI": [],
+    GUI: [],
     "Lower and Sides": [],
     "Menu Panoramas": [],
     "More Zombies": [],
@@ -94,10 +95,11 @@ function downloadSelectedTweaks() {
 
   const indicesByCategory = {
     Aesthetic: [],
+    Crosshairs: [],
     "Colorful Slime": [],
     "Fixes and Consistency": [],
     Fun: [],
-    "HUD and GUI": [],
+    GUI: [],
     "Lower and Sides": [],
     "Menu Panoramas": [],
     "More Zombies": [],
@@ -120,6 +122,10 @@ function downloadSelectedTweaks() {
       packs: tweaksByCategory["Aesthetic"],
       index: indicesByCategory["Aesthetic"],
     },
+    Crosshairs: {
+      packs: tweaksByCategory["Crosshairs"],
+      index: indicesByCategory["Crosshairs"],
+    },
     "Colorful Slime": {
       packs: tweaksByCategory["Colorful Slime"],
       index: indicesByCategory["Colorful Slime"],
@@ -132,9 +138,9 @@ function downloadSelectedTweaks() {
       packs: tweaksByCategory["Fun"],
       index: indicesByCategory["Fun"],
     },
-    "HUD and GUI": {
-      packs: tweaksByCategory["HUD and GUI"],
-      index: indicesByCategory["HUD and GUI"],
+    GUI: {
+      packs: tweaksByCategory["GUI"],
+      index: indicesByCategory["GUI"],
     },
     "Lower and Sides": {
       packs: tweaksByCategory["Lower and Sides"],
