@@ -43,10 +43,10 @@ window.addEventListener("resize", () => {
   }
 });
 
-function toggleCategory(label) {
+function toggleSubCategory(label) {
   const tweaksContainer = label.nextElementSibling;
   tweaksContainer.style.display =
-    tweaksContainer.style.display != "block" ? "block" : "none";
+    tweaksContainer.style.display != "grid" ? "grid" : "none";
 }
 
 function toggleCategory(label) {
