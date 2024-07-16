@@ -52,7 +52,7 @@ function toggleSubCategory(label) {
 function toggleCategory(label) {
   const tweaksContainer = label.nextElementSibling;
   tweaksContainer.style.display =
-    tweaksContainer.style.display != "grid" ? "grid" : "none";
+    tweaksContainer.style.display != "block" ? "block" : "none";
 }
 
 function downloadSelectedTweaks() {
