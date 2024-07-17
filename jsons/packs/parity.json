@@ -7,6 +7,7 @@
       "pack_description": "Gives the title on the main menu screen its look from Minecraft: Java Edition.",
       "conflict": [
         "AlphaMinecraftLogo",
+        "ClassicMinecraftLogo",
         "BedrockEditionSubtitle",
         "OldBedrockMenuTitle"
       ],

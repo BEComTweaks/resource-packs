@@ -7,6 +7,7 @@
       "pack_description": "Brings back the pre-1.17.30 Minecraft title.",
       "conflict": [
         "AlphaMinecraftLogo",
+        "ClassicMinecraftLogo",
         "BedrockEditionSubtitle",
         "JavaMenuTitle"
       ],
@@ -17,6 +18,19 @@
       "pack_name": "Alpha Minecraft Logo",
       "pack_description": "Brings back the old hand-built cobblestone Minecraft logo from the alpha days!",
       "conflict": [
+        "ClassicMinecraftLogo",
+        "OldBedrockMenuTitle",
+        "BedrockEditionSubtitle",
+        "JavaMenuTitle"
+      ],
+      "compatibility": []
+    },
+    {
+      "pack_id": "ClassicMinecraftLogo",
+      "pack_name": "Classic Minecraft Logo",
+      "pack_description": "Brings back the classic pixelated Minecraft logo.",
+      "conflict": [
+        "AlphaMinecraftLogo",
         "OldBedrockMenuTitle",
         "BedrockEditionSubtitle",
         "JavaMenuTitle"

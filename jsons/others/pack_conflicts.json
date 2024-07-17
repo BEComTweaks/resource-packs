@@ -423,15 +423,24 @@
   "HighContrastUI": ["DarkUI", "TransparentUI"],
   "BedrockEditionSubtitle": [
     "AlphaMinecraftLogo",
+    "ClassicMinecraftLogo",
     "OldBedrockMenuTitle",
     "JavaMenuTitle"
   ],
   "OldBedrockMenuTitle": [
     "AlphaMinecraftLogo",
+    "ClassicMinecraftLogo",
     "BedrockEditionSubtitle",
     "JavaMenuTitle"
   ],
   "AlphaMinecraftLogo": [
+    "ClassicMinecraftLogo",
+    "OldBedrockMenuTitle",
+    "BedrockEditionSubtitle",
+    "JavaMenuTitle"
+  ],
+  "ClassicMinecraftLogo": [
+    "AlphaMinecraftLogo",
     "OldBedrockMenuTitle",
     "BedrockEditionSubtitle",
     "JavaMenuTitle"
@@ -467,6 +476,7 @@
   ],
   "JavaMenuTitle": [
     "AlphaMinecraftLogo",
+    "ClassicMinecraftLogo",
     "BedrockEditionSubtitle",
     "OldBedrockMenuTitle"
   ],
