@@ -291,7 +291,8 @@ header {
 }
 
 :root {
-  --category-border: rgb(84, 85, 86) rgb(49, 50, 51) rgb(49, 50, 51) rgb(84, 85, 86);
+  --category-border: rgb(84, 85, 86) rgb(49, 50, 51) rgb(49, 50, 51)
+    rgb(84, 85, 86);
   --dark-one: rgb(72, 73, 74);
   --green-1: rgb(63, 146, 39);
   --rightmargin: 250px;
