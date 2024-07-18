@@ -15,12 +15,12 @@
       "conflict": [],
       "compatibility": []
     },
-    {
-      "pack_id": "3DMace",
-      "pack_name": "3D Mace",
-      "pack_description": "Remodels the Mace to appear in 3D.",
-      "conflict": [],
-      "compatibility": []
-    }
+	{
+		"pack_id": "3DMace",
+		"pack_name": "3D Mace",
+		"pack_description": "Remodels the Mace to appear in 3D.",
+		"conflict": [],
+		"compatibility": []
+	}
   ]
 }
