@@ -1,114 +1,40 @@
 {
-  "AlternateBlockDestruction": [
-    "MineProgressBar"
-  ],
-  "BlackNetherBricks": [
-    "BrighterNether"
-  ],
-  "SolidSlime": [
-    "HoneySlime"
-  ],
-  "SofterWool": [
-    "CleanWool",
-    "OldWoolColors"
-  ],
-  "CleanWool": [
-    "SofterWool",
-    "OldWoolColors"
-  ],
-  "SmootherWarpedPlanks": [
-    "OldPlanks"
-  ],
-  "CrimsonerCrimson": [
-    "OldPlanks"
-  ],
-  "PolishedStonestoBricks": [
-    "SmootherStones"
-  ],
-  "GoldenCrown": [
-    "ConsistentHelmets"
-  ],
-  "AllayElytra": [
-    "DragonElytra",
-    "PhantomElytra",
-    "VexElytra"
-  ],
-  "DragonElytra": [
-    "AllayElytra",
-    "PhantomElytra",
-    "VexElytra"
-  ],
-  "PhantomElytra": [
-    "AllayElytra",
-    "DragonElytra",
-    "VexElytra"
-  ],
-  "VexElytra": [
-    "AllayElytra",
-    "DragonElytra",
-    "PhantomElytra"
-  ],
-  "GoldenSavanna": [
-    "LushGrassAllRound"
-  ],
-  "LushGrassAllRound": [
-    "GoldenSavanna"
-  ],
-  "CircularSunandMoon": [
-    "3DSunandMoon"
-  ],
-  "SmootherStones": [
-    "PolishedStonesToBricks",
-    "VariatedUnpolishedStones"
-  ],
-  "PebblelessDirt": [
-    "VariatedMycelium",
-    "VariatedGrass",
-    "VariatedDirt"
-  ],
+  "AlternateBlockDestruction": ["MineProgressBar"],
+  "BlackNetherBricks": ["BrighterNether"],
+  "SolidSlime": ["HoneySlime"],
+  "SofterWool": ["CleanWool", "OldWoolColors"],
+  "CleanWool": ["SofterWool", "OldWoolColors"],
+  "SmootherWarpedPlanks": ["OldPlanks"],
+  "CrimsonerCrimson": ["OldPlanks"],
+  "PolishedStonestoBricks": ["SmootherStones"],
+  "GoldenCrown": ["ConsistentHelmets"],
+  "AllayElytra": ["DragonElytra", "PhantomElytra", "VexElytra"],
+  "DragonElytra": ["AllayElytra", "PhantomElytra", "VexElytra"],
+  "PhantomElytra": ["AllayElytra", "DragonElytra", "VexElytra"],
+  "VexElytra": ["AllayElytra", "DragonElytra", "PhantomElytra"],
+  "GoldenSavanna": ["LushGrassAllRound"],
+  "LushGrassAllRound": ["GoldenSavanna"],
+  "CircularSunandMoon": ["3DSunandMoon"],
+  "SmootherStones": ["PolishedStonesToBricks", "VariatedUnpolishedStones"],
+  "PebblelessDirt": ["VariatedMycelium", "VariatedGrass", "VariatedDirt"],
   "BrighterNether": [
     "BlackNetherBricks",
     "OldNetherrack",
     "LowerCrimsonNylium",
     "LowerWarpedNylium"
   ],
-  "UniformOres": [
-    "ClassicOres"
-  ],
-  "WhiterSnow": [
-    "DungeonsDirt",
-    "LegacySnowball"
-  ],
-  "VariatedGrass": [
-    "PebblelessDirt"
-  ],
-  "VariatedCobblestone": [
-    "OldCobblestone"
-  ],
-  "VariatedStone": [
-    "DungeonsStone"
-  ],
-  "VariatedTerracotta": [
-    "DungeonsTerracotta"
-  ],
-  "VariatedUnpolishedStones": [
-    "SmootherStones"
-  ],
-  "OreBorders": [
-    "OldNetherrack"
-  ],
-  "SuspiciousSand&GravelBorders": [
-    "SusSandandGravel"
-  ],
-  "VisualInfestedStoneItems": [
-    "CrumbledInfestedStoneBlocks"
-  ],
-  "CrumbledInfestedStoneBlocks": [
-    "VisualInfestedStoneItems"
-  ],
-  "MineProgressBar": [
-    "AlternateBlockDestruction"
-  ],
+  "UniformOres": ["ClassicOres"],
+  "WhiterSnow": ["DungeonsDirt", "LegacySnowball"],
+  "VariatedGrass": ["PebblelessDirt"],
+  "VariatedCobblestone": ["OldCobblestone"],
+  "VariatedStone": ["DungeonsStone"],
+  "VariatedTerracotta": ["DungeonsTerracotta"],
+  "VariatedUnpolishedStones": ["SmootherStones"],
+  "OreBorders": ["OldNetherrack"],
+  "SuspiciousSand&GravelBorders": ["SusSandandGravel"],
+  "VisualInfestedStoneItems": ["CrumbledInfestedStoneBlocks"],
+  "CrumbledInfestedStoneBlocks": ["VisualInfestedStoneItems"],
+  "MineProgressBar": ["AlternateBlockDestruction"],
   "StickyPistonSides": [
     "HoneySlime",
     "WhiteSlime",
@@ -128,45 +54,18 @@
     "PinkSlime",
     "RainbowSlime"
   ],
-  "CleanRedstoneDust": [
-    "RedstoneWireFix"
-  ],
-  "UnobtrusiveRain": [
-    "PhantomRain"
-  ],
-  "UnobtrusiveParticles": [
-    "JavaBoom"
-  ],
-  "BorderlessGlass": [
-    "CleanGlass"
-  ],
-  "BorderlessStainedGlass": [
-    "CleanStainedGlass"
-  ],
-  "BorderlessTintedGlass": [
-    "CleanTintedGlass"
-  ],
-  "CleanGlass": [
-    "BorderlessGlass"
-  ],
-  "CleanStainedGlass": [
-    "BorderlessStainedGlass"
-  ],
-  "CleanTintedGlass": [
-    "BorderlessTintedGlass"
-  ],
-  "TranslucentPumpkinOverlay": [
-    "NoPumpkinOverlay",
-    "OrangePumpkinOverlay"
-  ],
-  "OrangePumpkinOverlay": [
-    "NoPumpkinOverlay",
-    "TranslucentPumpkinOverlay"
-  ],
-  "NoPumpkinOverlay": [
-    "TranslucentPumpkin",
-    "OrangePumpkinOverlay"
-  ],
+  "CleanRedstoneDust": ["RedstoneWireFix"],
+  "UnobtrusiveRain": ["PhantomRain"],
+  "UnobtrusiveParticles": ["JavaBoom"],
+  "BorderlessGlass": ["CleanGlass"],
+  "BorderlessStainedGlass": ["CleanStainedGlass"],
+  "BorderlessTintedGlass": ["CleanTintedGlass"],
+  "CleanGlass": ["BorderlessGlass"],
+  "CleanStainedGlass": ["BorderlessStainedGlass"],
+  "CleanTintedGlass": ["BorderlessTintedGlass"],
+  "TranslucentPumpkinOverlay": ["NoPumpkinOverlay", "OrangePumpkinOverlay"],
+  "OrangePumpkinOverlay": ["NoPumpkinOverlay", "TranslucentPumpkinOverlay"],
+  "NoPumpkinOverlay": ["TranslucentPumpkin", "OrangePumpkinOverlay"],
   "TranslucentSpyglassOverlay": [
     "WHAT",
     "NoSpyglassOverlay",
@@ -518,22 +417,10 @@
     "MagentaSlime",
     "PinkSlime"
   ],
-  "SmootherFont": [
-    "StandardGalacticAlphabet",
-    "EnglishEnchantingTable"
-  ],
-  "DarkUI": [
-    "TransparentUI",
-    "HighContrastUI"
-  ],
-  "TransparentUI": [
-    "DarkUI",
-    "HighContrastUI"
-  ],
-  "HighContrastUI": [
-    "DarkUI",
-    "TransparentUI"
-  ],
+  "SmootherFont": ["StandardGalacticAlphabet", "EnglishEnchantingTable"],
+  "DarkUI": ["TransparentUI", "HighContrastUI"],
+  "TransparentUI": ["DarkUI", "HighContrastUI"],
+  "HighContrastUI": ["DarkUI", "TransparentUI"],
   "BedrockEditionSubtitle": [
     "AlphaMinecraftLogo",
     "OldBedrockMenuTitle",
@@ -549,52 +436,25 @@
     "BedrockEditionSubtitle",
     "JavaMenuTitle"
   ],
-  "ClassicOres": [
-    "UniformOres"
-  ],
-  "OldCobblestone": [
-    "VariatedCobblestone"
-  ],
-  "OldPlanks": [
-    "SmootherWarpedPlanks"
-  ],
+  "ClassicOres": ["UniformOres"],
+  "OldCobblestone": ["VariatedCobblestone"],
+  "OldPlanks": ["SmootherWarpedPlanks"],
   "OldNetherrack": [
     "OreBorders",
     "BrighterNether",
     "LowerWarpedNylium",
     "LowerCrimsonNylium"
   ],
-  "OldWoolColors": [
-    "CleanWool",
-    "SofterWool"
-  ],
-  "ZombiePigman": [
-    "DarthXisumaPiglins"
-  ],
-  "SusSandandGravel": [
-    "SuspiciousSand&GravelBorders"
-  ],
-  "DarthXisumaPiglins": [
-    "ZombiePigman"
-  ],
-  "EmeraldstoRubies": [
-    "LegacyConsoleEmerald"
-  ],
-  "WitherBee": [
-    "PixelConsistentWither"
-  ],
-  "EnglishEnchantingTable": [
-    "SmootherFont"
-  ],
-  "StandardGalacticAlphabet": [
-    "SmootherFont"
-  ],
-  "BaconBeam": [
-    "PixelConsistentBeaconBeam"
-  ],
-  "PhantomRain": [
-    "UnobtrusiveRain"
-  ],
+  "OldWoolColors": ["CleanWool", "SofterWool"],
+  "ZombiePigman": ["DarthXisumaPiglins"],
+  "SusSandandGravel": ["SuspiciousSand&GravelBorders"],
+  "DarthXisumaPiglins": ["ZombiePigman"],
+  "EmeraldstoRubies": ["LegacyConsoleEmerald"],
+  "WitherBee": ["PixelConsistentWither"],
+  "EnglishEnchantingTable": ["SmootherFont"],
+  "StandardGalacticAlphabet": ["SmootherFont"],
+  "BaconBeam": ["PixelConsistentBeaconBeam"],
+  "PhantomRain": ["UnobtrusiveRain"],
   "WHAT": [
     "TranslucentSpyglassOverlay",
     "NoSpyglassOverlay",
@@ -610,9 +470,7 @@
     "BedrockEditionSubtitle",
     "OldBedrockMenuTitle"
   ],
-  "JavaBoom": [
-    "UnobtrusiveParticles"
-  ],
+  "JavaBoom": ["UnobtrusiveParticles"],
   "DungeonsDirt": [
     "LowerGrass",
     "GrassSides",
@@ -629,18 +487,10 @@
     "PebblelessDirt",
     "PebblelessCoarseDirt"
   ],
-  "DungeonsStone": [
-    "VariatedStone"
-  ],
-  "DungeonsTerracotta": [
-    "VariatedTerracotta"
-  ],
-  "LegacyConsoleEmerald": [
-    "EmeraldToRuby"
-  ],
-  "LegacyConsoleSnowball": [
-    "WhiterSnow"
-  ],
+  "DungeonsStone": ["VariatedStone"],
+  "DungeonsTerracotta": ["VariatedTerracotta"],
+  "LegacyConsoleEmerald": ["EmeraldToRuby"],
+  "LegacyConsoleSnowball": ["WhiterSnow"],
   "PistonInnerFix": [
     "HoneySlime",
     "WhiteSlime",
@@ -660,15 +510,9 @@
     "PinkSlime",
     "RainbowSlime"
   ],
-  "RedstoneWireFix": [
-    "CleanRedstoneDust"
-  ],
-  "ConsistentHelmets": [
-    "GoldenCrown"
-  ],
-  "PixelConsistentWither": [
-    "WitherBee"
-  ],
+  "RedstoneWireFix": ["CleanRedstoneDust"],
+  "ConsistentHelmets": ["GoldenCrown"],
+  "PixelConsistentWither": ["WitherBee"],
   "SteveZombies": [
     "AlexZombies",
     "AriZombies",
@@ -779,62 +623,24 @@
     "SunnyZombies",
     "ZuriZombies"
   ],
-  "LowerGrass": [
-    "GrassSides",
-    "DungeonsDirt"
-  ],
-  "GrassSides": [
-    "LowerGrass",
-    "DungeonsDirt"
-  ],
-  "LowerMycelium": [
-    "MyceliumSides",
-    "DungeonsDirt"
-  ],
-  "MyceliumSides": [
-    "LowerMycelium",
-    "DungeonsDirt"
-  ],
-  "LowerGrassPaths": [
-    "GrassPathSides",
-    "DungeonsDirt"
-  ],
-  "GrassPathSides": [
-    "LowerGrassPaths",
-    "DungeonsDirt"
-  ],
-  "LowerPodzol": [
-    "PodzolSides",
-    "DungeonsDirt"
-  ],
-  "PodzolSides": [
-    "LowerPodzol",
-    "DungeonsDirt"
-  ],
-  "LowerSnow": [
-    "SnowSides",
-    "DungeonsDirt"
-  ],
-  "SnowSides": [
-    "LowerSnow",
-    "DungeonsDirt"
-  ],
+  "LowerGrass": ["GrassSides", "DungeonsDirt"],
+  "GrassSides": ["LowerGrass", "DungeonsDirt"],
+  "LowerMycelium": ["MyceliumSides", "DungeonsDirt"],
+  "MyceliumSides": ["LowerMycelium", "DungeonsDirt"],
+  "LowerGrassPaths": ["GrassPathSides", "DungeonsDirt"],
+  "GrassPathSides": ["LowerGrassPaths", "DungeonsDirt"],
+  "LowerPodzol": ["PodzolSides", "DungeonsDirt"],
+  "PodzolSides": ["LowerPodzol", "DungeonsDirt"],
+  "LowerSnow": ["SnowSides", "DungeonsDirt"],
+  "SnowSides": ["LowerSnow", "DungeonsDirt"],
   "LowerCrimsonNylium": [
     "CrimsonNyliumSides",
     "OldNetherrack",
     "BrighterNether"
   ],
-  "CrimsonNyliumSides": [
-    "LowerCrimsonNylium"
-  ],
-  "LowerWarpedNylium": [
-    "WarpedNyliumSides",
-    "OldNetherrack",
-    "BrighterNether"
-  ],
-  "WarpedNyliumSides": [
-    "LowerWarpedNylium"
-  ],
+  "CrimsonNyliumSides": ["LowerCrimsonNylium"],
+  "LowerWarpedNylium": ["WarpedNyliumSides", "OldNetherrack", "BrighterNether"],
+  "WarpedNyliumSides": ["LowerWarpedNylium"],
   "NoCrosshair": [
     "SmallerCrosshair",
     "DotCrosshair",

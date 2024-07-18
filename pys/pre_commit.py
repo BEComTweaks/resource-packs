@@ -1,6 +1,7 @@
 import os
 from json import *
 import re
+from time import sleep
 
 if str(os.getcwd()).endswith("system32"):
     # This has to be in every script to prevent FileNotFoundError

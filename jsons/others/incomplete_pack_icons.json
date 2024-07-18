@@ -1,32 +1,19 @@
 {
+  "3D": [],
   "Aesthetic": [],
   "Crosshairs": [],
-  "Colorful Slime": [
-    "RainbowSlime"
-  ],
+  "Colorful Slime": ["RainbowSlime"],
   "Fixes and Consistency": [],
   "Fun": [],
-  "GUI": [
-    "TransparentUI",
-    "HighContrastUI"
-  ],
+  "GUI": ["TransparentUI", "HighContrastUI"],
   "Lower and Sides": [],
   "Menu Panoramas": [],
   "More Zombies": [],
   "Parity": [],
   "Peace and Quiet": [],
-  "Retro": [
-    "OldBedIcons",
-    "RenamePottery'Sherd'to'Shard'"
-  ],
-  "Terrain": [
-    "GoldenSavanna"
-  ],
-  "Unobtrusive": [
-    "NoCherryLeavesParticles",
-    "UnobtrusiveScaffolding",
-    "NoFog"
-  ],
+  "Retro": ["OldBedIcons", "RenamePottery'Sherd'to'Shard'"],
+  "Terrain": ["GoldenSavanna"],
+  "Unobtrusive": ["NoCherryLeavesParticles", "UnobtrusiveScaffolding", "NoFog"],
   "Utility": [
     "CrumbledInfestedStoneBlocks",
     "BoltlessWaxedCopperBlocks",
@@ -35,8 +22,5 @@
     "DirectionalDispensersandDroppers",
     "NoteBlockPitchParticle"
   ],
-  "Variation": [
-    "VariatedCoarseDirt",
-    "VariatedVillagers"
-  ]
+  "Variation": ["VariatedCoarseDirt", "VariatedVillagers"]
 }
