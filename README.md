@@ -26,8 +26,3 @@ Refer to [CONTRIBUTING.md](https://github.com/BEComTweaks/resource-packs/blob/ma
 Pull Requests are greatly appreciated as I do not want this to be a single person project. I can get pretty drained out from projects.
 
 </div>
-<div align=center>
-
-![Repo Analytics](https://repobeats.axiom.co/api/embed/10e365135c3e52c23d522622b87dee249a676978.svg)
-
-</div>
