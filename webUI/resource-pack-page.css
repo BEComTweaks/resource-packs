@@ -48,29 +48,25 @@ header {
   display: none;
   margin-top: 15px;
   margin-bottom: 15px;
+  position: center;
 }
 
 .category-label {
-  text-align: left;
+  text-align: center;
   font-size: 20px;
   background-color: var(--dark-one);
   padding: 5px;
   border-radius: 5px;
   cursor: pointer;
   user-select: none;
-  border: opaque;
   border-style: solid;
   border-width: 5px;
   border-color: var(--category-border);
   transition: background-color 0.25s;
 }
 
-.category-label:active {
-  background-color: var(--green-1);
-}
-
 .category-label:hover {
-  background-color: rgb(83, 84, 85);
+  background-color: var(--dark-two);
 }
 
 .comp-hover-text {
@@ -202,34 +198,16 @@ header {
   z-index: 1;
 }
 
-.subcategory-label {
-  text-align: left;
-  font-size: 20px;
+.subcategory {
+  position: center;
+  margin-top: 15px;
+  margin-bottom: 15px;
   width: 90%;
-  background-color: var(--dark-one);
-  padding: 5px;
-  border-radius: 5px;
-  cursor: pointer;
-  user-select: none;
-  border: opaque;
-  border-style: solid;
-  border-width: 5px;
-  border-color: var(--category-border);
-  transition: background-color 0.25s;
-}
-
-.subcategory-label:active {
-  background-color: var(--green-1);
-}
-
-.subcategory-label:hover {
-  background-color: rgb(83, 84, 85);
 }
 
 .subcattweaks {
   position: center;
   display: none;
-  width: 90%;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   gap: 10px;
   margin-top: 10px;
@@ -293,8 +271,11 @@ header {
 :root {
   --category-border: rgb(84, 85, 86) rgb(49, 50, 51) rgb(49, 50, 51)
     rgb(84, 85, 86);
+  --category-border-selected: rgb(84, 170, 43) rgb(49, 100, 26) rgb(49, 100, 26)
+    rgb(84, 170, 43);
   --dark-one: rgb(72, 73, 74);
-  --green-1: rgb(63, 146, 39);
+  --dark-two: rgb(83, 84, 85);
+  --green-1: rgb(72, 146, 37);
   --rightmargin: 250px;
   --leftmargin: 10px;
 }

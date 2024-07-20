@@ -1,0 +1,242 @@
+{
+  "topic": "LGBTQ+ Pride",
+  "subcategory_of": "GUI &gt; Hearts",
+  "packs": [
+    {
+      "pack_id": "PrideHearts",
+      "pack_name": "Pride Hearts",
+      "pack_description": "",
+      "conflict": [],
+      "compatibility": []
+    },
+    {
+      "pack_id": "ProgressHearts",
+      "pack_name": "Progress Hearts",
+      "pack_description": "",
+      "conflict": [],
+      "compatibility": []
+    },
+    {
+      "pack_id": "LesbianHearts",
+      "pack_name": "Lesbian Hearts",
+      "pack_description": "",
+      "conflict": [],
+      "compatibility": []
+    },
+    {
+      "pack_id": "GayHearts",
+      "pack_name": "Gay Hearts",
+      "pack_description": "",
+      "conflict": [],
+      "compatibility": []
+    },
+    {
+      "pack_id": "BisexualHearts",
+      "pack_name": "Bisexual Hearts",
+      "pack_description": "",
+      "conflict": [],
+      "compatibility": []
+    },
+    {
+      "pack_id": "TransgenderHearts",
+      "pack_name": "Transgender Hearts",
+      "pack_description": "",
+      "conflict": [],
+      "compatibility": []
+    },
+    {
+      "pack_id": "QueerHearts",
+      "pack_name": "Queer Hearts",
+      "pack_description": "",
+      "conflict": [],
+      "compatibility": []
+    },
+    {
+      "pack_id": "IntersexHearts",
+      "pack_name": "Intersex Hearts",
+      "pack_description": "",
+      "conflict": [],
+      "compatibility": []
+    },
+    {
+      "pack_id": "AsexualHearts",
+      "pack_name": "Asexual Hearts",
+      "pack_description": "",
+      "conflict": [],
+      "compatibility": []
+    },
+    {
+      "pack_id": "AromanticHearts",
+      "pack_name": "Aromantic Hearts",
+      "pack_description": "",
+      "conflict": [],
+      "compatibility": []
+    },
+    {
+      "pack_id": "Aromantic_asexualHearts",
+      "pack_name": "Aromantic Asexual Hearts",
+      "pack_description": "",
+      "conflict": [],
+      "compatibility": []
+    },
+    {
+      "pack_id": "Aromantic_asexual_v2Hearts",
+      "pack_name": "Aromantic Asexual v2 Hearts",
+      "pack_description": "",
+      "conflict": [],
+      "compatibility": []
+    },
+    {
+      "pack_id": "PansexualHearts",
+      "pack_name": "Pansexual Hearts",
+      "pack_description": "",
+      "conflict": [],
+      "compatibility": []
+    },
+    {
+      "pack_id": "OmnisexualHearts",
+      "pack_name": "Omnisexual Hearts",
+      "pack_description": "",
+      "conflict": [],
+      "compatibility": []
+    },
+    {
+      "pack_id": "Non-binaryHearts",
+      "pack_name": "Non-binary Hearts",
+      "pack_description": "",
+      "conflict": [],
+      "compatibility": []
+    },
+    {
+      "pack_id": "AgenderHearts",
+      "pack_name": "Agender Hearts",
+      "pack_description": "",
+      "conflict": [],
+      "compatibility": []
+    },
+    {
+      "pack_id": "GenderfluidHearts",
+      "pack_name": "Genderfluid Hearts",
+      "pack_description": "",
+      "conflict": [],
+      "compatibility": []
+    },
+    {
+      "pack_id": "GenderqueerHearts",
+      "pack_name": "Genderqueer Hearts",
+      "pack_description": "",
+      "conflict": [],
+      "compatibility": []
+    },
+    {
+      "pack_id": "BigenderHearts",
+      "pack_name": "Bigender Hearts",
+      "pack_description": "",
+      "conflict": [],
+      "compatibility": []
+    },
+    {
+      "pack_id": "Bigender_v2Hearts",
+      "pack_name": "Bigender v2 Hearts",
+      "pack_description": "",
+      "conflict": [],
+      "compatibility": []
+    },
+    {
+      "pack_id": "DemisexualHearts",
+      "pack_name": "Demisexual Hearts",
+      "pack_description": "",
+      "conflict": [],
+      "compatibility": []
+    },
+    {
+      "pack_id": "DemiromanticHearts",
+      "pack_name": "Demiromantic Hearts",
+      "pack_description": "",
+      "conflict": [],
+      "compatibility": []
+    },
+    {
+      "pack_id": "PolysexualHearts",
+      "pack_name": "Polysexual Hearts",
+      "pack_description": "",
+      "conflict": [],
+      "compatibility": []
+    },
+    {
+      "pack_id": "PolyamorousHearts",
+      "pack_name": "Polyamorous Hearts",
+      "pack_description": "",
+      "conflict": [],
+      "compatibility": []
+    },
+    {
+      "pack_id": "Polyamorous_v2Hearts",
+      "pack_name": "Polyamorous v2 Hearts",
+      "pack_description": "",
+      "conflict": [
+        "PrideHearts",
+        "ProgressHearts",
+        "LesbianHearts",
+        "GayHearts",
+        "BisexualHearts",
+        "TransgenderHearts",
+        "QueerHearts",
+        "IntersexHearts",
+        "AsexualHearts",
+        "AromanticHearts",
+        "Aromantic_asexualHearts",
+        "Aromantic_asexual_v2Hearts",
+        "PansexualHearts",
+        "OmnisexualHearts",
+        "Non-binaryHearts",
+        "AgenderHearts",
+        "GenderfluidHearts",
+        "GenderqueerHearts",
+        "BigenderHearts",
+        "Bigender_v2Hearts",
+        "DemisexualHearts",
+        "DemiromanticHearts",
+        "PolysexualHearts",
+        "PolyamorousHearts",
+        "Polyamorous_v2Hearts",
+        "AllyHearts"
+      ],
+      "compatibility": []
+    },
+    {
+      "pack_id": "AllyHearts",
+      "pack_name": "Ally Hearts",
+      "pack_description": "",
+      "conflict": [
+        "PrideHearts",
+        "ProgressHearts",
+        "LesbianHearts",
+        "GayHearts",
+        "BisexualHearts",
+        "TransgenderHearts",
+        "QueerHearts",
+        "IntersexHearts",
+        "AsexualHearts",
+        "AromanticHearts",
+        "Aromantic_asexualHearts",
+        "Aromantic_asexual_v2Hearts",
+        "PansexualHearts",
+        "OmnisexualHearts",
+        "Non-binaryHearts",
+        "AgenderHearts",
+        "GenderfluidHearts",
+        "GenderqueerHearts",
+        "BigenderHearts",
+        "Bigender_v2Hearts",
+        "DemisexualHearts",
+        "DemiromanticHearts",
+        "PolysexualHearts",
+        "PolyamorousHearts",
+        "Polyamorous_v2Hearts",
+        "AllyHearts"
+      ],
+      "compatibility": []
+    }
+  ]
+}

@@ -75,7 +75,7 @@ function downloadSelectedTweaks() {
   });
 
   const tweaksByCategory = {
-	  "3D": [],
+    "3D": [],
     Aesthetic: [],
     Crosshairs: [],
     "Colorful Slime": [],
@@ -95,7 +95,7 @@ function downloadSelectedTweaks() {
   };
 
   const indicesByCategory = {
-	  "3D": [],
+    "3D": [],
     Aesthetic: [],
     Crosshairs: [],
     "Colorful Slime": [],
@@ -120,10 +120,10 @@ function downloadSelectedTweaks() {
   });
 
   const jsonData = {
-	  "3D": {
-		  packs: tweaksByCategory["3D"],
-		  index: indicesByCategory["3D"],
-	  }
+    "3D": {
+      packs: tweaksByCategory["3D"],
+      index: indicesByCategory["3D"],
+    },
     Aesthetic: {
       packs: tweaksByCategory["Aesthetic"],
       index: indicesByCategory["Aesthetic"],
