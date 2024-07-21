@@ -1,6 +1,7 @@
 ## This would not have been possible if not for the following
 
 ### Websites
+
 [Vanilla Tweaks](https://vanillatweaks.net)
 - Without them, Bedrock Tweaks would have not been this way
 

@@ -61,12 +61,13 @@ header {
   user-select: none;
   border-style: solid;
   border-width: 5px;
-  border-color: var(--category-border);
+  border-color: var(--dark-border);
   transition: background-color 0.25s;
 }
 
 .category-label:hover {
   background-color: var(--dark-two);
+  border-color: var(--dark-border-hover);
 }
 
 .comp-hover-text {
@@ -119,7 +120,7 @@ header {
   border: solid;
   border-width: 7.5px;
   border-radius: 12.5px;
-  border-color: var(--category-border);
+  border-color: var(--dark-border);
   padding: 20px;
   background: var(--dark-one);
   z-index: 5;
@@ -135,7 +136,7 @@ header {
   border: solid;
   border-width: 5px;
   border-radius: 10px;
-  border-color: var(--category-border);
+  border-color: var(--dark-border);
   opacity: 0.95;
   width: 240px;
   height: 150px;
@@ -145,10 +146,12 @@ header {
   font-family: "Pixelify Sans";
   background: var(--dark-one);
   padding: 10px 20px;
-  border: 2px solid #111;
+  border-style: solid;
+  border-width: 5px;
+  border-color: var(--dark-border);
   border-radius: 5px;
   cursor: pointer;
-  transition: background 0.3s;
+  transition: background 0.1s;
   display: block;
   margin: 20px auto;
   text-align: center;
@@ -156,11 +159,13 @@ header {
 }
 
 .download-selected-button:hover {
-  background: var(--green-1);
+  background: var(--dark-two);
+  border-color: var(--dark-border-hover);
 }
 
 .download-selected-button:active {
-  background: rgb(53, 123, 29);
+  background: var(--green-one);
+  border-color: var(--green-border);
 }
 
 .file-download {
@@ -230,10 +235,46 @@ header {
   display: flex;
   flex-direction: column;
   position: relative;
-  border: 2px solid #111;
-  border-radius: 5px;
+  border-style: solid;
+  border-width: 3.75px;
+  border-color: var(--dark-border);
+  border-radius: 6.25px;
   transition: background 0.375s;
 }
+
+.tweak:hover {
+  background: var(--dark-two);
+  border-color: var(--dark-border-hover);
+}
+
+.tweak.selected {
+  background: var(--green-one);
+  border-color: var(--green-border);
+}
+
+.tweak.selected:hover {
+  background: var(--green-two);
+  border-color: var(--green-border-hover);
+}
+/* Attempting a fancy hover, keeping it here for more testing
+Relevant ChatGPT Link: https://chatgpt.com/share/611c13b6-61a9-444e-ab52-a64d1beb6695
+.tweak.selected::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background-color: white;
+  transition:
+    width 0.3s ease,
+    left 0.3s ease;
+}
+
+.tweak.selected::after:hover {
+  width: 50%;
+  left: 25%;
+}*/
 
 .tweak-list-category {
   display: none;
@@ -243,11 +284,6 @@ header {
 
 .tweak-list-pack {
   display: none;
-}
-
-.tweak.selected {
-  background: var(--green-1);
-  border: 2px solid #111;
 }
 
 .tweak-title {
@@ -269,13 +305,18 @@ header {
 }
 
 :root {
-  --category-border: rgb(84, 85, 86) rgb(49, 50, 51) rgb(49, 50, 51)
-    rgb(84, 85, 86);
-  --category-border-selected: rgb(84, 170, 43) rgb(49, 100, 26) rgb(49, 100, 26)
-    rgb(84, 170, 43);
+  --dark-border: rgb(106, 108, 112) rgb(84, 86, 88) rgb(84, 86, 88)
+    rgb(106, 108, 112);
+  --dark-border-hover: rgb(122, 124, 129) rgb(97, 99, 101) rgb(97, 99, 101)
+    rgb(122, 124, 129);
+  --green-border: rgb(99, 157, 82) rgb(79, 145, 60) rgb(79, 145, 60)
+    rgb(99, 157, 82);
+  --green-border-hover: rgb(99, 157, 82) rgb(79, 145, 60) rgb(79, 145, 60)
+    rgb(99, 157, 82);
   --dark-one: rgb(72, 73, 74);
   --dark-two: rgb(83, 84, 85);
-  --green-1: rgb(72, 146, 37);
+  --green-one: rgb(60, 133, 39);
+  --green-two: rgb(71, 144, 50);
   --rightmargin: 250px;
   --leftmargin: 10px;
 }
