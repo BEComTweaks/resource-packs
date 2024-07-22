@@ -48,24 +48,7 @@
       "pack_name": "Solid Slime",
       "pack_description": "Eliminates Slime Block transparency.",
       "conflict": ["HoneySlime"],
-      "compatibility": [
-        "WhiteSlime",
-        "OrangeSlime",
-        "MagentaSlime",
-        "LightBlueSlime",
-        "YellowSlime",
-        "PinkSlime",
-        "GraySlime",
-        "LightGraySlime",
-        "CyanSlime",
-        "PurpleSlime",
-        "BlueSlime",
-        "BrownSlime",
-        "GreenSlime",
-        "RedSlime",
-        "BlackSlime",
-        "RainbowSlime"
-      ]
+      "compatibility": []
     },
     {
       "pack_id": "DesaturatedPurpur",
@@ -155,13 +138,6 @@
       "pack_id": "PinkEndRods",
       "pack_name": "Pink End Rods",
       "pack_description": "Changes the gray base of End Rods to pink.",
-      "conflict": [],
-      "compatibility": []
-    },
-    {
-      "pack_id": "UniqueDyes",
-      "pack_name": "Unique Dyes",
-      "pack_description": "Adds variation to dyes by making each one different.",
       "conflict": [],
       "compatibility": []
     },

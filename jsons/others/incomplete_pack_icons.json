@@ -13,8 +13,8 @@
   "More Zombies": [],
   "Parity": [],
   "Peace and Quiet": [],
-  "Retro": ["OldBedIcons", "RenamePottery'Sherd'to'Shard'"],
-  "Terrain": ["GoldenSavanna"],
+  "Retro": [],
+  "Terrain": [],
   "Unobtrusive": ["NoCherryLeavesParticles", "UnobtrusiveScaffolding", "NoFog"],
   "Utility": [
     "CrumbledInfestedStoneBlocks",
@@ -24,5 +24,6 @@
     "DirectionalDispensersandDroppers",
     "NoteBlockPitchParticle"
   ],
-  "Variation": ["VariatedCoarseDirt", "VariatedVillagers"]
+  "Variation": ["VariatedCoarseDirt", "VariatedVillagers"],
+  "World of Color": []
 }

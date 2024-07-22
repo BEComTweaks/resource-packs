@@ -41,13 +41,6 @@
       "compatibility": []
     },
     {
-      "pack_id": "DungeonsAlex&Steve",
-      "pack_name": "DungeonsAlex&Steve",
-      "pack_description": "Gives Alex and Steve their textures from Minecraft: Dungeons.",
-      "conflict": [],
-      "compatibility": []
-    },
-    {
       "pack_id": "DungeonsDirt",
       "pack_name": "Dungeons Dirt",
       "pack_description": "Gives Dirt its texture from Minecraft: Dungeons.",

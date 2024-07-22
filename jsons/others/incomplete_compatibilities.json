@@ -1,12 +1,10 @@
 {
-  "SolidSlime": ["RainbowSlime"],
   "AshlessCampfires": ["SoulSoilSoulCampfires"],
   "UniformOres": ["UnlitRedstoneOre"],
   "HungerPreview": ["MusicDiscRedstoneLevelPreview"],
   "MusicDiscRedstoneLevelPreview": ["HungerPreview"],
   "StickyPistonSides": ["PistonInnerFix"],
   "UnlitRedstoneOre": ["UniformOres", "ClassicOres"],
-  "RainbowSlime": ["SolidSlime"],
   "ClassicOres": ["UnlitRedstoneOre"],
   "SmileyAxolotls": ["GreenAxolotl"],
   "GreenAxolotl": ["SmileyAxolotls"],

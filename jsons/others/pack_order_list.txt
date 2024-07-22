@@ -6,7 +6,6 @@ variation.json
 peace_and_quiet.json
 utility.json
 unobtrusive.json
-colorful_slime.json
 gui.json
 	crosshairs.json
 	hearts.json
@@ -14,5 +13,7 @@ gui.json
 	menu_panoramas.json
 retro.json
 fun.json
+world_of_color.json
+	colorful_slime.json
 parity.json
 fixes_and_consistency.json

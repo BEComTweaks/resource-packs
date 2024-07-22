@@ -92,6 +92,7 @@ function downloadSelectedTweaks() {
     Unobtrusive: [],
     Utility: [],
     Variation: [],
+    "World of Color": [],
   };
 
   const indicesByCategory = {
@@ -112,6 +113,7 @@ function downloadSelectedTweaks() {
     Unobtrusive: [],
     Utility: [],
     Variation: [],
+    "World of Color": [],
   };
 
   selectedTweaks.forEach((tweak) => {
@@ -187,6 +189,10 @@ function downloadSelectedTweaks() {
     Variation: {
       packs: tweaksByCategory["Variation"],
       index: indicesByCategory["Variation"],
+    },
+    "World of Color": {
+      packs: tweaksByCategory["World of Color"],
+      index: indicesByCategory["World of Color"],
     },
     raw: selectedTweaks.map((tweak) => tweak.name),
   };
