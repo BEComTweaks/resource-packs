@@ -73,14 +73,14 @@
       "compatibility": []
     },
     {
-      "pack_id": "Aromantic_asexualHearts",
+      "pack_id": "AromanticAsexualHearts",
       "pack_name": "Aromantic Asexual Hearts",
       "pack_description": "",
       "conflict": [],
       "compatibility": []
     },
     {
-      "pack_id": "Aromantic_asexual_v2Hearts",
+      "pack_id": "AromanticAsexualv2Hearts",
       "pack_name": "Aromantic Asexual v2 Hearts",
       "pack_description": "",
       "conflict": [],
@@ -136,7 +136,7 @@
       "compatibility": []
     },
     {
-      "pack_id": "Bigender_v2Hearts",
+      "pack_id": "Bigenderv2Hearts",
       "pack_name": "Bigender v2 Hearts",
       "pack_description": "",
       "conflict": [],
@@ -171,71 +171,17 @@
       "compatibility": []
     },
     {
-      "pack_id": "Polyamorous_v2Hearts",
+      "pack_id": "Polyamorousv2Hearts",
       "pack_name": "Polyamorous v2 Hearts",
       "pack_description": "",
-      "conflict": [
-        "PrideHearts",
-        "ProgressHearts",
-        "LesbianHearts",
-        "GayHearts",
-        "BisexualHearts",
-        "TransgenderHearts",
-        "QueerHearts",
-        "IntersexHearts",
-        "AsexualHearts",
-        "AromanticHearts",
-        "Aromantic_asexualHearts",
-        "Aromantic_asexual_v2Hearts",
-        "PansexualHearts",
-        "OmnisexualHearts",
-        "Non-binaryHearts",
-        "AgenderHearts",
-        "GenderfluidHearts",
-        "GenderqueerHearts",
-        "BigenderHearts",
-        "Bigender_v2Hearts",
-        "DemisexualHearts",
-        "DemiromanticHearts",
-        "PolysexualHearts",
-        "PolyamorousHearts",
-        "Polyamorous_v2Hearts",
-        "AllyHearts"
-      ],
+      "conflict": [],
       "compatibility": []
     },
     {
       "pack_id": "AllyHearts",
       "pack_name": "Ally Hearts",
       "pack_description": "",
-      "conflict": [
-        "PrideHearts",
-        "ProgressHearts",
-        "LesbianHearts",
-        "GayHearts",
-        "BisexualHearts",
-        "TransgenderHearts",
-        "QueerHearts",
-        "IntersexHearts",
-        "AsexualHearts",
-        "AromanticHearts",
-        "Aromantic_asexualHearts",
-        "Aromantic_asexual_v2Hearts",
-        "PansexualHearts",
-        "OmnisexualHearts",
-        "Non-binaryHearts",
-        "AgenderHearts",
-        "GenderfluidHearts",
-        "GenderqueerHearts",
-        "BigenderHearts",
-        "Bigender_v2Hearts",
-        "DemisexualHearts",
-        "DemiromanticHearts",
-        "PolysexualHearts",
-        "PolyamorousHearts",
-        "Polyamorous_v2Hearts",
-        "AllyHearts"
-      ],
+      "conflict": [],
       "compatibility": []
     }
   ]
