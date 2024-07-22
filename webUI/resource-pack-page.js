@@ -84,6 +84,7 @@ function downloadSelectedTweaks() {
     GUI: [],
     "Lower and Sides": [],
     "Menu Panoramas": [],
+    Mobs: [],
     "More Zombies": [],
     Parity: [],
     "Peace and Quiet": [],
@@ -105,6 +106,7 @@ function downloadSelectedTweaks() {
     GUI: [],
     "Lower and Sides": [],
     "Menu Panoramas": [],
+    Mobs: [],
     "More Zombies": [],
     Parity: [],
     "Peace and Quiet": [],
@@ -157,6 +159,10 @@ function downloadSelectedTweaks() {
     "Menu Panoramas": {
       packs: tweaksByCategory["Menu Panoramas"],
       index: indicesByCategory["Menu Panoramas"],
+    },
+    Mobs: {
+      packs: tweaksByCategory["Mobs"],
+      index: indicesByCategory["Mobs"],
     },
     "More Zombies": {
       packs: tweaksByCategory["More Zombies"],

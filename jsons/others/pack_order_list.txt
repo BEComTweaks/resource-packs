@@ -4,6 +4,7 @@ terrain.json
 	lower_and_sides.json
 variation.json
 peace_and_quiet.json
+	peace_and_quiet_mobs.json
 utility.json
 unobtrusive.json
 gui.json
