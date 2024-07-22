@@ -55,7 +55,7 @@
       "pack_name": "Smoother Stones",
       "pack_description": "Smoothens the textures of Diorite and Granite by reducing contrast.",
       "conflict": ["PolishedStonesToBricks", "VariatedUnpolishedStones"],
-      "compatibility": ["DoubleSlabFix"]
+      "compatibility": []
     },
     {
       "pack_id": "PebblelessDirt",

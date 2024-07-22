@@ -1,19 +1,15 @@
 {
   "SolidSlime": ["RainbowSlime"],
   "AshlessCampfires": ["SoulSoilSoulCampfires"],
-  "SmootherStones": ["DoubleSlabFix"],
   "UniformOres": ["UnlitRedstoneOre"],
   "HungerPreview": ["MusicDiscRedstoneLevelPreview"],
   "MusicDiscRedstoneLevelPreview": ["HungerPreview"],
   "StickyPistonSides": ["PistonInnerFix"],
-  "DirectionalObservers": ["UpdatedObserverTexture"],
   "UnlitRedstoneOre": ["UniformOres", "ClassicOres"],
   "RainbowSlime": ["SolidSlime"],
   "ClassicOres": ["UnlitRedstoneOre"],
   "SmileyAxolotls": ["GreenAxolotl"],
   "GreenAxolotl": ["SmileyAxolotls"],
-  "UpdatedObserverTexture": ["DirectionalObservers"],
-  "DoubleSlabFix": ["SmootherStones"],
   "PistonInnerFix": ["StickyPistonSides"],
   "SoulSoilSoulCampfire": ["AshlessCampfires"]
 }

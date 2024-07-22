@@ -55,7 +55,7 @@
       "pack_name": "Double Slab Fix",
       "pack_description": "Gives double slab variants of some blocks a clear line of seperation.",
       "conflict": [],
-      "compatibility": ["SmootherStones"]
+      "compatibility": []
     },
     {
       "pack_id": "HoeFix",
@@ -135,8 +135,8 @@
       "pack_id": "PixelConsistentWither",
       "pack_name": "Pixel Consistent Wither",
       "pack_description": "Retextures the Wither's texture to be consistent with its size.",
-      "conflict": ["WitherBee"],
-      "compatibility": []
+      "conflict": [],
+      "compatibility": ["WitherBee"]
     },
     {
       "pack_id": "PixelConsistentSigns",
@@ -157,7 +157,7 @@
       "pack_name": "Pixel Consistent Beacon Beam",
       "pack_description": "Retextures Beacon and End Gateway beam's textures to be consistent with their sizes.",
       "conflict": [],
-      "compatibility": []
+      "compatibility": ["BaconBeam"]
     },
     {
       "pack_id": "PixelConsistentSonicBoom",

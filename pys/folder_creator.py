@@ -101,8 +101,6 @@ def folder_creator():
             # Seperator
             print("\n", "=" * 40, "\n")
 
-    clrinput("Finished Successfully!\nPress Enter to exit.", clr="green")
-
 
 if __name__ == "__main__":
     folder_creator()

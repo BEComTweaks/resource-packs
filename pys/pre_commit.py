@@ -316,8 +316,6 @@ def pre_commit():
     with open(f"{cdir()}/credits.md","w") as credits:
         credits.write(credit_unformatted)
     clrprint("Files are Prettier!", clr="green")
-    
-    clrinput("Press Enter to exit.", clr="green")
 
 
 if __name__ == "__main__":

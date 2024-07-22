@@ -1,7 +1,8 @@
 {
-  "num_mip_levels": 4,
-  "padding": 8,
   "resource_pack_name": "vanilla",
+  "texture_name": "atlas.terrain",
+  "padding": 8,
+  "num_mip_levels": 4,
   "texture_data": {
     "stone_slab_side": {
       "textures": [
@@ -54,18 +55,8 @@
     "polished_deepslate_double_slab": {
       "textures": "textures/blocks/slab_sides/polished_deepslate_slab_side"
     },
-    "cut_copper_double_slab": {
-      "textures": "textures/blocks/slab_sides/cut_copper_slab_double"
-    },
-    "exposed_cut_copper_double_slab": {
-      "textures": "textures/blocks/slab_sides/exposed_cut_copper_slab_double"
-    },
-    "oxidized_cut_copper_double_slab": {
-      "textures": "textures/blocks/slab_sides/oxidized_cut_copper_slab_double"
-    },
-    "weathered_cut_copper_double_slab": {
-      "textures": "textures/blocks/slab_sides/weathered_cut_copper_slab_double"
+    "polished_tuff_double_slab": {
+      "textures": "textures/blocks/slab_sides/polished_tuff_slab_side"
     }
-  },
-  "texture_name": "atlas.terrain"
+  }
 }

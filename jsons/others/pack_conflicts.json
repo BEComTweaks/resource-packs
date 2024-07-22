@@ -126,10 +126,8 @@
   "SusSandandGravel": ["SuspiciousSand&GravelBorders"],
   "DarthXisumaPiglins": ["ZombiePigman"],
   "EmeraldstoRubies": ["LegacyConsoleEmerald"],
-  "WitherBee": ["PixelConsistentWither"],
   "EnglishEnchantingTable": ["SmootherFont"],
   "StandardGalacticAlphabet": ["SmootherFont"],
-  "BaconBeam": ["PixelConsistentBeaconBeam"],
   "PhantomRain": ["UnobtrusiveRain"],
   "WHAT": [
     "TranslucentSpyglassOverlay",
@@ -187,7 +185,6 @@
     "PinkSlime",
     "RainbowSlime"
   ],
-  "PixelConsistentWither": ["WitherBee"],
   "ConsistentHelmets": ["GoldenCrown"],
   "SteveZombies": [
     "AlexZombies",
