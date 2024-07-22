@@ -14,7 +14,7 @@
       "pack_name": "Grass Sides",
       "pack_description": "Completely covers the sides of Grass Blocks to provide a smoother and greener landscape.",
       "conflict": ["LowerGrass", "DungeonsDirt"],
-      "compatibility": []
+      "compatibility": ["GoldenSavanna"]
     },
     {
       "pack_id": "LowerMycelium",

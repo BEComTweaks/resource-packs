@@ -13,7 +13,7 @@
       "pack_name": "Golden Savanna",
       "pack_description": "Recolors Savanna biomes to have beautiful golden grass.",
       "conflict": ["LushGrassAllRound"],
-      "compatibility": []
+      "compatibility": ["GrassSides"]
     },
     {
       "pack_id": "LushGrassAllRound",
