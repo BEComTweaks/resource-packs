@@ -3,183 +3,183 @@
   "subcategory_of": "GUI &gt; Hearts",
   "packs": [
     {
-      "pack_id": "PrideHearts",
-      "pack_name": "Pride Hearts",
+      "pack_id": "Pride",
+      "pack_name": "Pride",
       "pack_description": "",
       "conflict": [],
       "compatibility": []
     },
     {
-      "pack_id": "ProgressHearts",
-      "pack_name": "Progress Hearts",
+      "pack_id": "Progress",
+      "pack_name": "Progress",
       "pack_description": "",
       "conflict": [],
       "compatibility": []
     },
     {
-      "pack_id": "LesbianHearts",
-      "pack_name": "Lesbian Hearts",
+      "pack_id": "Lesbian",
+      "pack_name": "Lesbian",
       "pack_description": "",
       "conflict": [],
       "compatibility": []
     },
     {
-      "pack_id": "GayHearts",
-      "pack_name": "Gay Hearts",
+      "pack_id": "Gay",
+      "pack_name": "Gay",
       "pack_description": "",
       "conflict": [],
       "compatibility": []
     },
     {
-      "pack_id": "BisexualHearts",
-      "pack_name": "Bisexual Hearts",
+      "pack_id": "Bisexual",
+      "pack_name": "Bisexual",
       "pack_description": "",
       "conflict": [],
       "compatibility": []
     },
     {
-      "pack_id": "TransgenderHearts",
-      "pack_name": "Transgender Hearts",
+      "pack_id": "Transgender",
+      "pack_name": "Transgender",
       "pack_description": "",
       "conflict": [],
       "compatibility": []
     },
     {
-      "pack_id": "QueerHearts",
-      "pack_name": "Queer Hearts",
+      "pack_id": "Queer",
+      "pack_name": "Queer",
       "pack_description": "",
       "conflict": [],
       "compatibility": []
     },
     {
-      "pack_id": "IntersexHearts",
-      "pack_name": "Intersex Hearts",
+      "pack_id": "Intersex",
+      "pack_name": "Intersex",
       "pack_description": "",
       "conflict": [],
       "compatibility": []
     },
     {
-      "pack_id": "AsexualHearts",
-      "pack_name": "Asexual Hearts",
+      "pack_id": "Asexual",
+      "pack_name": "Asexual",
       "pack_description": "",
       "conflict": [],
       "compatibility": []
     },
     {
-      "pack_id": "AromanticHearts",
-      "pack_name": "Aromantic Hearts",
+      "pack_id": "Aromantic",
+      "pack_name": "Aromantic",
       "pack_description": "",
       "conflict": [],
       "compatibility": []
     },
     {
-      "pack_id": "AromanticAsexualHearts",
-      "pack_name": "Aromantic Asexual Hearts",
+      "pack_id": "AromanticAsexual",
+      "pack_name": "Aromantic Asexual",
       "pack_description": "",
       "conflict": [],
       "compatibility": []
     },
     {
-      "pack_id": "AromanticAsexualv2Hearts",
-      "pack_name": "Aromantic Asexual v2 Hearts",
+      "pack_id": "AromanticAsexualv2",
+      "pack_name": "Aromantic Asexual v2",
       "pack_description": "",
       "conflict": [],
       "compatibility": []
     },
     {
-      "pack_id": "PansexualHearts",
-      "pack_name": "Pansexual Hearts",
+      "pack_id": "Pansexual",
+      "pack_name": "Pansexual",
       "pack_description": "",
       "conflict": [],
       "compatibility": []
     },
     {
-      "pack_id": "OmnisexualHearts",
-      "pack_name": "Omnisexual Hearts",
+      "pack_id": "Omnisexual",
+      "pack_name": "Omnisexual",
       "pack_description": "",
       "conflict": [],
       "compatibility": []
     },
     {
-      "pack_id": "Non-binaryHearts",
-      "pack_name": "Non-binary Hearts",
+      "pack_id": "Non-binary",
+      "pack_name": "Non-binary",
       "pack_description": "",
       "conflict": [],
       "compatibility": []
     },
     {
-      "pack_id": "AgenderHearts",
-      "pack_name": "Agender Hearts",
+      "pack_id": "Agender",
+      "pack_name": "Agender",
       "pack_description": "",
       "conflict": [],
       "compatibility": []
     },
     {
-      "pack_id": "GenderfluidHearts",
-      "pack_name": "Genderfluid Hearts",
+      "pack_id": "Genderfluid",
+      "pack_name": "Genderfluid",
       "pack_description": "",
       "conflict": [],
       "compatibility": []
     },
     {
-      "pack_id": "GenderqueerHearts",
-      "pack_name": "Genderqueer Hearts",
+      "pack_id": "Genderqueer",
+      "pack_name": "Genderqueer",
       "pack_description": "",
       "conflict": [],
       "compatibility": []
     },
     {
-      "pack_id": "BigenderHearts",
-      "pack_name": "Bigender Hearts",
+      "pack_id": "Bigender",
+      "pack_name": "Bigender",
       "pack_description": "",
       "conflict": [],
       "compatibility": []
     },
     {
-      "pack_id": "Bigenderv2Hearts",
-      "pack_name": "Bigender v2 Hearts",
+      "pack_id": "Bigenderv2",
+      "pack_name": "Bigender v2",
       "pack_description": "",
       "conflict": [],
       "compatibility": []
     },
     {
-      "pack_id": "DemisexualHearts",
-      "pack_name": "Demisexual Hearts",
+      "pack_id": "Demisexual",
+      "pack_name": "Demisexual",
       "pack_description": "",
       "conflict": [],
       "compatibility": []
     },
     {
-      "pack_id": "DemiromanticHearts",
-      "pack_name": "Demiromantic Hearts",
+      "pack_id": "Demiromantic",
+      "pack_name": "Demiromantic",
       "pack_description": "",
       "conflict": [],
       "compatibility": []
     },
     {
-      "pack_id": "PolysexualHearts",
-      "pack_name": "Polysexual Hearts",
+      "pack_id": "Polysexual",
+      "pack_name": "Polysexual",
       "pack_description": "",
       "conflict": [],
       "compatibility": []
     },
     {
-      "pack_id": "PolyamorousHearts",
-      "pack_name": "Polyamorous Hearts",
+      "pack_id": "Polyamorous",
+      "pack_name": "Polyamorous",
       "pack_description": "",
       "conflict": [],
       "compatibility": []
     },
     {
-      "pack_id": "Polyamorousv2Hearts",
-      "pack_name": "Polyamorous v2 Hearts",
+      "pack_id": "Polyamorousv2",
+      "pack_name": "Polyamorous v2",
       "pack_description": "",
       "conflict": [],
       "compatibility": []
     },
     {
-      "pack_id": "AllyHearts",
-      "pack_name": "Ally Hearts",
+      "pack_id": "Ally",
+      "pack_name": "Ally",
       "pack_description": "",
       "conflict": [],
       "compatibility": []
