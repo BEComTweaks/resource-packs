@@ -2,6 +2,69 @@
   "topic": "Fixes and Consistency",
   "packs": [
     {
+      "pack_id": "UpdatedObserverTexture",
+      "pack_name": "Updated Observer Texture",
+      "pack_description": "Changes the Observer's top texture to fit in-line with the 1.14 default textures, as it was left out in that update.",
+      "conflict": [],
+      "compatibility": ["DirectionalObservers"]
+    },
+    {
+      "pack_id": "ConsistentBlankDecoratedPot",
+      "pack_name": "Consistent Blank Decorated Pot",
+      "pack_description": "Adds the gold trim to blank decorated pot sides to match the decorated sides.",
+      "conflict": [],
+      "compatibility": []
+    },
+    {
+      "pack_id": "ConsistentBuckets",
+      "pack_name": "Consistent Buckets",
+      "pack_description": "Moves empty, Water, Lava and Powder Snow Buckets down by 1 pixel to make them consistent with Fix and Axolotl Buckets.",
+      "conflict": [],
+      "compatibility": []
+    },
+    {
+      "pack_id": "ConsistentTadpoleBucket",
+      "pack_name": "Consistent Tadpole Bucket",
+      "pack_description": "Recolors the water inside the Tadpole Bucket to match the rest of the Water and Fish buckets.",
+      "conflict": [],
+      "compatibility": []
+    },
+    {
+      "pack_id": "Blaze'sRodsFix",
+      "pack_name": "Blaze's Rods Fix",
+      "pack_description": "Fixes the Blaze's rods' color on the bottom face.",
+      "conflict": [],
+      "compatibility": []
+    },
+    {
+      "pack_id": "RedstoneWireFix",
+      "pack_name": "Redstone Wire Fix",
+      "pack_description": "Adds some extra pixels to the Redstone Wire texture to make sure the whole line joins up.",
+      "conflict": ["CleanRedstoneDust"],
+      "compatibility": []
+    },
+    {
+      "pack_id": "CactusBottomFix",
+      "pack_name": "Cactus Bottom Fix",
+      "pack_description": "Recolors the bottom of cacti to match the rest of the cactus.",
+      "conflict": [],
+      "compatibility": []
+    },
+    {
+      "pack_id": "DoubleSlabFix",
+      "pack_name": "Double Slab Fix",
+      "pack_description": "Gives double slab variants of some blocks a clear line of seperation.",
+      "conflict": [],
+      "compatibility": ["SmootherStones"]
+    },
+    {
+      "pack_id": "HoeFix",
+      "pack_name": "Hoe Fix",
+      "pack_description": "Fixes the incorrect color on the handles of iron and stone hoes.",
+      "conflict": [],
+      "compatibility": []
+    },
+    {
       "pack_id": "PistonInnerFix",
       "pack_name": "Piston Inner Fix",
       "pack_description": "Fixes Inner Piston texture hole to match the arm size.",
@@ -34,80 +97,10 @@
       "compatibility": []
     },
     {
-      "pack_id": "UpdatedObserverTexture",
-      "pack_name": "Updated Observer Texture",
-      "pack_description": "Changes the Observer's top texture to fit in-line with the 1.14 default textures, as it was left out in that update.",
-      "conflict": [],
-      "compatibility": ["DirectionalObservers"]
-    },
-    {
-      "pack_id": "RedstoneWireFix",
-      "pack_name": "Redstone Wire Fix",
-      "pack_description": "Adds some extra pixels to the Redstone Wire texture to make sure the whole line joins up.",
-      "conflict": ["CleanRedstoneDust"],
-      "compatibility": []
-    },
-    {
-      "pack_id": "ConsistentBlankDecoratedPot",
-      "pack_name": "Consistent Blank Decorated Pot",
-      "pack_description": "Adds the gold trim to blank decorated pot sides to match the decorated sides.",
-      "conflict": [],
-      "compatibility": []
-    },
-    {
-      "pack_id": "ConsistentBuckets",
-      "pack_name": "Consistent Buckets",
-      "pack_description": "Moves empty, Water, Lava and Powder Snow Buckets down by 1 pixel to make them consistent with Fix and Axolotl Buckets.",
-      "conflict": [],
-      "compatibility": []
-    },
-    {
-      "pack_id": "ConsistentTadpoleBucket",
-      "pack_name": "Consistent Tadpole Bucket",
-      "pack_description": "Recolors the water inside the Tadpole Bucket to match the rest of the Water and Fish buckets.",
-      "conflict": [],
-      "compatibility": []
-    },
-    {
-      "pack_id": "ConsistentOars",
-      "pack_name": "Consistent Oars",
-      "pack_description": "Recolors the oars on all boat items to match the boat color itself.",
-      "conflict": [],
-      "compatibility": ["OarlessBoats"]
-    },
-    {
-      "pack_id": "CactusBottomFix",
-      "pack_name": "Cactus Bottom Fix",
-      "pack_description": "Recolors the bottom of cacti to match the rest of the cactus.",
-      "conflict": [],
-      "compatibility": []
-    },
-    {
       "pack_id": "CocoaBeansFix",
       "pack_name": "Cocoa Beans Fix",
       "pack_description": "Changes the textures on all the cocoa beans stages to use proper proportions.",
       "conflict": [],
-      "compatibility": []
-    },
-    {
-      "pack_id": "ConsistentBambooPlanks",
-      "pack_name": "Consistent Bamboo Planks",
-      "pack_description": "Makes Bamboo Planks and Bamboo Mosaics match the textures of the other plank types.",
-      "conflict": [],
-      "compatibility": []
-    },
-    {
-      "pack_id": "AccurateScaffolding",
-      "pack_name": "Accurate Scaffolding",
-      "pack_description": "Recolors Scaffolding to use Bamboo and String colors to reflect its crafting recipe.",
-      "conflict": [],
-      "compatibility": ["UnobtrusiveScaffolding"]
-    },
-    {
-      "pack_id": "ConsistentHelmets",
-      "pack_name": "Consistent Helmets",
-      "pack_description": "Adds nose-pieces to the helmet items that are missing them (iron, gold & diamond).",
-      "conflict": ["GoldenCrown"],
       "compatibility": []
     },
     {
@@ -121,55 +114,6 @@
       "pack_id": "HangingSignLogs",
       "pack_name": "Hanging Sign Logs",
       "pack_description": "Retextures the beams of hanging signs to logs to match signs' posts.",
-      "conflict": [],
-      "compatibility": []
-    },
-    {
-      "pack_id": "SoulSoilSoulCampfire",
-      "pack_name": "Soul Soil Soul Campfire",
-      "pack_description": "Replaces the Soul Campfire's 'ash' texture with Soul Soil for consistency.",
-      "conflict": [],
-      "compatibility": ["AshlessCampfires"]
-    },
-    {
-      "pack_id": "Blaze'sRodsFix",
-      "pack_name": "Blaze's Rods Fix",
-      "pack_description": "Fixes the Blaze's rods' color on the bottom face.",
-      "conflict": [],
-      "compatibility": []
-    },
-    {
-      "pack_id": "NicerFastLeaves",
-      "pack_name": "Nicer Fast Leaves",
-      "pack_description": "Replaces the solid block parts in leaves to a darker green when having fancy leaves disabled.",
-      "conflict": [],
-      "compatibility": []
-    },
-    {
-      "pack_id": "ConsistentSmoothStone",
-      "pack_name": "Consistent Smooth Stone",
-      "pack_description": "Gives the Smooth Stone texture the same bevel as its slab counterpart.",
-      "conflict": [],
-      "compatibility": []
-    },
-    {
-      "pack_id": "DoubleSlabFix",
-      "pack_name": "Double Slab Fix",
-      "pack_description": "Gives double slab variants of some blocks a clear line of seperation.",
-      "conflict": [],
-      "compatibility": ["SmootherStones"]
-    },
-    {
-      "pack_id": "HoeFix",
-      "pack_name": "Hoe Fix",
-      "pack_description": "Fixes the incorrect color on the handles of iron and stone hoes.",
-      "conflict": [],
-      "compatibility": []
-    },
-    {
-      "pack_id": "PixelConsistentBat",
-      "pack_name": "Pixel Consistent Bat",
-      "pack_description": "Retextures the Bat's texture to be consistent with its size.",
       "conflict": [],
       "compatibility": []
     },
@@ -226,6 +170,55 @@
       "pack_id": "PixelConsistentGuardianBeam",
       "pack_name": "Pixel Consistent Guardian Beam",
       "pack_description": "Retextures the Guardian beam's textures to be consistent with its sizes.",
+      "conflict": [],
+      "compatibility": []
+    },
+    {
+      "pack_id": "SoulSoilSoulCampfire",
+      "pack_name": "Soul Soil Soul Campfire",
+      "pack_description": "Replaces the Soul Campfire's 'ash' texture with Soul Soil for consistency.",
+      "conflict": [],
+      "compatibility": ["AshlessCampfires"]
+    },
+    {
+      "pack_id": "NicerFastLeaves",
+      "pack_name": "Nicer Fast Leaves",
+      "pack_description": "Replaces the solid block parts in leaves to a darker green when having fancy leaves disabled.",
+      "conflict": [],
+      "compatibility": []
+    },
+    {
+      "pack_id": "ConsistentHelmets",
+      "pack_name": "Consistent Helmets",
+      "pack_description": "Adds nose-pieces to the helmet items that are missing them (iron, gold & diamond).",
+      "conflict": ["GoldenCrown"],
+      "compatibility": []
+    },
+    {
+      "pack_id": "ConsistentSmoothStone",
+      "pack_name": "Consistent Smooth Stone",
+      "pack_description": "Gives the Smooth Stone texture the same bevel as its slab counterpart.",
+      "conflict": [],
+      "compatibility": []
+    },
+    {
+      "pack_id": "ConsistentBambooPlanks",
+      "pack_name": "Consistent Bamboo Planks",
+      "pack_description": "Makes Bamboo Planks and Bamboo Mosaics match the textures of the other plank types.",
+      "conflict": [],
+      "compatibility": []
+    },
+    {
+      "pack_id": "AccurateScaffolding",
+      "pack_name": "Accurate Scaffolding",
+      "pack_description": "Recolors Scaffolding to use Bamboo and String colors to reflect its crafting recipe.",
+      "conflict": [],
+      "compatibility": ["UnobtrusiveScaffolding"]
+    },
+    {
+      "pack_id": "BrewingStandIconsFix",
+      "pack_name": "Brewing Stand Icons Fix",
+      "pack_description": "Removes the extra pixels on the Brewing Stand's potion slot",
       "conflict": [],
       "compatibility": []
     },

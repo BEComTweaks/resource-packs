@@ -10,12 +10,10 @@
   "UnlitRedstoneOre": ["UniformOres", "ClassicOres"],
   "RainbowSlime": ["SolidSlime"],
   "ClassicOres": ["UnlitRedstoneOre"],
-  "OarlessBoats": ["ConsistentOars"],
   "SmileyAxolotls": ["GreenAxolotl"],
   "GreenAxolotl": ["SmileyAxolotls"],
-  "PistonInnerFix": ["StickyPistonSides"],
   "UpdatedObserverTexture": ["DirectionalObservers"],
-  "ConsistentOars": ["OarlessBoats"],
-  "SoulSoilSoulCampfire": ["AshlessCampfires"],
-  "DoubleSlabFix": ["SmootherStones"]
+  "DoubleSlabFix": ["SmootherStones"],
+  "PistonInnerFix": ["StickyPistonSides"],
+  "SoulSoilSoulCampfire": ["AshlessCampfires"]
 }

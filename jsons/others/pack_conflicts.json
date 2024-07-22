@@ -167,6 +167,7 @@
   "DungeonsTerracotta": ["VariatedTerracotta"],
   "LegacyConsoleEmerald": ["EmeraldToRuby"],
   "LegacyConsoleSnowball": ["WhiterSnow"],
+  "RedstoneWireFix": ["CleanRedstoneDust"],
   "PistonInnerFix": [
     "HoneySlime",
     "WhiteSlime",
@@ -186,9 +187,8 @@
     "PinkSlime",
     "RainbowSlime"
   ],
-  "RedstoneWireFix": ["CleanRedstoneDust"],
-  "ConsistentHelmets": ["GoldenCrown"],
   "PixelConsistentWither": ["WitherBee"],
+  "ConsistentHelmets": ["GoldenCrown"],
   "SteveZombies": [
     "AlexZombies",
     "AriZombies",

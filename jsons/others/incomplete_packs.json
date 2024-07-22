@@ -3,7 +3,7 @@
   "Aesthetic": [],
   "Crosshairs": [],
   "Colorful Slime": ["RainbowSlime"],
-  "Fixes and Consistency": [],
+  "Fixes and Consistency": ["BrewingStandIconsFix"],
   "Fun": [],
   "GUI": ["TransparentUI", "HighContrastUI"],
   "Hearts": [],

@@ -187,7 +187,7 @@
       "pack_name": "Oarless Boats",
       "pack_description": "Removes the oars from all boat types from their item textures and entity models.",
       "conflict": [],
-      "compatibility": ["ConsistentOars"]
+      "compatibility": []
     },
     {
       "pack_id": "OldDoorSound",
