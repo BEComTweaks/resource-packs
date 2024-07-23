@@ -40,15 +40,30 @@ header {
 }
 
 .category {
-  margin-top: 15px;
-  margin-bottom: 15px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .category-controlled {
   display: none;
-  margin-top: 15px;
-  margin-bottom: 15px;
-  position: center;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-style: solid;
+  border-width: 5px;
+  border-radius: 0px 0px 5px 5px;
+  border-color: rgb(106, 108, 112);
+  background-color: var(--dark-one);
+  overflow: hidden;
+  max-height: 0;
+  transition:
+    max-height 0.5s ease-in-out,
+    padding-top 0.25s ease,
+    padding-bottom 0.25s ease;
+}
+
+.category-controlled.open {
+  height: auto;
+  display: block;
 }
 
 .category-label {
@@ -56,18 +71,30 @@ header {
   font-size: 20px;
   background-color: var(--dark-one);
   padding: 5px;
-  border-radius: 5px;
-  cursor: pointer;
   user-select: none;
+  border-radius: 5px;
   border-style: solid;
   border-width: 5px;
   border-color: var(--dark-border);
-  transition: background-color 0.25s;
+  cursor: pointer;
+  margin-bottom: -5px;
+  transition: background-color 0.25s margin-bottom 0.5s ease;
+  z-index: 13;
 }
 
 .category-label:hover {
   background-color: var(--dark-two);
   border-color: var(--dark-border-hover);
+}
+
+.category-label.open {
+  border-radius: 5px 5px 0px 0px;
+  border-color: rgb(106, 108, 112);
+}
+
+.category-label.open:hover {
+  border-radius: 5px 5px 0px 0px;
+  border-color: rgb(122, 124, 129);
 }
 
 .comp-hover-text {
@@ -207,13 +234,13 @@ header {
   position: center;
   margin-top: 15px;
   margin-bottom: 15px;
-  margin-left: 5%;
-  width: 90%;
+  margin-left: 2.5%;
+  width: 95%;
 }
 
 .subcattweaks {
   position: center;
-  display: none;
+  display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   gap: 10px;
   margin-top: 10px;
@@ -237,7 +264,7 @@ header {
   flex-direction: column;
   position: relative;
   border-style: solid;
-  border-width: 3.75px;
+  border-width: 4.375px;
   border-color: var(--dark-border);
   border-radius: 6.25px;
   transition: background 0.375s;
@@ -257,25 +284,6 @@ header {
   background: var(--green-two);
   border-color: var(--green-border-hover);
 }
-/* Attempting a fancy hover, keeping it here for more testing
-Relevant ChatGPT Link: https://chatgpt.com/share/611c13b6-61a9-444e-ab52-a64d1beb6695
-.tweak.selected::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  width: 0;
-  height: 2px;
-  background-color: white;
-  transition:
-    width 0.3s ease,
-    left 0.3s ease;
-}
-
-.tweak.selected::after:hover {
-  width: 50%;
-  left: 25%;
-}*/
 
 .tweak-list-category {
   display: none;
@@ -300,7 +308,7 @@ Relevant ChatGPT Link: https://chatgpt.com/share/611c13b6-61a9-444e-ab52-a64d1be
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(162.5px, 1fr));
   gap: 10px;
-  margin-top: 10px;
+  margin: 10px;
   align-items: top;
   text-align: center;
 }

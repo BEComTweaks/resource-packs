@@ -43,16 +43,31 @@ window.addEventListener("resize", () => {
   }
 });
 
-function toggleSubCategory(label) {
-  const tweaksContainer = label.nextElementSibling;
-  tweaksContainer.style.display =
-    tweaksContainer.style.display != "grid" ? "grid" : "none";
-}
-
 function toggleCategory(label) {
   const tweaksContainer = label.nextElementSibling;
-  tweaksContainer.style.display =
-    tweaksContainer.style.display != "block" ? "block" : "none";
+
+  if (tweaksContainer.style.maxHeight) {
+    tweaksContainer.style.maxHeight = null;
+    setTimeout(() => {
+      tweaksContainer.style.display = "none";
+      tweaksContainer.style.paddingTop = null;
+      tweaksContainer.style.paddingBottom = null;
+      label.classList.toggle("open");
+    }, 500); // Matches the transition duration
+  } else {
+    tweaksContainer.style.display = "block";
+    tweaksContainer.style.paddingTop = "7.5px";
+    tweaksContainer.style.paddingBottom = "7.5px";
+    label.classList.toggle("open");
+    tweaksContainer.style.maxHeight = tweaksContainer.scrollHeight + "px";
+    const outerCatLabel =
+      label.parentElement.parentElement.previousElementSibling;
+    const outerCatContainer = label.parentElement.parentElement;
+    if (outerCatLabel.classList.contains("category-label")) {
+      outerCatContainer.style.maxHeight =
+        outerCatContainer.scrollHeight + tweaksContainer.scrollHeight + "px";
+    }
+  }
 }
 
 function downloadSelectedTweaks() {

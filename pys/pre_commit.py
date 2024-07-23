@@ -20,14 +20,13 @@ check("lxml")
 from bs4 import BeautifulSoup
 
 category_start = '<div class="category"><div class="category-label" onclick="toggleCategory(this)">topic_name</div><div class="category-controlled"><div class="tweaks">'
-subcategory_start = '<div class="subcategory"><div class="category-label" onclick="toggleSubCategory(this)">topic_name</div><div class="subcattweaks">'
+subcategory_start = '<div class="subcategory"><div class="category-label" onclick="toggleCategory(this)">topic_name</div><div class="category-controlled"><div class="subcattweaks">'
 pack_start = '<div class="tweak" onclick="toggleSelection(this)" data-category="topic_name" data-name="pack_id" data-index="pack_index">'
 html_comp = '<div class="comp-hover-text">Incompatible with: <incompatible></div>'
 pack_mid = '<div class="tweak-info"><input type="checkbox" id="tweaknumber" name="tweak" value="tweaknumber"><img src="https://raw.githubusercontent.com/BEComTweaks/resource-packs/main/relloctopackicon"style="width:82px; height:82px;" alt="pack_name"><br><label for="tweak" class="tweak-title">pack_name</label><div class="tweak-description">pack_description</div></div>'
 html_conf = '<div class="conf-hover-text">Conflicts with: <conflicts></div>'
 pack_end = '</div>'
 category_end = '</div></div></div>'
-subcategory_end = '</div></div>'
 cat_end_w_subcat_no_end = '</div><div class="subcat<index>">'
 
 with open(f"{cdir()}/credits.md","r") as credits:
@@ -264,7 +263,7 @@ def pre_commit():
                 to_add_pack = to_add_pack.replace("relloctopackicon", f'packs/{file["topic"].lower()}/{file["packs"][i]["pack_id"]}/pack_icon.png')
                 to_add_pack = to_add_pack.replace("https://raw.githubusercontent.com/BEComTweaks/resource-packs/main/","../")
                 pack_html += to_add_pack
-        pack_html += subcategory_end
+        pack_html += category_end
         html = html.replace(f'<div class="subcat{j}"></div>',pack_html)
     clrprint("Finished Counting!", clr="green")
     
