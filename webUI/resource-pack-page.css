@@ -56,14 +56,7 @@ header {
   overflow: hidden;
   max-height: 0;
   transition:
-    max-height 0.5s ease-in-out,
-    padding-top 0.25s ease,
-    padding-bottom 0.25s ease;
-}
-
-.category-controlled.open {
-  height: auto;
-  display: block;
+    max-height 0.5s ease-in-out
 }
 
 .category-label {
