@@ -1,22 +1,24 @@
 aesthetic.json
-	more_zombies.json
+	aesthetic_more_zombies.json
 terrain.json
-	lower_and_sides.json
+	terrain_lower_and_sides.json
 variation.json
 peace_and_quiet.json
 	peace_and_quiet_mobs.json
 utility.json
 unobtrusive.json
+3d.json
 gui.json
-	crosshairs.json
-	hearts.json
-	hearts_pride.json
-	hunger_bars.json
-	menu_panoramas.json
+	gui_crosshairs.json
+	gui_hearts.json
+	gui_hearts_pride.json
+	gui_hunger_bars.json
+menu_panoramas.json
+	menu_panoramas_xisuma_hc_bases.json
 retro.json
 fun.json
 world_of_color.json
-	colorful_slime.json
-	elytra.json
+	woc_colorful_slime.json
+	woc_elytra.json
 parity.json
 fixes_and_consistency.json

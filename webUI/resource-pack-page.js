@@ -113,6 +113,7 @@ function downloadSelectedTweaks() {
     Utility: [],
     Variation: [],
     "World of Color": [],
+    "Xisuma's Hermitcraft Bases": [],
   };
 
   const indicesByCategory = {
@@ -139,6 +140,7 @@ function downloadSelectedTweaks() {
     Utility: [],
     Variation: [],
     "World of Color": [],
+    "Xisuma's Hermitcraft Bases": [],
   };
 
   selectedTweaks.forEach((tweak) => {
@@ -238,6 +240,10 @@ function downloadSelectedTweaks() {
     "World of Color": {
       packs: tweaksByCategory["World of Color"],
       index: indicesByCategory["World of Color"],
+    },
+    "Xisuma's Hermitcraft Bases": {
+      packs: tweaksByCategory["Xisuma's Hermitcraft Bases"],
+      index: indicesByCategory["Xisuma's Hermitcraft Bases"],
     },
     raw: selectedTweaks.map((tweak) => tweak.name),
   };

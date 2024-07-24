@@ -1,6 +1,5 @@
 {
   "topic": "Menu Panoramas",
-  "subcategory_of": "GUI",
   "packs": [
     {
       "pack_id": "Classic",
@@ -145,69 +144,6 @@
     {
       "pack_id": "Stridey'sRPDevelopmentWorld",
       "pack_name": "Stridey's RP Development World",
-      "pack_description": "",
-      "conflict": [],
-      "compatibility": []
-    },
-    {
-      "pack_id": "Xisuma'sHermitcraftBaseSeason1",
-      "pack_name": "Xisuma's Hermitcraft Base Season 1",
-      "pack_description": "",
-      "conflict": [],
-      "compatibility": []
-    },
-    {
-      "pack_id": "Xisuma'sHermitcraftBaseSeason2",
-      "pack_name": "Xisuma's Hermitcraft Base Season 2",
-      "pack_description": "",
-      "conflict": [],
-      "compatibility": []
-    },
-    {
-      "pack_id": "Xisuma'sHermitcraftBaseSeason3",
-      "pack_name": "Xisuma's Hermitcraft Base Season 3",
-      "pack_description": "",
-      "conflict": [],
-      "compatibility": []
-    },
-    {
-      "pack_id": "Xisuma'sHermitcraftBaseSeason4",
-      "pack_name": "Xisuma's Hermitcraft Base Season 4",
-      "pack_description": "",
-      "conflict": [],
-      "compatibility": []
-    },
-    {
-      "pack_id": "Xisuma'sHermitcraftBaseSeason5",
-      "pack_name": "Xisuma's Hermitcraft Base Season 5",
-      "pack_description": "",
-      "conflict": [],
-      "compatibility": []
-    },
-    {
-      "pack_id": "Xisuma'sHermitcraftBaseSeason6",
-      "pack_name": "Xisuma's Hermitcraft Base Season 6",
-      "pack_description": "",
-      "conflict": [],
-      "compatibility": []
-    },
-    {
-      "pack_id": "Xisuma'sHermitcraftBaseSeason7",
-      "pack_name": "Xisuma's Hermitcraft Base Season 7",
-      "pack_description": "",
-      "conflict": [],
-      "compatibility": []
-    },
-    {
-      "pack_id": "Xisuma'sHermitcraftBaseSeason8",
-      "pack_name": "Xisuma's Hermitcraft Base Season 8",
-      "pack_description": "",
-      "conflict": [],
-      "compatibility": []
-    },
-    {
-      "pack_id": "Xisuma'sHermitcraftBaseSeason9",
-      "pack_name": "Xisuma's Hermitcraft Base Season 9",
       "pack_description": "",
       "conflict": [],
       "compatibility": []
