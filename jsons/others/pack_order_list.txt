@@ -16,5 +16,6 @@ retro.json
 fun.json
 world_of_color.json
 	colorful_slime.json
+	elytra.json
 parity.json
 fixes_and_consistency.json

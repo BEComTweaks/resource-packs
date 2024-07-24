@@ -94,9 +94,12 @@ function downloadSelectedTweaks() {
     Aesthetic: [],
     Crosshairs: [],
     "Colorful Slime": [],
+    Elytra: [],
     "Fixes and Consistency": [],
     Fun: [],
     GUI: [],
+    Hearts: [],
+    "LGBTQ+ Pride": [],
     "Lower and Sides": [],
     "Menu Panoramas": [],
     Mobs: [],
@@ -116,9 +119,12 @@ function downloadSelectedTweaks() {
     Aesthetic: [],
     Crosshairs: [],
     "Colorful Slime": [],
+    Elytra: [],
     "Fixes and Consistency": [],
     Fun: [],
     GUI: [],
+    Hearts: [],
+    "LGBTQ+ Pride": [],
     "Lower and Sides": [],
     "Menu Panoramas": [],
     Mobs: [],
@@ -155,6 +161,10 @@ function downloadSelectedTweaks() {
       packs: tweaksByCategory["Colorful Slime"],
       index: indicesByCategory["Colorful Slime"],
     },
+    Elytra: {
+      packs: tweaksByCategory["Elytra"],
+      index: indicesByCategory["Elytra"],
+    },
     "Fixes and Consistency": {
       packs: tweaksByCategory["Fixes and Consistency"],
       index: indicesByCategory["Fixes and Consistency"],
@@ -166,6 +176,14 @@ function downloadSelectedTweaks() {
     GUI: {
       packs: tweaksByCategory["GUI"],
       index: indicesByCategory["GUI"],
+    },
+    Hearts: {
+      packs: tweaksByCategory["Hearts"],
+      index: indicesByCategory["Hearts"],
+    },
+    "LGBTQ+ Pride": {
+      packs: tweaksByCategory["LGBTQ+ Pride"],
+      index: indicesByCategory["LGBTQ+ Pride"],
     },
     "Lower and Sides": {
       packs: tweaksByCategory["Lower and Sides"],
