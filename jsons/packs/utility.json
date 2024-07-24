@@ -52,7 +52,7 @@
         "message": ["error", "This will NOT affect the placed blocks."]
       },
       "conflict": [],
-      "compatibility": ["BoltlessWaxedCopperBlocks"]
+      "compatibility": []
     },
     {
       "pack_id": "BoltlessWaxedCopperBlocks",
@@ -65,7 +65,7 @@
         ]
       },
       "conflict": [],
-      "compatibility": ["WaxedCopperItems"]
+      "compatibility": []
     },
     {
       "pack_id": "ShinyAgedAmethystCluster",
