@@ -70,7 +70,7 @@ def folder_creator():
 
             # Pack Directory pack_icon.png
             try:
-                if pack_json["packs"][i]["pack_id"] != "png":
+                if pack_json["packs"][i]["details"]["icon"] != "png":
                     pass
             except:
                 with open(f'{cdir()}/packs/{pack_json["topic"].lower()}/{pack_json["packs"][i]["pack_id"]}/pack_icon.png','a') as _:
