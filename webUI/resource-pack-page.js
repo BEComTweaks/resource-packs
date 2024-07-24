@@ -99,6 +99,7 @@ function downloadSelectedTweaks() {
     Fun: [],
     GUI: [],
     Hearts: [],
+    "Hunger Bars": [],
     "LGBTQ+ Pride": [],
     "Lower and Sides": [],
     "Menu Panoramas": [],
@@ -124,6 +125,7 @@ function downloadSelectedTweaks() {
     Fun: [],
     GUI: [],
     Hearts: [],
+    "Hunger Bars": [],
     "LGBTQ+ Pride": [],
     "Lower and Sides": [],
     "Menu Panoramas": [],
@@ -180,6 +182,10 @@ function downloadSelectedTweaks() {
     Hearts: {
       packs: tweaksByCategory["Hearts"],
       index: indicesByCategory["Hearts"],
+    },
+    "Hunger Bars": {
+      packs: tweaksByCategory["Hunger Bars"],
+      index: indicesByCategory["Hunger Bars"],
     },
     "LGBTQ+ Pride": {
       packs: tweaksByCategory["LGBTQ+ Pride"],

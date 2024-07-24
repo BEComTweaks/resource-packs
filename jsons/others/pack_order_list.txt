@@ -11,6 +11,7 @@ gui.json
 	crosshairs.json
 	hearts.json
 	hearts_pride.json
+	hunger_bars.json
 	menu_panoramas.json
 retro.json
 fun.json
