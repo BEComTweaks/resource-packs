@@ -76,13 +76,21 @@ def pre_commit():
                     incomplete_packs[file["topic"]].append(file["packs"][i]["pack_id"])
 
                 # Updates Incomplete pack_icon.png
-                if os.path.getsize(f'{cdir()}/packs/{file["topic"].lower()}/{file["packs"][i]["pack_id"]}/pack_icon.png') == os.path.getsize(f'{cdir()}/pack_icons/missing_texture.png'):
-                    # Adds packid to topic list
-                    incomplete_pkics[file["topic"]].append(file["packs"][i]["pack_id"])
-                    pkicstats[1] += 1
-                else:
-                    # When pack icon is complete
-                    pkicstats[0] += 1
+                try:
+                    if os.path.getsize(f'{cdir()}/packs/{file["topic"].lower()}/{file["packs"][i]["pack_id"]}/pack_icon.png') == os.path.getsize(f'{cdir()}/pack_icons/missing_texture.png'):
+                        # Adds packid to topic list
+                        incomplete_pkics[file["topic"]].append(file["packs"][i]["pack_id"])
+                        pkicstats[1] += 1
+                    else:
+                        # When pack icon is complete
+                        pkicstats[0] += 1
+                except:
+                    if file["packs"][i]["details"]["icon"] != "png": # Assuming pack icon is done
+                        pkicstats[0] += 1
+                    else:
+                        # When pack icon doesn't even exist
+                        incomplete_pkics[file["topic"]].append(file["packs"][i]["pack_id"])
+                        pkicstats[1] += 1
                 
                 # Updates Incomplete Pack Compatibilities
                 for comp in range(len(file["packs"][i]["compatibility"])):  # If it is empty, it just skips
@@ -143,9 +151,23 @@ def pre_commit():
                     to_add_pack = to_add_pack.replace("pack_index", str(i))
                     to_add_pack = to_add_pack.replace("pack_id", file["packs"][i]["pack_id"])
                     to_add_pack = to_add_pack.replace("pack_name", file["packs"][i]["pack_name"])
-                    to_add_pack = to_add_pack.replace("pack_description", file["packs"][i]["pack_description"])
+                    desc = file["packs"][i]["pack_description"]
+                    try:
+                        if file["packs"][i]["details"]["message"][0] == "warn":
+                            desc += f'<p class="desc-warn">{file["packs"][i]["details"]["message"][1]}</p>'
+                        elif file["packs"][i]["details"]["message"][0] == "error":
+                            desc += f'<p class="desc-error">{file["packs"][i]["details"]["message"][1]}</p>'
+                        elif file["packs"][i]["details"]["message"][0] == "info":
+                            desc += f'<p class="desc-info">{file["packs"][i]["details"]["message"][1]}</p>'
+                    except KeyError:
+                        pass
+                    to_add_pack = to_add_pack.replace("pack_description", desc)
                     to_add_pack = to_add_pack.replace("tweaknumber", f"tweak{packs}")
                     to_add_pack = to_add_pack.replace("relloctopackicon", f'packs/{file["topic"].lower()}/{file["packs"][i]["pack_id"]}/pack_icon.png')
+                    try:
+                        to_add_pack = to_add_pack.replace("png", file["packs"][i]["details"]["icon"])
+                    except KeyError:
+                        pass
                     to_add_pack = to_add_pack.replace("https://raw.githubusercontent.com/BEComTweaks/resource-packs/main/","../")
                     html += to_add_pack
         try:
@@ -191,13 +213,21 @@ def pre_commit():
                 incomplete_packs[file["topic"]].append(file["packs"][i]["pack_id"])
 
             # Updates Incomplete pack_icon.png
-            if os.path.getsize(f'{cdir()}/packs/{file["topic"].lower()}/{file["packs"][i]["pack_id"]}/pack_icon.png') == os.path.getsize(f'{cdir()}/pack_icons/missing_texture.png'):
-                # Adds packid to topic list
-                incomplete_pkics[file["topic"]].append(file["packs"][i]["pack_id"])
-                pkicstats[1] += 1
-            else:
-                # When pack icon is complete
-                pkicstats[0] += 1
+            try:
+                if os.path.getsize(f'{cdir()}/packs/{file["topic"].lower()}/{file["packs"][i]["pack_id"]}/pack_icon.png') == os.path.getsize(f'{cdir()}/pack_icons/missing_texture.png'):
+                    # Adds packid to topic list
+                    incomplete_pkics[file["topic"]].append(file["packs"][i]["pack_id"])
+                    pkicstats[1] += 1
+                else:
+                    # When pack icon is complete
+                    pkicstats[0] += 1
+            except:
+                if file["packs"][i]["details"]["icon"] != "png": # Assuming pack_icon is done
+                    pkicstats[0] += 1
+                else:
+                    # When pack icon doesn't even exist
+                    incomplete_pkics[file["topic"]].append(file["packs"][i]["pack_id"])
+                    pkicstats[1] += 1
             
             # Updates Incomplete Pack Compatibilities
             for comp in range(len(file["packs"][i]["compatibility"])):  # If it is empty, it just skips
@@ -258,9 +288,23 @@ def pre_commit():
                 to_add_pack = to_add_pack.replace("pack_index", str(i))
                 to_add_pack = to_add_pack.replace("pack_id", file["packs"][i]["pack_id"])
                 to_add_pack = to_add_pack.replace("pack_name", file["packs"][i]["pack_name"])
-                to_add_pack = to_add_pack.replace("pack_description", file["packs"][i]["pack_description"])
+                desc = file["packs"][i]["pack_description"]
+                try:
+                    if file["packs"][i]["details"]["message"][0] == "warn":
+                        desc += f'<p class="desc-warn">{file["packs"][i]["details"]["message"][1]}</p>'
+                    elif file["packs"][i]["details"]["message"][0] == "error":
+                        desc += f'<p class="desc-error">{file["packs"][i]["details"]["message"][1]}</p>'
+                    elif file["packs"][i]["details"]["message"][0] == "info":
+                        desc += f'<p class="desc-info">{file["packs"][i]["details"]["message"][1]}</p>'
+                except KeyError:
+                    pass
+                to_add_pack = to_add_pack.replace("pack_description", desc)
                 to_add_pack = to_add_pack.replace("tweaknumber", f"tweak{packs}")
                 to_add_pack = to_add_pack.replace("relloctopackicon", f'packs/{file["topic"].lower()}/{file["packs"][i]["pack_id"]}/pack_icon.png')
+                try:
+                    to_add_pack = to_add_pack.replace("png", file["packs"][i]["details"]["icon"])
+                except KeyError:
+                    pass
                 to_add_pack = to_add_pack.replace("https://raw.githubusercontent.com/BEComTweaks/resource-packs/main/","../")
                 pack_html += to_add_pack
         pack_html += category_end
@@ -277,7 +321,6 @@ def pre_commit():
     dump_json(f"{cdir()}/jsons/others/incomplete_packs.json", incomplete_packs)
     dump_json(f"{cdir()}/jsons/others/incomplete_compatibilities.json", compatibilities)
     dump_json(f"{cdir()}/jsons/others/incomplete_pack_icons.json", incomplete_pkics)
-    dump_json(f"{cdir()}/jsons/others/pack_conflicts.json", conflicts)
     with open(f"{cdir()}/webUI/index.html", "w") as html_file:
         html_file.write(html)
     

@@ -53,7 +53,7 @@ function toggleCategory(label) {
       tweaksContainer.style.paddingTop = null;
       tweaksContainer.style.paddingBottom = null;
       label.classList.toggle("open");
-    }, 500); // Matches the transition duration
+    }, 475); // Matches the transition duration
   } else {
     tweaksContainer.style.display = "block";
     tweaksContainer.style.paddingTop = "7.5px";

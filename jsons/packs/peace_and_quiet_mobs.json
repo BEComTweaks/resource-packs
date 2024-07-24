@@ -40,7 +40,13 @@
     {
       "pack_id": "QuieterBlazes",
       "pack_name": "Quieter Blazes",
-      "pack_description": "Decreases Blaze sounds by 95%. Install Quieter Fire to quieten fire crackling sounds.",
+      "pack_description": "Decreases Blaze sounds by 95%.",
+      "details": {
+        "message": [
+          "warn",
+          "Install <b>Quieter Fire</b> to quieten fire crackling sounds."
+        ]
+      },
       "conflict": [],
       "compatibility": []
     },
@@ -341,7 +347,20 @@
     {
       "pack_id": "QuieterWitches",
       "pack_name": "Quieter Witches",
-      "pack_description": "Decreases Witche sounds by 95%.",
+      "pack_description": "Decreases Witch sounds by 95%.",
+      "conflict": [],
+      "compatibility": []
+    },
+    {
+      "pack_id": "QuieterWither",
+      "pack_name": "Quieter Wither",
+      "pack_description": "Decreases Wither sounds by 95%.",
+      "details": {
+        "message": [
+          "warn",
+          "Install <b>Quieter Explosions</b> to quieten Wither Head explosions."
+        ]
+      },
       "conflict": [],
       "compatibility": []
     },
