@@ -40,37 +40,54 @@ header {
 }
 
 .category {
-  margin-top: 15px;
-  margin-bottom: 15px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .category-controlled {
   display: none;
-  margin-top: 15px;
-  margin-bottom: 15px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-style: solid;
+  border-width: 5px;
+  border-radius: 0px 0px 5px 5px;
+  border-color: rgb(106, 108, 112);
+  background-color: var(--dark-one);
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.5s ease-in-out;
 }
 
 .category-label {
-  text-align: left;
+  text-align: center;
   font-size: 20px;
   background-color: var(--dark-one);
   padding: 5px;
-  border-radius: 5px;
-  cursor: pointer;
   user-select: none;
-  border: opaque;
+  border-radius: 5px;
   border-style: solid;
   border-width: 5px;
-  border-color: var(--category-border);
-  transition: background-color 0.25s;
-}
-
-.category-label:active {
-  background-color: var(--green-1);
+  border-color: var(--dark-border);
+  cursor: pointer;
+  margin-bottom: -5px;
+  transition:
+    background-color 0.25s ease,
+    border-color 0.5s ease;
+  z-index: 13;
 }
 
 .category-label:hover {
-  background-color: rgb(83, 84, 85);
+  background-color: var(--dark-two);
+  border-color: var(--dark-border-hover);
+}
+
+.category-label.open {
+  border-radius: 5px 5px 0px 0px;
+  border-color: rgb(106, 108, 112);
+}
+
+.category-label.open:hover {
+  border-radius: 5px 5px 0px 0px;
 }
 
 .comp-hover-text {
@@ -123,7 +140,7 @@ header {
   border: solid;
   border-width: 7.5px;
   border-radius: 12.5px;
-  border-color: var(--category-border);
+  border-color: var(--dark-border);
   padding: 20px;
   background: var(--dark-one);
   z-index: 5;
@@ -139,7 +156,7 @@ header {
   border: solid;
   border-width: 5px;
   border-radius: 10px;
-  border-color: var(--category-border);
+  border-color: var(--dark-border);
   opacity: 0.95;
   width: 240px;
   height: 150px;
@@ -149,10 +166,12 @@ header {
   font-family: "Pixelify Sans";
   background: var(--dark-one);
   padding: 10px 20px;
-  border: 2px solid #111;
+  border-style: solid;
+  border-width: 5px;
+  border-color: var(--dark-border);
   border-radius: 5px;
   cursor: pointer;
-  transition: background 0.3s;
+  transition: background 0.1s;
   display: block;
   margin: 20px auto;
   text-align: center;
@@ -160,11 +179,13 @@ header {
 }
 
 .download-selected-button:hover {
-  background: var(--green-1);
+  background: var(--dark-two);
+  border-color: var(--dark-border-hover);
 }
 
 .download-selected-button:active {
-  background: rgb(53, 123, 29);
+  background: var(--green-one);
+  border-color: var(--green-border);
 }
 
 .file-download {
@@ -202,34 +223,17 @@ header {
   z-index: 1;
 }
 
-.subcategory-label {
-  text-align: left;
-  font-size: 20px;
-  width: 90%;
-  background-color: var(--dark-one);
-  padding: 5px;
-  border-radius: 5px;
-  cursor: pointer;
-  user-select: none;
-  border: opaque;
-  border-style: solid;
-  border-width: 5px;
-  border-color: var(--category-border);
-  transition: background-color 0.25s;
-}
-
-.subcategory-label:active {
-  background-color: var(--green-1);
-}
-
-.subcategory-label:hover {
-  background-color: rgb(83, 84, 85);
+.subcategory {
+  position: center;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  margin-left: 2.5%;
+  width: 95%;
 }
 
 .subcattweaks {
   position: center;
-  display: none;
-  width: 90%;
+  display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   gap: 10px;
   margin-top: 10px;
@@ -252,9 +256,38 @@ header {
   display: flex;
   flex-direction: column;
   position: relative;
-  border: 2px solid #111;
-  border-radius: 5px;
+  border-style: solid;
+  border-width: 4.375px;
+  border-color: var(--dark-border);
+  border-radius: 6.25px;
   transition: background 0.375s;
+}
+
+.tweak:hover {
+  background: var(--dark-two);
+  border-color: var(--dark-border-hover);
+}
+
+.tweak.selected {
+  background: var(--green-one);
+  border-color: var(--green-border);
+}
+
+.tweak.selected:hover {
+  background: var(--green-two);
+  border-color: var(--green-border-hover);
+}
+
+.desc-error {
+  color: #f22;
+}
+
+.desc-info {
+  color: cyan;
+}
+
+.desc-warn {
+  color: orange;
 }
 
 .tweak-list-category {
@@ -267,13 +300,14 @@ header {
   display: none;
 }
 
-.tweak.selected {
-  background: var(--green-1);
-  border: 2px solid #111;
+.tweak-title {
+  font-weight: bold;
+  font-size: 1.2em;
 }
 
-.tweak-title {
-  font-size: 1.2em;
+.tweak-info {
+  margin-left: -5px;
+  margin-right: -5px;
 }
 
 .tweak input[type="checkbox"] {
@@ -285,15 +319,24 @@ header {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(162.5px, 1fr));
   gap: 10px;
-  margin-top: 10px;
+  margin: 10px;
   align-items: top;
   text-align: center;
 }
 
 :root {
-  --category-border: rgb(84, 85, 86) rgb(49, 50, 51) rgb(49, 50, 51) rgb(84, 85, 86);
+  --dark-border: rgb(106, 108, 112) rgb(84, 86, 88) rgb(84, 86, 88)
+    rgb(106, 108, 112);
+  --dark-border-hover: rgb(122, 124, 129) rgb(97, 99, 101) rgb(97, 99, 101)
+    rgb(122, 124, 129);
+  --green-border: rgb(99, 157, 82) rgb(79, 145, 60) rgb(79, 145, 60)
+    rgb(99, 157, 82);
+  --green-border-hover: rgb(99, 157, 82) rgb(79, 145, 60) rgb(79, 145, 60)
+    rgb(99, 157, 82);
   --dark-one: rgb(72, 73, 74);
-  --green-1: rgb(63, 146, 39);
+  --dark-two: rgb(83, 84, 85);
+  --green-one: rgb(60, 133, 39);
+  --green-two: rgb(71, 144, 50);
   --rightmargin: 250px;
   --leftmargin: 10px;
 }

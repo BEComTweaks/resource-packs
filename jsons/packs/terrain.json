@@ -13,7 +13,7 @@
       "pack_name": "Golden Savanna",
       "pack_description": "Recolors Savanna biomes to have beautiful golden grass.",
       "conflict": ["LushGrassAllRound"],
-      "compatibility": []
+      "compatibility": ["GrassSides"]
     },
     {
       "pack_id": "LushGrassAllRound",
@@ -37,20 +37,6 @@
       "compatibility": []
     },
     {
-      "pack_id": "3DSunandMoon",
-      "pack_name": "3D Sun and Moon",
-      "pack_description": "Retextures the Sun and Moon textures to give the illusion of being 3D.",
-      "conflict": ["CircularSunandMoon"],
-      "compatibility": []
-    },
-    {
-      "pack_id": "3DFungi",
-      "pack_name": "3D Fungi",
-      "pack_description": "Remodels mushrooms and fungi to be 3D",
-      "conflict": [],
-      "compatibility": []
-    },
-    {
       "pack_id": "CircularLogTops",
       "pack_name": "Circular Log Tops",
       "pack_description": "Tweaks all Log and Stripped Log tops to be circular, including Nether Fungi Stems",
@@ -69,7 +55,7 @@
       "pack_name": "Smoother Stones",
       "pack_description": "Smoothens the textures of Diorite and Granite by reducing contrast.",
       "conflict": ["PolishedStonesToBricks", "VariatedUnpolishedStones"],
-      "compatibility": ["DoubleSlabFix"]
+      "compatibility": []
     },
     {
       "pack_id": "PebblelessDirt",

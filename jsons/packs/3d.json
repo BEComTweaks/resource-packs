@@ -1,0 +1,26 @@
+{
+  "topic": "3D",
+  "packs": [
+    {
+      "pack_id": "3DSunandMoon",
+      "pack_name": "3D Sun and Moon",
+      "pack_description": "Retextures the Sun and Moon textures to give the illusion of being 3D.",
+      "conflict": ["CircularSunandMoon"],
+      "compatibility": []
+    },
+    {
+      "pack_id": "3DFungi",
+      "pack_name": "3D Fungi",
+      "pack_description": "Remodels mushrooms and fungi to be 3D",
+      "conflict": [],
+      "compatibility": []
+    },
+    {
+      "pack_id": "3DMace",
+      "pack_name": "3D Mace",
+      "pack_description": "Remodels the Mace to appear in 3D.",
+      "conflict": [],
+      "compatibility": []
+    }
+  ]
+}

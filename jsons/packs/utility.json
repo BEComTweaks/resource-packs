@@ -30,7 +30,10 @@
     {
       "pack_id": "VisualInfestedStoneItems",
       "pack_name": "Visual Infested Stone Items",
-      "pack_description": "Adds a border around Infested Stone in the inventory. This will NOT affect the placed blocks.",
+      "pack_description": "Adds a border around Infested Stone in the inventory.",
+      "details": {
+        "message": ["error", "This will NOT affect the placed blocks."]
+      },
       "conflict": ["CrumbledInfestedStoneBlocks"],
       "compatibility": []
     },
@@ -44,16 +47,25 @@
     {
       "pack_id": "WaxedCopperItems",
       "pack_name": "Waxed Copper Items",
-      "pack_description": "Adds a border around Waxed Copper and variants in the inventory. This will NOT affect the placed blocks.",
+      "pack_description": "Adds a border around Waxed Copper and variants in the inventory.",
+      "details": {
+        "message": ["error", "This will NOT affect the placed blocks."]
+      },
       "conflict": [],
-      "compatibility": ["BoltlessWaxedCopperBlocks"]
+      "compatibility": []
     },
     {
       "pack_id": "BoltlessWaxedCopperBlocks",
       "pack_name": "Boltless Waxed Copper Blocks",
-      "pack_description": "Removes the bolts in the corner of Waxed Copper blocks and variants.\nThis does NOT change anything with Cut Copper, so Waxed Copper Items is recommended.",
+      "pack_description": "Removes the bolts in the corner of Waxed Copper blocks and variants.",
+      "details": {
+        "message": [
+          "info",
+          "This does NOT change anything with Cut Copper, so Waxed Copper Items is recommended."
+        ]
+      },
       "conflict": [],
-      "compatibility": ["WaxedCopperItems"]
+      "compatibility": []
     },
     {
       "pack_id": "ShinyAgedAmethystCluster",

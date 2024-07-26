@@ -1,25 +1,32 @@
 {
+  "3D": [],
   "Aesthetic": [],
   "Crosshairs": [],
   "Colorful Slime": ["RainbowSlime"],
+  "Elytra": [],
   "Fixes and Consistency": [],
   "Fun": [],
   "GUI": ["TransparentUI", "HighContrastUI"],
+  "Hearts": [],
+  "Hunger Bars": [],
+  "LGBTQ+ Pride": [],
   "Lower and Sides": [],
   "Menu Panoramas": [],
+  "Mobs": [],
   "More Zombies": [],
   "Parity": [],
   "Peace and Quiet": [],
-  "Retro": ["OldBedIcons", "RenamePottery'Sherd'to'Shard'"],
-  "Terrain": ["GoldenSavanna"],
-  "Unobtrusive": ["NoCherryLeavesParticles", "UnobtrusiveScaffolding", "NoFog"],
+  "Retro": [],
+  "Terrain": [],
+  "Unobtrusive": ["NoCherryLeavesParticles", "NoFog"],
   "Utility": [
     "CrumbledInfestedStoneBlocks",
-    "BoltlessWaxedCopperBlocks",
     "ShinyAgedAmethystCluster",
     "MusicDiscRedstoneLevelPreview",
     "DirectionalDispensersandDroppers",
     "NoteBlockPitchParticle"
   ],
-  "Variation": ["VariatedCoarseDirt", "VariatedVillagers"]
+  "Variation": ["VariatedCoarseDirt", "VariatedVillagers"],
+  "World of Color": [],
+  "Xisuma's Hermitcraft Bases": []
 }

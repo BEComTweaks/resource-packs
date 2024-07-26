@@ -1,12 +1,18 @@
 {
+  "3D": [],
   "Aesthetic": [],
   "Crosshairs": [],
   "Colorful Slime": ["RainbowSlime"],
+  "Elytra": [],
   "Fixes and Consistency": [],
   "Fun": [],
   "GUI": ["TransparentUI", "HighContrastUI"],
+  "Hearts": [],
+  "Hunger Bars": [],
+  "LGBTQ+ Pride": [],
   "Lower and Sides": [],
   "Menu Panoramas": [],
+  "Mobs": [],
   "More Zombies": [],
   "Parity": [],
   "Peace and Quiet": [],
@@ -18,5 +24,7 @@
     "MusicDiscRedstoneLevelPreview",
     "DirectionalDispensersandDroppers"
   ],
-  "Variation": ["VariatedCoarseDirt"]
+  "Variation": ["VariatedCoarseDirt"],
+  "World of Color": [],
+  "Xisuma's Hermitcraft Bases": []
 }

@@ -30,6 +30,13 @@
       "compatibility": []
     },
     {
+      "pack_id": "SoyjakVault",
+      "pack_name": "Soyjak Vault",
+      "pack_description": "Yeah...",
+      "conflict": [],
+      "compatibility": []
+    },
+    {
       "pack_id": "XisumaTurtle",
       "pack_name": "Xisuma Turtle",
       "pack_description": "Retextures Turtles to look like Xisuma!",
@@ -82,8 +89,8 @@
       "pack_id": "WitherBee",
       "pack_name": "Wither Bee",
       "pack_description": "Changes the Wither Boss texture to a Bee.",
-      "conflict": ["PixelConsistentWither"],
-      "compatibility": []
+      "conflict": [],
+      "compatibility": ["PixelConsistentWither"]
     },
     {
       "pack_id": "ilmangoGoldenApples",
@@ -110,8 +117,8 @@
       "pack_id": "BaconBeam",
       "pack_name": "Bacon Beam",
       "pack_description": "Adds the almighty Baacon Beam to beacons! All hail the Bacon Beam!",
-      "conflict": ["PixelConsistentBeaconBeam"],
-      "compatibility": []
+      "conflict": [],
+      "compatibility": ["PixelConsistentBeaconBeam"]
     },
     {
       "pack_id": "PhantomRain",

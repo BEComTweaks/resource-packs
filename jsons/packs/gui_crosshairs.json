@@ -1,0 +1,104 @@
+{
+  "topic": "Crosshairs",
+  "subcategory_of": "GUI",
+  "packs": [
+    {
+      "pack_id": "NoCrosshair",
+      "pack_name": "No Crosshair",
+      "pack_description": "",
+      "conflict": [],
+      "compatibility": []
+    },
+    {
+      "pack_id": "SmallerCrosshair",
+      "pack_name": "Smaller Crosshair",
+      "pack_description": "",
+      "conflict": [],
+      "compatibility": []
+    },
+    {
+      "pack_id": "DotCrosshair",
+      "pack_name": "Dot Crosshair",
+      "pack_description": "",
+      "conflict": [],
+      "compatibility": []
+    },
+    {
+      "pack_id": "PlusDotCrosshair",
+      "pack_name": "Plus Dot Crosshair",
+      "pack_description": "",
+      "conflict": [],
+      "compatibility": []
+    },
+    {
+      "pack_id": "CircleCrosshair",
+      "pack_name": "Circle Crosshair",
+      "pack_description": "",
+      "conflict": [],
+      "compatibility": []
+    },
+    {
+      "pack_id": "CircleDotCrosshair",
+      "pack_name": "Circle Dot Crosshair",
+      "pack_description": "",
+      "conflict": [],
+      "compatibility": []
+    },
+    {
+      "pack_id": "SquareCrosshair",
+      "pack_name": "Square Crosshair",
+      "pack_description": "",
+      "conflict": [],
+      "compatibility": []
+    },
+    {
+      "pack_id": "SquareDotCrosshair",
+      "pack_name": "Square Dot Crosshair",
+      "pack_description": "",
+      "conflict": [],
+      "compatibility": []
+    },
+    {
+      "pack_id": "SquarePlusCrosshair",
+      "pack_name": "Square Plus Crosshair",
+      "pack_description": "",
+      "conflict": [],
+      "compatibility": []
+    },
+    {
+      "pack_id": "SquarePlusDotCrosshair",
+      "pack_name": "Square Plus Dot Crosshair",
+      "pack_description": "",
+      "conflict": [],
+      "compatibility": []
+    },
+    {
+      "pack_id": "4AngledCrosshair",
+      "pack_name": "4 Angled Crosshair",
+      "pack_description": "",
+      "conflict": [],
+      "compatibility": []
+    },
+    {
+      "pack_id": "4AngledDotCrosshair",
+      "pack_name": "4 Angled Dot Crosshair",
+      "pack_description": "",
+      "conflict": [],
+      "compatibility": []
+    },
+    {
+      "pack_id": "HeartCrosshair",
+      "pack_name": "Heart Crosshair",
+      "pack_description": "",
+      "conflict": [],
+      "compatibility": []
+    },
+    {
+      "pack_id": "ArrowCrosshair",
+      "pack_name": "Arrow Crosshair",
+      "pack_description": "",
+      "conflict": [],
+      "compatibility": []
+    }
+  ]
+}

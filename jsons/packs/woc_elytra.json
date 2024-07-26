@@ -1,0 +1,111 @@
+{
+  "topic": "Elytra",
+  "subcategory_of": "World of Color",
+  "packs": [
+    {
+      "pack_id": "White",
+      "pack_name": "White",
+      "pack_description": "",
+      "conflict": [],
+      "compatibility": []
+    },
+    {
+      "pack_id": "Gray",
+      "pack_name": "Gray",
+      "pack_description": "",
+      "conflict": [],
+      "compatibility": []
+    },
+    {
+      "pack_id": "Black",
+      "pack_name": "Black",
+      "pack_description": "",
+      "conflict": [],
+      "compatibility": []
+    },
+    {
+      "pack_id": "Brown",
+      "pack_name": "Brown",
+      "pack_description": "",
+      "conflict": [],
+      "compatibility": []
+    },
+    {
+      "pack_id": "Red",
+      "pack_name": "Red",
+      "pack_description": "",
+      "conflict": [],
+      "compatibility": []
+    },
+    {
+      "pack_id": "Orange",
+      "pack_name": "Orange",
+      "pack_description": "",
+      "conflict": [],
+      "compatibility": []
+    },
+    {
+      "pack_id": "Yellow",
+      "pack_name": "Yellow",
+      "pack_description": "",
+      "conflict": [],
+      "compatibility": []
+    },
+    {
+      "pack_id": "Lime",
+      "pack_name": "Lime",
+      "pack_description": "",
+      "conflict": [],
+      "compatibility": []
+    },
+    {
+      "pack_id": "Green",
+      "pack_name": "Green",
+      "pack_description": "",
+      "conflict": [],
+      "compatibility": []
+    },
+    {
+      "pack_id": "Cyan",
+      "pack_name": "Cyan",
+      "pack_description": "",
+      "conflict": [],
+      "compatibility": []
+    },
+    {
+      "pack_id": "LightBlue",
+      "pack_name": "Light Blue",
+      "pack_description": "",
+      "conflict": [],
+      "compatibility": []
+    },
+    {
+      "pack_id": "Blue",
+      "pack_name": "Blue",
+      "pack_description": "",
+      "conflict": [],
+      "compatibility": []
+    },
+    {
+      "pack_id": "Purple",
+      "pack_name": "Purple",
+      "pack_description": "",
+      "conflict": [],
+      "compatibility": []
+    },
+    {
+      "pack_id": "Magenta",
+      "pack_name": "Magenta",
+      "pack_description": "",
+      "conflict": [],
+      "compatibility": []
+    },
+    {
+      "pack_id": "Pink",
+      "pack_name": "Pink",
+      "pack_description": "",
+      "conflict": [],
+      "compatibility": []
+    }
+  ]
+}

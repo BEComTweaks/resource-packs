@@ -43,16 +43,31 @@ window.addEventListener("resize", () => {
   }
 });
 
-function toggleSubCategory(label) {
-  const tweaksContainer = label.nextElementSibling;
-  tweaksContainer.style.display =
-    tweaksContainer.style.display != "grid" ? "grid" : "none";
-}
-
 function toggleCategory(label) {
   const tweaksContainer = label.nextElementSibling;
-  tweaksContainer.style.display =
-    tweaksContainer.style.display != "block" ? "block" : "none";
+
+  if (tweaksContainer.style.maxHeight) {
+    tweaksContainer.style.maxHeight = null;
+    setTimeout(() => {
+      tweaksContainer.style.display = "none";
+      tweaksContainer.style.paddingTop = null;
+      tweaksContainer.style.paddingBottom = null;
+      label.classList.toggle("open");
+    }, 475); // Matches the transition duration
+  } else {
+    tweaksContainer.style.display = "block";
+    tweaksContainer.style.paddingTop = "7.5px";
+    tweaksContainer.style.paddingBottom = "7.5px";
+    label.classList.toggle("open");
+    tweaksContainer.style.maxHeight = tweaksContainer.scrollHeight + "px";
+    const outerCatLabel =
+      label.parentElement.parentElement.previousElementSibling;
+    const outerCatContainer = label.parentElement.parentElement;
+    if (outerCatLabel.classList.contains("category-label")) {
+      outerCatContainer.style.maxHeight =
+        outerCatContainer.scrollHeight + tweaksContainer.scrollHeight + "px";
+    }
+  }
 }
 
 function downloadSelectedTweaks() {
@@ -75,14 +90,20 @@ function downloadSelectedTweaks() {
   });
 
   const tweaksByCategory = {
+    "3D": [],
     Aesthetic: [],
     Crosshairs: [],
     "Colorful Slime": [],
+    Elytra: [],
     "Fixes and Consistency": [],
     Fun: [],
     GUI: [],
+    Hearts: [],
+    "Hunger Bars": [],
+    "LGBTQ+ Pride": [],
     "Lower and Sides": [],
     "Menu Panoramas": [],
+    Mobs: [],
     "More Zombies": [],
     Parity: [],
     "Peace and Quiet": [],
@@ -91,17 +112,25 @@ function downloadSelectedTweaks() {
     Unobtrusive: [],
     Utility: [],
     Variation: [],
+    "World of Color": [],
+    "Xisuma's Hermitcraft Bases": [],
   };
 
   const indicesByCategory = {
+    "3D": [],
     Aesthetic: [],
     Crosshairs: [],
     "Colorful Slime": [],
+    Elytra: [],
     "Fixes and Consistency": [],
     Fun: [],
     GUI: [],
+    Hearts: [],
+    "Hunger Bars": [],
+    "LGBTQ+ Pride": [],
     "Lower and Sides": [],
     "Menu Panoramas": [],
+    Mobs: [],
     "More Zombies": [],
     Parity: [],
     "Peace and Quiet": [],
@@ -110,6 +139,8 @@ function downloadSelectedTweaks() {
     Unobtrusive: [],
     Utility: [],
     Variation: [],
+    "World of Color": [],
+    "Xisuma's Hermitcraft Bases": [],
   };
 
   selectedTweaks.forEach((tweak) => {
@@ -118,6 +149,10 @@ function downloadSelectedTweaks() {
   });
 
   const jsonData = {
+    "3D": {
+      packs: tweaksByCategory["3D"],
+      index: indicesByCategory["3D"],
+    },
     Aesthetic: {
       packs: tweaksByCategory["Aesthetic"],
       index: indicesByCategory["Aesthetic"],
@@ -129,6 +164,10 @@ function downloadSelectedTweaks() {
     "Colorful Slime": {
       packs: tweaksByCategory["Colorful Slime"],
       index: indicesByCategory["Colorful Slime"],
+    },
+    Elytra: {
+      packs: tweaksByCategory["Elytra"],
+      index: indicesByCategory["Elytra"],
     },
     "Fixes and Consistency": {
       packs: tweaksByCategory["Fixes and Consistency"],
@@ -142,6 +181,18 @@ function downloadSelectedTweaks() {
       packs: tweaksByCategory["GUI"],
       index: indicesByCategory["GUI"],
     },
+    Hearts: {
+      packs: tweaksByCategory["Hearts"],
+      index: indicesByCategory["Hearts"],
+    },
+    "Hunger Bars": {
+      packs: tweaksByCategory["Hunger Bars"],
+      index: indicesByCategory["Hunger Bars"],
+    },
+    "LGBTQ+ Pride": {
+      packs: tweaksByCategory["LGBTQ+ Pride"],
+      index: indicesByCategory["LGBTQ+ Pride"],
+    },
     "Lower and Sides": {
       packs: tweaksByCategory["Lower and Sides"],
       index: indicesByCategory["Lower and Sides"],
@@ -149,6 +200,10 @@ function downloadSelectedTweaks() {
     "Menu Panoramas": {
       packs: tweaksByCategory["Menu Panoramas"],
       index: indicesByCategory["Menu Panoramas"],
+    },
+    Mobs: {
+      packs: tweaksByCategory["Mobs"],
+      index: indicesByCategory["Mobs"],
     },
     "More Zombies": {
       packs: tweaksByCategory["More Zombies"],
@@ -181,6 +236,14 @@ function downloadSelectedTweaks() {
     Variation: {
       packs: tweaksByCategory["Variation"],
       index: indicesByCategory["Variation"],
+    },
+    "World of Color": {
+      packs: tweaksByCategory["World of Color"],
+      index: indicesByCategory["World of Color"],
+    },
+    "Xisuma's Hermitcraft Bases": {
+      packs: tweaksByCategory["Xisuma's Hermitcraft Bases"],
+      index: indicesByCategory["Xisuma's Hermitcraft Bases"],
     },
     raw: selectedTweaks.map((tweak) => tweak.name),
   };
