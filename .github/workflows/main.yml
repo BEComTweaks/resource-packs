@@ -25,12 +25,10 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Get latest commit message
+      - name: Get latest commit title
         id: get_commit
         run: |
-          echo "commit_message<<EOF" >> $GITHUB_ENV
-          git log -1 --pretty=%B >> $GITHUB_ENV
-          echo "EOF" >> $GITHUB_ENV
+          echo "commit_title=$(git log -1 --pretty=%s)" >> $GITHUB_ENV
 
       - name: Trigger server-backend workflow
         run: |
@@ -38,4 +36,4 @@ jobs:
             -H "Accept: application/vnd.github.v3+json" \
             -H "Authorization: token ${{ secrets.PERSONAL_ACCESS_TOKEN }}" \
             https://api.github.com/repos/BEComTweaks/server-backend/actions/workflows/106751072/dispatches \
-            -d '{"ref":"main", "inputs":{"title":"resource-packs: ${{ env.commit_message }}"}}'
+            -d "{\"ref\":\"main\", \"inputs\":{\"title\":\"resource-packs: ${{ env.commit_title }}\"}}"
