@@ -27,7 +27,10 @@ jobs:
 
       - name: Get latest commit message
         id: get_commit
-        run: echo "commit_message=$(git log -1 --pretty=%B)" >> $GITHUB_ENV
+        run: |
+          echo "commit_message<<EOF" >> $GITHUB_ENV
+          git log -1 --pretty=%B >> $GITHUB_ENV
+          echo "EOF" >> $GITHUB_ENV
 
       - name: Trigger server-backend workflow
         run: |
