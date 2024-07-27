@@ -15,7 +15,7 @@ jobs:
 
       - name: Replace server IP in JavaScript
         run: |
-          sed -i 's|const serverip = "localhost";|const serverip = "${{ secrets.IP_FOR_SERVER }}";|g' webUI/resource-pack-page.js
+          sed -i 's|const serverip = "localhost";|const serverip = "${{ secrets.IP_FOR_SERVER }}";|g' webUI/app.js
 
       - name: Deploy to GitHub Pages
         uses: crazy-max/ghaction-github-pages@v4

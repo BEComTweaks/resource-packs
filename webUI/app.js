@@ -43,8 +43,15 @@ window.addEventListener("resize", () => {
   }
 });
 
+const mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
+
+function getTimeoutDuration() {
+  return mediaQuery.matches ? 0 : 487.5;
+}
+
 function toggleCategory(label) {
   const tweaksContainer = label.nextElementSibling;
+  const timeoutDuration = getTimeoutDuration();
 
   if (tweaksContainer.style.maxHeight) {
     tweaksContainer.style.maxHeight = null;
@@ -53,7 +60,7 @@ function toggleCategory(label) {
       tweaksContainer.style.paddingTop = null;
       tweaksContainer.style.paddingBottom = null;
       label.classList.toggle("open");
-    }, 475); // Matches the transition duration
+    }, timeoutDuration); // Matches the transition duration
   } else {
     tweaksContainer.style.display = "block";
     tweaksContainer.style.paddingTop = "7.5px";

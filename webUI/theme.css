@@ -458,6 +458,12 @@ header {
   }
 }
 
+@media (prefers-reduced-motion: reduce) {
+  .category-controlled {
+    transition: none;
+  }
+}
+
 .small-nav {
   list-style-type: none;
   margin: 0;

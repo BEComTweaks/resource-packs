@@ -1,0 +1,17 @@
+{
+  "topic": "Category",
+  "subcategory_of": "Parent Category <can be left out if already parent>",
+  "packs": [
+    {
+      "pack_id": "pack_name with no space",
+      "pack_name": "name of pack",
+      "pack_description": "description of pack",
+      "details": {
+        "message": ["warn (red)/error (orange)/info (cyan)", "message for it"],
+        "icon": "extension of pack icon like gif or jpg (no '.')"
+      },
+      "conflict": ["packid of conflicting pack"],
+      "compatibility": ["packid of compatible pack"]
+    }
+  ]
+}
