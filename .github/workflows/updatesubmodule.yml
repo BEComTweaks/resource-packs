@@ -1,29 +1,19 @@
-name: Deploy to GitHub Pages
+name: Update server-backend's submodule
 
 on:
-  push:
-    branches:
-      - main
+  workflow_run:
+    workflows: ["Deploy to pages"]
+    types:
+      - completed
 
 jobs:
-  deploy:
+  trigger:
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-
-      - name: Replace server IP in JavaScript
-        run: |
-          sed -i 's|const serverip = "localhost";|const serverip = "${{ secrets.IP_FOR_SERVER }}";|g' webUI/app.js
-
-      - name: Deploy to GitHub Pages
-        uses: crazy-max/ghaction-github-pages@v4
-        with:
-          target_branch: gh-pages
-          build_dir: ./webUI
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Checkout code
+        uses: actions/checkout@v2
 
       - name: Get latest commit title
         id: get_commit
