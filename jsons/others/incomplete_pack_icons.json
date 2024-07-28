@@ -16,7 +16,7 @@
   "More Zombies": [],
   "Parity": [],
   "Peace and Quiet": [],
-  "Retro": [],
+  "Retro": ["OldPotionColors"],
   "Terrain": [],
   "Unobtrusive": ["NoCherryLeavesParticles", "NoFog"],
   "Utility": [

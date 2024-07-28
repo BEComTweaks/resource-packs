@@ -216,6 +216,13 @@
       "pack_description": "Brings back the old level up jingle when you hit increment of 5 XP levels.",
       "conflict": [],
       "compatibility": []
+    },
+    {
+      "pack_id": "OldPotionColors",
+      "pack_name": "Old Potion Colors",
+      "pack_description": "Brings back the old potion colors from before 1.19.4.",
+      "conflict": [],
+      "compatibility": []
     }
   ]
 }
