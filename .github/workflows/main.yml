@@ -34,7 +34,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
   deploy_page:
-    needs: format
+    needs: format_repo
     if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
 
@@ -55,7 +55,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
   update_server:
-    needs: replace_and_deploy
+    needs: deploy_page
     runs-on: ubuntu-latest
 
     steps:
