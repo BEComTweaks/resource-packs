@@ -1,0 +1,76 @@
+name: Checks
+
+on:
+  push:
+    branches:
+      - '**'
+
+jobs:
+  format:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Install Prettier
+        run: npm install prettier
+
+      - name: Format code with Prettier
+        run: npx prettier --write "**/*.{js,ts,css,json}"
+
+      - name: Commit changes
+        run: |
+          git config --global user.name "github-actions"
+          git config --global user.email "github-actions@github.com"
+          git add -A
+          if git diff-index --quiet HEAD --; then
+            echo "No changes to commit"
+          else
+            git commit -m "[skip ci] Prettified Repository"
+            git push
+          fi
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  replace_and_deploy:
+    needs: format
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Replace server IP in JavaScript
+        run: |
+          sed -i 's|const serverip = "localhost";|const serverip = "${{ secrets.IP_FOR_SERVER }}";|g' webUI/app.js
+
+      - name: Deploy to GitHub Pages
+        uses: crazy-max/ghaction-github-pages@v4
+        with:
+          target_branch: gh-pages
+          build_dir: ./webUI
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  trigger_server_backend:
+    needs: replace_and_deploy
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Get latest commit title
+        id: get_commit
+        run: |
+          echo "commit_title=$(git log -1 --pretty=%s)" >> $GITHUB_ENV
+
+      - name: Trigger server-backend workflow
+        run: |
+          curl -X POST \
+            -H "Accept: application/vnd.github.v3+json" \
+            -H "Authorization: token ${{ secrets.PERSONAL_ACCESS_TOKEN }}" \
+            https://api.github.com/repos/BEComTweaks/server-backend/actions/workflows/106751072/dispatches \
+            -d "{\"ref\":\"main\", \"inputs\":{\"title\":\"resource-packs: ${{ env.commit_title }}\"}}"
