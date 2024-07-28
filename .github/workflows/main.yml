@@ -6,7 +6,7 @@ on:
       - '**'
 
 jobs:
-  format:
+  format_repo:
     runs-on: ubuntu-latest
 
     steps:
@@ -33,7 +33,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-  replace_and_deploy:
+  deploy_page:
     needs: format
     if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
@@ -54,7 +54,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-  trigger_server_backend:
+  update_server:
     needs: replace_and_deploy
     runs-on: ubuntu-latest
 
