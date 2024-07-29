@@ -1,6 +1,18 @@
 {
   "3D": [],
   "Aesthetic": [],
+  "Clear Blocks": [
+    "CrumbledInfestedStoneBlocks",
+    "ShinyAgedAmethystCluster",
+    "DirectionalCalibratedSculkSensors",
+    "BorderedButtons",
+    "MarkedPressurePlates",
+    "BetterBottoms",
+    "LitFurnaces",
+    "RespawnAnchorCharge",
+    "OpenBarrels",
+    "LavaCauldron"
+  ],
   "Crosshairs": [],
   "Colorful Slime": ["RainbowSlime"],
   "Elytra": [],
@@ -19,13 +31,7 @@
   "Retro": ["OldPotionColors"],
   "Terrain": [],
   "Unobtrusive": ["NoCherryLeavesParticles", "NoFog"],
-  "Utility": [
-    "CrumbledInfestedStoneBlocks",
-    "ShinyAgedAmethystCluster",
-    "MusicDiscRedstoneLevelPreview",
-    "DirectionalDispensersandDroppers",
-    "NoteBlockPitchParticle"
-  ],
+  "Utility": ["NoteBlockPitchParticle"],
   "Variation": ["VariatedCoarseDirt", "VariatedVillagers"],
   "World of Color": [],
   "Xisuma's Hermitcraft Bases": []

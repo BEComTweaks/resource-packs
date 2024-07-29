@@ -1,6 +1,17 @@
 {
   "3D": [],
   "Aesthetic": [],
+  "Clear Blocks": [
+    "ShinyAgedAmethystCluster",
+    "DirectionalCalibratedSculkSensors",
+    "BorderedButtons",
+    "MarkedPressurePlates",
+    "BetterBottoms",
+    "LitFurnaces",
+    "RespawnAnchorCharge",
+    "OpenBarrels",
+    "LavaCauldron"
+  ],
   "Crosshairs": [],
   "Colorful Slime": ["RainbowSlime"],
   "Elytra": [],
@@ -19,11 +30,7 @@
   "Retro": [],
   "Terrain": [],
   "Unobtrusive": [],
-  "Utility": [
-    "ShinyAgedAmethystCluster",
-    "MusicDiscRedstoneLevelPreview",
-    "DirectionalDispensersandDroppers"
-  ],
+  "Utility": [],
   "Variation": ["VariatedCoarseDirt"],
   "World of Color": [],
   "Xisuma's Hermitcraft Bases": []

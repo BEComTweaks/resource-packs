@@ -4,10 +4,10 @@
   "HungerPreview": ["MusicDiscRedstoneLevelPreview"],
   "MusicDiscRedstoneLevelPreview": ["HungerPreview"],
   "StickyPistonSides": ["PistonInnerFix"],
-  "UnlitRedstoneOre": ["UniformOres", "ClassicOres"],
   "ClassicOres": ["UnlitRedstoneOre"],
   "SmileyAxolotls": ["GreenAxolotl"],
   "GreenAxolotl": ["SmileyAxolotls"],
   "PistonInnerFix": ["StickyPistonSides"],
-  "SoulSoilSoulCampfire": ["AshlessCampfires"]
+  "SoulSoilSoulCampfire": ["AshlessCampfires"],
+  "UnlitRedstoneOre": ["UniformOres", "ClassicOres"]
 }
