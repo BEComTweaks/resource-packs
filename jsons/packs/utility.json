@@ -73,14 +73,14 @@
       "pack_name": "Hunger Preview",
       "pack_description": "Displays hunger bar icons on all food names to show how much it will fill you up.",
       "conflict": [],
-      "compatibility": ["MusicDiscRedstoneLevelPreview"]
+      "compatibility": []
     },
     {
       "pack_id": "MusicDiscRedstoneLevelPreview",
       "pack_name": "Music Disc Redstone Level Preview",
       "pack_description": "Displays the redstone power level on all Music Disc names.",
       "conflict": [],
-      "compatibility": ["HungerPreview"]
+      "compatibility": []
     },
     {
       "pack_id": "StickyPistonSides",
