@@ -100,6 +100,7 @@ function downloadSelectedTweaks() {
   const tweaksByCategory = {
     "3D": [],
     Aesthetic: [],
+	"Clear Blocks": [],
     Crosshairs: [],
     "Colorful Slime": [],
     Elytra: [],
@@ -127,6 +128,7 @@ function downloadSelectedTweaks() {
   const indicesByCategory = {
     "3D": [],
     Aesthetic: [],
+	"Clear Blocks": [],
     Crosshairs: [],
     "Colorful Slime": [],
     Elytra: [],
@@ -165,6 +167,10 @@ function downloadSelectedTweaks() {
       packs: tweaksByCategory["Aesthetic"],
       index: indicesByCategory["Aesthetic"],
     },
+	"Clear Blocks": {
+		packs: tweaksByCategory["Clear Blocks"],
+		index: indicesByCategory["Clear Blocks"],
+	},
     Crosshairs: {
       packs: tweaksByCategory["Crosshairs"],
       index: indicesByCategory["Crosshairs"],
