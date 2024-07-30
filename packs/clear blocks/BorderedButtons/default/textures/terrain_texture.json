@@ -3,7 +3,7 @@
   "padding": 8,
   "resource_pack_name": "vanilla",
   "texture_data": {
-	  "acacia_button": {
+    "acacia_button": {
       "textures": "textures/blocks/acacia_button"
     },
     "bamboo_button": {
