@@ -51,6 +51,8 @@ jobs:
         with:
           target_branch: gh-pages
           build_dir: ./webUI
+          author: NSPBot911 <${{ secrets.BOT_EMAIL }}>
+          committer: NSPBot911 <${{ secrets.BOT_EMAIL }}>
         env:
           GITHUB_TOKEN: ${{ secrets.BOT_TOKEN }}
 
