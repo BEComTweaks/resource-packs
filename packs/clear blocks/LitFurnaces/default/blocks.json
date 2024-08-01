@@ -1,0 +1,36 @@
+{
+  "format_version": [1,1,0],
+  "blast_furnace": {
+    "sound": "stone",
+    "textures": {
+      "down": "blast_furnace_bottom",
+      "east": "blast_furnace_side",
+      "north": "blast_furnace_side",
+      "south": "blast_furnace_front_off",
+      "up": "blast_furnace_top",
+      "west": "blast_furnace_side"
+    }
+  },
+  "furnace": {
+    "sound": "stone",
+    "textures": {
+      "down": "furnace_bottom",
+      "east": "furnace_side_off",
+      "north": "furnace_side_off",
+      "south": "furnace_front_off",
+      "up": "furnace_top_off",
+      "west": "furnace_side_off"
+    }
+  },
+  "smoker": {
+    "sound": "stone",
+    "textures": {
+      "down": "smoker_bottom",
+      "east": "smoker_side",
+      "north": "smoker_side",
+      "south": "smoker_front_off",
+      "up": "smoker_top",
+      "west": "smoker_side"
+    }
+  }
+}
