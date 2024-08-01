@@ -96,9 +96,9 @@
       "pack_id": "LitFurnaces",
       "pack_name": "Lit Furnaces",
       "pack_description": "Shows a lit texture on all sides for furnaces, blast furncases and smokers.",
-	  "details": {
-		  "icon": "gif"
-	  },
+      "details": {
+        "icon": "gif"
+      },
       "conflict": [],
       "compatibility": []
     },
