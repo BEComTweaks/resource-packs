@@ -1,9 +1,25 @@
 {
+  "3D": {
+    "packs": [],
+    "index": []
+  },
   "Aesthetic": {
     "packs": [],
     "index": []
   },
+  "Clear Blocks": {
+    "packs": [],
+    "index": []
+  },
+  "Crosshairs": {
+    "packs": [],
+    "index": []
+  },
   "Colorful Slime": {
+    "packs": [],
+    "index": []
+  },
+  "Elytra": {
     "packs": [],
     "index": []
   },
@@ -15,7 +31,19 @@
     "packs": [],
     "index": []
   },
-  "HUD and GUI": {
+  "GUI": {
+    "packs": [],
+    "index": []
+  },
+  "Hearts": {
+    "packs": [],
+    "index": []
+  },
+  "Hunger Bars": {
+    "packs": [],
+    "index": []
+  },
+  "LGBTQ+ Pride": {
     "packs": [],
     "index": []
   },
@@ -24,6 +52,10 @@
     "index": []
   },
   "Menu Panoramas": {
+    "packs": [],
+    "index": []
+  },
+  "Mobs": {
     "packs": [],
     "index": []
   },
@@ -56,6 +88,14 @@
     "index": []
   },
   "Variation": {
+    "packs": [],
+    "index": []
+  },
+  "World of Color": {
+    "packs": [],
+    "index": []
+  },
+  "Xisuma's Hermitcraft Bases": {
     "packs": [],
     "index": []
   },
