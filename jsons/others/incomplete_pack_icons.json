@@ -12,11 +12,16 @@
     "LavaCauldron"
   ],
   "Crosshairs": [],
-  "Colorful Slime": ["RainbowSlime"],
+  "Colorful Slime": [
+    "RainbowSlime"
+  ],
   "Elytra": [],
   "Fixes and Consistency": [],
   "Fun": [],
-  "GUI": ["TransparentUI", "HighContrastUI"],
+  "GUI": [
+    "TransparentUI",
+    "HighContrastUI"
+  ],
   "Hearts": [],
   "Hunger Bars": [],
   "LGBTQ+ Pride": [],
@@ -26,11 +31,21 @@
   "More Zombies": [],
   "Parity": [],
   "Peace and Quiet": [],
-  "Retro": ["OldPotionColors"],
+  "Retro": [
+    "OldPotionColors"
+  ],
   "Terrain": [],
-  "Unobtrusive": ["NoCherryLeavesParticles", "NoFog"],
-  "Utility": ["NoteBlockPitchParticle"],
-  "Variation": ["VariatedCoarseDirt", "VariatedVillagers"],
+  "Unobtrusive": [
+    "NoCherryLeavesParticles",
+    "NoFog"
+  ],
+  "Utility": [
+    "NoteBlockPitchParticle"
+  ],
+  "Variation": [
+    "VariatedCoarseDirt",
+    "VariatedVillagers"
+  ],
   "World of Color": [],
   "Xisuma's Hermitcraft Bases": []
 }

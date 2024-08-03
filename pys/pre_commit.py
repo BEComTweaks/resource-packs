@@ -63,7 +63,9 @@ with open(f"{cdir()}/jsons/others/pack_order_list.txt","r") as pol:
 
 parser = argparse.ArgumentParser(description='Run a massive script that updates Packs to-do, Icons to-do, Compatibilities to-do and the HTML')
 parser.add_argument('--format', action='store_true', help='Include flag to format files')
+parser.add_argument('--use-relative-location', action='store_true', help='Use relative location instead of GitHub location. Useful while testing on local copy.')
 args = parser.parse_args()
+userelloc = args.use_relative_location
 
 # Counts Packs and Compatibilities
 for j in pack_list:
@@ -183,7 +185,8 @@ for j in pack_list:
                     to_add_pack = to_add_pack.replace("png", file["packs"][i]["details"]["icon"])
                 except KeyError:
                     pass
-                #to_add_pack = to_add_pack.replace("https://raw.githubusercontent.com/BEComTweaks/resource-packs/main/","../")
+                if userelloc:
+                    to_add_pack = to_add_pack.replace("https://raw.githubusercontent.com/BEComTweaks/resource-packs/main/","../")
                 html += to_add_pack
     try:
         if pack_list[pack_list.index(origj) + 1].startswith("\t"):
@@ -321,7 +324,8 @@ for j in range(len(subcat_list)):
                 to_add_pack = to_add_pack.replace("png", file["packs"][i]["details"]["icon"])
             except KeyError:
                 pass
-            #to_add_pack = to_add_pack.replace("https://raw.githubusercontent.com/BEComTweaks/resource-packs/main/","../")
+            if userelloc:
+                to_add_pack = to_add_pack.replace("https://raw.githubusercontent.com/BEComTweaks/resource-packs/main/","../")
             pack_html += to_add_pack
     pack_html += category_end
     html = html.replace(f'<div class="subcat{j}"></div>',pack_html)

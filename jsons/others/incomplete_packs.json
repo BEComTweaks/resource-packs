@@ -11,11 +11,16 @@
     "LavaCauldron"
   ],
   "Crosshairs": [],
-  "Colorful Slime": ["RainbowSlime"],
+  "Colorful Slime": [
+    "RainbowSlime"
+  ],
   "Elytra": [],
   "Fixes and Consistency": [],
   "Fun": [],
-  "GUI": ["TransparentUI", "HighContrastUI"],
+  "GUI": [
+    "TransparentUI",
+    "HighContrastUI"
+  ],
   "Hearts": [],
   "Hunger Bars": [],
   "LGBTQ+ Pride": [],
@@ -29,7 +34,9 @@
   "Terrain": [],
   "Unobtrusive": [],
   "Utility": [],
-  "Variation": ["VariatedCoarseDirt"],
+  "Variation": [
+    "VariatedCoarseDirt"
+  ],
   "World of Color": [],
   "Xisuma's Hermitcraft Bases": []
 }

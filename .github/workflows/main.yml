@@ -16,8 +16,8 @@ jobs:
       - name: Install Prettier
         run: npm install prettier
 
-      - name: Format code with Prettier
-        run: npx prettier --write "**/*.{js,ts,css,json}"
+      - name: Run pre_commit.py
+        run: python pys/pre_commit.py --format
 
       - name: Commit changes
         run: |
@@ -27,7 +27,7 @@ jobs:
           if git diff-index --quiet HEAD --; then
             echo "No changes to commit"
           else
-            git commit -m "[skip ci] Prettified Repository"
+            git commit -m "[skip ci] Post Commit Checks Completed" -m "Someone _stares below_ forgot to run pre_commit.py --format"
             git push
           fi
         env:

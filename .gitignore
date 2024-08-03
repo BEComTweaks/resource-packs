@@ -6,3 +6,7 @@ package-lock.json
 node_modules
 # makefile (easier for me)
 Makefile
+# CLI stuff because easier to make packs than create server
+pys/exporter.py
+pys/main.py
+pys/selector.py
