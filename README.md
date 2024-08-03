@@ -7,7 +7,7 @@
 <br>
 ![Completed Packs](https://img.shields.io/badge/Packs-472%2F483-blue?style=for-the-badge&color=blue)
 ![Completed Compatibilities for Packs](https://img.shields.io/badge/Compatibilities-11%2F16-cyan?style=for-the-badge&color=cyan)
-![Completed Pack Icons](https://img.shields.io/badge/Pack%20Icons-466%2F483-green?style=for-the-badge&color=green)
+![Completed Pack Icons](https://img.shields.io/badge/Pack%20Icons-467%2F483-green?style=for-the-badge&color=green)
 
 </div>
 
