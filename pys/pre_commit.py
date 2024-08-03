@@ -17,7 +17,6 @@ from clrprint import clrprint
 check("markdown")
 from markdown import markdown
 check("bs4","beautifulsoup4")
-check("lxml")
 from bs4 import BeautifulSoup
 
 category_start = '<div class="category"><div class="category-label" onclick="toggleCategory(this)">topic_name</div><div class="category-controlled"><div class="tweaks">'
