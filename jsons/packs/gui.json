@@ -68,6 +68,12 @@
       "pack_id": "HighContrastUI",
       "pack_name": "High Contrast UI",
       "pack_description": "Changes all inventories and UIs to be themed after Minecraft Java Edition's High Contrast pack.",
+      "details": {
+        "message": [
+          "warn",
+          "This pack is not fully complete and is bound to have texture issues."
+        ]
+      },
       "conflict": ["DarkUI", "TransparentUI"],
       "compatibility": []
     },
