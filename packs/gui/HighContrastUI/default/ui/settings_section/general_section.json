@@ -1,1 +1,19 @@
-{"namespace":"general_section","general_button@settings_common.section_toggle_base":{"$toggle_view_binding_name":"general_button_toggle","$glyph_texture":"textures/ui/world_glyph","$glyph_color_texture":"textures/ui/world_glyph_color","$glyph_size":[17,16],"$button_text":"options.general","$toggle_property_bag":{"#panel_title":"options.generalTitle"}},"account_button@settings_common.section_toggle_base":{"$toggle_view_binding_name":"account_button_toggle","$glyph_texture":"textures/ui/profile_glyph","$glyph_color_texture":"textures/ui/profile_glyph_color","$glyph_size":[17,16],"$button_text":"options.account","$toggle_property_bag":{"#panel_title":"options.accountTitle"}}}
+{
+  "namespace": "general_section",
+  "general_button@settings_common.section_toggle_base": {
+    "$toggle_view_binding_name": "general_button_toggle",
+    "$glyph_texture": "textures/ui/world_glyph",
+    "$glyph_color_texture": "textures/ui/world_glyph_color",
+    "$glyph_size": [17, 16],
+    "$button_text": "options.general",
+    "$toggle_property_bag": { "#panel_title": "options.generalTitle" }
+  },
+  "account_button@settings_common.section_toggle_base": {
+    "$toggle_view_binding_name": "account_button_toggle",
+    "$glyph_texture": "textures/ui/profile_glyph",
+    "$glyph_color_texture": "textures/ui/profile_glyph_color",
+    "$glyph_size": [17, 16],
+    "$button_text": "options.account",
+    "$toggle_property_bag": { "#panel_title": "options.accountTitle" }
+  }
+}

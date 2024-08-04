@@ -1,12 +1,4 @@
 {
-  "nineslice_size": [
-    8,
-    23,
-    8,
-    76
-  ],
-  "base_size": [
-    22,
-    105
-  ]
+  "nineslice_size": [8, 23, 8, 76],
+  "base_size": [22, 105]
 }
