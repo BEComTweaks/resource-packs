@@ -30,7 +30,7 @@ jobs:
           if git diff-index --quiet HEAD --; then
             echo "No changes to commit"
           else
-            git commit -m "[skip ci] Post Commit Checks Completed" -m "Someone _stares below_ forgot to run pre_commit.py --format"
+            git commit -m "[actions] Post Commit Checks Completed" -m "Someone _stares below_ forgot to run pre_commit.py --format" -m "skip-checks: true"
             git push
           fi
         env:

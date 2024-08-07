@@ -113,6 +113,9 @@
       "pack_id": "OpenBarrels",
       "pack_name": "Open Barrels",
       "pack_description": "Shows an open texture on all sides when barrel is open.",
+	  "details": {
+		  "icon": "gif"
+	  },
       "conflict": [],
       "compatibility": []
     },

@@ -1,0 +1,26 @@
+{
+  "num_mip_levels": 4,
+  "padding": 8,
+  "resource_pack_name": "vanilla",
+  "texture_data": {
+    "barrel_bottom": {
+      "textures": [
+        "textures/blocks/barrel_bottom",
+        "textures/blocks/barrel_bottom_open"
+      ]
+    },
+    "barrel_side": {
+      "textures": [
+        "textures/blocks/barrel_side",
+        "textures/blocks/barrel_side_open"
+      ]
+    },
+    "barrel_top": {
+      "textures": [
+        "textures/blocks/barrel_top",
+        "textures/blocks/barrel_top_open"
+      ]
+    }
+  },
+  "texture_name": "atlas.terrain"
+}
