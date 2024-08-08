@@ -13,184 +13,206 @@
  </head>
  <body>
   <br>
-  <div class="image-container">
-   <a href="https://becomtweaks.github.io">
-    <img alt="Resource Packs" id="title" src="images/title.png"/>
-   </a>
-  </div>
   <div id="background-container">
   </div>
   <script>
    const textures = [{src: "images/blocks/stone.png", probability: 0.618 },{ src: "images/blocks/copper_ore.png", probability: 0.128 },{ src: "images/blocks/coal_ore.png", probability: 0.128 },{ src: "images/blocks/iron_ore.png", probability: 0.064 },{ src: "images/blocks/lapis_ore.png", probability: 0.032 },{ src: "images/blocks/redstone_ore.png", probability: 0.016 },{ src: "images/blocks/gold_ore.png", probability: 0.008 },{ src: "images/blocks/emerald_ore.png", probability: 0.004 },{ src: "images/blocks/diamond_ore.png", probability: 0.002 }];function selectTexture() {const rand = Math.random();let cumulativeProbability = 0;for (const texture of textures) {cumulativeProbability += texture.probability;if (rand < cumulativeProbability) {return texture.src;}}}function createTiles() {const container = document.getElementById("background-container");const numColumns = Math.ceil(window.innerWidth / 100) + 2;const numRows = Math.ceil(window.innerHeight / 100) + 2;container.innerHTML = "";for (let i = 0; i < numColumns; i++) {const rowDiv = document.createElement("div");rowDiv.className = "row";for (let j = 0; j < numRows; j++) {const tile = document.createElement("div");tile.className = "tile";tile.style.backgroundImage = `url("${selectTexture()}")`;rowDiv.appendChild(tile);}container.appendChild(rowDiv);}}createTiles();window.addEventListener("resize", () => {document.getElementById("background-container").innerHTML = "";createTiles();});
   </script>
-  <ul class="large-nav">
-   <li>
-    <a class="nav-link" href="https://becomtweaks.github.io">
-     Home
-    </a>
-   </li>
-   <li style="float:right">
-    <a class="nav-link" href="https://becomtweaks.github.io/crafting-tweaks">
-     Crafting Tweaks
-    </a>
-   </li>
-   <li style="float:right">
-    <a class="nav-link" href="https://becomtweaks.github.io/behaviour-packs">
-     Behaviour Packs
-    </a>
-   </li>
-   <li style="float:right">
-    <a class="nav-link" href="https://becomtweaks.github.io/resource-packs">
-     Resource Packs
-    </a>
-   </li>
-  </ul>
-  <ul class="small-nav">
-   <li>
-    <a class="nav-link" href="https://becomtweaks.github.io">
-     Home
-    </a>
-   </li>
-   <li style="float:right">
-    <a class="nav-link" href="https://becomtweaks.github.io/crafting-tweaks">
-     CTs
-    </a>
-   </li>
-   <li style="float:right">
-    <a class="nav-link" href="https://becomtweaks.github.io/behaviour-packs">
-     BPs
-    </a>
-   </li>
-   <li style="float:right">
-    <a class="nav-link" href="https://becomtweaks.github.io/resource-packs">
-     RPs
-    </a>
-   </li>
-  </ul>
-  <div class="container">
-   <!-- Categories -->
-   <div class="category">
-    <div class="category-label" onclick="toggleCategory(this)">
-     World of Color
-    </div>
-    <div class="category-controlled">
-     <div class="tweaks">
-      <div class="tweak" data-category="World of Color" data-index="0" data-name="UniqueDyes" onclick="toggleSelection(this)">
-       <div class="tweak-info">
-        <input id="tweak0" name="tweak" type="checkbox" value="tweak0"/>
-        <img alt="Unique Dyes" src="../packs/world of color/UniqueDyes/pack_icon.png" style="width:82px; height:82px;"/>
-        <br>
-        <label class="tweak-title" for="tweak">
-         Unique Dyes
-        </label>
-        <div class="tweak-description">
-         Adds variation to dyes by making each one different.
+  <div class="half-dark">
+   <div class="image-container">
+    <img alt="Resource Packs" id="title" src="images/title.png"/>
+   </div>
+   <ul class="large-nav">
+    <li>
+     <a class="nav-link" href="https://becomtweaks.github.io">
+      Home
+     </a>
+    </li>
+    <li style="float:right">
+     <a class="nav-link" href="https://becomtweaks.github.io/crafting-tweaks">
+      Crafting Tweaks
+     </a>
+    </li>
+    <li style="float:right">
+     <a class="nav-link" href="https://becomtweaks.github.io/behaviour-packs">
+      Behaviour Packs
+     </a>
+    </li>
+    <li style="float:right">
+     <a class="nav-link" href="https://becomtweaks.github.io/resource-packs">
+      Resource Packs
+     </a>
+    </li>
+   </ul>
+   <ul class="small-nav">
+    <li>
+     <a class="nav-link" href="https://becomtweaks.github.io">
+      Home
+     </a>
+    </li>
+    <li style="float:right">
+     <a class="nav-link" href="https://becomtweaks.github.io/crafting-tweaks">
+      CTs
+     </a>
+    </li>
+    <li style="float:right">
+     <a class="nav-link" href="https://becomtweaks.github.io/behaviour-packs">
+      BPs
+     </a>
+    </li>
+    <li style="float:right">
+     <a class="nav-link" href="https://becomtweaks.github.io/resource-packs">
+      RPs
+     </a>
+    </li>
+   </ul>
+   <div class="container">
+    <!-- Categories -->
+    <div class="category">
+     <div class="category-label" onclick="toggleCategory(this)">
+      World of Color
+     </div>
+     <div class="category-controlled">
+      <div class="tweaks">
+       <div class="tweak" data-category="World of Color" data-index="0" data-name="UniqueDyes" onclick="toggleSelection(this)">
+        <div class="tweak-info">
+         <input id="tweak0" name="tweak" type="checkbox" value="tweak0"/>
+         <img alt="Unique Dyes" src="https://raw.githubusercontent.com/BEComTweaks/resource-packs/main/packs/world of color/UniqueDyes/pack_icon.png" style="width:82px; height:82px;"/>
+         <br>
+         <label class="tweak-title" id="tweak">
+          Unique Dyes
+         </label>
+         <div class="tweak-description">
+          Adds variation to dyes by making each one different.
+         </div>
         </div>
        </div>
       </div>
      </div>
     </div>
    </div>
-  </div>
-  <div class="download-container">
-   <div class="file-download">
-    <input id="fileNameInput" placeholder="Enter Pack name" type="text" class="file-name-input"/>
-    <select name="mev" id="mev">
-		<option value="1.21">1.21</option>
-		<option value="1.20">1.20</option>
-		<option value="1.19">1.19</option>
-		<option value="1.18">1.18</option>
-	</select>
-   </div>
-   <button class="download-selected-button" onclick="downloadSelectedTweaks()">
-    Download Selected Tweaks
-   </button>
-   <div id="selected-tweaks">
-    <div class="tweak-list-pack">
-     Select some packs and see them appear here!
+   <div class="download-container">
+    <div class="file-download">
+     <input id="fileNameInput" placeholder="Enter Pack name" type="text"/>
+     <select id="mev" name="mev">
+      <option value="1.21.0">
+       1.21
+      </option>
+      <option value="1.20.0">
+       1.20
+      </option>
+      <option value="1.19.0">
+       1.19
+      </option>
+      <option value="1.18.0">
+       1.18
+      </option>
+      <option value="1.17.0">
+       1.17
+      </option>
+      <option value="1.16.0">
+       1.16
+      </option>
+      <option value="1.15.0">
+       1.15
+      </option>
+      <option value="1.14.0">
+       1.14
+      </option>
+     </select>
+    </div>
+    <button class="download-selected-button" onclick="downloadSelectedTweaks()">
+     Download Selected Tweaks
+    </button>
+    <div id="selected-tweaks">
+     <div class="tweak-list-pack">
+      Select some packs and see them appear here!
+     </div>
     </div>
    </div>
+   <script src="app.js">
+   </script>
   </div>
-  <script src="app.js">
-  </script>
  </body>
  <footer class="footer-container" style="auto">
-  <div class="credits-footer">
-   <h2>
-    This would not have been possible if not for the following
-   </h2>
-   <h3>
-    Websites
-   </h3>
-   <p>
-    <a href="https://vanillatweaks.net">
-     Vanilla Tweaks
-    </a>
-    - Without them, Bedrock Tweaks would have not been this way
-   </p>
-   <p>
-    <a href="https://bedrocktweaks.net">
-     Bedrock Tweaks
-    </a>
-    - Without DrAV, this would have taken a long time to complete
-   </p>
-   <h3>
-    Individuals
-   </h3>
-   <p>
-    <a href="https://github.com/yzabeast1">
-     YzaBeast1
-    </a>
-    - Pointed out issues with my code preventing Linux Distributions from running the scripts, and made the webUI and backend
-   </p>
-   <p>
-    <a href="https://github.com/JWForever5504">
-     JWForever5504
-    </a>
-    - He made like 40 of the most of incomplete packs. Helped me focus on the python scripts
-   </p>
-   <p>
-    <a href="https://discord.com/users/765852622946435075">
-     MPAD2277/putraanug
-    </a>
-    - Glass Door, Trapdoors and Circular Logs for 1.20, and most ore pack compatablities
-   </p>
-   <p>
-    <a href="https://github.com/lonelyang">
-     lonelyang
-    </a>
-    - Note block pitch particles pack
-   </p>
-   <p>
-    <a href="https://github.com/PAPISOP">
-     PAPISOP
-    </a>
-    - A lot of packs from
-    <a href="https://github.com/BedrockTweaks/Files">
-     BedrockTweaks/Files
-    </a>
-    . Refer to his
-    <a href="https://github.com/BedrockTweaks/Files/pulls?q=is%3Apr+author%3APAPISOP">
-     PRs
-    </a>
-   </p>
-   <p>
-    <a href="https://github.com/NSPC911">
-     NSPC911
-    </a>
-    - Yep, that's me, the one who started this all!
-   </p>
-   <p>
-    If you contributed directly or indirectly and want a place here, contact me on Discord at
-    <code>
-     @nspg911
-    </code>
-   </p>
-   <p>
-    <a href="https://github.com/BEComTweaks/resource-packs">
-     GitHub
-    </a>
-   </p>
+  <div class="half-dark">
+   <div class="credits-footer">
+    <h2>
+     This would not have been possible if not for the following
+    </h2>
+    <h3>
+     Websites
+    </h3>
+    <p>
+     <a href="https://vanillatweaks.net">
+      Vanilla Tweaks
+     </a>
+     - Without them, Bedrock Tweaks would have not been this way
+    </p>
+    <p>
+     <a href="https://bedrocktweaks.net">
+      Bedrock Tweaks
+     </a>
+     - Without DrAV, this would have taken a long time to complete
+    </p>
+    <h3>
+     Individuals
+    </h3>
+    <p>
+     <a href="https://github.com/yzabeast1">
+      YzaBeast1
+     </a>
+     - Pointed out issues with my code preventing Linux Distributions from running the scripts, and made the webUI and backend
+    </p>
+    <p>
+     <a href="https://github.com/JWForever5504">
+      JWForever5504
+     </a>
+     - He made like 40 of the most of incomplete packs. Helped me focus on the python scripts
+    </p>
+    <p>
+     <a href="https://discord.com/users/765852622946435075">
+      MPAD2277/putraanug
+     </a>
+     - Glass Door, Trapdoors and Circular Logs for 1.20, and most ore pack compatablities
+    </p>
+    <p>
+     <a href="https://github.com/lonelyang">
+      lonelyang
+     </a>
+     - Note block pitch particles pack
+    </p>
+    <p>
+     <a href="https://github.com/PAPISOP">
+      PAPISOP
+     </a>
+     - A lot of packs from
+     <a href="https://github.com/BedrockTweaks/Files">
+      BedrockTweaks/Files
+     </a>
+     . Refer to his
+     <a href="https://github.com/BedrockTweaks/Files/pulls?q=is%3Apr+author%3APAPISOP">
+      PRs
+     </a>
+    </p>
+    <p>
+     <a href="https://github.com/NSPC911">
+      NSPC911
+     </a>
+     - Yep, that's me, the one who started this all!
+    </p>
+    <p>
+     If you contributed directly or indirectly and want a place here, contact me on Discord at
+     <code>
+      @nspg911
+     </code>
+    </p>
+    <p>
+     <a href="https://github.com/BEComTweaks/resource-packs">
+      GitHub
+     </a>
+    </p>
+   </div>
   </div>
  </footer>
 </html>
