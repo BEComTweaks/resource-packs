@@ -2,7 +2,11 @@ function toggleSelection(element) {
   element.classList.toggle("selected");
   const checkbox = element.querySelector('input[type="checkbox"]');
   checkbox.checked = !checkbox.checked;
-  if (checkbox.checked) { console.log('Selected tweak'); } else {console.log('Unselected tweak'); }
+  if (checkbox.checked) {
+    console.log("Selected tweak");
+  } else {
+    console.log("Unselected tweak");
+  }
   var selectedTweaks = [];
   const tweakElements = document.querySelectorAll(".tweak.selected");
   tweakElements.forEach((tweak) => {
@@ -257,7 +261,7 @@ function downloadSelectedTweaks() {
     },
     raw: selectedTweaks.map((tweak) => tweak.name),
   };
-  
+
   fetchPack("https", jsonData, packName, mcVersion);
 }
 const serverip = "localhost";
@@ -280,7 +284,7 @@ function fetchPack(protocol, jsonData, packName, mcVersion) {
       return response.blob();
     })
     .then((blob) => {
-	  console.log("Received pack!");
+      console.log("Received pack!");
       const url = window.URL.createObjectURL(blob);
       const a = document.createElement("a");
       a.style.display = "none";

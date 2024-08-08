@@ -229,7 +229,7 @@ header {
   color: #eeeeee;
 }
 .mev option {
-	background: var(--dark-one);
+  background: var(--dark-one);
 }
 .footer {
   text-align: center;
