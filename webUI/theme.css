@@ -204,8 +204,8 @@ header {
 }
 
 .file-download input[type="text"]::placeholder {
-	/* Themes the placeholder text*/
-	color:  #dddddd;
+  /* Themes the placeholder text*/
+  color: #dddddd;
 }
 
 .file-download button {
@@ -352,7 +352,8 @@ header {
 :root {
   --dark-border: rgb(106, 108, 112) rgb(84, 86, 88) rgb(84, 86, 88)
     rgb(106, 108, 112);
-  --dark-border-ninety: rgba(106, 108, 112, 0.875) rgba(84, 86, 88, 0.875) rgba(84, 86, 88, 0.875) rgba(106, 108, 112, 0.875);
+  --dark-border-ninety: rgba(106, 108, 112, 0.875) rgba(84, 86, 88, 0.875)
+    rgba(84, 86, 88, 0.875) rgba(106, 108, 112, 0.875);
   --dark-border-hover: rgb(122, 124, 129) rgb(97, 99, 101) rgb(97, 99, 101)
     rgb(122, 124, 129);
   --green-border: rgb(99, 157, 82) rgb(79, 145, 60) rgb(79, 145, 60)
@@ -449,19 +450,19 @@ header {
     border-color: var(--dark-border);
   }
   .file-download select {
-	  border-color: var(--dark-border);
+    border-color: var(--dark-border);
   }
   .download-selected-button {
-	  border-color: var(--dark-border);
+    border-color: var(--dark-border);
   }
   .download-selected-button:hover {
-	  background: var(--dark-two);
-	  border-color: var(--dark-border-hover);
+    background: var(--dark-two);
+    border-color: var(--dark-border-hover);
   }
-.download-selected-button:selected {
-	background: var(--green-two);
-	border-color: var(--green-border-hover);
-}
+  .download-selected-button:selected {
+    background: var(--green-two);
+    border-color: var(--green-border-hover);
+  }
   .large-nav {
     list-style-type: none;
     margin: 0;

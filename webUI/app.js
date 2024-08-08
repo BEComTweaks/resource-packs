@@ -78,7 +78,7 @@ function toggleCategory(label) {
 }
 
 function downloadSelectedTweaks() {
-  const mcVersion="1.21.0"
+  const mcVersion = "1.21.0";
   var packName = document.getElementById("fileNameInput").value;
   if (!packName) {
     packName = `BTRP-${String(Math.floor(Math.random() * 1000000)).padStart(
