@@ -4,14 +4,14 @@
     "name": "",
     "description": "",
     "uuid": "",
-    "version": [1, 20, 0]
+    "version": [1, 2, 0]
   },
   "modules": [
     {
       "description": "",
       "type": "resources",
       "uuid": "",
-      "version": [1, 20, 0]
+      "version": [1, 2, 0]
     }
   ],
   "metadata": {

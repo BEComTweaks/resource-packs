@@ -2,6 +2,11 @@ function toggleSelection(element) {
   element.classList.toggle("selected");
   const checkbox = element.querySelector('input[type="checkbox"]');
   checkbox.checked = !checkbox.checked;
+  if (checkbox.checked) {
+    console.log("Selected tweak");
+  } else {
+    console.log("Unselected tweak");
+  }
   var selectedTweaks = [];
   const tweakElements = document.querySelectorAll(".tweak.selected");
   tweakElements.forEach((tweak) => {
@@ -26,7 +31,6 @@ function toggleSelection(element) {
     }
     document.getElementById("selected-tweaks").appendChild(tweakItem);
   });
-  console.log(selectedTweaks.length);
   if (selectedTweaks.length == 0) {
     const tweakItem = document.createElement("div");
     tweakItem.className = "tweak-list-pack";
@@ -78,7 +82,8 @@ function toggleCategory(label) {
 }
 
 function downloadSelectedTweaks() {
-  const mcVersion="1.21.0"
+  var mcVersion = document.getElementById("mev").value;
+  console.log(`Minimum Engine Version is set to ${mcVersion}`);
   var packName = document.getElementById("fileNameInput").value;
   if (!packName) {
     packName = `BTRP-${String(Math.floor(Math.random() * 1000000)).padStart(
@@ -150,12 +155,12 @@ function downloadSelectedTweaks() {
     "World of Color": [],
     "Xisuma's Hermitcraft Bases": [],
   };
-
+  console.log("Obtaining selected tweaks...");
   selectedTweaks.forEach((tweak) => {
     tweaksByCategory[tweak.category].push(tweak.name);
     indicesByCategory[tweak.category].push(tweak.index);
   });
-
+  console.log("Obtained!");
   const jsonData = {
     "3D": {
       packs: tweaksByCategory["3D"],
@@ -255,11 +260,13 @@ function downloadSelectedTweaks() {
     },
     raw: selectedTweaks.map((tweak) => tweak.name),
   };
+
   fetchPack("https", jsonData, packName, mcVersion);
 }
 const serverip = "localhost";
 
 function fetchPack(protocol, jsonData, packName, mcVersion) {
+  console.log("Fetching pack...");
   fetch(`${protocol}://${serverip}/exportResourcePack`, {
     method: "POST",
     headers: {
@@ -276,6 +283,7 @@ function fetchPack(protocol, jsonData, packName, mcVersion) {
       return response.blob();
     })
     .then((blob) => {
+      console.log("Received pack!");
       const url = window.URL.createObjectURL(blob);
       const a = document.createElement("a");
       a.style.display = "none";
@@ -288,7 +296,7 @@ function fetchPack(protocol, jsonData, packName, mcVersion) {
     .catch((error) => {
       if (protocol === "https") {
         console.error("HTTPS error, trying HTTP:", error);
-        fetchPack("http", jsonData, packName); // Retry with HTTP
+        fetchPack("http", jsonData, packName, mcVersion); // Retry with HTTP
       } else {
         console.error("Error:", error);
       }

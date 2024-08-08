@@ -152,12 +152,11 @@ header {
   bottom: 10px;
   width: 300px;
   z-index: 10;
-  background: var(--dark-one);
+  background: var(--dark-one-ninety);
   border: solid;
   border-width: 5px;
   border-radius: 10px;
-  border-color: var(--dark-border);
-  opacity: 0.95;
+  border-color: var(--dark-border-ninety);
   width: 240px;
   height: 150px;
 }
@@ -168,40 +167,72 @@ header {
   padding: 10px 20px;
   border-style: solid;
   border-width: 5px;
-  border-color: var(--dark-border);
+  border-color: var(--green-border);
   border-radius: 5px;
   cursor: pointer;
-  transition: background 0.1s;
+  transition: background 0.5s;
   display: block;
-  margin: 20px auto;
+  margin: 10px auto;
   text-align: center;
   color: white;
 }
 
 .download-selected-button:hover {
-  background: var(--dark-two);
-  border-color: var(--dark-border-hover);
-}
-
-.download-selected-button:active {
-  background: var(--green-one);
-  border-color: var(--green-border);
+  background: var(--green-two);
+  border-color: var(--green-border-hover);
 }
 
 .file-download {
   font-family: "Pixelify Sans";
-  margin: 20px 0;
   text-align: center;
 }
 
-.file-download input[type="text"],
+/*Honestly not sure why YzaBeast1 decided to not use classes*/
+.file-download input[type="text"] {
+  /*file-name-input*/
+  background: var(--dark-one);
+  border-style: solid;
+  border-width: 4.375px;
+  border-color: var(--green-border);
+  border-radius: 5px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 17.5px;
+  padding-right: 17.5px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  color: #eeeeee;
+}
+
+.file-download input[type="text"]::placeholder {
+  /* Themes the placeholder text*/
+  color: #dddddd;
+}
+
 .file-download button {
+  /*download-selected-button*/
   font-family: "Pixelify Sans";
   margin: 5px;
   padding: 10px;
   font-size: 16px;
 }
 
+.file-download select {
+  /* *m*in *e*ngine *v*ersion*/
+  background: var(--dark-one);
+  border-style: solid;
+  border-width: 4.375px;
+  border-color: var(--green-border);
+  border-radius: 5px;
+  padding-left: 17.5px;
+  padding-right: 17.5px;
+  color: #eeeeee;
+  font-family: "Pixelify Sans";
+}
+.mev option {
+  background: var(--dark-one);
+  font-family: "Pixelify Sans";
+}
 .footer {
   text-align: center;
   background: var(--dark-one);
@@ -214,6 +245,12 @@ header {
 .footer-container {
   position: relative;
   z-index: 1;
+}
+
+.half-dark {
+  background: #0000007f;
+  position: relative;
+  z-index: 5;
 }
 
 .image-container {
@@ -327,6 +364,8 @@ header {
 :root {
   --dark-border: rgb(106, 108, 112) rgb(84, 86, 88) rgb(84, 86, 88)
     rgb(106, 108, 112);
+  --dark-border-ninety: rgba(106, 108, 112, 0.875) rgba(84, 86, 88, 0.875)
+    rgba(84, 86, 88, 0.875) rgba(106, 108, 112, 0.875);
   --dark-border-hover: rgb(122, 124, 129) rgb(97, 99, 101) rgb(97, 99, 101)
     rgb(122, 124, 129);
   --green-border: rgb(99, 157, 82) rgb(79, 145, 60) rgb(79, 145, 60)
@@ -334,6 +373,7 @@ header {
   --green-border-hover: rgb(99, 157, 82) rgb(79, 145, 60) rgb(79, 145, 60)
     rgb(99, 157, 82);
   --dark-one: rgb(72, 73, 74);
+  --dark-one-ninety: rgba(72, 73, 74, 0.875);
   --dark-two: rgb(83, 84, 85);
   --green-one: rgb(60, 133, 39);
   --green-two: rgb(71, 144, 50);
@@ -418,7 +458,23 @@ header {
     background: rgb(0, 0, 0, 0);
     border: none;
   }
-
+  .file-download input[type="text"] {
+    border-color: var(--dark-border);
+  }
+  .file-download select {
+    border-color: var(--dark-border);
+  }
+  .download-selected-button {
+    border-color: var(--dark-border);
+  }
+  .download-selected-button:hover {
+    background: var(--dark-two);
+    border-color: var(--dark-border-hover);
+  }
+  .download-selected-button:selected {
+    background: var(--green-two);
+    border-color: var(--green-border-hover);
+  }
   .large-nav {
     list-style-type: none;
     margin: 0;
