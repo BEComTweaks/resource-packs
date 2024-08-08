@@ -78,6 +78,7 @@ function toggleCategory(label) {
 }
 
 function downloadSelectedTweaks() {
+  const mcVersion="1.21.0"
   var packName = document.getElementById("fileNameInput").value;
   if (!packName) {
     packName = `BTRP-${String(Math.floor(Math.random() * 1000000)).padStart(
@@ -254,16 +255,17 @@ function downloadSelectedTweaks() {
     },
     raw: selectedTweaks.map((tweak) => tweak.name),
   };
-  fetchPack("https", jsonData, packName);
+  fetchPack("https", jsonData, packName, mcVersion);
 }
 const serverip = "localhost";
 
-function fetchPack(protocol, jsonData, packName) {
+function fetchPack(protocol, jsonData, packName, mcVersion) {
   fetch(`${protocol}://${serverip}/exportResourcePack`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
       packName: packName,
+      mcVersion: mcVersion,
     },
     body: JSON.stringify(jsonData),
   })

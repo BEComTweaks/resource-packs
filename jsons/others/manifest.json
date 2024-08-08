@@ -4,7 +4,6 @@
     "name": "",
     "description": "",
     "uuid": "",
-    "min_engine_version": [1, 20, 70],
     "version": [1, 20, 0]
   },
   "modules": [
