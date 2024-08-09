@@ -296,7 +296,7 @@ function fetchPack(protocol, jsonData, packName, mcVersion) {
     .catch((error) => {
       if (protocol === "https") {
         console.error("HTTPS error, trying HTTP:", error);
-        fetchPack("http", jsonData, packName); // Retry with HTTP
+        fetchPack("http", jsonData, packName, mcVersion); // Retry with HTTP
       } else {
         console.error("Error:", error);
       }
