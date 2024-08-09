@@ -92,7 +92,6 @@ function downloadSelectedTweaks() {
     )}`;
   }
   packName = packName.replaceAll("/", "-");
-  packName = packName.replaceAll(" ", "-");
   const selectedTweaks = [];
   const tweakElements = document.querySelectorAll(".tweak.selected");
   tweakElements.forEach((tweak) => {
