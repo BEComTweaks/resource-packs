@@ -3,9 +3,9 @@ function toggleSelection(element) {
   const checkbox = element.querySelector('input[type="checkbox"]');
   checkbox.checked = !checkbox.checked;
   if (checkbox.checked) {
-    console.log("Selected tweak");
+    console.log(`Selected ${element.dataset.name}`);
   } else {
-    console.log("Unselected tweak");
+    console.log(`Unselected ${element.dataset.name}`);
   }
   var selectedTweaks = [];
   const tweakElements = document.querySelectorAll(".tweak.selected");
@@ -91,6 +91,7 @@ function downloadSelectedTweaks() {
       "0",
     )}`;
   }
+  console.log(`Pack Name is set to ${packName}`);
   packName = packName.replaceAll("/", "-");
   const selectedTweaks = [];
   const tweakElements = document.querySelectorAll(".tweak.selected");
