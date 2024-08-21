@@ -48,25 +48,6 @@ def clrinput(message, clr: str = "white"):
     clrprint(f"{message} ", clr=clr, end="")
     return input()
 
-
-# Opposite of "".join(word.split())
-def expand(string):
-    expanded_string = ""
-    if " " not in string:
-        for i in string:
-            if i.isupper() and len(expanded_string) != 0:
-                expanded_string += " "
-            expanded_string += i
-    else:
-        expanded_string = string
-    return expanded_string
-
-
-# Basically "".join(word.split()) but neater
-def contract(string):
-    return "".join(string.split())
-
-
 # Clears terminal screen
 def clear():
     if os.name == "nt":
