@@ -1,36 +1,49 @@
 @import url("https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap");
+:root {
+  --dark-border-hover: rgb(122,124,129) rgb(97,99,101) rgb(97,99,101) rgb(122,124,129);
+  --dark-border-ninety: rgba(106,108,112,0.875) rgba(84,86,88,0.875) rgba(84,86,88,0.875) rgba(106,108,112,0.875);
+  --dark-border: rgb(106,108,112) rgb(84,86,88) rgb(84,86,88) rgb(106,108,112);
+  --dark-one-ninety: rgba(72,73,74,0.875);
+  --dark-one: rgb(72,73,74);
+  --dark-two: rgb(83,84,85);
+  --green-border-hover: rgb(99,157,82) rgb(79,145,60) rgb(79,145,60) rgb(99,157,82);
+  --green-border: rgb(99,157,82) rgb(79,145,60) rgb(79,145,60) rgb(99,157,82);
+  --green-one: rgb(60,133,39);
+  --green-two: rgb(71,144,50);
+  --leftmargin: 10px;
+  --rightmargin: 250px;
+}
+
+a:active {
+  background-color: transparent;
+  color: white;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+a:hover {
+  background-color: transparent;
+  color: white;
+  text-decoration: underline;
+}
 
 a:link {
-  color: white;
   background-color: transparent;
+  color: white;
   text-decoration: none;
 }
 
 a:visited {
-  color: white;
   background-color: transparent;
+  color: white;
   text-decoration: none;
 }
 
-a:hover {
-  color: white;
-  background-color: transparent;
-  text-decoration: underline;
-}
-
-a:active {
-  color: white;
-  background-color: transparent;
-  text-decoration: underline;
-  font-weight: bold;
-}
-
 body {
-  /* Because I can*/
+  color: white;
   font-family: "Pixelify Sans";
   margin: 0;
   padding: 0;
-  color: white;
 }
 
 header {
@@ -39,41 +52,96 @@ header {
   text-align: center;
 }
 
+li {
+  float: left;
+}
+
+li a {
+  color: white;
+  display: block;
+  padding: 14px 16px;
+  text-align: center;
+  text-decoration: none;
+}
+
+#background-container {
+  background-size: cover;
+  display: flex;
+  flex-wrap: nowrap;
+  grid-template-columns: repeat(auto-fill,100px);
+  grid-template-rows: repeat(auto-fill,100px);
+  height: 100%;
+  left: 0;
+  overflow: visible;
+  pointer-events: none;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 0;
+}
+
+#selected-tweaks {
+  background: var(--dark-one);
+  border-radius: 5px;
+  border: 2px solid #111;
+  display: none;
+  margin: auto;
+  max-height: 400px;
+  overflow-y: auto;
+  padding: 5px;
+  text-align: center;
+  width: 75%;
+}
+
+#title {
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  height: auto;
+  margin-top: 35px;
+  max-width: 100%;
+}
+
 .category {
-  margin-top: 20px;
   margin-bottom: 20px;
+  margin-top: 20px;
 }
 
 .category-controlled {
-  display: none;
-  padding-left: 10px;
-  padding-right: 10px;
+  background-color: var(--dark-one);
+  border-color: rgb(106,108,112);
+  border-radius: 0px 0px 5px 5px;
   border-style: solid;
   border-width: 5px;
-  border-radius: 0px 0px 5px 5px;
-  border-color: rgb(106, 108, 112);
-  background-color: var(--dark-one);
-  overflow: hidden;
+  display: none;
   max-height: 0;
+  overflow: hidden;
+  padding-left: 10px;
+  padding-right: 10px;
   transition: max-height 0.5s ease-in-out;
 }
 
 .category-label {
-  text-align: center;
-  font-size: 20px;
   background-color: var(--dark-one);
-  padding: 5px;
-  user-select: none;
+  border-color: var(--dark-border);
   border-radius: 5px;
   border-style: solid;
   border-width: 5px;
-  border-color: var(--dark-border);
   cursor: pointer;
+  font-size: 20px;
   margin-bottom: -5px;
-  transition:
-    background-color 0.25s ease,
-    border-color 0.5s ease;
+  padding: 5px;
+  text-align: center;
+  transition: background-color 0.25s ease, border-color 0.5s ease;
+  user-select: none;
   z-index: 13;
+}
+
+.category-label.open {
+  border-color: rgb(106,108,112);
+  border-radius: 5px 5px 0px 0px;
+}
+
+.category-label.open:hover {
+  border-radius: 5px 5px 0px 0px;
 }
 
 .category-label:hover {
@@ -81,238 +149,52 @@ header {
   border-color: var(--dark-border-hover);
 }
 
-.category-label.open {
-  border-radius: 5px 5px 0px 0px;
-  border-color: rgb(106, 108, 112);
-}
-
-.category-label.open:hover {
-  border-radius: 5px 5px 0px 0px;
-}
-
 .comp-hover-text {
-  display: none;
-  position: absolute;
-  bottom: 100%;
-  left: 50%;
-  transform: translateX(-50%);
-  text-align: center;
-  background: rgb(144, 146, 74);
-  padding: 0px;
+  background: rgb(144,146,74);
   border-radius: 3px;
+  bottom: 100%;
+  display: none;
   font-size: 13px;
+  left: 50%;
+  padding: 0px;
+  position: absolute;
+  text-align: center;
+  transform: translateX(-50%);
   z-index: 1;
-}
-
-.tweak:hover .comp-hover-text {
-  display: block;
 }
 
 .conf-hover-text {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  transform: translateX(-50%);
-  text-align: center;
-  background: rgb(144, 73, 74);
-  padding: 7.5px;
+  background: rgb(144,73,74);
   border-radius: 3px;
+  display: none;
   font-size: 13px;
-  z-index: 1;
+  left: 50%;
+  padding: 7.5px;
+  position: absolute;
+  text-align: center;
+  top: 100%;
+  transform: translateX(-50%);
   white-space: no-wrap;
-}
-
-.tweak:hover .conf-hover-text {
-  display: block;
+  z-index: 1;
 }
 
 .container {
+  background: #0000007f;
+  border-radius: 10px;
   padding: 20px;
   position: relative;
   z-index: 1;
-  background: #0000007f;
-  border-radius: 10px;
 }
 
 .credits-footer {
-  color: white;
+  background: var(--dark-one);
   border: solid;
-  border-width: 7.5px;
+  border-color: var(--dark-border);
   border-radius: 12.5px;
-  border-color: var(--dark-border);
-  padding: 20px;
-  background: var(--dark-one);
-  z-index: 5;
-}
-
-.download-container {
-  position: fixed;
-  left: 10px;
-  bottom: 10px;
-  width: 300px;
-  z-index: 10;
-  background: var(--dark-one-ninety);
-  border: solid;
-  border-width: 5px;
-  border-radius: 10px;
-  border-color: var(--dark-border-ninety);
-  width: 240px;
-  height: 150px;
-}
-
-.download-selected-button {
-  font-family: "Pixelify Sans";
-  background: var(--dark-one);
-  padding: 10px 20px;
-  border-style: solid;
-  border-width: 5px;
-  border-color: var(--green-border);
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background 0.5s;
-  display: block;
-  margin: 10px auto;
-  text-align: center;
+  border-width: 7.5px;
   color: white;
-}
-
-.download-selected-button:hover {
-  background: var(--green-two);
-  border-color: var(--green-border-hover);
-}
-
-.file-download {
-  font-family: "Pixelify Sans";
-  text-align: center;
-}
-
-/*Honestly not sure why YzaBeast1 decided to not use classes*/
-.file-download input[type="text"] {
-  /*file-name-input*/
-  background: var(--dark-one);
-  border-style: solid;
-  border-width: 4.375px;
-  border-color: var(--green-border);
-  border-radius: 5px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-left: 17.5px;
-  padding-right: 17.5px;
-  margin-top: 10px;
-  margin-bottom: 5px;
-  color: #eeeeee;
-}
-
-.file-download input[type="text"]::placeholder {
-  /* Themes the placeholder text*/
-  color: #dddddd;
-}
-
-.file-download button {
-  /*download-selected-button*/
-  font-family: "Pixelify Sans";
-  margin: 5px;
-  padding: 10px;
-  font-size: 16px;
-}
-
-.file-download select {
-  /* *m*in *e*ngine *v*ersion*/
-  background: var(--dark-one);
-  border-style: solid;
-  border-width: 4.375px;
-  border-color: var(--green-border);
-  border-radius: 5px;
-  padding-left: 17.5px;
-  padding-right: 17.5px;
-  color: #eeeeee;
-  font-family: "Pixelify Sans";
-}
-.mev option {
-  background: var(--dark-one);
-  font-family: "Pixelify Sans";
-}
-.footer {
-  text-align: center;
-  background: var(--dark-one);
-  position: fixed;
-  width: 100%;
-  bottom: 0;
   padding: 20px;
-}
-
-.footer-container {
-  position: relative;
-  z-index: 1;
-}
-
-.half-dark {
-  background: #0000007f;
-  position: relative;
   z-index: 5;
-}
-
-.image-container {
-  text-align: center;
-  size: cover;
-  position: relative;
-  z-index: 1;
-}
-
-.subcategory {
-  position: center;
-  margin-top: 15px;
-  margin-bottom: 15px;
-  margin-left: 2.5%;
-  width: 95%;
-}
-
-.subcattweaks {
-  position: center;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 10px;
-  margin-top: 10px;
-  align-items: top;
-  text-align: center;
-}
-
-.tile {
-  width: 100px;
-  height: 100px;
-  background-size: cover;
-  overflow: hidden;
-}
-
-.tweak {
-  background: var(--dark-one);
-  padding: 10px;
-  box-shadow: 0 0 10px rgba(49, 50, 51, 1);
-  cursor: pointer;
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  border-style: solid;
-  border-width: 4.375px;
-  border-color: var(--dark-border);
-  border-radius: 6.25px;
-  transition: background 0.375s;
-}
-
-.tweak:hover {
-  background: var(--dark-two);
-  border-color: var(--dark-border-hover);
-}
-
-.tweak.selected {
-  background: var(--green-one);
-  border-color: var(--green-border);
-}
-
-.tweak.selected:hover {
-  background: var(--green-two);
-  border-color: var(--green-border-hover);
 }
 
 .desc-error {
@@ -327,6 +209,203 @@ header {
   color: orange;
 }
 
+.download-container {
+  background: var(--dark-one);
+  border: solid;
+  border-color: var(--dark-border-ninety);
+  border-radius: 10px;
+  border-width: 5px;
+  bottom: 10px;
+  height: 150px;
+  left: 10px;
+  position: fixed;
+  width: 240px;
+  width: 300px;
+  z-index: 10;
+}
+
+.download-selected-button {
+  background: var(--dark-one);
+  border-color: var(--green-border);
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 5px;
+  color: white;
+  cursor: pointer;
+  display: block;
+  font-family: "Pixelify Sans";
+  margin: 10px auto;
+  padding: 10px 20px;
+  text-align: center;
+  transition: background 0.5s;
+}
+
+.download-selected-button:hover {
+  background: var(--green-two);
+  border-color: var(--green-border-hover);
+}
+
+.file-download {
+  font-family: "Pixelify Sans";
+  text-align: center;
+}
+
+.file-download button {
+  font-family: "Pixelify Sans";
+  font-size: 16px;
+  margin: 5px;
+  padding: 10px;
+}
+
+.file-download input[type="text"] {
+  background: var(--dark-one);
+  border-color: var(--green-border);
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 4.375px;
+  color: #eeeeee;
+  margin-bottom: 5px;
+  margin-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 17.5px;
+  padding-right: 17.5px;
+  padding-top: 10px;
+}
+
+.file-download input[type="text"]::placeholder {
+  color: #dddddd;
+}
+
+.file-download select {
+  background: var(--dark-one);
+  border-color: var(--green-border);
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 4.375px;
+  color: #eeeeee;
+  font-family: "Pixelify Sans";
+  padding-left: 17.5px;
+  padding-right: 17.5px;
+}
+
+.footer {
+  background: var(--dark-one);
+  bottom: 0;
+  padding: 20px;
+  position: fixed;
+  text-align: center;
+  width: 100%;
+}
+
+.footer-container {
+  position: relative;
+  z-index: 1;
+}
+
+.half-dark {
+  background: #0000007f;
+  position: relative;
+  z-index: 5;
+}
+
+.image-container {
+  position: relative;
+  size: cover;
+  text-align: center;
+  z-index: 1;
+}
+
+.mev option {
+  background: var(--dark-one);
+  font-family: "Pixelify Sans";
+}
+
+.nav-link:active {
+  background-color: transparent;
+  color: white;
+  text-decoration: underline;
+}
+
+.nav-link:hover {
+  background-color: transparent;
+  color: white;
+  text-decoration: underline;
+}
+
+.nav-link:link {
+  background-color: transparent;
+  color: white;
+  text-decoration: none;
+}
+
+.nav-link:visited {
+  background-color: transparent;
+  color: white;
+  text-decoration: none;
+}
+
+.small-nav {
+  background-color: #333;
+  list-style-type: none;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+}
+
+.subcategory {
+  margin-bottom: 15px;
+  margin-left: 2.5%;
+  margin-top: 15px;
+  position: center;
+  width: 95%;
+}
+
+.subcattweaks {
+  align-items: top;
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(150px,1fr));
+  margin-top: 10px;
+  position: center;
+  text-align: center;
+}
+
+.tile {
+  background-size: cover;
+  height: 100px;
+  overflow: hidden;
+  width: 100px;
+}
+
+.tweak {
+  background: var(--dark-one);
+  border-color: var(--dark-border);
+  border-radius: 6.25px;
+  border-style: solid;
+  border-width: 4.375px;
+  box-shadow: 0 0 10px rgba(49,50,51,1);
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  position: relative;
+  transition: background 0.375s;
+}
+
+.tweak input[type="checkbox"] {
+  display: none;
+  font-family: "Pixelify Sans";
+}
+
+.tweak-info {
+  margin-left: -5px;
+  margin-right: -5px;
+}
+
 .tweak-list-category {
   display: none;
   font-size: 1.2em;
@@ -338,83 +417,40 @@ header {
 }
 
 .tweak-title {
-  font-weight: bold;
   font-size: 1.2em;
+  font-weight: bold;
 }
 
-.tweak-info {
-  margin-left: -5px;
-  margin-right: -5px;
+.tweak.selected {
+  background: var(--green-one);
+  border-color: var(--green-border);
 }
 
-.tweak input[type="checkbox"] {
-  font-family: "Pixelify Sans";
-  display: none;
+.tweak.selected:hover {
+  background: var(--green-two);
+  border-color: var(--green-border-hover);
+}
+
+.tweak:hover {
+  background: var(--dark-two);
+  border-color: var(--dark-border-hover);
+}
+
+.tweak:hover .comp-hover-text {
+  display: block;
+}
+
+.tweak:hover .conf-hover-text {
+  display: block;
 }
 
 .tweaks {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(162.5px, 1fr));
-  gap: 10px;
-  margin: 10px;
   align-items: top;
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(150px,1fr));
+  margin: 10px;
   text-align: center;
-}
-
-:root {
-  --dark-border: rgb(106, 108, 112) rgb(84, 86, 88) rgb(84, 86, 88)
-    rgb(106, 108, 112);
-  --dark-border-ninety: rgba(106, 108, 112, 0.875) rgba(84, 86, 88, 0.875)
-    rgba(84, 86, 88, 0.875) rgba(106, 108, 112, 0.875);
-  --dark-border-hover: rgb(122, 124, 129) rgb(97, 99, 101) rgb(97, 99, 101)
-    rgb(122, 124, 129);
-  --green-border: rgb(99, 157, 82) rgb(79, 145, 60) rgb(79, 145, 60)
-    rgb(99, 157, 82);
-  --green-border-hover: rgb(99, 157, 82) rgb(79, 145, 60) rgb(79, 145, 60)
-    rgb(99, 157, 82);
-  --dark-one: rgb(72, 73, 74);
-  --dark-one-ninety: rgba(72, 73, 74, 0.875);
-  --dark-two: rgb(83, 84, 85);
-  --green-one: rgb(60, 133, 39);
-  --green-two: rgb(71, 144, 50);
-  --rightmargin: 250px;
-  --leftmargin: 10px;
-}
-
-#background-container {
-  grid-template-columns: repeat(auto-fill, 100px);
-  grid-template-rows: repeat(auto-fill, 100px);
-  width: 100%;
-  height: 100%;
-  background-size: cover;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 0;
-  pointer-events: none;
-  overflow: visible;
-  display: flex;
-  flex-wrap: nowrap;
-}
-
-#title {
-  margin-top: 35px;
-  max-width: 100%;
-  height: auto;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-#selected-tweaks {
-  display: none;
-  text-align: center;
-  border: 2px solid #111;
-  border-radius: 5px;
-  margin: auto;
-  background: var(--dark-one);
-  padding: 5px;
-  width: 75%;
-  overflow-y: auto;
-  max-height: 400px;
 }
 
 @keyframes spin {
@@ -427,68 +463,88 @@ header {
   }
 }
 
+@media (max-width: 767px) {
+  .large-nav {
+    background-color: #333;
+    list-style-type: none;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: -1;
+  }
+}
+
 @media (min-width: 768px) {
-  .container {
-    margin-right: var(--rightmargin);
-    margin-left: var(--leftmargin);
-  }
-
-  .credits-footer {
-    margin-right: var(--rightmargin);
-    margin-left: var(--leftmargin);
-  }
-
   body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
   }
 
-  .image-container {
+  #selected-tweaks {
+    display: block;
+  }
+
+  .container {
+    margin-left: var(--leftmargin);
+    margin-right: var(--rightmargin);
+  }
+
+  .credits-footer {
+    margin-left: var(--leftmargin);
     margin-right: var(--rightmargin);
   }
 
   .download-container {
+    background: rgb(0,0,0,0);
+    border: none;
+    bottom: auto;
+    left: auto;
     position: fixed;
     right: -25px;
     top: 100px;
-    left: auto;
-    bottom: auto;
     width: 300px;
-    background: rgb(0, 0, 0, 0);
-    border: none;
   }
-  .file-download input[type="text"] {
-    border-color: var(--dark-border);
-  }
-  .file-download select {
-    border-color: var(--dark-border);
-  }
+
   .download-selected-button {
     border-color: var(--dark-border);
   }
+
   .download-selected-button:hover {
     background: var(--dark-two);
     border-color: var(--dark-border-hover);
   }
+
   .download-selected-button:selected {
     background: var(--green-two);
     border-color: var(--green-border-hover);
   }
+
+  .file-download input[type="text"] {
+    border-color: var(--dark-border);
+  }
+
+  .file-download select {
+    border-color: var(--dark-border);
+  }
+
+  .image-container {
+    margin-right: var(--rightmargin);
+  }
+
   .large-nav {
+    background-color: #333;
     list-style-type: none;
     margin: 0;
-    padding: 0;
     overflow: hidden;
-    background-color: #333;
+    padding: 0;
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 3;
-  }
-
-  #selected-tweaks {
-    display: block;
   }
 
   .tweak-list-category {
@@ -498,19 +554,9 @@ header {
   .tweak-list-pack {
     display: block;
   }
-}
 
-@media (max-width: 767px) {
-  .large-nav {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #333;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: -1;
+  .tweaks {
+    grid-template-columns: repeat(auto-fit, minmax(175px,1fr));
   }
 }
 
@@ -518,52 +564,4 @@ header {
   .category-controlled {
     transition: none;
   }
-}
-
-.small-nav {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #333;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 2;
-}
-
-li {
-  float: left;
-}
-
-li a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-
-.nav-link:link {
-  color: white;
-  background-color: transparent;
-  text-decoration: none;
-}
-
-.nav-link:visited {
-  color: white;
-  background-color: transparent;
-  text-decoration: none;
-}
-
-.nav-link:hover {
-  color: white;
-  background-color: transparent;
-  text-decoration: underline;
-}
-
-.nav-link:active {
-  color: white;
-  background-color: transparent;
-  text-decoration: underline;
 }
