@@ -1,15 +1,20 @@
 @import url("https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap");
 :root {
-  --dark-border-hover: rgb(122,124,129) rgb(97,99,101) rgb(97,99,101) rgb(122,124,129);
-  --dark-border-ninety: rgba(106,108,112,0.875) rgba(84,86,88,0.875) rgba(84,86,88,0.875) rgba(106,108,112,0.875);
-  --dark-border: rgb(106,108,112) rgb(84,86,88) rgb(84,86,88) rgb(106,108,112);
-  --dark-one-ninety: rgba(72,73,74,0.875);
-  --dark-one: rgb(72,73,74);
-  --dark-two: rgb(83,84,85);
-  --green-border-hover: rgb(99,157,82) rgb(79,145,60) rgb(79,145,60) rgb(99,157,82);
-  --green-border: rgb(99,157,82) rgb(79,145,60) rgb(79,145,60) rgb(99,157,82);
-  --green-one: rgb(60,133,39);
-  --green-two: rgb(71,144,50);
+  --dark-border-hover: rgb(122, 124, 129) rgb(97, 99, 101) rgb(97, 99, 101)
+    rgb(122, 124, 129);
+  --dark-border-ninety: rgba(106, 108, 112, 0.875) rgba(84, 86, 88, 0.875)
+    rgba(84, 86, 88, 0.875) rgba(106, 108, 112, 0.875);
+  --dark-border: rgb(106, 108, 112) rgb(84, 86, 88) rgb(84, 86, 88)
+    rgb(106, 108, 112);
+  --dark-one-ninety: rgba(72, 73, 74, 0.875);
+  --dark-one: rgb(72, 73, 74);
+  --dark-two: rgb(83, 84, 85);
+  --green-border-hover: rgb(99, 157, 82) rgb(79, 145, 60) rgb(79, 145, 60)
+    rgb(99, 157, 82);
+  --green-border: rgb(99, 157, 82) rgb(79, 145, 60) rgb(79, 145, 60)
+    rgb(99, 157, 82);
+  --green-one: rgb(60, 133, 39);
+  --green-two: rgb(71, 144, 50);
   --leftmargin: 10px;
   --rightmargin: 250px;
 }
@@ -68,8 +73,8 @@ li a {
   background-size: cover;
   display: flex;
   flex-wrap: nowrap;
-  grid-template-columns: repeat(auto-fill,100px);
-  grid-template-rows: repeat(auto-fill,100px);
+  grid-template-columns: repeat(auto-fill, 100px);
+  grid-template-rows: repeat(auto-fill, 100px);
   height: 100%;
   left: 0;
   overflow: visible;
@@ -94,7 +99,7 @@ li a {
 }
 
 #title {
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   height: auto;
   margin-top: 35px;
   max-width: 100%;
@@ -107,7 +112,7 @@ li a {
 
 .category-controlled {
   background-color: var(--dark-one);
-  border-color: rgb(106,108,112);
+  border-color: rgb(106, 108, 112);
   border-radius: 0px 0px 5px 5px;
   border-style: solid;
   border-width: 5px;
@@ -130,13 +135,15 @@ li a {
   margin-bottom: -5px;
   padding: 5px;
   text-align: center;
-  transition: background-color 0.25s ease, border-color 0.5s ease;
+  transition:
+    background-color 0.25s ease,
+    border-color 0.5s ease;
   user-select: none;
   z-index: 13;
 }
 
 .category-label.open {
-  border-color: rgb(106,108,112);
+  border-color: rgb(106, 108, 112);
   border-radius: 5px 5px 0px 0px;
 }
 
@@ -150,7 +157,7 @@ li a {
 }
 
 .comp-hover-text {
-  background: rgb(144,146,74);
+  background: rgb(144, 146, 74);
   border-radius: 3px;
   bottom: 100%;
   display: none;
@@ -164,7 +171,7 @@ li a {
 }
 
 .conf-hover-text {
-  background: rgb(144,73,74);
+  background: rgb(144, 73, 74);
   border-radius: 3px;
   display: none;
   font-size: 13px;
@@ -368,7 +375,7 @@ li a {
   align-items: top;
   display: grid;
   gap: 10px;
-  grid-template-columns: repeat(auto-fit, minmax(150px,1fr));
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   margin-top: 10px;
   position: center;
   text-align: center;
@@ -387,7 +394,7 @@ li a {
   border-radius: 6.25px;
   border-style: solid;
   border-width: 4.375px;
-  box-shadow: 0 0 10px rgba(49,50,51,1);
+  box-shadow: 0 0 10px rgba(49, 50, 51, 1);
   cursor: pointer;
   display: flex;
   flex-direction: column;
@@ -448,7 +455,7 @@ li a {
   align-items: top;
   display: grid;
   gap: 10px;
-  grid-template-columns: repeat(auto-fit, minmax(150px,1fr));
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   margin: 10px;
   text-align: center;
 }
@@ -499,7 +506,7 @@ li a {
   }
 
   .download-container {
-    background: rgb(0,0,0,0);
+    background: rgb(0, 0, 0, 0);
     border: none;
     bottom: auto;
     left: auto;
@@ -556,7 +563,7 @@ li a {
   }
 
   .tweaks {
-    grid-template-columns: repeat(auto-fit, minmax(175px,1fr));
+    grid-template-columns: repeat(auto-fit, minmax(175px, 1fr));
   }
 }
 
