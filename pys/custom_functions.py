@@ -42,12 +42,6 @@ def cdir():
     return currentdir
 
 
-# clrinput doesn't work in IDLE, so if someone
-# does run it in IDLE, it would work
-def clrinput(message, clr: str = "white"):
-    clrprint(f"{message} ", clr=clr, end="")
-    return input()
-
 # Clears terminal screen
 def clear():
     if os.name == "nt":

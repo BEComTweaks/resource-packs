@@ -73,13 +73,11 @@ def modify_images_in_directory(directory):
 
 def tweak_images():
     if os.name == "nt":
-        clrprint(
-            f"Enter the directory to the folder with PNG Files.\nExample: packs\\aesthetic\\AlternateCutCopper\\default\\textures\\blocks\\ \n{cdir()}\\",
+        clrprint(f"Enter the directory to the folder with PNG Files.\nExample: packs\\aesthetic\\AlternateCutCopper\\default\\textures\\blocks\\ \n{cdir()}\\",
             clr='b', end='')
         directory = f"{cdir()}\\{input()}"
     else:
-        clrprint(
-            f"Enter the directory to the folder with PNG Files.\nExample: packs/aesthetic/AlternateCutCopper/default/textures/blocks/ \n{cdir()}/",
+        clrprint(f"Enter the directory to the folder with PNG Files.\nExample: packs/aesthetic/AlternateCutCopper/default/textures/blocks/ \n{cdir()}/",
             clr='b', end='')
         directory = f"{cdir()}/{input()}"
     # Changes each pixel withing a range of -6 to +6
@@ -92,21 +90,17 @@ def tweak_images():
 
     modify_images_in_directory(directory)
     clrprint(f"\r\nModified all PNG files in {directory}")
-    clrinput("Press Enter to exit.", clr="green")
-    clear()
 
 def compress_images():
     if os.name == "nt":
-        clrprint(
-            f"Enter the directory to the folder with PNG Files.\nExample: packs\\aesthetic\\AlternateCutCopper\\default\\textures\\blocks\\ \n{cdir()}\\",
+        clrprint(f"Enter the directory to the folder with PNG Files.\nExample: packs\\aesthetic\\AlternateCutCopper\\default\\textures\\blocks\\ \n{cdir()}\\",
             clr='b', end='')
         input_dir = f"{cdir()}\\{input()}"
     else:
-        clrprint(
-            f"Enter the directory to the folder with PNG Files.\nExample: packs/aesthetic/AlternateCutCopper/default/textures/blocks/ \n{cdir()}/",
+        clrprint(f"Enter the directory to the folder with PNG Files.\nExample: packs/aesthetic/AlternateCutCopper/default/textures/blocks/ \n{cdir()}/",
             clr='b', end='')
         input_dir = f"{cdir()}/{input()}"
-    compress_by = int(clrinput("Compress the images by:", clr='b'))
+    compress_by = int(input("Compress the images by:", clr='b'))
     # Walk through the directory tree
     for root, dirs, files in os.walk(input_dir):
         for filename in files:
@@ -127,15 +121,16 @@ def compress_images():
                         break
     if not broken:
         clrprint(f"\r\nCompressed all PNG files in {input_dir[len(str(cdir())):]}")
-    clrinput("Press Enter to exit.", clr="green")
 
 def image_utils():
     clrprint("Options:\n","Tweak Images in Directory\n","Compress Images in Directory","\nEnter your choice: ",clr="p,w,w,y",end="")
     progged = prog_search(input(),["tweak","compress"])
     if progged == 0:
         tweak_images()
-    else:
+    elif progged == 1:
         compress_images()
+    else:
+        clrprint("Enter a proper input next time smh", clr="r")
 
 if __name__ == "__main__":
     image_utils()
