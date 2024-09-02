@@ -303,3 +303,76 @@ function fetchPack(protocol, jsonData, packName, mcVersion) {
       }
     });
 }
+
+document
+  .getElementById("zipInput")
+  .addEventListener("change", function (event) {
+    const file = event.target.files[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onload = function (e) {
+        JSZip.loadAsync(e.target.result)
+          .then(function (zip) {
+            let fileFound = false;
+
+            zip.forEach(function (relativePath, zipEntry) {
+              if (relativePath.endsWith("selected_packs.json")) {
+                fileFound = true;
+                zipEntry
+                  .async("string")
+                  .then(function (content) {
+                    try {
+                      const jsonData = JSON.parse(content);
+                      const rawPacks = jsonData.raw;
+
+                      if (Array.isArray(rawPacks)) {
+                        rawPacks.forEach(function (pack) {
+                          // Find the div with the matching data-name attribute
+                          const div = document.querySelector(
+                            `div.tweak[data-name="${pack}"]`,
+                          );
+                          if (div) {
+                            // Run the toggleSelection function on the div
+                            toggleSelection(div);
+                            console.log(
+                              `toggleSelection function called for ${pack}`,
+                            );
+                          } else {
+                            console.error(
+                              `Div with data-name="${pack}" not found.`,
+                            );
+                          }
+                        });
+                      } else {
+                        console.error(
+                          "The 'raw' field in selected_packs.json is not an array.",
+                        );
+                      }
+                    } catch (error) {
+                      console.error("Error parsing JSON:", error);
+                    }
+                  })
+                  .catch(function (error) {
+                    console.error(
+                      "Error extracting selected_packs.json:",
+                      error,
+                    );
+                  });
+              }
+            });
+
+            if (!fileFound) {
+              console.error(
+                "selected_packs.json not found in any folder within the ZIP file.",
+              );
+            }
+          })
+          .catch(function (error) {
+            console.error("Error reading the ZIP file:", error);
+          });
+      };
+      reader.readAsArrayBuffer(file);
+    } else {
+      console.error("No file selected.");
+    }
+  });

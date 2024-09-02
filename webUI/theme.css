@@ -15,8 +15,8 @@
     rgb(99, 157, 82);
   --green-one: rgb(60, 133, 39);
   --green-two: rgb(71, 144, 50);
-  --leftmargin: 10px;
-  --rightmargin: 250px;
+  --leftmargin: 5%;
+  --rightmargin: 350px;
 }
 
 a:active {
@@ -103,6 +103,10 @@ li a {
   height: auto;
   margin-top: 35px;
   max-width: 100%;
+}
+
+#zipInput {
+  display: none;
 }
 
 .category {
@@ -460,18 +464,19 @@ li a {
   text-align: center;
 }
 
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
+.large-nav {
+  display: none;
+  z-index: 5;
+}
 
-  100% {
-    transform: rotate(360deg);
-  }
+.small-nav {
+  display: none;
+  z-index: 5;
 }
 
 @media (max-width: 767px) {
-  .large-nav {
+  .small-nav {
+    display: block;
     background-color: #333;
     list-style-type: none;
     margin: 0;
@@ -493,6 +498,36 @@ li a {
 
   #selected-tweaks {
     display: block;
+    max-height: 400px;
+  }
+
+  #zipInput {
+    display: block;
+    background: var(--dark-one);
+    border-color: var(--dark-border);
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 5px;
+    color: white;
+    cursor: pointer;
+    display: block;
+    font-family: "Pixelify Sans";
+    margin: 10px auto;
+    padding: 5px;
+    transition: background 0.5s ease-in border-color 0.5s ease-in;
+    position: center;
+    width: 75%;
+    height: 100%;
+  }
+
+  #zipInput:hover {
+    background: var(--dark-two);
+    border-color: var(--dark-border-hover);
+  }
+
+  #zipInput:active {
+    background: var(--green-two);
+    border-color: var(--green-border-hover);
   }
 
   .container {
@@ -506,14 +541,17 @@ li a {
   }
 
   .download-container {
-    background: rgb(0, 0, 0, 0);
+    background: #0000007f;
     border: none;
     bottom: auto;
     left: auto;
     position: fixed;
-    right: -25px;
+    right: 50px;
     top: 100px;
-    width: 300px;
+    width: 275px;
+    height: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
   }
 
   .download-selected-button {
@@ -543,6 +581,7 @@ li a {
   }
 
   .large-nav {
+    display: block;
     background-color: #333;
     list-style-type: none;
     margin: 0;
