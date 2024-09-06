@@ -21,7 +21,7 @@
   <div class="half-dark">
    <br>
    <br>
-   <div class="image-container">
+   <div class="title-image">
     <img alt="Resource Packs" id="title" src="images/title.png"/>
    </div>
    <ul class="large-nav">
@@ -6671,16 +6671,17 @@
       </option>
      </select>
     </div>
-    <input id="zipInput" type="file">
-     <button class="download-selected-button" onclick="downloadSelectedTweaks()">
-      Download Selected Tweaks
-     </button>
-     <div id="selected-tweaks">
-      <div class="tweak-list-pack">
-       Select some packs and see them appear here!
-      </div>
+    <div class="zipinputcontainer">
+     <input id="zipInput" type="file"/>
+    </div>
+    <button class="download-selected-button" onclick="downloadSelectedTweaks()">
+     Download Selected Tweaks
+    </button>
+    <div id="selected-tweaks">
+     <div class="tweak-list-pack">
+      Select some packs and see them appear here!
      </div>
-    </input>
+    </div>
    </div>
    <script src="app.js">
    </script>

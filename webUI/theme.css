@@ -1,22 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap");
 :root {
-  --dark-border-hover: rgb(122, 124, 129) rgb(97, 99, 101) rgb(97, 99, 101)
-    rgb(122, 124, 129);
-  --dark-border-ninety: rgba(106, 108, 112, 0.875) rgba(84, 86, 88, 0.875)
-    rgba(84, 86, 88, 0.875) rgba(106, 108, 112, 0.875);
-  --dark-border: rgb(106, 108, 112) rgb(84, 86, 88) rgb(84, 86, 88)
-    rgb(106, 108, 112);
+  --dark-border-hover: rgb(122, 124, 129);
+  --dark-border-ninety: rgba(106, 108, 112, 0.875);
+  --dark-border: rgb(106, 108, 112);
   --dark-one-ninety: rgba(72, 73, 74, 0.875);
   --dark-one: rgb(72, 73, 74);
   --dark-two: rgb(83, 84, 85);
-  --green-border-hover: rgb(99, 157, 82) rgb(79, 145, 60) rgb(79, 145, 60)
-    rgb(99, 157, 82);
-  --green-border: rgb(99, 157, 82) rgb(79, 145, 60) rgb(79, 145, 60)
-    rgb(99, 157, 82);
+  --green-border-hover: rgb(99, 157, 82);
+  --green-border: rgb(99, 157, 82);
   --green-one: rgb(60, 133, 39);
   --green-two: rgb(71, 144, 50);
-  --leftmargin: 5%;
-  --rightmargin: 350px;
+  --leftmargin: 2.5%;
+  --rightmargin: 325px;
 }
 
 a:active {
@@ -105,10 +100,6 @@ li a {
   max-width: 100%;
 }
 
-#zipInput {
-  display: none;
-}
-
 .category {
   margin-bottom: 20px;
   margin-top: 20px;
@@ -131,6 +122,7 @@ li a {
 .category-label {
   background-color: var(--dark-one);
   border-color: var(--dark-border);
+  border-style: outset;
   border-radius: 5px;
   border-style: solid;
   border-width: 5px;
@@ -199,8 +191,8 @@ li a {
 
 .credits-footer {
   background: var(--dark-one);
-  border: solid;
   border-color: var(--dark-border);
+  border-style: outset;
   border-radius: 12.5px;
   border-width: 7.5px;
   color: white;
@@ -238,8 +230,8 @@ li a {
 .download-selected-button {
   background: var(--dark-one);
   border-color: var(--green-border);
+  border-style: outset;
   border-radius: 5px;
-  border-style: solid;
   border-width: 5px;
   color: white;
   cursor: pointer;
@@ -272,7 +264,7 @@ li a {
   background: var(--dark-one);
   border-color: var(--green-border);
   border-radius: 5px;
-  border-style: solid;
+  border-style: outset;
   border-width: 4.375px;
   color: #eeeeee;
   margin-bottom: 5px;
@@ -291,7 +283,7 @@ li a {
   background: var(--dark-one);
   border-color: var(--green-border);
   border-radius: 5px;
-  border-style: solid;
+  border-style: outset;
   border-width: 4.375px;
   color: #eeeeee;
   font-family: "Pixelify Sans";
@@ -319,7 +311,7 @@ li a {
   z-index: 5;
 }
 
-.image-container {
+.title-image {
   position: relative;
   size: cover;
   text-align: center;
@@ -355,18 +347,6 @@ li a {
   text-decoration: none;
 }
 
-.small-nav {
-  background-color: #333;
-  list-style-type: none;
-  margin: 0;
-  overflow: hidden;
-  padding: 0;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 2;
-}
-
 .subcategory {
   margin-bottom: 15px;
   margin-left: 2.5%;
@@ -396,7 +376,7 @@ li a {
   background: var(--dark-one);
   border-color: var(--dark-border);
   border-radius: 6.25px;
-  border-style: solid;
+  border-style: outset;
   border-width: 4.375px;
   box-shadow: 0 0 10px rgba(49, 50, 51, 1);
   cursor: pointer;
@@ -464,16 +444,23 @@ li a {
   text-align: center;
 }
 
-.large-nav {
+.zipinputcontainer {
   display: none;
-  z-index: 5;
 }
 
 .small-nav {
   display: none;
   z-index: 5;
+  background-color: #333;
+  list-style-type: none;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 2;
 }
-
 @media (max-width: 767px) {
   .small-nav {
     display: block;
@@ -485,7 +472,9 @@ li a {
     position: fixed;
     top: 0;
     width: 100%;
-    z-index: -1;
+  }
+  .large-nav {
+    display: none;
   }
 }
 
@@ -503,31 +492,14 @@ li a {
 
   #zipInput {
     display: block;
-    background: var(--dark-one);
-    border-color: var(--dark-border);
-    border-radius: 5px;
-    border-style: solid;
-    border-width: 5px;
     color: white;
     cursor: pointer;
     display: block;
     font-family: "Pixelify Sans";
-    margin: 10px auto;
     padding: 5px;
-    transition: background 0.5s ease-in border-color 0.5s ease-in;
-    position: center;
-    width: 75%;
+    position: relative;
     height: 100%;
-  }
-
-  #zipInput:hover {
-    background: var(--dark-two);
-    border-color: var(--dark-border-hover);
-  }
-
-  #zipInput:active {
-    background: var(--green-two);
-    border-color: var(--green-border-hover);
+    width: 100%;
   }
 
   .container {
@@ -546,7 +518,7 @@ li a {
     bottom: auto;
     left: auto;
     position: fixed;
-    right: 50px;
+    right: 25px;
     top: 100px;
     width: 275px;
     height: auto;
@@ -576,8 +548,9 @@ li a {
     border-color: var(--dark-border);
   }
 
-  .image-container {
+  .title-image {
     margin-right: var(--rightmargin);
+    left: 12.5px;
   }
 
   .large-nav {
@@ -590,7 +563,10 @@ li a {
     position: fixed;
     top: 0;
     width: 100%;
-    z-index: 3;
+  }
+
+  .small-nav {
+    display: none;
   }
 
   .tweak-list-category {
@@ -603,6 +579,61 @@ li a {
 
   .tweaks {
     grid-template-columns: repeat(auto-fit, minmax(175px, 1fr));
+  }
+
+  .zipinputcontainer {
+    margin: 10px auto;
+    width: 75%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    height: 75%;
+    position: relative;
+    background: var(--dark-one);
+    border-color: var(--dark-border);
+    border-radius: 5px;
+    border-style: outset;
+    border-width: 5px;
+    transition:
+      background 0.25s ease-in,
+      border-color 0.25s ease-in;
+  }
+
+  .zipinputcontainer::after {
+    border-style: dashed;
+    border-width: 2px;
+    border-color: white;
+    border-radius: 5px;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: -1px;
+    transition:
+      border-color 0.25s ease-in,
+      border-width 0.25s ease-in,
+      margin 0.25s ease-in;
+  }
+  
+  .zipinputcontainer:hover::after {
+    border-color: #0f0;
+    border-width: 4px;
+    margin: -5px;
+  }
+  
+  .zipinputcontainer:hover {
+    background: var(--dark-two);
+    border-color: var(--dark-border-hover);
+  }
+
+  .zipinputcontainer:active {
+    background: var(--green-two);
+    border-color: var(--green-border-hover);
   }
 }
 
