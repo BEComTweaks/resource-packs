@@ -1,11 +1,30 @@
 {
-  "AshlessCampfires": ["SoulSoilSoulCampfires"],
-  "UniformOres": ["UnlitRedstoneOre"],
-  "StickyPistonSides": ["PistonInnerFix"],
-  "UnlitRedstoneOre": ["UniformOres", "ClassicOres"],
-  "ClassicOres": ["UnlitRedstoneOre"],
-  "SmileyAxolotls": ["GreenAxolotl"],
-  "GreenAxolotl": ["SmileyAxolotls"],
-  "PistonInnerFix": ["StickyPistonSides"],
-  "SoulSoilSoulCampfire": ["AshlessCampfires"]
+  "AshlessCampfires": [
+    "SoulSoilSoulCampfires"
+  ],
+  "UniformOres": [
+    "UnlitRedstoneOre"
+  ],
+  "StickyPistonSides": [
+    "PistonInnerFix"
+  ],
+  "UnlitRedstoneOre": [
+    "UniformOres",
+    "ClassicOres"
+  ],
+  "ClassicOres": [
+    "UnlitRedstoneOre"
+  ],
+  "SmileyAxolotls": [
+    "GreenAxolotl"
+  ],
+  "GreenAxolotl": [
+    "SmileyAxolotls"
+  ],
+  "PistonInnerFix": [
+    "StickyPistonSides"
+  ],
+  "SoulSoilSoulCampfire": [
+    "AshlessCampfires"
+  ]
 }

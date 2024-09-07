@@ -1,0 +1,18 @@
+{
+	"individual_event_sounds": {
+		"events": {
+			"beacon.activate": {
+				"volume": 0.05
+			},
+			"beacon.ambient": {
+				"volume": 0.05
+			},
+			"beacon.deactivate": {
+				"volume": 0.05
+			},
+			"beacon.power": {
+				"volume": 0.05
+			}
+		}
+	}
+}

@@ -27,7 +27,10 @@
       "pack_name": "Quieter Dispensers and Droppers",
       "pack_description": "Decreases Dispenser and Dropper sounds by 95%.",
       "details": {
-        "message": ["warn", "Also affects menu clicks."]
+        "message": [
+          "warn",
+          "Also affects menu clicks."
+        ]
       },
       "conflict": [],
       "compatibility": []
@@ -57,6 +60,13 @@
       "pack_id": "QuieterWater",
       "pack_name": "Quieter Water",
       "pack_description": "Decreases Water sounds by 95%.",
+      "conflict": [],
+      "compatibility": []
+    },
+    {
+      "pack_id": "QuieterBeacons",
+      "pack_name": "Quieter Beacons",
+      "pack_description": "Decreases Beacon sounds by 95%.",
       "conflict": [],
       "compatibility": []
     },
