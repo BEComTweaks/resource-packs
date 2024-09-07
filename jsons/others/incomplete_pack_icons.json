@@ -5,7 +5,7 @@
   "Colorful Slime": ["RainbowSlime"],
   "Elytra": [],
   "Fixes and Consistency": [],
-  "Fun": [],
+  "Fun": ["AnvilFallingSoundtoMetalPipe"],
   "GUI": ["TransparentUI", "HighContrastUI"],
   "Hearts": [],
   "Hunger Bars": [],
