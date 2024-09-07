@@ -2,16 +2,11 @@
   "3D": [],
   "Aesthetic": [],
   "Crosshairs": [],
-  "Colorful Slime": [
-    "RainbowSlime"
-  ],
+  "Colorful Slime": ["RainbowSlime"],
   "Elytra": [],
   "Fixes and Consistency": [],
   "Fun": [],
-  "GUI": [
-    "TransparentUI",
-    "HighContrastUI"
-  ],
+  "GUI": ["TransparentUI", "HighContrastUI"],
   "Hearts": [],
   "Hunger Bars": [],
   "LGBTQ+ Pride": [],
@@ -24,10 +19,7 @@
   "Retro": [],
   "Terrain": [],
   "Unobtrusive": [],
-  "Utility": [
-    "ShinyAgedAmethystCluster",
-    "DirectionalDispensersandDroppers"
-  ],
+  "Utility": ["ShinyAgedAmethystCluster", "DirectionalDispensersandDroppers"],
   "Variation": [],
   "World of Color": [],
   "Xisuma's Hermitcraft Bases": []

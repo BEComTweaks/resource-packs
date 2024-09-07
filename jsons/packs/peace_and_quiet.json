@@ -27,10 +27,7 @@
       "pack_name": "Quieter Dispensers and Droppers",
       "pack_description": "Decreases Dispenser and Dropper sounds by 95%.",
       "details": {
-        "message": [
-          "warn",
-          "Also affects menu clicks."
-        ]
+        "message": ["warn", "Also affects menu clicks."]
       },
       "conflict": [],
       "compatibility": []
