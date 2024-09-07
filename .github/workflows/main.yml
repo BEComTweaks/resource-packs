@@ -5,6 +5,8 @@ on:
     branches:
       - '**'
   workflow_dispatch:
+  pull_request:
+    types: [opened, synchronize, reopened]
 
 jobs:
   format_repo:
