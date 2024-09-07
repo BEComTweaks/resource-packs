@@ -165,6 +165,13 @@
       "pack_description": "The nightmare fuel from January Minecraft Monthly is real.",
       "conflict": [],
       "compatibility": []
+    },
+    {
+      "pack_id": "AnvilFallingSoundtoMetalPipe",
+      "pack_name": "Anvil Falling Sound to Metal Pipe",
+      "pack_description": "Changes the anvil falling sound to the metal pipe sound meme.",
+      "conflict": [],
+      "compatibility": []
     }
   ]
 }
