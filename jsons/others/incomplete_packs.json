@@ -19,12 +19,8 @@
   "Retro": [],
   "Terrain": [],
   "Unobtrusive": [],
-  "Utility": [
-    "ShinyAgedAmethystCluster",
-    "MusicDiscRedstoneLevelPreview",
-    "DirectionalDispensersandDroppers"
-  ],
-  "Variation": ["VariatedCoarseDirt"],
+  "Utility": ["ShinyAgedAmethystCluster", "DirectionalDispensersandDroppers"],
+  "Variation": [],
   "World of Color": [],
   "Xisuma's Hermitcraft Bases": []
 }

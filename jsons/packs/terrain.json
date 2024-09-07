@@ -12,15 +12,15 @@
       "pack_id": "GoldenSavanna",
       "pack_name": "Golden Savanna",
       "pack_description": "Recolors Savanna biomes to have beautiful golden grass.",
-      "conflict": ["LushGrassAllRound"],
-      "compatibility": ["GrassSides"]
+      "conflict": [],
+      "compatibility": ["LushGrassAllRound"]
     },
     {
       "pack_id": "LushGrassAllRound",
       "pack_name": "Lush Grass All Round",
       "pack_description": "Makes most of the world use a lush green colormap.",
-      "conflict": ["GoldenSavanna"],
-      "compatibility": []
+      "conflict": [],
+      "compatibility": ["GoldenSavanna", "GrassSides"]
     },
     {
       "pack_id": "AlternateBedrock",

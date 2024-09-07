@@ -1,8 +1,6 @@
 {
   "AshlessCampfires": ["SoulSoilSoulCampfires"],
   "UniformOres": ["UnlitRedstoneOre"],
-  "HungerPreview": ["MusicDiscRedstoneLevelPreview"],
-  "MusicDiscRedstoneLevelPreview": ["HungerPreview"],
   "StickyPistonSides": ["PistonInnerFix"],
   "UnlitRedstoneOre": ["UniformOres", "ClassicOres"],
   "ClassicOres": ["UnlitRedstoneOre"],

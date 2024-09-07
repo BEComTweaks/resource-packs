@@ -5,7 +5,7 @@
       {
         "stonecutter_quick_craft_button@bt_quick_crafting.stonecutter_quick_craft_button": {
           "size": [32, 32],
-          "offset": [9, 4]
+          "offset": [8.5, 4.75]
         }
       }
     ]

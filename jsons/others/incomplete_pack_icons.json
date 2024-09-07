@@ -22,11 +22,10 @@
   "Utility": [
     "CrumbledInfestedStoneBlocks",
     "ShinyAgedAmethystCluster",
-    "MusicDiscRedstoneLevelPreview",
     "DirectionalDispensersandDroppers",
     "NoteBlockPitchParticle"
   ],
-  "Variation": ["VariatedCoarseDirt", "VariatedVillagers"],
+  "Variation": ["VariatedVillagers"],
   "World of Color": [],
   "Xisuma's Hermitcraft Bases": []
 }

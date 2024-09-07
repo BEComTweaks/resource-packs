@@ -33,7 +33,7 @@
     {
       "pack_id": "QuieterBees",
       "pack_name": "Quieter Bees",
-      "pack_description": "Decreases Bee sounds by 95%.",
+      "pack_description": "Decreases Bee, Beehive and Bee Nest sounds by 95%.",
       "conflict": [],
       "compatibility": []
     },
@@ -89,6 +89,12 @@
       "pack_id": "QuieterCreepers",
       "pack_name": "Quieter Creepers",
       "pack_description": "Decreases Creeper sounds by 95%.",
+      "details": {
+        "message": [
+          "warn",
+          "Install <b>Quieter Explosions</b> to quieten Creeper explosions."
+        ]
+      },
       "conflict": [],
       "compatibility": []
     },
@@ -333,7 +339,7 @@
     {
       "pack_id": "QuieterVillagers",
       "pack_name": "Quieter Villagers",
-      "pack_description": "Decreases Villager sounds by 95%.",
+      "pack_description": "Decreases Villager, Wandering Trader and Workstation sounds by 95%",
       "conflict": [],
       "compatibility": []
     },
@@ -375,6 +381,20 @@
       "pack_id": "QuieterZombies",
       "pack_name": "Quieter Zombies",
       "pack_description": "Decreases Zombie sounds by 95%.",
+      "conflict": [],
+      "compatibility": []
+    },
+    {
+      "pack_id": "NoEnderDragonDeathSound",
+      "pack_name": "No Ender Dragon Death Sound",
+      "pack_description": "Mutes the global Ender Dragon death sound.",
+      "conflict": [],
+      "compatibility": []
+    },
+    {
+      "pack_id": "NoWitherSpawnSound",
+      "pack_name": "No Wither Spawn Sound",
+      "pack_description": "Mutes the global Wither spawn sound.",
       "conflict": [],
       "compatibility": []
     }
