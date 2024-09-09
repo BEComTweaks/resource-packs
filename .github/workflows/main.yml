@@ -13,6 +13,8 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
+        with:
+          ref: ${{ github.head_ref }} # Make sure PR is checked out
 
       - name: Install Prettier
         run: npm install prettier
