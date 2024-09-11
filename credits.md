@@ -21,8 +21,11 @@
 [lonelyang](https://github.com/lonelyang)
 - Note block pitch particles pack
 
-[PAPISOP](https://github.com/PAPISOP)
-- A lot of packs from [BedrockTweaks/Files](https://github.com/BedrockTweaks/Files). Refer to his [PRs](https://github.com/BedrockTweaks/Files/pulls?q=is%3Apr+author%3APAPISOP)
+[PAPISOP](https://github.com/PAPISOP) and [Arachi (Chi-a11y)](https://github.com/Chi-a11y)
+- A lot of packs from [BedrockTweaks/Files](https://github.com/BedrockTweaks/Files). [PAPISOP's PRs](https://github.com/BedrockTweaks/Files/pulls/PAPISOP) and [Arachi's PRs](https://github.com/BedrockTweaks/Files/pulls/Chi-a11y)
+
+[HampsterChief](https://discord.com/users/1053822004211482676)
+- Turned Anvls nto a Metal Pipe
 
 [NSPC911](https://github.com/NSPC911)
 - Yep, that's me, the one who started this all!
