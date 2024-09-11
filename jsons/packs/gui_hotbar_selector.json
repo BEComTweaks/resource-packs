@@ -1,0 +1,104 @@
+{
+  "topic": "Hotbar Selector",
+  "subcategory_of": "GUI",
+  "packs": [
+    {
+      "pack_id": "LimeHotbarSelector",
+      "pack_name": "LimeHotbar Selector",
+      "pack_description": "",
+      "conflict": ["PistonInnerFix", "StickyPistonSides"],
+      "compatibility": []
+    },
+    {
+      "pack_id": "GrayHotbarSelector",
+      "pack_name": "Gray Hotbar Selector",
+      "pack_description": "",
+      "conflict": ["PistonInnerFix", "StickyPistonSides"],
+      "compatibility": []
+    },
+    {
+      "pack_id": "BlackHotbarSelector",
+      "pack_name": "Black Hotbar Selector",
+      "pack_description": "",
+      "conflict": ["PistonInnerFix", "StickyPistonSides"],
+      "compatibility": []
+    },
+    {
+      "pack_id": "BrownHotbarSelector",
+      "pack_name": "Brown Hotbar Selector",
+      "pack_description": "",
+      "conflict": ["PistonInnerFix", "StickyPistonSides"],
+      "compatibility": []
+    },
+    {
+      "pack_id": "RedHotbarSelector",
+      "pack_name": "Red Hotbar Selector",
+      "pack_description": "",
+      "conflict": ["PistonInnerFix", "StickyPistonSides"],
+      "compatibility": []
+    },
+    {
+      "pack_id": "OrangeHotbarSelector",
+      "pack_name": "Orange Hotbar Selector",
+      "pack_description": "",
+      "conflict": ["PistonInnerFix", "StickyPistonSides"],
+      "compatibility": []
+    },
+    {
+      "pack_id": "YellowHotbarSelector",
+      "pack_name": "Yellow Hotbar Selector",
+      "pack_description": "",
+      "conflict": ["PistonInnerFix", "StickyPistonSides"],
+      "compatibility": []
+    },
+    {
+      "pack_id": "GreenHotbarSelector",
+      "pack_name": "Green Hotbar Selector",
+      "pack_description": "",
+      "conflict": ["PistonInnerFix", "StickyPistonSides"],
+      "compatibility": []
+    },
+    {
+      "pack_id": "CyanHotbarSelector",
+      "pack_name": "Cyan Hotbar Selector",
+      "pack_description": "",
+      "conflict": ["PistonInnerFix", "StickyPistonSides"],
+      "compatibility": []
+    },
+    {
+      "pack_id": "LightBlueHotbarSelector",
+      "pack_name": "Light Blue Hotbar Selector",
+      "pack_description": "",
+      "conflict": ["PistonInnerFix", "StickyPistonSides"],
+      "compatibility": []
+    },
+    {
+      "pack_id": "BlueHotbarSelector",
+      "pack_name": "Blue Hotbar Selector",
+      "pack_description": "",
+      "conflict": ["PistonInnerFix", "StickyPistonSides"],
+      "compatibility": []
+    },
+    {
+      "pack_id": "PurpleHotbarSelector",
+      "pack_name": "Purple Hotbar Selector",
+      "pack_description": "",
+      "conflict": ["PistonInnerFix", "StickyPistonSides"],
+      "compatibility": []
+    },
+    {
+      "pack_id": "MagentaHotbarSelector",
+      "pack_name": "Magenta Hotbar Selector",
+      "pack_description": "",
+      "conflict": ["PistonInnerFix", "StickyPistonSides"],
+      "compatibility": []
+    },
+    {
+      "pack_id": "PinkHotbarSelector",
+      "pack_name": "Pink Hotbar Selector",
+      "pack_description": "",
+      "conflict": ["PistonInnerFix", "StickyPistonSides"],
+      "compatibility": []
+    }
+  ]
+}
