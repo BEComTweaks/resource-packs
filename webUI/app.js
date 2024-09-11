@@ -113,7 +113,7 @@ function downloadSelectedTweaks() {
     Fun: [],
     GUI: [],
     Hearts: [],
-	"Hotbar Selector": [],
+    "Hotbar Selector": [],
     "Hunger Bars": [],
     "LGBTQ+ Pride": [],
     "Lower and Sides": [],
@@ -141,7 +141,7 @@ function downloadSelectedTweaks() {
     Fun: [],
     GUI: [],
     Hearts: [],
-	"Hotbar Selector": [],
+    "Hotbar Selector": [],
     "Hunger Bars": [],
     "LGBTQ+ Pride": [],
     "Lower and Sides": [],
@@ -201,10 +201,10 @@ function downloadSelectedTweaks() {
       packs: tweaksByCategory["Hearts"],
       index: indicesByCategory["Hearts"],
     },
-	"Hotbar Selector": {
-		packs: tweaksByCategory["Hotbar Selector"],
-		index: indicesByCategory["Hotbar Selector"],
-	},
+    "Hotbar Selector": {
+      packs: tweaksByCategory["Hotbar Selector"],
+      index: indicesByCategory["Hotbar Selector"],
+    },
     "Hunger Bars": {
       packs: tweaksByCategory["Hunger Bars"],
       index: indicesByCategory["Hunger Bars"],
