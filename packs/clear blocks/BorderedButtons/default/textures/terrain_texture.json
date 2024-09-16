@@ -1,0 +1,46 @@
+{
+  "num_mip_levels": 4,
+  "padding": 8,
+  "resource_pack_name": "vanilla",
+  "texture_data": {
+    "acacia_button": {
+      "textures": "textures/blocks/acacia_button"
+    },
+    "bamboo_button": {
+      "textures": "textures/blocks/bamboo_button"
+    },
+    "birch_button": {
+      "textures": "textures/blocks/birch_button"
+    },
+    "cherry_button": {
+      "textures": "textures/blocks/cherry_button"
+    },
+    "crimson_button": {
+      "textures": "textures/blocks/crimson_button"
+    },
+    "dark_oak_button": {
+      "textures": "textures/blocks/dark_oak_button"
+    },
+    "jungle_button": {
+      "textures": "textures/blocks/jungle_button"
+    },
+    "mangrove_button": {
+      "textures": "textures/blocks/mangrove_button"
+    },
+    "polished_blackstone_button": {
+      "textures": "textures/blocks/polished_blackstone_button"
+    },
+    "spruce_button": {
+      "textures": "textures/blocks/spruce_button"
+    },
+    "stone_button": {
+      "textures": "textures/blocks/stone_button"
+    },
+    "warped_button": {
+      "textures": "textures/blocks/warped_button"
+    },
+    "wooden_button": {
+      "textures": "textures/blocks/wooden_button"
+    }
+  }
+}

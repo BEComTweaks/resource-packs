@@ -1,0 +1,37 @@
+[
+  {
+    "flipbook_texture": "textures/blocks/furnace_front_on",
+    "atlas_tile": "furnace_front_on",
+    "ticks_per_frame": 10
+  },
+  {
+    "flipbook_texture": "textures/blocks/furnace_top_on",
+    "atlas_tile": "furnace_top_on",
+    "ticks_per_frame": 10
+  },
+  {
+    "flipbook_texture": "textures/blocks/furnace_side_on",
+    "atlas_tile": "furnace_side_on",
+    "ticks_per_frame": 10
+  },
+  {
+    "flipbook_texture": "textures/blocks/blast_furnace_side_on",
+    "atlas_tile": "blast_furnace_side_on",
+    "ticks_per_frame": 10
+  },
+  {
+    "flipbook_texture": "textures/blocks/blast_furnace_top_on",
+    "atlas_tile": "blast_furnace_top_on",
+    "ticks_per_frame": 10
+  },
+  {
+    "flipbook_texture": "textures/blocks/smoker_top_on",
+    "atlas_tile": "smoker_top_on",
+    "ticks_per_frame": 10
+  },
+  {
+    "flipbook_texture": "textures/blocks/smoker_side_on",
+    "atlas_tile": "smoker_side_on",
+    "ticks_per_frame": 10
+  }
+]

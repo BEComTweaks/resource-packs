@@ -1,0 +1,65 @@
+{
+  "num_mip_levels": 4,
+  "padding": 8,
+  "resource_pack_name": "vanilla",
+  "texture_data": {
+    "blast_furnace_bottom": {
+      "textures": "textures/blocks/blast_furnace_bottom"
+    },
+    "blast_furnace_front_off": {
+      "textures": "textures/blocks/blast_furnace_front_off"
+    },
+    "blast_furnace_front_on": {
+      "textures": "textures/blocks/blast_furnace_front_on"
+    },
+    "blast_furnace_side": {
+      "textures": "textures/blocks/blast_furnace_side"
+    },
+    "blast_furnace_side_on": {
+      "textures": "textures/blocks/blast_furnace_side_on"
+    },
+    "blast_furnace_top": {
+      "textures": "textures/blocks/blast_furnace_top"
+    },
+    "blast_furnace_top_on": {
+      "textures": "textures/blocks/blast_furnace_top_on"
+    },
+    "furnace_bottom": {
+      "textures": "textures/blocks/furnace_bottom"
+    },
+    "furnace_side_off": {
+      "textures": "textures/blocks/furnace_side"
+    },
+    "furnace_side_on": {
+      "textures": "textures/blocks/furnace_side_on"
+    },
+    "furnace_top_off": {
+      "textures": "textures/blocks/furnace_top"
+    },
+    "furnace_top_on": {
+      "textures": "textures/blocks/furnace_top_on"
+    },
+    "smoker_bottom": {
+      "textures": "textures/blocks/smoker_bottom"
+    },
+    "smoker_front_off": {
+      "textures": "textures/blocks/smoker_front"
+    },
+    "smoker_front_on": {
+      "textures": "textures/blocks/smoker_front_on"
+    },
+    "smoker_side": {
+      "textures": "textures/blocks/smoker_side"
+    },
+    "smoker_side_on": {
+      "textures": "textures/blocks/smoker_side_on"
+    },
+    "smoker_top": {
+      "textures": "textures/blocks/smoker_top"
+    },
+    "smoker_top_on": {
+      "textures": "textures/blocks/smoker_top_on"
+    }
+  },
+  "texture_name": "atlas.terrain"
+}

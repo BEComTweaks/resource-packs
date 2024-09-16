@@ -35,7 +35,6 @@ with open(f"{cdir()}/credits.md","r") as credits:
 
 html = '<!DOCTYPE html><html lang="en"><head><meta content="Bedrock Edition Community Tweaks Resource Packs" name="author"><meta content="Resource Pack tweak selector. Unofficially updated by BEComTweaks on GitHub" name="description"><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><title>Resource Packs</title><link href="theme.css" rel="stylesheet"><link href="images/icon.png" rel="icon" type="image/x-icon"></meta></meta></head><body><div id="background-container"></div><script src="bg.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.7.1/jszip.min.js"></script><div class="half-dark"><br><br><div class="image-container"><img alt="Resource Packs" id="title" src="images/title.png"></div><ul class="large-nav"><li><a class="nav-link" href="https://becomtweaks.github.io">Home</a></li><li style="float:right"><a class="nav-link" href="https://becomtweaks.github.io/crafting-tweaks">Crafting Tweaks</a></li><li style="float:right"><a class="nav-link" href="https://becomtweaks.github.io/behaviour-packs">Behaviour Packs</a></li><li style="float:right"><a class="nav-link" href="https://becomtweaks.github.io/resource-packs">Resource Packs</a></li></ul><ul class="small-nav"><li><a class="nav-link" href="https://becomtweaks.github.io">Home</a></li><li style="float:right"><a class="nav-link" href="https://becomtweaks.github.io/crafting-tweaks">CTs</a></li><li style="float:right"><a class="nav-link" href="https://becomtweaks.github.io/behaviour-packs">BPs</a></li><li style="float:right"><a class="nav-link" href="https://becomtweaks.github.io/resource-packs">RPs</a></li></ul><div class="container"><!-- Categories -->'
 stats = [0, 0]
-incomplete_packs = {"3D": [], "Aesthetic": [], "Crosshairs": [], "Colorful Slime": [], "Elytra": [], "Fixes and Consistency": [], "Fun": [], "GUI": [], "Hearts": [], "Hotbar Selector":[], "Hunger Bars": [], "LGBTQ+ Pride": [], "Lower and Sides": [], "Menu Panoramas": [], "Mobs": [], "More Zombies": [], "Parity": [], "Peace and Quiet": [], "Retro": [], "Terrain": [], "Unobtrusive": [], "Utility": [], "Variation": [], "World of Color": [], "Xisuma's Hermitcraft Bases": []}
 cstats = [0, 0]
 compatibilities = {}
 conflicts = {}
@@ -43,7 +42,8 @@ pkicstats = [0, 0]
 subcats = 0
 ignore = False
 subcat_list = []
-incomplete_pkics = {"3D": [], "Aesthetic": [], "Crosshairs": [], "Colorful Slime": [], "Elytra": [], "Fixes and Consistency": [], "Fun": [], "GUI": [], "Hearts": [], "Hotbar Selector":[], "Hunger Bars": [], "LGBTQ+ Pride": [], "Lower and Sides": [], "Menu Panoramas": [], "Mobs": [], "More Zombies": [], "Parity": [], "Peace and Quiet": [], "Retro": [], "Terrain": [], "Unobtrusive": [], "Utility": [], "Variation": [], "World of Color": [], "Xisuma's Hermitcraft Bases": []}
+incomplete_packs = {}
+incomplete_pkics = {}
 packs = -1
 pack_list = []
 name_to_json = {}
@@ -64,6 +64,9 @@ for j in pack_list:
             j = j[:-1]
         file = load_json(f"{cdir()}/jsons/packs/{j}")
         name_to_json[file["topic"]] = j
+        # Adds the categories automatically
+        incomplete_pkics[file["topic"]] = []
+        incomplete_packs[file["topic"]] = []
         html += category_start.replace("topic_name", file["topic"])
         # Runs through the packs
         for i in range(len(file["packs"])):
@@ -97,7 +100,6 @@ for j in pack_list:
                     # When pack icon doesn't even exist
                     incomplete_pkics[file["topic"]].append(file["packs"][i]["pack_id"])
                     pkicstats[1] += 1
-            
             # Updates Incomplete Pack Compatibilities
             for comp in range(len(file["packs"][i]["compatibility"])):  # If it is empty, it just skips
                 # Looks at compatibility folders
@@ -194,6 +196,7 @@ for j in pack_list:
             ignore = False
     except IndexError:
         html += category_end
+# Seperate loop for subcategories (I'm inefficient)
 for j in range(len(subcat_list)):
     pack_html = ""
     k = subcat_list[j]
@@ -203,6 +206,9 @@ for j in range(len(subcat_list)):
         k = k[1:]
     file = load_json(f"{cdir()}/jsons/packs/{k}")
     name_to_json[file["topic"]] = k
+    # Adds the categories automatically
+    incomplete_pkics[file["topic"]] = []
+    incomplete_packs[file["topic"]] = []
     pack_html += subcategory_start.replace("topic_name", f'{file["subcategory_of"]} > <b>{file["topic"]}</b>')
     for i in range(len(file["packs"])):
         # Updates Incomplete Packs

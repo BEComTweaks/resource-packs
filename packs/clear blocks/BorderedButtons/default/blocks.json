@@ -1,0 +1,55 @@
+{
+  "format_version": [1, 0, 0],
+  "acacia_button": {
+    "sound": "wood",
+    "textures": "acacia_button"
+  },
+  "bamboo_button": {
+    "sound": "bamboo_wood",
+    "textures": "bamboo_button"
+  },
+  "birch_button": {
+    "sound": "wood",
+    "textures": "birch_button"
+  },
+  "cherry_button": {
+    "sound": "cherry_wood",
+    "textures": "cherry_button"
+  },
+  "crimson_button": {
+    "sound": "stem",
+    "textures": "crimson_button"
+  },
+  "dark_oak_button": {
+    "sound": "wood",
+    "textures": "dark_oak_button"
+  },
+  "jungle_button": {
+    "sound": "wood",
+    "textures": "jungle_button"
+  },
+  "mangrove_button": {
+    "sound": "wood",
+    "textures": "mangrove_button"
+  },
+  "polished_blackstone_button": {
+    "sound": "stone",
+    "textures": "polished_blackstone_button"
+  },
+  "spruce_button": {
+    "sound": "wood",
+    "textures": "spruce_button"
+  },
+  "stone_button": {
+    "sound": "stone",
+    "textures": "stone_button"
+  },
+  "warped_button": {
+    "sound": "stem",
+    "textures": "warped_button"
+  },
+  "wooden_button": {
+    "sound": "wood",
+    "textures": "wooden_button"
+  }
+}

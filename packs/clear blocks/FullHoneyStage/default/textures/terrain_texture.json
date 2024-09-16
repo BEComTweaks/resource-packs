@@ -1,0 +1,50 @@
+{
+  "num_mip_levels": 4,
+  "padding": 8,
+  "resource_pack_name": "vanilla",
+  "texture_data": {
+    "bee_nest_bottom": {
+      "textures": [
+        "textures/blocks/bee_nest_bottom",
+        "textures/blocks/bee_nest_bottom_honey"
+      ]
+    },
+    "bee_nest_front": {
+      "textures": [
+        "textures/blocks/bee_nest_front",
+        "textures/blocks/bee_nest_front_honey"
+      ]
+    },
+    "bee_nest_side": {
+      "textures": [
+        "textures/blocks/bee_nest_side",
+        "textures/blocks/bee_nest_side_honey"
+      ]
+    },
+    "bee_nest_top": {
+      "textures": [
+        "textures/blocks/bee_nest_top",
+        "textures/blocks/bee_nest_top_honey"
+      ]
+    },
+    "beehive_bottom": {
+      "textures": [
+        "textures/blocks/beehive_bottom",
+        "textures/blocks/beehive_bottom_honey"
+      ]
+    },
+    "beehive_side": {
+      "textures": [
+        "textures/blocks/beehive_side",
+        "textures/blocks/beehive_side_honey"
+      ]
+    },
+    "beehive_top": {
+      "textures": [
+        "textures/blocks/beehive_top",
+        "textures/blocks/beehive_top_honey"
+      ]
+    }
+  },
+  "texture_name": "atlas.terrain"
+}
