@@ -186,7 +186,7 @@ li a {
   border-radius: 10px;
   padding: 20px;
   position: relative;
-  z-index: 1;
+  z-index: 0;
 }
 
 .credits-footer {
@@ -317,7 +317,17 @@ li a {
   text-align: center;
   z-index: 1;
 }
-
+.large-nav {
+  background-color: #333;
+  list-style-type: none;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 5;
+}
 .mev option {
   background: var(--dark-one);
   font-family: "Pixelify Sans";
@@ -359,7 +369,7 @@ li a {
   align-items: top;
   display: grid;
   gap: 10px;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
   margin-top: 10px;
   position: center;
   text-align: center;
@@ -439,7 +449,7 @@ li a {
   align-items: top;
   display: grid;
   gap: 10px;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(142.5px, 1fr));
   margin: 10px;
   text-align: center;
 }
@@ -449,7 +459,6 @@ li a {
 }
 
 .small-nav {
-  display: none;
   z-index: 5;
   background-color: #333;
   list-style-type: none;
@@ -459,19 +468,10 @@ li a {
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 2;
 }
 @media (max-width: 767px) {
   .small-nav {
     display: block;
-    background-color: #333;
-    list-style-type: none;
-    margin: 0;
-    overflow: hidden;
-    padding: 0;
-    position: fixed;
-    top: 0;
-    width: 100%;
   }
   .large-nav {
     display: none;
@@ -555,18 +555,14 @@ li a {
 
   .large-nav {
     display: block;
-    background-color: #333;
-    list-style-type: none;
-    margin: 0;
-    overflow: hidden;
-    padding: 0;
-    position: fixed;
-    top: 0;
-    width: 100%;
   }
 
   .small-nav {
     display: none;
+  }
+
+  .subcattweaks {
+    grid-template-columns: repeat(auto-fit, minmax(162.5px, 1fr));
   }
 
   .tweak-list-category {
