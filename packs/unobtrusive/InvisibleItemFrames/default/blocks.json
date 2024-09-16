@@ -4,10 +4,5 @@
     "blockshape": "invisible",
     "textures": "itemframe_background",
     "sound": "itemframe"
-  },
-  "glow_frame": {
-    "blockshape": "invisible",
-    "sound": "itemframe",
-    "textures": "glow_item_frame"
   }
 }

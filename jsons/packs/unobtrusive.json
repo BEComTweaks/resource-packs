@@ -176,7 +176,14 @@
     {
       "pack_id": "InvisibleItemFrames",
       "pack_name": "Invisible Item Frames",
-      "pack_description": "Makes normal and glowing item frames invisible. (Careful, you might loose them :P)",
+      "pack_description": "Makes normal item frames invisible. (Careful, you might loose them :P)",
+      "conflict": [],
+      "compatibility": []
+    },
+    {
+      "pack_id": "InvisibleGlowItemFrames",
+      "pack_name": "Invisible Glow Item Frames",
+      "pack_description": "Makes glowing item frames invisible. (Careful, you might loose them :P)",
       "conflict": [],
       "compatibility": []
     }
