@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap");
+
 :root {
   --dark-border-hover: rgb(122, 124, 129);
   --dark-border-ninety: rgba(106, 108, 112, 0.875);
@@ -116,14 +117,13 @@ li a {
   overflow: hidden;
   padding-left: 10px;
   padding-right: 10px;
-  transition: max-height 0.5s ease-in-out;
 }
 
 .category-label {
   background-color: var(--dark-one);
   border-color: var(--dark-border);
-  border-style: outset;
   border-radius: 5px;
+  border-style: outset;
   border-style: solid;
   border-width: 5px;
   cursor: pointer;
@@ -192,8 +192,8 @@ li a {
 .credits-footer {
   background: var(--dark-one);
   border-color: var(--dark-border);
-  border-style: outset;
   border-radius: 12.5px;
+  border-style: outset;
   border-width: 7.5px;
   color: white;
   padding: 20px;
@@ -218,20 +218,19 @@ li a {
   border-color: var(--dark-border-ninety);
   border-radius: 10px;
   border-width: 5px;
-  bottom: 10px;
   height: 150px;
-  left: 10px;
   position: fixed;
-  width: 240px;
+  right: 25px;
+  top: calc(100vh - 175px);
   width: 300px;
   z-index: 10;
 }
 
 .download-selected-button {
   background: var(--dark-one);
-  border-color: var(--green-border);
-  border-style: outset;
+  border-color: var(--dark-border);
   border-radius: 5px;
+  border-style: outset;
   border-width: 5px;
   color: white;
   cursor: pointer;
@@ -240,7 +239,7 @@ li a {
   margin: 10px auto;
   padding: 10px 20px;
   text-align: center;
-  transition: background 0.5s;
+  transition: background 0.5s ease-in-out;
 }
 
 .download-selected-button:hover {
@@ -262,7 +261,7 @@ li a {
 
 .file-download input[type="text"] {
   background: var(--dark-one);
-  border-color: var(--green-border);
+  border-color: var(--dark-border);
   border-radius: 5px;
   border-style: outset;
   border-width: 4.375px;
@@ -281,7 +280,7 @@ li a {
 
 .file-download select {
   background: var(--dark-one);
-  border-color: var(--green-border);
+  border-color: var(--dark-border);
   border-radius: 5px;
   border-style: outset;
   border-width: 4.375px;
@@ -311,16 +310,11 @@ li a {
   z-index: 5;
 }
 
-.title-image {
-  position: relative;
-  size: cover;
-  text-align: center;
-  z-index: 1;
-}
 .large-nav {
   background-color: #333;
   list-style-type: none;
   margin: 0;
+  max-height: 45px;
   overflow: hidden;
   padding: 0;
   position: fixed;
@@ -328,6 +322,7 @@ li a {
   width: 100%;
   z-index: 5;
 }
+
 .mev option {
   background: var(--dark-one);
   font-family: "Pixelify Sans";
@@ -357,6 +352,19 @@ li a {
   text-decoration: none;
 }
 
+.small-nav {
+  background-color: #333;
+  list-style-type: none;
+  margin: 0;
+  max-height: 45px;
+  overflow: hidden;
+  padding: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 5;
+}
+
 .subcategory {
   margin-bottom: 15px;
   margin-left: 2.5%;
@@ -380,6 +388,13 @@ li a {
   height: 100px;
   overflow: hidden;
   width: 100px;
+}
+
+.title-image {
+  position: relative;
+  size: cover;
+  text-align: center;
+  z-index: 1;
 }
 
 .tweak {
@@ -455,26 +470,22 @@ li a {
 }
 
 .zipinputcontainer {
-  display: none;
+  bottom: 100%;
 }
 
-.small-nav {
-  z-index: 5;
-  background-color: #333;
-  list-style-type: none;
-  margin: 0;
-  overflow: hidden;
-  padding: 0;
-  position: fixed;
-  top: 0;
-  width: 100%;
-}
 @media (max-width: 767px) {
+  #zipInput {
+    display: none;
+  }
+
+  .large-nav {
+    display: block;
+    transform: translateY(-100%);
+  }
+
   .small-nav {
     display: block;
-  }
-  .large-nav {
-    display: none;
+    transform: translateY(0%);
   }
 }
 
@@ -491,14 +502,13 @@ li a {
   }
 
   #zipInput {
-    display: block;
     color: white;
     cursor: pointer;
     display: block;
     font-family: "Pixelify Sans";
+    height: 100%;
     padding: 5px;
     position: relative;
-    height: 100%;
     width: 100%;
   }
 
@@ -514,16 +524,14 @@ li a {
 
   .download-container {
     background: #0000007f;
-    border: none;
-    bottom: auto;
-    left: auto;
+    border-color: #00000000;
+    height: auto;
+    padding-bottom: 10px;
+    padding-top: 10px;
     position: fixed;
     right: 25px;
-    top: 100px;
+    top: 150px;
     width: 275px;
-    height: auto;
-    padding-top: 10px;
-    padding-bottom: 10px;
   }
 
   .download-selected-button {
@@ -548,21 +556,23 @@ li a {
     border-color: var(--dark-border);
   }
 
-  .title-image {
-    margin-right: var(--rightmargin);
-    left: 12.5px;
-  }
-
   .large-nav {
     display: block;
+    transform: translateY(0%);
   }
 
   .small-nav {
-    display: none;
+    display: block;
+    transform: translateY(-100%);
   }
 
   .subcattweaks {
     grid-template-columns: repeat(auto-fit, minmax(162.5px, 1fr));
+  }
+
+  .title-image {
+    left: 12.5px;
+    margin-right: var(--rightmargin);
   }
 
   .tweak-list-category {
@@ -578,48 +588,47 @@ li a {
   }
 
   .zipinputcontainer {
-    margin: 10px auto;
-    width: 75%;
-    display: flex;
-    justify-content: center;
     align-items: center;
-    border-radius: 5px;
-    color: white;
-    cursor: pointer;
-    height: 75%;
-    position: relative;
     background: var(--dark-one);
     border-color: var(--dark-border);
     border-radius: 5px;
     border-style: outset;
     border-width: 5px;
+    bottom: 0;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    height: 75%;
+    justify-content: center;
+    margin: 10px auto;
+    position: relative;
     transition:
       background 0.25s ease-in,
       border-color 0.25s ease-in;
+    width: 75%;
   }
 
   .zipinputcontainer::after {
-    border-style: dashed;
-    border-width: 2px;
     border-color: white;
     border-radius: 5px;
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
+    border-style: dashed;
+    border-width: 2px;
     bottom: 0;
+    content: "";
+    left: 0;
     margin: -1px;
+    position: absolute;
+    right: 0;
+    top: 0;
     transition:
       border-color 0.25s ease-in,
       border-width 0.25s ease-in,
       margin 0.25s ease-in;
   }
 
-  .zipinputcontainer:hover::after {
-    border-color: #0f0;
-    border-width: 4px;
-    margin: -5px;
+  .zipinputcontainer:active {
+    background: var(--green-two);
+    border-color: var(--green-border-hover);
   }
 
   .zipinputcontainer:hover {
@@ -627,14 +636,38 @@ li a {
     border-color: var(--dark-border-hover);
   }
 
-  .zipinputcontainer:active {
-    background: var(--green-two);
-    border-color: var(--green-border-hover);
+  .zipinputcontainer:hover::after {
+    border-color: #0f0;
+    border-width: 4px;
+    margin: -5px;
   }
 }
 
-@media (prefers-reduced-motion: reduce) {
+@media (prefers-reduced-motion: no-preference) {
+  div {
+    transition:
+      margin-right 0.5s ease-in-out,
+      margin-left 0.5s ease-in-out;
+  }
+
   .category-controlled {
-    transition: none;
+    transition: max-height 0.5s ease-in-out;
+  }
+
+  .download-container {
+    transition:
+      right 0.5s ease-in-out,
+      top 0.5s ease-in-out,
+      background 0.5s ease-in-out,
+      border-color 0.5s ease-in-out,
+      width 0.5s ease-in-out;
+  }
+
+  .large-nav {
+    transition: transform 0.5s ease-in-out;
+  }
+
+  .small-nav {
+    transition: transform 0.5s ease-in-out;
   }
 }
