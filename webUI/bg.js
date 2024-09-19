@@ -25,7 +25,7 @@ function createTiles() {
   const container = document.getElementById("background-container");
   const numColumns = Math.ceil(window.innerWidth / 100) + 2;
   const numRows = Math.ceil(window.innerHeight / 100) + 2;
-  
+
   for (let i = container.children.length; i < numColumns; i++) {
     const rowDiv = document.createElement("div");
     rowDiv.className = "row";
