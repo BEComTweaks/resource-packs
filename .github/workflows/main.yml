@@ -18,10 +18,10 @@ jobs:
 
       - name: Install Prettier
         run: npm install prettier
-        
+
       - name: Install required modules
         run: python -m pip install clrprint markdown beautifulsoup4 ujson
-        
+
       - name: Run pre_commit.py
         run: python pys/pre_commit.py --format
 
@@ -65,6 +65,7 @@ jobs:
   update_server:
     needs: deploy_page
     runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main' && !contains(github.event.head_commit.message, 'skip-update')
 
     steps:
       - name: Checkout code
