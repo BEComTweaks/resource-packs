@@ -480,12 +480,12 @@ li a {
 
   .large-nav {
     display: block;
-    transform: translateX(100%);
+    transform: translateY(-100%);
   }
 
   .small-nav {
     display: block;
-    transform: translateX(0%);
+    transform: translateY(0%);
   }
 }
 
@@ -558,12 +558,12 @@ li a {
 
   .large-nav {
     display: block;
-    transform: translateX(0%);
+    transform: translateY(0%);
   }
 
   .small-nav {
     display: block;
-    transform: translateX(-100%);
+    transform: translateY(-100%);
   }
 
   .subcattweaks {
