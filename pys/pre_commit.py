@@ -30,8 +30,7 @@ category_end = '</div></div></div>'
 cat_end_w_subcat_no_end = '</div><div class="subcat<index>">'
 
 with open(f"{cdir()}/credits.md","r") as credits:
-    credit_unformatted = credits.read()
-    html_end = f'</div><div class="download-container"><div class="file-download"><input type="text" id="fileNameInput" placeholder="Enter Pack name"><br><select name="mev" id="mev"><option value="1.21.0">1.21</option><option value="1.20.0">1.20</option><option value="1.19.0">1.19</option><option value="1.18.0">1.18</option><option value="1.17.0">1.17</option><option value="1.16.0">1.16</option></select></div><div class="zipinputcontainer"><input type="file" id="zipInput"/></div><button class="download-selected-button" onclick="downloadSelectedTweaks()">Download Selected Tweaks</button><div id="selected-tweaks"><div class="tweak-list-pack">Select some packs and see them appear here!</div></div></div><script src="app.js"></script></div></body><footer class="footer-container"><div class="half-dark"><div class="credits-footer">{str(markdown(credit_unformatted))}<p><a href="https://github.com/BEComTweaks/resource-packs">GitHub</a></p></div></div></footer></html>'
+    html_end = f'</div><div class="download-container"><div class="file-download"><input type="text" id="fileNameInput" placeholder="Enter Pack name"><br><select name="mev" id="mev"><option value="1.21.0">1.21</option><option value="1.20.0">1.20</option><option value="1.19.0">1.19</option><option value="1.18.0">1.18</option><option value="1.17.0">1.17</option><option value="1.16.0">1.16</option></select></div><div class="zipinputcontainer"><input type="file" id="zipInput"/></div><button class="download-selected-button" onclick="downloadSelectedTweaks()">Download Selected Tweaks</button><div id="selected-tweaks"><div class="tweak-list-pack">Select some packs and see them appear here!</div></div></div><script src="app.js"></script></div></body><footer class="footer-container"><div class="half-dark"><div class="credits-footer">{str(markdown(credits.read()))}<p><a href="https://github.com/BEComTweaks/resource-packs">GitHub</a></p></div></div></footer></html>'
 
 html = '<!DOCTYPE html><html lang="en"><head><meta content="Bedrock Edition Community Tweaks Resource Packs" name="author"><meta content="Resource Pack tweak selector. Unofficially updated by BEComTweaks on GitHub" name="description"><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><title>Resource Packs</title><link href="theme.css" rel="stylesheet"><link href="images/icon.png" rel="icon" type="image/x-icon"></meta></meta></head><body><div id="background-container"></div><script src="bg.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.7.1/jszip.min.js"></script><div class="half-dark"><br><br><div class="image-container"><img alt="Resource Packs" id="title" src="images/title.png"></div><ul class="large-nav"><li><a class="nav-link" href="https://becomtweaks.github.io">Home</a></li><li style="float:right"><a class="nav-link" href="https://becomtweaks.github.io/crafting-tweaks">Crafting Tweaks</a></li><li style="float:right"><a class="nav-link" href="https://becomtweaks.github.io/behaviour-packs">Behaviour Packs</a></li><li style="float:right"><a class="nav-link" href="https://becomtweaks.github.io/resource-packs">Resource Packs</a></li></ul><ul class="small-nav"><li><a class="nav-link" href="https://becomtweaks.github.io">Home</a></li><li style="float:right"><a class="nav-link" href="https://becomtweaks.github.io/crafting-tweaks">CTs</a></li><li style="float:right"><a class="nav-link" href="https://becomtweaks.github.io/behaviour-packs">BPs</a></li><li style="float:right"><a class="nav-link" href="https://becomtweaks.github.io/resource-packs">RPs</a></li></ul><div class="container"><!-- Categories -->'
 stats = [0, 0]
@@ -87,7 +86,9 @@ for j in pack_list:
 
             # Updates Incomplete pack_icon.png
             try:
-                if os.path.getsize(f'{cdir()}/packs/{file["topic"].lower()}/{file["packs"][i]["pack_id"]}/pack_icon.png') == os.path.getsize(f'{cdir()}/pack_icons/missing_texture.png'):
+                if file["packs"][i]["pack_id"] in incomplete_packs[file["topic"]]:
+                    pass
+                elif os.path.getsize(f'{cdir()}/packs/{file["topic"].lower()}/{file["packs"][i]["pack_id"]}/pack_icon.png') == os.path.getsize(f'{cdir()}/pack_icons/missing_texture.png'):
                     # Adds packid to topic list
                     incomplete_pkics[file["topic"]].append(file["packs"][i]["pack_id"])
                     pkicstats[1] += 1
@@ -230,7 +231,9 @@ for j in range(len(subcat_list)):
 
         # Updates Incomplete pack_icon.png
         try:
-            if os.path.getsize(f'{cdir()}/packs/{file["topic"].lower()}/{file["packs"][i]["pack_id"]}/pack_icon.png') == os.path.getsize(f'{cdir()}/pack_icons/missing_texture.png'):
+            if file["packs"][i]["pack_id"] in incomplete_packs[file["topic"]]:
+                pass
+            elif os.path.getsize(f'{cdir()}/packs/{file["topic"].lower()}/{file["packs"][i]["pack_id"]}/pack_icon.png') == os.path.getsize(f'{cdir()}/pack_icons/missing_texture.png'):
                 # Adds packid to topic list
                 incomplete_pkics[file["topic"]].append(file["packs"][i]["pack_id"])
                 pkicstats[1] += 1
@@ -372,7 +375,5 @@ clrprint("Updated a lot of files!", clr="green")
 if args.format:
     clrprint("Making files Prettier", clr="yellow")
     os.system(f"cd {cdir()}")
-    os.system('npx prettier --write "**/*.{js,ts,css,json,md}" --log-level silent')
-    with open(f"{cdir()}/credits.md","w") as credits:
-        credits.write(credit_unformatted)
+    os.system('npx prettier --write "**/*.{js,ts,css,json}" --log-level silent')
     clrprint("Files are Prettier!", clr="green")
