@@ -2,11 +2,11 @@
   "3D": [],
   "Aesthetic": [],
   "Crosshairs": [],
-  "Colorful Slime": ["RainbowSlime"],
+  "Colorful Slime": [],
   "Elytra": [],
   "Fixes and Consistency": [],
   "Fun": ["AnvilFallingSoundtoMetalPipe"],
-  "GUI": ["TransparentUI", "HighContrastUI"],
+  "GUI": [],
   "Hearts": [],
   "Hotbar Selector": [],
   "Hunger Bars": [],
@@ -20,12 +20,7 @@
   "Retro": ["OldPotionColors"],
   "Terrain": [],
   "Unobtrusive": ["NoCherryLeavesParticles", "NoFog"],
-  "Utility": [
-    "CrumbledInfestedStoneBlocks",
-    "ShinyAgedAmethystCluster",
-    "DirectionalDispensersandDroppers",
-    "NoteBlockPitchParticle"
-  ],
+  "Utility": ["CrumbledInfestedStoneBlocks", "NoteBlockPitchParticle"],
   "Variation": ["VariatedVillagers"],
   "World of Color": [],
   "Xisuma's Hermitcraft Bases": []
