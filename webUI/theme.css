@@ -11,6 +11,8 @@
   --green-border: rgb(99, 157, 82);
   --green-one: rgb(60, 133, 39);
   --green-two: rgb(71, 144, 50);
+  --red-one: rgb(133, 60, 39);
+  --red-two: rgb(144, 71, 50);
   --leftmargin: 2.5%;
   --rightmargin: 325px;
 }
@@ -237,14 +239,43 @@ li a {
   display: block;
   font-family: "Pixelify Sans";
   margin: 10px auto;
-  padding: 10px 20px;
+  padding: 10px;
   text-align: center;
-  transition: background 0.5s ease-in-out;
+  transition: background 0.5s ease-in-out, border-image 0.5s linear;
+  width: 80%;
 }
 
 .download-selected-button:hover {
   background: var(--green-two);
   border-color: var(--green-border-hover);
+}
+
+.download-selected-button.http {
+  border-image: linear-gradient(90deg, var(--red-one), var(--dark-two)) round;
+  border-radius: 5px;
+  animation: rotateBorderHttp 3.75s linear infinite;
+}
+
+.download-selected-button.http:hover {
+  background: var(--red-two);
+}
+
+.download-selected-button.http.s {
+  border-image: linear-gradient(90deg, var(--green-one), var(--dark-one)) round;
+  animation: rotateBorderHttps 3.75s linear infinite;
+}
+
+.download-selected-button.http.s:hover {
+  background: var(--green-two);
+}
+
+.download-selected-button.error {
+  background: var(--red-one);
+  padding: 5px;
+}
+
+.download-selected-button.error:hover {
+  border-color: var(--red-two);
 }
 
 .file-download {
@@ -473,6 +504,42 @@ li a {
   bottom: 100%;
 }
 
+@keyframes rotateBorderHttps {
+  0% {
+    border-image: linear-gradient(90deg, var(--green-one), var(--dark-one)) 1;
+  }
+  25% {
+    border-image: linear-gradient(180deg, var(--green-one), var(--dark-one)) 1;
+  }
+  50% {
+    border-image: linear-gradient(270deg, var(--green-one), var(--dark-one)) 1;
+  }
+  75% {
+    border-image: linear-gradient(360deg, var(--green-one), var(--dark-one)) 1;
+  }
+  100% {
+    border-image: linear-gradient(90deg, var(--green-one), var(--dark-one)) 1;
+  }
+}
+
+@keyframes rotateBorderHttp {
+  0% {
+    border-image: linear-gradient(90deg, var(--red-one), var(--dark-two)) 1;
+  }
+  25% {
+    border-image: linear-gradient(180deg, var(--red-one), var(--dark-two)) 1;
+  }
+  50% {
+    border-image: linear-gradient(270deg, var(--red-one), var(--dark-two)) 1;
+  }
+  75% {
+    border-image: linear-gradient(360deg, var(--red-one), var(--dark-two)) 1;
+  }
+  100% {
+    border-image: linear-gradient(90deg, var(--red-one), var(--dark-two)) 1;
+  }
+}
+
 @media (max-width: 767px) {
   #zipInput {
     display: none;
@@ -532,20 +599,6 @@ li a {
     right: 25px;
     top: 150px;
     width: 275px;
-  }
-
-  .download-selected-button {
-    border-color: var(--dark-border);
-  }
-
-  .download-selected-button:hover {
-    background: var(--dark-two);
-    border-color: var(--dark-border-hover);
-  }
-
-  .download-selected-button:selected {
-    background: var(--green-two);
-    border-color: var(--green-border-hover);
   }
 
   .file-download input[type="text"] {
