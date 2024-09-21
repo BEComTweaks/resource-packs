@@ -1,6 +1,6 @@
 // I sleep now
 function sleep(ms) {
-  return new Promise(resolve => setTimeout(resolve, ms));
+  return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
 function toggleSelection(element) {
@@ -278,13 +278,15 @@ function downloadSelectedTweaks() {
 const serverip = "localhost";
 
 function fetchPack(protocol, jsonData, packName, mcVersion) {
-  var downloadbutton = document.getElementsByClassName("download-selected-button")[0];
+  var downloadbutton = document.getElementsByClassName(
+    "download-selected-button",
+  )[0];
   if (protocol === "http") {
     downloadbutton.classList.remove("s");
     downloadbutton.innerText = "Retrying with HTTP...";
   } else {
     downloadbutton.classList.add("http");
-    downloadbutton.classList.add("s")
+    downloadbutton.classList.add("s");
     downloadbutton.innerText = "Fetching pack with HTTPS...";
   }
 
@@ -310,16 +312,16 @@ function fetchPack(protocol, jsonData, packName, mcVersion) {
       downloadbutton.classList.remove("http");
       if (downloadbutton.classList.contains("s")) {
         downloadbutton.classList.remove("s");
-      const url = window.URL.createObjectURL(blob);
-      const a = document.createElement("a");
-      a.style.display = "none";
-      a.href = url;
-      a.download = `${packName}.mcpack`;
-      document.body.appendChild(a);
-      a.click();
-      window.URL.revokeObjectURL(url);
-      await sleep(1000);
-      downloadbutton.innerText = "Download Selected Tweaks";
+        const url = window.URL.createObjectURL(blob);
+        const a = document.createElement("a");
+        a.style.display = "none";
+        a.href = url;
+        a.download = `${packName}.mcpack`;
+        document.body.appendChild(a);
+        a.click();
+        window.URL.revokeObjectURL(url);
+        await sleep(1000);
+        downloadbutton.innerText = "Download Selected Tweaks";
       }
     })
     .catch(async (error) => {
@@ -329,7 +331,8 @@ function fetchPack(protocol, jsonData, packName, mcVersion) {
       } else {
         console.error("Error:", error);
         downloadbutton.classList.remove("http");
-        downloadbutton.innerText = "Couldn't fetch pack. Check console for error log.";
+        downloadbutton.innerText =
+          "Couldn't fetch pack. Check console for error log.";
         downloadbutton.classList.add("error");
         await sleep(3000);
         downloadbutton.classList.remove("error");

@@ -241,7 +241,9 @@ li a {
   margin: 10px auto;
   padding: 10px;
   text-align: center;
-  transition: background 0.5s ease-in-out, border-image 0.5s linear;
+  transition:
+    background 0.5s ease-in-out,
+    border-image 0.5s linear;
   width: 80%;
 }
 
