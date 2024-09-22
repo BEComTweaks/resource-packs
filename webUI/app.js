@@ -281,6 +281,9 @@ function fetchPack(protocol, jsonData, packName, mcVersion) {
   var downloadbutton = document.getElementsByClassName(
     "download-selected-button",
   )[0];
+  // For people that spam the download button
+  downloadbutton.onclick = null;
+  // Change between border animations
   if (protocol === "http") {
     downloadbutton.classList.remove("s");
     downloadbutton.innerText = "Retrying with HTTP...";
@@ -322,6 +325,7 @@ function fetchPack(protocol, jsonData, packName, mcVersion) {
         window.URL.revokeObjectURL(url);
         await sleep(1000);
         downloadbutton.innerText = "Download Selected Tweaks";
+        downloadbutton.onclick = downloadSelectedTweaks;
       }
     })
     .catch(async (error) => {
@@ -337,6 +341,7 @@ function fetchPack(protocol, jsonData, packName, mcVersion) {
         await sleep(3000);
         downloadbutton.classList.remove("error");
         downloadbutton.innerText = "Download Selected Tweaks";
+        downloadbutton.onclick = downloadSelectedTweaks;
       }
     });
 }

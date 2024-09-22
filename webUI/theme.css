@@ -253,12 +253,14 @@ li a {
 }
 
 .download-selected-button.http {
+  border-color: #00000000;
   border-image: linear-gradient(90deg, var(--red-one), var(--dark-two)) round;
   border-radius: 5px;
   animation: rotateBorderHttp 3.75s linear infinite;
 }
 
 .download-selected-button.http:hover {
+  border-color: #00000000;
   background: var(--red-two);
 }
 
@@ -273,6 +275,7 @@ li a {
 
 .download-selected-button.error {
   background: var(--red-one);
+  border-color: var(--dark-border);
   padding: 5px;
 }
 
