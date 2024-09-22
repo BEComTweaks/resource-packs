@@ -290,7 +290,7 @@ function fetchPack(protocol, jsonData, packName, mcVersion) {
   } else {
     downloadbutton.classList.add("http");
     downloadbutton.classList.add("s");
-    downloadbutton.innerText = "Fetching pack with HTTPS...";
+    downloadbutton.innerText = "Fetching Pack...";
   }
 
   console.log("Fetching pack...");
@@ -311,22 +311,25 @@ function fetchPack(protocol, jsonData, packName, mcVersion) {
     })
     .then(async (blob) => {
       console.log("Received pack!");
+      // Just exists lol, it doesnt change for some reason
       downloadbutton.innerText = "Obtained pack!";
       downloadbutton.classList.remove("http");
+      // When using https, remove the s class
       if (downloadbutton.classList.contains("s")) {
         downloadbutton.classList.remove("s");
-        const url = window.URL.createObjectURL(blob);
-        const a = document.createElement("a");
-        a.style.display = "none";
-        a.href = url;
-        a.download = `${packName}.mcpack`;
-        document.body.appendChild(a);
-        a.click();
-        window.URL.revokeObjectURL(url);
-        await sleep(1000);
-        downloadbutton.innerText = "Download Selected Tweaks";
-        downloadbutton.onclick = downloadSelectedTweaks;
       }
+      // Download the file
+      const url = window.URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      a.style.display = "none";
+      a.href = url;
+      a.download = `${packName}.mcpack`;
+      document.body.appendChild(a);
+      a.click();
+      window.URL.revokeObjectURL(url);
+      await sleep(1000);
+      downloadbutton.innerText = "Download Selected Tweaks";
+      downloadbutton.onclick = downloadSelectedTweaks;
     })
     .catch(async (error) => {
       if (protocol === "https") {
