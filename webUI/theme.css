@@ -5,12 +5,14 @@
   --dark-border-ninety: rgba(106, 108, 112, 0.875);
   --dark-border: rgb(106, 108, 112);
   --dark-one-ninety: rgba(72, 73, 74, 0.875);
+  --dark-zero: rgb(61, 62, 63);
   --dark-one: rgb(72, 73, 74);
   --dark-two: rgb(83, 84, 85);
   --green-border-hover: rgb(99, 157, 82);
   --green-border: rgb(99, 157, 82);
   --green-one: rgb(60, 133, 39);
   --green-two: rgb(71, 144, 50);
+  --red-zero: rgb(111, 44, 33);
   --red-one: rgb(133, 60, 39);
   --red-two: rgb(144, 71, 50);
   --leftmargin: 2.5%;
@@ -243,7 +245,7 @@ li a {
   text-align: center;
   transition:
     background 0.5s ease-in-out,
-    border-image 0.5s linear;
+    border-style 0.5s linear;
   width: 80%;
 }
 
@@ -255,8 +257,10 @@ li a {
 .download-selected-button.http {
   border-color: #00000000;
   border-image: linear-gradient(90deg, var(--red-one), var(--dark-two)) round;
-  border-radius: 5px;
+  border-radius: 5px; /*No work smh*/
+  border-style: solid;
   animation: rotateBorderHttp 3.75s linear infinite reverse;
+  background: var(--dark-zero);
 }
 
 .download-selected-button.http:hover {
@@ -274,12 +278,14 @@ li a {
 }
 
 .download-selected-button.error {
-  background: var(--red-one);
-  border-color: var(--dark-border);
+  background: var(--red-zero);
+  border-color: var(--red-two);
+  border-style: inset;
   padding: 5px;
 }
 
 .download-selected-button.error:hover {
+  background: var(--red-zero);
   border-color: var(--red-two);
 }
 
@@ -299,7 +305,7 @@ li a {
   background: var(--dark-one);
   border-color: var(--dark-border);
   border-radius: 5px;
-  border-style: outset;
+  border-style: inset;
   border-width: 4.375px;
   color: #eeeeee;
   margin-bottom: 5px;
@@ -318,7 +324,7 @@ li a {
   background: var(--dark-one);
   border-color: var(--dark-border);
   border-radius: 5px;
-  border-style: outset;
+  border-style: inset;
   border-width: 4.375px;
   color: #eeeeee;
   font-family: "Pixelify Sans";
@@ -476,6 +482,7 @@ li a {
 .tweak.selected {
   background: var(--green-one);
   border-color: var(--green-border);
+  border-style: inset;
 }
 
 .tweak.selected:hover {
