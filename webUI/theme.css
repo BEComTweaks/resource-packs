@@ -256,7 +256,7 @@ li a {
   border-color: #00000000;
   border-image: linear-gradient(90deg, var(--red-one), var(--dark-two)) round;
   border-radius: 5px;
-  animation: rotateBorderHttp 3.75s linear infinite;
+  animation: rotateBorderHttp 3.75s linear infinite reverse;
 }
 
 .download-selected-button.http:hover {
