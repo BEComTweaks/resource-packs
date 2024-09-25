@@ -121,13 +121,6 @@
       },
       "conflict": [],
       "compatibility": []
-    },
-    {
-      "pack_id": "LavaCauldron",
-      "pack_name": "Lava Cauldron",
-      "pack_description": "Adds a side texture to indicate a filled Lava Cauldron.",
-      "conflict": [],
-      "compatibility": []
     }
   ]
 }
