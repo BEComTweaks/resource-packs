@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap");
-
 :root {
   --dark-border-hover: rgb(122, 124, 129);
   --dark-border-ninety: rgba(106, 108, 112, 0.875);
@@ -91,7 +90,6 @@ li a {
   border: 2px solid #111;
   display: none;
   margin: auto;
-  max-height: 400px;
   overflow-y: auto;
   padding: 5px;
   text-align: center;
@@ -102,7 +100,11 @@ li a {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   height: auto;
   margin-top: 35px;
-  max-width: 100%;
+  width: 100%;
+  position: relative;
+  size: cover;
+  text-align: center;
+  z-index: 1;
 }
 
 .category {
@@ -249,23 +251,25 @@ li a {
   width: 80%;
 }
 
-.download-selected-button:hover {
-  background: var(--green-two);
-  border-color: var(--green-border-hover);
+.download-selected-button.error {
+  background: var(--red-zero);
+  border-color: var(--red-two);
+  border-style: inset;
+  padding: 5px;
+}
+
+.download-selected-button.error:hover {
+  background: var(--red-zero);
+  border-color: var(--red-two);
 }
 
 .download-selected-button.http {
   border-color: #00000000;
   border-image: linear-gradient(90deg, var(--red-one), var(--dark-two)) round;
-  border-radius: 5px; /*No work smh*/
+  border-radius: 5px;
   border-style: solid;
   animation: rotateBorderHttp 3.75s linear infinite reverse;
   background: var(--dark-zero);
-}
-
-.download-selected-button.http:hover {
-  border-color: #00000000;
-  background: var(--red-two);
 }
 
 .download-selected-button.http.s {
@@ -277,16 +281,14 @@ li a {
   background: var(--green-two);
 }
 
-.download-selected-button.error {
-  background: var(--red-zero);
-  border-color: var(--red-two);
-  border-style: inset;
-  padding: 5px;
+.download-selected-button.http:hover {
+  border-color: #00000000;
+  background: var(--red-two);
 }
 
-.download-selected-button.error:hover {
-  background: var(--red-zero);
-  border-color: var(--red-two);
+.download-selected-button:hover {
+  background: var(--green-two);
+  border-color: var(--green-border-hover);
 }
 
 .file-download {
@@ -432,13 +434,6 @@ li a {
   width: 100px;
 }
 
-.title-image {
-  position: relative;
-  size: cover;
-  text-align: center;
-  z-index: 1;
-}
-
 .tweak {
   background: var(--dark-one);
   border-color: var(--dark-border);
@@ -507,7 +502,7 @@ li a {
   align-items: top;
   display: grid;
   gap: 10px;
-  grid-template-columns: repeat(auto-fit, minmax(142.5px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(137.5px, 1fr));
   margin: 10px;
   text-align: center;
 }
@@ -516,39 +511,47 @@ li a {
   bottom: 100%;
 }
 
-@keyframes rotateBorderHttps {
-  0% {
-    border-image: linear-gradient(90deg, var(--green-one), var(--dark-one)) 1;
-  }
-  25% {
-    border-image: linear-gradient(180deg, var(--green-one), var(--dark-one)) 1;
-  }
-  50% {
-    border-image: linear-gradient(270deg, var(--green-one), var(--dark-one)) 1;
-  }
-  75% {
-    border-image: linear-gradient(360deg, var(--green-one), var(--dark-one)) 1;
-  }
-  100% {
-    border-image: linear-gradient(90deg, var(--green-one), var(--dark-one)) 1;
-  }
-}
-
 @keyframes rotateBorderHttp {
   0% {
     border-image: linear-gradient(90deg, var(--red-one), var(--dark-two)) 1;
   }
+
+  100% {
+    border-image: linear-gradient(90deg, var(--red-one), var(--dark-two)) 1;
+  }
+
   25% {
     border-image: linear-gradient(180deg, var(--red-one), var(--dark-two)) 1;
   }
+
   50% {
     border-image: linear-gradient(270deg, var(--red-one), var(--dark-two)) 1;
   }
+
   75% {
     border-image: linear-gradient(360deg, var(--red-one), var(--dark-two)) 1;
   }
+}
+
+@keyframes rotateBorderHttps {
+  0% {
+    border-image: linear-gradient(90deg, var(--green-one), var(--dark-one)) 1;
+  }
+
   100% {
-    border-image: linear-gradient(90deg, var(--red-one), var(--dark-two)) 1;
+    border-image: linear-gradient(90deg, var(--green-one), var(--dark-one)) 1;
+  }
+
+  25% {
+    border-image: linear-gradient(180deg, var(--green-one), var(--dark-one)) 1;
+  }
+
+  50% {
+    border-image: linear-gradient(270deg, var(--green-one), var(--dark-one)) 1;
+  }
+
+  75% {
+    border-image: linear-gradient(360deg, var(--green-one), var(--dark-one)) 1;
   }
 }
 
@@ -568,6 +571,19 @@ li a {
   }
 }
 
+@media (min-height: 320px) {
+  #selected-tweaks {
+    max-height: 25vh;
+    margin-bottom: 10px;
+  }
+}
+
+@media (min-height: 610px) {
+  #selected-tweaks {
+    max-height: 50vh;
+  }
+}
+
 @media (min-width: 768px) {
   body {
     display: flex;
@@ -577,7 +593,12 @@ li a {
 
   #selected-tweaks {
     display: block;
-    max-height: 400px;
+  }
+
+  #title {
+    left: var(--leftmargin);
+    right: var(--rightmargin);
+    width: calc(100% - var(--leftmargin) - var(--rightmargin));
   }
 
   #zipInput {
@@ -609,7 +630,7 @@ li a {
     padding-top: 10px;
     position: fixed;
     right: 25px;
-    top: 150px;
+    top: 75px;
     width: 275px;
   }
 
@@ -633,11 +654,6 @@ li a {
 
   .subcattweaks {
     grid-template-columns: repeat(auto-fit, minmax(162.5px, 1fr));
-  }
-
-  .title-image {
-    left: 12.5px;
-    margin-right: var(--rightmargin);
   }
 
   .tweak-list-category {
@@ -713,6 +729,19 @@ li a {
     transition:
       margin-right 0.5s ease-in-out,
       margin-left 0.5s ease-in-out;
+  }
+
+  #selected-tweaks {
+    transition:
+      height 0.5s ease-in-out,
+      max-height 0.5s ease-in-out;
+  }
+
+  #title {
+    transition:
+      left 0.5s ease-in-out,
+      right 0.5s ease-in-out,
+      width 0.5s ease-in-out;
   }
 
   .category-controlled {
