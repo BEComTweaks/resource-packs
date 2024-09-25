@@ -8,7 +8,6 @@
 ![Completed Packs](https://img.shields.io/badge/Packs-492%2F498-blue?style=for-the-badge&color=blue)
 ![Completed Compatibilities for Packs](https://img.shields.io/badge/Compatibilities-13%2F18-cyan?style=for-the-badge&color=cyan)
 ![Completed Pack Icons](https://img.shields.io/badge/Pack%20Icons-484%2F492-green?style=for-the-badge&color=green)
-
 </div>
 
 > [!IMPORTANT]
@@ -17,7 +16,7 @@
 > Contributions here will also be directed to BedrockTweaks/Files.
 
 <div align="left">
-A repo containing every single tweak **possible** ported from <a href="https://vanillatweaks.net/picker/resource-packs">Vanilla Tweaks' Resource Packs</a> with a Command Line and Web Interface.
+A repo containing every single tweak <b>possible<b> ported from <a href="https://vanillatweaks.net/picker/resource-packs">Vanilla Tweaks' Resource Packs</a> with a Command Line and Web Interface.
 
 Docs are available at [here](https://becomtweaks.github.io/docs)
 

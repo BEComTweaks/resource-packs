@@ -332,7 +332,7 @@
     {
       "pack_id": "QuieterVexes",
       "pack_name": "Quieter Vexes",
-      "pack_description": "Decreases Vexe sounds by 95%.",
+      "pack_description": "Decreases Vexes sounds by 95%.",
       "conflict": [],
       "compatibility": []
     },
@@ -364,7 +364,7 @@
       "details": {
         "message": [
           "warn",
-          "Install <b>Quieter Explosions</b> to quieten Wither Head explosions."
+          "Install <b>Quieter Explosions</b> to quiet Wither Head explosions."
         ]
       },
       "conflict": [],
@@ -373,7 +373,7 @@
     {
       "pack_id": "QuieterWolves",
       "pack_name": "Quieter Wolves",
-      "pack_description": "Decreases Wolve sounds by 95%.",
+      "pack_description": "Decreases Wolves sounds by 95%.",
       "conflict": [],
       "compatibility": []
     },

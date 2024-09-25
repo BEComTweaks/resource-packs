@@ -3,7 +3,7 @@
   "Terrain": [],
   "Variation": [],
   "Peace and Quiet": [],
-  "Utility": [],
+  "Utility": ["ShinyAgedAmethystCluster", "DirectionalDispensersandDroppers"],
   "Unobtrusive": [],
   "3D": [],
   "GUI": ["TransparentUI", "HighContrastUI"],
@@ -16,11 +16,6 @@
   "More Zombies": [],
   "Lower and Sides": [],
   "Mobs": [],
-  "Clear Blocks": [
-    "ShinyAgedAmethystCluster",
-    "DirectionalCalibratedSculkSensors",
-    "BetterBottoms"
-  ],
   "Crosshairs": [],
   "Hearts": [],
   "LGBTQ+ Pride": [],

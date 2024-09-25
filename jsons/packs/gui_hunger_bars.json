@@ -3,231 +3,231 @@
   "subcategory_of": "GUI",
   "packs": [
     {
-      "pack_id": "Apple",
+      "pack_id": "AppleHungerBars",
       "pack_name": "Apple",
       "pack_description": "",
       "conflict": [],
       "compatibility": []
     },
     {
-      "pack_id": "GoldenApple",
+      "pack_id": "GoldenAppleHungerBars",
       "pack_name": "Golden Apple",
       "pack_description": "",
       "conflict": [],
       "compatibility": []
     },
     {
-      "pack_id": "Melon",
+      "pack_id": "MelonHungerBars",
       "pack_name": "Melon",
       "pack_description": "",
       "conflict": [],
       "compatibility": []
     },
     {
-      "pack_id": "SweetBerries",
+      "pack_id": "SweetBerriesHungerBars",
       "pack_name": "Sweet Berries",
       "pack_description": "",
       "conflict": [],
       "compatibility": []
     },
     {
-      "pack_id": "GlowBerries",
+      "pack_id": "GlowBerriesHungerBars",
       "pack_name": "Glow Berries",
       "pack_description": "",
       "conflict": [],
       "compatibility": []
     },
     {
-      "pack_id": "ChorusFruit",
+      "pack_id": "ChorusFruitHungerBars",
       "pack_name": "Chorus Fruit",
       "pack_description": "",
       "conflict": [],
       "compatibility": []
     },
     {
-      "pack_id": "Carrot",
+      "pack_id": "CarrotHungerBars",
       "pack_name": "Carrot",
       "pack_description": "",
       "conflict": [],
       "compatibility": []
     },
     {
-      "pack_id": "GoldenCarrot",
+      "pack_id": "GoldenCarrotHungerBars",
       "pack_name": "Golden Carrot",
       "pack_description": "",
       "conflict": [],
       "compatibility": []
     },
     {
-      "pack_id": "Potato",
+      "pack_id": "PotatoHungerBars",
       "pack_name": "Potato",
       "pack_description": "",
       "conflict": [],
       "compatibility": []
     },
     {
-      "pack_id": "BakedPotato",
+      "pack_id": "BakedPotatoHungerBars",
       "pack_name": "Baked Potato",
       "pack_description": "",
       "conflict": [],
       "compatibility": []
     },
     {
-      "pack_id": "PoisonousPotato",
+      "pack_id": "PoisonousPotatoHungerBars",
       "pack_name": "Poisonous Potato",
       "pack_description": "",
       "conflict": [],
       "compatibility": []
     },
     {
-      "pack_id": "Beetroot",
+      "pack_id": "BeetrootHungerBars",
       "pack_name": "Beetroot",
       "pack_description": "",
       "conflict": [],
       "compatibility": []
     },
     {
-      "pack_id": "DriedKelp",
+      "pack_id": "DriedKelpHungerBars",
       "pack_name": "Dried Kelp",
       "pack_description": "",
       "conflict": [],
       "compatibility": []
     },
     {
-      "pack_id": "Beef",
+      "pack_id": "BeefHungerBars",
       "pack_name": "Beef",
       "pack_description": "",
       "conflict": [],
       "compatibility": []
     },
     {
-      "pack_id": "Porkchop",
+      "pack_id": "PorkchopHungerBars",
       "pack_name": "Porkchop",
       "pack_description": "",
       "conflict": [],
       "compatibility": []
     },
     {
-      "pack_id": "Mutton",
+      "pack_id": "MuttonHungerBars",
       "pack_name": "Mutton",
       "pack_description": "",
       "conflict": [],
       "compatibility": []
     },
     {
-      "pack_id": "Chicken",
+      "pack_id": "ChickenHungerBars",
       "pack_name": "Chicken",
       "pack_description": "",
       "conflict": [],
       "compatibility": []
     },
     {
-      "pack_id": "Rabbit",
+      "pack_id": "RabbitHungerBars",
       "pack_name": "Rabbit",
       "pack_description": "",
       "conflict": [],
       "compatibility": []
     },
     {
-      "pack_id": "Cod",
+      "pack_id": "CodHungerBars",
       "pack_name": "Cod",
       "pack_description": "",
       "conflict": [],
       "compatibility": []
     },
     {
-      "pack_id": "Salmon",
+      "pack_id": "SalmonHungerBars",
       "pack_name": "Salmon",
       "pack_description": "",
       "conflict": [],
       "compatibility": []
     },
     {
-      "pack_id": "TropicalFish",
+      "pack_id": "TropicalFishHungerBars",
       "pack_name": "Tropical Fish",
       "pack_description": "",
       "conflict": [],
       "compatibility": []
     },
     {
-      "pack_id": "Pufferfish",
+      "pack_id": "PufferfishHungerBars",
       "pack_name": "Pufferfish",
       "pack_description": "",
       "conflict": [],
       "compatibility": []
     },
     {
-      "pack_id": "Bread",
+      "pack_id": "BreadHungerBars",
       "pack_name": "Bread",
       "pack_description": "",
       "conflict": [],
       "compatibility": []
     },
     {
-      "pack_id": "Cookie",
+      "pack_id": "CookieHungerBars",
       "pack_name": "Cookie",
       "pack_description": "",
       "conflict": [],
       "compatibility": []
     },
     {
-      "pack_id": "Cake",
+      "pack_id": "CakeHungerBars",
       "pack_name": "Cake",
       "pack_description": "",
       "conflict": [],
       "compatibility": []
     },
     {
-      "pack_id": "PumpkinPie",
+      "pack_id": "PumpkinPieHungerBars",
       "pack_name": "Pumpkin Pie",
       "pack_description": "",
       "conflict": [],
       "compatibility": []
     },
     {
-      "pack_id": "RottenFlesh",
+      "pack_id": "RottenFleshHungerBars",
       "pack_name": "Rotten Flesh",
       "pack_description": "",
       "conflict": [],
       "compatibility": []
     },
     {
-      "pack_id": "SpiderEye",
+      "pack_id": "SpiderEyeHungerBars",
       "pack_name": "Spider Eye",
       "pack_description": "",
       "conflict": [],
       "compatibility": []
     },
     {
-      "pack_id": "MushroomStew",
+      "pack_id": "MushroomStewHungerBars",
       "pack_name": "Mushroom Stew",
       "pack_description": "",
       "conflict": [],
       "compatibility": []
     },
     {
-      "pack_id": "BeetrootSoup",
+      "pack_id": "BeetrootSoupHungerBars",
       "pack_name": "Beetroot Soup",
       "pack_description": "",
       "conflict": [],
       "compatibility": []
     },
     {
-      "pack_id": "RabbitStew",
+      "pack_id": "RabbitStewHungerBars",
       "pack_name": "Rabbit Stew",
       "pack_description": "",
       "conflict": [],
       "compatibility": []
     },
     {
-      "pack_id": "SuspiciousStew",
+      "pack_id": "SuspiciousStewHungerBars",
       "pack_name": "Suspicious Stew",
       "pack_description": "",
       "conflict": [],
       "compatibility": []
     },
     {
-      "pack_id": "Honey",
+      "pack_id": "HoneyHungerBars",
       "pack_name": "Honey",
       "pack_description": "",
       "conflict": [],
