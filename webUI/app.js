@@ -61,9 +61,7 @@ function toggleSelection(element) {
     params.delete("st_raw");
     newUrl = `${window.location.pathname}`;
   } else {
-    const stcomp = LZString.compressToEncodedURIComponent(
-      JSON.stringify(st),
-    );
+    const stcomp = LZString.compressToEncodedURIComponent(JSON.stringify(st));
     params.set("st_raw", stcomp);
     newUrl = `${window.location.pathname}?${params.toString()}`;
   }
@@ -227,7 +225,6 @@ function processJsonData(jsonData) {
     console.error("The 'raw' field in selected_packs.json is not an array.");
   }
 }
-
 
 function getSelectedTweaks() {
   const selectedTweaks = [];
