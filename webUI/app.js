@@ -4,14 +4,17 @@ function sleep(ms) {
 }
 
 function toggleSelection(element) {
+  // toggle the pack
   element.classList.toggle("selected");
   const checkbox = element.querySelector('input[type="checkbox"]');
   checkbox.checked = !checkbox.checked;
+  // logging
   if (checkbox.checked) {
     console.log(`Selected ${element.dataset.name}`);
   } else {
     console.log(`Unselected ${element.dataset.name}`);
   }
+  // send to selected tweaks
   var selectedTweaks = [];
   const tweakElements = document.querySelectorAll(".tweak.selected");
   tweakElements.forEach((tweak) => {
@@ -36,6 +39,7 @@ function toggleSelection(element) {
     }
     document.getElementById("selected-tweaks").appendChild(tweakItem);
   });
+  // if selected tweaks is empty
   if (selectedTweaks.length == 0) {
     const tweakItem = document.createElement("div");
     tweakItem.className = "tweak-list-pack";
@@ -69,6 +73,7 @@ function toggleSelection(element) {
   window.history.replaceState({}, "", newUrl);
 }
 
+// if query params already exists
 const loadedparams = new URLSearchParams(window.location.search);
 if (loadedparams.has("st_raw")) {
   const st = JSON.parse(
@@ -76,7 +81,8 @@ if (loadedparams.has("st_raw")) {
   );
   processJsonData(st);
 }
-
+// for making selected-tweaks disappear
+// not sure why it is not in css
 window.addEventListener("resize", () => {
   if (window.matchMedia("(max-width: 767px)").matches) {
     document.getElementById("selected-tweaks").style.display = "none";
@@ -84,30 +90,32 @@ window.addEventListener("resize", () => {
     document.getElementById("selected-tweaks").style.display = "block";
   }
 });
-
+// for people who want instant stuff
 const mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
 
 function getTimeoutDuration() {
   return mediaQuery.matches ? 0 : 487.5;
 }
-
+// toggle category
 function toggleCategory(label) {
   const tweaksContainer = label.nextElementSibling;
   const timeoutDuration = getTimeoutDuration();
 
   if (tweaksContainer.style.maxHeight) {
+    // close category
     tweaksContainer.style.maxHeight = null;
     setTimeout(() => {
       tweaksContainer.style.display = "none";
       tweaksContainer.style.paddingTop = null;
       tweaksContainer.style.paddingBottom = null;
-      label.classList.toggle("open");
+      label.classList.remove("open");
     }, timeoutDuration); // Matches the transition duration
   } else {
+    // open category
     tweaksContainer.style.display = "block";
     tweaksContainer.style.paddingTop = "7.5px";
     tweaksContainer.style.paddingBottom = "7.5px";
-    label.classList.toggle("open");
+    label.classList.add("open");
     tweaksContainer.style.maxHeight = tweaksContainer.scrollHeight + "px";
     const outerCatLabel =
       label.parentElement.parentElement.previousElementSibling;
@@ -118,10 +126,12 @@ function toggleCategory(label) {
     }
   }
 }
-
+// i wonder what this is for
 function downloadSelectedTweaks() {
+  // set min_engine_version
   var mcVersion = document.getElementById("mev").value;
   console.log(`Minimum Engine Version is set to ${mcVersion}`);
+  // set pack name
   var packName = document.getElementById("fileNameInput").value;
   if (!packName) {
     packName = `BTRP-${String(Math.floor(Math.random() * 1000000)).padStart(
@@ -129,14 +139,17 @@ function downloadSelectedTweaks() {
       "0",
     )}`;
   }
-  console.log(`Pack Name is set to ${packName}`);
   packName = packName.replaceAll("/", "-");
+  console.log(`Pack Name is set to ${packName}`);
+  // get selected tweaks
   jsonData = getSelectedTweaks();
+  // fetch
   fetchPack("https", jsonData, packName, mcVersion);
 }
 const serverip = "localhost";
 
 function fetchPack(protocol, jsonData, packName, mcVersion) {
+  // get download button
   var downloadbutton = document.getElementsByClassName(
     "download-selected-button",
   )[0];
@@ -144,15 +157,18 @@ function fetchPack(protocol, jsonData, packName, mcVersion) {
   downloadbutton.onclick = null;
   // Change between border animations
   if (protocol === "http") {
+    // when attempting through http
     downloadbutton.classList.remove("s");
     downloadbutton.innerText = "Retrying with HTTP...";
   } else {
+    // when attempting through https
     downloadbutton.classList.add("http");
     downloadbutton.classList.add("s");
     downloadbutton.innerText = "Fetching Pack...";
   }
 
   console.log("Fetching pack...");
+  // fetch
   fetch(`${protocol}://${serverip}/exportResourcePack`, {
     method: "POST",
     headers: {
@@ -163,14 +179,15 @@ function fetchPack(protocol, jsonData, packName, mcVersion) {
     body: JSON.stringify(jsonData),
   })
     .then((response) => {
+      // when the response doesnt feel good
       if (!response.ok) {
         throw new Error("Network response was not ok");
       }
       return response.blob();
     })
     .then(async (blob) => {
+      // pack received
       console.log("Received pack!");
-      // Just exists lol, it doesnt change for some reason
       downloadbutton.innerText = "Obtained pack!";
       downloadbutton.classList.remove("http");
       // When using https, remove the s class
@@ -186,11 +203,13 @@ function fetchPack(protocol, jsonData, packName, mcVersion) {
       document.body.appendChild(a);
       a.click();
       window.URL.revokeObjectURL(url);
+      // reset button text
       await sleep(1000);
       downloadbutton.innerText = "Download Selected Tweaks";
       downloadbutton.onclick = downloadSelectedTweaks;
     })
     .catch(async (error) => {
+      // when the response doesnt send
       if (protocol === "https") {
         console.error("HTTPS error, trying HTTP:", error);
         fetchPack("http", jsonData, packName, mcVersion); // Retry with HTTP
@@ -208,6 +227,7 @@ function fetchPack(protocol, jsonData, packName, mcVersion) {
     });
 }
 
+// process json data from url/json
 function processJsonData(jsonData) {
   const rawPacks = jsonData.raw;
 
@@ -225,7 +245,7 @@ function processJsonData(jsonData) {
     console.error("The 'raw' field in selected_packs.json is not an array.");
   }
 }
-
+// get selected tweaks
 function getSelectedTweaks() {
   const selectedTweaks = [];
   const tweakElements = document.querySelectorAll(".tweak.selected");
@@ -236,61 +256,63 @@ function getSelectedTweaks() {
       index: parseInt(tweak.dataset.index),
     });
   });
-
+  // yza should explain this
   const tweaksByCategory = {
-    "3D": [],
     Aesthetic: [],
+    "More Zombies": [],
+    Terrain: [],
+    "Lower and Sides": [],
+    Variation: [],
+    "Peace and Quiet": [],
+    Mobs: [],
+    Utility: [],
+    "Clear Blocks": [],
+    Unobtrusive: [],
+    "3D": [],
+    GUI: [],
     Crosshairs: [],
+    Hearts: [],
+    "LGBTQ+ Pride": [],
+    "Hunger Bars": [],
+    "Hotbar Selector": [],
+    "Menu Panoramas": [],
+    "Xisuma's Hermitcraft Bases": [],
+    Retro: [],
+    Fun: [],
+    "World of Color": [],
     "Colorful Slime": [],
     Elytra: [],
-    "Fixes and Consistency": [],
-    Fun: [],
-    GUI: [],
-    Hearts: [],
-    "Hotbar Selector": [],
-    "Hunger Bars": [],
-    "LGBTQ+ Pride": [],
-    "Lower and Sides": [],
-    "Menu Panoramas": [],
-    Mobs: [],
-    "More Zombies": [],
     Parity: [],
-    "Peace and Quiet": [],
-    Retro: [],
-    Terrain: [],
-    Unobtrusive: [],
-    Utility: [],
-    Variation: [],
-    "World of Color": [],
-    "Xisuma's Hermitcraft Bases": [],
+    "Fixes and Consistency": [],
   };
 
   const indicesByCategory = {
-    "3D": [],
     Aesthetic: [],
+    "More Zombies": [],
+    Terrain: [],
+    "Lower and Sides": [],
+    Variation: [],
+    "Peace and Quiet": [],
+    Mobs: [],
+    Utility: [],
+    "Clear Blocks": [],
+    Unobtrusive: [],
+    "3D": [],
+    GUI: [],
     Crosshairs: [],
+    Hearts: [],
+    "LGBTQ+ Pride": [],
+    "Hunger Bars": [],
+    "Hotbar Selector": [],
+    "Menu Panoramas": [],
+    "Xisuma's Hermitcraft Bases": [],
+    Retro: [],
+    Fun: [],
+    "World of Color": [],
     "Colorful Slime": [],
     Elytra: [],
-    "Fixes and Consistency": [],
-    Fun: [],
-    GUI: [],
-    Hearts: [],
-    "Hotbar Selector": [],
-    "Hunger Bars": [],
-    "LGBTQ+ Pride": [],
-    "Lower and Sides": [],
-    "Menu Panoramas": [],
-    Mobs: [],
-    "More Zombies": [],
     Parity: [],
-    "Peace and Quiet": [],
-    Retro: [],
-    Terrain: [],
-    Unobtrusive: [],
-    Utility: [],
-    Variation: [],
-    "World of Color": [],
-    "Xisuma's Hermitcraft Bases": [],
+    "Fixes and Consistency": [],
   };
   console.log("Obtaining selected tweaks...");
   selectedTweaks.forEach((tweak) => {
@@ -299,17 +321,93 @@ function getSelectedTweaks() {
   });
   console.log("Obtained!");
   const jsonData = {
-    "3D": {
-      packs: tweaksByCategory["3D"],
-      index: indicesByCategory["3D"],
-    },
     Aesthetic: {
       packs: tweaksByCategory["Aesthetic"],
       index: indicesByCategory["Aesthetic"],
     },
+    "More Zombies": {
+      packs: tweaksByCategory["More Zombies"],
+      index: indicesByCategory["More Zombies"],
+    },
+    Terrain: {
+      packs: tweaksByCategory["Terrain"],
+      index: indicesByCategory["Terrain"],
+    },
+    "Lower and Sides": {
+      packs: tweaksByCategory["Lower and Sides"],
+      index: indicesByCategory["Lower and Sides"],
+    },
+    Variation: {
+      packs: tweaksByCategory["Variation"],
+      index: indicesByCategory["Variation"],
+    },
+    "Peace and Quiet": {
+      packs: tweaksByCategory["Peace and Quiet"],
+      index: indicesByCategory["Peace and Quiet"],
+    },
+    Mobs: {
+      packs: tweaksByCategory["Mobs"],
+      index: indicesByCategory["Mobs"],
+    },
+    Utility: {
+      packs: tweaksByCategory["Utility"],
+      index: indicesByCategory["Utility"],
+    },
+    "Clear Blocks": {
+      packs: tweaksByCategory["Clear Blocks"],
+      index: indicesByCategory["Clear Blocks"],
+    },
+    Unobtrusive: {
+      packs: tweaksByCategory["Unobtrusive"],
+      index: indicesByCategory["Unobtrusive"],
+    },
+    "3D": {
+      packs: tweaksByCategory["3D"],
+      index: indicesByCategory["3D"],
+    },
+    GUI: {
+      packs: tweaksByCategory["GUI"],
+      index: indicesByCategory["GUI"],
+    },
     Crosshairs: {
       packs: tweaksByCategory["Crosshairs"],
       index: indicesByCategory["Crosshairs"],
+    },
+    Hearts: {
+      packs: tweaksByCategory["Hearts"],
+      index: indicesByCategory["Hearts"],
+    },
+    "LGBTQ+ Pride": {
+      packs: tweaksByCategory["LGBTQ+ Pride"],
+      index: indicesByCategory["LGBTQ+ Pride"],
+    },
+    "Hunger Bars": {
+      packs: tweaksByCategory["Hunger Bars"],
+      index: indicesByCategory["Hunger Bars"],
+    },
+    "Hotbar Selector": {
+      packs: tweaksByCategory["Hotbar Selector"],
+      index: indicesByCategory["Hotbar Selector"],
+    },
+    "Menu Panoramas": {
+      packs: tweaksByCategory["Menu Panoramas"],
+      index: indicesByCategory["Menu Panoramas"],
+    },
+    "Xisuma's Hermitcraft Bases": {
+      packs: tweaksByCategory["Xisuma's Hermitcraft Bases"],
+      index: indicesByCategory["Xisuma's Hermitcraft Bases"],
+    },
+    Retro: {
+      packs: tweaksByCategory["Retro"],
+      index: indicesByCategory["Retro"],
+    },
+    Fun: {
+      packs: tweaksByCategory["Fun"],
+      index: indicesByCategory["Fun"],
+    },
+    "World of Color": {
+      packs: tweaksByCategory["World of Color"],
+      index: indicesByCategory["World of Color"],
     },
     "Colorful Slime": {
       packs: tweaksByCategory["Colorful Slime"],
@@ -319,98 +417,25 @@ function getSelectedTweaks() {
       packs: tweaksByCategory["Elytra"],
       index: indicesByCategory["Elytra"],
     },
-    "Fixes and Consistency": {
-      packs: tweaksByCategory["Fixes and Consistency"],
-      index: indicesByCategory["Fixes and Consistency"],
-    },
-    Fun: {
-      packs: tweaksByCategory["Fun"],
-      index: indicesByCategory["Fun"],
-    },
-    GUI: {
-      packs: tweaksByCategory["GUI"],
-      index: indicesByCategory["GUI"],
-    },
-    Hearts: {
-      packs: tweaksByCategory["Hearts"],
-      index: indicesByCategory["Hearts"],
-    },
-    "Hotbar Selector": {
-      packs: tweaksByCategory["Hotbar Selector"],
-      index: indicesByCategory["Hotbar Selector"],
-    },
-    "Hunger Bars": {
-      packs: tweaksByCategory["Hunger Bars"],
-      index: indicesByCategory["Hunger Bars"],
-    },
-    "LGBTQ+ Pride": {
-      packs: tweaksByCategory["LGBTQ+ Pride"],
-      index: indicesByCategory["LGBTQ+ Pride"],
-    },
-    "Lower and Sides": {
-      packs: tweaksByCategory["Lower and Sides"],
-      index: indicesByCategory["Lower and Sides"],
-    },
-    "Menu Panoramas": {
-      packs: tweaksByCategory["Menu Panoramas"],
-      index: indicesByCategory["Menu Panoramas"],
-    },
-    Mobs: {
-      packs: tweaksByCategory["Mobs"],
-      index: indicesByCategory["Mobs"],
-    },
-    "More Zombies": {
-      packs: tweaksByCategory["More Zombies"],
-      index: indicesByCategory["More Zombies"],
-    },
     Parity: {
       packs: tweaksByCategory["Parity"],
       index: indicesByCategory["Parity"],
     },
-    "Peace and Quiet": {
-      packs: tweaksByCategory["Peace and Quiet"],
-      index: indicesByCategory["Peace and Quiet"],
-    },
-    Retro: {
-      packs: tweaksByCategory["Retro"],
-      index: indicesByCategory["Retro"],
-    },
-    Terrain: {
-      packs: tweaksByCategory["Terrain"],
-      index: indicesByCategory["Terrain"],
-    },
-    Unobtrusive: {
-      packs: tweaksByCategory["Unobtrusive"],
-      index: indicesByCategory["Unobtrusive"],
-    },
-    Utility: {
-      packs: tweaksByCategory["Utility"],
-      index: indicesByCategory["Utility"],
-    },
-    Variation: {
-      packs: tweaksByCategory["Variation"],
-      index: indicesByCategory["Variation"],
-    },
-    "World of Color": {
-      packs: tweaksByCategory["World of Color"],
-      index: indicesByCategory["World of Color"],
-    },
-    "Xisuma's Hermitcraft Bases": {
-      packs: tweaksByCategory["Xisuma's Hermitcraft Bases"],
-      index: indicesByCategory["Xisuma's Hermitcraft Bases"],
+    "Fixes and Consistency": {
+      packs: tweaksByCategory["Fixes and Consistency"],
+      index: indicesByCategory["Fixes and Consistency"],
     },
     raw: selectedTweaks.map((tweak) => tweak.name),
   };
   return jsonData;
 }
-
 // Extra code to trigger file input
 document
   .querySelector(".zipinputcontainer")
   .addEventListener("click", function () {
     document.getElementById("zipInput").click();
   });
-
+// upload pack
 document
   .getElementById("zipInput")
   .addEventListener("change", function (event) {
