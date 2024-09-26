@@ -81,15 +81,6 @@ if (loadedparams.has("st_raw")) {
   );
   processJsonData(st);
 }
-// for making selected-tweaks disappear
-// not sure why it is not in css
-window.addEventListener("resize", () => {
-  if (window.matchMedia("(max-width: 767px)").matches) {
-    document.getElementById("selected-tweaks").style.display = "none";
-  } else {
-    document.getElementById("selected-tweaks").style.display = "block";
-  }
-});
 // for people who want instant stuff
 const mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
 
