@@ -1,0 +1,34 @@
+{
+  "num_mip_levels": 4,
+  "padding": 8,
+  "resource_pack_name": "vanilla",
+  "texture_data": {
+    "calibrated_sculk_sensor_amethyst": {
+      "textures": "textures/blocks/calibrated_sculk_sensor_amethyst"
+    },
+    "calibrated_sculk_sensor_bottom": {
+      "textures": [
+        "textures/blocks/calibrated_sculk_sensor_bottom_n",
+        "textures/blocks/calibrated_sculk_sensor_bottom_e",
+        "textures/blocks/calibrated_sculk_sensor_bottom_s",
+        "textures/blocks/calibrated_sculk_sensor_bottom_w"
+      ]
+    },
+    "calibrated_sculk_sensor_input_side": {
+      "textures": "textures/blocks/calibrated_sculk_sensor_input_side"
+    },
+    "calibrated_sculk_sensor_side_e": {
+      "textures": "textures/blocks/calibrated_sculk_sensor_side_e"
+    },
+    "calibrated_sculk_sensor_side_n": {
+      "textures": "textures/blocks/calibrated_sculk_sensor_side_n"
+    },
+    "calibrated_sculk_sensor_side_w": {
+      "textures": "textures/blocks/calibrated_sculk_sensor_side_w"
+    },
+    "calibrated_sculk_sensor_top": {
+      "textures": "textures/blocks/calibrated_sculk_sensor_top"
+    }
+  },
+  "texture_name": "atlas.terrain"
+}
