@@ -1,0 +1,14 @@
+{
+  "format_version": [1, 1, 0],
+  "respawn_anchor": {
+    "sound": "metal",
+    "textures": {
+      "down": "respawn_anchor_bottom",
+      "east": "respawn_anchor_side",
+      "north": "respawn_anchor_side",
+      "south": "respawn_anchor_side",
+      "up": "respawn_anchor_top",
+      "west": "respawn_anchor_side"
+    }
+  }
+}

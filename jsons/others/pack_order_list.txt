@@ -6,6 +6,7 @@ variation.json
 peace_and_quiet.json
 	peace_and_quiet_mobs.json
 utility.json
+	utility_clear_blocks.json
 unobtrusive.json
 3d.json
 gui.json

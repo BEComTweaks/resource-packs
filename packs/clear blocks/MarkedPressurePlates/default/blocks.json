@@ -1,0 +1,63 @@
+{
+  "format_version": [1, 1, 0],
+  "acacia_pressure_plate": {
+    "sound": "wood",
+    "textures": "acacia_pressure_plate"
+  },
+  "bamboo_pressure_plate": {
+    "sound": "bamboo_wood",
+    "textures": "bamboo_pressure_plate"
+  },
+  "birch_pressure_plate": {
+    "sound": "wood",
+    "textures": "birch_pressure_plate"
+  },
+  "cherry_pressure_plate": {
+    "sound": "cherry_wood",
+    "textures": "cherry_pressure_plate"
+  },
+  "crimson_pressure_plate": {
+    "sound": "stem",
+    "textures": "crimson_pressure_plate"
+  },
+  "dark_oak_pressure_plate": {
+    "sound": "wood",
+    "textures": "dark_oak_pressure_plate"
+  },
+  "heavy_weighted_pressure_plate": {
+    "sound": "metal",
+    "textures": "heavy_weighted_pressure_plate"
+  },
+  "jungle_pressure_plate": {
+    "sound": "wood",
+    "textures": "jungle_pressure_plate"
+  },
+  "light_weighted_pressure_plate": {
+    "sound": "metal",
+    "textures": "light_weighted_pressure_plate"
+  },
+  "mangrove_pressure_plate": {
+    "sound": "wood",
+    "textures": "mangrove_pressure_plate"
+  },
+  "polished_blackstone_pressure_plate": {
+    "sound": "stone",
+    "textures": "polished_blackstone_pressure_plate"
+  },
+  "spruce_pressure_plate": {
+    "sound": "wood",
+    "textures": "spruce_pressure_plate"
+  },
+  "stone_pressure_plate": {
+    "sound": "stone",
+    "textures": "stone_pressure_plate"
+  },
+  "warped_pressure_plate": {
+    "sound": "stem",
+    "textures": "warped_pressure_plate"
+  },
+  "wooden_pressure_plate": {
+    "sound": "wood",
+    "textures": "wooden_pressure_plate"
+  }
+}

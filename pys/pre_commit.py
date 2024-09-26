@@ -64,8 +64,9 @@ for j in pack_list:
             j = j[:-1]
         file = load_json(f"{cdir()}/jsons/packs/{j}")
         name_to_json[file["topic"]] = j
-        incomplete_packs[file["topic"]] = []
+        # Adds the categories automatically
         incomplete_pkics[file["topic"]] = []
+        incomplete_packs[file["topic"]] = []
         html += category_start.replace("topic_name", file["topic"])
         # Runs through the packs
         for i in range(len(file["packs"])):
@@ -101,7 +102,6 @@ for j in pack_list:
                     # When pack icon doesn't even exist
                     incomplete_pkics[file["topic"]].append(file["packs"][i]["pack_id"])
                     pkicstats[1] += 1
-            
             # Updates Incomplete Pack Compatibilities
             for comp in range(len(file["packs"][i]["compatibility"])):  # If it is empty, it just skips
                 # Looks at compatibility folders
@@ -200,6 +200,7 @@ for j in pack_list:
             ignore = False
     except IndexError:
         html += category_end
+# Seperate loop for subcategories (I'm inefficient)
 for j in range(len(subcat_list)):
     pack_html = ""
     k = subcat_list[j]
@@ -209,8 +210,9 @@ for j in range(len(subcat_list)):
         k = k[1:]
     file = load_json(f"{cdir()}/jsons/packs/{k}")
     name_to_json[file["topic"]] = k
-    incomplete_packs[file["topic"]] = []
+    # Adds the categories automatically
     incomplete_pkics[file["topic"]] = []
+    incomplete_packs[file["topic"]] = []
     pack_html += subcategory_start.replace("topic_name", f'{file["subcategory_of"]} > <b>{file["topic"]}</b>')
     for i in range(len(file["packs"])):
         # Updates Incomplete Packs

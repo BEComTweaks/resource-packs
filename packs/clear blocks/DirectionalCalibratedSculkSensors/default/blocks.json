@@ -1,0 +1,22 @@
+{
+  "format_version": [1, 1, 0],
+  "calibrated_sculk_sensor": {
+    "carried_textures": {
+      "down": "sculk_sensor_tendril_inactive",
+      "east": "sculk_sensor_tendril_active",
+      "north": "sculk_sensor_tendril_active",
+      "south": "calibrated_sculk_sensor_amethyst",
+      "up": "sculk_sensor_tendril_inactive",
+      "west": "sculk_sensor_tendril_active"
+    },
+    "sound": "sculk_sensor",
+    "textures": {
+      "down": "calibrated_sculk_sensor_bottom",
+      "east": "calibrated_sculk_sensor_side_e",
+      "north": "calibrated_sculk_sensor_side_n",
+      "south": "calibrated_sculk_sensor_input_side",
+      "up": "calibrated_sculk_sensor_top",
+      "west": "calibrated_sculk_sensor_side_w"
+    }
+  }
+}

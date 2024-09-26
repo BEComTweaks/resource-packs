@@ -5,10 +5,9 @@
 ![Commit Activity](https://img.shields.io/github/commit-activity/w/BEComTweaks/resource-packs?style=for-the-badge&label=Commits&color=purple)
 ![GitHub repo size](https://img.shields.io/github/repo-size/BEComTweaks/resource-packs?style=for-the-badge&label=Size&color=pink)
 <br>
-![Completed Packs](https://img.shields.io/badge/Packs-488%2F493-blue?style=for-the-badge&color=blue)
+![Completed Packs](https://img.shields.io/badge/Packs-494%2F499-blue?style=for-the-badge&color=blue)
 ![Completed Compatibilities for Packs](https://img.shields.io/badge/Compatibilities-13%2F18-cyan?style=for-the-badge&color=cyan)
-![Completed Pack Icons](https://img.shields.io/badge/Pack%20Icons-481%2F488-green?style=for-the-badge&color=green)
-
+![Completed Pack Icons](https://img.shields.io/badge/Pack%20Icons-487%2F494-green?style=for-the-badge&color=green)
 </div>
 
 > [!IMPORTANT]
@@ -17,7 +16,7 @@
 > Contributions here will also be directed to BedrockTweaks/Files.
 
 <div align="left">
-A repo containing every single tweak **possible** ported from <a href="https://vanillatweaks.net/picker/resource-packs">Vanilla Tweaks' Resource Packs</a> with a Command Line and Web Interface.
+A repo containing every single tweak <b>possible<b> ported from <a href="https://vanillatweaks.net/picker/resource-packs">Vanilla Tweaks' Resource Packs</a> with a Command Line and Web Interface.
 
 Docs are available at [here](https://becomtweaks.github.io/docs)
 

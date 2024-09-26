@@ -1,0 +1,93 @@
+{
+  "format_version": [1, 1, 0],
+  "blast_furnace": {
+    "sound": "stone",
+    "textures": {
+      "down": "blast_furnace_bottom",
+      "east": "blast_furnace_side",
+      "north": "blast_furnace_side",
+      "south": "blast_furnace_front_off",
+      "up": "blast_furnace_top",
+      "west": "blast_furnace_side"
+    }
+  },
+  "furnace": {
+    "sound": "stone",
+    "textures": {
+      "down": "furnace_bottom",
+      "east": "furnace_side_off",
+      "north": "furnace_side_off",
+      "south": "furnace_front_off",
+      "up": "furnace_top_off",
+      "west": "furnace_side_off"
+    }
+  },
+  "smoker": {
+    "sound": "stone",
+    "textures": {
+      "down": "smoker_bottom",
+      "east": "smoker_side",
+      "north": "smoker_side",
+      "south": "smoker_front_off",
+      "up": "smoker_top",
+      "west": "smoker_side"
+    }
+  },
+  "lit_blast_furnace": {
+    "carried_textures": {
+      "down": "blast_furnace_bottom",
+      "east": "blast_furnace_side_on",
+      "north": "blast_furnace_side_on",
+      "south": "blast_furnace_front_on",
+      "up": "blast_furnace_top_on",
+      "west": "blast_furnace_side_on"
+    },
+    "sound": "stone",
+    "textures": {
+      "down": "blast_furnace_bottom",
+      "east": "blast_furnace_front_on",
+      "north": "blast_furnace_side_on",
+      "south": "blast_furnace_side_on",
+      "up": "blast_furnace_top_on",
+      "west": "blast_furnace_side_on"
+    }
+  },
+  "lit_furnace": {
+    "carried_textures": {
+      "down": "furnace_bottom",
+      "east": "furnace_side_on",
+      "north": "furnace_side_on",
+      "south": "furnace_front_on",
+      "up": "furnace_top_on",
+      "west": "furnace_side_on"
+    },
+    "sound": "stone",
+    "textures": {
+      "down": "furnace_bottom",
+      "east": "furnace_front_on",
+      "north": "furnace_side_on",
+      "south": "furnace_side_on",
+      "up": "furnace_top_on",
+      "west": "furnace_side_on"
+    }
+  },
+  "lit_smoker": {
+    "carried_textures": {
+      "down": "smoker_bottom",
+      "east": "smoker_side_on",
+      "north": "smoker_side_on",
+      "south": "smoker_front_on",
+      "up": "smoker_top_on",
+      "west": "smoker_side_on"
+    },
+    "sound": "stone",
+    "textures": {
+      "down": "smoker_bottom",
+      "east": "smoker_front_on",
+      "north": "smoker_side_on",
+      "south": "smoker_side_on",
+      "up": "smoker_top_on",
+      "west": "smoker_side_on"
+    }
+  }
+}

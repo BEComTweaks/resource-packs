@@ -38,13 +38,6 @@
       "compatibility": []
     },
     {
-      "pack_id": "CrumbledInfestedStoneBlocks",
-      "pack_name": "Crumbled Infested Stone Blocks",
-      "pack_description": "Makes infested stone blocks appear crumbled and cracked, matching how easy it is to break the block.",
-      "conflict": ["VisualInfestedStoneItems"],
-      "compatibility": []
-    },
-    {
       "pack_id": "WaxedCopperItems",
       "pack_name": "Waxed Copper Items",
       "pack_description": "Adds a border around Waxed Copper and variants in the inventory.",
@@ -55,36 +48,9 @@
       "compatibility": []
     },
     {
-      "pack_id": "BoltlessWaxedCopperBlocks",
-      "pack_name": "Boltless Waxed Copper Blocks",
-      "pack_description": "Removes the bolts in the corner of Waxed Copper blocks and variants.",
-      "details": {
-        "message": [
-          "info",
-          "This does NOT change anything with Cut Copper, so Waxed Copper Items is recommended."
-        ]
-      },
-      "conflict": [],
-      "compatibility": []
-    },
-    {
-      "pack_id": "ShinyAgedAmethystCluster",
-      "pack_name": "Shiny Aged Amethyst Cluster",
-      "pack_description": "Makes all fully aged Amethyst clusters have a shining texture.",
-      "conflict": [],
-      "compatibility": []
-    },
-    {
       "pack_id": "DifferentStems",
       "pack_name": "Different Stems",
       "pack_description": "Changes Melon and Pumpkin stems to reflect their fruit color.",
-      "conflict": [],
-      "compatibility": []
-    },
-    {
-      "pack_id": "Age25Kelp",
-      "pack_name": "Age 25 Kelp",
-      "pack_description": "Adds flowers to the top of kelp plants when they are fully grown. {age=25}.",
       "conflict": [],
       "compatibility": []
     },
@@ -148,39 +114,11 @@
       "compatibility": ["PistonInnerFix"]
     },
     {
-      "pack_id": "DirectionalHoppers",
-      "pack_name": "Directional Hoppers",
-      "pack_description": "Gives Hoppers arrows all around to indicate which direction they are facing.",
-      "conflict": [],
-      "compatibility": []
-    },
-    {
-      "pack_id": "DirectionalDispensersandDroppers",
-      "pack_name": "Directional Dispensers and Droppers",
-      "pack_description": "Gives Dispensers and Droppers arrows all around to indicate which direction they are facing.\nNote: The opposite side of where it is facing is not accurate and unfixable.",
-      "conflict": [],
-      "compatibility": []
-    },
-    {
-      "pack_id": "DirectionalObservers",
-      "pack_name": "Directional Observers",
-      "pack_description": "Gives Observers arrows all around to indicate which direction they are facing and display updates.",
-      "conflict": [],
-      "compatibility": ["UpdatedObserverTexture"]
-    },
-    {
       "pack_id": "CleanRedstoneDust",
       "pack_name": "Clean Redstone Dust",
       "pack_description": "Changes the texture of Redstone Dust to a clean solid line.",
       "conflict": ["RedstoneWireFix"],
       "compatibility": []
-    },
-    {
-      "pack_id": "UnlitRedstoneOre",
-      "pack_name": "Unlit Redstone Ore",
-      "pack_description": "Makes unlit Redstone Ore use the same palette as unlit Redstone Wire until its lit, when it then returns to its default, bright red colour.",
-      "conflict": [],
-      "compatibility": ["UniformOres", "OreBorders", "ClassicOres"]
     },
     {
       "pack_id": "VisibleTripwires",
@@ -200,13 +138,6 @@
       "pack_id": "BrewingGuide",
       "pack_name": "Brewing Guide",
       "pack_description": "Adds a cheat sheet to the Brewing Staand interface.",
-      "conflict": [],
-      "compatibility": []
-    },
-    {
-      "pack_id": "VisualFullHoneyStage",
-      "pack_name": "Visual Full Honey Stage",
-      "pack_description": "Visualizes the empty and full honey stages in Bee Nests and Beehives on all sides.",
       "conflict": [],
       "compatibility": []
     },
