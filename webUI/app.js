@@ -3,16 +3,25 @@ function sleep(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
+function enableSelection(element, checkbox) {
+  element.classList.add("selected");
+  checkbox.checked = true;
+}
+
+function disableSelection(element, checkbox) {
+  element.classList.remove("selected");
+  checkbox.checked = false;
+}
+
 function toggleSelection(element) {
-  // toggle the pack
-  element.classList.toggle("selected");
   const checkbox = element.querySelector('input[type="checkbox"]');
-  checkbox.checked = !checkbox.checked;
   // logging
   if (checkbox.checked) {
-    console.log(`Selected ${element.dataset.name}`);
-  } else {
+    disableSelection(element, checkbox);
     console.log(`Unselected ${element.dataset.name}`);
+  } else {
+    enableSelection(element, checkbox);
+    console.log(`Selected ${element.dataset.name}`);
   }
   // send to selected tweaks
   var selectedTweaks = [];
@@ -46,7 +55,11 @@ function toggleSelection(element) {
     tweakItem.textContent = "Select some packs and see them appear here!";
     document.getElementById("selected-tweaks").appendChild(tweakItem);
   }
-  // query params
+  updateURL();
+}
+
+// query params function
+function updateURL() {
   var st = getSelectedTweaks();
   for (var key in st) {
     try {
@@ -72,14 +85,13 @@ function toggleSelection(element) {
   // update url
   window.history.replaceState({}, "", newUrl);
 }
-
 // if query params already exists
 const loadedparams = new URLSearchParams(window.location.search);
 if (loadedparams.has("st_raw")) {
   const st = JSON.parse(
     LZString.decompressFromEncodedURIComponent(loadedparams.get("st_raw")),
   );
-  processJsonData(st);
+  processJsonData(st, "select");
 }
 // for people who want instant stuff
 const mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
@@ -91,6 +103,7 @@ function getTimeoutDuration() {
 function toggleCategory(label) {
   const tweaksContainer = label.nextElementSibling;
   const timeoutDuration = getTimeoutDuration();
+  const unSelectAllElement = document.querySelector(".un_selectall");
 
   if (tweaksContainer.style.maxHeight) {
     // close category
@@ -100,6 +113,9 @@ function toggleCategory(label) {
       tweaksContainer.style.paddingTop = null;
       tweaksContainer.style.paddingBottom = null;
       label.classList.remove("open");
+      if (!document.querySelector(".category-controlled").offsetParent) {
+        unSelectAllElement.style.display = "none";
+      }
     }, timeoutDuration); // Matches the transition duration
   } else {
     // open category
@@ -115,6 +131,7 @@ function toggleCategory(label) {
       outerCatContainer.style.maxHeight =
         outerCatContainer.scrollHeight + tweaksContainer.scrollHeight + "px";
     }
+    unSelectAllElement.style.display = "block";
   }
 }
 // i wonder what this is for
@@ -219,15 +236,20 @@ function fetchPack(protocol, jsonData, packName, mcVersion) {
 }
 
 // process json data from url/json
-function processJsonData(jsonData) {
+function processJsonData(jsonData, dowhat) {
   const rawPacks = jsonData.raw;
 
   if (Array.isArray(rawPacks)) {
     rawPacks.forEach(function (pack) {
       const div = document.querySelector(`div.tweak[data-name="${pack}"]`);
       if (div) {
-        toggleSelection(div);
-        console.log(`Toggled Selection of ${pack}`);
+        if (dowhat == "select") {
+          enableSelection(div, div.querySelector('input[type="checkbox"]'));
+          console.log(`Selected ${pack}`);
+        } else if (dowhat == "unselect") {
+          disableSelection(div, div.querySelector('input[type="checkbox"]'));
+          console.log(`Unselected ${pack}`);
+        }
       } else {
         console.error(`Div with data-name="${pack}" not found.`);
       }
@@ -446,7 +468,7 @@ document
                   .then(function (content) {
                     try {
                       const jsonData = JSON.parse(content);
-                      processJsonData(jsonData);
+                      processJsonData(jsonData, "select");
                     } catch (error) {
                       console.error("Error parsing JSON:", error);
                     }
@@ -475,3 +497,28 @@ document
       console.error("No file selected.");
     }
   });
+
+// select all tweaks
+function selectAll(compressedstring, element) {
+  const st = JSON.parse(
+    LZString.decompressFromEncodedURIComponent(compressedstring),
+  );
+  processJsonData(st, "select");
+  updateURL();
+  element.onclick = function () {
+    event.stopPropagation();
+    unselectAll(compressedstring, element);
+  };
+}
+
+function unselectAll(compressedstring, element) {
+  const st = JSON.parse(
+    LZString.decompressFromEncodedURIComponent(compressedstring),
+  );
+  processJsonData(st, "unselect");
+  updateURL();
+  element.onclick = function () {
+    event.stopPropagation();
+    selectAll(compressedstring, element);
+  };
+}

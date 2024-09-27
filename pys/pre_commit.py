@@ -18,6 +18,9 @@ check("markdown")
 from markdown import markdown
 check("bs4","beautifulsoup4")
 from bs4 import BeautifulSoup
+check("lzstring")
+from lzstring import LZString
+from json import dumps
 
 category_start = '<div class="category"><div class="category-label" onclick="toggleCategory(this)">topic_name</div><div class="category-controlled"><div class="tweaks">'
 subcategory_start = '<div class="subcategory"><div class="category-label" onclick="toggleCategory(this)">topic_name</div><div class="category-controlled"><div class="subcattweaks">'
