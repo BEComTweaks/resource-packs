@@ -6,10 +6,7 @@
   "Utility": [],
   "Unobtrusive": [],
   "3D": [],
-  "GUI": [
-    "TransparentUI",
-    "HighContrastUI"
-  ],
+  "GUI": ["TransparentUI", "HighContrastUI"],
   "Menu Panoramas": [],
   "Retro": [],
   "Fun": [],
@@ -19,18 +16,13 @@
   "More Zombies": [],
   "Lower and Sides": [],
   "Mobs": [],
-  "Clear Blocks": [
-    "ShinyAgedAmethystCluster",
-    "BetterBottoms"
-  ],
+  "Clear Blocks": ["ShinyAgedAmethystCluster", "BetterBottoms"],
   "Crosshairs": [],
   "Hearts": [],
   "LGBTQ+ Pride": [],
   "Hunger Bars": [],
   "Hotbar Selector": [],
   "Xisuma's Hermitcraft Bases": [],
-  "Colorful Slime": [
-    "RainbowSlime"
-  ],
+  "Colorful Slime": ["RainbowSlime"],
   "Elytra": []
 }

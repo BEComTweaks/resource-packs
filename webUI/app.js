@@ -101,7 +101,9 @@ function getTimeoutDuration() {
 }
 // toggle category
 function toggleCategory(label) {
-  const tweaksContainer = label.parentElement.querySelector(".category-controlled");
+  const tweaksContainer = label.parentElement.querySelector(
+    ".category-controlled",
+  );
   const timeoutDuration = getTimeoutDuration();
   const selectallbutton = label.nextElementSibling;
   if (tweaksContainer.style.maxHeight) {
@@ -122,8 +124,14 @@ function toggleCategory(label) {
     tweaksContainer.style.paddingBottom = "7.5px";
     label.classList.add("open");
     tweaksContainer.style.maxHeight = tweaksContainer.scrollHeight + "px";
-    const outerCatLabel = label.parentElement.parentElement.parentElement.querySelector(".category-label");
-    const outerCatContainer = label.parentElement.parentElement.parentElement.querySelector(".category-controlled");
+    const outerCatLabel =
+      label.parentElement.parentElement.parentElement.querySelector(
+        ".category-label",
+      );
+    const outerCatContainer =
+      label.parentElement.parentElement.parentElement.querySelector(
+        ".category-controlled",
+      );
     if (outerCatLabel) {
       outerCatContainer.style.maxHeight =
         outerCatContainer.scrollHeight + tweaksContainer.scrollHeight + "px";
@@ -506,7 +514,8 @@ function selectAll(compressedstring, element) {
   element.onclick = function () {
     unselectAll(compressedstring, element);
   };
-  element.innerHTML = '<img src="images/select-all-button/chiseled_bookshelf_occupied.png" class="category-label-selectall-img"><div class="category-label-selectall-hovertext">Unselect All</div>';
+  element.innerHTML =
+    '<img src="images/select-all-button/chiseled_bookshelf_occupied.png" class="category-label-selectall-img"><div class="category-label-selectall-hovertext">Unselect All</div>';
 }
 
 function unselectAll(compressedstring, element) {
@@ -518,5 +527,6 @@ function unselectAll(compressedstring, element) {
   element.onclick = function () {
     selectAll(compressedstring, element);
   };
-  element.innerHTML = '<img src="images/select-all-button/chiseled_bookshelf_empty.png" class="category-label-selectall-img"><div class="category-label-selectall-hovertext">Select All</div>';
+  element.innerHTML =
+    '<img src="images/select-all-button/chiseled_bookshelf_empty.png" class="category-label-selectall-img"><div class="category-label-selectall-hovertext">Select All</div>';
 }
