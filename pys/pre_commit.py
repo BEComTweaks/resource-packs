@@ -22,8 +22,8 @@ check("lzstring")
 from lzstring import LZString
 from json import dumps
 
-category_start = '<div class="category"><div class="category-label" onclick="toggleCategory(this)">topic_name</div><div class="category-controlled"><div class="tweaks">'
-subcategory_start = '<div class="subcategory"><div class="category-label" onclick="toggleCategory(this)">topic_name</div><div class="category-controlled"><div class="subcattweaks">'
+category_start = '<div class="category"><div class="category-label" onclick="toggleCategory(this)">topic_name</div><button class="category-label-selectall" onclick="selectAll(\u0027<all_packs>\u0027,this)"><img src="images/select-all-button/chiseled_bookshelf_empty.png" class="category-label-selectall-img"><div class="category-label-selectall-hovertext">Select All</div></button><div class="category-controlled"><div class="tweaks">'
+subcategory_start = '<div class="subcategory"><div class="category-label" onclick="toggleCategory(this)">topic_name</div><button class="category-label-selectall sub" onclick="selectAll(\u0027<all_packs>\u0027,this)"><img src="images/select-all-button/chiseled_bookshelf_empty.png" class="category-label-selectall-img"><div class="category-label-selectall-hovertext">Select All</div></button><div class="category-controlled"><div class="subcattweaks">'
 pack_start = '<div class="tweak" onclick="toggleSelection(this)" data-category="topic_name" data-name="pack_id" data-index="pack_index">'
 html_comp = '<div class="comp-hover-text">Incompatible with: <incompatible></div>'
 pack_mid = '<div class="tweak-info"><input type="checkbox" id="tweaknumber" name="tweak" value="tweaknumber"><img src="https://raw.githubusercontent.com/BEComTweaks/resource-packs/main/relloctopackicon"style="width:82px; height:82px;" alt="pack_name"><br><label id="tweak" class="tweak-title">pack_name</label><div class="tweak-description">pack_description</div></div>'
@@ -56,7 +56,7 @@ with open(f"{cdir()}/jsons/others/pack_order_list.txt","r") as pol:
 
 parser = argparse.ArgumentParser(description='Run a massive script that updates Packs to-do, Icons to-do, Compatibilities to-do and the HTML')
 parser.add_argument('--format', action='store_true', help='Include flag to format files')
-parser.add_argument('--use-relative-location', action='store_true', help='Use relative location')
+parser.add_argument('--use-relative-location', '-rl', action='store_true', help='Use relative location')
 args = parser.parse_args()
 
 # Counts Packs and Compatibilities
@@ -71,6 +71,7 @@ for j in pack_list:
         incomplete_pkics[file["topic"]] = []
         incomplete_packs[file["topic"]] = []
         html += category_start.replace("topic_name", file["topic"])
+        current_category_packs = { "raw": [] }
         # Runs through the packs
         for i in range(len(file["packs"])):
             # Updates Incomplete Packs
@@ -185,6 +186,8 @@ for j in pack_list:
                 if args.use_relative_location:
                     to_add_pack = to_add_pack.replace("https://raw.githubusercontent.com/BEComTweaks/resource-packs/main/","../")
                 html += to_add_pack
+                current_category_packs["raw"].append(file["packs"][i]["pack_id"])
+    html = html.replace("<all_packs>", LZString.compressToEncodedURIComponent(dumps(current_category_packs)))
     try:
         if pack_list[pack_list.index(origj) + 1].startswith("\t"):
             html += cat_end_w_subcat_no_end
@@ -217,6 +220,7 @@ for j in range(len(subcat_list)):
     incomplete_pkics[file["topic"]] = []
     incomplete_packs[file["topic"]] = []
     pack_html += subcategory_start.replace("topic_name", f'{file["subcategory_of"]} > <b>{file["topic"]}</b>')
+    current_category_packs = { "raw": [] }
     for i in range(len(file["packs"])):
         # Updates Incomplete Packs
         try:
@@ -330,8 +334,10 @@ for j in range(len(subcat_list)):
             if args.use_relative_location:
                 to_add_pack = to_add_pack.replace("https://raw.githubusercontent.com/BEComTweaks/resource-packs/main/","../")
             pack_html += to_add_pack
+            current_category_packs["raw"].append(file["packs"][i]["pack_id"])
     pack_html += category_end
     html = html.replace(f'<div class="subcat{j}"></div>',pack_html)
+    html = html.replace("<all_packs>", LZString.compressToEncodedURIComponent(dumps(current_category_packs)))
 clrprint("Finished Counting!", clr="green")
 
 # HTML formatting

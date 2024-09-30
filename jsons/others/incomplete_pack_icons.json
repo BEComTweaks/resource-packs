@@ -1,22 +1,35 @@
 {
   "Aesthetic": [],
   "Terrain": [],
-  "Variation": ["VariatedVillagers"],
+  "Variation": [
+    "VariatedVillagers"
+  ],
   "Peace and Quiet": [],
-  "Utility": ["NoteBlockPitchParticle"],
-  "Unobtrusive": ["NoCherryLeavesParticles", "NoFog"],
+  "Utility": [
+    "NoteBlockPitchParticle"
+  ],
+  "Unobtrusive": [
+    "NoCherryLeavesParticles",
+    "NoFog"
+  ],
   "3D": [],
   "GUI": [],
   "Menu Panoramas": [],
-  "Retro": ["OldPotionColors"],
-  "Fun": ["AnvilFallingSoundtoMetalPipe"],
+  "Retro": [
+    "OldPotionColors"
+  ],
+  "Fun": [
+    "AnvilFallingSoundtoMetalPipe"
+  ],
   "World of Color": [],
   "Parity": [],
   "Fixes and Consistency": [],
   "More Zombies": [],
   "Lower and Sides": [],
   "Mobs": [],
-  "Clear Blocks": ["DirectionalCalibratedSculkSensors"],
+  "Clear Blocks": [
+    "DirectionalCalibratedSculkSensors"
+  ],
   "Crosshairs": [],
   "Hearts": [],
   "LGBTQ+ Pride": [],

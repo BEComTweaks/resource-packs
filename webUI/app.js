@@ -101,21 +101,19 @@ function getTimeoutDuration() {
 }
 // toggle category
 function toggleCategory(label) {
-  const tweaksContainer = label.nextElementSibling;
+  const tweaksContainer = label.parentElement.querySelector(".category-controlled");
   const timeoutDuration = getTimeoutDuration();
-  const unSelectAllElement = document.querySelector(".un_selectall");
-
+  const selectallbutton = label.nextElementSibling;
   if (tweaksContainer.style.maxHeight) {
     // close category
     tweaksContainer.style.maxHeight = null;
+    selectallbutton.style.opacity = 0;
     setTimeout(() => {
       tweaksContainer.style.display = "none";
       tweaksContainer.style.paddingTop = null;
       tweaksContainer.style.paddingBottom = null;
       label.classList.remove("open");
-      if (!document.querySelector(".category-controlled").offsetParent) {
-        unSelectAllElement.style.display = "none";
-      }
+      selectallbutton.style.display = "none";
     }, timeoutDuration); // Matches the transition duration
   } else {
     // open category
@@ -124,14 +122,14 @@ function toggleCategory(label) {
     tweaksContainer.style.paddingBottom = "7.5px";
     label.classList.add("open");
     tweaksContainer.style.maxHeight = tweaksContainer.scrollHeight + "px";
-    const outerCatLabel =
-      label.parentElement.parentElement.previousElementSibling;
-    const outerCatContainer = label.parentElement.parentElement;
-    if (outerCatLabel.classList.contains("category-label")) {
+    const outerCatLabel = label.parentElement.parentElement.parentElement.querySelector(".category-label");
+    const outerCatContainer = label.parentElement.parentElement.parentElement.querySelector(".category-controlled");
+    if (outerCatLabel) {
       outerCatContainer.style.maxHeight =
         outerCatContainer.scrollHeight + tweaksContainer.scrollHeight + "px";
     }
-    unSelectAllElement.style.display = "block";
+    selectallbutton.style.display = "block";
+    selectallbutton.style.opacity = 1;
   }
 }
 // i wonder what this is for
@@ -506,9 +504,9 @@ function selectAll(compressedstring, element) {
   processJsonData(st, "select");
   updateURL();
   element.onclick = function () {
-    event.stopPropagation();
     unselectAll(compressedstring, element);
   };
+  element.innerHTML = '<img src="images/select-all-button/chiseled_bookshelf_occupied.png" class="category-label-selectall-img"><div class="category-label-selectall-hovertext">Unselect All</div>';
 }
 
 function unselectAll(compressedstring, element) {
@@ -518,7 +516,7 @@ function unselectAll(compressedstring, element) {
   processJsonData(st, "unselect");
   updateURL();
   element.onclick = function () {
-    event.stopPropagation();
     selectAll(compressedstring, element);
   };
+  element.innerHTML = '<img src="images/select-all-button/chiseled_bookshelf_empty.png" class="category-label-selectall-img"><div class="category-label-selectall-hovertext">Select All</div>';
 }
