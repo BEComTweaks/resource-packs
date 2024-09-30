@@ -538,6 +538,10 @@ function selectAll(compressedstring, element) {
 function partialSelected(element) {
   element.innerHTML =
     '<img src="images/select-all-button/chiseled_bookshelf_has_selected.png" class="category-label-selectall-img"><div class="category-label-selectall-hovertext">Select All</div>';
+  const compressedstring = element.onclick.toString().split("'")[1];
+  element.onclick = function () {
+    selectAll(compressedstring, element);
+  };
 }
 
 function unselectAll(compressedstring, element) {
