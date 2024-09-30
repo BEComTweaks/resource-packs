@@ -55,12 +55,27 @@ function toggleSelection(element) {
     tweakItem.textContent = "Select some packs and see them appear here!";
     document.getElementById("selected-tweaks").appendChild(tweakItem);
   }
-  updateURL();
+  var selectedTweaks = getSelectedTweaks();
+  var dataCategory = element.dataset.category;
+  const selectAllElement =
+    element.parentElement.parentElement.parentElement.querySelector(
+      ".category-label-selectall",
+    );
+  if (selectedTweaks[dataCategory]["packs"].length == 0) {
+    unselectAll("", selectAllElement);
+  } else if (
+    selectedTweaks[dataCategory]["packs"].length ==
+    element.parentElement.querySelectorAll(".tweak").length
+  ) {
+    selectAll("", selectAllElement);
+  } else {
+    partialSelected(selectAllElement);
+  }
+  updateURL(getSelectedTweaks());
 }
 
 // query params function
-function updateURL() {
-  var st = getSelectedTweaks();
+function updateURL(st) {
   for (var key in st) {
     try {
       if (st[key].packs) {
@@ -506,27 +521,36 @@ document
 
 // select all tweaks
 function selectAll(compressedstring, element) {
-  const st = JSON.parse(
-    LZString.decompressFromEncodedURIComponent(compressedstring),
-  );
-  processJsonData(st, "select");
-  updateURL();
-  element.onclick = function () {
-    unselectAll(compressedstring, element);
-  };
+  if (compressedstring != "") {
+    const st = JSON.parse(
+      LZString.decompressFromEncodedURIComponent(compressedstring),
+    );
+    processJsonData(st, "select");
+    updateURL(st);
+    element.onclick = function () {
+      unselectAll(compressedstring, element);
+    };
+  }
   element.innerHTML =
     '<img src="images/select-all-button/chiseled_bookshelf_occupied.png" class="category-label-selectall-img"><div class="category-label-selectall-hovertext">Unselect All</div>';
 }
 
+function partialSelected(element) {
+  element.innerHTML =
+    '<img src="images/select-all-button/chiseled_bookshelf_has_selected.png" class="category-label-selectall-img"><div class="category-label-selectall-hovertext">Select All</div>';
+}
+
 function unselectAll(compressedstring, element) {
-  const st = JSON.parse(
-    LZString.decompressFromEncodedURIComponent(compressedstring),
-  );
-  processJsonData(st, "unselect");
-  updateURL();
-  element.onclick = function () {
-    selectAll(compressedstring, element);
-  };
+  if (compressedstring != "") {
+    const st = JSON.parse(
+      LZString.decompressFromEncodedURIComponent(compressedstring),
+    );
+    processJsonData(st, "unselect");
+    updateURL(st);
+    element.onclick = function () {
+      selectAll(compressedstring, element);
+    };
+  }
   element.innerHTML =
     '<img src="images/select-all-button/chiseled_bookshelf_empty.png" class="category-label-selectall-img"><div class="category-label-selectall-hovertext">Select All</div>';
 }
