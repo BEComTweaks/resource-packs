@@ -24,8 +24,11 @@
 [PAPISOP](https://github.com/PAPISOP) and [Arachi (Chi-a11y)](https://github.com/Chi-a11y)
 - A lot of packs from [BedrockTweaks/Files](https://github.com/BedrockTweaks/Files). [PAPISOP's PRs](https://github.com/BedrockTweaks/Files/pulls/PAPISOP) and [Arachi's PRs](https://github.com/BedrockTweaks/Files/pulls/Chi-a11y)
 
+[Tal](https://twitter.com/melamed_tal/)'s [Clear Wire Pack](https://mcpedl.com/clear-wire-texture-pack/) and NSPC911's [continuation](https://github.com/NSPC911/Clear-Vanilla)
+- Most of the packs available in Utility > Clear Blocks
+
 [HampsterChief](https://discord.com/users/1053822004211482676)
-- Turned Anvls nto a Metal Pipe
+- Turned Anvils into a Metal Pipe
 
 [NSPC911](https://github.com/NSPC911)
 - Yep, that's me, the one who started this all!

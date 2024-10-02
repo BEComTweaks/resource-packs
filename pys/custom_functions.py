@@ -1,25 +1,22 @@
-import os
-import importlib
-import pip
-from pip import main
-import time
-import traceback
+import os, sys, importlib, time, traceback, urllib.parse
+from subprocess import run, CalledProcessError
 
-
-# If I need a module that isn't installed
 def check(module, module_name=""):
     try:
         importlib.import_module(module)
     except ModuleNotFoundError:
         print(f"{module} is not installed!")
-        if module_name == "":
-            # Using pip instead of subprocess as calling
-            # with terminal results in an error
-            pip.main(["install", module])
-        else:
-            # Using pip instead of subprocess as calling
-            # with terminal results in an error
-            pip.main(["install", module_name])
+        try:
+            if module_name == "":
+                print(f"Installing {module}...")
+                run([sys.executable, "-m", "pip", "install", module, "--quiet"], check=True)
+            else:
+                print(f"Installing {module_name}...")
+                run([sys.executable, "-m", "pip", "install", module_name, "--quiet"], check=True)
+            print(f"Installed {module}!")
+        except CalledProcessError:
+            print(f"Failed to install {module}!")
+            exit(1)
         time.sleep(1)
 
 
@@ -28,7 +25,6 @@ from clrprint import clrprint
 
 check("ujson")
 from ujson import *
-
 
 # For module to be easy to use and not require
 # the start of the program to be cluttered

@@ -1,20 +1,21 @@
 @import url("https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap");
+
 :root {
   --dark-border-hover: rgb(122, 124, 129);
   --dark-border-ninety: rgba(106, 108, 112, 0.875);
   --dark-border: rgb(106, 108, 112);
   --dark-one-ninety: rgba(72, 73, 74, 0.875);
-  --dark-zero: rgb(61, 62, 63);
   --dark-one: rgb(72, 73, 74);
   --dark-two: rgb(83, 84, 85);
+  --dark-zero: rgb(61, 62, 63);
   --green-border-hover: rgb(99, 157, 82);
   --green-border: rgb(99, 157, 82);
   --green-one: rgb(60, 133, 39);
   --green-two: rgb(71, 144, 50);
-  --red-zero: rgb(111, 44, 33);
+  --leftmargin: 2.5%;
   --red-one: rgb(133, 60, 39);
   --red-two: rgb(144, 71, 50);
-  --leftmargin: 2.5%;
+  --red-zero: rgb(111, 44, 33);
   --rightmargin: 325px;
 }
 
@@ -50,10 +51,20 @@ body {
   padding: 0;
 }
 
+button {
+  color: white;
+  font-family: "Pixelify Sans";
+}
+
 header {
   color: grey;
   padding: 10px 0;
   text-align: center;
+}
+
+input {
+  color: white;
+  font-family: "Pixelify-Sans";
 }
 
 li {
@@ -68,6 +79,11 @@ li a {
   text-decoration: none;
 }
 
+select {
+  color: white;
+  font-family: "Pixelify-Sans";
+}
+
 #background-container {
   background-size: cover;
   display: flex;
@@ -75,6 +91,7 @@ li a {
   grid-template-columns: repeat(auto-fill, 100px);
   grid-template-rows: repeat(auto-fill, 100px);
   height: 100%;
+  image-rendering: pixelated;
   left: 0;
   overflow: visible;
   pointer-events: none;
@@ -100,10 +117,10 @@ li a {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   height: auto;
   margin-top: 35px;
-  width: 100%;
   position: relative;
   size: cover;
   text-align: center;
+  width: 100%;
   z-index: 1;
 }
 
@@ -134,14 +151,61 @@ li a {
   border-width: 5px;
   cursor: pointer;
   font-size: 20px;
+  height: 25px;
   margin-bottom: -5px;
   padding: 5px;
   text-align: center;
   transition:
-    background-color 0.25s ease,
-    border-color 0.5s ease;
+    background-color 0.5s ease-in-out,
+    border-color 0.5s ease-in-out;
   user-select: none;
   z-index: 13;
+}
+
+.category-label-selectall {
+  background-color: var(--dark-one);
+  border-color: #00000000;
+  border-radius: 2.5px;
+  cursor: pointer;
+  display: none;
+  height: 30px;
+  opacity: 0;
+  position: absolute;
+  right: 30px;
+  transform: translateY(-108%);
+  width: 30px;
+}
+
+.category-label-selectall-hovertext {
+  background-color: var(--dark-two);
+  border-radius: 5px;
+  display: none;
+  font-size: 15px;
+  transform: translate(-125%, -142%);
+  width: max-content;
+}
+
+.category-label-selectall-img {
+  height: 100%;
+  image-rendering: pixelated;
+  transform: translateX(-20%);
+  width: auto;
+}
+
+.category-label-selectall.sub {
+  transform: translate(-100%, -108%);
+}
+
+.category-label-selectall:active {
+  background-color: var(--green-two);
+}
+
+.category-label-selectall:hover {
+  background-color: var(--dark-border);
+}
+
+.category-label-selectall:hover .category-label-selectall-hovertext {
+  display: block;
 }
 
 .category-label.open {
@@ -220,9 +284,9 @@ li a {
 
 .download-container {
   background: var(--dark-one);
-  border: solid;
   border-color: var(--dark-border-ninety);
   border-radius: 10px;
+  border-style: solid;
   border-width: 5px;
   height: 150px;
   position: fixed;
@@ -264,17 +328,17 @@ li a {
 }
 
 .download-selected-button.http {
+  animation: rotateBorderHttp 3.75s linear infinite reverse;
+  background: var(--dark-zero);
   border-color: #00000000;
   border-image: linear-gradient(90deg, var(--red-one), var(--dark-two)) round;
   border-radius: 5px;
   border-style: solid;
-  animation: rotateBorderHttp 3.75s linear infinite reverse;
-  background: var(--dark-zero);
 }
 
 .download-selected-button.http.s {
-  border-image: linear-gradient(90deg, var(--green-one), var(--dark-one)) round;
   animation: rotateBorderHttps 3.75s linear infinite;
+  border-image: linear-gradient(90deg, var(--green-one), var(--dark-one)) round;
 }
 
 .download-selected-button.http.s:hover {
@@ -282,8 +346,8 @@ li a {
 }
 
 .download-selected-button.http:hover {
-  border-color: #00000000;
   background: var(--red-two);
+  border-color: #00000000;
 }
 
 .download-selected-button:hover {
@@ -309,7 +373,6 @@ li a {
   border-radius: 5px;
   border-style: inset;
   border-width: 4.375px;
-  color: #eeeeee;
   margin-bottom: 5px;
   margin-top: 10px;
   padding-bottom: 10px;
@@ -328,7 +391,6 @@ li a {
   border-radius: 5px;
   border-style: inset;
   border-width: 4.375px;
-  color: #eeeeee;
   font-family: "Pixelify Sans";
   padding-left: 17.5px;
   padding-right: 17.5px;
@@ -573,8 +635,8 @@ li a {
 
 @media (min-height: 320px) {
   #selected-tweaks {
-    max-height: 25vh;
     margin-bottom: 10px;
+    max-height: 25vh;
   }
 }
 
@@ -653,7 +715,7 @@ li a {
   }
 
   .subcattweaks {
-    grid-template-columns: repeat(auto-fit, minmax(162.5px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   }
 
   .tweak-list-category {

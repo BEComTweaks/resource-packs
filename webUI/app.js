@@ -3,16 +3,25 @@ function sleep(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
+function enableSelection(element, checkbox) {
+  element.classList.add("selected");
+  checkbox.checked = true;
+}
+
+function disableSelection(element, checkbox) {
+  element.classList.remove("selected");
+  checkbox.checked = false;
+}
+
 function toggleSelection(element) {
-  // toggle the pack
-  element.classList.toggle("selected");
   const checkbox = element.querySelector('input[type="checkbox"]');
-  checkbox.checked = !checkbox.checked;
   // logging
   if (checkbox.checked) {
-    console.log(`Selected ${element.dataset.name}`);
-  } else {
+    disableSelection(element, checkbox);
     console.log(`Unselected ${element.dataset.name}`);
+  } else {
+    enableSelection(element, checkbox);
+    console.log(`Selected ${element.dataset.name}`);
   }
   // send to selected tweaks
   var selectedTweaks = [];
@@ -46,8 +55,27 @@ function toggleSelection(element) {
     tweakItem.textContent = "Select some packs and see them appear here!";
     document.getElementById("selected-tweaks").appendChild(tweakItem);
   }
-  // query params
-  var st = getSelectedTweaks();
+  var selectedTweaks = getSelectedTweaks();
+  var dataCategory = element.dataset.category;
+  const selectAllElement =
+    element.parentElement.parentElement.parentElement.querySelector(
+      ".category-label-selectall",
+    );
+  if (selectedTweaks[dataCategory]["packs"].length == 0) {
+    unselectAll("", selectAllElement);
+  } else if (
+    selectedTweaks[dataCategory]["packs"].length ==
+    element.parentElement.querySelectorAll(".tweak").length
+  ) {
+    selectAll("", selectAllElement);
+  } else {
+    partialSelected(selectAllElement);
+  }
+  updateURL(getSelectedTweaks());
+}
+
+// query params function
+function updateURL(st) {
   for (var key in st) {
     try {
       if (st[key].packs) {
@@ -72,14 +100,13 @@ function toggleSelection(element) {
   // update url
   window.history.replaceState({}, "", newUrl);
 }
-
 // if query params already exists
 const loadedparams = new URLSearchParams(window.location.search);
 if (loadedparams.has("st_raw")) {
   const st = JSON.parse(
     LZString.decompressFromEncodedURIComponent(loadedparams.get("st_raw")),
   );
-  processJsonData(st);
+  processJsonData(st, "select");
 }
 // for people who want instant stuff
 const mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
@@ -89,17 +116,21 @@ function getTimeoutDuration() {
 }
 // toggle category
 function toggleCategory(label) {
-  const tweaksContainer = label.nextElementSibling;
+  const tweaksContainer = label.parentElement.querySelector(
+    ".category-controlled",
+  );
   const timeoutDuration = getTimeoutDuration();
-
+  const selectallbutton = label.nextElementSibling;
   if (tweaksContainer.style.maxHeight) {
     // close category
     tweaksContainer.style.maxHeight = null;
+    selectallbutton.style.opacity = 0;
     setTimeout(() => {
       tweaksContainer.style.display = "none";
       tweaksContainer.style.paddingTop = null;
       tweaksContainer.style.paddingBottom = null;
       label.classList.remove("open");
+      selectallbutton.style.display = "none";
     }, timeoutDuration); // Matches the transition duration
   } else {
     // open category
@@ -109,12 +140,19 @@ function toggleCategory(label) {
     label.classList.add("open");
     tweaksContainer.style.maxHeight = tweaksContainer.scrollHeight + "px";
     const outerCatLabel =
-      label.parentElement.parentElement.previousElementSibling;
-    const outerCatContainer = label.parentElement.parentElement;
-    if (outerCatLabel.classList.contains("category-label")) {
+      label.parentElement.parentElement.parentElement.querySelector(
+        ".category-label",
+      );
+    const outerCatContainer =
+      label.parentElement.parentElement.parentElement.querySelector(
+        ".category-controlled",
+      );
+    if (outerCatLabel) {
       outerCatContainer.style.maxHeight =
         outerCatContainer.scrollHeight + tweaksContainer.scrollHeight + "px";
     }
+    selectallbutton.style.display = "block";
+    selectallbutton.style.opacity = 1;
   }
 }
 // i wonder what this is for
@@ -219,15 +257,20 @@ function fetchPack(protocol, jsonData, packName, mcVersion) {
 }
 
 // process json data from url/json
-function processJsonData(jsonData) {
+function processJsonData(jsonData, dowhat) {
   const rawPacks = jsonData.raw;
 
   if (Array.isArray(rawPacks)) {
     rawPacks.forEach(function (pack) {
       const div = document.querySelector(`div.tweak[data-name="${pack}"]`);
       if (div) {
-        toggleSelection(div);
-        console.log(`Toggled Selection of ${pack}`);
+        if (dowhat == "select") {
+          enableSelection(div, div.querySelector('input[type="checkbox"]'));
+          console.log(`Selected ${pack}`);
+        } else if (dowhat == "unselect") {
+          disableSelection(div, div.querySelector('input[type="checkbox"]'));
+          console.log(`Unselected ${pack}`);
+        }
       } else {
         console.error(`Div with data-name="${pack}" not found.`);
       }
@@ -446,7 +489,7 @@ document
                   .then(function (content) {
                     try {
                       const jsonData = JSON.parse(content);
-                      processJsonData(jsonData);
+                      processJsonData(jsonData, "select");
                     } catch (error) {
                       console.error("Error parsing JSON:", error);
                     }
@@ -475,3 +518,43 @@ document
       console.error("No file selected.");
     }
   });
+
+// select all tweaks
+function selectAll(compressedstring, element) {
+  if (compressedstring != "") {
+    const st = JSON.parse(
+      LZString.decompressFromEncodedURIComponent(compressedstring),
+    );
+    processJsonData(st, "select");
+    updateURL(st);
+    element.onclick = function () {
+      unselectAll(compressedstring, element);
+    };
+  }
+  element.innerHTML =
+    '<img src="images/select-all-button/chiseled_bookshelf_occupied.png" class="category-label-selectall-img"><div class="category-label-selectall-hovertext">Unselect All</div>';
+}
+
+function partialSelected(element) {
+  element.innerHTML =
+    '<img src="images/select-all-button/chiseled_bookshelf_has_selected.png" class="category-label-selectall-img"><div class="category-label-selectall-hovertext">Select All</div>';
+  const compressedstring = element.onclick.toString().split("'")[1];
+  element.onclick = function () {
+    selectAll(compressedstring, element);
+  };
+}
+
+function unselectAll(compressedstring, element) {
+  if (compressedstring != "") {
+    const st = JSON.parse(
+      LZString.decompressFromEncodedURIComponent(compressedstring),
+    );
+    processJsonData(st, "unselect");
+    updateURL(st);
+    element.onclick = function () {
+      selectAll(compressedstring, element);
+    };
+  }
+  element.innerHTML =
+    '<img src="images/select-all-button/chiseled_bookshelf_empty.png" class="category-label-selectall-img"><div class="category-label-selectall-hovertext">Select All</div>';
+}
