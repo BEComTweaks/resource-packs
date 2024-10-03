@@ -4,11 +4,7 @@
   "Variation": ["VariatedVillagers"],
   "Peace and Quiet": [],
   "Utility": ["NoteBlockPitchParticle"],
-  "Unobtrusive": [
-    "NoCherryLeavesParticles",
-    "NoParticles",
-    "TranslucentPortal"
-  ],
+  "Unobtrusive": [],
   "3D": [],
   "GUI": [],
   "Menu Panoramas": [],
@@ -21,8 +17,6 @@
   "Lower and Sides": [],
   "Mobs": [],
   "Clear Blocks": [
-    "BackPiston",
-    "DirectionalCalibratedSculkSensors",
     "DirectionalDispensers",
     "DirectionalDroppers",
     "DirectionalLava",
