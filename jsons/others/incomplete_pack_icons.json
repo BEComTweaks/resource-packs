@@ -4,7 +4,12 @@
   "Variation": ["VariatedVillagers"],
   "Peace and Quiet": [],
   "Utility": ["NoteBlockPitchParticle"],
-  "Unobtrusive": ["NoCherryLeavesParticles", "NoFog"],
+  "Unobtrusive": [
+    "NoCherryLeavesParticles",
+    "NoParticles",
+    "NoFog",
+    "TranslucentPortal"
+  ],
   "3D": [],
   "GUI": [],
   "Menu Panoramas": [],
@@ -16,7 +21,24 @@
   "More Zombies": [],
   "Lower and Sides": [],
   "Mobs": [],
-  "Clear Blocks": ["DirectionalCalibratedSculkSensors"],
+  "Clear Blocks": [
+    "BackPiston",
+    "DirectionalCalibratedSculkSensors",
+    "DirectionalDispensers",
+    "DirectionalDroppers",
+    "DirectionalLava",
+    "DirectionalWater"
+  ],
+  "Growth Stages": [
+    "AmethystGrowth",
+    "BeetrootGrowth",
+    "CarrotGrowth",
+    "CocoaPodGrowth",
+    "NetherWartGrowth",
+    "PotatoGrowth",
+    "SweetBerryBushGrowth",
+    "WheatGrowth"
+  ],
   "Crosshairs": [],
   "Hearts": [],
   "LGBTQ+ Pride": [],

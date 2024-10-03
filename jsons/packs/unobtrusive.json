@@ -30,6 +30,13 @@
       "compatibility": []
     },
     {
+      "pack_id": "NoParticles",
+      "pack_name": "No Particles",
+      "pack_description": "Removes all particles for easier vision.",
+      "conflict": [],
+      "compatibility": []
+    },
+    {
       "pack_id": "BorderlessGlass",
       "pack_name": "Borderless Glass",
       "pack_description": "Gets rid of the border on the edges of Glass to make it cleaner and more transparent.",
@@ -160,9 +167,22 @@
       "compatibility": []
     },
     {
+      "pack_id": "TranslucentPortal",
+      "pack_name": "Translucent Portal",
+      "pack_description": "Turns the portal blocks translucent to make it easier to see through",
+      "conflict": [],
+      "compatibility": []
+    },
+    {
       "pack_id": "SmallerUtilities",
       "pack_name": "Smaller Utilities",
       "pack_description": "Makes utility items such as Food, Totems, Firework Rockets and Potions smaller.",
+      "details": {
+        "message": [
+          "error",
+          "A Minecraft bug causes fishes to turn to their item variant. Can't be fixed."
+        ]
+      },
       "conflict": [],
       "compatibility": []
     },

@@ -20,7 +20,6 @@ check("bs4","beautifulsoup4")
 from bs4 import BeautifulSoup
 check("lzstring")
 from lzstring import LZString
-from json import dumps
 
 category_start = '<div class="category"><div class="category-label" onclick="toggleCategory(this)">topic_name</div><button class="category-label-selectall" onclick="selectAll(\u0027<all_packs>\u0027,this)"><img src="images/select-all-button/chiseled_bookshelf_empty.png" class="category-label-selectall-img"><div class="category-label-selectall-hovertext">Select All</div></button><div class="category-controlled"><div class="tweaks">'
 subcategory_start = '<div class="subcategory"><div class="category-label" onclick="toggleCategory(this)">topic_name</div><button class="category-label-selectall sub" onclick="selectAll(\u0027<all_packs>\u0027,this)"><img src="images/select-all-button/chiseled_bookshelf_empty.png" class="category-label-selectall-img"><div class="category-label-selectall-hovertext">Select All</div></button><div class="category-controlled"><div class="subcattweaks">'
@@ -99,13 +98,17 @@ for j in pack_list:
                 else:
                     # When pack icon is complete
                     pkicstats[0] += 1
-            except:
-                if file["packs"][i]["details"]["icon"] != "png": # Assuming pack icon is done
-                    pkicstats[0] += 1
-                else:
-                    # When pack icon doesn't even exist
-                    incomplete_pkics[file["topic"]].append(file["packs"][i]["pack_id"])
-                    pkicstats[1] += 1
+            except FileNotFoundError:
+                try:
+                    if file["packs"][i]["details"]["icon"] != "png": # Assuming pack icon is done
+                        pkicstats[0] += 1
+                    else:
+                        # When pack icon doesn't even exist
+                        incomplete_pkics[file["topic"]].append(file["packs"][i]["pack_id"])
+                        pkicstats[1] += 1
+                except KeyError:
+                        incomplete_pkics[file["topic"]].append(file["packs"][i]["pack_id"])
+                        pkicstats[1] += 1
             # Updates Incomplete Pack Compatibilities
             for comp in range(len(file["packs"][i]["compatibility"])):  # If it is empty, it just skips
                 # Looks at compatibility folders
@@ -247,11 +250,15 @@ for j in range(len(subcat_list)):
             else:
                 # When pack icon is complete
                 pkicstats[0] += 1
-        except:
-            if file["packs"][i]["details"]["icon"] != "png": # Assuming pack_icon is done
-                pkicstats[0] += 1
-            else:
-                # When pack icon doesn't even exist
+        except FileNotFoundError:
+            try:
+                if file["packs"][i]["details"]["icon"] != "png": # Assuming pack_icon is done
+                    pkicstats[0] += 1
+                else:
+                    # When pack icon doesn't even exist
+                    incomplete_pkics[file["topic"]].append(file["packs"][i]["pack_id"])
+                    pkicstats[1] += 1
+            except KeyError:
                 incomplete_pkics[file["topic"]].append(file["packs"][i]["pack_id"])
                 pkicstats[1] += 1
         

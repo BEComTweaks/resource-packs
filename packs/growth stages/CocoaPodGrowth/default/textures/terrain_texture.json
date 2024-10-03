@@ -1,0 +1,15 @@
+{
+  "resource_pack_name": "vanilla",
+  "texture_name": "atlas.terrain",
+  "padding": 8,
+  "num_mip_levels": 4,
+  "texture_data": {
+    "cocoa": {
+      "textures": [
+        "textures/blocks/cocoa_stage_0",
+        "textures/blocks/cocoa_stage_1",
+        "textures/blocks/cocoa_stage_2"
+      ]
+    }
+  }
+}

@@ -23,16 +23,16 @@
       "compatibility": []
     },
     {
-      "pack_id": "ShinyAgedAmethystCluster",
-      "pack_name": "Shiny Aged Amethyst Cluster",
-      "pack_description": "Makes all fully aged Amethyst clusters have a shining texture.",
+      "pack_id": "Age25Kelp",
+      "pack_name": "Age 25 Kelp",
+      "pack_description": "Adds flowers to the top of kelp plants when they are fully grown. {age=25}.",
       "conflict": [],
       "compatibility": []
     },
     {
-      "pack_id": "Age25Kelp",
-      "pack_name": "Age 25 Kelp",
-      "pack_description": "Adds flowers to the top of kelp plants when they are fully grown. {age=25}.",
+      "pack_id": "BackPiston",
+      "pack_name": "Back Piston",
+      "pack_description": "Adds a dot on the backside of the Piston and Sticky Piston to make the easier distinguishable.",
       "conflict": [],
       "compatibility": []
     },
@@ -53,7 +53,53 @@
     {
       "pack_id": "DirectionalCalibratedSculkSensors",
       "pack_name": "Directional Calibrated Sculk Sensors",
-      "pack_description": "Adds arrows to the sides of sculk sensors to indicate the output direction.",
+      "pack_description": "Adds arrows to the sides of Sculk Sensors to indicate the output direction.",
+      "conflict": [],
+      "compatibility": []
+    },
+    {
+      "pack_id": "DirectionalDispensers",
+      "pack_name": "Directional Dispensers",
+      "pack_description": "Adds arrows to the sides of Dispensers to indicate direction of output",
+      "details": {
+        "message": [
+          "error",
+          "The face's opposite side doesn't show the direction properly. Known issue but can't fix."
+        ]
+      },
+      "conflict": [],
+      "compatibility": []
+    },
+    {
+      "pack_id": "DirectionalDroppers",
+      "pack_name": "Directional Droppers",
+      "pack_description": "Adds arrows to the sides of Droppers to indicate direction of output",
+      "details": {
+        "message": [
+          "error",
+          "The face's opposite side doesn't show the direction properly. Known issue but can't fix."
+        ]
+      },
+      "conflict": [],
+      "compatibility": []
+    },
+    {
+      "pack_id": "DirectionalLava",
+      "pack_name": "Directional Lava",
+      "pack_description": "Adds arrows to lava to show the flowing direction",
+      "conflict": [],
+      "compatibility": []
+    },
+    {
+      "pack_id": "DirectionalWater",
+      "pack_name": "Directional Water",
+      "pack_description": "Adds arrows to water to show the flowing direction",
+      "details": {
+        "message": [
+          "warn",
+          "The arrows may not be visible due to how water is rendered."
+        ]
+      },
       "conflict": [],
       "compatibility": []
     },

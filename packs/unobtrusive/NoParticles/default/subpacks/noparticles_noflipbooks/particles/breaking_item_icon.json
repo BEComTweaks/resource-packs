@@ -1,0 +1,21 @@
+{
+  "format_version": "1.10.0",
+  "particle_effect": {
+    "description": {
+      "identifier": "minecraft:breaking_item_icon",
+      "basic_render_parameters": {
+        "material": "particles_alpha",
+        "texture": "atlas.items"
+      }
+    },
+    "components": {
+      "minecraft:emitter_lifetime_expression": {
+        "activation_expression": 0,
+        "expiration_expression": 1
+      },
+      "minecraft:emitter_rate_manual": {
+        "max_particles": 0
+      }
+    }
+  }
+}
