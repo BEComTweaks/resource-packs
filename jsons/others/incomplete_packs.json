@@ -4,7 +4,7 @@
   "Variation": [],
   "Peace and Quiet": [],
   "Utility": [],
-  "Unobtrusive": [],
+  "Unobtrusive": ["NoFog"],
   "3D": [],
   "GUI": ["TransparentUI", "HighContrastUI"],
   "Menu Panoramas": [],

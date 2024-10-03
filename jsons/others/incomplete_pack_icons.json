@@ -7,7 +7,6 @@
   "Unobtrusive": [
     "NoCherryLeavesParticles",
     "NoParticles",
-    "NoFog",
     "TranslucentPortal"
   ],
   "3D": [],
