@@ -170,6 +170,9 @@
       "pack_id": "TranslucentPortal",
       "pack_name": "Translucent Portal",
       "pack_description": "Turns the portal blocks translucent to make it easier to see through",
+      "details": {
+        "icon": "gif"
+      },
       "conflict": [],
       "compatibility": []
     },
