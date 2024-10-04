@@ -100,7 +100,7 @@ for j in pack_list:
                     pkicstats[0] += 1
             except FileNotFoundError:
                 try:
-                    if file["packs"][i]["details"]["icon"] != "png": # Assuming pack icon is done
+                    if os.path.exists(f'{cdir()}/packs/{file["topic"].lower()}/{file["packs"][i]["pack_id"]}/pack_icon.{file["packs"][i]["details"]["icon"]}'):
                         pkicstats[0] += 1
                     else:
                         # When pack icon doesn't even exist
@@ -182,7 +182,10 @@ for j in pack_list:
                 to_add_pack = to_add_pack.replace("tweaknumber", f"tweak{packs}")
                 to_add_pack = to_add_pack.replace("relloctopackicon", f'packs/{file["topic"].lower()}/{file["packs"][i]["pack_id"]}/pack_icon.png')
                 try:
-                    to_add_pack = to_add_pack.replace("png", file["packs"][i]["details"]["icon"])
+                    if os.path.exists(f'{cdir()}/packs/{file["topic"].lower()}/{file["packs"][i]["pack_id"]}/pack_icon.{file["packs"][i]["details"]["icon"]}'):
+                        # Because I can't make the html use a missing texture thing, some
+                        # it only replaces when it exists
+                        to_add_pack = to_add_pack.replace("png", file["packs"][i]["details"]["icon"])
                 except KeyError:
                     pass
                 # Uses relative location
@@ -252,7 +255,7 @@ for j in range(len(subcat_list)):
                 pkicstats[0] += 1
         except FileNotFoundError:
             try:
-                if file["packs"][i]["details"]["icon"] != "png": # Assuming pack_icon is done
+                if os.path.exists(f'{cdir()}/packs/{file["topic"].lower()}/{file["packs"][i]["pack_id"]}/pack_icon.{file["packs"][i]["details"]["icon"]}'):
                     pkicstats[0] += 1
                 else:
                     # When pack icon doesn't even exist
@@ -335,7 +338,10 @@ for j in range(len(subcat_list)):
             to_add_pack = to_add_pack.replace("tweaknumber", f"tweak{packs}")
             to_add_pack = to_add_pack.replace("relloctopackicon", f'packs/{file["topic"].lower()}/{file["packs"][i]["pack_id"]}/pack_icon.png')
             try:
-                to_add_pack = to_add_pack.replace("png", file["packs"][i]["details"]["icon"])
+                if os.path.exists(f'{cdir()}/packs/{file["topic"].lower()}/{file["packs"][i]["pack_id"]}/pack_icon.{file["packs"][i]["details"]["icon"]}'):
+                    # Because I can't make the html use a missing texture thing, some
+                    # it only replaces when it exists
+                    to_add_pack = to_add_pack.replace("png", file["packs"][i]["details"]["icon"])
             except KeyError:
                 pass
             if args.use_relative_location:
