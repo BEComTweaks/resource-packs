@@ -37,6 +37,13 @@
       "compatibility": []
     },
     {
+      "pack_id": "BrewingGuide",
+      "pack_name": "Brewing Guide",
+      "pack_description": "Adds a cheat sheet to the Brewing Staand interface.",
+      "conflict": [],
+      "compatibility": []
+    },
+    {
       "pack_id": "NumberedHotbar",
       "pack_name": "Numbered Hotbar",
       "pack_description": "Adds numbers to the hotbar slots.",

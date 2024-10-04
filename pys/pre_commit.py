@@ -54,7 +54,7 @@ with open(f"{cdir()}/jsons/others/pack_order_list.txt","r") as pol:
         pack_list.append(i)
 
 parser = argparse.ArgumentParser(description='Run a massive script that updates Packs to-do, Icons to-do, Compatibilities to-do and the HTML')
-parser.add_argument('--format', action='store_true', help='Include flag to format files')
+parser.add_argument('--format', '-f', action='store_true', help='Include flag to format files')
 parser.add_argument('--use-relative-location', '-rl', action='store_true', help='Use relative location')
 args = parser.parse_args()
 

@@ -1,0 +1,73 @@
+{
+  "topic": "Directional",
+  "subcategory_of": "Utility",
+  "packs": [
+    {
+      "pack_id": "DirectionalHoppers",
+      "pack_name": "Directional Hoppers",
+      "pack_description": "Gives Hoppers arrows all around to indicate which direction they are facing.",
+      "conflict": [],
+      "compatibility": []
+    },
+    {
+      "pack_id": "DirectionalObservers",
+      "pack_name": "Directional Observers",
+      "pack_description": "Gives Observers arrows all around to indicate which direction they are facing and display updates.",
+      "conflict": [],
+      "compatibility": ["UpdatedObserverTexture"]
+    },
+    {
+      "pack_id": "DirectionalCalibratedSculkSensors",
+      "pack_name": "Directional Calibrated Sculk Sensors",
+      "pack_description": "Adds arrows to the sides of Sculk Sensors to indicate the output direction.",
+      "conflict": [],
+      "compatibility": []
+    },
+    {
+      "pack_id": "DirectionalDispensers",
+      "pack_name": "Directional Dispensers",
+      "pack_description": "Adds arrows to the sides of Dispensers to indicate direction of output",
+      "details": {
+        "message": [
+          "error",
+          "The face's opposite side doesn't show the direction properly. Known issue but can't fix."
+        ]
+      },
+      "conflict": [],
+      "compatibility": []
+    },
+    {
+      "pack_id": "DirectionalDroppers",
+      "pack_name": "Directional Droppers",
+      "pack_description": "Adds arrows to the sides of Droppers to indicate direction of output",
+      "details": {
+        "message": [
+          "error",
+          "The face's opposite side doesn't show the direction properly. Known issue but can't fix."
+        ]
+      },
+      "conflict": [],
+      "compatibility": []
+    },
+    {
+      "pack_id": "DirectionalLava",
+      "pack_name": "Directional Lava",
+      "pack_description": "Adds arrows to lava to show the flowing direction",
+      "conflict": [],
+      "compatibility": []
+    },
+    {
+      "pack_id": "DirectionalWater",
+      "pack_name": "Directional Water",
+      "pack_description": "Adds arrows to water to show the flowing direction",
+      "details": {
+        "message": [
+          "warn",
+          "The arrows may not be visible due to how water is rendered."
+        ]
+      },
+      "conflict": [],
+      "compatibility": []
+    }
+  ]
+}

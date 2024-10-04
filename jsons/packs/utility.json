@@ -55,6 +55,13 @@
       "compatibility": []
     },
     {
+      "pack_id": "Age25Kelp",
+      "pack_name": "Age 25 Kelp",
+      "pack_description": "Adds flowers to the top of kelp plants when they are fully grown. {age=25}.",
+      "conflict": [],
+      "compatibility": []
+    },
+    {
       "pack_id": "MineProgressBar",
       "pack_name": "Mine Progress Bar",
       "pack_description": "Changes the breaking texture of blocks to a clean ring around the outside.",
@@ -135,13 +142,6 @@
       "compatibility": []
     },
     {
-      "pack_id": "BrewingGuide",
-      "pack_name": "Brewing Guide",
-      "pack_description": "Adds a cheat sheet to the Brewing Staand interface.",
-      "conflict": [],
-      "compatibility": []
-    },
-    {
       "pack_id": "NoteBlockPitchParticle",
       "pack_name": "Note Block Pitch Particle",
       "pack_description": "Modifies the note block pitch particle to show the pitch.",
@@ -152,6 +152,98 @@
       "pack_id": "ArabicNumerals",
       "pack_name": "Arabic Numerals",
       "pack_description": "Translates the Roman Numerals for enchantments and potions to Arabic Numerals. (I, II, III -> 1, 2, 3).",
+      "conflict": [],
+      "compatibility": []
+    },
+    {
+      "pack_id": "CrumbledInfestedStoneBlocks",
+      "pack_name": "Crumbled Infested Stone Blocks",
+      "pack_description": "Makes infested stone blocks appear crumbled and cracked, matching how easy it is to break the block.",
+      "conflict": ["VisualInfestedStoneItems"],
+      "compatibility": []
+    },
+    {
+      "pack_id": "BoltlessWaxedCopperBlocks",
+      "pack_name": "Boltless Waxed Copper Blocks",
+      "pack_description": "Removes the bolts in the corner of Waxed Copper blocks and variants.",
+      "details": {
+        "message": [
+          "info",
+          "This does NOT change anything with Cut Copper, so Waxed Copper Items is recommended."
+        ]
+      },
+      "conflict": [],
+      "compatibility": []
+    },
+    {
+      "pack_id": "BackPiston",
+      "pack_name": "Back Piston",
+      "pack_description": "Adds a dot on the backside of the Piston and Sticky Piston to make the easier distinguishable.",
+      "conflict": [],
+      "compatibility": []
+    },
+    {
+      "pack_id": "UnlitRedstoneOre",
+      "pack_name": "Unlit Redstone Ore",
+      "pack_description": "Makes unlit Redstone Ore use the same palette as unlit Redstone Wire until its lit, when it then returns to its default, bright red colour.",
+      "conflict": [],
+      "compatibility": ["UniformOres", "OreBorders", "ClassicOres"]
+    },
+    {
+      "pack_id": "FullHoneyStage",
+      "pack_name": "Full Honey Stage",
+      "pack_description": "Shows the empty and full honey stages in Bee Nests and Beehives on all sides.",
+      "conflict": [],
+      "compatibility": []
+    },
+    {
+      "pack_id": "BorderedButtons",
+      "pack_name": "Bordered Buttons",
+      "pack_description": "Adds a border to buttons to make them noticeable.",
+      "conflict": [],
+      "compatibility": []
+    },
+    {
+      "pack_id": "MarkedPressurePlates",
+      "pack_name": "Marked Pressure Plates",
+      "pack_description": "Marks Pressure Plates with a square to make them noticeable.",
+      "conflict": [],
+      "compatibility": []
+    },
+    {
+      "pack_id": "BetterBottoms",
+      "pack_name": "Better Bottoms",
+      "pack_description": "Improves the bottom of specific blocks to make them identifiable",
+      "conflict": [],
+      "compatibility": []
+    },
+    {
+      "pack_id": "LitFurnaces",
+      "pack_name": "Lit Furnaces",
+      "pack_description": "Shows a lit texture on all sides for furnaces, blast furncases and smokers.",
+      "details": {
+        "icon": "apng"
+      },
+      "conflict": [],
+      "compatibility": []
+    },
+    {
+      "pack_id": "RespawnAnchorCharge",
+      "pack_name": "Respawn Anchor Charge",
+      "pack_description": "Adds more textures to respawn anchors to indicate current charge.",
+      "details": {
+        "icon": "gif"
+      },
+      "conflict": [],
+      "compatibility": []
+    },
+    {
+      "pack_id": "OpenBarrels",
+      "pack_name": "Open Barrels",
+      "pack_description": "Shows an open texture on all sides when barrel is open.",
+      "details": {
+        "icon": "gif"
+      },
       "conflict": [],
       "compatibility": []
     }

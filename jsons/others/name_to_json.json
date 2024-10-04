@@ -16,7 +16,7 @@
   "More Zombies": "aesthetic_more_zombies.json",
   "Lower and Sides": "terrain_lower_and_sides.json",
   "Mobs": "peace_and_quiet_mobs.json",
-  "Clear Blocks": "utility_clear_blocks.json",
+  "Directional": "utility_directional.json",
   "Growth Stages": "utility_growth_stages.json",
   "Crosshairs": "gui_crosshairs.json",
   "Hearts": "gui_hearts.json",
