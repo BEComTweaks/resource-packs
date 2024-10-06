@@ -2,10 +2,10 @@
   "AshlessCampfires": ["SoulSoilSoulCampfires"],
   "UniformOres": ["UnlitRedstoneOre"],
   "StickyPistonSides": ["PistonInnerFix"],
+  "UnlitRedstoneOre": ["UniformOres", "ClassicOres"],
   "ClassicOres": ["UnlitRedstoneOre"],
   "SmileyAxolotls": ["GreenAxolotl"],
   "GreenAxolotl": ["SmileyAxolotls"],
   "PistonInnerFix": ["StickyPistonSides"],
-  "SoulSoilSoulCampfire": ["AshlessCampfires"],
-  "UnlitRedstoneOre": ["UniformOres", "ClassicOres"]
+  "SoulSoilSoulCampfire": ["AshlessCampfires"]
 }

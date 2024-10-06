@@ -1,0 +1,26 @@
+{
+  "resource_pack_name": "vanilla",
+  "texture_name": "atlas.terrain",
+  "padding": 8,
+  "num_mip_levels": 4,
+  "texture_data": {
+    "dropper_front_horizontal": {
+      "textures": "textures/blocks/dropper_front_horizontal"
+    },
+    "dropper_front_vertical": {
+      "textures": "textures/blocks/dropper_front_vertical"
+    },
+    "dropper_top": {
+      "textures": "textures/blocks/dropper_top_gold"
+    },
+    "dispenser_front_horizontal": {
+      "textures": "textures/blocks/dispenser_front_horizontal"
+    },
+    "dispenser_front_vertical": {
+      "textures": "textures/blocks/dispenser_front_vertical"
+    },
+    "dispenser_top": {
+      "textures": "textures/blocks/dispenser_top_red"
+    }
+  }
+}

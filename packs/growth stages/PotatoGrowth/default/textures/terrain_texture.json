@@ -1,0 +1,16 @@
+{
+  "resource_pack_name": "vanilla",
+  "texture_name": "atlas.terrain",
+  "padding": 8,
+  "num_mip_levels": 4,
+  "texture_data": {
+    "potatoes": {
+      "textures": [
+        "textures/blocks/potatoes_stage_0",
+        "textures/blocks/potatoes_stage_1",
+        "textures/blocks/potatoes_stage_2",
+        "textures/blocks/potatoes_stage_3"
+      ]
+    }
+  }
+}

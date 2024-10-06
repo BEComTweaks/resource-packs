@@ -10,7 +10,7 @@
 
 ### Individuals
 [YzaBeast1](https://github.com/yzabeast1)
-- Pointed out issues with my code preventing Linux Distributions from running the scripts, and made the webUI and backend
+- Pointed out issues with my code preventing Linux Distributions from running the scripts, and took the jump to make a webUI and backend
 
 [JWForever5504](https://github.com/JWForever5504)
 - He made like 40 of the most of incomplete packs. Helped me focus on the python scripts
@@ -26,6 +26,9 @@
 
 [Tal](https://twitter.com/melamed_tal/)'s [Clear Wire Pack](https://mcpedl.com/clear-wire-texture-pack/) and NSPC911's [continuation](https://github.com/NSPC911/Clear-Vanilla)
 - Most of the packs available in Utility > Clear Blocks
+
+[ItsRichHeart](https://github.com/ItsRichHeart/)
+- Many amazing Utility Packs. Some are available in [ItsRichHeart/GuardianTechnicalResources](https://github.com/ItsRichHeart/GuardianTechnicalResources)
 
 [HampsterChief](https://discord.com/users/1053822004211482676)
 - Turned Anvils into a Metal Pipe
