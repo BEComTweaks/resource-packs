@@ -33,9 +33,9 @@
       "compatibility": []
     },
     {
-      "pack_id": "CocoaPodGrowth",
-      "pack_name": "Cocoa Pod",
-      "pack_description": "Adds indicators onto Cocoa Pods to show the growth stages.",
+      "pack_id": "CocoaBeanGrowth",
+      "pack_name": "Cocoa Bean",
+      "pack_description": "Adds indicators onto Cocoa Beans to show the growth stages.",
       "details": {
         "icon": "apng"
       },

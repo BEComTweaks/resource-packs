@@ -39,7 +39,7 @@
     {
       "pack_id": "BrewingGuide",
       "pack_name": "Brewing Guide",
-      "pack_description": "Adds a cheat sheet to the Brewing Staand interface.",
+      "pack_description": "Adds a cheat sheet to the Brewing Stand interface.",
       "conflict": [],
       "compatibility": []
     },
