@@ -232,7 +232,7 @@
       "pack_name": "Respawn Anchor Charge",
       "pack_description": "Adds more textures to respawn anchors to indicate current charge.",
       "details": {
-        "icon": "gif"
+        "icon": "apng"
       },
       "conflict": [],
       "compatibility": []

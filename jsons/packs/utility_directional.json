@@ -53,6 +53,9 @@
       "pack_id": "DirectionalLava",
       "pack_name": "Directional Lava",
       "pack_description": "Adds arrows to lava to show the flowing direction",
+      "details": {
+        "icon": "apng"
+      },
       "conflict": [],
       "compatibility": []
     },
@@ -61,10 +64,7 @@
       "pack_name": "Directional Water",
       "pack_description": "Adds arrows to water to show the flowing direction",
       "details": {
-        "message": [
-          "warn",
-          "The arrows may not be visible due to how water is rendered."
-        ]
+        "icon": "apng"
       },
       "conflict": [],
       "compatibility": []
