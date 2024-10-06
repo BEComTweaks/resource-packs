@@ -188,7 +188,7 @@ select {
 .category-label-selectall-img {
   height: 100%;
   image-rendering: pixelated;
-  transform: translateX(-20%);
+  transform: translateX(-12.5%);
   width: auto;
 }
 
