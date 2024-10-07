@@ -65,7 +65,7 @@ jobs:
   update_server:
     needs: deploy_page
     runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/main' && !contains(github.event.head_commit.message, 'skip-update')
+    if: github.ref == 'refs/heads/main' && !contains(github.event.head_commit.message, 'skip-update') && contains(github.event.head_commit.message, 'pack')
 
     steps:
       - name: Checkout code
