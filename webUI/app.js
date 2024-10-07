@@ -24,8 +24,9 @@ function toggleSelection(element) {
     console.log(`Selected ${element.dataset.name}`);
   }
   updateSelectedTweaks();
-  /*var selectedTweaks = getSelectedTweaks();
-  var dataCategory = element.dataset.category;
+  var selectedTweaks = getSelectedTweaks();
+  updateURL(getSelectedTweaks());
+  /*var dataCategory = element.dataset.category;
   const selectAllElement =
     element.parentElement.parentElement.parentElement.querySelector(
       ".category-label-selectall",
@@ -39,8 +40,7 @@ function toggleSelection(element) {
     selectAll("", selectAllElement);
   } else {
     partialSelected(selectAllElement);
-  }
-  updateURL(getSelectedTweaks());*/
+  }*/
 }
 
 function updateSelectedTweaks() {

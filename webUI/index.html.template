@@ -80,7 +80,7 @@
    </div>
    <div class="download-container">
     <div class="file-download">
-     <input id="fileNameInput" placeholder="Enter Pack name" type="text"/>
+     <input id="fileNameInput" placeholder="Enter Pack name" type="text"></input>
      <br>
      <select id="mev" name="mev">
       <option value="1.21.0">
@@ -104,7 +104,7 @@
      </select>
     </div>
     <div class="zipinputcontainer">
-     <input id="zipInput" type="file"/>
+     <input id="zipInput" type="file"></input>
     </div>
     <button class="download-selected-button" onclick="downloadSelectedTweaks()">
      Download Selected Tweaks
