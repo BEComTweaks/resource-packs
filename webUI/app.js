@@ -23,8 +23,28 @@ function toggleSelection(element) {
     enableSelection(element, checkbox);
     console.log(`Selected ${element.dataset.name}`);
   }
-  // send to selected tweaks
-  var selectedTweaks = [];
+  updateSelectedTweaks();
+  /*var selectedTweaks = getSelectedTweaks();
+  var dataCategory = element.dataset.category;
+  const selectAllElement =
+    element.parentElement.parentElement.parentElement.querySelector(
+      ".category-label-selectall",
+    );
+  if (selectedTweaks[dataCategory]["packs"].length == 0) {
+    unselectAll("", selectAllElement);
+  } else if (
+    selectedTweaks[dataCategory]["packs"].length ==
+    element.parentElement.querySelectorAll(".tweak").length
+  ) {
+    selectAll("", selectAllElement);
+  } else {
+    partialSelected(selectAllElement);
+  }
+  updateURL(getSelectedTweaks());*/
+}
+
+function updateSelectedTweaks() {
+	var selectedTweaks = [];
   const tweakElements = document.querySelectorAll(".tweak.selected");
   tweakElements.forEach((tweak) => {
     const labelElement = tweak.querySelector(".tweak-info .tweak-title");
@@ -55,25 +75,7 @@ function toggleSelection(element) {
     tweakItem.textContent = "Select some packs and see them appear here!";
     document.getElementById("selected-tweaks").appendChild(tweakItem);
   }
-  var selectedTweaks = getSelectedTweaks();
-  var dataCategory = element.dataset.category;
-  const selectAllElement =
-    element.parentElement.parentElement.parentElement.querySelector(
-      ".category-label-selectall",
-    );
-  if (selectedTweaks[dataCategory]["packs"].length == 0) {
-    unselectAll("", selectAllElement);
-  } else if (
-    selectedTweaks[dataCategory]["packs"].length ==
-    element.parentElement.querySelectorAll(".tweak").length
-  ) {
-    selectAll("", selectAllElement);
-  } else {
-    partialSelected(selectAllElement);
-  }
-  updateURL(getSelectedTweaks());
 }
-
 // query params function
 function updateURL(st) {
   for (var key in st) {
@@ -278,6 +280,7 @@ function processJsonData(jsonData, dowhat) {
   } else {
     console.error("The 'raw' field in selected_packs.json is not an array.");
   }
+  updateSelectedTweaks();
 }
 // get selected tweaks
 function getSelectedTweaks() {
