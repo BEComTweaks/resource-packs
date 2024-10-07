@@ -300,7 +300,8 @@ function getSelectedTweaks() {
     "Peace and Quiet": [],
     Mobs: [],
     Utility: [],
-    "Clear Blocks": [],
+    Directional: [],
+    "Growth Stages": [],
     Unobtrusive: [],
     "3D": [],
     GUI: [],
@@ -329,7 +330,8 @@ function getSelectedTweaks() {
     "Peace and Quiet": [],
     Mobs: [],
     Utility: [],
-    "Clear Blocks": [],
+    Directional: [],
+    "Growth Stages": [],
     Unobtrusive: [],
     "3D": [],
     GUI: [],
@@ -387,9 +389,13 @@ function getSelectedTweaks() {
       packs: tweaksByCategory["Utility"],
       index: indicesByCategory["Utility"],
     },
-    "Clear Blocks": {
-      packs: tweaksByCategory["Clear Blocks"],
-      index: indicesByCategory["Clear Blocks"],
+    Directional: {
+      packs: tweaksByCategory["Directional"],
+      index: indicesByCategory["Directional"],
+    },
+    "Growth Stages": {
+      packs: tweaksByCategory["Growth Stages"],
+      index: indicesByCategory["Growth Stages"],
     },
     Unobtrusive: {
       packs: tweaksByCategory["Unobtrusive"],
