@@ -44,7 +44,7 @@ function toggleSelection(element) {
 }
 
 function updateSelectedTweaks() {
-	var selectedTweaks = [];
+  var selectedTweaks = [];
   const tweakElements = document.querySelectorAll(".tweak.selected");
   tweakElements.forEach((tweak) => {
     const labelElement = tweak.querySelector(".tweak-info .tweak-title");
