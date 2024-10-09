@@ -18,15 +18,22 @@ function toggleSelection(element) {
   // logging
   if (checkbox.checked) {
     disableSelection(element, checkbox);
-    console.log(`Unselected ${element.dataset.name}`);
+    console.log(
+      `[%cselection%c] Unselected %c${element.dataset.name}`,
+      "color: green",
+      "color: initial",
+    );
   } else {
     enableSelection(element, checkbox);
-    console.log(`Selected ${element.dataset.name}`);
+    console.log(
+      `[%cselection%c] Selected %c${element.dataset.name}`,
+      "color: green",
+      "color: initial",
+    );
   }
   updateSelectedTweaks();
   var selectedTweaks = getSelectedTweaks();
-  updateURL(getSelectedTweaks());
-  /*var dataCategory = element.dataset.category;
+  var dataCategory = element.dataset.category;
   const selectAllElement =
     element.parentElement.parentElement.parentElement.querySelector(
       ".category-label-selectall",
@@ -40,7 +47,8 @@ function toggleSelection(element) {
     selectAll("", selectAllElement);
   } else {
     partialSelected(selectAllElement);
-  }*/
+  }
+  updateURL(selectedTweaks);
 }
 
 function updateSelectedTweaks() {
@@ -161,7 +169,11 @@ function toggleCategory(label) {
 function downloadSelectedTweaks() {
   // set min_engine_version
   var mcVersion = document.getElementById("mev").value;
-  console.log(`Minimum Engine Version is set to ${mcVersion}`);
+  console.log(
+    `[%cdownload%c] Minimum Engine Version is set to ${mcVersion}`,
+    "color: cyan",
+    "color: initial",
+  );
   // set pack name
   var packName = document.getElementById("fileNameInput").value;
   if (!packName) {
@@ -171,7 +183,11 @@ function downloadSelectedTweaks() {
     )}`;
   }
   packName = packName.replaceAll("/", "-");
-  console.log(`Pack Name is set to ${packName}`);
+  console.log(
+    `[%cdownload%c] Pack Name is set to ${packName}`,
+    "color: cyan",
+    "color: initial",
+  );
   // get selected tweaks
   jsonData = getSelectedTweaks();
   // fetch
@@ -198,7 +214,7 @@ function fetchPack(protocol, jsonData, packName, mcVersion) {
     downloadbutton.innerText = "Fetching Pack...";
   }
 
-  console.log("Fetching pack...");
+  console.log("[%cfetch%c] Fetching pack...", "color: blue", "color: initial");
   // fetch
   fetch(`${protocol}://${serverip}/exportResourcePack`, {
     method: "POST",
@@ -212,13 +228,22 @@ function fetchPack(protocol, jsonData, packName, mcVersion) {
     .then((response) => {
       // when the response doesnt feel good
       if (!response.ok) {
-        throw new Error("Network response was not ok");
+        console.log(
+          "[%cerror%c] %cNetwork response was not ok",
+          "color: blue",
+          "color: initial",
+          "color: red",
+        );
       }
       return response.blob();
     })
     .then(async (blob) => {
       // pack received
-      console.log("Received pack!");
+      console.log(
+        "[%cfetch%c] Received pack!",
+        "color: blue",
+        "color: initial",
+      );
       downloadbutton.innerText = "Obtained pack!";
       downloadbutton.classList.remove("http");
       // When using https, remove the s class
@@ -268,17 +293,35 @@ function processJsonData(jsonData, dowhat) {
       if (div) {
         if (dowhat == "select") {
           enableSelection(div, div.querySelector('input[type="checkbox"]'));
-          console.log(`Selected ${pack}`);
+          console.log(
+            `[%cmass%c] Selected ${pack}`,
+            "color: green",
+            "color: initial",
+          );
         } else if (dowhat == "unselect") {
           disableSelection(div, div.querySelector('input[type="checkbox"]'));
-          console.log(`Unselected ${pack}`);
+          console.log(
+            `[%cmass%c] Unselected ${pack}`,
+            "color: green",
+            "color: initial",
+          );
         }
       } else {
-        console.error(`Div with data-name="${pack}" not found.`);
+        console.log(
+          `[%cerror%c] %cDiv with data-name="${pack}" not found.`,
+          "color: green",
+          "color: initial",
+          "color: red",
+        );
       }
     });
   } else {
-    console.error("The 'raw' field in selected_packs.json is not an array.");
+    console.log(
+      "[%cerror%c] %cThe 'raw' field in selected_packs.json is not an array.",
+      "color: green",
+      "color: initial",
+      "color: red",
+    );
   }
   updateSelectedTweaks();
 }
@@ -353,12 +396,16 @@ function getSelectedTweaks() {
     Parity: [],
     "Fixes and Consistency": [],
   };
-  console.log("Obtaining selected tweaks...");
+  console.log(
+    "[%cget%c] Obtaining selected tweaks...",
+    "color: purple",
+    "color: initial",
+  );
   selectedTweaks.forEach((tweak) => {
     tweaksByCategory[tweak.category].push(tweak.name);
     indicesByCategory[tweak.category].push(tweak.index);
   });
-  console.log("Obtained!");
+  console.log("[%cget%c] Obtained!", "color: purple", "color: initial");
   const jsonData = {
     Aesthetic: {
       packs: tweaksByCategory["Aesthetic"],
@@ -500,31 +547,49 @@ document
                       const jsonData = JSON.parse(content);
                       processJsonData(jsonData, "select");
                     } catch (error) {
-                      console.error("Error parsing JSON:", error);
+                      console.log(
+                        `[%cerror%c] Error parsing JSON: %c${error}`,
+                        "color: red",
+                        "color: initial",
+                        "color: red",
+                      );
                     }
                   })
                   .catch(function (error) {
-                    console.error(
-                      "Error extracting selected_packs.json:",
-                      error,
+                    console.log(
+                      `[%cerror%c] Error extracting selected_packs.json: %c${error}`,
+                      "color: red",
+                      "color: initial",
+                      "color: red",
                     );
                   });
               }
             });
 
             if (!fileFound) {
-              console.error(
-                "selected_packs.json not found in any folder within the ZIP file.",
+              console.log(
+                `[%cerror%c] selected_packs.json not found in any folder within the ZIP file.`,
+                "color: red",
+                "color: initial",
               );
             }
           })
           .catch(function (error) {
-            console.error("Error reading the ZIP file:", error);
+            console.log(
+              `[%cerror%c] Error reading ZIP file: %c${error}`,
+              "color: red",
+              "color: initial",
+              "color:red",
+            );
           });
       };
       reader.readAsArrayBuffer(file);
     } else {
-      console.error("No file selected.");
+      console.log(
+        `[%cerror%c] No file selected.`,
+        "color: red",
+        "color: initial",
+      );
     }
   });
 
@@ -535,10 +600,8 @@ function selectAll(compressedstring, element) {
       LZString.decompressFromEncodedURIComponent(compressedstring),
     );
     processJsonData(st, "select");
-    updateURL(st);
-    element.onclick = function () {
-      unselectAll(compressedstring, element);
-    };
+    updateURL(getSelectedTweaks());
+    element.onclick = new Function(`unselectAll('${compressedstring}', this);`);
   }
   element.innerHTML =
     '<img src="images/select-all-button/chiseled_bookshelf_occupied.png" class="category-label-selectall-img"><div class="category-label-selectall-hovertext">Unselect All</div>';
@@ -547,10 +610,11 @@ function selectAll(compressedstring, element) {
 function partialSelected(element) {
   element.innerHTML =
     '<img src="images/select-all-button/chiseled_bookshelf_has_selected.png" class="category-label-selectall-img"><div class="category-label-selectall-hovertext">Select All</div>';
-  const compressedstring = element.onclick.toString().split("'")[1];
-  element.onclick = function () {
-    selectAll(compressedstring, element);
-  };
+  const onClickAttr = element.onclick.toString();
+  if (onClickAttr.includes("unselect")) {
+    const args = onclickString.match(/\(([^)]+)\)/)[1];
+    element.onclick = new Function(`selectAll(${args});`);
+  }
 }
 
 function unselectAll(compressedstring, element) {
@@ -559,10 +623,8 @@ function unselectAll(compressedstring, element) {
       LZString.decompressFromEncodedURIComponent(compressedstring),
     );
     processJsonData(st, "unselect");
-    updateURL(st);
-    element.onclick = function () {
-      selectAll(compressedstring, element);
-    };
+    updateURL(getSelectedTweaks());
+    element.onclick = new Function(`selectAll('${compressedstring}', this);`);
   }
   element.innerHTML =
     '<img src="images/select-all-button/chiseled_bookshelf_empty.png" class="category-label-selectall-img"><div class="category-label-selectall-hovertext">Select All</div>';

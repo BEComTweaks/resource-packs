@@ -151,9 +151,9 @@ select {
   border-width: 5px;
   cursor: pointer;
   font-size: 20px;
-  height: 25px;
+  height: auto;
   margin-bottom: -5px;
-  padding: 5px;
+  padding: 5px 40px;
   text-align: center;
   transition:
     background-color 0.5s ease-in-out,
@@ -163,7 +163,7 @@ select {
 }
 
 .category-label-selectall {
-  background-color: var(--dark-one);
+  background-color: #00000000;
   border-color: #00000000;
   border-radius: 2.5px;
   cursor: pointer;
@@ -194,14 +194,6 @@ select {
 
 .category-label-selectall.sub {
   transform: translate(-100%, -108%);
-}
-
-.category-label-selectall:active {
-  background-color: var(--green-two);
-}
-
-.category-label-selectall:hover {
-  background-color: var(--dark-border);
 }
 
 .category-label-selectall:hover .category-label-selectall-hovertext {
@@ -379,6 +371,7 @@ select {
   padding-left: 17.5px;
   padding-right: 17.5px;
   padding-top: 10px;
+  font-family: "Pixelify-Sans";
 }
 
 .file-download input[type="text"]::placeholder {
@@ -633,16 +626,9 @@ select {
   }
 }
 
-@media (min-height: 320px) {
+@media (max-height: 262px) and (min-width: 768px) {
   #selected-tweaks {
-    margin-bottom: 10px;
-    max-height: 25vh;
-  }
-}
-
-@media (min-height: 610px) {
-  #selected-tweaks {
-    max-height: 50vh;
+    display: none;
   }
 }
 
@@ -655,6 +641,7 @@ select {
 
   #selected-tweaks {
     display: block;
+    max-height: 40vh;
   }
 
   #title {
@@ -692,7 +679,7 @@ select {
     padding-top: 10px;
     position: fixed;
     right: 25px;
-    top: 75px;
+    top: 12.5%;
     width: 275px;
   }
 
