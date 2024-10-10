@@ -1,6 +1,6 @@
 <div align="center">
 
-# BEComTweaks/resource-packs
+<h1>BEComTweaks/resource-packs</h1>
 
 ![Commit Activity](https://img.shields.io/github/commit-activity/w/BEComTweaks/resource-packs?style=for-the-badge&label=Commits&color=purple)
 ![GitHub repo size](https://img.shields.io/github/repo-size/BEComTweaks/resource-packs?style=for-the-badge&label=Size&color=pink)
@@ -16,7 +16,7 @@
 > Contributions here will also be directed to BedrockTweaks/Files.
 
 <div align="left">
-A repo containing every single tweak <b>possible<b> ported from <a href="https://vanillatweaks.net/picker/resource-packs">Vanilla Tweaks' Resource Packs</a> with a Command Line and Web Interface.
+A repo containing every single tweak <b>possible</b> ported from <a href="https://vanillatweaks.net/picker/resource-packs">Vanilla Tweaks' Resource Packs</a> with a Web Interface.
 
 Docs are available at [here](https://becomtweaks.github.io/docs)
 
