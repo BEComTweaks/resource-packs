@@ -398,5 +398,9 @@ clrprint("Updated a lot of files!", clr="green")
 if args.format:
     clrprint("Making files Prettier", clr="yellow")
     os.system(f"cd {cdir()}")
-    os.system('npx prettier --write "**/*.{js,ts,css,json}" --log-level silent')
+    try:
+        os.system('npx prettier --write "**/*.{js,ts,css,json}" --log-level silent')
+    except KeyboardInterrupt:
+    	clrprint("You are a bit impatient...", clr="red")
+
     clrprint("Files are Prettier!", clr="green")

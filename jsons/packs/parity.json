@@ -34,6 +34,20 @@
       "compatibility": []
     },
     {
+      "pack_id": "JavaDriedKelp",
+      "pack_name": "Java Dried Kelp",
+      "pack_description": "Gives the Dried Kelp item its texture from Minecraft: Java Edition.",
+      "conflict": [],
+      "compatibility": []
+    },
+    {
+      "pack_id": "JavaStrippedSpruceLogs",
+      "pack_name": "Java Stripped Spruce Logs",
+      "pack_description": "Changes Stripped Spruce Logs' side texture to match its texture from Minecraft: Java Edition.",
+      "conflict": [],
+      "compatibility": []
+    },
+    {
       "pack_id": "DungeonsCreepers",
       "pack_name": "Dungeons Creepers",
       "pack_description": "Gives the Creeper its texture from Minecraft: Dungeons.",
@@ -80,13 +94,6 @@
       "pack_id": "SuperSmashBrosEnderman",
       "pack_name": "Super Smash Bros Enderman",
       "pack_description": "Recolors and remodels Endermen to have the same palette and size as they do in 'Super Smash Bros Ultimate' .",
-      "conflict": [],
-      "compatibility": []
-    },
-    {
-      "pack_id": "JavaDriedKelp",
-      "pack_name": "Java Dried Kelp",
-      "pack_description": "Gives the Dried Kelp item its texture from Minecraft: Java Edition.",
       "conflict": [],
       "compatibility": []
     },
