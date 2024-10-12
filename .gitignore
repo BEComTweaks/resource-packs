@@ -6,3 +6,5 @@ package-lock.json
 node_modules
 # makefile (easier for me)
 Makefile
+# tf is venv doing here
+venv
