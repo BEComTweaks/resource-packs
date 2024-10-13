@@ -433,6 +433,33 @@ select {
   text-decoration: none;
 }
 
+.preselected {
+  background-color: var(--dark-one);
+  border-color: var(--dark-border);
+  border-radius: 5px;
+  border-width: 2.5px;
+  border-style: outset;
+  position: fixed;
+  z-index: 1000;
+  text-align: center;
+  padding: 5px 10px;
+  top: -10vh;
+  right: 50vh;
+  transition: height 0.25s ease, top 0.625s ease-in-out;
+}
+
+.preselected-unselect {
+  cursor: pointer;
+  color: white;
+  text-decoration: underline;
+  transition: font-size 0.25s ease;
+}
+
+.preselected-unselect:hover {
+  text-decoration: bold;
+  font-size: 1.05em;
+}
+
 [class$="nav"] {
   background-color: #333;
   list-style-type: none;
@@ -500,6 +527,7 @@ select {
   display: none;
   font-size: 1.2em;
   font-weight: bold;
+  margin-top: 5px;
 }
 
 .tweak-list-pack {

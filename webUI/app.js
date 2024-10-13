@@ -117,6 +117,14 @@ if (loadedparams.has("st_raw")) {
     LZString.decompressFromEncodedURIComponent(loadedparams.get("st_raw")),
   );
   processJsonData(st, "select");
+  const preselectAlerter = document.getElementsByClassName("preselected")[0];
+  sleep(500).then(() => {
+    // slow down before showing the alert
+    preselectAlerter.style.top = "20vh";
+  });
+  sleep(5000).then(() => {
+    preselectAlerter.style.top = "-10vh";
+  });
 }
 // for people who want instant stuff
 const mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
