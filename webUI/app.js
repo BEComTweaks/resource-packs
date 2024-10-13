@@ -274,10 +274,20 @@ function fetchPack(protocol, jsonData, packName, mcVersion) {
     .catch(async (error) => {
       // when the response doesnt send
       if (protocol === "https") {
-        console.log(`[%cerror%c]\nHTTPS error, trying HTTP: ${error}`, "color: red", "color: initial", "color: red");
+        console.log(
+          `[%cerror%c]\nHTTPS error, trying HTTP: ${error}`,
+          "color: red",
+          "color: initial",
+          "color: red",
+        );
         fetchPack("http", jsonData, packName, mcVersion); // Retry with HTTP
       } else {
-        console.log(`[%cerror%c] Error: %c${error}`, "color: red", "color: initial", "color: red");
+        console.log(
+          `[%cerror%c] Error: %c${error}`,
+          "color: red",
+          "color: initial",
+          "color: red",
+        );
         downloadbutton.classList.remove("http");
         downloadbutton.innerText =
           "Couldn't fetch pack. Check console for error log.";
