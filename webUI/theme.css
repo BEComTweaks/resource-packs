@@ -216,20 +216,11 @@ select {
 
 .comp-hover-text {
   background: rgb(144, 146, 74);
-  border-radius: 3px;
   bottom: 100%;
-  display: none;
-  font-size: 13px;
-  left: 50%;
-  padding: 0px;
-  position: absolute;
-  text-align: center;
-  transform: translateX(-50%);
   z-index: 1;
 }
 
-.conf-hover-text {
-  background: rgb(144, 73, 74);
+[class$="hover-text"] {
   border-radius: 3px;
   display: none;
   font-size: 13px;
@@ -237,8 +228,12 @@ select {
   padding: 7.5px;
   position: absolute;
   text-align: center;
-  top: 100%;
   transform: translateX(-50%);
+  z-index: 1;
+}
+.conf-hover-text {
+  background: rgb(144, 73, 74);
+  top: 100%;
   white-space: no-wrap;
   z-index: 1;
 }
@@ -409,19 +404,6 @@ select {
   z-index: 5;
 }
 
-.large-nav {
-  background-color: #333;
-  list-style-type: none;
-  margin: 0;
-  max-height: 45px;
-  overflow: hidden;
-  padding: 0;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 5;
-}
-
 .mev option {
   background: var(--dark-one);
   font-family: "Pixelify Sans";
@@ -451,7 +433,7 @@ select {
   text-decoration: none;
 }
 
-.small-nav {
+[class$="nav"] {
   background-color: #333;
   list-style-type: none;
   margin: 0;

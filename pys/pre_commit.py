@@ -21,8 +21,8 @@ from bs4 import BeautifulSoup
 check("lzstring")
 from lzstring import LZString
 
-category_start = '<div class="category"><div class="category-label" onclick="toggleCategory(this)">topic_name</div><button class="category-label-selectall" onclick="selectAll(\u0027<all_packs>\u0027,this)"><img src="images/select-all-button/chiseled_bookshelf_empty.png" class="category-label-selectall-img"><div class="category-label-selectall-hovertext">Select All</div></button><div class="category-controlled"><div class="tweaks">'
-subcategory_start = '<div class="subcategory"><div class="category-label" onclick="toggleCategory(this)">topic_name</div><button class="category-label-selectall sub" onclick="selectAll(\u0027<all_packs>\u0027,this)"><img src="images/select-all-button/chiseled_bookshelf_empty.png" class="category-label-selectall-img"><div class="category-label-selectall-hovertext">Select All</div></button><div class="category-controlled"><div class="subcattweaks">'
+category_start = '<div class="category"><div class="category-label" onclick="toggleCategory(this)">topic_name</div><button class="category-label-selectall" onclick="selectAll(this)" data-allpacks="<all_packs>"><img src="images/select-all-button/chiseled_bookshelf_empty.png" class="category-label-selectall-img"><div class="category-label-selectall-hovertext">Select All</div></button><div class="category-controlled"><div class="tweaks">'
+subcategory_start = '<div class="subcategory"><div class="category-label" onclick="toggleCategory(this)">topic_name</div><button class="category-label-selectall sub" onclick="selectAll(this)" data-allpacks="<all_packs>"><img src="images/select-all-button/chiseled_bookshelf_empty.png" class="category-label-selectall-img"><div class="category-label-selectall-hovertext">Select All</div></button><div class="category-controlled"><div class="subcattweaks">'
 pack_start = '<div class="tweak" onclick="toggleSelection(this)" data-category="topic_name" data-name="pack_id" data-index="pack_index">'
 html_comp = '<div class="comp-hover-text">Incompatible with: <incompatible></div>'
 pack_mid = '<div class="tweak-info"><input type="checkbox" id="tweaknumber" name="tweak" value="tweaknumber"><img src="https://raw.githubusercontent.com/BEComTweaks/resource-packs/main/relloctopackicon" style="width:82px; height:82px;" alt="pack_name" loading="lazy"><br><label id="tweak" class="tweak-title">pack_name</label><div class="tweak-description">pack_description</div></div>'
@@ -401,6 +401,5 @@ if args.format:
     try:
         os.system('npx prettier --write "**/*.{js,ts,css,json}" --log-level silent')
     except KeyboardInterrupt:
-    	clrprint("You are a bit impatient...", clr="red")
-
+        clrprint("You are a bit impatient...", clr="red")
     clrprint("Files are Prettier!", clr="green")

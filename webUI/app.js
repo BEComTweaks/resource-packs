@@ -19,14 +19,14 @@ function toggleSelection(element) {
   if (checkbox.checked) {
     disableSelection(element, checkbox);
     console.log(
-      `[%cselection%c] Unselected %c${element.dataset.name}`,
+      `[%cselection%c]\nUnselected ${element.dataset.name}`,
       "color: green",
       "color: initial",
     );
   } else {
     enableSelection(element, checkbox);
     console.log(
-      `[%cselection%c] Selected %c${element.dataset.name}`,
+      `[%cselection%c]\nSelected ${element.dataset.name}`,
       "color: green",
       "color: initial",
     );
@@ -39,12 +39,12 @@ function toggleSelection(element) {
       ".category-label-selectall",
     );
   if (selectedTweaks[dataCategory]["packs"].length == 0) {
-    unselectAll("", selectAllElement);
+    unselectAll(selectAllElement);
   } else if (
     selectedTweaks[dataCategory]["packs"].length ==
     element.parentElement.querySelectorAll(".tweak").length
   ) {
-    selectAll("", selectAllElement);
+    selectAll(selectAllElement);
   } else {
     partialSelected(selectAllElement);
   }
@@ -170,7 +170,7 @@ function downloadSelectedTweaks() {
   // set min_engine_version
   var mcVersion = document.getElementById("mev").value;
   console.log(
-    `[%cdownload%c] Minimum Engine Version is set to ${mcVersion}`,
+    `[%cdownload%c]\nMinimum Engine Version is set to ${mcVersion}`,
     "color: cyan",
     "color: initial",
   );
@@ -184,7 +184,7 @@ function downloadSelectedTweaks() {
   }
   packName = packName.replaceAll("/", "-");
   console.log(
-    `[%cdownload%c] Pack Name is set to ${packName}`,
+    `[%cdownload%c]\nPack Name is set to ${packName}`,
     "color: cyan",
     "color: initial",
   );
@@ -214,7 +214,7 @@ function fetchPack(protocol, jsonData, packName, mcVersion) {
     downloadbutton.innerText = "Fetching Pack...";
   }
 
-  console.log("[%cfetch%c] Fetching pack...", "color: blue", "color: initial");
+  console.log("[%cfetch%c]\nFetching pack...", "color: blue", "color: initial");
   // fetch
   fetch(`${protocol}://${serverip}/exportResourcePack`, {
     method: "POST",
@@ -229,10 +229,9 @@ function fetchPack(protocol, jsonData, packName, mcVersion) {
       // when the response doesnt feel good
       if (!response.ok) {
         console.log(
-          "[%cerror%c] %cNetwork response was not ok",
-          "color: blue",
-          "color: initial",
+          "[%cerror%c]\nNetwork response was not ok",
           "color: red",
+          "color: initial",
         );
       }
       return response.blob();
@@ -240,7 +239,7 @@ function fetchPack(protocol, jsonData, packName, mcVersion) {
     .then(async (blob) => {
       // pack received
       console.log(
-        "[%cfetch%c] Received pack!",
+        "[%cfetch%c]\nReceived pack!",
         "color: blue",
         "color: initial",
       );
@@ -267,10 +266,10 @@ function fetchPack(protocol, jsonData, packName, mcVersion) {
     .catch(async (error) => {
       // when the response doesnt send
       if (protocol === "https") {
-        console.error("HTTPS error, trying HTTP:", error);
+        console.log(`[%cerror%c]\nHTTPS error, trying HTTP: ${error}`, "color: red", "color: initial", "color: red");
         fetchPack("http", jsonData, packName, mcVersion); // Retry with HTTP
       } else {
-        console.error("Error:", error);
+        console.log(`[%cerror%c] Error: %c${error}`, "color: red", "color: initial", "color: red");
         downloadbutton.classList.remove("http");
         downloadbutton.innerText =
           "Couldn't fetch pack. Check console for error log.";
@@ -292,38 +291,41 @@ function processJsonData(jsonData, dowhat) {
       const div = document.querySelector(`div.tweak[data-name="${pack}"]`);
       if (div) {
         if (dowhat == "select") {
-          enableSelection(div, div.querySelector('input[type="checkbox"]'));
-          console.log(
-            `[%cmass%c] Selected ${pack}`,
-            "color: green",
-            "color: initial",
-          );
+          if (!div.querySelector('input[type="checkbox"]').checked) {
+            enableSelection(div, div.querySelector('input[type="checkbox"]'));
+            console.log(
+              `[%cmass%c]\nSelected ${pack}`,
+              "color: green",
+              "color: initial",
+            );
+          }
         } else if (dowhat == "unselect") {
-          disableSelection(div, div.querySelector('input[type="checkbox"]'));
-          console.log(
-            `[%cmass%c] Unselected ${pack}`,
-            "color: green",
-            "color: initial",
-          );
+          if (div.querySelector('input[type="checkbox"]').checked) {
+            disableSelection(div, div.querySelector('input[type="checkbox"]'));
+            console.log(
+              `[%cmass%c]\nUnselected ${pack}`,
+              "color: green",
+              "color: initial",
+            );
+          }
         }
       } else {
         console.log(
-          `[%cerror%c] %cDiv with data-name="${pack}" not found.`,
-          "color: green",
-          "color: initial",
+          `[%cerror%c]\nDiv with data-name="${pack}" not found.`,
           "color: red",
+          "color: initial",
         );
       }
     });
   } else {
     console.log(
-      "[%cerror%c] %cThe 'raw' field in selected_packs.json is not an array.",
-      "color: green",
-      "color: initial",
+      "[%cerror%c]\n%cThe 'raw' field in selected_packs.json is not an array.",
       "color: red",
+      "color: initial",
     );
   }
   updateSelectedTweaks();
+  updateURL(getSelectedTweaks());
 }
 // get selected tweaks
 function getSelectedTweaks() {
@@ -397,7 +399,7 @@ function getSelectedTweaks() {
     "Fixes and Consistency": [],
   };
   console.log(
-    "[%cget%c] Obtaining selected tweaks...",
+    "[%cget%c]\nObtaining selected tweaks...",
     "color: purple",
     "color: initial",
   );
@@ -405,7 +407,7 @@ function getSelectedTweaks() {
     tweaksByCategory[tweak.category].push(tweak.name);
     indicesByCategory[tweak.category].push(tweak.index);
   });
-  console.log("[%cget%c] Obtained!", "color: purple", "color: initial");
+  console.log("[%cget%c]\nObtained!", "color: purple", "color: initial");
   const jsonData = {
     Aesthetic: {
       packs: tweaksByCategory["Aesthetic"],
@@ -548,7 +550,7 @@ document
                       processJsonData(jsonData, "select");
                     } catch (error) {
                       console.log(
-                        `[%cerror%c] Error parsing JSON: %c${error}`,
+                        `[%cerror%c]\nError parsing JSON: %c${error}`,
                         "color: red",
                         "color: initial",
                         "color: red",
@@ -557,7 +559,7 @@ document
                   })
                   .catch(function (error) {
                     console.log(
-                      `[%cerror%c] Error extracting selected_packs.json: %c${error}`,
+                      `[%cerror%c]\nError extracting selected_packs.json: %c${error}`,
                       "color: red",
                       "color: initial",
                       "color: red",
@@ -568,7 +570,7 @@ document
 
             if (!fileFound) {
               console.log(
-                `[%cerror%c] selected_packs.json not found in any folder within the ZIP file.`,
+                `[%cerror%c]\nselected_packs.json not found in any folder within the ZIP file.`,
                 "color: red",
                 "color: initial",
               );
@@ -576,17 +578,17 @@ document
           })
           .catch(function (error) {
             console.log(
-              `[%cerror%c] Error reading ZIP file: %c${error}`,
+              `[%cerror%c]\nError reading ZIP file: %c${error}`,
               "color: red",
               "color: initial",
-              "color:red",
+              "color: red",
             );
           });
       };
       reader.readAsArrayBuffer(file);
     } else {
       console.log(
-        `[%cerror%c] No file selected.`,
+        `[%cerror%c]\nNo file selected.`,
         "color: red",
         "color: initial",
       );
@@ -594,15 +596,12 @@ document
   });
 
 // select all tweaks
-function selectAll(compressedstring, element) {
-  if (compressedstring != "") {
-    const st = JSON.parse(
-      LZString.decompressFromEncodedURIComponent(compressedstring),
-    );
-    processJsonData(st, "select");
-    updateURL(getSelectedTweaks());
-    element.onclick = new Function(`unselectAll('${compressedstring}', this);`);
-  }
+function selectAll(element) {
+  const st = JSON.parse(
+    LZString.decompressFromEncodedURIComponent(element.dataset.allpacks),
+  );
+  processJsonData(st, "select");
+  element.onclick = new Function(`unselectAll(this);`);
   element.innerHTML =
     '<img src="images/select-all-button/chiseled_bookshelf_occupied.png" class="category-label-selectall-img"><div class="category-label-selectall-hovertext">Unselect All</div>';
 }
@@ -610,22 +609,15 @@ function selectAll(compressedstring, element) {
 function partialSelected(element) {
   element.innerHTML =
     '<img src="images/select-all-button/chiseled_bookshelf_has_selected.png" class="category-label-selectall-img"><div class="category-label-selectall-hovertext">Select All</div>';
-  const onClickAttr = element.onclick.toString();
-  if (onClickAttr.includes("unselect")) {
-    const args = onclickString.match(/\(([^)]+)\)/)[1];
-    element.onclick = new Function(`selectAll(${args});`);
-  }
+  element.onclick = new Function(`selectAll(this);`);
 }
 
-function unselectAll(compressedstring, element) {
-  if (compressedstring != "") {
-    const st = JSON.parse(
-      LZString.decompressFromEncodedURIComponent(compressedstring),
-    );
-    processJsonData(st, "unselect");
-    updateURL(getSelectedTweaks());
-    element.onclick = new Function(`selectAll('${compressedstring}', this);`);
-  }
+function unselectAll(element) {
+  const st = JSON.parse(
+    LZString.decompressFromEncodedURIComponent(element.dataset.allpacks),
+  );
+  processJsonData(st, "unselect");
+  element.onclick = new Function(`selectAll(this);`);
   element.innerHTML =
     '<img src="images/select-all-button/chiseled_bookshelf_empty.png" class="category-label-selectall-img"><div class="category-label-selectall-hovertext">Select All</div>';
 }
