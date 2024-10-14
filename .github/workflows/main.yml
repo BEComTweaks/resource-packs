@@ -27,10 +27,8 @@ jobs:
       - name: Create Virtual Environment
         run: python -m venv venv
 
-      - name: Install dependencies
-        run: |
-          source venv/bin/activate
-          python -m pip install clrprint markdown beautifulsoup4 ujson
+      - name: Activate venv
+        run: source venv/bin/activate
 
       - name: Run pre_commit.py
         run: python pys/pre_commit.py --format
