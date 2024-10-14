@@ -49,6 +49,16 @@ function toggleSelection(element) {
     partialSelected(selectAllElement);
   }
   updateURL(selectedTweaks);
+  updateDownloadButton(selectedTweaks);
+}
+
+function updateDownloadButton(st) {
+  const downloadButton = document.querySelector(".download-selected-button");
+  if (st["raw"].length == 0) {
+    downloadButton.disabled = true;
+  } else {
+    downloadButton.disabled = false;
+  }
 }
 
 function updateSelectedTweaks() {
@@ -117,6 +127,7 @@ if (loadedparams.has("st_raw")) {
     LZString.decompressFromEncodedURIComponent(loadedparams.get("st_raw")),
   );
   processJsonData(st, "select");
+  updateDownloadButton(st);
   const preselectAlerter = document.getElementsByClassName("preselected")[0];
   sleep(500).then(() => {
     // slow down before showing the alert

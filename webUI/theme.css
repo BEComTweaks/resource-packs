@@ -275,7 +275,7 @@ select {
   border-radius: 10px;
   border-style: solid;
   border-width: 5px;
-  height: 150px;
+  height: auto;
   position: fixed;
   right: 25px;
   top: calc(100vh - 175px);
@@ -298,7 +298,7 @@ select {
   text-align: center;
   transition:
     background 0.5s ease-in-out,
-    border-style 0.5s linear;
+    border-color 0.5s ease-in-out;
   width: 80%;
 }
 
@@ -340,6 +340,15 @@ select {
 .download-selected-button:hover {
   background: var(--green-two);
   border-color: var(--green-border-hover);
+}
+
+.download-selected-button:hover:disabled {
+  background: var(--red-zero);
+  border-color: var(--red-one);
+}
+.download-selected-button:active:disabled {
+  background: var(--red-one);
+  border-color: var(--red-two);
 }
 
 .file-download {

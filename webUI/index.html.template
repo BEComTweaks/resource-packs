@@ -107,7 +107,7 @@
     <div class="zipinputcontainer">
      <input id="zipInput" type="file"></input>
     </div>
-    <button class="download-selected-button" onclick="downloadSelectedTweaks()">
+    <button class="download-selected-button" onclick="downloadSelectedTweaks()" disabled=true>
      Download Selected Tweaks
     </button>
     <div id="selected-tweaks">
