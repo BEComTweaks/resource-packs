@@ -64,7 +64,7 @@ header {
 
 input {
   color: white;
-  font-family: "Pixelify-Sans";
+  font-family: "Pixelify Sans";
 }
 
 li {
@@ -81,7 +81,7 @@ li a {
 
 select {
   color: white;
-  font-family: "Pixelify-Sans";
+  font-family: "Pixelify Sans";
 }
 
 #background-container {
@@ -366,7 +366,6 @@ select {
   padding-left: 17.5px;
   padding-right: 17.5px;
   padding-top: 10px;
-  font-family: "Pixelify-Sans";
 }
 
 .file-download input[type="text"]::placeholder {
