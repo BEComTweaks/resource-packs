@@ -73,7 +73,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.BOT_TOKEN }}
 
   update_server:
-    needs: deploy_page
+    needs: format_repo
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/main' && !contains(github.event.head_commit.message, 'skip-update') && contains(github.event.head_commit.message, 'pack')
 
