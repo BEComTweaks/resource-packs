@@ -23,5 +23,6 @@ fun.json
 world_of_color.json
 	woc_colorful_slime.json
 	woc_elytra.json
+	woc_enchantment_glints.json
 parity.json
 fixes_and_consistency.json

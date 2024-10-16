@@ -394,6 +394,7 @@ function getSelectedTweaks() {
     "World of Color": [],
     "Colorful Slime": [],
     Elytra: [],
+    "Enchantment Glints": [],
     Parity: [],
     "Fixes and Consistency": [],
   };
@@ -424,6 +425,7 @@ function getSelectedTweaks() {
     "World of Color": [],
     "Colorful Slime": [],
     Elytra: [],
+    "Enchantment Glints": [],
     Parity: [],
     "Fixes and Consistency": [],
   };
@@ -537,6 +539,10 @@ function getSelectedTweaks() {
     Elytra: {
       packs: tweaksByCategory["Elytra"],
       index: indicesByCategory["Elytra"],
+    },
+    "Enchantment Glints": {
+      packs: tweaksByCategory["Enchantment Glints"],
+      index: indicesByCategory["Enchantment Glints"],
     },
     Parity: {
       packs: tweaksByCategory["Parity"],
