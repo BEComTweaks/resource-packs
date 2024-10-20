@@ -25,5 +25,6 @@
   "Hotbar Selector": "gui_hotbar_selector.json",
   "Xisuma's Hermitcraft Bases": "menu_panoramas_xisuma_hc_bases.json",
   "Colorful Slime": "woc_colorful_slime.json",
-  "Elytra": "woc_elytra.json"
+  "Elytra": "woc_elytra.json",
+  "Enchantment Glints": "woc_enchantment_glints.json"
 }

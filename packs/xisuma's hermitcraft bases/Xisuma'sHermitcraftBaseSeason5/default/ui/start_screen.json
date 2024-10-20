@@ -2,8 +2,7 @@
   "namespace": "start",
   "panorama_overlay_image": {
     "type": "image",
-    "size": ["100%", "100%"],
-    "alpha": 1.0,
+    "size": ["fill", "fill"],
     "texture": "textures/ui/panorama_overlay"
   },
   "start_screen_content": {
