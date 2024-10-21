@@ -172,6 +172,13 @@
       "pack_description": "Changes the anvil falling sound to the metal pipe sound meme.",
       "conflict": [],
       "compatibility": []
+    },
+    {
+      "pack_id": "SilentwispererArmorTrim",
+      "pack_name": "Silentwisperer Armor Trim",
+      "pack_description": "Changes the Silence Armor trim to match Silentwisperer's face.",
+      "conflict": [],
+      "compatibility": []
     }
   ]
 }
