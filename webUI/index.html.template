@@ -84,6 +84,9 @@
      <input id="fileNameInput" placeholder="Enter Pack name" type="text"></input>
      <br>
      <select id="mev" name="mev">
+      <option value="1.21.40">
+       1.21.40
+      </option>
       <option value="1.21.0">
        1.21
       </option>
