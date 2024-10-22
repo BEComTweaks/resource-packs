@@ -5,23 +5,18 @@
     {
       "pack_id": "DirectionalHoppers",
       "pack_name": "Directional Hoppers",
-      "pack_description": "Gives Hoppers arrows all around to indicate which direction they are facing.",
-      "conflict": [],
-      "compatibility": []
+      "pack_description": "Gives Hoppers arrows all around to indicate which direction they are facing."
     },
     {
       "pack_id": "DirectionalObservers",
       "pack_name": "Directional Observers",
       "pack_description": "Gives Observers arrows all around to indicate which direction they are facing and display updates.",
-      "conflict": [],
       "compatibility": ["UpdatedObserverTexture"]
     },
     {
       "pack_id": "DirectionalCalibratedSculkSensors",
       "pack_name": "Directional Calibrated Sculk Sensors",
-      "pack_description": "Adds arrows to the sides of Sculk Sensors to indicate the output direction.",
-      "conflict": [],
-      "compatibility": []
+      "pack_description": "Adds arrows to the sides of Sculk Sensors to indicate the output direction."
     },
     {
       "pack_id": "DirectionalDispensers",
@@ -32,9 +27,7 @@
           "error",
           "The face's opposite side doesn't show the direction properly. Known issue but can't fix."
         ]
-      },
-      "conflict": [],
-      "compatibility": []
+      }
     },
     {
       "pack_id": "DirectionalDroppers",
@@ -45,9 +38,7 @@
           "error",
           "The face's opposite side doesn't show the direction properly. Known issue but can't fix."
         ]
-      },
-      "conflict": [],
-      "compatibility": []
+      }
     },
     {
       "pack_id": "DirectionalLava",
@@ -55,9 +46,7 @@
       "pack_description": "Adds arrows to lava to show the flowing direction",
       "details": {
         "icon": "apng"
-      },
-      "conflict": [],
-      "compatibility": []
+      }
     },
     {
       "pack_id": "DirectionalWater",
@@ -65,9 +54,7 @@
       "pack_description": "Adds arrows to water to show the flowing direction",
       "details": {
         "icon": "apng"
-      },
-      "conflict": [],
-      "compatibility": []
+      }
     }
   ]
 }

@@ -5,100 +5,72 @@
     {
       "pack_id": "LimeHotbarSelector",
       "pack_name": "Lime",
-      "pack_description": "",
-      "conflict": [],
-      "compatibility": []
+      "pack_description": ""
     },
     {
       "pack_id": "GrayHotbarSelector",
       "pack_name": "Gray",
-      "pack_description": "",
-      "conflict": [],
-      "compatibility": []
+      "pack_description": ""
     },
     {
       "pack_id": "BlackHotbarSelector",
       "pack_name": "Black",
-      "pack_description": "",
-      "conflict": [],
-      "compatibility": []
+      "pack_description": ""
     },
     {
       "pack_id": "BrownHotbarSelector",
       "pack_name": "Brown",
-      "pack_description": "",
-      "conflict": [],
-      "compatibility": []
+      "pack_description": ""
     },
     {
       "pack_id": "RedHotbarSelector",
       "pack_name": "Red",
-      "pack_description": "",
-      "conflict": [],
-      "compatibility": []
+      "pack_description": ""
     },
     {
       "pack_id": "OrangeHotbarSelector",
       "pack_name": "Orange",
-      "pack_description": "",
-      "conflict": [],
-      "compatibility": []
+      "pack_description": ""
     },
     {
       "pack_id": "YellowHotbarSelector",
       "pack_name": "Yellow",
-      "pack_description": "",
-      "conflict": [],
-      "compatibility": []
+      "pack_description": ""
     },
     {
       "pack_id": "GreenHotbarSelector",
       "pack_name": "Green",
-      "pack_description": "",
-      "conflict": [],
-      "compatibility": []
+      "pack_description": ""
     },
     {
       "pack_id": "CyanHotbarSelector",
       "pack_name": "Cyan",
-      "pack_description": "",
-      "conflict": [],
-      "compatibility": []
+      "pack_description": ""
     },
     {
       "pack_id": "LightBlueHotbarSelector",
       "pack_name": "Light Blue",
-      "pack_description": "",
-      "conflict": [],
-      "compatibility": []
+      "pack_description": ""
     },
     {
       "pack_id": "BlueHotbarSelector",
       "pack_name": "Blue",
-      "pack_description": "",
-      "conflict": [],
-      "compatibility": []
+      "pack_description": ""
     },
     {
       "pack_id": "PurpleHotbarSelector",
       "pack_name": "Purple",
-      "pack_description": "",
-      "conflict": [],
-      "compatibility": []
+      "pack_description": ""
     },
     {
       "pack_id": "MagentaHotbarSelector",
       "pack_name": "Magenta",
-      "pack_description": "",
-      "conflict": [],
-      "compatibility": []
+      "pack_description": ""
     },
     {
       "pack_id": "PinkHotbarSelector",
       "pack_name": "Pink",
-      "pack_description": "",
-      "conflict": [],
-      "compatibility": []
+      "pack_description": ""
     }
   ]
 }

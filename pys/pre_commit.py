@@ -107,32 +107,38 @@ for j in pack_list:
                         incomplete_pkics[file["topic"]].append(file["packs"][i]["pack_id"])
                         pkicstats[1] += 1
             # Updates Incomplete Pack Compatibilities
-            for comp in range(len(file["packs"][i]["compatibility"])):  # If it is empty, it just skips
-                # Looks at compatibility folders
-                try:
-                    if os.listdir(f'{cdir()}/packs/{file["topic"].lower()}/{file["packs"][i]["pack_id"]}/{file["packs"][i]["compatibility"][comp]}') == []:
+            try:
+                for comp in range(len(file["packs"][i]["compatibility"])):
+                    # Looks at compatibility folders
+                    try:
+                        if os.listdir(f'{cdir()}/packs/{file["topic"].lower()}/{file["packs"][i]["pack_id"]}/{file["packs"][i]["compatibility"][comp]}') == []:
+                            # Adds the packid to the list of incomplete compatibilities
+                            try:
+                                compatibilities[file["packs"][i]["pack_id"]].append(file["packs"][i]["compatibility"][comp])
+                            except KeyError:
+                                compatibilities[file["packs"][i]["pack_id"]] = [file["packs"][i]["compatibility"][comp]]
+                            cstats[1] += 1
+                        else:
+                            # When the compatibility directory has something inside
+                            cstats[0] += 1
+                    except FileNotFoundError:
+                        # When the compatibility folder isn't there
                         # Adds the packid to the list of incomplete compatibilities
                         try:
                             compatibilities[file["packs"][i]["pack_id"]].append(file["packs"][i]["compatibility"][comp])
                         except KeyError:
                             compatibilities[file["packs"][i]["pack_id"]] = [file["packs"][i]["compatibility"][comp]]
                         cstats[1] += 1
-                    else:
-                        # When the compatibility directory has something inside
-                        cstats[0] += 1
-                except FileNotFoundError:
-                    # When the compatibility folder isn't there
-                    # Adds the packid to the list of incomplete compatibilities
-                    try:
-                        compatibilities[file["packs"][i]["pack_id"]].append(file["packs"][i]["compatibility"][comp])
-                    except KeyError:
-                        compatibilities[file["packs"][i]["pack_id"]] = [file["packs"][i]["compatibility"][comp]]
-                    cstats[1] += 1
+            except KeyError:
+                pass # If it is empty, it just skips
             
             # Updates Pack Conflicts
             conflicts[file["packs"][i]["pack_id"]] = []
-            for conf in range(len(file["packs"][i]["conflict"])):  # If it is empty, it just skips
-                conflicts[file["packs"][i]["pack_id"]].append(file["packs"][i]["conflict"][conf])
+            try:
+                for conf in range(len(file["packs"][i]["conflict"])):
+                    conflicts[file["packs"][i]["pack_id"]].append(file["packs"][i]["conflict"][conf])
+            except KeyError:
+                pass # If it is empty, it just skips
             if conflicts[file["packs"][i]["pack_id"]] == []:
                 del conflicts[file["packs"][i]["pack_id"]]
             
@@ -262,32 +268,38 @@ for j in range(len(subcat_list)):
                 pkicstats[1] += 1
         
         # Updates Incomplete Pack Compatibilities
-        for comp in range(len(file["packs"][i]["compatibility"])):  # If it is empty, it just skips
-            # Looks at compatibility folders
-            try:
-                if os.listdir(f'{cdir()}/packs/{file["topic"].lower()}/{file["packs"][i]["pack_id"]}/{file["packs"][i]["compatibility"][comp]}') == []:
+        try:
+            for comp in range(len(file["packs"][i]["compatibility"])):
+                # Looks at compatibility folders
+                try:
+                    if os.listdir(f'{cdir()}/packs/{file["topic"].lower()}/{file["packs"][i]["pack_id"]}/{file["packs"][i]["compatibility"][comp]}') == []:
+                        # Adds the packid to the list of incomplete compatibilities
+                        try:
+                            compatibilities[file["packs"][i]["pack_id"]].append(file["packs"][i]["compatibility"][comp])
+                        except KeyError:
+                            compatibilities[file["packs"][i]["pack_id"]] = [file["packs"][i]["compatibility"][comp]]
+                        cstats[1] += 1
+                    else:
+                        # When the compatibility directory has something inside
+                        cstats[0] += 1
+                except FileNotFoundError:
+                    # When the compatibility folder isn't there
                     # Adds the packid to the list of incomplete compatibilities
                     try:
                         compatibilities[file["packs"][i]["pack_id"]].append(file["packs"][i]["compatibility"][comp])
                     except KeyError:
                         compatibilities[file["packs"][i]["pack_id"]] = [file["packs"][i]["compatibility"][comp]]
                     cstats[1] += 1
-                else:
-                    # When the compatibility directory has something inside
-                    cstats[0] += 1
-            except FileNotFoundError:
-                # When the compatibility folder isn't there
-                # Adds the packid to the list of incomplete compatibilities
-                try:
-                    compatibilities[file["packs"][i]["pack_id"]].append(file["packs"][i]["compatibility"][comp])
-                except KeyError:
-                    compatibilities[file["packs"][i]["pack_id"]] = [file["packs"][i]["compatibility"][comp]]
-                cstats[1] += 1
-        
+        except KeyError:
+            pass # If it is empty, it just skips
+
         # Updates Pack Conflicts
         conflicts[file["packs"][i]["pack_id"]] = []
-        for conf in range(len(file["packs"][i]["conflict"])):  # If it is empty, it just skips
-            conflicts[file["packs"][i]["pack_id"]].append(file["packs"][i]["conflict"][conf])
+        try:
+            for conf in range(len(file["packs"][i]["conflict"])):
+                conflicts[file["packs"][i]["pack_id"]].append(file["packs"][i]["conflict"][conf])
+        except KeyError:
+            pass # If it is empty, it just skips
         if conflicts[file["packs"][i]["pack_id"]] == []:
             del conflicts[file["packs"][i]["pack_id"]]
         

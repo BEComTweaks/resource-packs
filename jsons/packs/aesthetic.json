@@ -5,274 +5,206 @@
       "pack_id": "AlternateBlockDestruction",
       "pack_name": "Alternate Block Destruction",
       "pack_description": "Changes the breaking texture of blocks to be a messy ring around the outside.",
-      "conflict": ["MineProgressBar"],
-      "compatibility": []
+      "conflict": ["MineProgressBar"]
     },
     {
       "pack_id": "BlackNetherBricks",
       "pack_name": "Black Nether Bricks",
       "pack_description": "Changes texture of Nether Bricks to make them black.",
-      "conflict": ["BrighterNether"],
-      "compatibility": []
+      "conflict": ["BrighterNether"]
     },
     {
       "pack_id": "CherryPicking",
       "pack_name": "Cherry Picking",
-      "pack_description": "Changes the texture of cake to remove the large charry in the center.",
-      "conflict": [],
-      "compatibility": []
+      "pack_description": "Changes the texture of cake to remove the large charry in the center."
     },
     {
       "pack_id": "UnbundledHayBales",
       "pack_name": "Unbundled Hay Bales",
-      "pack_description": "Gets rid of the red strings around the Hay Bales.",
-      "conflict": [],
-      "compatibility": []
+      "pack_description": "Gets rid of the red strings around the Hay Bales."
     },
     {
       "pack_id": "UnbundledDriedKelp",
       "pack_name": "Unbundled Dried Kelp",
-      "pack_description": "Gets rid of the white strings around Dried Kelp.",
-      "conflict": [],
-      "compatibility": []
+      "pack_description": "Gets rid of the white strings around Dried Kelp."
     },
     {
       "pack_id": "SolidHoney",
       "pack_name": "Solid Honey",
-      "pack_description": "Eliminates Honey Block transparency.",
-      "conflict": [],
-      "compatibility": []
+      "pack_description": "Eliminates Honey Block transparency."
     },
     {
       "pack_id": "SolidSlime",
       "pack_name": "Solid Slime",
       "pack_description": "Eliminates Slime Block transparency.",
-      "conflict": ["HoneySlime"],
-      "compatibility": []
+      "conflict": ["HoneySlime"]
     },
     {
       "pack_id": "DesaturatedPurpur",
       "pack_name": "Desaturated Purpur",
-      "pack_description": "Desaturates the color of all purpur blocks.",
-      "conflict": [],
-      "compatibility": []
+      "pack_description": "Desaturates the color of all purpur blocks."
     },
     {
       "pack_id": "DesaturatedDarkOak",
       "pack_name": "Desaturated Dark Oak",
-      "pack_description": "Desaturates Dark Oak Planks to give them a more neutral color.",
-      "conflict": [],
-      "compatibility": []
+      "pack_description": "Desaturates Dark Oak Planks to give them a more neutral color."
     },
     {
       "pack_id": "HorizontalNuggets",
       "pack_name": "Horizontal Nuggets",
-      "pack_description": "Rotates Gold Nuggets to be consistent with the Iron Nugget.",
-      "conflict": [],
-      "compatibility": []
+      "pack_description": "Rotates Gold Nuggets to be consistent with the Iron Nugget."
     },
     {
       "pack_id": "VerticalNuggets",
       "pack_name": "Vertical Nuggets",
-      "pack_description": "Rotates the Iron Nugget to be consistent with the Gold Nugget.",
-      "conflict": [],
-      "compatibility": []
+      "pack_description": "Rotates the Iron Nugget to be consistent with the Gold Nugget."
     },
     {
       "pack_id": "SofterWool",
       "pack_name": "Softer Wool",
       "pack_description": "Lowers the contrast and smoothens all wool blocks.",
-      "conflict": ["CleanWool", "OldWoolColors"],
-      "compatibility": []
+      "conflict": ["CleanWool", "OldWoolColors"]
     },
     {
       "pack_id": "CleanWool",
       "pack_name": "Clean Wool",
       "pack_description": "Makes all wool blocks have a clean texture.",
-      "conflict": ["SofterWool", "OldWoolColors"],
-      "compatibility": []
+      "conflict": ["SofterWool", "OldWoolColors"]
     },
     {
       "pack_id": "BrownLeather",
       "pack_name": "Brown Leather",
-      "pack_description": "Recolours all leather related items to use a similar palette to Leather Armor",
-      "conflict": [],
-      "compatibility": []
+      "pack_description": "Recolours all leather related items to use a similar palette to Leather Armor"
     },
     {
       "pack_id": "RedIronGolemFlowers",
       "pack_name": "Red Iron Golem Flowers",
-      "pack_description": "Changes the yellow flowers on the Iron Golem skin to red ones in order to match the poppies that they drop.",
-      "conflict": [],
-      "compatibility": []
+      "pack_description": "Changes the yellow flowers on the Iron Golem skin to red ones in order to match the poppies that they drop."
     },
     {
       "pack_id": "Rename'Stem'to'Log'",
       "pack_name": "Rename 'Stem' to 'Log'",
-      "pack_description": "Renames 'Crimson/Warped Stem/Hyphae' to 'Crimson/Warped Log/Wood'",
-      "conflict": [],
-      "compatibility": []
+      "pack_description": "Renames 'Crimson/Warped Stem/Hyphae' to 'Crimson/Warped Log/Wood'"
     },
     {
       "pack_id": "ColorfulEnchantingTableParticles",
       "pack_name": "Colorful Enchanting Table Particles",
-      "pack_description": "Makes the particles that come from bookshelves around an Enchanting Table nice and colorful!",
-      "conflict": [],
-      "compatibility": []
+      "pack_description": "Makes the particles that come from bookshelves around an Enchanting Table nice and colorful!"
     },
     {
       "pack_id": "HDShieldBannerPatterns",
       "pack_name": "HD Shield Banner Patterns",
-      "pack_description": "Swaps out the regular pixel consistent shield banner pattern textures with their regular banner counterparts for a better view.",
-      "conflict": [],
-      "compatibility": []
+      "pack_description": "Swaps out the regular pixel consistent shield banner pattern textures with their regular banner counterparts for a better view."
     },
     {
       "pack_id": "PinkEndRods",
       "pack_name": "Pink End Rods",
-      "pack_description": "Changes the gray base of End Rods to pink.",
-      "conflict": [],
-      "compatibility": []
+      "pack_description": "Changes the gray base of End Rods to pink."
     },
     {
       "pack_id": "AshlessCampfires",
       "pack_name": "Ashless Campfires",
       "pack_description": "Removes the 'ash' from unlit Campfires and Soul Campfires.",
-      "conflict": [],
       "compatibility": ["SoulSoilSoulCampfires"]
     },
     {
       "pack_id": "GlassDoors",
       "pack_name": "Glass Doors",
-      "pack_description": "Adds uniquely shaped glass windows into every door type.",
-      "conflict": [],
-      "compatibility": []
+      "pack_description": "Adds uniquely shaped glass windows into every door type."
     },
     {
       "pack_id": "GlassTrapdoors",
       "pack_name": "Glass Trapdoors",
-      "pack_description": "Adds uniquely shaped glass windows into every trapdoor type.",
-      "conflict": [],
-      "compatibility": []
+      "pack_description": "Adds uniquely shaped glass windows into every trapdoor type."
     },
     {
       "pack_id": "FlintTippedArrows",
       "pack_name": "Flint Tipped Arrows",
-      "pack_description": "Changes arrow sprites and entities to have Flint colored tips.",
-      "conflict": [],
-      "compatibility": []
+      "pack_description": "Changes arrow sprites and entities to have Flint colored tips."
     },
     {
       "pack_id": "SplashBottleo'Enchanting",
       "pack_name": "Splash Bottle o' Enchanting",
-      "pack_description": "Makes the Bottle o' Enchanting take the same shape as a splash potion",
-      "conflict": [],
-      "compatibility": []
+      "pack_description": "Makes the Bottle o' Enchanting take the same shape as a splash potion"
     },
     {
       "pack_id": "2DSpyglass",
       "pack_name": "2D Spyglass",
-      "pack_description": "Removes the 3D model for the handheld Spyglass, using a 2D sprite instead.",
-      "conflict": [],
-      "compatibility": []
+      "pack_description": "Removes the 3D model for the handheld Spyglass, using a 2D sprite instead."
     },
     {
       "pack_id": "AccurateSpyglass",
       "pack_name": "Accurate Spyglass",
-      "pack_description": "Recolors the Spyglass to use Copper and Amethyst colors to reflect its crafting recipe.",
-      "conflict": [],
-      "compatibility": []
+      "pack_description": "Recolors the Spyglass to use Copper and Amethyst colors to reflect its crafting recipe."
     },
     {
       "pack_id": "FencierFences",
       "pack_name": "Fencier Fences",
-      "pack_description": "Makes fences and fence gates less harsh by making them use a vertical plank texture rather than horizontal.",
-      "conflict": [],
-      "compatibility": []
+      "pack_description": "Makes fences and fence gates less harsh by making them use a vertical plank texture rather than horizontal."
     },
     {
       "pack_id": "SmootherWarpedPlanks",
       "pack_name": "Smoother Warped Planks",
       "pack_description": "Removes that harsh contrast from Warped Planks",
-      "conflict": ["OldPlanks"],
-      "compatibility": []
+      "conflict": ["OldPlanks"]
     },
     {
       "pack_id": "CrimsonerCrimson",
       "pack_name": "Crimsoner Crimson",
       "pack_description": "Recolours all Crimson Wood related blocks and items to be redder, matching the shades in Crimson Nylium and Wart blocks closer.",
-      "conflict": ["OldPlanks"],
-      "compatibility": []
+      "conflict": ["OldPlanks"]
     },
     {
       "pack_id": "AlternateCutCopper",
       "pack_name": "Alternate Cut Copper",
-      "pack_description": "Retextures Cut Copper blocks to resemble their look from their first appearance on Minecraft Live.",
-      "conflict": [],
-      "compatibility": []
+      "pack_description": "Retextures Cut Copper blocks to resemble their look from their first appearance on Minecraft Live."
     },
     {
       "pack_id": "PolishedStonestoBricks",
       "pack_name": "Polished Stones to Bricks",
       "pack_description": "Retextures Polished Granite, Andesite and Diorite to look like bricks.",
-      "conflict": ["SmootherStones"],
-      "compatibility": []
+      "conflict": ["SmootherStones"]
     },
     {
       "pack_id": "SingularGlazedTerracotta",
       "pack_name": "Singular Glazed Terracotta",
-      "pack_description": "Retextures all Glazed Terracotta blocks to use a single non-rotating design.",
-      "conflict": [],
-      "compatibility": []
+      "pack_description": "Retextures all Glazed Terracotta blocks to use a single non-rotating design."
     },
     {
       "pack_id": "PlainLeatherArmor",
       "pack_name": "Plain Leather Armor",
-      "pack_description": "Removes the brown overlay from Leather Armor.",
-      "conflict": [],
-      "compatibility": []
+      "pack_description": "Removes the brown overlay from Leather Armor."
     },
     {
       "pack_id": "GoldenCrown",
       "pack_name": "Golden Crown",
       "pack_description": "Retextures the Golden Helmet to look like a crown. Also affects the look of some helmet Armor Trims.",
-      "conflict": ["ConsistentHelmets"],
-      "compatibility": []
+      "conflict": ["ConsistentHelmets"]
     },
     {
       "pack_id": "ClassicStyleNetheriteArmor",
       "pack_name": "Classic Style Netherite Armor",
-      "pack_description": "Netherite armor in the style of the other armors.",
-      "conflict": [],
-      "compatibility": []
+      "pack_description": "Netherite armor in the style of the other armors."
     },
     {
       "pack_id": "AllayElytra",
       "pack_name": "Allay Elytra",
-      "pack_description": "Retextures the Elytra to match the Allay's wings!",
-      "conflict": [],
-      "compatibility": []
+      "pack_description": "Retextures the Elytra to match the Allay's wings!"
     },
     {
       "pack_id": "DragonElytra",
       "pack_name": "Dragon Elytra",
-      "pack_description": "Retextures the Elytra to match the Ender Dragon's wings!",
-      "conflict": [],
-      "compatibility": []
+      "pack_description": "Retextures the Elytra to match the Ender Dragon's wings!"
     },
     {
       "pack_id": "PhantomElytra",
       "pack_name": "Phantom Elytra",
-      "pack_description": "Retextures the Elytra to match the Phantom's wings!",
-      "conflict": [],
-      "compatibility": []
+      "pack_description": "Retextures the Elytra to match the Phantom's wings!"
     },
     {
       "pack_id": "VexElytra",
       "pack_name": "Vex Elytra",
-      "pack_description": "Retextures the Elytra to match the Vex's wings!",
-      "conflict": [],
-      "compatibility": []
+      "pack_description": "Retextures the Elytra to match the Vex's wings!"
     }
   ]
 }

@@ -4,93 +4,71 @@
     {
       "pack_id": "WitherHearts",
       "pack_name": "Wither Hearts",
-      "pack_description": "Makes Hearts more visible when under the 'Wither' effect.",
-      "conflict": [],
-      "compatibility": []
+      "pack_description": "Makes Hearts more visible when under the 'Wither' effect."
     },
     {
       "pack_id": "RainbowExperienceBar",
       "pack_name": "Rainbow Experience Bar",
-      "pack_description": "Changes the default green XP bar to a rainbow XP bar.",
-      "conflict": [],
-      "compatibility": []
+      "pack_description": "Changes the default green XP bar to a rainbow XP bar."
     },
     {
       "pack_id": "SmootherFont",
       "pack_name": "Smoother Font",
       "pack_description": "Changes the Font to be smoother and higher-resolution.",
-      "conflict": ["StandardGalacticAlphabet", "EnglishEnchantingTable"],
-      "compatibility": []
+      "conflict": ["StandardGalacticAlphabet", "EnglishEnchantingTable"]
     },
     {
       "pack_id": "QuickCrafting",
       "pack_name": "Quick Crafting",
-      "pack_description": "Adds a button to stack craft items in the inventory, crafting table, stonecutter, and trade faster with villagers.",
-      "conflict": [],
-      "compatibility": []
+      "pack_description": "Adds a button to stack craft items in the inventory, crafting table, stonecutter, and trade faster with villagers."
     },
     {
       "pack_id": "ChatTweaks",
       "pack_name": "Chat Tweaks",
-      "pack_description": "Allows mobile users to easily tab and move between previous and next messages sent in chat and command blocks.",
-      "conflict": [],
-      "compatibility": []
+      "pack_description": "Allows mobile users to easily tab and move between previous and next messages sent in chat and command blocks."
     },
     {
       "pack_id": "BrewingGuide",
       "pack_name": "Brewing Guide",
-      "pack_description": "Adds a cheat sheet to the Brewing Stand interface.",
-      "conflict": [],
-      "compatibility": []
+      "pack_description": "Adds a cheat sheet to the Brewing Stand interface."
     },
     {
       "pack_id": "NumberedHotbar",
       "pack_name": "Numbered Hotbar",
-      "pack_description": "Adds numbers to the hotbar slots.",
-      "conflict": [],
-      "compatibility": []
+      "pack_description": "Adds numbers to the hotbar slots."
     },
     {
       "pack_id": "TranslucentTooltips",
       "pack_name": "Translucent Tooltips",
-      "pack_description": "Makes item tooltips translucent.",
-      "conflict": [],
-      "compatibility": []
+      "pack_description": "Makes item tooltips translucent."
     },
     {
       "pack_id": "DarkUI",
       "pack_name": "Dark UI",
       "pack_description": "Changes all inventories and UIs to be darker.",
-      "conflict": ["TransparentUI", "HighContrastUI"],
-      "compatibility": []
+      "conflict": ["TransparentUI", "HighContrastUI"]
     },
     {
       "pack_id": "TransparentUI",
       "pack_name": "Transparent UI",
       "pack_description": "Changes all inventories and UIs to be transparent.",
-      "conflict": ["DarkUI", "HighContrastUI"],
-      "compatibility": []
+      "conflict": ["DarkUI", "HighContrastUI"]
     },
     {
       "pack_id": "HighContrastUI",
       "pack_name": "High Contrast UI",
       "pack_description": "Changes all inventories and UIs to be themed after Minecraft Java Edition's High Contrast pack.",
-      "conflict": ["DarkUI", "TransparentUI"],
-      "compatibility": []
+      "conflict": ["DarkUI", "TransparentUI"]
     },
     {
       "pack_id": "TradingHelper",
       "pack_name": "Trading Helper",
-      "pack_description": "Makes all locked trades visibles and allows to see the locked item names and enchantments.",
-      "conflict": [],
-      "compatibility": []
+      "pack_description": "Makes all locked trades visibles and allows to see the locked item names and enchantments."
     },
     {
       "pack_id": "NoHowToPlay",
       "pack_name": "No How To Play",
-      "pack_description": "Removes the 'How to Play' Button from all screens so you do not accidentally misclick it.",
-      "conflict": [],
-      "compatibility": []
+      "pack_description": "Removes the 'How to Play' Button from all screens so you do not accidentally misclick it."
     },
     {
       "pack_id": "BedrockEditionSubtitle",
@@ -100,8 +78,7 @@
         "AlphaMinecraftLogo",
         "OldBedrockMenuTitle",
         "JavaMenuTitle"
-      ],
-      "compatibility": []
+      ]
     }
   ]
 }

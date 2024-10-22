@@ -4,72 +4,57 @@
     {
       "pack_id": "DarkerDarkOakLeaves",
       "pack_name": "Darker Dark Oak Leaves",
-      "pack_description": "Makes Dark Oak Leaves darker than Oak Leaves",
-      "conflict": [],
-      "compatibility": []
+      "pack_description": "Makes Dark Oak Leaves darker than Oak Leaves"
     },
     {
       "pack_id": "GoldenSavanna",
       "pack_name": "Golden Savanna",
       "pack_description": "Recolors Savanna biomes to have beautiful golden grass.",
-      "conflict": [],
       "compatibility": ["LushGrassAllRound"]
     },
     {
       "pack_id": "LushGrassAllRound",
       "pack_name": "Lush Grass All Round",
       "pack_description": "Makes most of the world use a lush green colormap.",
-      "conflict": [],
       "compatibility": ["GoldenSavanna", "GrassSides"]
     },
     {
       "pack_id": "AlternateBedrock",
       "pack_name": "Alternate Bedrock",
-      "pack_description": "Retextures bedrock to be closer to deepslate, making it darker and have less contrast.",
-      "conflict": [],
-      "compatibility": []
+      "pack_description": "Retextures bedrock to be closer to deepslate, making it darker and have less contrast."
     },
     {
       "pack_id": "CircularSunandMoon",
       "pack_name": "Circular Sun and Moon",
       "pack_description": "Replaces the default sun and moon, with a circular sun and moon.",
-      "conflict": ["3DSunandMoon"],
-      "compatibility": []
+      "conflict": ["3DSunandMoon"]
     },
     {
       "pack_id": "CircularLogTops",
       "pack_name": "Circular Log Tops",
-      "pack_description": "Tweaks all Log and Stripped Log tops to be circular, including Nether Fungi Stems",
-      "conflict": [],
-      "compatibility": []
+      "pack_description": "Tweaks all Log and Stripped Log tops to be circular, including Nether Fungi Stems"
     },
     {
       "pack_id": "SmootherOakLog",
       "pack_name": "Smoother Oak Log",
-      "pack_description": "Smoothens the Oak Logs by reducing contrast.",
-      "conflict": [],
-      "compatibility": []
+      "pack_description": "Smoothens the Oak Logs by reducing contrast."
     },
     {
       "pack_id": "SmootherStones",
       "pack_name": "Smoother Stones",
       "pack_description": "Smoothens the textures of Diorite and Granite by reducing contrast.",
-      "conflict": ["PolishedStonesToBricks", "VariatedUnpolishedStones"],
-      "compatibility": []
+      "conflict": ["PolishedStonesToBricks", "VariatedUnpolishedStones"]
     },
     {
       "pack_id": "PebblelessDirt",
       "pack_name": "Pebbleless Dirt",
       "pack_description": "Gets rid of the pebbles in Dirt, Rooted Dirt and all Grass Block types.",
-      "conflict": ["VariatedMycelium", "VariatedGrass", "VariatedDirt"],
-      "compatibility": []
+      "conflict": ["VariatedMycelium", "VariatedGrass", "VariatedDirt"]
     },
     {
       "pack_id": "PebblelessCoarseDirt",
       "pack_name": "Pebbleless Coarse Dirt",
-      "pack_description": "Gets rid of the pebbles in Coarse Dirt.",
-      "conflict": [],
-      "compatibility": []
+      "pack_description": "Gets rid of the pebbles in Coarse Dirt."
     },
     {
       "pack_id": "BrighterNether",
@@ -80,15 +65,12 @@
         "OldNetherrack",
         "LowerCrimsonNylium",
         "LowerWarpedNylium"
-      ],
-      "compatibility": []
+      ]
     },
     {
       "pack_id": "ClearerWater",
       "pack_name": "Clearer Water",
-      "pack_description": "Makes Water clearer.",
-      "conflict": [],
-      "compatibility": []
+      "pack_description": "Makes Water clearer."
     },
     {
       "pack_id": "UniformOres",
@@ -100,30 +82,23 @@
     {
       "pack_id": "FancySunflowers",
       "pack_name": "Fancy Sunflowers",
-      "pack_description": "Retextures the heads of Sunflowers to bloom a bit more.",
-      "conflict": [],
-      "compatibility": []
+      "pack_description": "Retextures the heads of Sunflowers to bloom a bit more."
     },
     {
       "pack_id": "ShorterShortGrass",
       "pack_name": "Shorter Short Grass",
-      "pack_description": "Makes Short Grass slightly shorter.",
-      "conflict": [],
-      "compatibility": []
+      "pack_description": "Makes Short Grass slightly shorter."
     },
     {
       "pack_id": "ShorterTallGrass",
       "pack_name": "Shorter Tall Grass",
-      "pack_description": "Makes Tall Grass slightly shorter.",
-      "conflict": [],
-      "compatibility": []
+      "pack_description": "Makes Tall Grass slightly shorter."
     },
     {
       "pack_id": "WhiterSnow",
       "pack_name": "Whiter Snow",
       "pack_description": "Removes the blue tint from Snow.",
-      "conflict": ["DungeonsDirt", "LegacySnowball"],
-      "compatibility": []
+      "conflict": ["DungeonsDirt", "LegacySnowball"]
     }
   ]
 }

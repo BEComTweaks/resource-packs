@@ -5,37 +5,27 @@
     {
       "pack_id": "RedEnchantmentGlint",
       "pack_name": "Red",
-      "pack_description": "",
-      "conflict": [],
-      "compatibility": []
+      "pack_description": ""
     },
     {
       "pack_id": "OrangeEnchantmentGlint",
       "pack_name": "Orange",
-      "pack_description": "",
-      "conflict": [],
-      "compatibility": []
+      "pack_description": ""
     },
     {
       "pack_id": "YellowEnchantmentGlint",
       "pack_name": "Yellow",
-      "pack_description": "",
-      "conflict": [],
-      "compatibility": []
+      "pack_description": ""
     },
     {
       "pack_id": "BlueEnchantmentGlint",
       "pack_name": "Blue",
-      "pack_description": "",
-      "conflict": [],
-      "compatibility": []
+      "pack_description": ""
     },
     {
       "pack_id": "RainbowEnchantmentGlint",
       "pack_name": "Rainbow",
-      "pack_description": "",
-      "conflict": [],
-      "compatibility": []
+      "pack_description": ""
     }
   ]
 }

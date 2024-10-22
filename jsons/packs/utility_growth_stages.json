@@ -8,9 +8,7 @@
       "pack_description": "Adds indicators onto Amethyst Clusters to show the growth stages.",
       "details": {
         "icon": "apng"
-      },
-      "conflict": [],
-      "compatibility": []
+      }
     },
     {
       "pack_id": "BeetrootGrowth",
@@ -18,9 +16,7 @@
       "pack_description": "Adds indicators onto Beetroot to show the growth stages.",
       "details": {
         "icon": "apng"
-      },
-      "conflict": [],
-      "compatibility": []
+      }
     },
     {
       "pack_id": "CarrotGrowth",
@@ -28,9 +24,7 @@
       "pack_description": "Adds indicators onto Carrots to show the growth stages.",
       "details": {
         "icon": "apng"
-      },
-      "conflict": [],
-      "compatibility": []
+      }
     },
     {
       "pack_id": "CocoaBeanGrowth",
@@ -38,9 +32,7 @@
       "pack_description": "Adds indicators onto Cocoa Beans to show the growth stages.",
       "details": {
         "icon": "apng"
-      },
-      "conflict": [],
-      "compatibility": []
+      }
     },
     {
       "pack_id": "NetherWartGrowth",
@@ -48,9 +40,7 @@
       "pack_description": "Adds indicators onto Nether Wart to show the growth stages.",
       "details": {
         "icon": "apng"
-      },
-      "conflict": [],
-      "compatibility": []
+      }
     },
     {
       "pack_id": "PotatoGrowth",
@@ -58,9 +48,7 @@
       "pack_description": "Adds indicators onto Potatoes to show the growth stages.",
       "details": {
         "icon": "apng"
-      },
-      "conflict": [],
-      "compatibility": []
+      }
     },
     {
       "pack_id": "SweetBerryBushGrowth",
@@ -68,9 +56,7 @@
       "pack_description": "Adds indicators onto Sweet Berry Bushes to show the growth stages.",
       "details": {
         "icon": "apng"
-      },
-      "conflict": [],
-      "compatibility": []
+      }
     },
     {
       "pack_id": "WheatGrowth",
@@ -78,9 +64,7 @@
       "pack_description": "Adds indicators onto Wheat to show the growth stages.",
       "details": {
         "icon": "apng"
-      },
-      "conflict": [],
-      "compatibility": []
+      }
     }
   ]
 }

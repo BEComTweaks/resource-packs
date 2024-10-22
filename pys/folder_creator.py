@@ -88,19 +88,21 @@ def folder_creator():
                 elif showerror == 2:
                     # When length of pack_icon.png is larger than 0
                     clrprint('- |---------->', '`pack_icon.png`', 'has been modified!', clr='m,w,m')
-
-            for comp in pack_json["packs"][i]["compatibility"]:
-                # Pack Name Compatibilities Directory
-                try:
-                    # Creates compatability directory
-                    os.mkdir(f'{cdir()}/packs/{pack_json["topic"].lower()}/{pack_json["packs"][i]["pack_id"]}/{comp}')
-                    if showerror != 0:
-                        clrprint('+ |-------> Made folder', f'`{comp}`', clr='b,w')
-                except FileExistsError:
-                    if showerror == 2:
-                        clrprint('- |-------> Folder', f'`{comp}`', 'already exists!', clr='y,w,y')
-                    else:
-                        pass
+            try:
+                for comp in pack_json["packs"][i]["compatibility"]:
+                    # Pack Name Compatibilities Directory
+                    try:
+                        # Creates compatability directory
+                        os.mkdir(f'{cdir()}/packs/{pack_json["topic"].lower()}/{pack_json["packs"][i]["pack_id"]}/{comp}')
+                        if showerror != 0:
+                            clrprint('+ |-------> Made folder', f'`{comp}`', clr='b,w')
+                    except FileExistsError:
+                        if showerror == 2:
+                            clrprint('- |-------> Folder', f'`{comp}`', 'already exists!', clr='y,w,y')
+                        else:
+                            pass
+            except KeyError:
+                pass # If there is no compatibility, it will just pass
         if showerror != 0:
             # Seperator
             print("\n", "=" * 40, "\n")

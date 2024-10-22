@@ -17,15 +17,12 @@
       "pack_id": "SuspiciousSand&GravelBorders",
       "pack_name": "Suspicious Sand & Gravel Borders",
       "pack_description": "Places a border around Suspicious Sand and Suspicious Gravel for easier visibility.",
-      "conflict": ["SusSandandGravel"],
-      "compatibility": []
+      "conflict": ["SusSandandGravel"]
     },
     {
       "pack_id": "BuddingAmethystBorders",
       "pack_name": "Budding Amethyst Borders",
-      "pack_description": "Places a border around Budding Amethyst blocks for easier visibility within geodes.",
-      "conflict": [],
-      "compatibility": []
+      "pack_description": "Places a border around Budding Amethyst blocks for easier visibility within geodes."
     },
     {
       "pack_id": "VisualInfestedStoneItems",
@@ -34,8 +31,7 @@
       "details": {
         "message": ["error", "This will NOT affect the placed blocks."]
       },
-      "conflict": ["CrumbledInfestedStoneBlocks"],
-      "compatibility": []
+      "conflict": ["CrumbledInfestedStoneBlocks"]
     },
     {
       "pack_id": "WaxedCopperItems",
@@ -43,30 +39,23 @@
       "pack_description": "Adds a border around Waxed Copper and variants in the inventory.",
       "details": {
         "message": ["error", "This will NOT affect the placed blocks."]
-      },
-      "conflict": [],
-      "compatibility": []
+      }
     },
     {
       "pack_id": "DifferentStems",
       "pack_name": "Different Stems",
-      "pack_description": "Changes Melon and Pumpkin stems to reflect their fruit color.",
-      "conflict": [],
-      "compatibility": []
+      "pack_description": "Changes Melon and Pumpkin stems to reflect their fruit color."
     },
     {
       "pack_id": "Age25Kelp",
       "pack_name": "Age 25 Kelp",
-      "pack_description": "Adds flowers to the top of kelp plants when they are fully grown. {age=25}.",
-      "conflict": [],
-      "compatibility": []
+      "pack_description": "Adds flowers to the top of kelp plants when they are fully grown. {age=25}."
     },
     {
       "pack_id": "MineProgressBar",
       "pack_name": "Mine Progress Bar",
       "pack_description": "Changes the breaking texture of blocks to a clean ring around the outside.",
-      "conflict": ["AlternateBlockDestruction"],
-      "compatibility": []
+      "conflict": ["AlternateBlockDestruction"]
     },
     {
       "pack_id": "ClearBannerPatterns",
@@ -77,23 +66,17 @@
           "info",
           "This pack exists as an archive and will not be updated with the 1.20.30 textures."
         ]
-      },
-      "conflict": [],
-      "compatibility": []
+      }
     },
     {
       "pack_id": "HungerPreview",
       "pack_name": "Hunger Preview",
-      "pack_description": "Displays hunger bar icons on all food names to show how much it will fill you up.",
-      "conflict": [],
-      "compatibility": []
+      "pack_description": "Displays hunger bar icons on all food names to show how much it will fill you up."
     },
     {
       "pack_id": "MusicDiscRedstoneLevelPreview",
       "pack_name": "Music Disc Redstone Level Preview",
-      "pack_description": "Displays the redstone power level on all Music Disc names.",
-      "conflict": [],
-      "compatibility": []
+      "pack_description": "Displays the redstone power level on all Music Disc names."
     },
     {
       "pack_id": "StickyPistonSides",
@@ -124,43 +107,33 @@
       "pack_id": "CleanRedstoneDust",
       "pack_name": "Clean Redstone Dust",
       "pack_description": "Changes the texture of Redstone Dust to a clean solid line.",
-      "conflict": ["RedstoneWireFix"],
-      "compatibility": []
+      "conflict": ["RedstoneWireFix"]
     },
     {
       "pack_id": "VisibleTripwires",
       "pack_name": "Visible Tripwires",
-      "pack_description": "Makes tripwire a bright blue so you can see them.",
-      "conflict": [],
-      "compatibility": []
+      "pack_description": "Makes tripwire a bright blue so you can see them."
     },
     {
       "pack_id": "CompassLodestone",
       "pack_name": "Compass Lodestone",
-      "pack_description": "Adds North, East, South and West markings on the sides of the Lodestone, so you can use it as a stationary compass.",
-      "conflict": [],
-      "compatibility": []
+      "pack_description": "Adds North, East, South and West markings on the sides of the Lodestone, so you can use it as a stationary compass."
     },
     {
       "pack_id": "NoteBlockPitchParticle",
       "pack_name": "Note Block Pitch Particle",
-      "pack_description": "Modifies the note block pitch particle to show the pitch.",
-      "conflict": [],
-      "compatibility": []
+      "pack_description": "Modifies the note block pitch particle to show the pitch."
     },
     {
       "pack_id": "ArabicNumerals",
       "pack_name": "Arabic Numerals",
-      "pack_description": "Translates the Roman Numerals for enchantments and potions to Arabic Numerals. (I, II, III -> 1, 2, 3).",
-      "conflict": [],
-      "compatibility": []
+      "pack_description": "Translates the Roman Numerals for enchantments and potions to Arabic Numerals. (I, II, III -> 1, 2, 3)."
     },
     {
       "pack_id": "CrumbledInfestedStoneBlocks",
       "pack_name": "Crumbled Infested Stone Blocks",
       "pack_description": "Makes infested stone blocks appear crumbled and cracked, matching how easy it is to break the block.",
-      "conflict": ["VisualInfestedStoneItems"],
-      "compatibility": []
+      "conflict": ["VisualInfestedStoneItems"]
     },
     {
       "pack_id": "BoltlessWaxedCopperBlocks",
@@ -171,51 +144,38 @@
           "info",
           "This does NOT change anything with Cut Copper, so Waxed Copper Items is recommended."
         ]
-      },
-      "conflict": [],
-      "compatibility": []
+      }
     },
     {
       "pack_id": "BackPiston",
       "pack_name": "Back Piston",
-      "pack_description": "Adds a dot on the backside of the Piston and Sticky Piston to make the easier distinguishable.",
-      "conflict": [],
-      "compatibility": []
+      "pack_description": "Adds a dot on the backside of the Piston and Sticky Piston to make the easier distinguishable."
     },
     {
       "pack_id": "UnlitRedstoneOre",
       "pack_name": "Unlit Redstone Ore",
       "pack_description": "Makes unlit Redstone Ore use the same palette as unlit Redstone Wire until its lit, when it then returns to its default, bright red colour.",
-      "conflict": [],
       "compatibility": ["UniformOres", "OreBorders", "ClassicOres"]
     },
     {
       "pack_id": "FullHoneyStage",
       "pack_name": "Full Honey Stage",
-      "pack_description": "Shows the empty and full honey stages in Bee Nests and Beehives on all sides.",
-      "conflict": [],
-      "compatibility": []
+      "pack_description": "Shows the empty and full honey stages in Bee Nests and Beehives on all sides."
     },
     {
       "pack_id": "BorderedButtons",
       "pack_name": "Bordered Buttons",
-      "pack_description": "Adds a border to buttons to make them noticeable.",
-      "conflict": [],
-      "compatibility": []
+      "pack_description": "Adds a border to buttons to make them noticeable."
     },
     {
       "pack_id": "MarkedPressurePlates",
       "pack_name": "Marked Pressure Plates",
-      "pack_description": "Marks Pressure Plates with a square to make them noticeable.",
-      "conflict": [],
-      "compatibility": []
+      "pack_description": "Marks Pressure Plates with a square to make them noticeable."
     },
     {
       "pack_id": "BetterBottoms",
       "pack_name": "Better Bottoms",
-      "pack_description": "Improves the bottom of specific blocks to make them identifiable",
-      "conflict": [],
-      "compatibility": []
+      "pack_description": "Improves the bottom of specific blocks to make them identifiable"
     },
     {
       "pack_id": "LitFurnaces",
@@ -223,9 +183,7 @@
       "pack_description": "Shows a lit texture on all sides for furnaces, blast furncases and smokers.",
       "details": {
         "icon": "apng"
-      },
-      "conflict": [],
-      "compatibility": []
+      }
     },
     {
       "pack_id": "RespawnAnchorCharge",
@@ -233,9 +191,7 @@
       "pack_description": "Adds more textures to respawn anchors to indicate current charge.",
       "details": {
         "icon": "apng"
-      },
-      "conflict": [],
-      "compatibility": []
+      }
     },
     {
       "pack_id": "OpenBarrels",
@@ -243,9 +199,7 @@
       "pack_description": "Shows an open texture on all sides when barrel is open.",
       "details": {
         "icon": "gif"
-      },
-      "conflict": [],
-      "compatibility": []
+      }
     }
   ]
 }
