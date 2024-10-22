@@ -138,20 +138,12 @@
       "pack_id": "TranslucentPortal",
       "pack_name": "Translucent Portal",
       "pack_description": "Turns the portal blocks translucent to make it easier to see through",
-      "details": {
-        "icon": "gif"
-      }
+      "icon": "gif"
     },
     {
       "pack_id": "SmallerUtilities",
       "pack_name": "Smaller Utilities",
-      "pack_description": "Makes utility items such as Food, Totems, Firework Rockets and Potions smaller.",
-      "details": {
-        "message": [
-          "error",
-          "A Minecraft bug causes fishes to turn to their item variant. Can't be fixed."
-        ]
-      }
+      "pack_description": "Makes utility items such as Food, Totems, Firework Rockets and Potions smaller."
     },
     {
       "pack_id": "ShorterSwords",

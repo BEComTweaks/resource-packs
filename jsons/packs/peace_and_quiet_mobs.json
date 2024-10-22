@@ -31,12 +31,10 @@
       "pack_id": "QuieterBlazes",
       "pack_name": "Quieter Blazes",
       "pack_description": "Decreases Blaze sounds by 95%.",
-      "details": {
-        "message": [
-          "warn",
-          "Install <b>Quieter Fire</b> to quieten fire crackling sounds."
-        ]
-      }
+      "message": [
+        "warn",
+        "Install <b>Quieter Fire</b> to quieten fire crackling sounds."
+      ]
     },
     {
       "pack_id": "QuieterBreezes",
@@ -67,12 +65,10 @@
       "pack_id": "QuieterCreepers",
       "pack_name": "Quieter Creepers",
       "pack_description": "Decreases Creeper sounds by 95%.",
-      "details": {
-        "message": [
-          "warn",
-          "Install <b>Quieter Explosions</b> to quieten Creeper explosions."
-        ]
-      }
+      "message": [
+        "warn",
+        "Install <b>Quieter Explosions</b> to quieten Creeper explosions."
+      ]
     },
     {
       "pack_id": "QuieterDolphins",
@@ -263,12 +259,10 @@
       "pack_id": "QuieterWither",
       "pack_name": "Quieter Wither",
       "pack_description": "Decreases Wither sounds by 95%.",
-      "details": {
-        "message": [
-          "warn",
-          "Install <b>Quieter Explosions</b> to quiet Wither Head explosions."
-        ]
-      }
+      "message": [
+        "warn",
+        "Install <b>Quieter Explosions</b> to quiet Wither Head explosions."
+      ]
     },
     {
       "pack_id": "QuieterWolves",

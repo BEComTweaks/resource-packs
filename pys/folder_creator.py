@@ -70,9 +70,11 @@ def folder_creator():
 
             # Pack Directory pack_icon.png
             try:
-                if pack_json["packs"][i]["details"]["icon"] != "png":
+                if pack_json["packs"][i]["icon"] != "png":
                     pass
-            except:
+                else:
+                    raise KeyError
+            except KeyError:
                 with open(f'{cdir()}/packs/{pack_json["topic"].lower()}/{pack_json["packs"][i]["pack_id"]}/pack_icon.png','a') as _:
                     # The main purpose of doing this is to
                     # 1. Create a pack_icon.png as  \packs\topic\packid\

@@ -51,10 +51,8 @@
       "pack_id": "AllZombies",
       "pack_name": "All Zombies",
       "pack_description": "Randomizes zombie textures.",
-      "details": {
-        "message": ["info", "They change textures when rejoining world!"],
-        "icon": "gif"
-      }
+      "message": ["info", "They change textures when rejoining world!"],
+      "icon": "gif"
     }
   ]
 }

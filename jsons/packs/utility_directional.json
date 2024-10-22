@@ -22,39 +22,31 @@
       "pack_id": "DirectionalDispensers",
       "pack_name": "Directional Dispensers",
       "pack_description": "Adds arrows to the sides of Dispensers to indicate direction of output",
-      "details": {
-        "message": [
-          "error",
-          "The face's opposite side doesn't show the direction properly. Known issue but can't fix."
-        ]
-      }
+      "message": [
+        "error",
+        "The face's opposite side doesn't show the direction properly. Known issue but can't fix."
+      ]
     },
     {
       "pack_id": "DirectionalDroppers",
       "pack_name": "Directional Droppers",
       "pack_description": "Adds arrows to the sides of Droppers to indicate direction of output",
-      "details": {
-        "message": [
-          "error",
-          "The face's opposite side doesn't show the direction properly. Known issue but can't fix."
-        ]
-      }
+      "message": [
+        "error",
+        "The face's opposite side doesn't show the direction properly. Known issue but can't fix."
+      ]
     },
     {
       "pack_id": "DirectionalLava",
       "pack_name": "Directional Lava",
       "pack_description": "Adds arrows to lava to show the flowing direction",
-      "details": {
-        "icon": "apng"
-      }
+      "icon": "apng"
     },
     {
       "pack_id": "DirectionalWater",
       "pack_name": "Directional Water",
       "pack_description": "Adds arrows to water to show the flowing direction",
-      "details": {
-        "icon": "apng"
-      }
+      "icon": "apng"
     }
   ]
 }

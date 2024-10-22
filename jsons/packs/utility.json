@@ -28,18 +28,14 @@
       "pack_id": "VisualInfestedStoneItems",
       "pack_name": "Visual Infested Stone Items",
       "pack_description": "Adds a border around Infested Stone in the inventory.",
-      "details": {
-        "message": ["error", "This will NOT affect the placed blocks."]
-      },
+      "message": ["error", "This will NOT affect the placed blocks."],
       "conflict": ["CrumbledInfestedStoneBlocks"]
     },
     {
       "pack_id": "WaxedCopperItems",
       "pack_name": "Waxed Copper Items",
       "pack_description": "Adds a border around Waxed Copper and variants in the inventory.",
-      "details": {
-        "message": ["error", "This will NOT affect the placed blocks."]
-      }
+      "message": ["error", "This will NOT affect the placed blocks."]
     },
     {
       "pack_id": "DifferentStems",
@@ -61,12 +57,10 @@
       "pack_id": "ClearBannerPatterns",
       "pack_name": "Clear Banner Patterns",
       "pack_description": "Gives all the Banner Pattern items unique and appropriate textures.",
-      "details": {
-        "message": [
-          "info",
-          "This pack exists as an archive and will not be updated with the 1.20.30 textures."
-        ]
-      }
+      "message": [
+        "info",
+        "This pack exists as an archive and will not be updated with the 1.20.30 textures."
+      ]
     },
     {
       "pack_id": "HungerPreview",
@@ -139,12 +133,10 @@
       "pack_id": "BoltlessWaxedCopperBlocks",
       "pack_name": "Boltless Waxed Copper Blocks",
       "pack_description": "Removes the bolts in the corner of Waxed Copper blocks and variants.",
-      "details": {
-        "message": [
-          "info",
-          "This does NOT change anything with Cut Copper, so Waxed Copper Items is recommended."
-        ]
-      }
+      "message": [
+        "info",
+        "This does NOT change anything with Cut Copper, so Waxed Copper Items is recommended."
+      ]
     },
     {
       "pack_id": "BackPiston",
@@ -181,25 +173,19 @@
       "pack_id": "LitFurnaces",
       "pack_name": "Lit Furnaces",
       "pack_description": "Shows a lit texture on all sides for furnaces, blast furncases and smokers.",
-      "details": {
-        "icon": "apng"
-      }
+      "icon": "apng"
     },
     {
       "pack_id": "RespawnAnchorCharge",
       "pack_name": "Respawn Anchor Charge",
       "pack_description": "Adds more textures to respawn anchors to indicate current charge.",
-      "details": {
-        "icon": "apng"
-      }
+      "icon": "apng"
     },
     {
       "pack_id": "OpenBarrels",
       "pack_name": "Open Barrels",
       "pack_description": "Shows an open texture on all sides when barrel is open.",
-      "details": {
-        "icon": "gif"
-      }
+      "icon": "gif"
     }
   ]
 }

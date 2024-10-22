@@ -97,7 +97,7 @@ for j in pack_list:
                     pkicstats[0] += 1
             except FileNotFoundError:
                 try:
-                    if os.path.exists(f'{cdir()}/packs/{file["topic"].lower()}/{file["packs"][i]["pack_id"]}/pack_icon.{file["packs"][i]["details"]["icon"]}'):
+                    if os.path.exists(f'{cdir()}/packs/{file["topic"].lower()}/{file["packs"][i]["pack_id"]}/pack_icon.{file["packs"][i]["icon"]}'):
                         pkicstats[0] += 1
                     else:
                         # When pack icon doesn't even exist
@@ -173,21 +173,21 @@ for j in pack_list:
                 to_add_pack = to_add_pack.replace("pack_name", file["packs"][i]["pack_name"])
                 desc = file["packs"][i]["pack_description"]
                 try:
-                    if file["packs"][i]["details"]["message"][0] == "warn":
-                        desc += f'<p class="desc-warn">{file["packs"][i]["details"]["message"][1]}</p>'
-                    elif file["packs"][i]["details"]["message"][0] == "error":
-                        desc += f'<p class="desc-error">{file["packs"][i]["details"]["message"][1]}</p>'
-                    elif file["packs"][i]["details"]["message"][0] == "info":
-                        desc += f'<p class="desc-info">{file["packs"][i]["details"]["message"][1]}</p>'
+                    if file["packs"][i]["message"][0] == "warn":
+                        desc += f'<p class="desc-warn">{file["packs"][i]["message"][1]}</p>'
+                    elif file["packs"][i]["message"][0] == "error":
+                        desc += f'<p class="desc-error">{file["packs"][i]["message"][1]}</p>'
+                    elif file["packs"][i]["message"][0] == "info":
+                        desc += f'<p class="desc-info">{file["packs"][i]["message"][1]}</p>'
                 except KeyError:
                     pass
                 to_add_pack = to_add_pack.replace("pack_description", desc)
                 to_add_pack = to_add_pack.replace("relloctopackicon", f'packs/{file["topic"].lower()}/{file["packs"][i]["pack_id"]}/pack_icon.png')
                 try:
-                    if os.path.exists(f'{cdir()}/packs/{file["topic"].lower()}/{file["packs"][i]["pack_id"]}/pack_icon.{file["packs"][i]["details"]["icon"]}'):
+                    if os.path.exists(f'{cdir()}/packs/{file["topic"].lower()}/{file["packs"][i]["pack_id"]}/pack_icon.{file["packs"][i]["icon"]}'):
                         # Because I can't make the html use a missing texture thing, so
                         # it only replaces when it exists
-                        to_add_pack = to_add_pack.replace("png", file["packs"][i]["details"]["icon"])
+                        to_add_pack = to_add_pack.replace("png", file["packs"][i]["icon"])
                 except KeyError:
                     pass
                 # Uses relative location
@@ -257,7 +257,7 @@ for j in range(len(subcat_list)):
                 pkicstats[0] += 1
         except FileNotFoundError:
             try:
-                if os.path.exists(f'{cdir()}/packs/{file["topic"].lower()}/{file["packs"][i]["pack_id"]}/pack_icon.{file["packs"][i]["details"]["icon"]}'):
+                if os.path.exists(f'{cdir()}/packs/{file["topic"].lower()}/{file["packs"][i]["pack_id"]}/pack_icon.{file["packs"][i]["icon"]}'):
                     pkicstats[0] += 1
                 else:
                     # When pack icon doesn't even exist
@@ -334,21 +334,21 @@ for j in range(len(subcat_list)):
             to_add_pack = to_add_pack.replace("pack_name", file["packs"][i]["pack_name"])
             desc = file["packs"][i]["pack_description"]
             try:
-                if file["packs"][i]["details"]["message"][0] == "warn":
-                    desc += f'<p class="desc-warn">{file["packs"][i]["details"]["message"][1]}</p>'
-                elif file["packs"][i]["details"]["message"][0] == "error":
-                    desc += f'<p class="desc-error">{file["packs"][i]["details"]["message"][1]}</p>'
-                elif file["packs"][i]["details"]["message"][0] == "info":
-                    desc += f'<p class="desc-info">{file["packs"][i]["details"]["message"][1]}</p>'
+                if file["packs"][i]["message"][0] == "warn":
+                    desc += f'<p class="desc-warn">{file["packs"][i]["message"][1]}</p>'
+                elif file["packs"][i]["message"][0] == "error":
+                    desc += f'<p class="desc-error">{file["packs"][i]["message"][1]}</p>'
+                elif file["packs"][i]["message"][0] == "info":
+                    desc += f'<p class="desc-info">{file["packs"][i]["message"][1]}</p>'
             except KeyError:
                 pass
             to_add_pack = to_add_pack.replace("pack_description", desc)
             to_add_pack = to_add_pack.replace("relloctopackicon", f'packs/{file["topic"].lower()}/{file["packs"][i]["pack_id"]}/pack_icon.png')
             try:
-                if os.path.exists(f'{cdir()}/packs/{file["topic"].lower()}/{file["packs"][i]["pack_id"]}/pack_icon.{file["packs"][i]["details"]["icon"]}'):
+                if os.path.exists(f'{cdir()}/packs/{file["topic"].lower()}/{file["packs"][i]["pack_id"]}/pack_icon.{file["packs"][i]["icon"]}'):
                     # Because I can't make the html use a missing texture thing, some
                     # it only replaces when it exists
-                    to_add_pack = to_add_pack.replace("png", file["packs"][i]["details"]["icon"])
+                    to_add_pack = to_add_pack.replace("png", file["packs"][i]["icon"])
             except KeyError:
                 pass
             if args.use_relative_location:
