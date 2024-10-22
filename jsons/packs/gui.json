@@ -74,11 +74,7 @@
       "pack_id": "BedrockEditionSubtitle",
       "pack_name": "Bedrock Edition Subtitle",
       "pack_description": "Adds the 'Bedrock Edition' subtitle to the Minecraft logo.",
-      "conflict": [
-        "AlphaMinecraftLogo",
-        "OldBedrockMenuTitle",
-        "JavaMenuTitle"
-      ]
+      "conflict": ["AlphaMinecraftLogo", "OldBedrockMenuTitle", "JavaMenuTitle"]
     }
   ]
 }
