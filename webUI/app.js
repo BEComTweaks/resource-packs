@@ -286,7 +286,7 @@ function fetchPack(protocol, jsonData, packName, mcVersion) {
       // when the response doesnt send
       if (protocol === "https") {
         console.log(
-          `[%cerror%c]\nHTTPS error, trying HTTP: ${error}`,
+          `[%cerror%c]\nHTTPS error, trying HTTP: %c${error}`,
           "color: red",
           "color: initial",
           "color: red",

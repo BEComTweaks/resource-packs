@@ -4,149 +4,107 @@
     {
       "pack_id": "Classic",
       "pack_name": "Classic",
-      "pack_description": "",
-      "conflict": [],
-      "compatibility": []
+      "pack_description": ""
     },
     {
       "pack_id": "Ocean",
       "pack_name": "Ocean",
-      "pack_description": "",
-      "conflict": [],
-      "compatibility": []
+      "pack_description": ""
     },
     {
       "pack_id": "Village",
       "pack_name": "Village",
-      "pack_description": "",
-      "conflict": [],
-      "compatibility": []
+      "pack_description": ""
     },
     {
       "pack_id": "Bees",
       "pack_name": "Bees",
-      "pack_description": "",
-      "conflict": [],
-      "compatibility": []
+      "pack_description": ""
     },
     {
       "pack_id": "Nether",
       "pack_name": "Nether",
-      "pack_description": "",
-      "conflict": [],
-      "compatibility": []
+      "pack_description": ""
     },
     {
       "pack_id": "AmethystGeode",
       "pack_name": "Amethyst Geode",
-      "pack_description": "",
-      "conflict": [],
-      "compatibility": []
+      "pack_description": ""
     },
     {
       "pack_id": "SunsetValley",
       "pack_name": "Sunset Valley",
-      "pack_description": "",
-      "conflict": [],
-      "compatibility": []
+      "pack_description": ""
     },
     {
       "pack_id": "MangroveSwamp",
       "pack_name": "Mangrove Swamp",
-      "pack_description": "",
-      "conflict": [],
-      "compatibility": []
+      "pack_description": ""
     },
     {
       "pack_id": "TheEnd",
       "pack_name": "The End",
-      "pack_description": "",
-      "conflict": [],
-      "compatibility": []
+      "pack_description": ""
     },
     {
       "pack_id": "pack.png",
       "pack_name": "pack.png",
-      "pack_description": "",
-      "conflict": [],
-      "compatibility": []
+      "pack_description": ""
     },
     {
       "pack_id": "Nostalgia",
       "pack_name": "Nostalgia",
-      "pack_description": "",
-      "conflict": [],
-      "compatibility": []
+      "pack_description": ""
     },
     {
       "pack_id": "OceansideExtremeHills",
       "pack_name": "Oceanside Extreme Hills",
-      "pack_description": "",
-      "conflict": [],
-      "compatibility": []
+      "pack_description": ""
     },
     {
       "pack_id": "LakesideSunset",
       "pack_name": "Lakeside Sunset",
-      "pack_description": "",
-      "conflict": [],
-      "compatibility": []
+      "pack_description": ""
     },
     {
       "pack_id": "UndergroundLavaPool",
       "pack_name": "Underground Lava Pool",
-      "pack_description": "",
-      "conflict": [],
-      "compatibility": []
+      "pack_description": ""
     },
     {
       "pack_id": "AcaciaVillage",
       "pack_name": "Acacia Village",
-      "pack_description": "",
-      "conflict": [],
-      "compatibility": []
+      "pack_description": ""
     },
     {
       "pack_id": "CherryGrove",
       "pack_name": "Cherry Grove",
-      "pack_description": "",
-      "conflict": [],
-      "compatibility": []
+      "pack_description": ""
     },
     {
       "pack_id": "Halloween2021",
       "pack_name": "Halloween 2021",
-      "pack_description": "",
-      "conflict": [],
-      "compatibility": []
+      "pack_description": ""
     },
     {
       "pack_id": "Halloween2022",
       "pack_name": "Halloween 2022",
-      "pack_description": "",
-      "conflict": [],
-      "compatibility": []
+      "pack_description": ""
     },
     {
       "pack_id": "TrialChambers",
       "pack_name": "Trial Chambers",
-      "pack_description": "",
-      "conflict": [],
-      "compatibility": []
+      "pack_description": ""
     },
     {
       "pack_id": "TU69TutorialWorld(LegacyConsole)",
       "pack_name": "TU69 Tutorial World (Legacy Console)",
-      "pack_description": "",
-      "conflict": [],
-      "compatibility": []
+      "pack_description": ""
     },
     {
       "pack_id": "Stridey'sRPDevelopmentWorld",
       "pack_name": "Stridey's RP Development World",
-      "pack_description": "",
-      "conflict": [],
-      "compatibility": []
+      "pack_description": ""
     }
   ]
 }

@@ -97,7 +97,7 @@ for j in pack_list:
                     pkicstats[0] += 1
             except FileNotFoundError:
                 try:
-                    if os.path.exists(f'{cdir()}/packs/{file["topic"].lower()}/{file["packs"][i]["pack_id"]}/pack_icon.{file["packs"][i]["details"]["icon"]}'):
+                    if os.path.exists(f'{cdir()}/packs/{file["topic"].lower()}/{file["packs"][i]["pack_id"]}/pack_icon.{file["packs"][i]["icon"]}'):
                         pkicstats[0] += 1
                     else:
                         # When pack icon doesn't even exist
@@ -107,32 +107,38 @@ for j in pack_list:
                         incomplete_pkics[file["topic"]].append(file["packs"][i]["pack_id"])
                         pkicstats[1] += 1
             # Updates Incomplete Pack Compatibilities
-            for comp in range(len(file["packs"][i]["compatibility"])):  # If it is empty, it just skips
-                # Looks at compatibility folders
-                try:
-                    if os.listdir(f'{cdir()}/packs/{file["topic"].lower()}/{file["packs"][i]["pack_id"]}/{file["packs"][i]["compatibility"][comp]}') == []:
+            try:
+                for comp in range(len(file["packs"][i]["compatibility"])):
+                    # Looks at compatibility folders
+                    try:
+                        if os.listdir(f'{cdir()}/packs/{file["topic"].lower()}/{file["packs"][i]["pack_id"]}/{file["packs"][i]["compatibility"][comp]}') == []:
+                            # Adds the packid to the list of incomplete compatibilities
+                            try:
+                                compatibilities[file["packs"][i]["pack_id"]].append(file["packs"][i]["compatibility"][comp])
+                            except KeyError:
+                                compatibilities[file["packs"][i]["pack_id"]] = [file["packs"][i]["compatibility"][comp]]
+                            cstats[1] += 1
+                        else:
+                            # When the compatibility directory has something inside
+                            cstats[0] += 1
+                    except FileNotFoundError:
+                        # When the compatibility folder isn't there
                         # Adds the packid to the list of incomplete compatibilities
                         try:
                             compatibilities[file["packs"][i]["pack_id"]].append(file["packs"][i]["compatibility"][comp])
                         except KeyError:
                             compatibilities[file["packs"][i]["pack_id"]] = [file["packs"][i]["compatibility"][comp]]
                         cstats[1] += 1
-                    else:
-                        # When the compatibility directory has something inside
-                        cstats[0] += 1
-                except FileNotFoundError:
-                    # When the compatibility folder isn't there
-                    # Adds the packid to the list of incomplete compatibilities
-                    try:
-                        compatibilities[file["packs"][i]["pack_id"]].append(file["packs"][i]["compatibility"][comp])
-                    except KeyError:
-                        compatibilities[file["packs"][i]["pack_id"]] = [file["packs"][i]["compatibility"][comp]]
-                    cstats[1] += 1
+            except KeyError:
+                pass # If it is empty, it just skips
             
             # Updates Pack Conflicts
             conflicts[file["packs"][i]["pack_id"]] = []
-            for conf in range(len(file["packs"][i]["conflict"])):  # If it is empty, it just skips
-                conflicts[file["packs"][i]["pack_id"]].append(file["packs"][i]["conflict"][conf])
+            try:
+                for conf in range(len(file["packs"][i]["conflict"])):
+                    conflicts[file["packs"][i]["pack_id"]].append(file["packs"][i]["conflict"][conf])
+            except KeyError:
+                pass # If it is empty, it just skips
             if conflicts[file["packs"][i]["pack_id"]] == []:
                 del conflicts[file["packs"][i]["pack_id"]]
             
@@ -167,21 +173,21 @@ for j in pack_list:
                 to_add_pack = to_add_pack.replace("pack_name", file["packs"][i]["pack_name"])
                 desc = file["packs"][i]["pack_description"]
                 try:
-                    if file["packs"][i]["details"]["message"][0] == "warn":
-                        desc += f'<p class="desc-warn">{file["packs"][i]["details"]["message"][1]}</p>'
-                    elif file["packs"][i]["details"]["message"][0] == "error":
-                        desc += f'<p class="desc-error">{file["packs"][i]["details"]["message"][1]}</p>'
-                    elif file["packs"][i]["details"]["message"][0] == "info":
-                        desc += f'<p class="desc-info">{file["packs"][i]["details"]["message"][1]}</p>'
+                    if file["packs"][i]["message"][0] == "warn":
+                        desc += f'<p class="desc-warn">{file["packs"][i]["message"][1]}</p>'
+                    elif file["packs"][i]["message"][0] == "error":
+                        desc += f'<p class="desc-error">{file["packs"][i]["message"][1]}</p>'
+                    elif file["packs"][i]["message"][0] == "info":
+                        desc += f'<p class="desc-info">{file["packs"][i]["message"][1]}</p>'
                 except KeyError:
                     pass
                 to_add_pack = to_add_pack.replace("pack_description", desc)
                 to_add_pack = to_add_pack.replace("relloctopackicon", f'packs/{file["topic"].lower()}/{file["packs"][i]["pack_id"]}/pack_icon.png')
                 try:
-                    if os.path.exists(f'{cdir()}/packs/{file["topic"].lower()}/{file["packs"][i]["pack_id"]}/pack_icon.{file["packs"][i]["details"]["icon"]}'):
+                    if os.path.exists(f'{cdir()}/packs/{file["topic"].lower()}/{file["packs"][i]["pack_id"]}/pack_icon.{file["packs"][i]["icon"]}'):
                         # Because I can't make the html use a missing texture thing, so
                         # it only replaces when it exists
-                        to_add_pack = to_add_pack.replace("png", file["packs"][i]["details"]["icon"])
+                        to_add_pack = to_add_pack.replace("png", file["packs"][i]["icon"])
                 except KeyError:
                     pass
                 # Uses relative location
@@ -251,7 +257,7 @@ for j in range(len(subcat_list)):
                 pkicstats[0] += 1
         except FileNotFoundError:
             try:
-                if os.path.exists(f'{cdir()}/packs/{file["topic"].lower()}/{file["packs"][i]["pack_id"]}/pack_icon.{file["packs"][i]["details"]["icon"]}'):
+                if os.path.exists(f'{cdir()}/packs/{file["topic"].lower()}/{file["packs"][i]["pack_id"]}/pack_icon.{file["packs"][i]["icon"]}'):
                     pkicstats[0] += 1
                 else:
                     # When pack icon doesn't even exist
@@ -262,32 +268,38 @@ for j in range(len(subcat_list)):
                 pkicstats[1] += 1
         
         # Updates Incomplete Pack Compatibilities
-        for comp in range(len(file["packs"][i]["compatibility"])):  # If it is empty, it just skips
-            # Looks at compatibility folders
-            try:
-                if os.listdir(f'{cdir()}/packs/{file["topic"].lower()}/{file["packs"][i]["pack_id"]}/{file["packs"][i]["compatibility"][comp]}') == []:
+        try:
+            for comp in range(len(file["packs"][i]["compatibility"])):
+                # Looks at compatibility folders
+                try:
+                    if os.listdir(f'{cdir()}/packs/{file["topic"].lower()}/{file["packs"][i]["pack_id"]}/{file["packs"][i]["compatibility"][comp]}') == []:
+                        # Adds the packid to the list of incomplete compatibilities
+                        try:
+                            compatibilities[file["packs"][i]["pack_id"]].append(file["packs"][i]["compatibility"][comp])
+                        except KeyError:
+                            compatibilities[file["packs"][i]["pack_id"]] = [file["packs"][i]["compatibility"][comp]]
+                        cstats[1] += 1
+                    else:
+                        # When the compatibility directory has something inside
+                        cstats[0] += 1
+                except FileNotFoundError:
+                    # When the compatibility folder isn't there
                     # Adds the packid to the list of incomplete compatibilities
                     try:
                         compatibilities[file["packs"][i]["pack_id"]].append(file["packs"][i]["compatibility"][comp])
                     except KeyError:
                         compatibilities[file["packs"][i]["pack_id"]] = [file["packs"][i]["compatibility"][comp]]
                     cstats[1] += 1
-                else:
-                    # When the compatibility directory has something inside
-                    cstats[0] += 1
-            except FileNotFoundError:
-                # When the compatibility folder isn't there
-                # Adds the packid to the list of incomplete compatibilities
-                try:
-                    compatibilities[file["packs"][i]["pack_id"]].append(file["packs"][i]["compatibility"][comp])
-                except KeyError:
-                    compatibilities[file["packs"][i]["pack_id"]] = [file["packs"][i]["compatibility"][comp]]
-                cstats[1] += 1
-        
+        except KeyError:
+            pass # If it is empty, it just skips
+
         # Updates Pack Conflicts
         conflicts[file["packs"][i]["pack_id"]] = []
-        for conf in range(len(file["packs"][i]["conflict"])):  # If it is empty, it just skips
-            conflicts[file["packs"][i]["pack_id"]].append(file["packs"][i]["conflict"][conf])
+        try:
+            for conf in range(len(file["packs"][i]["conflict"])):
+                conflicts[file["packs"][i]["pack_id"]].append(file["packs"][i]["conflict"][conf])
+        except KeyError:
+            pass # If it is empty, it just skips
         if conflicts[file["packs"][i]["pack_id"]] == []:
             del conflicts[file["packs"][i]["pack_id"]]
         
@@ -322,21 +334,21 @@ for j in range(len(subcat_list)):
             to_add_pack = to_add_pack.replace("pack_name", file["packs"][i]["pack_name"])
             desc = file["packs"][i]["pack_description"]
             try:
-                if file["packs"][i]["details"]["message"][0] == "warn":
-                    desc += f'<p class="desc-warn">{file["packs"][i]["details"]["message"][1]}</p>'
-                elif file["packs"][i]["details"]["message"][0] == "error":
-                    desc += f'<p class="desc-error">{file["packs"][i]["details"]["message"][1]}</p>'
-                elif file["packs"][i]["details"]["message"][0] == "info":
-                    desc += f'<p class="desc-info">{file["packs"][i]["details"]["message"][1]}</p>'
+                if file["packs"][i]["message"][0] == "warn":
+                    desc += f'<p class="desc-warn">{file["packs"][i]["message"][1]}</p>'
+                elif file["packs"][i]["message"][0] == "error":
+                    desc += f'<p class="desc-error">{file["packs"][i]["message"][1]}</p>'
+                elif file["packs"][i]["message"][0] == "info":
+                    desc += f'<p class="desc-info">{file["packs"][i]["message"][1]}</p>'
             except KeyError:
                 pass
             to_add_pack = to_add_pack.replace("pack_description", desc)
             to_add_pack = to_add_pack.replace("relloctopackicon", f'packs/{file["topic"].lower()}/{file["packs"][i]["pack_id"]}/pack_icon.png')
             try:
-                if os.path.exists(f'{cdir()}/packs/{file["topic"].lower()}/{file["packs"][i]["pack_id"]}/pack_icon.{file["packs"][i]["details"]["icon"]}'):
+                if os.path.exists(f'{cdir()}/packs/{file["topic"].lower()}/{file["packs"][i]["pack_id"]}/pack_icon.{file["packs"][i]["icon"]}'):
                     # Because I can't make the html use a missing texture thing, some
                     # it only replaces when it exists
-                    to_add_pack = to_add_pack.replace("png", file["packs"][i]["details"]["icon"])
+                    to_add_pack = to_add_pack.replace("png", file["packs"][i]["icon"])
             except KeyError:
                 pass
             if args.use_relative_location:

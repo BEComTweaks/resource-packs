@@ -6,81 +6,49 @@
       "pack_id": "AmethystGrowth",
       "pack_name": "Amethyst",
       "pack_description": "Adds indicators onto Amethyst Clusters to show the growth stages.",
-      "details": {
-        "icon": "apng"
-      },
-      "conflict": [],
-      "compatibility": []
+      "icon": "apng"
     },
     {
       "pack_id": "BeetrootGrowth",
       "pack_name": "Beetroot",
       "pack_description": "Adds indicators onto Beetroot to show the growth stages.",
-      "details": {
-        "icon": "apng"
-      },
-      "conflict": [],
-      "compatibility": []
+      "icon": "apng"
     },
     {
       "pack_id": "CarrotGrowth",
       "pack_name": "Carrot",
       "pack_description": "Adds indicators onto Carrots to show the growth stages.",
-      "details": {
-        "icon": "apng"
-      },
-      "conflict": [],
-      "compatibility": []
+      "icon": "apng"
     },
     {
       "pack_id": "CocoaBeanGrowth",
       "pack_name": "Cocoa Bean",
       "pack_description": "Adds indicators onto Cocoa Beans to show the growth stages.",
-      "details": {
-        "icon": "apng"
-      },
-      "conflict": [],
-      "compatibility": []
+      "icon": "apng"
     },
     {
       "pack_id": "NetherWartGrowth",
       "pack_name": "Nether Wart",
       "pack_description": "Adds indicators onto Nether Wart to show the growth stages.",
-      "details": {
-        "icon": "apng"
-      },
-      "conflict": [],
-      "compatibility": []
+      "icon": "apng"
     },
     {
       "pack_id": "PotatoGrowth",
       "pack_name": "Potato",
       "pack_description": "Adds indicators onto Potatoes to show the growth stages.",
-      "details": {
-        "icon": "apng"
-      },
-      "conflict": [],
-      "compatibility": []
+      "icon": "apng"
     },
     {
       "pack_id": "SweetBerryBushGrowth",
       "pack_name": "Sweet Berry Bush",
       "pack_description": "Adds indicators onto Sweet Berry Bushes to show the growth stages.",
-      "details": {
-        "icon": "apng"
-      },
-      "conflict": [],
-      "compatibility": []
+      "icon": "apng"
     },
     {
       "pack_id": "WheatGrowth",
       "pack_name": "Wheat",
       "pack_description": "Adds indicators onto Wheat to show the growth stages.",
-      "details": {
-        "icon": "apng"
-      },
-      "conflict": [],
-      "compatibility": []
+      "icon": "apng"
     }
   ]
 }

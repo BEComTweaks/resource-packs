@@ -6,8 +6,7 @@
       "pack_id": "LowerGrass",
       "pack_name": "Lower Grass",
       "pack_description": "Lowers the sides of Grass Blocks  to provide a smoother and greener landscape.",
-      "conflict": ["GrassSides", "DungeonsDirt"],
-      "compatibility": []
+      "conflict": ["GrassSides", "DungeonsDirt"]
     },
     {
       "pack_id": "GrassSides",
@@ -20,85 +19,73 @@
       "pack_id": "LowerMycelium",
       "pack_name": "Lower Mycelium",
       "pack_description": "Lowers the sides of Mycelium Blocks to provide a smoother and mushroomier landscape.",
-      "conflict": ["MyceliumSides", "DungeonsDirt"],
-      "compatibility": []
+      "conflict": ["MyceliumSides", "DungeonsDirt"]
     },
     {
       "pack_id": "MyceliumSides",
       "pack_name": "Mycelium Sides",
       "pack_description": "Completely covers the sides of Mycelium Blocks to provide a smoother and mushroomier landscape.",
-      "conflict": ["LowerMycelium", "DungeonsDirt"],
-      "compatibility": []
+      "conflict": ["LowerMycelium", "DungeonsDirt"]
     },
     {
       "pack_id": "LowerGrassPaths",
       "pack_name": "Lower Grass Paths",
       "pack_description": "Lowers the sides of Path Blocks to provide a smoother-looking pathway.",
-      "conflict": ["GrassPathSides", "DungeonsDirt"],
-      "compatibility": []
+      "conflict": ["GrassPathSides", "DungeonsDirt"]
     },
     {
       "pack_id": "GrassPathSides",
       "pack_name": "Grass Path Sides",
       "pack_description": "Completely covers the sides of Path Blocks to provide a smoother-looking pathway",
-      "conflict": ["LowerGrassPaths", "DungeonsDirt"],
-      "compatibility": []
+      "conflict": ["LowerGrassPaths", "DungeonsDirt"]
     },
     {
       "pack_id": "LowerPodzol",
       "pack_name": "Lower Podzol",
       "pack_description": "Lowers the sides of Podzol Blocks to provide a smoother and more consistent landscape.",
-      "conflict": ["PodzolSides", "DungeonsDirt"],
-      "compatibility": []
+      "conflict": ["PodzolSides", "DungeonsDirt"]
     },
     {
       "pack_id": "PodzolSides",
       "pack_name": "Podzol Sides",
       "pack_description": "Completely covers the sides of Podzol Blocks to provide a smoother and more consistent landscape.",
-      "conflict": ["LowerPodzol", "DungeonsDirt"],
-      "compatibility": []
+      "conflict": ["LowerPodzol", "DungeonsDirt"]
     },
     {
       "pack_id": "LowerSnow",
       "pack_name": "Lower Snow",
       "pack_description": "Lowers the sides of Grass Blocks to provide a smoother and whiter snowy landscape.",
-      "conflict": ["SnowSides", "DungeonsDirt"],
-      "compatibility": []
+      "conflict": ["SnowSides", "DungeonsDirt"]
     },
     {
       "pack_id": "SnowSides",
       "pack_name": "Snow Sides",
       "pack_description": "Completely covers the sides of Grass Blocks to provide a smoother and whiter snowy landscape.",
-      "conflict": ["LowerSnow", "DungeonsDirt"],
-      "compatibility": []
+      "conflict": ["LowerSnow", "DungeonsDirt"]
     },
     {
       "pack_id": "LowerCrimsonNylium",
       "pack_name": "Lower Crimson Nylium",
       "pack_description": "Lowers the sides of Crimson Nylium to provide a smoother and redder landscape.",
-      "conflict": ["CrimsonNyliumSides", "OldNetherrack", "BrighterNether"],
-      "compatibility": []
+      "conflict": ["CrimsonNyliumSides", "OldNetherrack", "BrighterNether"]
     },
     {
       "pack_id": "CrimsonNyliumSides",
       "pack_name": "Crimson Nylium Sides",
       "pack_description": "Completely covers the sides of Crimson Nylium to provide a smoother and redder landscape.",
-      "conflict": ["LowerCrimsonNylium"],
-      "compatibility": []
+      "conflict": ["LowerCrimsonNylium"]
     },
     {
       "pack_id": "LowerWarpedNylium",
       "pack_name": "Lower Warped Nylium",
       "pack_description": "Lowers the sides of Warped Nylium to provide a smoother and bluer landscape.",
-      "conflict": ["WarpedNyliumSides", "OldNetherrack", "BrighterNether"],
-      "compatibility": []
+      "conflict": ["WarpedNyliumSides", "OldNetherrack", "BrighterNether"]
     },
     {
       "pack_id": "WarpedNyliumSides",
       "pack_name": "Warped Nylium Sides",
       "pack_description": "Completely covers the sides of Warped Nylium to provide a smoother and bluer landscape.",
-      "conflict": ["LowerWarpedNylium"],
-      "compatibility": []
+      "conflict": ["LowerWarpedNylium"]
     }
   ]
 }

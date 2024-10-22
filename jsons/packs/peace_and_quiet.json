@@ -4,103 +4,73 @@
     {
       "pack_id": "QuieterRain",
       "pack_name": "Quieter Rain",
-      "pack_description": "Decreases Rain sounds by 95%.",
-      "conflict": [],
-      "compatibility": []
+      "pack_description": "Decreases Rain sounds by 95%."
     },
     {
       "pack_id": "QuieterThunder",
       "pack_name": "Quieter Thunder",
-      "pack_description": "Decreases Thunder sounds by 95%.",
-      "conflict": [],
-      "compatibility": []
+      "pack_description": "Decreases Thunder sounds by 95%."
     },
     {
       "pack_id": "QuieterExplosions",
       "pack_name": "Quieter Explosions",
-      "pack_description": "Decreases Explosion sounds by 95%.",
-      "conflict": [],
-      "compatibility": []
+      "pack_description": "Decreases Explosion sounds by 95%."
     },
     {
       "pack_id": "QuieterDispensersandDroppers",
       "pack_name": "Quieter Dispensers and Droppers",
       "pack_description": "Decreases Dispenser and Dropper sounds by 95%.",
-      "details": {
-        "message": ["warn", "Also affects menu clicks."]
-      },
-      "conflict": [],
-      "compatibility": []
+      "message": ["warn", "Also affects menu clicks."]
     },
     {
       "pack_id": "QuieterMinecarts",
       "pack_name": "Quieter Minecarts",
-      "pack_description": "Decreases Minecart sounds by 95%.",
-      "conflict": [],
-      "compatibility": []
+      "pack_description": "Decreases Minecart sounds by 95%."
     },
     {
       "pack_id": "QuieterFire",
       "pack_name": "Quieter Fire",
-      "pack_description": "Decreases Fire sounds by 95%.",
-      "conflict": [],
-      "compatibility": []
+      "pack_description": "Decreases Fire sounds by 95%."
     },
     {
       "pack_id": "QuieterNetherPortals",
       "pack_name": "Quieter Nether Portals",
-      "pack_description": "Decreases Nether Portal sounds by 95%.",
-      "conflict": [],
-      "compatibility": []
+      "pack_description": "Decreases Nether Portal sounds by 95%."
     },
     {
       "pack_id": "QuieterWater",
       "pack_name": "Quieter Water",
-      "pack_description": "Decreases Water sounds by 95%.",
-      "conflict": [],
-      "compatibility": []
+      "pack_description": "Decreases Water sounds by 95%."
     },
     {
       "pack_id": "QuieterBeacons",
       "pack_name": "Quieter Beacons",
-      "pack_description": "Decreases Beacon sounds by 95%.",
-      "conflict": [],
-      "compatibility": []
+      "pack_description": "Decreases Beacon sounds by 95%."
     },
     {
       "pack_id": "QuieterConsumables",
       "pack_name": "Quieter Consumables",
-      "pack_description": "Decreases Consumable sounds by 95%.",
-      "conflict": [],
-      "compatibility": []
+      "pack_description": "Decreases Consumable sounds by 95%."
     },
     {
       "pack_id": "QuieterSculkSensors",
       "pack_name": "Quieter Sculk Sensors",
-      "pack_description": "Decreases Sculk Sensor sounds by 95%.",
-      "conflict": [],
-      "compatibility": []
+      "pack_description": "Decreases Sculk Sensor sounds by 95%."
     },
     {
       "pack_id": "QuieterSculkShriekers",
       "pack_name": "Quieter Sculk Shriekers",
-      "pack_description": "Decreases Sculk Shrieker sounds by 95%.",
-      "conflict": [],
-      "compatibility": []
+      "pack_description": "Decreases Sculk Shrieker sounds by 95%."
     },
     {
       "pack_id": "QuieterPistons",
       "pack_name": "Quieter Pistons",
-      "pack_description": "Decreases Piston sounds by 95%.",
-      "conflict": [],
-      "compatibility": []
+      "pack_description": "Decreases Piston sounds by 95%."
     },
     {
       "pack_id": "NoCaveSounds",
       "pack_name": "No Cave Sounds",
-      "pack_description": "Mutes the spooky cave sounds.",
-      "conflict": [],
-      "compatibility": []
+      "pack_description": "Mutes the spooky cave sounds."
     }
   ]
 }
