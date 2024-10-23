@@ -5,7 +5,9 @@ on:
     branches:
       - '**'
   workflow_dispatch:
-
+# BOT_TOKEN is what I want to use most of the times,
+# But deploy hates is for no reason, so I use 
+# GITHUB_TOKEN just for the deploy job
 jobs:
   format_repo:
     runs-on: ubuntu-latest
@@ -20,7 +22,7 @@ jobs:
         run: npm install prettier
 
       - name: Set up Python
-        uses: actions/setup-python@v2
+        uses: actions/setup-python@v5
         with:
           python-version: '3.x'
 
@@ -47,11 +49,16 @@ jobs:
         env:
           BOT_TOKEN: ${{ secrets.BOT_TOKEN }}
 
-  start_deploy:
+  deploy:
     needs: format_repo
     if: github.ref == 'refs/heads/main' && !contains(github.event.head_commit.message, 'skip-deploy')
     runs-on: ubuntu-latest
-
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -66,39 +73,25 @@ jobs:
           path: ./webUI
           retention-days: 1
 
-  deploy:
-    needs: start_deploy
-    runs-on: ubuntu-latest
-    permissions:
-      pages: write
-      id-token: write
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    steps:
       - name: Checkout repository
         uses: actions/checkout@v4
       
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v4
 
-  delete_artifact:  # leaving as seperate jobs for testing
-    needs: deploy
-    runs-on: ubuntu-latest
-    steps:
-    - name: Get Artifact ID
-      run: |
-        artifacts=$(curl -s -H "Authorization: token ${{ secrets.BOT_TOKEN }}" \
-            https://api.github.com/repos/${{ github.repository }}/actions/artifacts)
-        artifact_id=$(echo "$artifacts" | jq -r '.artifacts[0] | select(.name == "github-pages") | .id')
-        echo "Artifact ID: $artifact_id"
-        echo "artifact_id=$artifact_id" >> $GITHUB_ENV
+      - name: Get Artifact ID
+        run: |
+          artifacts=$(curl -s -H "Authorization: token ${{ secrets.BOT_TOKEN }}" \
+              https://api.github.com/repos/${{ github.repository }}/actions/artifacts)
+          artifact_id=$(echo "$artifacts" | jq -r '.artifacts[0] | select(.name == "github-pages") | .id')
+          echo "Artifact ID: $artifact_id"
+          echo "artifact_id=$artifact_id" >> $GITHUB_ENV
 
-    - name: Delete Artifact
-      if: env.artifact_id != ''
-      run: |
-        curl -X DELETE -H "Authorization: token ${{ secrets.BOT_TOKEN }}" \
-        https://api.github.com/repos/${{ github.repository }}/actions/artifacts/$artifact_id
+      - name: Delete Artifact
+        if: env.artifact_id != ''
+        run: |
+          curl -X DELETE -H "Authorization: token ${{ secrets.BOT_TOKEN }}" \
+          https://api.github.com/repos/${{ github.repository }}/actions/artifacts/$artifact_id
 
   update_server:
     needs: format_repo
