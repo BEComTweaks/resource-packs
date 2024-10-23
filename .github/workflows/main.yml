@@ -45,9 +45,9 @@ jobs:
             git push
           fi
         env:
-          GITHUB_TOKEN: ${{ secrets.BOT_TOKEN }}
+          BOT_TOKEN: ${{ secrets.BOT_TOKEN }}
 
-  deploy_page:
+  start_deploy:
     needs: format_repo
     if: github.ref == 'refs/heads/main' && !contains(github.event.head_commit.message, 'skip-deploy')
     runs-on: ubuntu-latest
@@ -60,15 +60,45 @@ jobs:
         run: |
           sed -i 's|const serverip = "localhost";|const serverip = "${{ secrets.IP_FOR_SERVER }}";|g' webUI/app.js
 
-      - name: Deploy to GitHub Pages
-        uses: crazy-max/ghaction-github-pages@v4
+      - name: Upload Artifact
+        uses: actions/upload-pages-artifact@v3
         with:
-          target_branch: gh-pages
-          build_dir: ./webUI
-          author: NSPBot911 <${{ secrets.BOT_EMAIL }}>
-          committer: NSPBot911 <${{ secrets.BOT_EMAIL }}>
-        env:
-          GITHUB_TOKEN: ${{ secrets.BOT_TOKEN }}
+          path: ./webUI
+          retention-days: 1
+
+  deploy:
+    needs: start_deploy
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      
+      - name: Deploy to GitHub Pages
+        uses: actions/deploy-pages@v4
+
+  delete_artifact:  # leaving as seperate jobs for testing
+    needs: deploy
+    runs-on: ubuntu-latest
+    steps:
+    - name: Get Artifact ID
+      run: |
+        artifacts=$(curl -s -H "Authorization: token ${{ secrets.BOT_TOKEN }}" \
+            https://api.github.com/repos/${{ github.repository }}/actions/artifacts)
+        artifact_id=$(echo "$artifacts" | jq -r '.artifacts[0] | select(.name == "github-pages") | .id')
+        echo "Artifact ID: $artifact_id"
+        echo "artifact_id=$artifact_id" >> $GITHUB_ENV
+
+    - name: Delete Artifact
+      if: env.artifact_id != ''
+      run: |
+        curl -X DELETE -H "Authorization: token ${{ secrets.BOT_TOKEN }}" \
+        https://api.github.com/repos/${{ github.repository }}/actions/artifacts/$artifact_id
 
   update_server:
     needs: format_repo
