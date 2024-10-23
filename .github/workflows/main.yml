@@ -47,7 +47,7 @@ jobs:
             git push
           fi
         env:
-          BOT_TOKEN: ${{ secrets.BOT_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.BOT_TOKEN }}
 
   deploy:
     needs: format_repo
@@ -60,7 +60,7 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - name: Checkout repository
+      - name: Checkout code
         uses: actions/checkout@v4
 
       - name: Replace server IP in JavaScript
