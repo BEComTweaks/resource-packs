@@ -5,72 +5,86 @@
     {
       "pack_id": "LimeHotbarSelector",
       "pack_name": "Lime",
-      "pack_description": ""
+      "pack_description": "",
+      "priority": true
     },
     {
       "pack_id": "GrayHotbarSelector",
       "pack_name": "Gray",
-      "pack_description": ""
+      "pack_description": "",
+      "priority": true
     },
     {
       "pack_id": "BlackHotbarSelector",
       "pack_name": "Black",
-      "pack_description": ""
+      "pack_description": "",
+      "priority": true
     },
     {
       "pack_id": "BrownHotbarSelector",
       "pack_name": "Brown",
-      "pack_description": ""
+      "pack_description": "",
+      "priority": true
     },
     {
       "pack_id": "RedHotbarSelector",
       "pack_name": "Red",
-      "pack_description": ""
+      "pack_description": "",
+      "priority": true
     },
     {
       "pack_id": "OrangeHotbarSelector",
       "pack_name": "Orange",
-      "pack_description": ""
+      "pack_description": "",
+      "priority": true
     },
     {
       "pack_id": "YellowHotbarSelector",
       "pack_name": "Yellow",
-      "pack_description": ""
+      "pack_description": "",
+      "priority": true
     },
     {
       "pack_id": "GreenHotbarSelector",
       "pack_name": "Green",
-      "pack_description": ""
+      "pack_description": "",
+      "priority": true
     },
     {
       "pack_id": "CyanHotbarSelector",
       "pack_name": "Cyan",
-      "pack_description": ""
+      "pack_description": "",
+      "priority": true
     },
     {
       "pack_id": "LightBlueHotbarSelector",
       "pack_name": "Light Blue",
-      "pack_description": ""
+      "pack_description": "",
+      "priority": true
     },
     {
       "pack_id": "BlueHotbarSelector",
       "pack_name": "Blue",
-      "pack_description": ""
+      "pack_description": "",
+      "priority": true
     },
     {
       "pack_id": "PurpleHotbarSelector",
       "pack_name": "Purple",
-      "pack_description": ""
+      "pack_description": "",
+      "priority": true
     },
     {
       "pack_id": "MagentaHotbarSelector",
       "pack_name": "Magenta",
-      "pack_description": ""
+      "pack_description": "",
+      "priority": true
     },
     {
       "pack_id": "PinkHotbarSelector",
       "pack_name": "Pink",
-      "pack_description": ""
+      "pack_description": "",
+      "priority": true
     }
   ]
 }
