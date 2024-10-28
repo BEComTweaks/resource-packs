@@ -10,7 +10,8 @@
         "ClassicOres",
         "EmeraldstoRubies",
         "UniformOres",
-        "UnlitRedstoneOre"
+        "UnlitRedstoneOre",
+        "DungeonsStone"
       ]
     },
     {
@@ -29,13 +30,15 @@
       "pack_name": "Visual Infested Stone Items",
       "pack_description": "Adds a border around Infested Stone in the inventory.",
       "message": ["error", "This will NOT affect the placed blocks."],
-      "conflict": ["CrumbledInfestedStoneBlocks"]
+      "conflict": ["CrumbledInfestedStoneBlocks"],
+      "compatibility": ["DungeonsStone"]
     },
     {
       "pack_id": "WaxedCopperItems",
       "pack_name": "Waxed Copper Items",
       "pack_description": "Adds a border around Waxed Copper and variants in the inventory.",
-      "message": ["error", "This will NOT affect the placed blocks."]
+      "message": ["error", "This will NOT affect the placed blocks."],
+      "compatibility": ["AlternateCutCopper"]
     },
     {
       "pack_id": "DifferentStems",

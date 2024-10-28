@@ -4,7 +4,8 @@
     {
       "pack_id": "VariatedDirt",
       "pack_name": "Variated Dirt",
-      "pack_description": "Dirt will be randomized using a selection of 16 textures."
+      "pack_description": "Dirt will be randomized using a selection of 16 textures.",
+      "compatibility": ["PebblelessDirt", "PebblelessCoarseDirt"]
     },
     {
       "pack_id": "VariatedGrass",

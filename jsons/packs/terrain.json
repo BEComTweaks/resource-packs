@@ -49,12 +49,14 @@
       "pack_id": "PebblelessDirt",
       "pack_name": "Pebbleless Dirt",
       "pack_description": "Gets rid of the pebbles in Dirt, Rooted Dirt and all Grass Block types.",
-      "conflict": ["VariatedMycelium", "VariatedGrass", "VariatedDirt"]
+      "conflict": ["VariatedMycelium", "VariatedGrass"],
+      "compatibility": ["VariatedDirt"]
     },
     {
       "pack_id": "PebblelessCoarseDirt",
       "pack_name": "Pebbleless Coarse Dirt",
-      "pack_description": "Gets rid of the pebbles in Coarse Dirt."
+      "pack_description": "Gets rid of the pebbles in Coarse Dirt.",
+      "compatibility": ["VariatedDirt"]
     },
     {
       "pack_id": "BrighterNether",
