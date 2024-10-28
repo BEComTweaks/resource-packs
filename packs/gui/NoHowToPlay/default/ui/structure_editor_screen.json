@@ -1,4 +1,5 @@
 {
+  "namespace": "structure_editor",
   "help_button_panel": {
     "modifications": [
       {
@@ -10,6 +11,5 @@
         "operation": "remove"
       }
     ]
-  },
-  "namespace": "structure_editor"
+  }
 }

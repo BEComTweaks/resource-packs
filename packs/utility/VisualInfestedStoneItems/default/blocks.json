@@ -1,19 +1,50 @@
 {
-  "format_version": "1.1.0",
+  "format_version": "1.21.40",
+  "infested_chiseled_stone_bricks": {
+    "sound": "stone",
+    "textures": "infested_chiseled_stone_bricks",
+    "carried_textures": "infested_chiseled_stone_bricks_carried"
+  },
+  "infested_cobblestone": {
+    "sound": "stone",
+    "textures": "infested_cobblestone",
+    "carried_textures": "infested_cobblestone_carried"
+  },
+  "infested_cracked_stone_bricks": {
+    "sound": "stone",
+    "textures": "infested_cracked_stone_bricks",
+    "carried_textures": "infested_cracked_stone_bricks_carried"
+  },
   "infested_deepslate": {
-    "carried_textures": {
-      "down": "infested_deepslate_top",
-      "side": "infested_deepslate",
-      "up": "infested_deepslate_top"
-    },
     "isotropic": {
       "down": true,
       "up": true
     },
-    "sound": "deepslate"
+    "sound": "deepslate",
+    "textures": {
+      "down": "deepslate_top",
+      "side": "deepslate",
+      "up": "deepslate_top"
+    },
+    "carried_textures": {
+      "down": "infested_deepslate_top_carried",
+      "side": "infested_deepslate_carried",
+      "up": "infested_deepslate_top_carried"
+    }
   },
-  "monster_egg": {
-    "carried_textures": "infested_blocks",
-    "textures": "monster_egg"
+  "infested_mossy_stone_bricks": {
+    "sound": "stone",
+    "textures": "infested_mossy_stone_bricks",
+    "carried_textures": "infested_mossy_stone_bricks_carried"
+  },
+  "infested_stone": {
+    "sound": "stone",
+    "textures": "infested_stone",
+    "carried_textures": "infested_stone_carried"
+  },
+  "infested_stone_bricks": {
+    "sound": "stone",
+    "textures": "infested_stone_bricks",
+    "carried_textures": "infested_stone_bricks_carried"
   }
 }

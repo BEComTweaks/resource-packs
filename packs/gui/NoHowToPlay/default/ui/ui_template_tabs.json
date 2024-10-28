@@ -1,15 +1,15 @@
 {
   "namespace": "common_tabs",
-  "pocket_tab_close_and_help_button": {
+  "pocket_tab_help_button": {
     "modifications": [
       {
         "control_name": "help_button",
         "operation": "remove"
       }
-    ],
-    "size": ["100%", 34]
+    ]
   },
-  "pocket_tab_help_button": {
+  "pocket_tab_close_and_help_button": {
+    "size": ["100%", 34],
     "modifications": [
       {
         "control_name": "help_button",

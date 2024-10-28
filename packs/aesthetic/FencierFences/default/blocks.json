@@ -1,4 +1,5 @@
 {
+  "format_version": "1.21.40",
   "acacia_fence": {
     "sound": "wood",
     "textures": "acacia_fence"
@@ -47,7 +48,6 @@
     "sound": "wood",
     "textures": "oak_fence_gate"
   },
-  "format_version": "1.1.0",
   "jungle_fence": {
     "sound": "wood",
     "textures": "jungle_fence"

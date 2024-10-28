@@ -1,13 +1,5 @@
 {
-  "format_version": [1, 1, 0],
-  "polished_blackstone_double_slab": {
-    "sound": "stone",
-    "textures": {
-      "down": "polished_blackstone",
-      "side": "polished_blackstone_double_slab",
-      "up": "polished_blackstone"
-    }
-  },
+  "format_version": "1.21.40",
   "polished_andesite_double_slab": {
     "sound": "stone",
     "textures": {
@@ -38,6 +30,14 @@
       "down": "prismarine_brick_slab",
       "side": "prismarine_brick_double_slab",
       "up": "prismarine_brick_slab"
+    }
+  },
+  "polished_blackstone_double_slab": {
+    "sound": "stone",
+    "textures": {
+      "down": "polished_blackstone",
+      "side": "polished_blackstone_double_slab",
+      "up": "polished_blackstone"
     }
   },
   "polished_deepslate_double_slab": {
