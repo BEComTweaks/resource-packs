@@ -134,13 +134,13 @@ if (loadedparams.has("st_raw")) {
     preselectAlerter.style.top = "20vh";
   });
   sleep(5000).then(() => {
-    preselectAlerter.style.top = "-10vh";
+    preselectAlerter.style.top = "-20vh";
   });
 }
-// for people who want instant stuff
-const mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
 
 function getTimeoutDuration() {
+  // for people who want instant stuff
+  const mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
   return mediaQuery.matches ? 0 : 487.5;
 }
 // toggle category
@@ -168,6 +168,9 @@ function toggleCategory(label) {
     tweaksContainer.style.paddingBottom = "7.5px";
     label.classList.add("open");
     tweaksContainer.style.maxHeight = tweaksContainer.scrollHeight + "px";
+    selectallbutton.style.display = "block";
+    selectallbutton.style.opacity = 1;
+    // change height to match outer categories
     const outerCatLabel =
       label.parentElement.parentElement.parentElement.querySelector(
         ".category-label",
@@ -180,8 +183,6 @@ function toggleCategory(label) {
       outerCatContainer.style.maxHeight =
         outerCatContainer.scrollHeight + tweaksContainer.scrollHeight + "px";
     }
-    selectallbutton.style.display = "block";
-    selectallbutton.style.opacity = 1;
   }
 }
 // i wonder what this is for
@@ -630,7 +631,6 @@ document
     }
   });
 
-// select all tweaks
 function selectAll(element) {
   const st = JSON.parse(
     LZString.decompressFromEncodedURIComponent(element.dataset.allpacks),
@@ -656,3 +656,14 @@ function unselectAll(element) {
   element.innerHTML =
     '<img src="images/select-all-button/chiseled_bookshelf_empty.png" class="category-label-selectall-img"><div class="category-label-selectall-hovertext">Select All</div>';
 }
+
+function updateCategoryHeight() {
+  const categoryControlled = document.querySelectorAll(".category-controlled");
+  categoryControlled.forEach((element) => {
+    if (element.style.maxHeight) {
+      element.style.maxHeight = element.scrollHeight + "px";
+    }
+  });
+}
+
+window.addEventListener("resize", updateCategoryHeight);

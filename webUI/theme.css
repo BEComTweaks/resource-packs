@@ -19,31 +19,32 @@
   --rightmargin: 325px;
 }
 
-a:active {
-  background-color: transparent;
-  color: white;
-  font-weight: bold;
-  text-decoration: underline;
-}
+a {
+  &:active {
+    background-color: transparent;
+    color: white;
+    font-weight: bold;
+    text-decoration: underline;
+  }
 
-a:hover {
-  background-color: transparent;
-  color: white;
-  text-decoration: underline;
-}
+  &:hover {
+    background-color: transparent;
+    color: white;
+    text-decoration: underline;
+  }
 
-a:link {
-  background-color: transparent;
-  color: white;
-  text-decoration: none;
-}
+  &:link {
+    background-color: transparent;
+    color: white;
+    text-decoration: none;
+  }
 
-a:visited {
-  background-color: transparent;
-  color: white;
-  text-decoration: none;
+  &:visited {
+    background-color: transparent;
+    color: white;
+    text-decoration: none;
+  }
 }
-
 body {
   color: white;
   font-family: "Pixelify Sans";
@@ -69,16 +70,14 @@ input {
 
 li {
   float: left;
+  a {
+    color: white;
+    display: block;
+    padding: 14px 16px;
+    text-align: center;
+    text-decoration: none;
+  }
 }
-
-li a {
-  color: white;
-  display: block;
-  padding: 14px 16px;
-  text-align: center;
-  text-decoration: none;
-}
-
 select {
   color: white;
   font-family: "Pixelify Sans";
@@ -160,6 +159,17 @@ select {
     border-color 0.5s ease-in-out;
   user-select: none;
   z-index: 13;
+  &.open {
+    border-color: rgb(106, 108, 112);
+    border-radius: 5px 5px 0px 0px;
+    &:hover {
+      border-radius: 5px 5px 0px 0px;
+    }
+  }
+  &:hover {
+    background-color: var(--dark-two);
+    border-color: var(--dark-border-hover);
+  }
 }
 
 .category-label-selectall {
@@ -174,6 +184,12 @@ select {
   right: 30px;
   transform: translateY(-108%);
   width: 30px;
+  &.sub {
+    transform: translate(-100%, -108%);
+  }
+  &:hover .category-label-selectall-hovertext {
+    display: block;
+  }
 }
 
 .category-label-selectall-hovertext {
@@ -190,28 +206,6 @@ select {
   image-rendering: pixelated;
   transform: translateX(-12.5%);
   width: auto;
-}
-
-.category-label-selectall.sub {
-  transform: translate(-100%, -108%);
-}
-
-.category-label-selectall:hover .category-label-selectall-hovertext {
-  display: block;
-}
-
-.category-label.open {
-  border-color: rgb(106, 108, 112);
-  border-radius: 5px 5px 0px 0px;
-}
-
-.category-label.open:hover {
-  border-radius: 5px 5px 0px 0px;
-}
-
-.category-label:hover {
-  background-color: var(--dark-two);
-  border-color: var(--dark-border-hover);
 }
 
 .comp-hover-text {
@@ -231,6 +225,7 @@ select {
   transform: translateX(-50%);
   z-index: 1;
 }
+
 .conf-hover-text {
   background: rgb(144, 73, 74);
   top: 100%;
@@ -258,7 +253,7 @@ select {
 }
 
 .desc-error {
-  color: #f22;
+  color: red;
 }
 
 .desc-info {
@@ -300,96 +295,87 @@ select {
     background 0.5s ease-in-out,
     border-color 0.5s ease-in-out;
   width: 80%;
-}
-
-.download-selected-button.error {
-  background: var(--red-zero);
-  border-color: var(--red-two);
-  border-style: inset;
-  padding: 5px;
-}
-
-.download-selected-button.error:hover {
-  background: var(--red-zero);
-  border-color: var(--red-two);
-}
-
-.download-selected-button.http {
-  animation: rotateBorderHttp 3.75s linear infinite reverse;
-  background: var(--dark-zero);
-  border-color: #00000000;
-  border-image: linear-gradient(90deg, var(--red-one), var(--dark-two)) round;
-  border-radius: 5px;
-  border-style: solid;
-}
-
-.download-selected-button.http.s {
-  animation: rotateBorderHttps 3.75s linear infinite;
-  border-image: linear-gradient(90deg, var(--green-one), var(--dark-one)) round;
-}
-
-.download-selected-button.http.s:hover {
-  background: var(--green-two);
-}
-
-.download-selected-button.http:hover {
-  background: var(--red-two);
-  border-color: #00000000;
-}
-
-.download-selected-button:hover {
-  background: var(--green-two);
-  border-color: var(--green-border-hover);
-}
-
-.download-selected-button:hover:disabled {
-  background: var(--red-zero);
-  border-color: var(--red-one);
-}
-.download-selected-button:active:disabled {
-  background: var(--red-one);
-  border-color: var(--red-two);
+  &.error {
+    background: var(--red-zero);
+    border-color: var(--red-two);
+    border-style: inset;
+    padding: 5px;
+    &:hover {
+      background: var(--red-one);
+      border-color: var(--red-two);
+    }
+  }
+  &.http {
+    animation: rotateBorderHttp 3.75s linear infinite reverse;
+    background: var(--dark-zero);
+    border-color: #00000000;
+    border-image: linear-gradient(90deg, var(--red-one), var(--dark-two)) round;
+    border-radius: 5px;
+    border-style: solid;
+    &.s {
+      animation: rotateBorderHttp 3.75s linear infinite;
+      border-image: linear-gradient(90deg, var(--red-one), var(--dark-two))
+        round;
+      &:hover {
+        background: var(--green-two);
+      }
+    }
+    &:hover {
+      background: var(--red-two);
+      border-color: #00000000;
+    }
+  }
+  &:hover {
+    background: var(--dark-two);
+    border-color: var(--dark-border-hover);
+  }
+  &:disabled {
+    &:hover {
+      background: var(--red-zero);
+      border-color: var(--red-one);
+    }
+    &:active {
+      background: var(--red-one);
+      border-color: var(--red-two);
+    }
+  }
 }
 
 .file-download {
   font-family: "Pixelify Sans";
   text-align: center;
-}
-
-.file-download button {
-  font-family: "Pixelify Sans";
-  font-size: 16px;
-  margin: 5px;
-  padding: 10px;
-}
-
-.file-download input[type="text"] {
-  background: var(--dark-one);
-  border-color: var(--dark-border);
-  border-radius: 5px;
-  border-style: inset;
-  border-width: 4.375px;
-  margin-bottom: 5px;
-  margin-top: 10px;
-  padding-bottom: 10px;
-  padding-left: 17.5px;
-  padding-right: 17.5px;
-  padding-top: 10px;
-}
-
-.file-download input[type="text"]::placeholder {
-  color: #dddddd;
-}
-
-.file-download select {
-  background: var(--dark-one);
-  border-color: var(--dark-border);
-  border-radius: 5px;
-  border-style: inset;
-  border-width: 4.375px;
-  font-family: "Pixelify Sans";
-  padding-left: 17.5px;
-  padding-right: 17.5px;
+  button {
+    font-family: "Pixelify Sans";
+    font-size: 16px;
+    margin: 5px;
+    padding: 10px;
+  }
+  input[type="text"] {
+    background: var(--dark-one);
+    border-color: var(--dark-border);
+    border-radius: 5px;
+    border-style: inset;
+    border-width: 4.375px;
+    margin-bottom: 5px;
+    margin-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 17.5px;
+    padding-right: 17.5px;
+    padding-top: 10px;
+    &::placeholder {
+      color: #dddddd;
+    }
+  }
+  select {
+    background: var(--dark-one);
+    border-color: var(--dark-border);
+    border-radius: 5px;
+    border-style: inset;
+    border-width: 4.375px;
+    font-family: "Pixelify Sans";
+    padding-left: 17.5px;
+    padding-right: 17.5px;
+  }
 }
 
 .footer {
@@ -442,17 +428,18 @@ select {
 }
 
 .preselected {
+  position: fixed;
   background-color: var(--dark-one);
   border-color: var(--dark-border);
   border-radius: 5px;
   border-width: 2.5px;
   border-style: outset;
-  position: fixed;
   z-index: 1000;
   text-align: center;
   padding: 5px 10px;
-  top: -10vh;
-  right: 50vh;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   transition:
     height 0.25s ease,
     top 0.625s ease-in-out;
@@ -463,13 +450,11 @@ select {
   color: white;
   text-decoration: underline;
   transition: font-size 0.25s ease;
+  &:hover {
+    text-decoration: bold;
+    font-size: 1.05em;
+  }
 }
-
-.preselected-unselect:hover {
-  text-decoration: bold;
-  font-size: 1.05em;
-}
-
 [class$="nav"] {
   background-color: #333;
   list-style-type: none;
@@ -521,11 +506,28 @@ select {
   padding: 10px;
   position: relative;
   transition: background 0.375s;
-}
+  input[type="checkbox"] {
+    display: none;
+    font-family: "Pixelify Sans";
+  }
+  &.selected {
+    background: var(--green-one);
+    border-color: var(--green-border);
+    border-style: inset;
+    &:hover {
+      background: var(--green-two);
+      border-color: var(--green-border-hover);
+    }
+  }
 
-.tweak input[type="checkbox"] {
-  display: none;
-  font-family: "Pixelify Sans";
+  &:hover {
+    background: var(--dark-two);
+    border-color: var(--dark-border-hover);
+    .comp-hover-text,
+    .conf-hover-text {
+      display: block;
+    }
+  }
 }
 
 .tweak-info {
@@ -547,30 +549,6 @@ select {
 .tweak-title {
   font-size: 1.2em;
   font-weight: bold;
-}
-
-.tweak.selected {
-  background: var(--green-one);
-  border-color: var(--green-border);
-  border-style: inset;
-}
-
-.tweak.selected:hover {
-  background: var(--green-two);
-  border-color: var(--green-border-hover);
-}
-
-.tweak:hover {
-  background: var(--dark-two);
-  border-color: var(--dark-border-hover);
-}
-
-.tweak:hover .comp-hover-text {
-  display: block;
-}
-
-.tweak:hover .conf-hover-text {
-  display: block;
 }
 
 .tweaks {
@@ -703,10 +681,7 @@ select {
     width: 275px;
   }
 
-  .file-download input[type="text"] {
-    border-color: var(--dark-border);
-  }
-
+  .file-download input[type="text"],
   .file-download select {
     border-color: var(--dark-border);
   }
@@ -756,6 +731,16 @@ select {
       background 0.25s ease-in,
       border-color 0.25s ease-in;
     width: 75%;
+
+    &:active {
+      background: var(--green-two);
+      border-color: var(--green-border-hover);
+    }
+
+    &:hover {
+      background: var(--dark-two);
+      border-color: var(--dark-border-hover);
+    }
   }
 
   .zipinputcontainer::after {
@@ -774,22 +759,11 @@ select {
       border-color 0.25s ease-in,
       border-width 0.25s ease-in,
       margin 0.25s ease-in;
-  }
-
-  .zipinputcontainer:active {
-    background: var(--green-two);
-    border-color: var(--green-border-hover);
-  }
-
-  .zipinputcontainer:hover {
-    background: var(--dark-two);
-    border-color: var(--dark-border-hover);
-  }
-
-  .zipinputcontainer:hover::after {
-    border-color: #0f0;
-    border-width: 4px;
-    margin: -5px;
+    &:hover {
+      border-color: #0f0;
+      border-width: 4px;
+      margin: -5px;
+    }
   }
 }
 
@@ -826,11 +800,10 @@ select {
       width 0.5s ease-in-out;
   }
 
-  .large-nav {
+  [class^="nav"] {
     transition: transform 0.5s ease-in-out;
   }
-
-  .small-nav {
-    transition: transform 0.5s ease-in-out;
+  .category-label-selectall {
+    transition: opacity 0.5s ease-in-out;
   }
 }
