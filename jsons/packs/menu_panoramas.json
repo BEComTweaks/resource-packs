@@ -97,7 +97,12 @@
       "pack_description": ""
     },
     {
-      "pack_id": "TU69TutorialWorld(LegacyConsole)",
+      "pack_id": "PaleGarden",
+      "pack_name": "Pale Garden (Winter Drop)",
+      "pack_description": ""
+    },
+    {
+      "pack_id": "TU69TutorialWorldLegacyConsole",
       "pack_name": "TU69 Tutorial World (Legacy Console)",
       "pack_description": ""
     },
