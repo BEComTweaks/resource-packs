@@ -443,6 +443,7 @@ select {
   transition:
     height 0.25s ease,
     top 0.625s ease-in-out;
+  display: none;
 }
 
 .preselected-unselect {
