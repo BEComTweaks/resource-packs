@@ -4,7 +4,7 @@ pys/__pycache__/
 package.json
 package-lock.json
 node_modules
-# makefile (easier for me)
-Makefile
+# build
+build
 # tf is venv doing here
 venv

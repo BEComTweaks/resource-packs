@@ -63,14 +63,28 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+      
+      - name: Create Virtual Environment
+        run: python -m venv venv
+      
+      - name: Activate venv
+        run: source venv/bin/activate
+      
+      - name: Build
+        run: python pys/pre_commit.py --build
+      
       - name: Replace server IP in JavaScript
         run: |
-          sed -i 's|const serverip = "localhost";|const serverip = "${{ secrets.IP_FOR_SERVER }}";|g' webUI/app.js
+          sed -i 's|const serverip = "localhost";|const serverip = "${{ secrets.IP_FOR_SERVER }}";|g' build/app.js
 
       - name: Upload Artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./webUI
+          path: ./build
           retention-days: 1
       
       - name: Deploy to GitHub Pages
