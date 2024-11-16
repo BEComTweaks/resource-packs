@@ -271,7 +271,7 @@ function fetchPack(protocol, jsonData, packName, mcVersion) {
       // reset button text
       await sleep(1000);
       OreUI.becomeInactive(downloadbutton);
-      OreUI.setActiveColor(downloadbutton, "dark")
+      OreUI.setActiveColor(downloadbutton, "dark");
       downloadbutton.innerText = "Download Selected Tweaks";
       downloadbutton.onclick = downloadSelectedTweaks;
     })
@@ -294,9 +294,9 @@ function fetchPack(protocol, jsonData, packName, mcVersion) {
         );
         downloadbutton.innerText =
           "Couldn't fetch pack. Check console for error log.";
-        OreUI.setActiveColor(downloadbutton, "red")
+        OreUI.setActiveColor(downloadbutton, "red");
         await sleep(3000);
-        OreUI.setActiveColor(downloadbutton, "dark")
+        OreUI.setActiveColor(downloadbutton, "dark");
         downloadbutton.innerText = "Download Selected Tweaks";
         downloadbutton.onclick = downloadSelectedTweaks;
         OreUI.becomeInactive(downloadbutton);
@@ -561,7 +561,7 @@ document
   });
 // upload pack
 const zipInput = document.getElementById("zipInput");
-const selectedFile = document.querySelector(".selectedFile")
+const selectedFile = document.querySelector(".selectedFile");
 zipInput.addEventListener("change", function (event) {
   const file = event.target.files[0];
   if (zipInput.files.length > 0) {
@@ -583,7 +583,9 @@ zipInput.addEventListener("change", function (event) {
                   try {
                     const jsonData = JSON.parse(content);
                     processJsonData(jsonData, "select");
-                    document.querySelector(".download-selected-button").disabled = false;
+                    document.querySelector(
+                      ".download-selected-button",
+                    ).disabled = false;
                   } catch (error) {
                     console.log(
                       `[%cerror%c]\nError parsing JSON: %c${error}`,
@@ -605,9 +607,9 @@ zipInput.addEventListener("change", function (event) {
                     "color: red",
                   );
                   selectedFile.innerText = "Invalid pack";
-                  sleep(3000).then(() => {;
+                  sleep(3000).then(() => {
                     selectedFile.innerText = "Upload pack";
-                  })
+                  });
                 });
             }
           });
@@ -621,7 +623,7 @@ zipInput.addEventListener("change", function (event) {
             selectedFile.innerText = "Invalid pack";
             sleep(3000).then(() => {
               selectedFile.innerText = "Upload pack";
-            })
+            });
           }
         })
         .catch(function (error) {
@@ -634,7 +636,7 @@ zipInput.addEventListener("change", function (event) {
           selectedFile.innerText = "Invalid file";
           sleep(3000).then(() => {
             selectedFile.innerText = "Upload pack";
-          })
+          });
         });
     };
     reader.readAsArrayBuffer(file);
