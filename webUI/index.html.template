@@ -8,18 +8,17 @@
   <title>
    Resource Packs
   </title>
-  <link href="theme.css" rel="stylesheet"/>
   <link href="images/icon.png" rel="icon" type="image/x-icon"/>
  </head>
  <body>
   <div id="background-container">
   </div>
-  <script src="bg.js">
-  </script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.7.1/jszip.min.js">
-  </script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/lz-string/1.4.4/lz-string.min.js">
-  </script>
+  <link href="../oreui-html/src/oreui.css" rel="stylesheet">
+  <link href="theme.css" rel="stylesheet"/>
+  <script src="bg.js"></script>
+  <script src="../oreui-html/src/oreui.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.7.1/jszip.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lz-string/1.4.4/lz-string.min.js"></script>
   <div class="half-dark">
    <br>
    <br>
@@ -75,15 +74,15 @@
      </a>
     </li>
    </ul>
-   <div class="preselected">Pre-selected Tweaks!<div class="preselected-unselect" onclick="processJsonData(getSelectedTweaks(),'unselect'); this.parentElement.style.top = '-10vh'; this.parentElement.style.transform = 'translateX(-50%)'; this.parentElement.innerText = 'Unselected!';">Unselect?</div></div>
+   <div class="preselected" oreui-type="general" oreui-color="dark">Pre-selected Tweaks!<div class="preselected-unselect" onclick="processJsonData(getSelectedTweaks(),'unselect'); this.parentElement.style.top = '-20vh'; this.parentElement.innerText = 'Unselected!';">Unselect?</div></div>
    <div class="container">
     <!--Packs-->
    </div>
    <div class="download-container">
     <div class="file-download">
-     <input id="fileNameInput" placeholder="Enter Pack name" type="text"></input>
+     <input id="fileNameInput" placeholder="Enter Pack name" type="text" oreui-color="dark" oreui-type="input"></input>
      <br>
-     <select id="mev" name="mev">
+     <select id="mev" name="mev" oreui-color="dark" oreui-type="general">
       <option value="1.21.40">
        1.21.40
       </option>
@@ -107,13 +106,14 @@
       </option>
      </select>
     </div>
-    <div class="zipinputcontainer">
-     <input id="zipInput" type="file"></input>
+    <div class="zipinputcontainer" oreui-type="button" oreui-color="purple">
+     <input id="zipInput" type="file"/>
+     <span class="selectedFile">Upload Pack</span>
     </div>
-    <button class="download-selected-button" onclick="downloadSelectedTweaks()" disabled=true>
+    <button class="download-selected-button" onclick="downloadSelectedTweaks()" disabled oreui-type="button" oreui-color="dark">
      Download Selected Tweaks
     </button>
-    <div id="selected-tweaks">
+    <div id="selected-tweaks" oreui-color="dark" oreui-type="general">
      <div class="tweak-list-pack">
       Select some packs and see them appear here!
      </div>
@@ -125,7 +125,7 @@
  </body>
  <footer class="footer-container">
   <div class="half-dark">
-   <div class="credits-footer">
+   <div class="credits-footer" oreui-type="general" oreui-color="dark">
     <!--credits-->
     <p>
      <a href="https://github.com/BEComTweaks/resource-packs">

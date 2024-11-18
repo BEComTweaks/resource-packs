@@ -1,22 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap");
 
 :root {
-  --dark-border-hover: rgb(122, 124, 129);
-  --dark-border-ninety: rgba(106, 108, 112, 0.875);
-  --dark-border: rgb(106, 108, 112);
-  --dark-one-ninety: rgba(72, 73, 74, 0.875);
-  --dark-one: rgb(72, 73, 74);
-  --dark-two: rgb(83, 84, 85);
   --dark-zero: rgb(61, 62, 63);
-  --green-border-hover: rgb(99, 157, 82);
-  --green-border: rgb(99, 157, 82);
-  --green-one: rgb(60, 133, 39);
-  --green-two: rgb(71, 144, 50);
   --leftmargin: 2.5%;
-  --red-one: rgb(133, 60, 39);
-  --red-two: rgb(144, 71, 50);
-  --red-zero: rgb(111, 44, 33);
   --rightmargin: 325px;
+  --font: "Pixelify Sans", white;
 }
 
 a {
@@ -47,14 +35,14 @@ a {
 }
 body {
   color: white;
-  font-family: "Pixelify Sans";
+  font-family: var(--font);
   margin: 0;
   padding: 0;
 }
 
 button {
   color: white;
-  font-family: "Pixelify Sans";
+  font-family: var(--font);
 }
 
 header {
@@ -65,7 +53,7 @@ header {
 
 input {
   color: white;
-  font-family: "Pixelify Sans";
+  font-family: var(--font);
 }
 
 li {
@@ -80,9 +68,8 @@ li {
 }
 select {
   color: white;
-  font-family: "Pixelify Sans";
+  font-family: var(--font);
 }
-
 #background-container {
   background-size: cover;
   display: flex;
@@ -101,9 +88,6 @@ select {
 }
 
 #selected-tweaks {
-  background: var(--dark-one);
-  border-radius: 5px;
-  border: 2px solid #111;
   display: none;
   margin: auto;
   overflow-y: auto;
@@ -123,53 +107,33 @@ select {
   z-index: 1;
 }
 
+#zipInput {
+  display: none;
+}
+
 .category {
   margin-bottom: 20px;
   margin-top: 20px;
 }
 
 .category-controlled {
-  background-color: var(--dark-one);
-  border-color: rgb(106, 108, 112);
-  border-radius: 0px 0px 5px 5px;
-  border-style: solid;
-  border-width: 5px;
+  position: relative;
   display: none;
   max-height: 0;
   overflow: hidden;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding: 7.5px 10px !important;
+  bottom: -2.5px;
 }
 
 .category-label {
-  background-color: var(--dark-one);
-  border-color: var(--dark-border);
-  border-radius: 5px;
-  border-style: outset;
-  border-style: solid;
-  border-width: 5px;
   cursor: pointer;
   font-size: 20px;
   height: auto;
   margin-bottom: -5px;
   padding: 5px 40px;
   text-align: center;
-  transition:
-    background-color 0.5s ease-in-out,
-    border-color 0.5s ease-in-out;
   user-select: none;
   z-index: 13;
-  &.open {
-    border-color: rgb(106, 108, 112);
-    border-radius: 5px 5px 0px 0px;
-    &:hover {
-      border-radius: 5px 5px 0px 0px;
-    }
-  }
-  &:hover {
-    background-color: var(--dark-two);
-    border-color: var(--dark-border-hover);
-  }
 }
 
 .category-label-selectall {
@@ -185,7 +149,7 @@ select {
   transform: translateY(-108%);
   width: 30px;
   &.sub {
-    transform: translate(-100%, -108%);
+    transform: translate(-25%, -108%);
   }
   &:hover .category-label-selectall-hovertext {
     display: block;
@@ -193,7 +157,7 @@ select {
 }
 
 .category-label-selectall-hovertext {
-  background-color: var(--dark-two);
+  background-color: var(--dark-bg-hover);
   border-radius: 5px;
   display: none;
   font-size: 15px;
@@ -209,47 +173,47 @@ select {
 }
 
 .comp-hover-text {
-  background: rgb(144, 146, 74);
   bottom: 100%;
-  z-index: 1;
+  transform: translate(-50%, 100%) !important;
 }
 
 [class$="hover-text"] {
+  position: absolute;
   border-radius: 3px;
   display: none;
   font-size: 13px;
   left: 50%;
-  padding: 7.5px;
+  padding: 5px;
   position: absolute;
   text-align: center;
   transform: translateX(-50%);
-  z-index: 1;
+  z-index: 100;
+  font-size: inherit;
 }
 
 .conf-hover-text {
-  background: rgb(144, 73, 74);
-  top: 100%;
-  white-space: no-wrap;
-  z-index: 1;
+  bottom: 0%;
 }
 
 .container {
   background: #0000007f;
-  border-radius: 10px;
+  border-radius: 5px;
   padding: 20px;
   position: relative;
   z-index: 0;
 }
 
 .credits-footer {
-  background: var(--dark-one);
-  border-color: var(--dark-border);
-  border-radius: 12.5px;
-  border-style: outset;
-  border-width: 7.5px;
+  border-radius: 5px;
   color: white;
   padding: 20px;
   z-index: 5;
+  text-align: left;
+}
+
+[class^="desc"] {
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .desc-error {
@@ -265,8 +229,8 @@ select {
 }
 
 .download-container {
-  background: var(--dark-one);
-  border-color: var(--dark-border-ninety);
+  background: var(--dark-bg);
+  border-color: var(--dark-border);
   border-radius: 10px;
   border-style: solid;
   border-width: 5px;
@@ -279,107 +243,47 @@ select {
 }
 
 .download-selected-button {
-  background: var(--dark-one);
-  border-color: var(--dark-border);
-  border-radius: 5px;
-  border-style: outset;
-  border-width: 5px;
-  color: white;
+  font-size: 0.96em;
   cursor: pointer;
   display: block;
-  font-family: "Pixelify Sans";
+  font-family: var(--font);
   margin: 10px auto;
   padding: 10px;
   text-align: center;
-  transition:
-    background 0.5s ease-in-out,
-    border-color 0.5s ease-in-out;
-  width: 80%;
-  &.error {
-    background: var(--red-zero);
-    border-color: var(--red-two);
-    border-style: inset;
+  width: 83%;
+  &[oreui-active-color="red"] {
+    font-size: 0.875em;
     padding: 5px;
-    &:hover {
-      background: var(--red-one);
-      border-color: var(--red-two);
-    }
-  }
-  &.http {
-    animation: rotateBorderHttp 3.75s linear infinite reverse;
-    background: var(--dark-zero);
-    border-color: #00000000;
-    border-image: linear-gradient(90deg, var(--red-one), var(--dark-two)) round;
-    border-radius: 5px;
-    border-style: solid;
-    &.s {
-      animation: rotateBorderHttp 3.75s linear infinite;
-      border-image: linear-gradient(90deg, var(--red-one), var(--dark-two))
-        round;
-      &:hover {
-        background: var(--green-two);
-      }
-    }
-    &:hover {
-      background: var(--red-two);
-      border-color: #00000000;
-    }
-  }
-  &:hover {
-    background: var(--dark-two);
-    border-color: var(--dark-border-hover);
-  }
-  &:disabled {
-    &:hover {
-      background: var(--red-zero);
-      border-color: var(--red-one);
-    }
-    &:active {
-      background: var(--red-one);
-      border-color: var(--red-two);
-    }
   }
 }
 
 .file-download {
-  font-family: "Pixelify Sans";
+  font-family: var(--font);
   text-align: center;
   button {
-    font-family: "Pixelify Sans";
+    font-family: var(--font);
     font-size: 16px;
     margin: 5px;
     padding: 10px;
   }
   input[type="text"] {
-    background: var(--dark-one);
-    border-color: var(--dark-border);
-    border-radius: 5px;
-    border-style: inset;
-    border-width: 4.375px;
     margin-bottom: 5px;
     margin-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 17.5px;
-    padding-right: 17.5px;
-    padding-top: 10px;
+    padding: 10px 17.5px;
+    width: 193px;
     &::placeholder {
       color: #dddddd;
     }
   }
   select {
-    background: var(--dark-one);
-    border-color: var(--dark-border);
-    border-radius: 5px;
-    border-style: inset;
-    border-width: 4.375px;
-    font-family: "Pixelify Sans";
+    font-family: var(--font);
     padding-left: 17.5px;
     padding-right: 17.5px;
   }
 }
 
 .footer {
-  background: var(--dark-one);
+  background: var(--dark-bg);
   bottom: 0;
   padding: 20px;
   position: fixed;
@@ -399,8 +303,8 @@ select {
 }
 
 .mev option {
-  background: var(--dark-one);
-  font-family: "Pixelify Sans";
+  background: var(--dark-bg);
+  font-family: var(--font);
 }
 
 .nav-link:active {
@@ -429,21 +333,16 @@ select {
 
 .preselected {
   position: fixed;
-  background-color: var(--dark-one);
-  border-color: var(--dark-border);
-  border-radius: 5px;
-  border-width: 2.5px;
-  border-style: outset;
   z-index: 1000;
   text-align: center;
   padding: 5px 10px;
-  top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  top: -20vh;
+  transform: translateX(-50%);
   transition:
     height 0.25s ease,
-    top 0.625s ease-in-out;
-  display: none;
+    top 0.625s ease-in-out,
+    transform 0.625s ease-in-out;
 }
 
 .preselected-unselect {
@@ -473,7 +372,6 @@ select {
   margin-bottom: 15px;
   margin-left: 2.5%;
   margin-top: 15px;
-  position: center;
   width: 95%;
 }
 
@@ -483,7 +381,6 @@ select {
   gap: 10px;
   grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
   margin-top: 10px;
-  position: center;
   text-align: center;
 }
 
@@ -495,40 +392,23 @@ select {
 }
 
 .tweak {
-  background: var(--dark-one);
-  border-color: var(--dark-border);
-  border-radius: 6.25px;
-  border-style: outset;
-  border-width: 4.375px;
   box-shadow: 0 0 10px rgba(49, 50, 51, 1);
   cursor: pointer;
   display: flex;
   flex-direction: column;
-  padding: 10px;
+  padding: 10px 15px !important;
   position: relative;
-  transition: background 0.375s;
   input[type="checkbox"] {
     display: none;
-    font-family: "Pixelify Sans";
+    font-family: var(--font);
   }
-  &.selected {
-    background: var(--green-one);
-    border-color: var(--green-border);
-    border-style: inset;
-    &:hover {
-      background: var(--green-two);
-      border-color: var(--green-border-hover);
-    }
+  &:hover[oreui-state="active"] [class$="hover-text"] {
+    display: block;
   }
+}
 
-  &:hover {
-    background: var(--dark-two);
-    border-color: var(--dark-border-hover);
-    .comp-hover-text,
-    .conf-hover-text {
-      display: block;
-    }
-  }
+.tweak-description {
+  font-size: 0.99em;
 }
 
 .tweak-info {
@@ -549,7 +429,6 @@ select {
 
 .tweak-title {
   font-size: 1.2em;
-  font-weight: bold;
 }
 
 .tweaks {
@@ -562,58 +441,10 @@ select {
 }
 
 .zipinputcontainer {
-  bottom: 100%;
-}
-
-@keyframes rotateBorderHttp {
-  0% {
-    border-image: linear-gradient(90deg, var(--red-one), var(--dark-two)) 1;
-  }
-
-  100% {
-    border-image: linear-gradient(90deg, var(--red-one), var(--dark-two)) 1;
-  }
-
-  25% {
-    border-image: linear-gradient(180deg, var(--red-one), var(--dark-two)) 1;
-  }
-
-  50% {
-    border-image: linear-gradient(270deg, var(--red-one), var(--dark-two)) 1;
-  }
-
-  75% {
-    border-image: linear-gradient(360deg, var(--red-one), var(--dark-two)) 1;
-  }
-}
-
-@keyframes rotateBorderHttps {
-  0% {
-    border-image: linear-gradient(90deg, var(--green-one), var(--dark-one)) 1;
-  }
-
-  100% {
-    border-image: linear-gradient(90deg, var(--green-one), var(--dark-one)) 1;
-  }
-
-  25% {
-    border-image: linear-gradient(180deg, var(--green-one), var(--dark-one)) 1;
-  }
-
-  50% {
-    border-image: linear-gradient(270deg, var(--green-one), var(--dark-one)) 1;
-  }
-
-  75% {
-    border-image: linear-gradient(360deg, var(--green-one), var(--dark-one)) 1;
-  }
+  display: none;
 }
 
 @media (max-width: 767px) {
-  #zipInput {
-    display: none;
-  }
-
   .large-nav {
     display: block;
     transform: translateY(-100%);
@@ -649,17 +480,6 @@ select {
     width: calc(100% - var(--leftmargin) - var(--rightmargin));
   }
 
-  #zipInput {
-    color: white;
-    cursor: pointer;
-    display: block;
-    font-family: "Pixelify Sans";
-    height: 100%;
-    padding: 5px;
-    position: relative;
-    width: 100%;
-  }
-
   .container {
     margin-left: var(--leftmargin);
     margin-right: var(--rightmargin);
@@ -674,17 +494,11 @@ select {
     background: #0000007f;
     border-color: #00000000;
     height: auto;
-    padding-bottom: 10px;
-    padding-top: 10px;
+    padding: 10px 0px;
     position: fixed;
     right: 25px;
     top: 12.5%;
     width: 275px;
-  }
-
-  .file-download input[type="text"],
-  .file-download select {
-    border-color: var(--dark-border);
   }
 
   .large-nav {
@@ -715,55 +529,19 @@ select {
 
   .zipinputcontainer {
     align-items: center;
-    background: var(--dark-one);
-    border-color: var(--dark-border);
-    border-radius: 5px;
-    border-style: outset;
-    border-width: 5px;
     bottom: 0;
-    color: white;
     cursor: pointer;
     display: flex;
-    height: 75%;
+    height: auto;
     justify-content: center;
-    margin: 10px auto;
     position: relative;
-    transition:
-      background 0.25s ease-in,
-      border-color 0.25s ease-in;
-    width: 75%;
-
-    &:active {
-      background: var(--green-two);
-      border-color: var(--green-border-hover);
-    }
-
-    &:hover {
-      background: var(--dark-two);
-      border-color: var(--dark-border-hover);
-    }
-  }
-
-  .zipinputcontainer::after {
-    border-color: white;
-    border-radius: 5px;
-    border-style: dashed;
-    border-width: 2px;
-    bottom: 0;
-    content: "";
-    left: 0;
-    margin: -1px;
-    position: absolute;
-    right: 0;
-    top: 0;
-    transition:
-      border-color 0.25s ease-in,
-      border-width 0.25s ease-in,
-      margin 0.25s ease-in;
-    &:hover {
-      border-color: #0f0;
-      border-width: 4px;
-      margin: -5px;
+    margin: 10px 0;
+    width: 189px;
+    left: 23px;
+    --bezel-size: 2px;
+    & .selectedFile {
+      font-size: 0.9em;
+      font-weight: bold;
     }
   }
 }
@@ -796,8 +574,6 @@ select {
     transition:
       right 0.5s ease-in-out,
       top 0.5s ease-in-out,
-      background 0.5s ease-in-out,
-      border-color 0.5s ease-in-out,
       width 0.5s ease-in-out;
   }
 
