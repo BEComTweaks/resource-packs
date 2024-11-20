@@ -112,7 +112,8 @@
       "pack_id": "TranslucentSpyglassOverlay",
       "pack_name": "Translucent Spyglass Overlay",
       "pack_description": "Increases visibility when zooming in with a Spyglass.",
-      "conflict": ["WHAT", "NoSpyglassOverlay", "UselessSpyglassOverlay"]
+      "conflict": ["WHAT", "NoSpyglassOverlay", "UselessSpyglassOverlay"],
+      "compatibility": ["AccurateSpyglass"]
     },
     {
       "pack_id": "NoSpyglassOverlay",

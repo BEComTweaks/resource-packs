@@ -11,7 +11,8 @@
       "pack_id": "BlackNetherBricks",
       "pack_name": "Black Nether Bricks",
       "pack_description": "Changes texture of Nether Bricks to make them black.",
-      "conflict": ["BrighterNether"]
+      "compatibility": ["BrighterNether"],
+      "priority": true
     },
     {
       "pack_id": "CherryPicking",
@@ -37,7 +38,25 @@
       "pack_id": "SolidSlime",
       "pack_name": "Solid Slime",
       "pack_description": "Eliminates Slime Block transparency.",
-      "conflict": ["HoneySlime"]
+      "compatibility": [
+        "HoneySlime",
+        "WhiteSlime",
+        "LightGraySlime",
+        "GraySlime",
+        "BlackSlime",
+        "BrownSlime",
+        "RedSlime",
+        "OrangeSlime",
+        "YellowSlime",
+        "GreenSlime",
+        "CyanSlime",
+        "LightBlueSlime",
+        "BlueSlime",
+        "PurpleSlime",
+        "MagentaSlime",
+        "PinkSlime",
+        "RainbowSlime"
+      ]
     },
     {
       "pack_id": "DesaturatedPurpur",
@@ -47,7 +66,8 @@
     {
       "pack_id": "DesaturatedDarkOak",
       "pack_name": "Desaturated Dark Oak",
-      "pack_description": "Desaturates Dark Oak Planks to give them a more neutral color."
+      "pack_description": "Desaturates Dark Oak Planks to give them a more neutral color.",
+      "compatibility": ["CircularLogTops"]
     },
     {
       "pack_id": "HorizontalNuggets",
@@ -135,7 +155,8 @@
     {
       "pack_id": "AccurateSpyglass",
       "pack_name": "Accurate Spyglass",
-      "pack_description": "Recolors the Spyglass to use Copper and Amethyst colors to reflect its crafting recipe."
+      "pack_description": "Recolors the Spyglass to use Copper and Amethyst colors to reflect its crafting recipe.",
+      "compatibility": ["TranslucentSpyglassOverlay", "UselessSpyglassOverlay"]
     },
     {
       "pack_id": "FencierFences",
@@ -146,7 +167,8 @@
       "pack_id": "SmootherWarpedPlanks",
       "pack_name": "Smoother Warped Planks",
       "pack_description": "Removes that harsh contrast from Warped Planks",
-      "conflict": ["OldPlanks"]
+      "conflict": ["OldPlanks"],
+      "compatibility": ["PixelConsistentSigns"]
     },
     {
       "pack_id": "CrimsonerCrimson",
@@ -164,7 +186,7 @@
       "pack_id": "PolishedStonestoBricks",
       "pack_name": "Polished Stones to Bricks",
       "pack_description": "Retextures Polished Granite, Andesite and Diorite to look like bricks.",
-      "conflict": ["SmootherStones"]
+      "compatibility": ["SmootherStones"]
     },
     {
       "pack_id": "SingularGlazedTerracotta",
@@ -180,12 +202,13 @@
       "pack_id": "GoldenCrown",
       "pack_name": "Golden Crown",
       "pack_description": "Retextures the Golden Helmet to look like a crown. Also affects the look of some helmet Armor Trims.",
-      "conflict": ["ConsistentHelmets"]
+      "compatibility": ["ConsistentHelmets"]
     },
     {
       "pack_id": "ClassicStyleNetheriteArmor",
       "pack_name": "Classic Style Netherite Armor",
-      "pack_description": "Netherite armor in the style of the other armors."
+      "pack_description": "Netherite armor in the style of the other armors.",
+      "compatibility": ["ConsistentHelmets"]
     },
     {
       "pack_id": "AllayElytra",

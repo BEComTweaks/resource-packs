@@ -6,10 +6,11 @@
       "pack_id": "pack_name with no space",
       "pack_name": "name of pack",
       "pack_description": "description of pack",
-      "conflict": ["packid of conflicting pack"],
-      "compatibility": ["packid of compatible pack"],
       "message": ["warn (red)/error (orange)/info (cyan)", "message for it"],
-      "icon": "extension of pack icon like gif or jpg (no '.')"
+      "icon": "extension of pack icon like gif or jpg (no '.')",
+      "priority": "true/false",
+      "conflict": ["packid of conflicting pack"],
+      "compatibility": ["packid of compatible pack"]
     }
   ]
 }

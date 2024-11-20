@@ -22,7 +22,7 @@
       "pack_id": "SusSandandGravel",
       "pack_name": "Sus Sand and Gravel",
       "pack_description": "GET OUT OF MY HEAD GET OUT OF MY HEAD GET OUT OF MY HEAD.",
-      "conflict": ["SuspiciousSand&GravelBorders"]
+      "conflict": ["SuspiciousSandGravelBorders"]
     },
     {
       "pack_id": "SoyjakVault",
@@ -116,7 +116,8 @@
       "pack_id": "UselessSpyglass",
       "pack_name": "Useless Spyglass",
       "pack_description": "Reverses the Spyglass overlay, making the middle opaque and the sides transparent. It's useless, what did you expect?.",
-      "conflict": ["TransparentSpyglassOverlay", "NoSpyglassOverlay", "WHAT"]
+      "conflict": ["TransparentSpyglassOverlay", "NoSpyglassOverlay", "WHAT"],
+      "compatibility": ["AccurateSpyglass"]
     },
     {
       "pack_id": "ScreamingGoatsMeme",

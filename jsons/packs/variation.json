@@ -57,7 +57,8 @@
     {
       "pack_id": "VariatedPlanks",
       "pack_name": "Variated Planks",
-      "pack_description": "All planks will be randomized using a selection of 16 textures."
+      "pack_description": "All planks will be randomized using a selection of 16 textures.",
+      "compatibility": ["ConsistentBambooPlanks", "OldPlanks"]
     },
     {
       "pack_id": "VariatedStone",

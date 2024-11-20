@@ -48,12 +48,18 @@
       "pack_id": "OldPlanks",
       "pack_name": "Old Planks",
       "pack_description": "Reverts all planks and signs to their old textures, including modern plank types.",
-      "conflict": ["SmootherWarpedPlanks"]
+      "conflict": ["SmootherWarpedPlanks"],
+      "compatibility": [
+        "ConsistentBambooPlanks",
+        "VariatedPlanks",
+        "OarlessBoats"
+      ]
     },
     {
       "pack_id": "OldGravel",
       "pack_name": "Old Gravel",
-      "pack_description": "Reverts Gravel to its Alpha texture."
+      "pack_description": "Reverts Gravel to its Alpha texture.",
+      "compatibility": ["SuspiciousSandGravelBorders"]
     },
     {
       "pack_id": "OldNetherrack",
@@ -84,7 +90,8 @@
     {
       "pack_id": "OldWater",
       "pack_name": "Old Water",
-      "pack_description": "Reverts Water to its old texture."
+      "pack_description": "Reverts Water to its old texture.",
+      "compatibility": ["ClearerWater"]
     },
     {
       "pack_id": "OldIce",
@@ -146,7 +153,8 @@
     {
       "pack_id": "OarlessBoats",
       "pack_name": "Oarless Boats",
-      "pack_description": "Removes the oars from all boat types from their item textures and entity models."
+      "pack_description": "Removes the oars from all boat types from their item textures and entity models.",
+      "compatibility": ["OldPlanks"]
     },
     {
       "pack_id": "OldDoorSound",

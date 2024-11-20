@@ -5,7 +5,7 @@
     {
       "pack_id": "LowerGrass",
       "pack_name": "Lower Grass",
-      "pack_description": "Lowers the sides of Grass Blocks  to provide a smoother and greener landscape.",
+      "pack_description": "Lowers the sides of Grass Blocks to provide a smoother and greener landscape.",
       "conflict": ["GrassSides", "DungeonsDirt"]
     },
     {
@@ -67,7 +67,9 @@
       "pack_id": "LowerCrimsonNylium",
       "pack_name": "Lower Crimson Nylium",
       "pack_description": "Lowers the sides of Crimson Nylium to provide a smoother and redder landscape.",
-      "conflict": ["CrimsonNyliumSides", "OldNetherrack", "BrighterNether"]
+      "conflict": ["CrimsonNyliumSides", "OldNetherrack"],
+      "compatibility": ["BrighterNether"],
+      "priority": true
     },
     {
       "pack_id": "CrimsonNyliumSides",
@@ -79,7 +81,9 @@
       "pack_id": "LowerWarpedNylium",
       "pack_name": "Lower Warped Nylium",
       "pack_description": "Lowers the sides of Warped Nylium to provide a smoother and bluer landscape.",
-      "conflict": ["WarpedNyliumSides", "OldNetherrack", "BrighterNether"]
+      "conflict": ["WarpedNyliumSides", "OldNetherrack"],
+      "compatibility": ["BrighterNether"],
+      "priority": true
     },
     {
       "pack_id": "WarpedNyliumSides",

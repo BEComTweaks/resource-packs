@@ -112,7 +112,8 @@
     {
       "pack_id": "PixelConsistentSigns",
       "pack_name": "Pixel Consistent Signs",
-      "pack_description": "Retextures all sign textures to be consistent with their size."
+      "pack_description": "Retextures all sign textures to be consistent with their size.",
+      "compatibility": ["SmootherWarpedPlanks"]
     },
     {
       "pack_id": "PixelConsistentExperienceOrbs",
@@ -150,7 +151,7 @@
       "pack_id": "ConsistentHelmets",
       "pack_name": "Consistent Helmets",
       "pack_description": "Adds nose-pieces to the helmet items that are missing them (iron, gold & diamond).",
-      "conflict": ["GoldenCrown"]
+      "compatibility": ["ClassicStyleNetheriteArmor", "GoldenCrown"]
     },
     {
       "pack_id": "ConsistentSmoothStone",
@@ -160,7 +161,8 @@
     {
       "pack_id": "ConsistentBambooPlanks",
       "pack_name": "Consistent Bamboo Planks",
-      "pack_description": "Makes Bamboo Planks and Bamboo Mosaics match the textures of the other plank types."
+      "pack_description": "Makes Bamboo Planks and Bamboo Mosaics match the textures of the other plank types.",
+      "compatibility": ["VariatedPlanks", "OldPlanks"]
     },
     {
       "pack_id": "AccurateScaffolding",

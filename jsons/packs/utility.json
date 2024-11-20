@@ -15,10 +15,11 @@
       ]
     },
     {
-      "pack_id": "SuspiciousSand&GravelBorders",
-      "pack_name": "Suspicious Sand & Gravel Borders",
+      "pack_id": "SuspiciousSandGravelBorders",
+      "pack_name": "Suspicious Sand and Gravel Borders",
       "pack_description": "Places a border around Suspicious Sand and Suspicious Gravel for easier visibility.",
-      "conflict": ["SusSandandGravel"]
+      "conflict": ["SusSandandGravel"],
+      "compatibility": ["OldGravel"]
     },
     {
       "pack_id": "BuddingAmethystBorders",
@@ -68,7 +69,42 @@
     {
       "pack_id": "HungerPreview",
       "pack_name": "Hunger Preview",
-      "pack_description": "Displays hunger bar icons on all food names to show how much it will fill you up."
+      "pack_description": "Displays hunger bar icons on all food names to show how much it will fill you up.",
+      "compatibility": [
+        "AppleHungerBars",
+        "GoldenAppleHungerBars",
+        "MelonHungerBars",
+        "SweetBerriesHungerBars",
+        "GlowBerriesHungerBars",
+        "ChorusFruitHungerBars",
+        "CarrotHungerBars",
+        "GoldenCarrotHungerBars",
+        "PotatoHungerBars",
+        "BakedPotatoHungerBars",
+        "PoisonousPotatoHungerBars",
+        "BeetrootHungerBars",
+        "DriedKelpHungerBars",
+        "BeefHungerBars",
+        "PorkchopHungerBars",
+        "MuttonHungerBars",
+        "ChickenHungerBars",
+        "RabbitHungerBars",
+        "CodHungerBars",
+        "SalmonHungerBars",
+        "TropicalFishHungerBars",
+        "PufferfishHungerBars",
+        "BreadHungerBars",
+        "CookieHungerBars",
+        "CakeHungerBars",
+        "PumpkinPieHungerBars",
+        "RottenFleshHungerBars",
+        "SpiderEyeHungerBars",
+        "MushroomStewHungerBars",
+        "BeetrootSoupHungerBars",
+        "RabbitStewHungerBars",
+        "SuspiciousStewHungerBars",
+        "HoneyHungerBars"
+      ]
     },
     {
       "pack_id": "MusicDiscRedstoneLevelPreview",
