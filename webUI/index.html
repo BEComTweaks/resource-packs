@@ -14,7 +14,8 @@
   <div id="background-container">
   </div>
   <link href="../oreui-html/src/oreui.css" rel="stylesheet"/>
-  <link href="theme.css" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
+   <link href="theme.css" rel="stylesheet"/>
    <script src="bg.js">
    </script>
    <script src="../oreui-html/src/oreui.js">
@@ -85,6 +86,11 @@
      </div>
     </div>
     <div class="container">
+     <div class="search-container">
+      <input id="searchBar" oninput="filterPacks()" oreui-color="dark" oreui-type="input" placeholder="Search for a pack..." type="text"/>
+      <div class="search-results" id="searchResults" oreui-color="dark" oreui-type="general">
+      </div>
+     </div>
      <div class="category">
       <div class="category-label" onclick="OreUI.toggleActive(this);toggleCategory(this);" oreui-color="dark" oreui-type="button">
        Aesthetic
@@ -7709,6 +7715,8 @@
       </div>
      </div>
     </div>
+    <script src="searchbar.js">
+    </script>
     <script src="app.js">
     </script>
    </div>
