@@ -14,7 +14,7 @@
   <div id="background-container">
   </div>
   <link href="../oreui-html/src/oreui.css" rel="stylesheet">
-  <link href="style.css" rel="stylesheet"/>
+  <link href="searchbar/theme.css" rel="stylesheet"/>
   <link href="theme.css" rel="stylesheet"/>
   <script src="bg.js"></script>
   <script src="../oreui-html/src/oreui.js"></script>
@@ -124,7 +124,7 @@
      </div>
     </div>
    </div>
-   <script src="searchbar.js"></script>
+   <script src="searchbar/app.js"></script>
    <script src="app.js">
    </script>
   </div>

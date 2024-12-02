@@ -1,16 +1,18 @@
 .search-container {
   margin: 0;
   text-align: center;
+  position: relative;
+  height: 37.5px;
 }
 
 .search-results {
   margin: 5px auto;
-  max-width: 80%;
-  padding: 10px 10px 0 10px;
+  padding: 13.75px 10px 0 10px;
   border-radius: 5px;
   position: absolute;
   left: 0;
   right: 0;
+  top: 42.5px;
   z-index: 100;
   &[hasmatches="true"] {
     display: block;
@@ -21,7 +23,9 @@
 }
 
 #searchBar {
-  width: 95%;
+  position: absolute;
+  left: 0;
+  right: 0;
   padding: 10px;
   font-size: 16px;
   &:focus + div[hasmatches="true"] {
