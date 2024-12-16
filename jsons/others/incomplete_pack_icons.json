@@ -1,23 +1,15 @@
 {
   "Aesthetic": [],
   "Terrain": [],
-  "Variation": [
-    "VariatedVillagers"
-  ],
+  "Variation": ["VariatedVillagers"],
   "Peace and Quiet": [],
-  "Utility": [
-    "NoteBlockPitchParticle"
-  ],
+  "Utility": ["NoteBlockPitchParticle"],
   "Unobtrusive": [],
   "3D": [],
   "GUI": [],
   "Menu Panoramas": [],
-  "Retro": [
-    "OldPotionColors"
-  ],
-  "Fun": [
-    "AnvilFallingSoundtoMetalPipe"
-  ],
+  "Retro": ["OldPotionColors"],
+  "Fun": ["AnvilFallingSoundtoMetalPipe"],
   "World of Color": [],
   "Parity": [],
   "Fixes and Consistency": [],
