@@ -88,7 +88,7 @@ jobs:
         with:
           path: ./build
           retention-days: 1
-      
+
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v4
 
@@ -105,24 +105,6 @@ jobs:
         run: |
           curl -X DELETE -H "Authorization: token ${{ secrets.BOT_TOKEN }}" \
           https://api.github.com/repos/${{ github.repository }}/actions/artifacts/$artifact_id
-
-      - name: Get latest commit message
-        run: echo "latest_commit_message=$(git log -1 --pretty=%B)" >> $GITHUB_ENV
-
-      - name: Notify Discord
-        uses: sarisia/actions-status-discord@v1.13.0
-        with:
-          webhook: ${{ secrets.LOG_HOOK }}
-          title: ""
-          description: |
-           ### [resource-packs:main](https://github.com/becomtweaks/resource-packs/tree/main) has new commits
-           [`${{ env.latest_commit_message }}`](https://github.com/BEComTweaks/resource-packs/commit/${{ github.sha }}) by ${{ github.actor }}
-
-           -# Online at https://becomtweaks.github.io/resource-packs
-          avatar_url: "https://avatars.githubusercontent.com/u/176916861?v=4"
-          username: "NSPBot911"
-          nodetail: true
-          notimestamp: true
 
   update_server:
     needs: format_repo
