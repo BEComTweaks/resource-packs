@@ -1,4 +1,357 @@
+/* Custom Font */
 @import url("https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap");
+
+/*************\
+| OreUI HTML  |
+\*************/
+
+:root {
+  --light-bg: rgb(208, 209, 212);
+  --light-border: rgb(222, 223, 225) rgb(227, 227, 229) rgb(227, 227, 229)
+    rgb(222, 223, 225);
+  --light-bezel: rgb(98, 98, 100);
+
+  --dark-bg: rgb(72, 73, 74);
+  --dark-border: rgb(106, 108, 112) rgb(84, 86, 88) rgb(84, 86, 88)
+    rgb(106, 108, 112);
+  --dark-bezel: rgb(49, 50, 51);
+  --outer-bezel-black: black;
+
+  --green-bg: rgb(60, 133, 39);
+  --green-border: rgb(99, 157, 82) rgb(79, 145, 60) rgb(79, 145, 60)
+    rgb(99, 157, 82);
+  --green-bezel: rgb(52, 84, 43);
+
+  --light-disabled-bg: rgb(208, 209, 212);
+  --light-disabled-border: rgb(208, 209, 212); /* weird */
+  --light-disabled-bezel: rgb(177, 178, 181);
+  --outer-bezel-light-disabled: rgb(140, 141, 144);
+
+  --dark-disabled-bg: rgb(53, 54, 55);
+  --dark-disabled-border: rgb(78, 80, 83) rgb(62, 64, 65) rgb(62, 64, 65)
+    rgb(78, 80, 83);
+  --dark-disabled-bezel: rgb(36, 37, 38);
+
+  --pink-bg: rgb(255, 186, 231);
+  --pink-border: rgb(255, 235, 248) rgb(245, 215, 235) rgb(245, 215, 235)
+    rgb(255, 235, 248);
+  --pink-bezel: rgb(117, 38, 89);
+  --outer-bezel-pink: rgb(55, 18, 42);
+
+  --red-bg: rgb(214, 71, 71);
+  --red-border: rgb(224, 114, 114) rgb(173, 29, 29) rgb(173, 29, 29)
+    rgb(224, 114, 114);
+  --red-bezel: rgb(96, 24, 25);
+
+  --purple-bg: rgb(115, 69, 229);
+  --purple-border: rgb(162, 100, 242) rgb(142, 73, 235) rgb(142, 73, 235)
+    rgb(162, 100, 242);
+  --purple-bezel: rgb(74, 28, 172);
+
+  --padding: 5px 15px;
+  --bezel-size: 5px;
+  --hover-overlay: rgba(0, 0, 0, 0.05);
+}
+[oreui-type="button"] {
+  border-width: 5px;
+  border-style: solid;
+  border-radius: 0;
+  cursor: pointer;
+  padding: var(--padding);
+  transform: translateY(-1px);
+  text-align: center;
+  /* Take care of the transitions */
+  transition:
+    border-color 0s,
+    background-color 0s;
+  /* Bezel */
+  &::before {
+    position: absolute;
+    content: "";
+    bottom: calc(-3px - var(--bezel-size));
+    left: -5px;
+    right: -5px;
+    height: var(--bezel-size);
+    transform: translateY(0);
+    pointer-events: none;
+  }
+  /* Hover and active states */
+  &:hover::before {
+    height: 0;
+  }
+  &:active::before,
+  &[oreui-state="active"]::before {
+    height: 0;
+  }
+  /* Reset the transform when not active */
+  &:not(:active):not(:hover):not([oreui-state="active"]) {
+    transform: translateY(calc(-1px - var(--bezel-size)));
+  }
+  /* Override the default styles when disabled */
+  &[disabled],
+  &[disabled="true"],
+  &:disabled {
+    /* default dark */
+    color: white;
+    background-color: var(--dark-disabled-bg) !important;
+    border-color: var(--dark-disabled-border) !important;
+    cursor: not-allowed;
+    &::before {
+      background-color: var(--dark-disabled-bezel) !important;
+    }
+    &::after {
+      border-color: var(--outer-bezel-black) !important;
+    }
+    &[oreui-disabled-color="light"] {
+      color: black;
+      background-color: var(--light-disabled-bg) !important;
+      border-color: var(--light-disabled-border) !important;
+      &::before {
+        background-color: var(--light-disabled-bezel) !important;
+      }
+      &::after {
+        border-color: var(--outer-bezel-light-disabled) !important;
+      }
+    }
+  }
+  /* The surrounding bezel 
+     Outline could've been used but offset
+     isn't flexible (the bottom offset needs
+     to change, but it can't) */
+  &::after {
+    position: absolute;
+    content: "";
+    border-style: solid;
+    border-width: 2.5px;
+    bottom: calc(-5px - var(--bezel-size));
+    left: -5px;
+    right: -5px;
+    top: -5px;
+    pointer-events: none;
+  }
+  &:hover::after,
+  &:active::after,
+  &[oreui-state="active"]::after {
+    bottom: -5px;
+  }
+  /* dim when hover */
+  &:hover::after {
+    background: var(--hover-overlay);
+  }
+  /* Colors */
+  &[oreui-color="red"],
+  &[oreui-active-color="red"]:active,
+  &[oreui-active-color="red"][oreui-state="active"] {
+    &::before {
+      background-color: var(--red-bezel);
+    }
+    &::after {
+      border-color: var(--outer-bezel-black);
+    }
+  }
+  &[oreui-color="pink"],
+  &[oreui-active-color="pink"]:active,
+  &[oreui-active-color="pink"][oreui-state="active"] {
+    &::before {
+      background-color: var(--pink-bezel);
+    }
+    &::after {
+      border-color: var(--outer-bezel-pink);
+    }
+  }
+  &[oreui-color="purple"],
+  &[oreui-active-color="purple"]:active,
+  &[oreui-active-color="purple"][oreui-state="active"] {
+    &::before {
+      background-color: var(--purple-bezel);
+    }
+    &::after {
+      border-color: var(--outer-bezel-black);
+    }
+  }
+  &[oreui-color="green"],
+  &[oreui-active-color="green"]:active,
+  &[oreui-active-color="green"][oreui-state="active"] {
+    &::before {
+      background-color: var(--green-bezel);
+    }
+    &::after {
+      border-color: var(--outer-bezel-black);
+    }
+  }
+  &[oreui-color="light"],
+  &[oreui-active-color="light"]:active,
+  &[oreui-active-color="light"][oreui-state="active"] {
+    &::before {
+      background-color: var(--light-bezel);
+    }
+    &::after {
+      border-color: var(--outer-bezel-black);
+    }
+  }
+  &[oreui-color="dark"],
+  &[oreui-active-color="dark"]:active,
+  &[oreui-active-color="dark"][oreui-state="active"] {
+    &::before {
+      background-color: var(--dark-bezel);
+    }
+    &::after {
+      border-color: var(--outer-bezel-black);
+    }
+  }
+}
+
+/* Default states */
+[oreui-color="red"] {
+  background-color: var(--red-bg);
+  border-color: var(--red-border);
+  color: white;
+}
+[oreui-color="pink"] {
+  background-color: var(--pink-bg);
+  border-color: var(--pink-border);
+  color: black;
+}
+[oreui-color="purple"] {
+  background-color: var(--purple-bg);
+  border-color: var(--purple-border);
+  color: white;
+}
+[oreui-color="green"] {
+  background-color: var(--green-bg);
+  border-color: var(--green-border);
+  color: white;
+}
+[oreui-color="light"] {
+  background-color: var(--light-bg);
+  border-color: var(--light-border);
+  color: black;
+}
+[oreui-color="dark"] {
+  background-color: var(--dark-bg);
+  border-color: var(--dark-border);
+  color: white;
+}
+
+/* Active states */
+[oreui-active-color="red"]:active,
+[oreui-active-color="red"][oreui-state="active"] {
+  background-color: var(--red-bg);
+  border-color: var(--red-border);
+  color: white;
+}
+[oreui-active-color="pink"]:active,
+[oreui-active-color="pink"][oreui-state="active"] {
+  background-color: var(--pink-bg);
+  border-color: var(--pink-border);
+  color: black;
+}
+[oreui-active-color="purple"]:active,
+[oreui-active-color="purple"][oreui-state="active"] {
+  background-color: var(--purple-bg);
+  border-color: var(--purple-border);
+  color: white;
+}
+[oreui-active-color="green"]:active,
+[oreui-active-color="green"][oreui-state="active"] {
+  background-color: var(--green-bg);
+  border-color: var(--green-border);
+  color: white;
+}
+[oreui-active-color="light"]:active,
+[oreui-active-color="light"][oreui-state="active"] {
+  background-color: var(--light-bg);
+  border-color: var(--light-border);
+  color: black;
+}
+[oreui-active-color="dark"]:active,
+[oreui-active-color="dark"][oreui-state="active"] {
+  background-color: var(--dark-bg);
+  border-color: var(--dark-border);
+  color: white;
+}
+[oreui-type="general"] {
+  border-width: 5px;
+  border-style: solid;
+  border-radius: 0;
+  padding: var(--padding);
+  text-align: center;
+  outline: 2.5px solid var(--outer-bezel-black);
+  outline-offset: -2.5px;
+}
+[oreui-type="input"] {
+  background: rgb(51, 51, 51);
+  outline-style: solid;
+  outline-color: rgb(27, 27, 27);
+  outline-width: 2.5px;
+  box-shadow: inset 0 5px 0 0 rgb(35, 35, 35);
+  outline-offset: -2.5px;
+  color: white;
+  &:focus {
+    outline-color: white;
+    outline-offset: -0.5px;
+  }
+  &::placeholder {
+    color: white;
+  }
+}
+
+/***********\
+| Searchbar |
+\***********/
+
+.search-container {
+  margin: 0;
+  text-align: center;
+  position: relative;
+  height: 37.5px;
+}
+
+.search-results {
+  margin: 5px auto;
+  padding: 13.75px 10px 0 10px;
+  border-radius: 5px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 42.5px;
+  z-index: 100;
+  &[hasmatches="true"] {
+    display: block;
+  }
+  &:not(:hover) {
+    display: none;
+  }
+}
+
+#searchBar {
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: 10px;
+  font-size: 16px;
+  &:focus + div[hasmatches="true"] {
+    display: block;
+  }
+}
+
+.search-result-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+  div {
+    text-align: left;
+  }
+  p {
+    margin: 0;
+    font-size: 14px;
+  }
+}
+
+/**************\
+| Custom Theme |
+\**************/
 
 :root {
   --dark-zero: rgb(61, 62, 63);
@@ -298,8 +651,12 @@ select {
 
 .half-dark {
   background: #0000007f;
-  position: relative;
-  z-index: 5;
+  position: fixed;
+  z-index: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
 }
 
 .mev option {

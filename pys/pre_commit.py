@@ -23,7 +23,7 @@ category_start = '<div class="category"><div oreui-type="button" oreui-color="da
 subcategory_start = '<div class="subcategory"><div oreui-type="button" class="category-label" oreui-color="dark" onclick="OreUI.toggleActive(this);toggleCategory(this);">topic_name</div><button class="category-label-selectall sub" onclick="selectAll(this)" data-allpacks="<all_packs>"><img src="images/select-all-button/chiseled_bookshelf_empty.png" class="category-label-selectall-img"><div class="category-label-selectall-hovertext">Select All</div></button><div class="category-controlled" oreui-color="dark" oreui-type="general"><div class="subcattweaks">'
 pack_start = '<div class="tweak" onclick="toggleSelection(this);" data-category="topic_name" data-name="pack_id" data-index="pack_index" oreui-type="button" oreui-color="dark" oreui-active-color="green">'
 html_comp = '<div class="comp-hover-text" oreui-color="dark" oreui-type="general">Incompatible with: <incompatible></div>'
-pack_mid = '<div class="tweak-info"><input type="checkbox" name="tweak"><img src="https://raw.githubusercontent.com/BEComTweaks/resource-packs/main/relloctopackicon" style="width:82px; height:82px;" alt="pack_name"><br><label id="tweak" class="tweak-title">pack_name</label><div class="tweak-description">pack_description</div></div>'
+pack_mid = '<div class="tweak-info"><input type="checkbox" name="tweak"><img src="../relloctopackicon" style="width:82px; height:82px;" alt="pack_name"><br><label id="tweak" class="tweak-title">pack_name</label><div class="tweak-description">pack_description</div></div>'
 html_conf = '<div class="conf-hover-text" oreui-color="dark" oreui-type="general">Conflicts with: <conflicts></div>'
 pack_end = '</div>'
 category_end = '</div></div></div>'
@@ -43,41 +43,20 @@ incomplete_pkics = {}
 packs = -1
 pack_list = []
 name_to_json = {}
-clrprint("Going through Packs...", clr="yellow")
 with open(f"{cdir()}/jsons/others/pack_order_list.txt","r") as pol:
     for i in pol:
         pack_list.append(i)
 
 parser = argparse.ArgumentParser(description='Run a massive script that updates Packs to-do, Icons to-do, Compatibilities to-do and the HTML')
 parser.add_argument('--format', '-f', action='store_true', help='Include flag to format files')
-parser.add_argument('--use-relative-location', '-rl', action='store_true', help='Use relative location')
 parser.add_argument('--only-update-html', '-ouh', action='store_true', help='Only update the HTML')
 parser.add_argument('--only-update-jsons', '-ouj', action='store_true', help='Only update the JSONs')
 parser.add_argument('--build', '-b', action='store_true', help='Builds the website for production')
 args = parser.parse_args()
 
-if args.build:
-    clrprint("Make sure you built the HTML!", clr="y")
-    try:
-        shutil.rmtree(f"{cdir()}/build")
-    except FileNotFoundError:
-        pass
-    try:
-        shutil.copytree(f"{cdir()}/webUI", f"{cdir()}/build")
-        os.mkdir(f"{cdir()}/build/oreui")
-        shutil.copyfile(f"{cdir()}/oreui-html/src/oreui.js", f"{cdir()}/build/oreui/oreui.js")
-        shutil.copyfile(f"{cdir()}/oreui-html/src/oreui.css", f"{cdir()}/build/oreui/oreui.css")
-        with open(f"{cdir()}/build/index.html", "r") as html_file:
-            html = html_file.read()
-        with open(f"{cdir()}/build/index.html", "w") as html_file:
-            html_file.write(html.replace("../oreui-html/src","oreui"))
-        os.remove(f"{cdir()}/build/index.html.template")
-        clrprint("Build success!", clr="g")
-    except Exception as e:
-        clrprint("Build failed!", clr="r")
-        clrprint(e, clr="y")
-else:
-    # Counts Packs and Compatibilities
+# Counts Packs and Compatibilities
+if not args.build or (args.build and (args.only_update_html or args.only_update_jsons or args.format)):
+    clrprint("Going through Packs...", clr="yellow")
     for j in pack_list:
         origj = j
         if not ignore:
@@ -386,9 +365,6 @@ else:
     soup = BeautifulSoup(html, 'html.parser')
     html = soup.prettify()
     html = html.replace("<br/>", "<br>")
-    # Uses relative location
-    if args.use_relative_location:
-        html= html.replace("https://raw.githubusercontent.com/BEComTweaks/resource-packs/main/","../")
     # Update files
     clrprint("Updating files...", clr="yellow")
     if not args.only_update_html:
@@ -434,3 +410,23 @@ else:
         except KeyboardInterrupt:
             clrprint("You are a bit impatient...", clr="red")
         clrprint("Files are Prettier!", clr="green")
+    elif not args.only_update_html:
+        clrprint("Remember to format the files!", clr="y")
+
+if args.build:
+    clrprint("Make sure you built the HTML!", clr="y")
+    try:
+        shutil.rmtree(f"{cdir()}/build")
+    except FileNotFoundError:
+        pass
+    try:
+        shutil.copytree(f"{cdir()}/webUI", f"{cdir()}/build")
+        os.remove(f"{cdir()}/build/index.html.template")
+        with open(f"{cdir()}/build/index.html", "r") as file:
+            content = file.read()
+        with open(f"{cdir()}/build/index.html", "w") as file:
+            file.write(content.replace("../", "https://raw.githubusercontent.com/BEComTweaks/resource-packs/main/"))
+        clrprint("Build success!", clr="g")
+    except Exception as e:
+        clrprint("Build failed!", clr="r")
+        clrprint(e, clr="y")

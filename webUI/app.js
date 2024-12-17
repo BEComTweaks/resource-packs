@@ -1,3 +1,170 @@
+/************\
+| OreUI HTML |
+\************/
+
+const OreUI = {
+  becomeActive: function (element) {
+    element.setAttribute("oreui-state", "active");
+  },
+  becomeInactive: function (element) {
+    element.setAttribute("oreui-state", "inactive");
+  },
+  toggleActive: function (element) {
+    if (element.getAttribute("oreui-state") === "active") {
+      element.setAttribute("oreui-state", "inactive");
+    } else {
+      element.setAttribute("oreui-state", "active");
+    }
+  },
+  becomeDisabled: function (element) {
+    element.setAttribute("disabled", true);
+  },
+  becomeEnabled: function (element) {
+    element.removeAttribute("disabled");
+  },
+  toggleDisabled: function (element) {
+    if (element.hasAttribute("disabled")) {
+      element.removeAttribute("disabled");
+    } else {
+      element.setAttribute("disabled", true);
+    }
+  },
+  getCurrentState: function (element) {
+    if (element.hasAttribute("disabled")) {
+      return "disabled";
+    } else if (element.hasAttribute("oreui-state")) {
+      return element.getAttribute("oreui-state");
+    } else {
+      return "inactive";
+    }
+  },
+  isActive: function (element) {
+    if (element.hasAttribute("oreui-state")) {
+      return element.getAttribute("oreui-state") === "active";
+    } else {
+      return false;
+    }
+  },
+  isDisabled: function (element) {
+    if (element.hasAttribute("disabled")) {
+      return element.getAttribute("disabled") === "true";
+    } else {
+      return false;
+    }
+  },
+  getColor: function (element) {
+    return element.getAttribute("oreui-color");
+  },
+  getActiveColor: function (element) {
+    if (element.hasAttribute("oreui-active-color")) {
+      return element.getAttribute("oreui-active-color");
+    } else {
+      return element.getAttribute("oreui-color");
+    }
+  },
+  getDisabledColor: function (element) {
+    if (element.hasAttribute("oreui-disabled-color")) {
+      return element.getAttribute("oreui-disabled-color");
+    } else {
+      return "dark";
+    }
+  },
+  setColor: function (element, color) {
+    element.setAttribute("oreui-color", color);
+  },
+  setActiveColor: function (element, color) {
+    element.setAttribute("oreui-active-color", color);
+  },
+  setDisabledColor: function (element, color) {
+    element.setAttribute("oreui-disabled-color", color);
+  },
+};
+
+window.OreUI = OreUI;
+
+/************\
+| Search Bar |
+\************/
+
+document.addEventListener("click", filterPacks);
+function filterPacks() {
+  const query = document.getElementById("searchBar").value.toLowerCase().trim();
+  const resultsDiv = document.getElementById("searchResults");
+
+  if (query === "") {
+    if (resultsDiv.hasAttribute("hasMatches")) {
+      resultsDiv.removeAttribute("hasMatches");
+    }
+    resultsDiv.innerHTML = "";
+    return;
+  }
+
+  const packs = document.querySelectorAll(".tweak");
+  let matches = [];
+
+  packs.forEach((pack, index) => {
+    const title = pack.querySelector(".tweak-title").textContent;
+    const description = pack.querySelector(".tweak-description").textContent;
+    const icon = pack.querySelector("img").src;
+    const isSelected = pack.querySelector("input[type='checkbox']").checked; // Check selection state
+
+    if (
+      title.toLowerCase().includes(query) ||
+      description.toLowerCase().includes(query)
+    ) {
+      matches.push({
+        title,
+        description,
+        icon,
+        isSelected, // Track selection state
+        packIndex: index, // Keep track of the original pack's index
+      });
+    }
+  });
+
+  if (matches.length === 0) {
+    if (resultsDiv.hasAttribute("hasMatches")) {
+      resultsDiv.removeAttribute("hasMatches");
+    }
+    resultsDiv.innerHTML = "";
+  } else {
+    if (matches.length > 5) matches = matches.slice(0, 5);
+    resultsDiv.setAttribute("hasMatches", true);
+    resultsDiv.innerHTML = matches
+      .map(
+        (match) => `
+      <div
+        ${match.isSelected ? 'oreui-state="active"' : ""}
+        class="search-result-item"
+        onclick="triggerPackClick(${match.packIndex})"
+        style="cursor: pointer;"
+        oreui-type="button"
+        oreui-color="dark"
+        oreui-active-color="green"
+      >
+        <img src="${match.icon}" alt="${match.title.trim()}" style="width: 48px; height: 48px;" />
+        <div>
+          <strong>${match.title}</strong>
+          <p>${match.description}</p>
+        </div>
+      </div>
+    `,
+      )
+      .join("");
+  }
+}
+
+function triggerPackClick(index) {
+  // Simulate a click on the corresponding pack
+  const packs = document.querySelectorAll(".tweak");
+  if (packs[index]) {
+    packs[index].click();
+  }
+}
+
+/******************\
+| Custom functions |
+\******************/
 // I sleep now
 function sleep(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
