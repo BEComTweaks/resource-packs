@@ -1,0 +1,9 @@
+[
+  "ui/inventory_screen.json",
+  "ui/loom_screen.json",
+  "ui/smithing_table_2_screen.json",
+  "ui/structure_editor_screen.json",
+  "ui/trade_2_screen.json",
+  "ui/trade_2_screen_pocket.json",
+  "ui/ui_template_tabs.json"
+]

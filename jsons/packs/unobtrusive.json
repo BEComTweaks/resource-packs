@@ -67,8 +67,7 @@
     {
       "pack_id": "UnobtrusiveScaffolding",
       "pack_name": "Unobtrusive Scaffolding",
-      "pack_description": "Creates a hole in the top of scaffolding, allowing you to traverse up and down them more comfortably.",
-      "compatibility": ["AccurateScaffolding"]
+      "pack_description": "Creates a hole in the top of scaffolding, allowing you to traverse up and down them more comfortably."
     },
     {
       "pack_id": "UnobtrusiveEnchantmentGlint",
@@ -112,8 +111,7 @@
       "pack_id": "TranslucentSpyglassOverlay",
       "pack_name": "Translucent Spyglass Overlay",
       "pack_description": "Increases visibility when zooming in with a Spyglass.",
-      "conflict": ["WHAT", "NoSpyglassOverlay", "UselessSpyglassOverlay"],
-      "compatibility": ["AccurateSpyglass"]
+      "conflict": ["WHAT", "NoSpyglassOverlay", "UselessSpyglassOverlay"]
     },
     {
       "pack_id": "NoSpyglassOverlay",

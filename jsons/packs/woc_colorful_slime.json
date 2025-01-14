@@ -6,137 +6,120 @@
       "pack_id": "HoneySlime",
       "pack_name": "Honey Slime",
       "pack_description": "Changes the color of all slime related items, blocks and entities to honey.",
-      "priority": true,
-      "conflict": ["PistonInnerFix", "StickyPistonSides"],
-      "compatibility": ["SolidSlime"]
+      "priority": 10,
+      "conflict": ["PistonInnerFix", "StickyPistonSides"]
     },
     {
       "pack_id": "WhiteSlime",
       "pack_name": "White Slime",
       "pack_description": "Changes the color of all slime related items, blocks and entities to white.",
-      "priority": true,
-      "conflict": ["PistonInnerFix", "StickyPistonSides"],
-      "compatibility": ["SolidSlime"]
+      "priority": 10,
+      "conflict": ["PistonInnerFix", "StickyPistonSides"]
     },
     {
       "pack_id": "LightGraySlime",
       "pack_name": "Light Gray Slime",
       "pack_description": "Changes the color of all slime related items, blocks and entities to light gray.",
-      "priority": true,
-      "conflict": ["PistonInnerFix", "StickyPistonSides"],
-      "compatibility": ["SolidSlime"]
+      "priority": 10,
+      "conflict": ["PistonInnerFix", "StickyPistonSides"]
     },
     {
       "pack_id": "GraySlime",
       "pack_name": "Gray Slime",
       "pack_description": "Changes the color of all slime related items, blocks and entities to gray.",
-      "priority": true,
-      "conflict": ["PistonInnerFix", "StickyPistonSides"],
-      "compatibility": ["SolidSlime"]
+      "priority": 10,
+      "conflict": ["PistonInnerFix", "StickyPistonSides"]
     },
     {
       "pack_id": "BlackSlime",
       "pack_name": "Black Slime",
       "pack_description": "Changes the color of all slime related items, blocks and entities to black.",
-      "priority": true,
-      "conflict": ["PistonInnerFix", "StickyPistonSides"],
-      "compatibility": ["SolidSlime"]
+      "priority": 10,
+      "conflict": ["PistonInnerFix", "StickyPistonSides"]
     },
     {
       "pack_id": "BrownSlime",
       "pack_name": "Brown Slime",
       "pack_description": "Changes the color of all slime related items, blocks and entities to brown.",
-      "priority": true,
-      "conflict": ["PistonInnerFix", "StickyPistonSides"],
-      "compatibility": ["SolidSlime"]
+      "priority": 10,
+      "conflict": ["PistonInnerFix", "StickyPistonSides"]
     },
     {
       "pack_id": "RedSlime",
       "pack_name": "Red Slime",
       "pack_description": "Changes the color of all slime related items, blocks and entities to red.",
-      "priority": true,
-      "conflict": ["PistonInnerFix", "StickyPistonSides"],
-      "compatibility": ["SolidSlime"]
+      "priority": 10,
+      "conflict": ["PistonInnerFix", "StickyPistonSides"]
     },
     {
       "pack_id": "OrangeSlime",
       "pack_name": "Orange Slime",
       "pack_description": "Changes the color of all slime related items, blocks and entities to orange.",
-      "priority": true,
-      "conflict": ["PistonInnerFix", "StickyPistonSides"],
-      "compatibility": ["SolidSlime"]
+      "priority": 10,
+      "conflict": ["PistonInnerFix", "StickyPistonSides"]
     },
     {
       "pack_id": "YellowSlime",
       "pack_name": "Yellow Slime",
       "pack_description": "Changes the color of all slime related items, blocks and entities to yellow.",
-      "priority": true,
-      "conflict": ["PistonInnerFix", "StickyPistonSides"],
-      "compatibility": ["SolidSlime"]
+      "priority": 10,
+      "conflict": ["PistonInnerFix", "StickyPistonSides"]
     },
     {
       "pack_id": "GreenSlime",
       "pack_name": "Green Slime",
       "pack_description": "Changes the color of all slime related items, blocks and entities to green.",
-      "priority": true,
-      "conflict": ["PistonInnerFix", "StickyPistonSides"],
-      "compatibility": ["SolidSlime"]
+      "priority": 10,
+      "conflict": ["PistonInnerFix", "StickyPistonSides"]
     },
     {
       "pack_id": "CyanSlime",
       "pack_name": "Cyan Slime",
       "pack_description": "Changes the color of all slime related items, blocks and entities to cyan.",
-      "priority": true,
-      "conflict": ["PistonInnerFix", "StickyPistonSides"],
-      "compatibility": ["SolidSlime"]
+      "priority": 10,
+      "conflict": ["PistonInnerFix", "StickyPistonSides"]
     },
     {
       "pack_id": "LightBlueSlime",
       "pack_name": "Light Blue Slime",
       "pack_description": "Changes the color of all slime related items, blocks and entities to light blue.",
-      "priority": true,
-      "conflict": ["PistonInnerFix", "StickyPistonSides"],
-      "compatibility": ["SolidSlime"]
+      "priority": 10,
+      "conflict": ["PistonInnerFix", "StickyPistonSides"]
     },
     {
       "pack_id": "BlueSlime",
       "pack_name": "Blue Slime",
       "pack_description": "Changes the color of all slime related items, blocks and entities to blue.",
-      "priority": true,
-      "conflict": ["PistonInnerFix", "StickyPistonSides"],
-      "compatibility": ["SolidSlime"]
+      "priority": 10,
+      "conflict": ["PistonInnerFix", "StickyPistonSides"]
     },
     {
       "pack_id": "PurpleSlime",
       "pack_name": "Purple Slime",
       "pack_description": "Changes the color of all slime related items, blocks and entities to purple.",
-      "priority": true,
-      "conflict": ["PistonInnerFix", "StickyPistonSides"],
-      "compatibility": ["SolidSlime"]
+      "priority": 10,
+      "conflict": ["PistonInnerFix", "StickyPistonSides"]
     },
     {
       "pack_id": "MagentaSlime",
       "pack_name": "Magenta Slime",
       "pack_description": "Changes the color of all slime related items, blocks and entities to magenta.",
-      "priority": true,
-      "conflict": ["PistonInnerFix", "StickyPistonSides"],
-      "compatibility": ["SolidSlime"]
+      "priority": 10,
+      "conflict": ["PistonInnerFix", "StickyPistonSides"]
     },
     {
       "pack_id": "PinkSlime",
       "pack_name": "Pink Slime",
       "pack_description": "Changes the color of all slime related items, blocks and entities to pink.",
-      "priority": true,
-      "conflict": ["PistonInnerFix", "StickyPistonSides"],
-      "compatibility": ["SolidSlime"]
+      "priority": 10,
+      "conflict": ["PistonInnerFix", "StickyPistonSides"]
     },
     {
       "pack_id": "RainbowSlime",
       "pack_name": "Rainbow Slime",
       "pack_description": "Changes the color of all slime related items, blocks and entities to a random rainbow color.\nAll of them changes texture when rejoining world/reloading chunks!",
-      "priority": true,
-      "conflict": ["PistonInnerFix", "StickyPistonSides"],
-      "compatibility": ["SolidSlime"]
+      "priority": 10,
+      "conflict": ["PistonInnerFix", "StickyPistonSides"]
     }
   ]
 }

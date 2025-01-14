@@ -1,0 +1,23 @@
+[
+  "textures/blocks/ancient_debris_side.png",
+  "textures/blocks/ancient_debris_top.png",
+  "textures/blocks/coal_ore.png",
+  "textures/blocks/copper_ore.png",
+  "textures/blocks/deepslate/deepslate_coal_ore.png",
+  "textures/blocks/deepslate/deepslate_copper_ore.png",
+  "textures/blocks/deepslate/deepslate_diamond_ore.png",
+  "textures/blocks/deepslate/deepslate_emerald_ore.png",
+  "textures/blocks/deepslate/deepslate_gold_ore.png",
+  "textures/blocks/deepslate/deepslate_iron_ore.png",
+  "textures/blocks/deepslate/deepslate_lapis_ore.png",
+  "textures/blocks/deepslate/deepslate_redstone_ore.png",
+  "textures/blocks/emerald_ore.png",
+  "textures/blocks/gilded_blackstone.png",
+  "textures/blocks/gold_ore.png",
+  "textures/blocks/iron_ore.png",
+  "textures/blocks/lapis_ore.png",
+  "textures/blocks/nether_gold_ore.png",
+  "textures/blocks/quartz_ore.png",
+  "textures/blocks/redstone_ore.png",
+  "textures/flipbook_textures.json"
+]

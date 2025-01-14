@@ -1,0 +1,6 @@
+[
+  "entity/armadillo.entity.json",
+  "models/entity/armadillo.geo.json",
+  "render_controllers/armadillo.render_controllers.json",
+  "textures/entity/eyemadillo.png"
+]

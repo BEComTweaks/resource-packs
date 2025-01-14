@@ -1,0 +1,19 @@
+[
+  "textures/blocks/bee_nest_bottom.png",
+  "textures/blocks/bee_nest_bottom_honey.png",
+  "textures/blocks/bee_nest_front.png",
+  "textures/blocks/bee_nest_front_honey.png",
+  "textures/blocks/bee_nest_side.png",
+  "textures/blocks/bee_nest_side_honey.png",
+  "textures/blocks/bee_nest_top.png",
+  "textures/blocks/bee_nest_top_honey.png",
+  "textures/blocks/beehive_bottom.png",
+  "textures/blocks/beehive_bottom_honey.png",
+  "textures/blocks/beehive_front.png",
+  "textures/blocks/beehive_front_honey.png",
+  "textures/blocks/beehive_side.png",
+  "textures/blocks/beehive_side_honey.png",
+  "textures/blocks/beehive_top.png",
+  "textures/blocks/beehive_top_honey.png",
+  "textures/terrain_texture.json"
+]

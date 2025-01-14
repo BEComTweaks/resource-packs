@@ -1,0 +1,16 @@
+[
+  "blocks.json",
+  "textures/blocks/slab_sides/cut_red_sandstone_slab_side.png",
+  "textures/blocks/slab_sides/cut_sandstone_slab_side.png",
+  "textures/blocks/slab_sides/polished_andesite_slab_side.png",
+  "textures/blocks/slab_sides/polished_blackstone_slab_side.png",
+  "textures/blocks/slab_sides/polished_deepslate_slab_side.png",
+  "textures/blocks/slab_sides/polished_diorite_slab_side.png",
+  "textures/blocks/slab_sides/polished_granite_slab_side.png",
+  "textures/blocks/slab_sides/polished_tuff_slab_side.png",
+  "textures/blocks/slab_sides/prismarine_brick_slab_side.png",
+  "textures/blocks/slab_sides/quartz_block_slab_side.png",
+  "textures/blocks/slab_sides/red_sandstone_slab_side.png",
+  "textures/blocks/slab_sides/sandstone_slab_side.png",
+  "textures/terrain_texture.json"
+]

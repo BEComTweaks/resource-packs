@@ -1,0 +1,12 @@
+[
+  "blocks.json",
+  "textures/blocks/infested_chiseled_stone_bricks_carried.png",
+  "textures/blocks/infested_cobblestone_carried.png",
+  "textures/blocks/infested_cracked_stone_bricks_carried.png",
+  "textures/blocks/infested_deepslate_carried.png",
+  "textures/blocks/infested_deepslate_top_carried.png",
+  "textures/blocks/infested_mossy_stone_bricks_carried.png",
+  "textures/blocks/infested_stone_bricks_carried.png",
+  "textures/blocks/infested_stone_carried.png",
+  "textures/terrain_texture.json"
+]

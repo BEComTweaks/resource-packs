@@ -1,0 +1,7 @@
+[
+  "blocks.json",
+  "textures/blocks/piston_side_sticky.png",
+  "textures/blocks/piston_top_sticky.png",
+  "textures/entity/pistonarm/pistonArmSticky.png",
+  "textures/terrain_texture.json"
+]

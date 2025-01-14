@@ -11,8 +11,7 @@
       "pack_id": "BlackNetherBricks",
       "pack_name": "Black Nether Bricks",
       "pack_description": "Changes texture of Nether Bricks to make them black.",
-      "compatibility": ["BrighterNether"],
-      "priority": true
+      "priority": 5
     },
     {
       "pack_id": "CherryPicking",
@@ -37,26 +36,7 @@
     {
       "pack_id": "SolidSlime",
       "pack_name": "Solid Slime",
-      "pack_description": "Eliminates Slime Block transparency.",
-      "compatibility": [
-        "HoneySlime",
-        "WhiteSlime",
-        "LightGraySlime",
-        "GraySlime",
-        "BlackSlime",
-        "BrownSlime",
-        "RedSlime",
-        "OrangeSlime",
-        "YellowSlime",
-        "GreenSlime",
-        "CyanSlime",
-        "LightBlueSlime",
-        "BlueSlime",
-        "PurpleSlime",
-        "MagentaSlime",
-        "PinkSlime",
-        "RainbowSlime"
-      ]
+      "pack_description": "Eliminates Slime Block transparency."
     },
     {
       "pack_id": "DesaturatedPurpur",
@@ -66,8 +46,7 @@
     {
       "pack_id": "DesaturatedDarkOak",
       "pack_name": "Desaturated Dark Oak",
-      "pack_description": "Desaturates Dark Oak Planks to give them a more neutral color.",
-      "compatibility": ["CircularLogTops"]
+      "pack_description": "Desaturates Dark Oak Planks to give them a more neutral color."
     },
     {
       "pack_id": "HorizontalNuggets",
@@ -124,8 +103,7 @@
     {
       "pack_id": "AshlessCampfires",
       "pack_name": "Ashless Campfires",
-      "pack_description": "Removes the 'ash' from unlit Campfires and Soul Campfires.",
-      "compatibility": ["SoulSoilSoulCampfires"]
+      "pack_description": "Removes the 'ash' from unlit Campfires and Soul Campfires."
     },
     {
       "pack_id": "GlassDoors",
@@ -155,8 +133,7 @@
     {
       "pack_id": "AccurateSpyglass",
       "pack_name": "Accurate Spyglass",
-      "pack_description": "Recolors the Spyglass to use Copper and Amethyst colors to reflect its crafting recipe.",
-      "compatibility": ["TranslucentSpyglassOverlay", "UselessSpyglassOverlay"]
+      "pack_description": "Recolors the Spyglass to use Copper and Amethyst colors to reflect its crafting recipe."
     },
     {
       "pack_id": "FencierFences",
@@ -167,8 +144,7 @@
       "pack_id": "SmootherWarpedPlanks",
       "pack_name": "Smoother Warped Planks",
       "pack_description": "Removes that harsh contrast from Warped Planks",
-      "conflict": ["OldPlanks"],
-      "compatibility": ["PixelConsistentSigns"]
+      "conflict": ["OldPlanks"]
     },
     {
       "pack_id": "CrimsonerCrimson",
@@ -179,14 +155,12 @@
     {
       "pack_id": "AlternateCutCopper",
       "pack_name": "Alternate Cut Copper",
-      "pack_description": "Retextures Cut Copper blocks to resemble their look from their first appearance on Minecraft Live.",
-      "compatibility": ["WaxedCopperItems"]
+      "pack_description": "Retextures Cut Copper blocks to resemble their look from their first appearance on Minecraft Live."
     },
     {
       "pack_id": "PolishedStonestoBricks",
       "pack_name": "Polished Stones to Bricks",
-      "pack_description": "Retextures Polished Granite, Andesite and Diorite to look like bricks.",
-      "compatibility": ["SmootherStones"]
+      "pack_description": "Retextures Polished Granite, Andesite and Diorite to look like bricks."
     },
     {
       "pack_id": "SingularGlazedTerracotta",
@@ -201,14 +175,12 @@
     {
       "pack_id": "GoldenCrown",
       "pack_name": "Golden Crown",
-      "pack_description": "Retextures the Golden Helmet to look like a crown. Also affects the look of some helmet Armor Trims.",
-      "compatibility": ["ConsistentHelmets"]
+      "pack_description": "Retextures the Golden Helmet to look like a crown. Also affects the look of some helmet Armor Trims."
     },
     {
       "pack_id": "ClassicStyleNetheriteArmor",
       "pack_name": "Classic Style Netherite Armor",
-      "pack_description": "Netherite armor in the style of the other armors.",
-      "compatibility": ["ConsistentHelmets"]
+      "pack_description": "Netherite armor in the style of the other armors."
     },
     {
       "pack_id": "AllayElytra",

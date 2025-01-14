@@ -30,8 +30,7 @@
       "pack_id": "ClassicOres",
       "pack_name": "Classic Ores",
       "pack_description": "Revert all ores to their pre-1.17 textures, including Copper and Deepslate ores.",
-      "conflict": ["UniformOres"],
-      "compatibility": ["EmeraldstoRubies", "OreBorders", "UnlitRedstoneOre"]
+      "conflict": ["UniformOres"]
     },
     {
       "pack_id": "OldCobblestone",
@@ -48,18 +47,12 @@
       "pack_id": "OldPlanks",
       "pack_name": "Old Planks",
       "pack_description": "Reverts all planks and signs to their old textures, including modern plank types.",
-      "conflict": ["SmootherWarpedPlanks"],
-      "compatibility": [
-        "ConsistentBambooPlanks",
-        "VariatedPlanks",
-        "OarlessBoats"
-      ]
+      "conflict": ["SmootherWarpedPlanks"]
     },
     {
       "pack_id": "OldGravel",
       "pack_name": "Old Gravel",
-      "pack_description": "Reverts Gravel to its Alpha texture.",
-      "compatibility": ["SuspiciousSandGravelBorders"]
+      "pack_description": "Reverts Gravel to its Alpha texture."
     },
     {
       "pack_id": "OldNetherrack",
@@ -90,8 +83,7 @@
     {
       "pack_id": "OldWater",
       "pack_name": "Old Water",
-      "pack_description": "Reverts Water to its old texture.",
-      "compatibility": ["ClearerWater"]
+      "pack_description": "Reverts Water to its old texture."
     },
     {
       "pack_id": "OldIce",
@@ -153,8 +145,7 @@
     {
       "pack_id": "OarlessBoats",
       "pack_name": "Oarless Boats",
-      "pack_description": "Removes the oars from all boat types from their item textures and entity models.",
-      "compatibility": ["OldPlanks"]
+      "pack_description": "Removes the oars from all boat types from their item textures and entity models."
     },
     {
       "pack_id": "OldDoorSound",

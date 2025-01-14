@@ -5,21 +5,13 @@
       "pack_id": "OreBorders",
       "pack_name": "Ore Borders",
       "pack_description": "Places a border around ores for easier visibility within caves.",
-      "conflict": ["OldNetherrack"],
-      "compatibility": [
-        "ClassicOres",
-        "EmeraldstoRubies",
-        "UniformOres",
-        "UnlitRedstoneOre",
-        "DungeonsStone"
-      ]
+      "conflict": ["OldNetherrack"]
     },
     {
       "pack_id": "SuspiciousSandGravelBorders",
       "pack_name": "Suspicious Sand and Gravel Borders",
       "pack_description": "Places a border around Suspicious Sand and Suspicious Gravel for easier visibility.",
-      "conflict": ["SusSandandGravel"],
-      "compatibility": ["OldGravel"]
+      "conflict": ["SusSandandGravel"]
     },
     {
       "pack_id": "BuddingAmethystBorders",
@@ -31,15 +23,13 @@
       "pack_name": "Visual Infested Stone Items",
       "pack_description": "Adds a border around Infested Stone in the inventory.",
       "message": ["error", "This will NOT affect the placed blocks."],
-      "conflict": ["CrumbledInfestedStoneBlocks"],
-      "compatibility": ["DungeonsStone"]
+      "conflict": ["CrumbledInfestedStoneBlocks"]
     },
     {
       "pack_id": "WaxedCopperItems",
       "pack_name": "Waxed Copper Items",
       "pack_description": "Adds a border around Waxed Copper and variants in the inventory.",
-      "message": ["error", "This will NOT affect the placed blocks."],
-      "compatibility": ["AlternateCutCopper"]
+      "message": ["error", "This will NOT affect the placed blocks."]
     },
     {
       "pack_id": "DifferentStems",
@@ -69,42 +59,7 @@
     {
       "pack_id": "HungerPreview",
       "pack_name": "Hunger Preview",
-      "pack_description": "Displays hunger bar icons on all food names to show how much it will fill you up.",
-      "compatibility": [
-        "AppleHungerBars",
-        "GoldenAppleHungerBars",
-        "MelonHungerBars",
-        "SweetBerriesHungerBars",
-        "GlowBerriesHungerBars",
-        "ChorusFruitHungerBars",
-        "CarrotHungerBars",
-        "GoldenCarrotHungerBars",
-        "PotatoHungerBars",
-        "BakedPotatoHungerBars",
-        "PoisonousPotatoHungerBars",
-        "BeetrootHungerBars",
-        "DriedKelpHungerBars",
-        "BeefHungerBars",
-        "PorkchopHungerBars",
-        "MuttonHungerBars",
-        "ChickenHungerBars",
-        "RabbitHungerBars",
-        "CodHungerBars",
-        "SalmonHungerBars",
-        "TropicalFishHungerBars",
-        "PufferfishHungerBars",
-        "BreadHungerBars",
-        "CookieHungerBars",
-        "CakeHungerBars",
-        "PumpkinPieHungerBars",
-        "RottenFleshHungerBars",
-        "SpiderEyeHungerBars",
-        "MushroomStewHungerBars",
-        "BeetrootSoupHungerBars",
-        "RabbitStewHungerBars",
-        "SuspiciousStewHungerBars",
-        "HoneyHungerBars"
-      ]
+      "pack_description": "Displays hunger bar icons on all food names to show how much it will fill you up."
     },
     {
       "pack_id": "MusicDiscRedstoneLevelPreview",
@@ -133,8 +88,7 @@
         "MagentaSlime",
         "PinkSlime",
         "RainbowSlime"
-      ],
-      "compatibility": ["PistonInnerFix"]
+      ]
     },
     {
       "pack_id": "CleanRedstoneDust",
@@ -185,8 +139,7 @@
     {
       "pack_id": "UnlitRedstoneOre",
       "pack_name": "Unlit Redstone Ore",
-      "pack_description": "Makes unlit Redstone Ore use the same palette as unlit Redstone Wire until its lit, when it then returns to its default, bright red colour.",
-      "compatibility": ["UniformOres", "OreBorders", "ClassicOres"]
+      "pack_description": "Makes unlit Redstone Ore use the same palette as unlit Redstone Wire until its lit, when it then returns to its default, bright red colour."
     },
     {
       "pack_id": "FullHoneyStage",

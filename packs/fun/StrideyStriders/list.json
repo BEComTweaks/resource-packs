@@ -1,0 +1,7 @@
+[
+  "models/entity/strider.geo.json",
+  "textures/entity/strider/strider.png",
+  "textures/entity/strider/strider_saddled.png",
+  "textures/entity/strider/strider_suffocated.png",
+  "textures/entity/strider/strider_suffocated_saddled.png"
+]

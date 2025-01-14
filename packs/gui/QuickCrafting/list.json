@@ -1,0 +1,11 @@
+[
+  "textures/ui/quick_craft.png",
+  "ui/_ui_defs.json",
+  "ui/inventory_screen.json",
+  "ui/inventory_screen_pocket.json",
+  "ui/stonecutter_screen.json",
+  "ui/stonecutter_screen_pocket.json",
+  "ui/trade_2_screen.json",
+  "ui/trade_2_screen_pocket.json",
+  "uibt/quick_crafting.ui"
+]

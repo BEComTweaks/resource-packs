@@ -67,8 +67,7 @@
       "pack_id": "DungeonsStone",
       "pack_name": "Dungeons Stone",
       "pack_description": "Gives Stone its texture from Minecraft: Dungeons (with 12 texture variants).",
-      "conflict": ["VariatedStone"],
-      "compatibility": ["OreBorders", "VisualInfestedStoneItems"]
+      "conflict": ["VariatedStone"]
     },
     {
       "pack_id": "DungeonsTerracotta",

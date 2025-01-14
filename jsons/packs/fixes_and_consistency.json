@@ -4,8 +4,7 @@
     {
       "pack_id": "UpdatedObserverTexture",
       "pack_name": "Updated Observer Texture",
-      "pack_description": "Changes the Observer's top texture to fit in-line with the 1.14 default textures, as it was left out in that update.",
-      "compatibility": ["DirectionalObservers"]
+      "pack_description": "Changes the Observer's top texture to fit in-line with the 1.14 default textures, as it was left out in that update."
     },
     {
       "pack_id": "ConsistentBlankDecoratedPot",
@@ -70,8 +69,7 @@
         "MagentaSlime",
         "PinkSlime",
         "RainbowSlime"
-      ],
-      "compatibility": ["StickyPistonSides"]
+      ]
     },
     {
       "pack_id": "SmokerBottomFix",
@@ -106,14 +104,12 @@
     {
       "pack_id": "PixelConsistentWither",
       "pack_name": "Pixel Consistent Wither",
-      "pack_description": "Retextures the Wither's texture to be consistent with its size.",
-      "compatibility": ["WitherBee"]
+      "pack_description": "Retextures the Wither's texture to be consistent with its size."
     },
     {
       "pack_id": "PixelConsistentSigns",
       "pack_name": "Pixel Consistent Signs",
-      "pack_description": "Retextures all sign textures to be consistent with their size.",
-      "compatibility": ["SmootherWarpedPlanks"]
+      "pack_description": "Retextures all sign textures to be consistent with their size."
     },
     {
       "pack_id": "PixelConsistentExperienceOrbs",
@@ -123,8 +119,7 @@
     {
       "pack_id": "PixelConsistentBeaconBeam",
       "pack_name": "Pixel Consistent Beacon Beam",
-      "pack_description": "Retextures Beacon and End Gateway beam's textures to be consistent with their sizes.",
-      "compatibility": ["BaconBeam"]
+      "pack_description": "Retextures Beacon and End Gateway beam's textures to be consistent with their sizes."
     },
     {
       "pack_id": "PixelConsistentSonicBoom",
@@ -139,8 +134,7 @@
     {
       "pack_id": "SoulSoilSoulCampfire",
       "pack_name": "Soul Soil Soul Campfire",
-      "pack_description": "Replaces the Soul Campfire's 'ash' texture with Soul Soil for consistency.",
-      "compatibility": ["AshlessCampfires"]
+      "pack_description": "Replaces the Soul Campfire's 'ash' texture with Soul Soil for consistency."
     },
     {
       "pack_id": "NicerFastLeaves",
@@ -150,8 +144,7 @@
     {
       "pack_id": "ConsistentHelmets",
       "pack_name": "Consistent Helmets",
-      "pack_description": "Adds nose-pieces to the helmet items that are missing them (iron, gold & diamond).",
-      "compatibility": ["ClassicStyleNetheriteArmor", "GoldenCrown"]
+      "pack_description": "Adds nose-pieces to the helmet items that are missing them (iron, gold & diamond)."
     },
     {
       "pack_id": "ConsistentSmoothStone",
@@ -161,14 +154,12 @@
     {
       "pack_id": "ConsistentBambooPlanks",
       "pack_name": "Consistent Bamboo Planks",
-      "pack_description": "Makes Bamboo Planks and Bamboo Mosaics match the textures of the other plank types.",
-      "compatibility": ["VariatedPlanks", "OldPlanks"]
+      "pack_description": "Makes Bamboo Planks and Bamboo Mosaics match the textures of the other plank types."
     },
     {
       "pack_id": "AccurateScaffolding",
       "pack_name": "Accurate Scaffolding",
-      "pack_description": "Recolors Scaffolding to use Bamboo and String colors to reflect its crafting recipe.",
-      "compatibility": ["UnobtrusiveScaffolding"]
+      "pack_description": "Recolors Scaffolding to use Bamboo and String colors to reflect its crafting recipe."
     },
     {
       "pack_id": "BrewingStandIconsFix",

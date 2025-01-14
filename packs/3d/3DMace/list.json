@@ -1,0 +1,7 @@
+[
+  "animations/mace.animation.json",
+  "attachables/mace.attachable.json",
+  "models/entity/mace.geo.json",
+  "textures/items/mace.png",
+  "textures/models/mace.png"
+]

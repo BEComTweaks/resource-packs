@@ -1,0 +1,19 @@
+[
+  "texts/en_GB.lang",
+  "texts/en_US.lang",
+  "textures/ui/brewing_guide/down_arrow.png",
+  "textures/ui/brewing_guide/effects.png",
+  "textures/ui/brewing_guide/health_minus.png",
+  "textures/ui/brewing_guide/health_plus.png",
+  "textures/ui/brewing_guide/ii.png",
+  "textures/ui/brewing_guide/left_arrow.png",
+  "textures/ui/brewing_guide/plus.png",
+  "textures/ui/brewing_guide/right_arrow.png",
+  "textures/ui/brewing_guide/slime_block.png",
+  "textures/ui/brewing_guide/slowness_resistance.png",
+  "textures/ui/brewing_guide/stone.png",
+  "ui/_ui_defs.json",
+  "ui/brewing_stand_screen.json",
+  "uibt/brewing_guide.ui",
+  "uibt/brewing_icons.ui"
+]

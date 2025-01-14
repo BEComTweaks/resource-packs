@@ -3,10 +3,10 @@
   "Terrain": [],
   "Variation": [],
   "Peace and Quiet": [],
-  "Utility": ["BetterBottoms"],
+  "Utility": [],
   "Unobtrusive": [],
   "3D": [],
-  "GUI": ["TransparentUI", "HighContrastUI"],
+  "GUI": [],
   "Menu Panoramas": [],
   "Retro": [],
   "Fun": [],
@@ -24,7 +24,7 @@
   "Hunger Bars": [],
   "Hotbar Selector": [],
   "Xisuma's Hermitcraft Bases": [],
-  "Colorful Slime": ["RainbowSlime"],
+  "Colorful Slime": [],
   "Elytra": [],
   "Enchantment Glints": []
 }

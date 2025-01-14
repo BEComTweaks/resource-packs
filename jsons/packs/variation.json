@@ -4,8 +4,7 @@
     {
       "pack_id": "VariatedDirt",
       "pack_name": "Variated Dirt",
-      "pack_description": "Dirt will be randomized using a selection of 16 textures.",
-      "compatibility": ["PebblelessDirt", "PebblelessCoarseDirt"]
+      "pack_description": "Dirt will be randomized using a selection of 16 textures."
     },
     {
       "pack_id": "VariatedGrass",
@@ -57,15 +56,13 @@
     {
       "pack_id": "VariatedPlanks",
       "pack_name": "Variated Planks",
-      "pack_description": "All planks will be randomized using a selection of 16 textures.",
-      "compatibility": ["ConsistentBambooPlanks", "OldPlanks"]
+      "pack_description": "All planks will be randomized using a selection of 16 textures."
     },
     {
       "pack_id": "VariatedStone",
       "pack_name": "Variated Stone",
       "pack_description": "Stone will be randomized using a selection of 16 textures.",
-      "conflict": ["DungeonsStone"],
-      "compatibility": ["VariatedUnpolishedStones"]
+      "conflict": ["DungeonsStone"]
     },
     {
       "pack_id": "VariatedTerracotta",
@@ -77,8 +74,7 @@
       "pack_id": "VariatedUnpolishedStones",
       "pack_name": "Variated Unpolished Stones",
       "pack_description": "Unpolished Stones will be randomized using a selection of 16 textures.",
-      "conflict": ["SmootherStones"],
-      "compatibility": ["VariatedStone"]
+      "conflict": ["SmootherStones"]
     },
     {
       "pack_id": "VariatedBookshelves",

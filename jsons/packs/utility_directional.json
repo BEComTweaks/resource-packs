@@ -10,8 +10,7 @@
     {
       "pack_id": "DirectionalObservers",
       "pack_name": "Directional Observers",
-      "pack_description": "Gives Observers arrows all around to indicate which direction they are facing and display updates.",
-      "compatibility": ["UpdatedObserverTexture"]
+      "pack_description": "Gives Observers arrows all around to indicate which direction they are facing and display updates."
     },
     {
       "pack_id": "DirectionalCalibratedSculkSensors",

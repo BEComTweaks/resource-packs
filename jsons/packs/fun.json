@@ -4,14 +4,12 @@
     {
       "pack_id": "SmileyAxolotls",
       "pack_name": "Smiley Axolotls",
-      "pack_description": "Gives Axolotls a smiley face :).",
-      "compatibility": ["GreenAxolotl"]
+      "pack_description": "Gives Axolotls a smiley face :)."
     },
     {
       "pack_id": "GreenAxolotl",
       "pack_name": "Green Axolotl",
-      "pack_description": "Replaces the rare blue variant of the Axolotl with the unused green Axolotl skin.",
-      "compatibility": ["SmileyAxolotls"]
+      "pack_description": "Replaces the rare blue variant of the Axolotl with the unused green Axolotl skin."
     },
     {
       "pack_id": "Beeralis",
@@ -64,14 +62,12 @@
       "pack_id": "EmeraldstoRubies",
       "pack_name": "Emeralds to Rubies",
       "pack_description": "Replace all Emerald items and blocks with Rubies!",
-      "conflict": ["LegacyConsoleEmerald"],
-      "compatibility": ["UniformOres", "ClassicOres", "OreBorders"]
+      "conflict": ["LegacyConsoleEmerald"]
     },
     {
       "pack_id": "WitherBee",
       "pack_name": "Wither Bee",
-      "pack_description": "Changes the Wither Boss texture to a Bee.",
-      "compatibility": ["PixelConsistentWither"]
+      "pack_description": "Changes the Wither Boss texture to a Bee."
     },
     {
       "pack_id": "ilmangoGoldenApples",
@@ -93,8 +89,7 @@
     {
       "pack_id": "BaconBeam",
       "pack_name": "Bacon Beam",
-      "pack_description": "Adds the almighty Baacon Beam to beacons! All hail the Bacon Beam!",
-      "compatibility": ["PixelConsistentBeaconBeam"]
+      "pack_description": "Adds the almighty Baacon Beam to beacons! All hail the Bacon Beam!"
     },
     {
       "pack_id": "PhantomRain",
@@ -116,8 +111,7 @@
       "pack_id": "UselessSpyglass",
       "pack_name": "Useless Spyglass",
       "pack_description": "Reverses the Spyglass overlay, making the middle opaque and the sides transparent. It's useless, what did you expect?.",
-      "conflict": ["TransparentSpyglassOverlay", "NoSpyglassOverlay", "WHAT"],
-      "compatibility": ["AccurateSpyglass"]
+      "conflict": ["TransparentSpyglassOverlay", "NoSpyglassOverlay", "WHAT"]
     },
     {
       "pack_id": "ScreamingGoatsMeme",

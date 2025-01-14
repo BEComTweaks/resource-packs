@@ -1,0 +1,15 @@
+[
+  "blocks.json",
+  "textures/blocks/calibrated_sculk_sensor_bottom_e.png",
+  "textures/blocks/calibrated_sculk_sensor_bottom_n.png",
+  "textures/blocks/calibrated_sculk_sensor_bottom_s.png",
+  "textures/blocks/calibrated_sculk_sensor_bottom_w.png",
+  "textures/blocks/calibrated_sculk_sensor_input_side.png",
+  "textures/blocks/calibrated_sculk_sensor_side_e.png",
+  "textures/blocks/calibrated_sculk_sensor_side_n.png",
+  "textures/blocks/calibrated_sculk_sensor_side_w.png",
+  "textures/blocks/calibrated_sculk_sensor_tendril_active.png",
+  "textures/blocks/calibrated_sculk_sensor_tendril_inactive.png",
+  "textures/blocks/calibrated_sculk_sensor_top.png",
+  "textures/terrain_texture.json"
+]

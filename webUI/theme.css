@@ -489,6 +489,10 @@ select {
   z-index: 13;
 }
 
+[class$="category"] {
+  position: relative;
+}
+
 .category-label-selectall {
   background-color: #00000000;
   border-color: #00000000;
@@ -498,7 +502,7 @@ select {
   height: 30px;
   opacity: 0;
   position: absolute;
-  right: 30px;
+  right: 12.5px;
   transform: translateY(-108%);
   width: 30px;
   &.sub {

@@ -1,0 +1,17 @@
+[
+  "blocks.json",
+  "textures/blocks/acacia_button.png",
+  "textures/blocks/bamboo_button.png",
+  "textures/blocks/birch_button.png",
+  "textures/blocks/cherry_button.png",
+  "textures/blocks/crimson_button.png",
+  "textures/blocks/dark_oak_button.png",
+  "textures/blocks/jungle_button.png",
+  "textures/blocks/mangrove_button.png",
+  "textures/blocks/polished_blackstone_button.png",
+  "textures/blocks/spruce_button.png",
+  "textures/blocks/stone_button.png",
+  "textures/blocks/warped_button.png",
+  "textures/blocks/wooden_button.png",
+  "textures/terrain_texture.json"
+]
