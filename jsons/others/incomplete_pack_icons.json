@@ -1,27 +1,15 @@
 {
   "Aesthetic": [],
   "Terrain": [],
-  "Variation": [
-    "VariatedVillagers"
-  ],
+  "Variation": ["VariatedVillagers"],
   "Peace and Quiet": [],
-  "Utility": [
-    "NoteBlockPitchParticle",
-    "BetterBottoms"
-  ],
+  "Utility": ["NoteBlockPitchParticle", "BetterBottoms"],
   "Unobtrusive": [],
   "3D": [],
-  "GUI": [
-    "TransparentUI",
-    "HighContrastUI"
-  ],
+  "GUI": ["TransparentUI", "HighContrastUI"],
   "Menu Panoramas": [],
-  "Retro": [
-    "OldPotionColors"
-  ],
-  "Fun": [
-    "AnvilFallingSoundtoMetalPipe"
-  ],
+  "Retro": ["OldPotionColors"],
+  "Fun": ["AnvilFallingSoundtoMetalPipe"],
   "World of Color": [],
   "Parity": [],
   "Fixes and Consistency": [],
@@ -36,9 +24,7 @@
   "Hunger Bars": [],
   "Hotbar Selector": [],
   "Xisuma's Hermitcraft Bases": [],
-  "Colorful Slime": [
-    "RainbowSlime"
-  ],
+  "Colorful Slime": ["RainbowSlime"],
   "Elytra": [],
   "Enchantment Glints": []
 }
