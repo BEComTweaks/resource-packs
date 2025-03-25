@@ -76,7 +76,7 @@ if not args.no_stash:
         print(f"[green]Stashed changes!")
 
 # Counts Packs and Compatibilities
-if "site" not in args.build or ("site" in args.build and (args.only_update_html or args.only_update_jsons or args.format)):
+if "site" not in args.build or ("site" in args.build and (args.only_update_html or args.only_update_jsons or args.format or "pack" in args.build)):
     print(f"[yellow]Going through packs...")
     id_to_name = {}
     for j in cat_list:
@@ -234,7 +234,7 @@ if "site" not in args.build or ("site" in args.build and (args.only_update_html 
             if "\t" in cat_list[indexoforigj + 1] or "    " in cat_list[indexoforigj + 1]:
                 html += cat_end_w_subcat_no_end
                 try:
-                    if "\t" in cat_list[indexoforigj + 1] or "    " in cat_list[indexoforigj + 1]:
+                    if not ("\t" in cat_list[indexoforigj + 2] or "    " in cat_list[indexoforigj + 2]):
                         html += category_end
                 except IndexError:
                     pass
