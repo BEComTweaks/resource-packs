@@ -1,30 +1,58 @@
-import os, sys, importlib, time, traceback, urllib.parse
-from subprocess import run, CalledProcessError
+import os, traceback, sys, stat
+from subprocess import run as sp_run
+from importlib import import_module
+from typing import Union
 
-def check(module, module_name=""):
+
+def sendToCF(main_args): #send vars from main to custom_functions
+    global args
+    args = main_args
+    if args.dev:
+        global print
+        print = console.log
+
+def run(cmd: Union[str, list], quiet=False, exit_on_error=True):
+    if isinstance(cmd, list):
+        print(f"[white]> [orchid]{' '.join(cmd)}")
+    else:
+        print(f"[white]> [orchid]{cmd}")
+    output = sp_run(cmd, shell=True, capture_output=True, text=True)
     try:
-        importlib.import_module(module)
-    except ModuleNotFoundError:
-        print(f"{module} is not installed!")
-        try:
-            if module_name == "":
-                print(f"Installing {module}...")
-                run([sys.executable, "-m", "pip", "install", module, "--quiet"], check=True)
+        if not args.quiet:
+            if output.returncode == 0:
+                if not quiet:
+                    for line in output.stdout.split("\n"):
+                        print(f"  {line}")
+                    return output
             else:
-                print(f"Installing {module_name}...")
-                run([sys.executable, "-m", "pip", "install", module_name, "--quiet"], check=True)
-            print(f"Installed {module}!")
-        except CalledProcessError:
-            print(f"Failed to install {module}!")
-            exit(1)
-        time.sleep(1)
+                for line in output.stdout.split("\n"):
+                    print(f"  [red]{line}")
+                for line in output.stderr.split("\n"):
+                    print(f"  [bright_red]{line}")
+                if exit_on_error:
+                    exit(1)
+                else: return output
+    except UnboundLocalError or NameError:
+        if output.returncode == 0:
+            if not quiet:
+                for line in output.stdout.split("\n"):
+                    print(f"  {line}")
+                return output
+        else:
+            for line in output.stdout.split("\n"):
+                print(f"  [red]{line}")
+            for line in output.stderr.split("\n"):
+                print(f"  [bright_red]{line}")
+            if exit_on_error:
+                exit(1)
+            else: return output
 
+from rich import print
+from rich.console import Console
+console = Console()
 
-check("clrprint")
-from clrprint import clrprint
-
-check("ujson")
 from ujson import *
+
 
 # For module to be easy to use and not require
 # the start of the program to be cluttered
@@ -35,7 +63,7 @@ if currentdir[-3:] == "pys":
 
 # Yeah...
 def cdir():
-    return currentdir
+    return str(currentdir)
 
 
 # Clears terminal screen
@@ -54,8 +82,8 @@ def load_json(path):
         try:
             return loads(file.read())
         except JSONDecodeError:
-            clrprint(f"\n{path} got a JSON Decode Error", clr="red")
-            clrprint(traceback.format_exc(), clr="yellow")
+            print(f"[red]\n{path} got a JSON Decode Error")
+            print(f"[red]{traceback.format_exc()}")
             exit()
 
 
@@ -66,40 +94,8 @@ def dump_json(path, dictionary):
     with open(path, "w") as file:
         file.write(the_json)
 
-
-# Uses a progressive searching algorithm to match an input
-def prog_search(string: str, list_search: list):
-    # Makes both lower to make life easier
-    string = string.lower()
-    temp_list = []
-    for i in list_search:
-        temp_list.append(i.lower())
-    list_search = temp_list
-    i, found, found_at = 0, 0, 0
-    for i in range(1, len(string)):
-        found = 0
-        found_at = 0
-        for s in range(0, len(list_search)):
-            try:
-                if string[:i] in list_search[s]:
-                    # First n letters of item in list_search
-                    # matches with any specific phrase in the
-                    # string
-                    found += 1
-                    if found == 1:
-                        found_at = s
-                # When more than two have been found_at
-                # Exists to prevent searching for too
-                # long
-                if found == 2:
-                    break
-            # Some items in the list are too small,
-            # so fail safe
-            except IndexError:
-                pass
-        # There is something that matches
-        if found == 1:
-            return found_at
-    # There isn't anything that matches
-    if found != 1:
-        return None
+def remove_readonly(func, path, _):
+    if args.dev:
+        print(f"---> [bright_red]Removing readonly attribute from {os.path.relpath(path, cdir())}")
+    os.chmod(path, stat.S_IWRITE)
+    func(path)

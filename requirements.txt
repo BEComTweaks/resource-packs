@@ -1,0 +1,11 @@
+rich
+ujson
+markdown
+lzstring
+soupsieve
+typing-extensions
+beautifulsoup4
+charset-normalizer
+urllib3
+requests
+future

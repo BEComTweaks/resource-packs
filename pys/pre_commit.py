@@ -10,13 +10,9 @@ if str(os.getcwd()).endswith("system32"):
     os.chdir(os.path.dirname(os.path.realpath(__file__)))
 
 from custom_functions import *
-check("clrprint")
-from clrprint import clrprint
-check("markdown")
+from custom_functions import console
 from markdown import markdown
-check("bs4","beautifulsoup4")
 from bs4 import BeautifulSoup
-check("lzstring")
 from lzstring import LZString
 
 category_start = '<div class="category"><div oreui-type="button" oreui-color="dark" class="category-label" onclick="OreUI.toggleActive(this);toggleCategory(this);">topic_name</div><button class="category-label-selectall" onclick="selectAll(this)" data-allpacks="<all_packs>" data-category="topic_name"><img src="images/select-all-button/chiseled_bookshelf_empty.png" class="category-label-selectall-img"><div class="category-label-selectall-hovertext">Select All</div></button><div class="category-controlled" oreui-color="dark" oreui-type="general"><div class="tweaks">'
@@ -52,30 +48,46 @@ with open(f"{cdir()}/jsons/others/pack_order_list.txt","r") as pol:
 
 parser = argparse.ArgumentParser(description='Run a massive script that updates Packs to-do, Icons to-do, Compatibilities to-do and the HTML')
 parser.add_argument('--format', '-f', action='store_true', help='Include flag to format files')
-parser.add_argument('--only-update-html', '-ouh', action='store_true', help='Only update the HTML')
-parser.add_argument('--only-update-jsons', '-ouj', action='store_true', help='Only update the JSONs')
-parser.add_argument('--build', '-b', help='Builds stuff')
-parser.add_argument('--log-error', '-el', action='store_true', help='Prints out errors')
+parser.add_argument('--only-update-html', '-html', action='store_true', help='Only update the HTML')
+parser.add_argument('--only-update-jsons', '-json', action='store_true', help='Only update the JSONs')
+parser.add_argument('--build', '-b', help='Builds stuff based on specification. Can be "pack", "site", "both" or "server"')
+parser.add_argument('--update-theme', '-u', action='store_true', help='Pulls the theme used for the website from the resource-packs repository')
 parser.add_argument('--no-stash', '-ns', action='store_true', help='Does not stash changes')
+parser.add_argument('--quiet', '-q', action='store_true', help='Quieten outputs of run statements (the commands will still be shown)')
+parser.add_argument('--dev', '-d', action='store_true', help='Show time and lines of each print statement')
 args = parser.parse_args()
-if args.build == None:
+
+if args.build == "both":
+    args.build = "packsite"
+elif args.build == "server":
+    args.build = "packsite server"
+elif args.build == None:
     args.build = ""
 
+if args.dev:
+    print = console.log
+
+sendToCF(args)
+
 if not args.no_stash:
-    clrprint("Stashing changes...", clr="yellow")
-    os.system('git stash --quiet --include-untracked --message "Stashed changes before pre-commit"')
-    os.system('git stash apply --quiet')
-    clrprint("Stashed changes!", clr="green")
+    with console.status("[bold yellow]Stashing changes..."):
+        run('git stash --include-untracked --message "Stashed changes before pre-commit"', quiet=True)
+        run('git stash apply', quiet=True)
+        print(f"[green]Stashed changes!")
 
 # Counts Packs and Compatibilities
-if not "site" in args.build or (args.build and (args.only_update_html or args.only_update_jsons or args.format)):
-    clrprint("Going through Packs...", clr="yellow")
+if "site" not in args.build or ("site" in args.build and (args.only_update_html or args.only_update_jsons or args.format)):
+    print(f"[yellow]Going through packs...")
     id_to_name = {}
     for j in cat_list:
         origj = j
         if not ignore:
             file = load_json(f"{cdir()}/jsons/packs/{j}")
             name_to_json[file["topic"]] = j
+            try:
+                category_loc = f'{cdir()}/packs/{file["location"]}'
+            except KeyError:
+                category_loc = f'{cdir()}/packs/{file["topic"].lower()}'
             # Adds the categories automatically
             incomplete_pkics[file["topic"]] = []
             incomplete_packs[file["topic"]] = []
@@ -83,36 +95,62 @@ if not "site" in args.build or (args.build and (args.only_update_html or args.on
             current_category_packs = { "raw": [] }
             # Runs through the packs
             for i in range(len(file["packs"])):
-                # Build if neccessary
-                if "pack" in args.build:
-                    try:
-                        clrprint("Building", file["packs"][i]["pack_id"], "with", file["packs"][i]["build"]["with"], clr="y,b,y,b")
-                        os.chdir(f'{cdir()}/packs/{file["topic"].lower()}/{file["packs"][i]["pack_id"]}/')
-                        os.system(f'{file["packs"][i]["build"]["with"]} {file["packs"][i]["build"]["script"]}')
-                    except KeyError:
-                        pass # no need to build
-                    # Updates Incomplete Packs
+                # Build first
+                if "regolith" in file["packs"][i] and "pack" in args.build:
+                    print(f"-> [cyan]Building {file['packs'][i]['pack_id']}")
+                    os.chdir(f'{category_loc}/{file["packs"][i]["pack_id"]}')
+                    # install filters
+                    run("regolith install-all", quiet=True)
+                    # check for previous builds
+                    if os.path.exists(f'{category_loc}/{file["packs"][i]["pack_id"]}/files'):
+                        print(f"--> [yellow]Purging previous build...")
+                        shutil.rmtree(f'{category_loc}/{file["packs"][i]["pack_id"]}/files', onerror=remove_readonly)
+                    if os.path.exists(f'{category_loc}/{file["packs"][i]["pack_id"]}/build'):
+                        print(f"--> [yellow]Purging previous incomplete build...")
+                        shutil.rmtree(f'{category_loc}/{file["packs"][i]["pack_id"]}/build', onerror=remove_readonly)
+                    run(f"regolith run build {"--experiments size_time_check" if "server" in args.build else ""}", quiet=True)
+                    # Check for .gitkeep and fix folder naming
+                    if os.path.exists("build"):
+                        print(f"--> [yellow]Fixing build folder...")
+                        build_dir = f"{category_loc}/{file["packs"][i]["pack_id"]}/build"
+                        for folder in os.listdir("build"):
+                            if folder.endswith("_bp"):
+                                # This _is_ the behaviour pack repo, so there shouldn't
+                                # be a .gitkeep here, but this is for easy copy-pasting
+                                # to other repos
+                                if ".gitkeep" in os.listdir(f"build/{folder}"):
+                                    shutil.rmtree(f"build/{folder}", onerror=remove_readonly)
+                                else:
+                                    os.rename(f"{build_dir}/{folder}", f"{build_dir}/bp")
+                            elif folder.endswith("_rp"):
+                                if ".gitkeep" in os.listdir(f"build/{folder}"):
+                                    shutil.rmtree(f"build/{folder}", onerror=remove_readonly)
+                                else:
+                                    os.rename(f"{build_dir}/{folder}", f"{build_dir}/rp")
+                            else:
+                                print(f"[red]Unknown folder found in {os.path.relpath(os.getcwd(), cdir())}/build/: [yellow]{folder}")
+                        # now move to proper folder
+                    os.chdir(cdir())
+                # Updates Incomplete Packs
                 try:
-                    if os.listdir(f'{cdir()}/packs/{file["topic"].lower()}/{file["packs"][i]["pack_id"]}/files') == []:
+                    if os.listdir(f'{category_loc}/{file["packs"][i]["pack_id"]}/files') == []:
                         # Adds the packid to the topic list
                         incomplete_packs[file["topic"]].append(file["packs"][i]["pack_id"])
                         stats[1] += 1
-                        if args.log_error:
-                            clrprint("[packs]", "Incomplete Pack:", file["packs"][i]["pack_id"], clr="r,w,y")
+                        print(f"[red]Incomplete Pack: [yellow]{file['packs'][i]['pack_id']}")
                     else:
                         # When the packid directory has stuff inside
                         stats[0] += 1
                 except FileNotFoundError:
                     # If the packs don't even exist
                     stats[1] += 1
-                    if args.log_error:
-                        clrprint("[packs]", "Incomplete Pack:", file["packs"][i]["pack_id"], clr="r,w,y")
+                    print(f"[red]Incomplete Pack: [yellow]{file['packs'][i]['pack_id']}")
 
                 # Updates Incomplete pack_icon.png
                 try:
                     if file["packs"][i]["pack_id"] in incomplete_packs[file["topic"]]:
                         pass
-                    elif os.path.getsize(f'{cdir()}/packs/{file["topic"].lower()}/{file["packs"][i]["pack_id"]}/pack_icon.png') == os.path.getsize(f'{cdir()}/pack_icons/missing_texture.png'):
+                    elif os.path.getsize(f'{category_loc}/{file["packs"][i]["pack_id"]}/pack_icon.png') == os.path.getsize(f'{cdir()}/pack_icons/missing_texture.png'):
                         # Adds packid to topic list
                         incomplete_pkics[file["topic"]].append(file["packs"][i]["pack_id"])
                         pkicstats[1] += 1
@@ -121,19 +159,15 @@ if not "site" in args.build or (args.build and (args.only_update_html or args.on
                         pkicstats[0] += 1
                 except FileNotFoundError:
                     try:
-                        if os.path.exists(f'{cdir()}/packs/{file["topic"].lower()}/{file["packs"][i]["pack_id"]}/pack_icon.{file["packs"][i]["icon"]}'):
+                        if os.path.exists(f'{category_loc}/{file["packs"][i]["pack_id"]}/pack_icon.{file["packs"][i]["icon"]}'):
                             pkicstats[0] += 1
                         else:
                             # When pack icon doesn't even exist
-                            incomplete_pkics[file["topic"]].append(file["packs"][i]["pack_id"])
-                            pkicstats[1] += 1
-                            if args.log_error:
-                                clrprint("[packs]", "[icon]", "Incomplete Pack:", file["packs"][i]["pack_id"], clr="r,b,w,y")
+                            raise KeyError # who cares
                     except KeyError:
                             incomplete_pkics[file["topic"]].append(file["packs"][i]["pack_id"])
                             pkicstats[1] += 1
-                            if args.log_error:
-                                clrprint("[packs]", "[icon]", "Incomplete Pack:", file["packs"][i]["pack_id"], clr="r,b,w,y")
+                            print(f"[red]Incomplete Pack Icon: [yellow]{file['packs'][i]['pack_id']}")
 
                 # Adds Pack Conflicts
                 conflicts[file["packs"][i]["pack_id"]] = []
@@ -182,9 +216,9 @@ if not "site" in args.build or (args.build and (args.only_update_html or args.on
                     except KeyError:
                         pass
                     to_add_pack = to_add_pack.replace("pack_description", desc)
-                    to_add_pack = to_add_pack.replace("relloctopackicon", f'packs/{file["topic"].lower()}/{file["packs"][i]["pack_id"]}/pack_icon.png')
+                    to_add_pack = to_add_pack.replace("relloctopackicon", os.path.relpath(f'{category_loc}/{file["packs"][i]["pack_id"]}/pack_icon.png', start=cdir()))
                     try:
-                        if os.path.exists(f'{cdir()}/packs/{file["topic"].lower()}/{file["packs"][i]["pack_id"]}/pack_icon.{file["packs"][i]["icon"]}'):
+                        if os.path.exists(f'{category_loc}/{file["packs"][i]["pack_id"]}/pack_icon.{file["packs"][i]["icon"]}'):
                             # Because I can't make the html use a missing texture thing, so
                             # it only replaces when it exists
                             to_add_pack = to_add_pack.replace("png", file["packs"][i]["icon"])
@@ -192,17 +226,6 @@ if not "site" in args.build or (args.build and (args.only_update_html or args.on
                         pass
                     html += to_add_pack
                     current_category_packs["raw"].append(file["packs"][i]["pack_id"])
-                    if not args.only_update_html:
-                        listjson = []
-                        for root, _, files in os.walk(f"{cdir()}/packs/{file["topic"].lower()}/{file["packs"][i]["pack_id"]}"):
-                            for lsfile in files:
-                                filepath = os.path.relpath(os.path.join(root, lsfile),f"{cdir()}/packs/{file["topic"].lower()}/{file["packs"][i]["pack_id"]}")
-                                if len(filepath.split(os.path.sep)) == 1:
-                                    continue
-                                else:
-                                    listjson.append("/".join(filepath.split(os.path.sep)[1:]))
-                                listjson.sort()
-                        dump_json(f"{cdir()}/packs/{file["topic"].lower()}/{file["packs"][i]["pack_id"]}/list.json", listjson)
                     id_to_name[file["packs"][i]["pack_id"]] = file["packs"][i]["pack_name"]
         html = html.replace("<all_packs>", LZString.compressToEncodedURIComponent(dumps(current_category_packs)))
         # handle subcategories
@@ -211,7 +234,7 @@ if not "site" in args.build or (args.build and (args.only_update_html or args.on
             if "\t" in cat_list[indexoforigj + 1] or "    " in cat_list[indexoforigj + 1]:
                 html += cat_end_w_subcat_no_end
                 try:
-                    if not ("\t" in cat_list[indexoforigj + 2] or "    " in cat_list[indexoforigj + 2]):
+                    if "\t" in cat_list[indexoforigj + 1] or "    " in cat_list[indexoforigj + 1]:
                         html += category_end
                 except IndexError:
                     pass
@@ -228,51 +251,78 @@ if not "site" in args.build or (args.build and (args.only_update_html or args.on
                 ignore = False
         except IndexError:
             html += category_end
-    
-    #"""
     # Seperate loop for subcategories (I'm inefficient)
     for j in range(len(subcat_list)):
         pack_html = ""
         k = subcat_list[j]
         file = load_json(f"{cdir()}/jsons/packs/{k}")
         name_to_json[file["topic"]] = k
+        try:
+            category_loc = f'{cdir()}/packs/{file["location"]}'
+        except KeyError:
+            category_loc = f'{cdir()}/packs/{file["topic"].lower()}'
         # Adds the categories automatically
         incomplete_pkics[file["topic"]] = []
         incomplete_packs[file["topic"]] = []
-        pack_html += subcategory_start.replace("<topic_name>", file["topic"]).replace("topic_name", f'{file["subcategory_of"]} > <b>{file["topic"]}</b>')
+        pack_html += subcategory_start.replace("<topic_name>",file["topic"]).replace("topic_name", f'{file["subcategory_of"]} > <b>{file["topic"]}</b>')
         current_category_packs = { "raw": [] }
         # Runs through the packs
         for i in range(len(file["packs"])):
-            # Build if neccessary
-            if "pack" in args.build:
-                try:
-                    clrprint("Building", file["packs"][i]["pack_id"], "with", file["packs"][i]["build"]["with"], clr="y,b,y,b")
-                    os.chdir(f'{cdir()}/packs/{file["topic"].lower()}/{file["packs"][i]["pack_id"]}/')
-                    os.system(f'{file["packs"][i]["build"]["with"]} {file["packs"][i]["build"]["script"]}')
-                except KeyError:
-                    pass # no need to build
-                # Updates Incomplete Packs
+            if "regolith" in file["packs"][i] and "pack" in args.build:
+                print(f"-> [cyan]Building {file['packs'][i]['pack_id']}")
+                os.chdir(f'{category_loc}/{file["packs"][i]["pack_id"]}')
+                # install filters
+                run("regolith install-all", quiet=True)
+                # check for previous builds
+                if os.path.exists(f'{category_loc}/{file["packs"][i]["pack_id"]}/files'):
+                    print(f"--> [yellow]Purging previous build...")
+                    shutil.rmtree(f'{category_loc}/{file["packs"][i]["pack_id"]}/files', onerror=remove_readonly)
+                if os.path.exists(f'{category_loc}/{file["packs"][i]["pack_id"]}/build'):
+                    print(f"--> [yellow]Purging previous incomplete build...")
+                    shutil.rmtree(f'{category_loc}/{file["packs"][i]["pack_id"]}/build', onerror=remove_readonly)
+                run(f"regolith run build {"--experiments size_time_check" if "server" in args.build else ""}", quiet=True)
+                # Check for .gitkeep and fix folder naming
+                if os.path.exists("build"):
+                    print(f"--> [yellow]Fixing build folder...")
+                    build_dir = f"{category_loc}/{file["packs"][i]["pack_id"]}/build"
+                    for folder in os.listdir("build"):
+                        if folder.endswith("_bp"):
+                            # This _is_ the behaviour pack repo, so there shouldn't
+                            # be a .gitkeep here, but this is for easy copy-pasting
+                            # to other repos
+                            if ".gitkeep" in os.listdir(f"build/{folder}"):
+                                shutil.rmtree(f"build/{folder}", onerror=remove_readonly)
+                            else:
+                                os.rename(f"{build_dir}/{folder}", f"{build_dir}/bp")
+                        elif folder.endswith("_rp"):
+                            if ".gitkeep" in os.listdir(f"build/{folder}"):
+                                shutil.rmtree(f"build/{folder}", onerror=remove_readonly)
+                            else:
+                                os.rename(f"{build_dir}/{folder}", f"{build_dir}/rp")
+                        else:
+                            print(f"[red]Unknown folder found in {os.path.relpath(os.getcwd(), cdir())}/build/: [yellow]{folder}")
+                    # now move to proper folder
+                os.chdir(cdir())
+            # Updates Incomplete Packs
             try:
-                if os.listdir(f'{cdir()}/packs/{file["topic"].lower()}/{file["packs"][i]["pack_id"]}/files') == []:
+                if os.listdir(f'{category_loc}/{file["packs"][i]["pack_id"]}/files') == []:
                     # Adds the packid to the topic list
                     incomplete_packs[file["topic"]].append(file["packs"][i]["pack_id"])
                     stats[1] += 1
-                    if args.log_error:
-                        clrprint("[packs]", "Incomplete Pack:", file["packs"][i]["pack_id"], clr="r,w,y")
+                    print(f"[red]Incomplete Pack: [yellow]{file['packs'][i]['pack_id']}")
                 else:
                     # When the packid directory has stuff inside
                     stats[0] += 1
             except FileNotFoundError:
                 # If the packs don't even exist
                 stats[1] += 1
-                if args.log_error:
-                    clrprint("[packs]", "Incomplete Pack:", file["packs"][i]["pack_id"], clr="r,w,y")
+                print(f"[red]Incomplete Pack: [yellow]{file['packs'][i]['pack_id']}")
 
             # Updates Incomplete pack_icon.png
             try:
                 if file["packs"][i]["pack_id"] in incomplete_packs[file["topic"]]:
                     pass
-                elif os.path.getsize(f'{cdir()}/packs/{file["topic"].lower()}/{file["packs"][i]["pack_id"]}/pack_icon.png') == os.path.getsize(f'{cdir()}/pack_icons/missing_texture.png'):
+                elif os.path.getsize(f'{category_loc}/{file["packs"][i]["pack_id"]}/pack_icon.png') == os.path.getsize(f'{cdir()}/pack_icons/missing_texture.png'):
                     # Adds packid to topic list
                     incomplete_pkics[file["topic"]].append(file["packs"][i]["pack_id"])
                     pkicstats[1] += 1
@@ -281,19 +331,15 @@ if not "site" in args.build or (args.build and (args.only_update_html or args.on
                     pkicstats[0] += 1
             except FileNotFoundError:
                 try:
-                    if os.path.exists(f'{cdir()}/packs/{file["topic"].lower()}/{file["packs"][i]["pack_id"]}/pack_icon.{file["packs"][i]["icon"]}'):
+                    if os.path.exists(f'{category_loc}/{file["packs"][i]["pack_id"]}/pack_icon.{file["packs"][i]["icon"]}'):
                         pkicstats[0] += 1
                     else:
                         # When pack icon doesn't even exist
-                        incomplete_pkics[file["topic"]].append(file["packs"][i]["pack_id"])
-                        pkicstats[1] += 1
-                        if args.log_error:
-                            clrprint("[packs]", "[icon]", "Incomplete Pack:", file["packs"][i]["pack_id"], clr="r,b,w,y")
+                        raise KeyError # who cares
                 except KeyError:
                         incomplete_pkics[file["topic"]].append(file["packs"][i]["pack_id"])
                         pkicstats[1] += 1
-                        if args.log_error:
-                            clrprint("[packs]", "[icon]", "Incomplete Pack:", file["packs"][i]["pack_id"], clr="r,b,w,y")
+                        print(f"[red]Incomplete Pack Icon: [yellow]{file['packs'][i]['pack_id']}")
 
             # Adds Pack Conflicts
             conflicts[file["packs"][i]["pack_id"]] = []
@@ -342,9 +388,9 @@ if not "site" in args.build or (args.build and (args.only_update_html or args.on
                 except KeyError:
                     pass
                 to_add_pack = to_add_pack.replace("pack_description", desc)
-                to_add_pack = to_add_pack.replace("relloctopackicon", f'packs/{file["topic"].lower()}/{file["packs"][i]["pack_id"]}/pack_icon.png')
+                to_add_pack = to_add_pack.replace("relloctopackicon", os.path.relpath(f'{category_loc}/{file["packs"][i]["pack_id"]}/pack_icon.png', start=cdir()))
                 try:
-                    if os.path.exists(f'{cdir()}/packs/{file["topic"].lower()}/{file["packs"][i]["pack_id"]}/pack_icon.{file["packs"][i]["icon"]}'):
+                    if os.path.exists(f'{category_loc}/{file["packs"][i]["pack_id"]}/pack_icon.{file["packs"][i]["icon"]}'):
                         # Because I can't make the html use a missing texture thing, so
                         # it only replaces when it exists
                         to_add_pack = to_add_pack.replace("png", file["packs"][i]["icon"])
@@ -352,50 +398,26 @@ if not "site" in args.build or (args.build and (args.only_update_html or args.on
                     pass
                 pack_html += to_add_pack
                 current_category_packs["raw"].append(file["packs"][i]["pack_id"])
-                if not args.only_update_html:
-                    listjson = []
-                    for root, _, files in os.walk(f"{cdir()}/packs/{file["topic"].lower()}/{file["packs"][i]["pack_id"]}"):
-                        for lsfile in files:
-                            filepath = os.path.relpath(os.path.join(root, lsfile),f"{cdir()}/packs/{file["topic"].lower()}/{file["packs"][i]["pack_id"]}")
-                            if len(filepath.split(os.path.sep)) == 1:
-                                continue
-                            else:
-                                listjson.append("/".join(filepath.split(os.path.sep)[1:]))
-                            listjson.sort()
-                    dump_json(f"{cdir()}/packs/{file["topic"].lower()}/{file["packs"][i]["pack_id"]}/list.json", listjson)
                 id_to_name[file["packs"][i]["pack_id"]] = file["packs"][i]["pack_name"]
         pack_html += category_end
         html = html.replace(f'<div class="subcat{j}"></div>',pack_html)
         html = html.replace("<all_packs>", LZString.compressToEncodedURIComponent(dumps(current_category_packs)))
-    #"""
     # compatibilities
     compatibilities = load_json(f"{cdir()}/jsons/packs/compatibilities.json")
     for ways in range(compatibilities["maxway"],1,-1):
         for location in compatibilities[f"{ways}way"]["locations"]:
             listjson = []
-            try:
-                for root, _, files in os.walk(f"{cdir()}/packs/{location}/files"):
-                    for lsfile in files:
-                        filepath = os.path.relpath(os.path.join(root, lsfile),f"{cdir()}/packs/{location}")
-                        if len(filepath.split(os.path.sep)) == 1:
-                            continue
-                        else:
-                            listjson.append("/".join(filepath.split(os.path.sep)[1:]))
-                        listjson.sort()
-                if len(listjson) == 0:
-                    raise FileNotFoundError
-                dump_json(f"{cdir()}/packs/{location}/list.json", listjson)
+            if os.path.exists(f"{cdir()}/packs/{location}"):
                 comp_stats[0] += 1
-            except FileNotFoundError:
-                if args.log_error:
-                    clrprint("[compatibilities]", "Incomplete Compatibility:", location, clr="r,w,y")
+            else:
+                print(f"[red]Incomplete Compatibility: [yellow]{location}")
                 comp_stats[1] += 1
                 try:
                     comps[f"{ways}way"].append(location)
                 except KeyError:
                     comps[f"{ways}way"] = [location]
 
-    clrprint("Did a lot of stuff", clr="green")
+    print(f"[green]Done!")
 
     # HTML formatting
     with open(f"{cdir()}/webUI/index.html.template", "r") as html_file:
@@ -407,7 +429,7 @@ if not "site" in args.build or (args.build and (args.only_update_html or args.on
     html = soup.prettify()
     html = html.replace("<br/>", "<br>")
     # Update files
-    clrprint("Updating files...", clr="yellow")
+    print(f"[yellow]Updating files...")
     if not args.only_update_html:
         dump_json(f"{cdir()}/jsons/others/incomplete_packs.json", incomplete_packs)
         dump_json(f"{cdir()}/jsons/others/incomplete_compatibilities.json", comps)
@@ -443,23 +465,36 @@ if not "site" in args.build or (args.build and (args.only_update_html or args.on
         else:
             # When the regex fails if I change the link
             raise IndexError("Regex Failed")
-    clrprint("Updated a lot of files!", clr="green")
+    # Used only for CTs and BPs because RP is main
+    try:
+      if args.update_theme:
+        print(f"[yellow]Updating theme.css...")
+        import requests
+        response = requests.get("https://becomtweaks.github.io/resource-packs/theme.css")
+        if response.status_code == 200:
+          with open(f"{cdir()}/webUI/theme.css","w") as theme:
+            theme.write(response.text)
+          print(f"[green]Updated theme.css!")
+    except requests.exceptions.ConnectionError:
+      print(f"[red]Get a working internet connection before rerunning with `-ut`/`--update-theme`")
+    print(f"[yellow]Updated files!")
 
     if args.format:
-        clrprint("Making files Prettier", clr="yellow")
-        os.system(f"cd {cdir()}")
+        print(f"[yellow]Making files Prettier\u2122")
+        os.chdir(cdir())
         try:
-            os.system('npx prettier --write "**/*.{js,ts,css,json}" --log-level silent')
+            run('npx prettier --write "**/*.{js,ts,css,json}"', quiet=True)
         except KeyboardInterrupt:
-            clrprint("You are a bit impatient...", clr="red")
-        clrprint("Files are Prettier!", clr="green")
+            print(f"---> [red]You are a bit impatient...")
+        print(f"[green]Files are Prettier!")
     elif not args.only_update_html:
-        clrprint("Remember to format the files!", clr="y")
+        print(f"[yellow]Remember to format the files!")
 
 if "site" in args.build:
-    clrprint("Make sure you built the HTML!", clr="y")
+    if not (args.only_update_html or args.only_update_jsons or args.format):
+        print(f"[bright_cyan] Make sure you built the HTML!")
     try:
-        shutil.rmtree(f"{cdir()}/build")
+        shutil.rmtree(f"{cdir()}/build", onerror=remove_readonly)
     except FileNotFoundError:
         pass
     try:
@@ -469,7 +504,7 @@ if "site" in args.build:
             content = file.read()
         with open(f"{cdir()}/build/index.html", "w") as file:
             file.write(content.replace("../", "https://raw.githubusercontent.com/BEComTweaks/resource-packs/main/"))
-        clrprint("Build success!", clr="g")
+        print(f"[bright_cyan]Website build success!")
     except Exception as e:
-        clrprint("Build failed!", clr="r")
-        clrprint(e, clr="y")
+        print(f"---> [red]Website build failed!")
+        print(e)

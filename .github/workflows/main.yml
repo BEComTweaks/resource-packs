@@ -24,7 +24,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.x'
+          python-version: "3.x"
 
       - name: Create Virtual Environment
         run: python -m venv venv
@@ -32,8 +32,13 @@ jobs:
       - name: Activate venv
         run: source venv/bin/activate
 
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
       - name: Run pre_commit.py
-        run: python pys/pre_commit.py --format
+        run: python pys/pre_commit.py --format --no-stash
 
       - name: Commit changes
         run: |
@@ -68,7 +73,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.x'
+          python-version: "3.x"
 
       - name: Create Virtual Environment
         run: python -m venv venv
@@ -77,7 +82,7 @@ jobs:
         run: source venv/bin/activate
 
       - name: Build
-        run: python pys/pre_commit.py --build
+        run: python pys/pre_commit.py --build "website" --no-stash
 
       - name: Replace server IP in JavaScript
         run: |
