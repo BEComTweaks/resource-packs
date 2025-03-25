@@ -7,18 +7,33 @@ from typing import Union
 def sendToCF(main_args): #send vars from main to custom_functions
     global args
     args = main_args
+    global print
     if args.dev:
-        global print
         print = console.log
+    else:
+        print = console.print
 
 def run(cmd: Union[str, list], quiet=False, exit_on_error=True):
     if isinstance(cmd, list):
-        print(f"[white]> [orchid]{' '.join(cmd)}")
-    else:
-        print(f"[white]> [orchid]{cmd}")
-    output = sp_run(cmd, shell=True, capture_output=True, text=True)
-    try:
-        if not args.quiet:
+        cmd = " ".join(cmd)
+    with console.status(f"[white]> [/white][yellow]{cmd}", spinner="bouncingBall"):
+        output = sp_run(cmd, shell=True, capture_output=True, text=True)
+        try:
+            if not args.quiet:
+                if output.returncode == 0:
+                    if not quiet:
+                        for line in output.stdout.split("\n"):
+                            print(f"  {line}")
+                        return output
+                else:
+                    for line in output.stdout.split("\n"):
+                        print(f"  [red]{line}")
+                    for line in output.stderr.split("\n"):
+                        print(f"  [bright_red]{line}")
+                    if exit_on_error:
+                        exit(1)
+                    else: return output
+        except UnboundLocalError or NameError:
             if output.returncode == 0:
                 if not quiet:
                     for line in output.stdout.split("\n"):
@@ -32,20 +47,6 @@ def run(cmd: Union[str, list], quiet=False, exit_on_error=True):
                 if exit_on_error:
                     exit(1)
                 else: return output
-    except UnboundLocalError or NameError:
-        if output.returncode == 0:
-            if not quiet:
-                for line in output.stdout.split("\n"):
-                    print(f"  {line}")
-                return output
-        else:
-            for line in output.stdout.split("\n"):
-                print(f"  [red]{line}")
-            for line in output.stderr.split("\n"):
-                print(f"  [bright_red]{line}")
-            if exit_on_error:
-                exit(1)
-            else: return output
 
 from rich import print
 from rich.console import Console

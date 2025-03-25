@@ -66,6 +66,8 @@ elif args.build == None:
 
 if args.dev:
     print = console.log
+else:
+    print = console.print
 
 sendToCF(args)
 
@@ -465,6 +467,8 @@ if "site" not in args.build or ("site" in args.build and (args.only_update_html 
         else:
             # When the regex fails if I change the link
             raise IndexError("Regex Failed")
+    print("[green]Updated!")
+    """
     # Used only for CTs and BPs because RP is main
     try:
       if args.update_theme:
@@ -478,6 +482,7 @@ if "site" not in args.build or ("site" in args.build and (args.only_update_html 
     except requests.exceptions.ConnectionError:
       print(f"[red]Get a working internet connection before rerunning with `-ut`/`--update-theme`")
     print(f"[yellow]Updated files!")
+    """
 
     if args.format:
         print(f"[yellow]Making files Prettier\u2122")
