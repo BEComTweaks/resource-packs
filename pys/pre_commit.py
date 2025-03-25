@@ -216,7 +216,7 @@ if "site" not in args.build or ("site" in args.build and (args.only_update_html 
                     except KeyError:
                         pass
                     to_add_pack = to_add_pack.replace("pack_description", desc)
-                    to_add_pack = to_add_pack.replace("relloctopackicon", os.path.relpath(f'{category_loc}/{file["packs"][i]["pack_id"]}/pack_icon.png', start=cdir()))
+                    to_add_pack = to_add_pack.replace("relloctopackicon", f"{os.path.relpath(f'{category_loc}/{file["packs"][i]["pack_id"]}/pack_icon.png', start=cdir())}".replace("\\","/"))
                     try:
                         if os.path.exists(f'{category_loc}/{file["packs"][i]["pack_id"]}/pack_icon.{file["packs"][i]["icon"]}'):
                             # Because I can't make the html use a missing texture thing, so
@@ -388,7 +388,7 @@ if "site" not in args.build or ("site" in args.build and (args.only_update_html 
                 except KeyError:
                     pass
                 to_add_pack = to_add_pack.replace("pack_description", desc)
-                to_add_pack = to_add_pack.replace("relloctopackicon", os.path.relpath(f'{category_loc}/{file["packs"][i]["pack_id"]}/pack_icon.png', start=cdir()))
+                to_add_pack = to_add_pack.replace("relloctopackicon", f"{os.path.relpath(f'{category_loc}/{file["packs"][i]["pack_id"]}/pack_icon.png', start=cdir())}".replace("\\","/"))
                 try:
                     if os.path.exists(f'{category_loc}/{file["packs"][i]["pack_id"]}/pack_icon.{file["packs"][i]["icon"]}'):
                         # Because I can't make the html use a missing texture thing, so
@@ -492,7 +492,7 @@ if "site" not in args.build or ("site" in args.build and (args.only_update_html 
 
 if "site" in args.build:
     if not (args.only_update_html or args.only_update_jsons or args.format):
-        print(f"[bright_cyan] Make sure you built the HTML!")
+        print(f"[bright_cyan]Make sure you built the HTML!")
     try:
         shutil.rmtree(f"{cdir()}/build", onerror=remove_readonly)
     except FileNotFoundError:
