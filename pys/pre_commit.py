@@ -55,6 +55,7 @@ parser.add_argument('--update-theme', '-u', action='store_true', help='Pulls the
 parser.add_argument('--no-stash', '-ns', action='store_true', help='Does not stash changes')
 parser.add_argument('--quiet', '-q', action='store_true', help='Quieten outputs of run statements (the commands will still be shown)')
 parser.add_argument('--dev', '-d', action='store_true', help='Show time and lines of each print statement')
+parser.add_argument('--no-spinner', action='store_true', help='Disables the spinner from rich')
 args = parser.parse_args()
 
 if args.build == "both":
@@ -71,8 +72,13 @@ else:
 
 sendToCF(args)
 
+if args.no_spinner:
+    spinner = emptySpinner
+else:
+    spinner = console.status
+
 if not args.no_stash:
-    with console.status("[bold yellow]Stashing changes..."):
+    with spinner("[bold yellow]Stashing changes..."):
         run('git stash --include-untracked --message "Stashed changes before pre-commit"', quiet=True)
         run('git stash apply', quiet=True)
         print(f"[green]Stashed changes!")

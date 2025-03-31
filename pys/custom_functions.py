@@ -4,19 +4,38 @@ from importlib import import_module
 from typing import Union
 
 
+class EmptySpinner:
+    def __init__(self, *objects, spinner="dots"):
+        self.objects = objects
+        self.spinner = spinner
+
+    def __enter__(self):
+        print(*self.objects)
+        return self
+
+    def __exit__(self, exc_type, exc_value, traceback):
+        pass
+
+emptySpinner = EmptySpinner
+
 def sendToCF(main_args): #send vars from main to custom_functions
     global args
     args = main_args
+    global spinner
     global print
     if args.dev:
         print = console.log
     else:
         print = console.print
+    if args.no_spinner:
+        spinner = emptySpinner
+    else:
+        spinner = console.status
 
 def run(cmd: Union[str, list], quiet=False, exit_on_error=True):
     if isinstance(cmd, list):
         cmd = " ".join(cmd)
-    with console.status(f"[white]> [/white][yellow]{cmd}", spinner="bouncingBall"):
+    with spinner(f"[white]> [/white][yellow]{cmd}", spinner="bouncingBall"):
         output = sp_run(cmd, shell=True, capture_output=True, text=True)
         try:
             if not args.quiet:
@@ -46,7 +65,8 @@ def run(cmd: Union[str, list], quiet=False, exit_on_error=True):
                     print(f"  [bright_red]{line}")
                 if exit_on_error:
                     exit(1)
-                else: return output
+                else:
+                    return output
 
 from rich import print
 from rich.console import Console
