@@ -51,7 +51,7 @@ parser.add_argument('--format', '-f', action='store_true', help='Include flag to
 parser.add_argument('--only-update-html', '-html', action='store_true', help='Only update the HTML')
 parser.add_argument('--only-update-jsons', '-json', action='store_true', help='Only update the JSONs')
 parser.add_argument('--build', '-b', help='Builds stuff based on specification. Can be "pack", "site", "both" or "server"')
-parser.add_argument('--update-theme', '-u', action='store_true', help='Pulls the theme used for the website from the resource-packs repository')
+# parser.add_argument('--update-theme', '-u', action='store_true', help='Pulls the theme used for the website from the resource-packs repository')
 parser.add_argument('--no-stash', '-ns', action='store_true', help='Does not stash changes')
 parser.add_argument('--quiet', '-q', action='store_true', help='Quieten outputs of run statements (the commands will still be shown)')
 parser.add_argument('--dev', '-d', action='store_true', help='Show time and lines of each print statement')
@@ -107,6 +107,11 @@ if "site" not in args.build or ("site" in args.build and (args.only_update_html 
                 if "regolith" in file["packs"][i] and "pack" in args.build:
                     print(f"-> [cyan]Building {file['packs'][i]['pack_id']}")
                     os.chdir(f'{category_loc}/{file["packs"][i]["pack_id"]}')
+                    print(f"--> [bright_yellow]Checking the config file...")
+                    regolith_config = load_json(f'{category_loc}/{file["packs"][i]["pack_id"]}/config.json')
+                    if regolith_config["regolith"]["profiles"]["build"]["export"]["readOnly"] == True:
+                        regolith_config["regolith"]["profiles"]["build"]["export"]["readOnly"] = False
+                    dump_json(f'{category_loc}/{file["packs"][i]["pack_id"]}/config.json', regolith_config)
                     # install filters
                     run("regolith install-all", quiet=True)
                     # check for previous builds
@@ -120,21 +125,25 @@ if "site" not in args.build or ("site" in args.build and (args.only_update_html 
                     # Check for .gitkeep and fix folder naming
                     if os.path.exists("build"):
                         print(f"--> [yellow]Fixing build folder...")
-                        build_dir = f"{category_loc}/{file["packs"][i]["pack_id"]}/build"
+                        build_dir = f"{category_loc}/{file["packs"][i]["pack_id"]}"
+                        try:
+                            os.mkdir(f"{build_dir}/files")
+                        except FileExistsError:
+                            print(f"--> [yellow]Why does {os.path.relpath(build_dir, cdir())}/files exist?")
                         for folder in os.listdir("build"):
-                            if folder.endswith("_bp"):
+                            if folder.endswith("bp"):
                                 # This _is_ the behaviour pack repo, so there shouldn't
                                 # be a .gitkeep here, but this is for easy copy-pasting
                                 # to other repos
                                 if ".gitkeep" in os.listdir(f"build/{folder}"):
                                     shutil.rmtree(f"build/{folder}", onerror=remove_readonly)
                                 else:
-                                    os.rename(f"{build_dir}/{folder}", f"{build_dir}/bp")
-                            elif folder.endswith("_rp"):
+                                    os.rename(f"{build_dir}/build/{folder}", f"{build_dir}/files/bp")
+                            elif folder.endswith("rp"):
                                 if ".gitkeep" in os.listdir(f"build/{folder}"):
                                     shutil.rmtree(f"build/{folder}", onerror=remove_readonly)
                                 else:
-                                    os.rename(f"{build_dir}/{folder}", f"{build_dir}/rp")
+                                    os.rename(f"{build_dir}/build/{folder}", f"{build_dir}/files/rp")
                             else:
                                 print(f"[red]Unknown folder found in {os.path.relpath(os.getcwd(), cdir())}/build/: [yellow]{folder}")
                         # now move to proper folder
@@ -278,6 +287,11 @@ if "site" not in args.build or ("site" in args.build and (args.only_update_html 
             if "regolith" in file["packs"][i] and "pack" in args.build:
                 print(f"-> [cyan]Building {file['packs'][i]['pack_id']}")
                 os.chdir(f'{category_loc}/{file["packs"][i]["pack_id"]}')
+                print(f"--> [bright_yellow]Checking the config file...")
+                regolith_config = load_json(f'{category_loc}/{file["packs"][i]["pack_id"]}/config.json')
+                if regolith_config["regolith"]["profiles"]["build"]["export"]["readOnly"] == True:
+                    regolith_config["regolith"]["profiles"]["build"]["export"]["readOnly"] = False
+                dump_json(f'{category_loc}/{file["packs"][i]["pack_id"]}/config.json', regolith_config)
                 # install filters
                 run("regolith install-all", quiet=True)
                 # check for previous builds
@@ -291,21 +305,21 @@ if "site" not in args.build or ("site" in args.build and (args.only_update_html 
                 # Check for .gitkeep and fix folder naming
                 if os.path.exists("build"):
                     print(f"--> [yellow]Fixing build folder...")
-                    build_dir = f"{category_loc}/{file["packs"][i]["pack_id"]}/build"
+                    build_dir = f"{category_loc}/{file["packs"][i]["pack_id"]}"
                     for folder in os.listdir("build"):
-                        if folder.endswith("_bp"):
+                        if folder.endswith("bp"):
                             # This _is_ the behaviour pack repo, so there shouldn't
                             # be a .gitkeep here, but this is for easy copy-pasting
                             # to other repos
                             if ".gitkeep" in os.listdir(f"build/{folder}"):
                                 shutil.rmtree(f"build/{folder}", onerror=remove_readonly)
                             else:
-                                os.rename(f"{build_dir}/{folder}", f"{build_dir}/bp")
-                        elif folder.endswith("_rp"):
+                                os.rename(f"{build_dir}/build/{folder}", f"{build_dir}/files/bp")
+                        elif folder.endswith("rp"):
                             if ".gitkeep" in os.listdir(f"build/{folder}"):
                                 shutil.rmtree(f"build/{folder}", onerror=remove_readonly)
                             else:
-                                os.rename(f"{build_dir}/{folder}", f"{build_dir}/rp")
+                                os.rename(f"{build_dir}/build/{folder}", f"{build_dir}/files/rp")
                         else:
                             print(f"[red]Unknown folder found in {os.path.relpath(os.getcwd(), cdir())}/build/: [yellow]{folder}")
                     # now move to proper folder
@@ -472,8 +486,8 @@ if "site" not in args.build or ("site" in args.build and (args.only_update_html 
             # When the regex fails if I change the link
             raise IndexError("Regex Failed")
     print("[green]Updated!")
-    """
     # Used only for CTs and BPs because RP is main
+    """
     try:
       if args.update_theme:
         print(f"[yellow]Updating theme.css...")
@@ -485,8 +499,9 @@ if "site" not in args.build or ("site" in args.build and (args.only_update_html 
           print(f"[green]Updated theme.css!")
     except requests.exceptions.ConnectionError:
       print(f"[red]Get a working internet connection before rerunning with `-ut`/`--update-theme`")
-    print(f"[yellow]Updated files!")
     """
+    print(f"[yellow]Updated files!")
+
 
     if args.format:
         print(f"[yellow]Making files Prettier\u2122")

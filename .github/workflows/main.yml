@@ -10,16 +10,26 @@ on:
 # GITHUB_TOKEN just for the deploy job
 jobs:
   format_repo:
-    runs-on: ubuntu-latest
-
+    runs-on: ubuntu-22.04
+    strategy:
+      matrix:
+        node-version: [20]
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
         with:
           ref: ${{ github.head_ref }} # Make sure PR is checked out
 
-      - name: Install Prettier
-        run: npm install prettier
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 10
+
+      - name: Setup Node ${{ matrix.node-version }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: "pnpm"
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -36,6 +46,7 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
+          pnpm install
 
       - name: Run pre_commit.py
         run: python pys/pre_commit.py --format --no-stash
