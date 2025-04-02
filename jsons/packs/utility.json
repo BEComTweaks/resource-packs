@@ -1,4 +1,5 @@
 {
+  "$schema": "https://becomtweaks.github.io/schema/packs.json",
   "topic": "Utility",
   "packs": [
     {
@@ -86,8 +87,7 @@
         "BlueSlime",
         "PurpleSlime",
         "MagentaSlime",
-        "PinkSlime",
-        "RainbowSlime"
+        "PinkSlime"
       ]
     },
     {

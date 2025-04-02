@@ -1,6 +1,8 @@
 {
+  "$schema": "https://becomtweaks.github.io/schema/packs.json",
   "topic": "LGBTQ+ Pride",
   "subcategory_of": "GUI &gt; Hearts",
+  "location": "gui/hearts/pride",
   "packs": [
     {
       "pack_id": "Pride",

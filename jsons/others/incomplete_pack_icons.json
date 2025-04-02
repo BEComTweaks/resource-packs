@@ -3,10 +3,10 @@
   "Terrain": [],
   "Variation": ["VariatedVillagers"],
   "Peace and Quiet": [],
-  "Utility": ["NoteBlockPitchParticle", "BetterBottoms"],
+  "Utility": ["NoteBlockPitchParticle"],
   "Unobtrusive": [],
   "3D": [],
-  "GUI": ["TransparentUI", "HighContrastUI"],
+  "GUI": [],
   "Menu Panoramas": [],
   "Retro": ["OldPotionColors"],
   "Fun": ["AnvilFallingSoundtoMetalPipe"],
@@ -24,7 +24,7 @@
   "Hunger Bars": [],
   "Hotbar Selector": [],
   "Xisuma's Hermitcraft Bases": [],
-  "Colorful Slime": ["RainbowSlime"],
+  "Colorful Slime": [],
   "Elytra": [],
   "Enchantment Glints": []
 }

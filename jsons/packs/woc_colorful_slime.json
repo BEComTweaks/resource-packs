@@ -1,6 +1,8 @@
 {
+  "$schema": "https://becomtweaks.github.io/schema/packs.json",
   "topic": "Colorful Slime",
   "subcategory_of": "World of Color",
+  "location": "world_of_color/slime",
   "packs": [
     {
       "pack_id": "HoneySlime",
@@ -111,13 +113,6 @@
       "pack_id": "PinkSlime",
       "pack_name": "Pink Slime",
       "pack_description": "Changes the color of all slime related items, blocks and entities to pink.",
-      "priority": 10,
-      "conflict": ["PistonInnerFix", "StickyPistonSides"]
-    },
-    {
-      "pack_id": "RainbowSlime",
-      "pack_name": "Rainbow Slime",
-      "pack_description": "Changes the color of all slime related items, blocks and entities to a random rainbow color.\nAll of them changes texture when rejoining world/reloading chunks!",
       "priority": 10,
       "conflict": ["PistonInnerFix", "StickyPistonSides"]
     }

@@ -1,6 +1,8 @@
 {
+  "$schema": "https://becomtweaks.github.io/schema/packs.json",
   "topic": "More Zombies",
   "subcategory_of": "Aesthetic",
+  "location": "aesthetic/more_zombies",
   "packs": [
     {
       "pack_id": "SteveZombies",

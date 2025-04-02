@@ -1,6 +1,8 @@
 {
+  "$schema": "https://becomtweaks.github.io/schema/packs.json",
   "topic": "Elytra",
   "subcategory_of": "World of Color",
+  "location": "world_of_color/elytra",
   "packs": [
     {
       "pack_id": "WhiteElytra",

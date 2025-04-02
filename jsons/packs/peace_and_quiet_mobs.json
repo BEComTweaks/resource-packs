@@ -1,6 +1,8 @@
 {
+  "$schema": "https://becomtweaks.github.io/schema/packs.json",
   "topic": "Mobs",
   "subcategory_of": "Peace and Quiet",
+  "location": "peace_and_quiet/mobs",
   "packs": [
     {
       "pack_id": "QuieterAllays",

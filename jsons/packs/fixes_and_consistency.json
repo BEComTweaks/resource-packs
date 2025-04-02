@@ -1,5 +1,7 @@
 {
+  "$schema": "https://becomtweaks.github.io/schema/packs.json",
   "topic": "Fixes and Consistency",
+  "location": "fixes_and_consistency",
   "packs": [
     {
       "pack_id": "UpdatedObserverTexture",
@@ -67,8 +69,7 @@
         "BlueSlime",
         "PurpleSlime",
         "MagentaSlime",
-        "PinkSlime",
-        "RainbowSlime"
+        "PinkSlime"
       ]
     },
     {

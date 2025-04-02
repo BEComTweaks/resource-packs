@@ -1,6 +1,8 @@
 {
+  "$schema": "https://becomtweaks.github.io/schema/packs.json",
   "topic": "Hearts",
   "subcategory_of": "GUI",
+  "location": "gui/hearts",
   "packs": [
     {
       "pack_id": "WhiteHearts",

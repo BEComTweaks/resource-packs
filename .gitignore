@@ -2,8 +2,9 @@
 pys/__pycache__/
 # node modules
 package.json
-package-lock.json
 node_modules
+# maps can be built again
+jsons/map
 # build
 build
 # tf is venv doing here

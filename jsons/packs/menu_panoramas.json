@@ -1,5 +1,7 @@
 {
+  "$schema": "https://becomtweaks.github.io/schema/packs.json",
   "topic": "Menu Panoramas",
+  "location": "menu_panoramas",
   "packs": [
     {
       "pack_id": "Classic",

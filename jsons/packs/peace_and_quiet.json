@@ -1,5 +1,7 @@
 {
+  "$schema": "https://becomtweaks.github.io/schema/packs.json",
   "topic": "Peace and Quiet",
+  "location": "peace_and_quiet",
   "packs": [
     {
       "pack_id": "QuieterRain",

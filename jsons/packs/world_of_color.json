@@ -1,5 +1,7 @@
 {
+  "$schema": "https://becomtweaks.github.io/schema/packs.json",
   "topic": "World of Color",
+  "location": "world_of_color",
   "packs": [
     {
       "pack_id": "UniqueDyes",

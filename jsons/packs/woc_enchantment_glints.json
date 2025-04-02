@@ -1,6 +1,8 @@
 {
+  "$schema": "https://becomtweaks.github.io/schema/packs.json",
   "topic": "Enchantment Glints",
   "subcategory_of": "World of Color",
+  "location": "world_of_color/enchantment_glints",
   "packs": [
     {
       "pack_id": "RedEnchantmentGlint",

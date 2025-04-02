@@ -1,6 +1,5 @@
 import os, traceback, sys, stat
 from subprocess import run as sp_run
-from importlib import import_module
 from typing import Union
 
 
@@ -101,7 +100,10 @@ def clear():
 def load_json(path):
     with open(path, "r") as file:
         try:
-            return loads(file.read())
+            json_data = loads(file.read())
+            if "$schema" in json_data:
+                del json_data["$schema"]
+            return json_data
         except JSONDecodeError:
             print(f"[red]\n{path} got a JSON Decode Error")
             print(f"[red]{traceback.format_exc()}")

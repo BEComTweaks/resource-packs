@@ -1,6 +1,8 @@
 {
+  "$schema": "https://becomtweaks.github.io/schema/packs.json",
   "topic": "Crosshairs",
   "subcategory_of": "GUI",
+  "location": "gui/crosshairs",
   "packs": [
     {
       "pack_id": "NoCrosshair",

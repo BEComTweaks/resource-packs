@@ -198,6 +198,7 @@ function toggleSelection(element) {
       "color: initial",
     );
   }
+  fallbackCheckboxChecker();
   updateSelectedTweaks();
   var selectedTweaks = getSelectedTweaks();
   updateSelectAllButton(selectedTweaks);
@@ -250,7 +251,7 @@ function updateSelectAllButton(st) {
 function updateSelectedTweaks() {
   var selectedTweaks = [];
   const tweakElements = document.querySelectorAll(
-    ".tweak[oreui-state='active']",
+    ".tweak:has(> .tweak-info > input[type='checkbox']:checked)",
   );
   tweakElements.forEach((tweak) => {
     const labelElement = tweak.querySelector(".tweak-info .tweak-title");
@@ -311,9 +312,10 @@ function updateURL(st) {
 // if query params already exists
 const loadedparams = new URLSearchParams(window.location.search);
 if (loadedparams.has("st_raw")) {
-  const st = JSON.parse(
-    LZString.decompressFromEncodedURIComponent(loadedparams.get("st_raw")),
-  );
+  const st_raw = loadedparams.get("st_raw");
+  const st = JSON.parse(LZString.decompressFromEncodedURIComponent(st_raw));
+  console.log("Found query params, loading selected packs...");
+  console.log(st);
   processJsonData(st, "select");
   updateDownloadButton(st);
   const preselectAlerter = document.getElementsByClassName("preselected")[0];
@@ -333,6 +335,7 @@ function getTimeoutDuration() {
 }
 // toggle category
 function toggleCategory(label) {
+  fallbackCheckboxChecker();
   const tweaksContainer = label.parentElement.querySelector(
     ".category-controlled",
   );
@@ -544,7 +547,7 @@ function processJsonData(jsonData, dowhat) {
 function getSelectedTweaks() {
   const selectedTweaks = [];
   const tweakElements = document.querySelectorAll(
-    ".tweak[oreui-state='active']",
+    ".tweak:has(> .tweak-info > input[type='checkbox']:checked)",
   );
   tweakElements.forEach((tweak) => {
     selectedTweaks.push({
@@ -716,3 +719,22 @@ function updateCategoryHeight() {
 }
 
 window.addEventListener("resize", updateCategoryHeight);
+
+function fallbackCheckboxChecker() {
+  document
+    .querySelectorAll("input[type='checkbox']:checked")
+    .forEach((checkbox) => {
+      const tweak = checkbox.parentElement.parentElement;
+      if (tweak) {
+        const checkboxState = OreUI.getCurrentState(tweak);
+        if (checkboxState === "inactive") {
+          OreUI.becomeActive(tweak);
+          console.warn(
+            "[%ccheckbox%c]\nCheckbox state mismatched with oreUI state, using fallback script",
+            "color: orange",
+            "color: initial",
+          );
+        }
+      }
+    });
+}

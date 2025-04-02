@@ -1,6 +1,8 @@
 {
+  "$schema": "https://becomtweaks.github.io/schema/packs.json",
   "topic": "Growth Stages",
   "subcategory_of": "Utility",
+  "location": "utility/growth_stages",
   "packs": [
     {
       "pack_id": "AmethystGrowth",

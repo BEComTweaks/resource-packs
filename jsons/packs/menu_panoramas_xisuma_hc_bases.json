@@ -1,6 +1,8 @@
 {
+  "$schema": "https://becomtweaks.github.io/schema/packs.json",
   "topic": "Xisuma's Hermitcraft Bases",
   "subcategory_of": "Menu Panoramas",
+  "location": "menu_panoramas/xisuma_hc_bases",
   "packs": [
     {
       "pack_id": "Xisuma'sHermitcraftBaseSeason1",

@@ -1,6 +1,8 @@
 {
+  "$schema": "https://becomtweaks.github.io/schema/packs.json",
   "topic": "Hunger Bars",
   "subcategory_of": "GUI",
+  "location": "gui/hunger_bars",
   "packs": [
     {
       "pack_id": "AppleHungerBars",
