@@ -1,0 +1,27 @@
+{
+  "name": "resource-packs",
+  "version": "1.0.0",
+  "description": "Subserver modules for resource packs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node subserver/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BEComTweaks/resource-packs.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BEComTweaks/resource-packs/issues"
+  },
+  "homepage": "https://github.com/BEComTweaks/resource-packs#readme",
+  "dependencies": {
+    "body-parser": "^2.2.0",
+    "cors": "^2.8.5",
+    "express": "^4.21.2",
+    "prettier": "^3.5.3"
+  }
+}
