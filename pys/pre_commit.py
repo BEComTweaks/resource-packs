@@ -150,12 +150,12 @@ if "site" not in args.build or ("site" in args.build and (args.only_update_html 
                     os.chdir(cdir())
                 # Updates Incomplete Packs
                 try:
-                    if os.listdir(f'{category_loc}/{file["packs"][i]["pack_id"]}/files') == []:
+                    if "regolith" in file["packs"][i] or os.listdir(f'{category_loc}/{file["packs"][i]["pack_id"]}/files') != []:
+                        # When the packid directory has stuff inside or is regolith
+                        stats[0] += 1
+                    else:
                         # screw it go to filenotfounderror
                         raise FileNotFoundError
-                    else:
-                        # When the packid directory has stuff inside
-                        stats[0] += 1
                 except FileNotFoundError:
                     # Adds the packid to the topic list
                     incomplete_packs[file["topic"]].append(file["packs"][i]["pack_id"])
@@ -326,12 +326,12 @@ if "site" not in args.build or ("site" in args.build and (args.only_update_html 
                 os.chdir(cdir())
             # Updates Incomplete Packs
             try:
-                if os.listdir(f'{category_loc}/{file["packs"][i]["pack_id"]}/files') == []:
+                if "regolith" in file["packs"][i] or os.listdir(f'{category_loc}/{file["packs"][i]["pack_id"]}/files') != []:
+                    # When the packid directory has stuff inside or is regolith
+                    stats[0] += 1
+                else:
                     # screw it go to filenotfounderror
                     raise FileNotFoundError
-                else:
-                    # When the packid directory has stuff inside
-                    stats[0] += 1
             except FileNotFoundError:
                 # Adds the packid to the topic list
                 incomplete_packs[file["topic"]].append(file["packs"][i]["pack_id"])
