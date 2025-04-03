@@ -424,15 +424,19 @@ if "site" not in args.build or ("site" in args.build and (args.only_update_html 
         html = html.replace("<all_packs>", LZString.compressToEncodedURIComponent(dumps(current_category_packs)))
     # compatibilities
     compatibilities = load_json(f"{cdir()}/jsons/packs/compatibilities.json")
+    compat_map = {}
     for ways in range(compatibilities["max_simultaneous"],1,-1):
+        compat_map[f"{ways}way"] = []
         for compatibility in compatibilities[f"{ways}way"]:
             if len(compatibility["merge"]) != ways:
                 print(f"[red]Incorrect Compatibility format: [yellow]{compatibility['location']}")
-            if os.path.exists(f"{cdir()}/packs/{compatibility["location"]}"):
-                comp_stats[0] += 1
-            else:
                 comp_stats[1] += 1
+            elif os.path.exists(f"{cdir()}/packs/{compatibility["location"]}"):
+                comp_stats[0] += 1
+                compat_map[f"{ways}way"].append(compatibility["merge"])
+            else:
                 print(f"[red]Incomplete Compatibility: [yellow]{compatibility['location']}")
+                comp_stats[1] += 1
     print(f"[green]Done!")
 
     # HTML formatting
