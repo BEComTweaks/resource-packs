@@ -132,9 +132,6 @@ if "site" not in args.build or ("site" in args.build and (args.only_update_html 
                             print(f"--> [yellow]Why does {os.path.relpath(build_dir, cdir())}/files exist?")
                         for folder in os.listdir("build"):
                             if folder.endswith("bp"):
-                                # This _is_ the behaviour pack repo, so there shouldn't
-                                # be a .gitkeep here, but this is for easy copy-pasting
-                                # to other repos
                                 if ".gitkeep" in os.listdir(f"build/{folder}"):
                                     shutil.rmtree(f"build/{folder}", onerror=remove_readonly)
                                 else:
@@ -308,9 +305,6 @@ if "site" not in args.build or ("site" in args.build and (args.only_update_html 
                     build_dir = f"{category_loc}/{file["packs"][i]["pack_id"]}"
                     for folder in os.listdir("build"):
                         if folder.endswith("bp"):
-                            # This _is_ the behaviour pack repo, so there shouldn't
-                            # be a .gitkeep here, but this is for easy copy-pasting
-                            # to other repos
                             if ".gitkeep" in os.listdir(f"build/{folder}"):
                                 shutil.rmtree(f"build/{folder}", onerror=remove_readonly)
                             else:
@@ -461,6 +455,7 @@ if "site" not in args.build or ("site" in args.build and (args.only_update_html 
         dump_json(f"{cdir()}/jsons/map/name_to_json.json", name_to_json)
         dump_json(f"{cdir()}/jsons/map/id_to_name.json", id_to_name)
         dump_json(f"{cdir()}/jsons/map/priority.json", priority)
+        dump_json(f"{cdir()}/jsons/map/compatibility.json", compat_map)
     if not args.only_update_jsons:
         with open(f"{cdir()}/webUI/index.html", "w") as html_file:
             html_file.write(html)
