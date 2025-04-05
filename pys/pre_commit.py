@@ -78,10 +78,10 @@ else:
     spinner = console.status
 
 if not args.no_stash:
-    with spinner("[bold yellow]Stashing changes..."):
-        run('git stash --include-untracked --message "Stashed changes before pre-commit"', quiet=True)
-        run('git stash apply', quiet=True)
-        print(f"[green]Stashed changes!")
+    print("[bold yellow]Stashing changes...")
+    run('git stash --include-untracked --message "Stashed changes before pre-commit"', quiet=True)
+    run('git stash apply', quiet=True)
+    print(f"[green]Stashed changes!")
 
 # Counts Packs and Compatibilities
 if "site" not in args.build or ("site" in args.build and (args.only_update_html or args.only_update_jsons or args.format or "pack" in args.build)):
