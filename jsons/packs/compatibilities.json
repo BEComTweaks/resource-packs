@@ -3,14 +3,46 @@
   "max_simultaneous": 3,
   "3way": [
     {
-      "merge": [],
-      "location": ""
+      "merge": ["AllayElytra", "DragonElytra", "PhantomElytra"],
+      "location": "compatibilities/3waymerge1false",
+      "overwrite": false
+    },
+    {
+      "merge": ["AllayElytra", "PhantomElytra", "VexElytra"],
+      "location": "compatibilities/3waymerge1true",
+      "overwrite": true
+    },
+    {
+      "merge": ["DragonElytra", "PhantomElytra", "VexElytra"],
+      "location": "compatibilities/3waymerge2false",
+      "overwrite": false
+    },
+    {
+      "merge": ["AllayElytra", "DragonElytra", "VexElytra"],
+      "location": "compatibilities/3waymerge2true",
+      "overwrite": true
     }
   ],
   "2way": [
     {
-      "merge": [],
-      "location": ""
+      "merge": ["AllayElytra", "DragonElytra"],
+      "location": "compatibilities/2waymerge1false",
+      "overwrite": false
+    },
+    {
+      "merge": ["AllayElytra", "PhantomElytra"],
+      "location": "compatibilities/2waymerge1true",
+      "overwrite": true
+    },
+    {
+      "merge": ["DragonElytra", "PhantomElytra"],
+      "location": "compatibilities/2waymerge2false",
+      "overwrite": false
+    },
+    {
+      "merge": ["DragonElytra", "VexElytra"],
+      "location": "compatibilities/2waymerge2true",
+      "overwrite": true
     }
   ]
 }
