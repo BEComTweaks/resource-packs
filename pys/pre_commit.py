@@ -27,21 +27,17 @@ cat_end_w_subcat_no_end = '</div><div class="subcat<index>">'
 
 html = ''
 stats = [0, 0]
-incomplete_packs = {}
 comp_stats = [0, 0]
-comps = {}
-conflicts = {}
 pkicstats = [0, 0]
 subcats = 0
 ignore = False
 subcat_list = []
-incomplete_pkics = {}
 packs = -1
 name_to_json = {}
 priority = {}
 
 
-with open(f"{cdir()}/jsons/others/pack_order_list.txt","r") as pol:
+with open(f"{cdir()}/jsons/pack_order_list.txt","r") as pol:
     cat_list = pol.read().split("\n")
     if cat_list[-1] == "":
         cat_list.pop()
@@ -97,8 +93,6 @@ if "site" not in args.build or ("site" in args.build and (args.only_update_html 
             except KeyError:
                 category_loc = f'{cdir()}/packs/{file["topic"].lower()}'
             # Adds the categories automatically
-            incomplete_pkics[file["topic"]] = []
-            incomplete_packs[file["topic"]] = []
             html += category_start.replace("topic_name", file["topic"])
             current_category_packs = { "raw": [] }
             # Runs through the packs
@@ -146,27 +140,25 @@ if "site" not in args.build or ("site" in args.build and (args.only_update_html 
                         # now move to proper folder
                     os.chdir(cdir())
                 # Updates Incomplete Packs
+                pack_exists = False
                 try:
                     if "regolith" in file["packs"][i] or os.listdir(f'{category_loc}/{file["packs"][i]["pack_id"]}/files') != []:
                         # When the packid directory has stuff inside or is regolith
                         stats[0] += 1
+                        pack_exists = True
                     else:
                         # screw it go to filenotfounderror
                         raise FileNotFoundError
                 except FileNotFoundError:
-                    # Adds the packid to the topic list
-                    incomplete_packs[file["topic"]].append(file["packs"][i]["pack_id"])
                     stats[1] += 1
                     print(f"[red]Incomplete Pack: [yellow]{file['packs'][i]['pack_id']}")
 
                 # Updates Incomplete pack_icon.png
                 try:
-                    if file["packs"][i]["pack_id"] in incomplete_packs[file["topic"]]:
+                    if not pack_exists:
                         pass
                     elif os.path.getsize(f'{category_loc}/{file["packs"][i]["pack_id"]}/pack_icon.png') == os.path.getsize(f'{cdir()}/pack_icons/missing_texture.png'):
-                        # Adds packid to topic list
-                        incomplete_pkics[file["topic"]].append(file["packs"][i]["pack_id"])
-                        pkicstats[1] += 1
+                        raise FileNotFoundError
                     else:
                         # When pack icon is complete
                         pkicstats[0] += 1
@@ -178,19 +170,16 @@ if "site" not in args.build or ("site" in args.build and (args.only_update_html 
                             # When pack icon doesn't even exist
                             raise KeyError # who cares
                     except KeyError:
-                            incomplete_pkics[file["topic"]].append(file["packs"][i]["pack_id"])
                             pkicstats[1] += 1
                             print(f"[red]Incomplete Pack Icon: [yellow]{file['packs'][i]['pack_id']}")
 
                 # Adds Pack Conflicts
-                conflicts[file["packs"][i]["pack_id"]] = []
+                conflicts = []
                 try:
                     for conf in range(len(file["packs"][i]["conflict"])):
-                        conflicts[file["packs"][i]["pack_id"]].append(file["packs"][i]["conflict"][conf])
+                        conflicts.append(file["packs"][i]["conflict"][conf])
                 except KeyError:
                     pass # If it is empty, it just skips
-                if conflicts[file["packs"][i]["pack_id"]] == []:
-                    del conflicts[file["packs"][i]["pack_id"]]
 
                 # Add priority map
                 try:
@@ -200,18 +189,14 @@ if "site" not in args.build or ("site" in args.build and (args.only_update_html 
 
                 # Adds respective HTML
                 confs = ""
-                if file["packs"][i]["pack_id"] not in incomplete_packs[file["topic"]]:
+                if pack_exists:
                     packs += 1
                     to_add_pack = pack_start
                     to_add_pack += pack_mid
-                    try:
-                        c = ""
-                        for c in conflicts[file["packs"][i]["pack_id"]]:
-                            confs += c
-                            confs += ", "
+                    if conflicts != []:
+                        for c in conflicts:
+                            confs += f"{c}, "
                         to_add_pack += html_conf.replace('<conflicts>',confs[:-2])
-                    except KeyError:
-                        pass
                     to_add_pack += pack_end
                     # Replace vars
                     to_add_pack = to_add_pack.replace("topic_name", file["topic"])
@@ -275,8 +260,6 @@ if "site" not in args.build or ("site" in args.build and (args.only_update_html 
         except KeyError:
             category_loc = f'{cdir()}/packs/{file["topic"].lower()}'
         # Adds the categories automatically
-        incomplete_pkics[file["topic"]] = []
-        incomplete_packs[file["topic"]] = []
         pack_html += subcategory_start.replace("<topic_name>",file["topic"]).replace("topic_name", f'{file["subcategory_of"]} > <b>{file["topic"]}</b>')
         current_category_packs = { "raw": [] }
         # Runs through the packs
@@ -319,27 +302,26 @@ if "site" not in args.build or ("site" in args.build and (args.only_update_html 
                     # now move to proper folder
                 os.chdir(cdir())
             # Updates Incomplete Packs
+            pack_exists = False
             try:
                 if "regolith" in file["packs"][i] or os.listdir(f'{category_loc}/{file["packs"][i]["pack_id"]}/files') != []:
                     # When the packid directory has stuff inside or is regolith
                     stats[0] += 1
+                    pack_exists = True
                 else:
                     # screw it go to filenotfounderror
                     raise FileNotFoundError
             except FileNotFoundError:
-                # Adds the packid to the topic list
-                incomplete_packs[file["topic"]].append(file["packs"][i]["pack_id"])
                 stats[1] += 1
                 print(f"[red]Incomplete Pack: [yellow]{file['packs'][i]['pack_id']}")
 
             # Updates Incomplete pack_icon.png
             try:
-                if file["packs"][i]["pack_id"] in incomplete_packs[file["topic"]]:
+                if not pack_exists:
                     pass
                 elif os.path.getsize(f'{category_loc}/{file["packs"][i]["pack_id"]}/pack_icon.png') == os.path.getsize(f'{cdir()}/pack_icons/missing_texture.png'):
                     # Adds packid to topic list
-                    incomplete_pkics[file["topic"]].append(file["packs"][i]["pack_id"])
-                    pkicstats[1] += 1
+                    raise FileNotFoundError
                 else:
                     # When pack icon is complete
                     pkicstats[0] += 1
@@ -351,19 +333,16 @@ if "site" not in args.build or ("site" in args.build and (args.only_update_html 
                         # When pack icon doesn't even exist
                         raise KeyError # who cares
                 except KeyError:
-                        incomplete_pkics[file["topic"]].append(file["packs"][i]["pack_id"])
                         pkicstats[1] += 1
                         print(f"[red]Incomplete Pack Icon: [yellow]{file['packs'][i]['pack_id']}")
 
             # Adds Pack Conflicts
-            conflicts[file["packs"][i]["pack_id"]] = []
+            conflicts = []
             try:
                 for conf in range(len(file["packs"][i]["conflict"])):
-                    conflicts[file["packs"][i]["pack_id"]].append(file["packs"][i]["conflict"][conf])
+                    conflicts.append(file["packs"][i]["conflict"][conf])
             except KeyError:
                 pass # If it is empty, it just skips
-            if conflicts[file["packs"][i]["pack_id"]] == []:
-                del conflicts[file["packs"][i]["pack_id"]]
 
             # Add priority map
             try:
@@ -373,18 +352,14 @@ if "site" not in args.build or ("site" in args.build and (args.only_update_html 
 
             # Adds respective HTML
             confs = ""
-            if file["packs"][i]["pack_id"] not in incomplete_packs[file["topic"]]:
+            if pack_exists:
                 packs += 1
                 to_add_pack = pack_start
                 to_add_pack += pack_mid
-                try:
-                    c = ""
-                    for c in conflicts[file["packs"][i]["pack_id"]]:
-                        confs += c
-                        confs += ", "
+                if conflicts != []:
+                    for c in conflicts:
+                        confs += f"{c}, "
                     to_add_pack += html_conf.replace('<conflicts>',confs[:-2])
-                except KeyError:
-                    pass
                 to_add_pack += pack_end
                 # Replace vars
                 to_add_pack = to_add_pack.replace("topic_name", file["topic"])
@@ -445,9 +420,6 @@ if "site" not in args.build or ("site" in args.build and (args.only_update_html 
     # Update files
     print(f"[yellow]Updating files...")
     if not args.only_update_html:
-        dump_json(f"{cdir()}/jsons/others/incomplete_packs.json", incomplete_packs)
-        dump_json(f"{cdir()}/jsons/others/incomplete_compatibilities.json", comps)
-        dump_json(f"{cdir()}/jsons/others/incomplete_pack_icons.json", incomplete_pkics)
         try:
             os.mkdir(f"{cdir()}/jsons/map")
         except FileExistsError:
