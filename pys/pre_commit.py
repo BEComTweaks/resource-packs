@@ -51,6 +51,8 @@ parser.add_argument('--no-stash', '-ns', action='store_true', help='Does not sta
 parser.add_argument('--quiet', '-q', action='store_true', help='Quieten outputs of run statements (the commands will still be shown)')
 parser.add_argument('--dev', '-d', action='store_true', help='Show time and lines of each print statement')
 parser.add_argument('--no-spinner', action='store_true', help='Disables the spinner from rich')
+parser.add_argument('--repo', help='Use a custom repo while building', default="BEComTweaks/resource-packs")
+parser.add_argument('--branch', help='Use a custom branch while building', default="main")
 args = parser.parse_args()
 
 if args.build == "both":
@@ -481,7 +483,7 @@ if "site" in args.build:
         with open(f"{cdir()}/build/index.html", "r") as file:
             content = file.read()
         with open(f"{cdir()}/build/index.html", "w") as file:
-            file.write(content.replace("../", "https://raw.githubusercontent.com/BEComTweaks/resource-packs/main/"))
+            file.write(content.replace("../", f"https://raw.githubusercontent.com/{args.repo}/{args.branch}/"))
         print(f"[bright_cyan]Website build success!")
     except Exception as e:
         print(f"---> [red]Website build failed!")
