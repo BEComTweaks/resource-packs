@@ -401,12 +401,16 @@ if "site" not in args.build or ("site" in args.build and (args.only_update_html 
             if len(compatibility["merge"]) != ways:
                 print(f"[red]Incorrect Compatibility format: [yellow]{compatibility['location']}")
                 comp_stats[1] += 1
+                # appending an empty list for mapping sake
+                compat_map[f"{ways}way"].append([])
             elif os.path.exists(f"{cdir()}/packs/{compatibility["location"]}"):
                 comp_stats[0] += 1
                 compat_map[f"{ways}way"].append(compatibility["merge"])
             else:
                 print(f"[red]Incomplete Compatibility: [yellow]{compatibility['location']}")
                 comp_stats[1] += 1
+                # appending an empty list for mapping sake
+                compat_map[f"{ways}way"].append([])
     print(f"[green]Done!")
 
     # HTML formatting
