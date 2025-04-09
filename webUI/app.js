@@ -336,7 +336,7 @@ function getTimeoutDuration() {
   return mediaQuery.matches ? 0 : 1000;
 }
 // toggle category
-function toggleCategory(label, do_fallback=true) {
+function toggleCategory(label, do_fallback = true) {
   if (do_fallback) {
     fallbackCheckboxChecker();
   }

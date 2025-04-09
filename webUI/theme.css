@@ -803,7 +803,8 @@ select {
   font-size: 1.2em;
 }
 
-.tweaks, .subcattweaks {
+.tweaks,
+.subcattweaks {
   align-items: top;
   display: grid;
   gap: 10px;
@@ -931,13 +932,17 @@ select {
   .category-controlled {
     transition:
       max-height var(--transition-duration) ease-in-out,
-      padding calc(var(--transition-duration) * 0.1) ease-in-out calc(var(--transition-duration) * 0.9),
-      margin-bottom calc(var(--transition-duration) * 0.1) ease-in-out calc(var(--transition-duration) * 0.9);
+      padding calc(var(--transition-duration) * 0.1) ease-in-out
+        calc(var(--transition-duration) * 0.9),
+      margin-bottom calc(var(--transition-duration) * 0.1) ease-in-out
+        calc(var(--transition-duration) * 0.9);
     &[style*="max-height"] {
       transition:
-      max-height var(--transition-duration) ease-in-out,
-      padding calc(var(--transition-duration) * 0.1) ease-in-out calc(var(--transition-duration) * 0.1),
-      margin-bottom calc(var(--transition-duration) * 0.1) ease-in-out calc(var(--transition-duration) * 0.1);
+        max-height var(--transition-duration) ease-in-out,
+        padding calc(var(--transition-duration) * 0.1) ease-in-out
+          calc(var(--transition-duration) * 0.1),
+        margin-bottom calc(var(--transition-duration) * 0.1) ease-in-out
+          calc(var(--transition-duration) * 0.1);
     }
   }
 
