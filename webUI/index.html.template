@@ -62,9 +62,18 @@
         >
       </li>
     </ul>
+    <!--The full screen elements-->
     <div id="background-container"></div>
-    <script src="bg.js"></script>
     <div class="half-dark"></div>
+    <div class="loading-screen">
+      <div class="loader">
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box3"></div>
+      </div>
+      <p class="loading-status"></p>
+    </div>
+    <script src="extra.js"></script>
     <div class="image-container">
       <img alt="Resource Packs" id="title" src="images/title.png" />
     </div>

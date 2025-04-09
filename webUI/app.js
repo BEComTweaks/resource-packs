@@ -380,6 +380,8 @@ function toggleCategory(label, do_fallback = true) {
 // i wonder what this is for
 function downloadSelectedTweaks() {
   // set min_engine_version
+  document.querySelector(".loading-screen").style =
+    "opacity: 1; pointer-events: all;";
   var mcVersion = document.getElementById("mev").value;
   console.log(
     `[%cdownload%c]\nMinimum Engine Version is set to ${mcVersion}`,
@@ -409,23 +411,22 @@ function downloadSelectedTweaks() {
 function fetchPack(protocol, jsonData, packName, mcVersion) {
   const serverip = "localhost";
   // get download button
-  var downloadbutton = document.getElementsByClassName(
-    "download-selected-button",
-  )[0];
-  // For people that spam the download button
-  downloadbutton.onclick = null;
+  var downloadbutton = document.querySelector(".download-selected-button");
+  // get status element
+  var statusElement = document.querySelector(".loading-status");
+  var statusElementBoxes = statusElement.parentElement.querySelectorAll("[class^=box]");
   // set proper colors
   if (protocol === "http") {
     // when attempting through http
-    OreUI.setActiveColor(downloadbutton, "pink");
-    downloadbutton.innerText = "Retrying with HTTP...";
+    statusElementBoxes.forEach((element) => element.style.borderColor = "orange");
+    statusElement.innerText = "Retrying with HTTP...";
   } else {
     // when attempting through https
-    OreUI.setActiveColor(downloadbutton, "green");
-    downloadbutton.innerText = "Fetching Pack...";
+    statusElementBoxes.forEach((element) => element.style.borderColor = "green");
+    statusElement.innerText = "Fetching Pack...";
   }
   // become active
-  OreUI.becomeActive(downloadbutton);
+  OreUI.becomeDisabled(downloadbutton);
   console.log("[%cfetch%c]\nFetching pack...", "color: blue", "color: initial");
   // fetch
   fetch(`${protocol}://${serverip}/exportResourcePack`, {
@@ -456,7 +457,7 @@ function fetchPack(protocol, jsonData, packName, mcVersion) {
         "color: blue",
         "color: initial",
       );
-      downloadbutton.innerText = "Obtained pack!";
+      statusElement.innerText = "Obtained pack!";
       // Download the file
       const url = window.URL.createObjectURL(blob);
       const a = document.createElement("a");
@@ -468,10 +469,9 @@ function fetchPack(protocol, jsonData, packName, mcVersion) {
       window.URL.revokeObjectURL(url);
       // reset button text
       await sleep(1000);
-      OreUI.becomeInactive(downloadbutton);
-      OreUI.setActiveColor(downloadbutton, "dark");
-      downloadbutton.innerText = "Download Selected Tweaks";
-      downloadbutton.onclick = downloadSelectedTweaks;
+      OreUI.becomeEnabled(downloadbutton);
+      statusElement.innerText = "";
+      document.querySelector(".loading-screen").removeAttribute("style");
     })
     .catch(async (error) => {
       console.log(error);
@@ -493,7 +493,7 @@ function fetchPack(protocol, jsonData, packName, mcVersion) {
             "color: initial",
             "color: red",
           );
-          downloadbutton.innerText = `Status Code: ${error.status}`;
+          statusElement.innerText = `Status Code: ${error.status}`;
         } else {
           console.log(
             `[%cerror%c] Error: %c${error}`,
@@ -501,15 +501,19 @@ function fetchPack(protocol, jsonData, packName, mcVersion) {
             "color: initial",
             "color: red",
           );
-          downloadbutton.innerText =
+          statusElement.innerText =
             "Couldn't fetch pack. Check console for error log.";
         }
-        OreUI.setActiveColor(downloadbutton, "red");
+        statusElementBoxes.forEach((element) => {
+          element.style.borderColor = "red";
+          element.style.animationPlayState = "paused";
+        });
+        OreUI.becomeEnabled(downloadbutton);
         await sleep(3000);
-        OreUI.setActiveColor(downloadbutton, "dark");
-        downloadbutton.innerText = "Download";
-        downloadbutton.onclick = downloadSelectedTweaks;
-        OreUI.becomeInactive(downloadbutton);
+        document.querySelector(".loading-screen").style = "opacity: 0;";
+        await sleep(1000);
+        statusElementBoxes.forEach((element) => element.style = "");
+        document.querySelector(".loading-screen").removeAttribute("style");
       }
     });
 }

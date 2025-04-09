@@ -668,7 +668,8 @@ select {
   z-index: 1;
 }
 
-.half-dark {
+.half-dark,
+.loading-screen {
   background: #0000007f;
   position: fixed;
   z-index: 0;
@@ -680,6 +681,36 @@ select {
 
 .image-container {
   margin-top: 45px;
+}
+
+
+.loader {
+  width: 112px;
+  height: 112px;
+  .box1,
+  .box2,
+  .box3 {
+    border: 16px solid #f5f5f5;
+    box-sizing: border-box;
+    position: absolute;
+    display: block;
+    transition: border-color 0.5s ease-in-out;
+  }
+}
+
+.loading-screen.loading-screen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 1000;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s ease-in-out;
+  > p {
+    padding: 10px;
+    font-family: "Futura Heavy";
+  }
 }
 
 .mev option {
