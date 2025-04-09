@@ -441,10 +441,11 @@ function fetchPack(protocol, jsonData, packName, mcVersion) {
       // when the response doesnt feel good
       if (!response.ok) {
         console.log(
-          "[%cerror%c]\nNetwork response was not ok",
+          "[%cerror%c]\nResponse was not ok",
           "color: red",
           "color: initial",
         );
+        throw new Error(response);
       }
       return response.blob();
     })
@@ -473,6 +474,7 @@ function fetchPack(protocol, jsonData, packName, mcVersion) {
       downloadbutton.onclick = downloadSelectedTweaks;
     })
     .catch(async (error) => {
+      console.log(error);
       // when the response doesnt send
       if (protocol === "https") {
         console.log(
@@ -483,18 +485,29 @@ function fetchPack(protocol, jsonData, packName, mcVersion) {
         );
         fetchPack("http", jsonData, packName, mcVersion); // Retry with HTTP
       } else {
-        console.log(
-          `[%cerror%c] Error: %c${error}`,
-          "color: red",
-          "color: initial",
-          "color: red",
-        );
-        downloadbutton.innerText =
-          "Couldn't fetch pack. Check console for error log.";
+        if (error.text !== undefined) {
+          const errorText = await error.text();
+          console.log(
+            `[%cerror%c]\nError: %c${errorText}`,
+            "color: red",
+            "color: initial",
+            "color: red",
+          );
+          downloadbutton.innerText = `Status Code: ${error.status}`;
+        } else {
+          console.log(
+            `[%cerror%c] Error: %c${error}`,
+            "color: red",
+            "color: initial",
+            "color: red",
+          );
+          downloadbutton.innerText =
+            "Couldn't fetch pack. Check console for error log.";
+        }
         OreUI.setActiveColor(downloadbutton, "red");
         await sleep(3000);
         OreUI.setActiveColor(downloadbutton, "dark");
-        downloadbutton.innerText = "Download Selected Tweaks";
+        downloadbutton.innerText = "Download";
         downloadbutton.onclick = downloadSelectedTweaks;
         OreUI.becomeInactive(downloadbutton);
       }
