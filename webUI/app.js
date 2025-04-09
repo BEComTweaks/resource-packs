@@ -1,3 +1,40 @@
+/**************\
+| Not constant |
+\**************/
+const categoryDicts = {
+  Aesthetic: [],
+  "More Zombies": [],
+  Terrain: [],
+  "Lower and Sides": [],
+  Variation: [],
+  "Peace and Quiet": [],
+  Mobs: [],
+  Utility: [],
+  Directional: [],
+  "Growth Stages": [],
+  Unobtrusive: [],
+  "3D": [],
+  GUI: [],
+  Crosshairs: [],
+  Hearts: [],
+  "LGBTQ+ Pride": [],
+  "Hunger Bars": [],
+  "Hotbar Selector": [],
+  "Menu Panoramas": [],
+  "Xisuma's Hermitcraft Bases": [],
+  Retro: [],
+  Fun: [],
+  "World of Color": [],
+  "Colorful Slime": [],
+  Elytra: [],
+  "Enchantment Glints": [],
+  Parity: [],
+  "Fixes and Consistency": [],
+};
+
+const typeOfPack = "ResourcePack";
+const extOfPack = "mcpack";
+
 /************\
 | OreUI HTML |
 \************/
@@ -434,7 +471,7 @@ function fetchPack(protocol, jsonData, packName, mcVersion) {
   OreUI.becomeDisabled(downloadbutton);
   console.log("[%cfetch%c]\nFetching pack...", "color: blue", "color: initial");
   // fetch
-  fetch(`${protocol}://${serverip}/exportResourcePack`, {
+  fetch(`${protocol}://${serverip}/export${typeOfPack}`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -468,7 +505,7 @@ function fetchPack(protocol, jsonData, packName, mcVersion) {
       const a = document.createElement("a");
       a.style.display = "none";
       a.href = url;
-      a.download = `${packName}.mcpack`;
+      a.download = `${packName}.${extOfPack}`;
       document.body.appendChild(a);
       a.click();
       window.URL.revokeObjectURL(url);
@@ -584,36 +621,7 @@ function getSelectedTweaks() {
       index: parseInt(tweak.dataset.index),
     });
   });
-  const jsonData = {
-    Aesthetic: [],
-    "More Zombies": [],
-    Terrain: [],
-    "Lower and Sides": [],
-    Variation: [],
-    "Peace and Quiet": [],
-    Mobs: [],
-    Utility: [],
-    Directional: [],
-    "Growth Stages": [],
-    Unobtrusive: [],
-    "3D": [],
-    GUI: [],
-    Crosshairs: [],
-    Hearts: [],
-    "LGBTQ+ Pride": [],
-    "Hunger Bars": [],
-    "Hotbar Selector": [],
-    "Menu Panoramas": [],
-    "Xisuma's Hermitcraft Bases": [],
-    Retro: [],
-    Fun: [],
-    "World of Color": [],
-    "Colorful Slime": [],
-    Elytra: [],
-    "Enchantment Glints": [],
-    Parity: [],
-    "Fixes and Consistency": [],
-  };
+  const jsonData = JSON.parse(JSON.stringify(categoryDicts));
   selectedTweaks.forEach((tweak) => {
     jsonData[tweak.category].push(tweak.name);
   });
