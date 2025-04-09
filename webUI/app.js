@@ -414,15 +414,20 @@ function fetchPack(protocol, jsonData, packName, mcVersion) {
   var downloadbutton = document.querySelector(".download-selected-button");
   // get status element
   var statusElement = document.querySelector(".loading-status");
-  var statusElementBoxes = statusElement.parentElement.querySelectorAll("[class^=box]");
+  var statusElementBoxes =
+    statusElement.parentElement.querySelectorAll("[class^=box]");
   // set proper colors
   if (protocol === "http") {
     // when attempting through http
-    statusElementBoxes.forEach((element) => element.style.borderColor = "orange");
+    statusElementBoxes.forEach(
+      (element) => (element.style.borderColor = "orange"),
+    );
     statusElement.innerText = "Retrying with HTTP...";
   } else {
     // when attempting through https
-    statusElementBoxes.forEach((element) => element.style.borderColor = "green");
+    statusElementBoxes.forEach(
+      (element) => (element.style.borderColor = "green"),
+    );
     statusElement.innerText = "Fetching Pack...";
   }
   // become active
@@ -512,7 +517,7 @@ function fetchPack(protocol, jsonData, packName, mcVersion) {
         await sleep(3000);
         document.querySelector(".loading-screen").style = "opacity: 0;";
         await sleep(1000);
-        statusElementBoxes.forEach((element) => element.style = "");
+        statusElementBoxes.forEach((element) => (element.style = ""));
         document.querySelector(".loading-screen").removeAttribute("style");
       }
     });
