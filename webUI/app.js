@@ -165,7 +165,6 @@ function triggerPackClick(index) {
 /******************\
 | Custom functions |
 \******************/
-const lodash = _.noConflict();
 
 function sleep(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
@@ -233,7 +232,9 @@ function updateSelectAllButton(st) {
         selectallbutton.onclick = new Function(`selectAll(this);`);
       } else if (
         st[category].length ==
-        selectallbutton.parentElement.querySelectorAll(".tweak").length
+        selectallbutton.parentElement.querySelectorAll(
+          "& > .category-controlled > .tweaks .tweak",
+        ).length
       ) {
         imgElement.src =
           "images/select-all-button/chiseled_bookshelf_occupied.png";
@@ -279,6 +280,7 @@ function updateSelectedTweaks() {
   if (selectedTweaks.length == 0) {
     const tweakItem = document.createElement("div");
     tweakItem.className = "tweak-list-pack";
+    tweakItem.setAttribute("no-pack", "");
     tweakItem.textContent = "Select some packs and see them appear here!";
     document.getElementById("selected-tweaks").appendChild(tweakItem);
   }
@@ -331,11 +333,13 @@ if (loadedparams.has("st_raw")) {
 function getTimeoutDuration() {
   // for people who want instant stuff
   const mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
-  return mediaQuery.matches ? 0 : 487.5;
+  return mediaQuery.matches ? 0 : 1000;
 }
 // toggle category
-function toggleCategory(label) {
-  fallbackCheckboxChecker();
+function toggleCategory(label, do_fallback=true) {
+  if (do_fallback) {
+    fallbackCheckboxChecker();
+  }
   const tweaksContainer = label.parentElement.querySelector(
     ".category-controlled",
   );
@@ -349,6 +353,7 @@ function toggleCategory(label) {
       tweaksContainer.style.display = "none";
       selectallbutton.style.display = "none";
     }, timeoutDuration); // Matches the transition duration
+    OreUI.becomeInactive(label);
   } else {
     // open category
     tweaksContainer.style.display = "block";
@@ -368,6 +373,7 @@ function toggleCategory(label) {
       outerCatContainer.style.maxHeight =
         outerCatContainer.scrollHeight + tweaksContainer.scrollHeight + "px";
     }
+    OreUI.becomeActive(label);
   }
 }
 
@@ -399,9 +405,9 @@ function downloadSelectedTweaks() {
   // fetch
   fetchPack("https", jsonData, packName, mcVersion);
 }
-const serverip = "localhost";
 
 function fetchPack(protocol, jsonData, packName, mcVersion) {
+  const serverip = "localhost";
   // get download button
   var downloadbutton = document.getElementsByClassName(
     "download-selected-button",
@@ -719,22 +725,28 @@ function updateCategoryHeight() {
 }
 
 window.addEventListener("resize", updateCategoryHeight);
+var fallbackCheckboxesChecked = false;
 
 function fallbackCheckboxChecker() {
-  document
-    .querySelectorAll("input[type='checkbox']:checked")
-    .forEach((checkbox) => {
-      const tweak = checkbox.parentElement.parentElement;
-      if (tweak) {
-        const checkboxState = OreUI.getCurrentState(tweak);
-        if (checkboxState === "inactive") {
-          OreUI.becomeActive(tweak);
-          console.warn(
-            "[%ccheckbox%c]\nCheckbox state mismatched with oreUI state, using fallback script",
-            "color: orange",
-            "color: initial",
-          );
+  if (!fallbackCheckboxesChecked) {
+    document
+      .querySelectorAll("input[type='checkbox']:checked")
+      .forEach((checkbox) => {
+        const tweak = checkbox.parentElement.parentElement;
+        if (tweak) {
+          const checkboxState = OreUI.getCurrentState(tweak);
+          if (checkboxState === "inactive") {
+            OreUI.becomeActive(tweak);
+            console.warn(
+              "[%ccheckbox%c]\nCheckbox state mismatched with oreUI state, using fallback script",
+              "color: orange",
+              "color: initial",
+            );
+          }
         }
-      }
-    });
+      });
+    updateSelectedTweaks();
+    updateDownloadButton(getSelectedTweaks());
+    fallbackCheckboxesChecked = true;
+  }
 }

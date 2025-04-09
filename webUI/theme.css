@@ -1,5 +1,18 @@
 /* Custom Font */
-@import url("https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap");
+
+@font-face {
+  font-family: "Futura Heavy";
+  src: url("font/Futura_Heavy.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Futura Medium";
+  src: url("font/Futura_Medium.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
 
 /*************\
 | OreUI HTML  |
@@ -69,8 +82,8 @@
     position: absolute;
     content: "";
     bottom: calc(-3px - var(--bezel-size));
-    left: -5px;
-    right: -5px;
+    left: -3px;
+    right: -3px;
     height: var(--bezel-size);
     transform: translateY(0);
     pointer-events: none;
@@ -277,15 +290,13 @@
   padding: var(--padding);
   text-align: center;
   outline: 2.5px solid var(--outer-bezel-black);
-  outline-offset: -2.5px;
+  outline-offset: -2px;
 }
 [oreui-type="input"] {
   background: rgb(51, 51, 51);
-  outline-style: solid;
-  outline-color: rgb(27, 27, 27);
-  outline-width: 2.5px;
+  outline: 2.5px solid var(--outer-bezel-black);
   box-shadow: inset 0 5px 0 0 rgb(35, 35, 35);
-  outline-offset: -2.5px;
+  outline-offset: -2px;
   color: white;
   &:focus {
     outline-color: white;
@@ -355,16 +366,17 @@
 
 :root {
   --dark-zero: rgb(61, 62, 63);
-  --leftmargin: 2.5%;
-  --rightmargin: 325px;
-  --font: "Pixelify Sans", white;
+  --leftmargin: 15px;
+  --rightmargin: 250px;
+  --font: "Futura Medium", white;
+  --transition-duration: 1s;
 }
 
 a {
   &:active {
     background-color: transparent;
     color: white;
-    font-weight: bold;
+    font-family: "Futura Heavy";
     text-decoration: underline;
   }
 
@@ -422,6 +434,8 @@ li {
 select {
   color: white;
   font-family: var(--font);
+  text-align: center;
+  text-align-last: center;
 }
 #background-container {
   background-size: cover;
@@ -442,11 +456,12 @@ select {
 
 #selected-tweaks {
   display: none;
-  margin: auto;
   overflow-y: auto;
-  padding: 5px;
+  padding: 0px 5px 5px 5px;
   text-align: center;
-  width: 75%;
+  &:has(> [no-pack]) {
+    padding: 5px;
+  }
 }
 
 #title {
@@ -473,12 +488,21 @@ select {
   position: relative;
   display: none;
   max-height: 0;
-  overflow: hidden;
-  padding: 7.5px 10px !important;
+  z-index: 1;
   bottom: -2.5px;
+  right: -0.5px;
+  overflow-y: hidden;
+  padding: 0px 10px 0 10px;
+  margin-top: -40px;
+  margin-bottom: 40px;
+  &[style*="max-height"] {
+    padding: 40px 10px 12.5px 10px !important;
+    margin-bottom: 0px !important;
+  }
 }
 
 .category-label {
+  position: relative;
   cursor: pointer;
   font-size: 20px;
   height: auto;
@@ -505,6 +529,7 @@ select {
   right: 12.5px;
   transform: translateY(-108%);
   width: 30px;
+  z-index: 14;
   &.sub {
     transform: translate(-25%, -108%);
   }
@@ -540,8 +565,9 @@ select {
   display: none;
   font-size: 13px;
   left: 50%;
+  width: calc(100% - 20px);
+  word-wrap: anywhere;
   padding: 5px;
-  position: absolute;
   text-align: center;
   transform: translateX(-50%);
   z-index: 100;
@@ -571,6 +597,7 @@ select {
 [class^="desc"] {
   margin-top: 0;
   margin-bottom: 0;
+  font-size: 0.875em;
 }
 
 .desc-error {
@@ -586,17 +613,31 @@ select {
 }
 
 .download-container {
-  background: var(--dark-bg);
-  border-color: var(--dark-border);
+  background: var(--dark-bezel);
+  padding: 15px;
   border-radius: 10px;
-  border-style: solid;
-  border-width: 5px;
   height: auto;
   position: fixed;
-  right: 25px;
-  top: calc(100vh - 175px);
-  width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  bottom: 10px;
+  right: 10px;
+  width: 200px;
   z-index: 10;
+  input[type="text"] {
+    padding: 5px 12.5px;
+    &::placeholder {
+      color: #dddddd;
+      text-align: center;
+    }
+  }
+  select {
+    font-family: var(--font);
+    padding-left: 17.5px;
+    padding-right: 17.5px;
+  }
 }
 
 .download-selected-button {
@@ -604,38 +645,12 @@ select {
   cursor: pointer;
   display: block;
   font-family: var(--font);
-  margin: 10px auto;
-  padding: 10px;
+  padding-left: 17.5px;
+  padding-right: 17.5px;
   text-align: center;
-  width: 83%;
   &[oreui-active-color="red"] {
     font-size: 0.875em;
     padding: 5px;
-  }
-}
-
-.file-download {
-  font-family: var(--font);
-  text-align: center;
-  button {
-    font-family: var(--font);
-    font-size: 16px;
-    margin: 5px;
-    padding: 10px;
-  }
-  input[type="text"] {
-    margin-bottom: 5px;
-    margin-top: 10px;
-    padding: 10px 17.5px;
-    width: 193px;
-    &::placeholder {
-      color: #dddddd;
-    }
-  }
-  select {
-    font-family: var(--font);
-    padding-left: 17.5px;
-    padding-right: 17.5px;
   }
 }
 
@@ -661,6 +676,10 @@ select {
   right: 0;
   top: 0;
   bottom: 0;
+}
+
+.image-container {
+  margin-top: 45px;
 }
 
 .mev option {
@@ -712,7 +731,7 @@ select {
   text-decoration: underline;
   transition: font-size 0.25s ease;
   &:hover {
-    text-decoration: bold;
+    font-family: "Futura Heavy";
     font-size: 1.05em;
   }
 }
@@ -730,19 +749,7 @@ select {
 }
 
 .subcategory {
-  margin-bottom: 15px;
-  margin-left: 2.5%;
-  margin-top: 15px;
-  width: 95%;
-}
-
-.subcattweaks {
-  align-items: top;
-  display: grid;
-  gap: 10px;
-  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-  margin-top: 10px;
-  text-align: center;
+  width: 100%;
 }
 
 .tile {
@@ -775,12 +782,16 @@ select {
 .tweak-info {
   margin-left: -5px;
   margin-right: -5px;
+  > img {
+    image-rendering: pixelated;
+  }
 }
 
 .tweak-list-category {
   display: none;
   font-size: 1.2em;
-  font-weight: bold;
+  font-family: "Futura Heavy";
+  text-decoration: underline;
   margin-top: 5px;
 }
 
@@ -792,13 +803,15 @@ select {
   font-size: 1.2em;
 }
 
-.tweaks {
+.tweaks, .subcattweaks {
   align-items: top;
   display: grid;
   gap: 10px;
   grid-template-columns: repeat(auto-fit, minmax(137.5px, 1fr));
-  margin: 10px;
+  margin: 20px;
   text-align: center;
+  z-index: 1;
+  pointer-events: none;
 }
 
 .zipinputcontainer {
@@ -817,12 +830,6 @@ select {
   }
 }
 
-@media (max-height: 262px) and (min-width: 768px) {
-  #selected-tweaks {
-    display: none;
-  }
-}
-
 @media (min-width: 768px) {
   body {
     display: flex;
@@ -833,6 +840,7 @@ select {
   #selected-tweaks {
     display: block;
     max-height: 40vh;
+    margin-top: -5px;
   }
 
   #title {
@@ -855,11 +863,11 @@ select {
     background: #0000007f;
     border-color: #00000000;
     height: auto;
-    padding: 10px 0px;
-    position: fixed;
-    right: 25px;
-    top: 12.5%;
-    width: 275px;
+    padding: 20px;
+    right: 15px;
+    top: 15vh;
+    bottom: unset !important;
+    width: 180px;
   }
 
   .large-nav {
@@ -896,52 +904,55 @@ select {
     height: auto;
     justify-content: center;
     position: relative;
-    margin: 10px 0;
-    width: 189px;
-    left: 23px;
     --bezel-size: 2px;
-    & .selectedFile {
-      font-size: 0.9em;
-      font-weight: bold;
-    }
   }
 }
 
 @media (prefers-reduced-motion: no-preference) {
   div {
     transition:
-      margin-right 0.5s ease-in-out,
-      margin-left 0.5s ease-in-out;
+      margin-right var(--transition-duration) ease-in-out,
+      margin-left var(--transition-duration) ease-in-out;
   }
 
   #selected-tweaks {
     transition:
-      height 0.5s ease-in-out,
-      max-height 0.5s ease-in-out;
+      height var(--transition-duration) ease-in-out,
+      max-height var(--transition-duration) ease-in-out;
   }
 
   #title {
     transition:
-      left 0.5s ease-in-out,
-      right 0.5s ease-in-out,
-      width 0.5s ease-in-out;
+      left var(--transition-duration) ease-in-out,
+      right var(--transition-duration) ease-in-out,
+      width var(--transition-duration) ease-in-out;
   }
 
   .category-controlled {
-    transition: max-height 0.5s ease-in-out;
+    transition:
+      max-height var(--transition-duration) ease-in-out,
+      padding calc(var(--transition-duration) * 0.1) ease-in-out calc(var(--transition-duration) * 0.9),
+      margin-bottom calc(var(--transition-duration) * 0.1) ease-in-out calc(var(--transition-duration) * 0.9);
+    &[style*="max-height"] {
+      transition:
+      max-height var(--transition-duration) ease-in-out,
+      padding calc(var(--transition-duration) * 0.1) ease-in-out calc(var(--transition-duration) * 0.1),
+      margin-bottom calc(var(--transition-duration) * 0.1) ease-in-out calc(var(--transition-duration) * 0.1);
+    }
   }
 
   .download-container {
     transition:
-      right 0.5s ease-in-out,
-      top 0.5s ease-in-out,
-      width 0.5s ease-in-out;
+      right var(--transition-duration) ease-in-out,
+      top var(--transition-duration) ease-in-out,
+      width var(--transition-duration) ease-in-out,
+      bottom var(--transition-duration) ease-in-out;
   }
 
-  [class^="nav"] {
-    transition: transform 0.5s ease-in-out;
+  [class$="nav"] {
+    transition: transform var(--transition-duration) ease-in-out;
   }
   .category-label-selectall {
-    transition: opacity 0.5s ease-in-out;
+    transition: opacity var(--transition-duration) ease-in-out;
   }
 }
