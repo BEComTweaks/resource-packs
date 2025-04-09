@@ -812,7 +812,6 @@ select {
   margin: 20px;
   text-align: center;
   z-index: 1;
-  pointer-events: none;
 }
 
 .zipinputcontainer {
