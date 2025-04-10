@@ -15,6 +15,7 @@ from markdown import markdown
 from bs4 import BeautifulSoup
 from lzstring import LZString
 
+packs_supported = ["rp"]
 category_start = '<div class="category"><div oreui-type="button" oreui-color="dark" class="category-label" onclick="toggleCategory(this);">topic_name</div><button class="category-label-selectall" onclick="selectAll(this)" data-allpacks="<all_packs>" data-category="topic_name"><img src="images/select-all-button/chiseled_bookshelf_empty.png" class="category-label-selectall-img"><div class="category-label-selectall-hovertext">Select All</div></button><div class="category-controlled" oreui-color="dark" oreui-type="general"><div class="tweaks">'
 subcategory_start = '<div class="subcategory"><div oreui-type="button" class="category-label" oreui-color="dark" onclick="OreUI.toggleActive(this);toggleCategory(this);">topic_name</div><button class="category-label-selectall sub" onclick="selectAll(this)" data-allpacks="<all_packs>" data-category="<topic_name>"><img src="images/select-all-button/chiseled_bookshelf_empty.png" class="category-label-selectall-img"><div class="category-label-selectall-hovertext">Select All</div></button><div class="category-controlled" oreui-color="dark" oreui-type="general"><div class="subcattweaks">'
 pack_start = '<div class="tweak" onclick="toggleSelection(this);" data-category="topic_name" data-name="pack_id" data-index="pack_index" oreui-type="button" oreui-color="dark" oreui-active-color="green">'
@@ -127,18 +128,24 @@ if "site" not in args.build or ("site" in args.build and (args.only_update_html 
                             print(f"--> [yellow]Why does {os.path.relpath(build_dir, cdir())}/files exist?")
                         for folder in os.listdir("build"):
                             if folder.endswith("bp"):
-                                if ".gitkeep" in os.listdir(f"build/{folder}"):
+                                if ".gitkeep" in os.listdir(f"build/{folder}") or "bp" not in packs_supported:
                                     shutil.rmtree(f"build/{folder}", onerror=remove_readonly)
                                 else:
-                                    os.rename(f"{build_dir}/build/{folder}", f"{build_dir}/files/bp")
+                                    if "rp" in packs_supported:
+                                        os.rename(f"{build_dir}/build/{folder}", f"{build_dir}/files/bp")
+                                    else:
+                                        os.rename(f"{build_dir}/build/{folder}", f"{build_dir}/files")
                             elif folder.endswith("rp"):
-                                if ".gitkeep" in os.listdir(f"build/{folder}"):
+                                if ".gitkeep" in os.listdir(f"build/{folder}") or "rp" not in packs_supported:
                                     shutil.rmtree(f"build/{folder}", onerror=remove_readonly)
                                 else:
-                                    os.rename(f"{build_dir}/build/{folder}", f"{build_dir}/files/rp")
+                                    if "bp" in packs_supported:
+                                        os.rename(f"{build_dir}/build/{folder}", f"{build_dir}/files/rp")
+                                    else:
+                                        os.rename(f"{build_dir}/build/{folder}", f"{build_dir}/files")
                             else:
                                 print(f"[red]Unknown folder found in {os.path.relpath(os.getcwd(), cdir())}/build/: [yellow]{folder}")
-                        # now move to proper folder
+                    # now move to proper folder
                     os.chdir(cdir())
                 # Updates Incomplete Packs
                 pack_exists = False
@@ -287,20 +294,30 @@ if "site" not in args.build or ("site" in args.build and (args.only_update_html 
                 if os.path.exists("build"):
                     print(f"--> [yellow]Fixing build folder...")
                     build_dir = f"{category_loc}/{file["packs"][i]["pack_id"]}"
+                    try:
+                        os.mkdir(f"{build_dir}/files")
+                    except FileExistsError:
+                        print(f"--> [yellow]Why does {os.path.relpath(build_dir, cdir())}/files exist?")
                     for folder in os.listdir("build"):
                         if folder.endswith("bp"):
-                            if ".gitkeep" in os.listdir(f"build/{folder}"):
+                            if ".gitkeep" in os.listdir(f"build/{folder}") or "bp" not in packs_supported:
                                 shutil.rmtree(f"build/{folder}", onerror=remove_readonly)
                             else:
-                                os.rename(f"{build_dir}/build/{folder}", f"{build_dir}/files/bp")
+                                if "rp" in packs_supported:
+                                    os.rename(f"{build_dir}/build/{folder}", f"{build_dir}/files/bp")
+                                else:
+                                    os.rename(f"{build_dir}/build/{folder}", f"{build_dir}/files")
                         elif folder.endswith("rp"):
-                            if ".gitkeep" in os.listdir(f"build/{folder}"):
+                            if ".gitkeep" in os.listdir(f"build/{folder}") or "rp" not in packs_supported:
                                 shutil.rmtree(f"build/{folder}", onerror=remove_readonly)
                             else:
-                                os.rename(f"{build_dir}/build/{folder}", f"{build_dir}/files/rp")
+                                if "bp" in packs_supported:
+                                    os.rename(f"{build_dir}/build/{folder}", f"{build_dir}/files/rp")
+                                else:
+                                    os.rename(f"{build_dir}/build/{folder}", f"{build_dir}/files")
                         else:
                             print(f"[red]Unknown folder found in {os.path.relpath(os.getcwd(), cdir())}/build/: [yellow]{folder}")
-                    # now move to proper folder
+                # now move to proper folder
                 os.chdir(cdir())
             # Updates Incomplete Packs
             pack_exists = False
