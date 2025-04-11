@@ -87,9 +87,43 @@
    <p class="loading-status">
    </p>
   </div>
+  <div class="devtools" oreui-color="dark" oreui-type="general">
+   <h3>
+    Devtools
+   </h3>
+   <div class="devtools-toggle-console">
+    <label class="switch">
+     <input type="checkbox"/>
+     <span class="slider">
+     </span>
+    </label>
+    <p>
+     Enable Console
+    </p>
+   </div>
+   <code class="devtools-console" oreui-color="dark">
+    <h3>
+     Console
+    </h3>
+    <div class="devtools-console-content">
+    </div>
+   </code>
+   <div class="devtools-toggle-save-to-cache">
+    <label class="switch">
+     <input disabled="" type="checkbox"/>
+     <span class="slider">
+     </span>
+    </label>
+    <p>
+     Save settings to the browser cache
+    </p>
+   </div>
+  </div>
+  <div class="capture-exit" onclick="closePanel();">
+  </div>
   <script src="extra.js">
   </script>
-  <div class="image-container">
+  <div class="image-container" onclick="showDevToolsPanel();">
    <img alt="Resource Packs" id="title" src="images/title.png"/>
   </div>
   <div class="preselected" oreui-color="dark" oreui-type="general">
@@ -640,7 +674,7 @@
       </div>
      </div>
      <div class="subcategory">
-      <div class="category-label" onclick="OreUI.toggleActive(this);toggleCategory(this);" oreui-color="dark" oreui-type="button">
+      <div class="category-label" onclick="toggleCategory(this);" oreui-color="dark" oreui-type="button">
        Aesthetic &gt;
        <b>
         More Zombies
@@ -1045,7 +1079,7 @@
       </div>
      </div>
      <div class="subcategory">
-      <div class="category-label" onclick="OreUI.toggleActive(this);toggleCategory(this);" oreui-color="dark" oreui-type="button">
+      <div class="category-label" onclick="toggleCategory(this);" oreui-color="dark" oreui-type="button">
        Terrain &gt;
        <b>
         Lower and Sides
@@ -1725,7 +1759,7 @@
       </div>
      </div>
      <div class="subcategory">
-      <div class="category-label" onclick="OreUI.toggleActive(this);toggleCategory(this);" oreui-color="dark" oreui-type="button">
+      <div class="category-label" onclick="toggleCategory(this);" oreui-color="dark" oreui-type="button">
        Peace and Quiet &gt;
        <b>
         Mobs
@@ -2865,7 +2899,7 @@
       </div>
      </div>
      <div class="subcategory">
-      <div class="category-label" onclick="OreUI.toggleActive(this);toggleCategory(this);" oreui-color="dark" oreui-type="button">
+      <div class="category-label" onclick="toggleCategory(this);" oreui-color="dark" oreui-type="button">
        Utility &gt;
        <b>
         Directional
@@ -2980,7 +3014,7 @@
       </div>
      </div>
      <div class="subcategory">
-      <div class="category-label" onclick="OreUI.toggleActive(this);toggleCategory(this);" oreui-color="dark" oreui-type="button">
+      <div class="category-label" onclick="toggleCategory(this);" oreui-color="dark" oreui-type="button">
        Utility &gt;
        <b>
         Growth Stages
@@ -3757,7 +3791,7 @@
       </div>
      </div>
      <div class="subcategory">
-      <div class="category-label" onclick="OreUI.toggleActive(this);toggleCategory(this);" oreui-color="dark" oreui-type="button">
+      <div class="category-label" onclick="toggleCategory(this);" oreui-color="dark" oreui-type="button">
        GUI &gt;
        <b>
         Crosshairs
@@ -3943,7 +3977,7 @@
       </div>
      </div>
      <div class="subcategory">
-      <div class="category-label" onclick="OreUI.toggleActive(this);toggleCategory(this);" oreui-color="dark" oreui-type="button">
+      <div class="category-label" onclick="toggleCategory(this);" oreui-color="dark" oreui-type="button">
        GUI &gt;
        <b>
         Hearts
@@ -4141,7 +4175,7 @@
       </div>
      </div>
      <div class="subcategory">
-      <div class="category-label" onclick="OreUI.toggleActive(this);toggleCategory(this);" oreui-color="dark" oreui-type="button">
+      <div class="category-label" onclick="toggleCategory(this);" oreui-color="dark" oreui-type="button">
        GUI &gt; Hearts &gt;
        <b>
         LGBTQ+ Pride
@@ -4471,7 +4505,7 @@
       </div>
      </div>
      <div class="subcategory">
-      <div class="category-label" onclick="OreUI.toggleActive(this);toggleCategory(this);" oreui-color="dark" oreui-type="button">
+      <div class="category-label" onclick="toggleCategory(this);" oreui-color="dark" oreui-type="button">
        GUI &gt;
        <b>
         Hunger Bars
@@ -4885,7 +4919,7 @@
       </div>
      </div>
      <div class="subcategory">
-      <div class="category-label" onclick="OreUI.toggleActive(this);toggleCategory(this);" oreui-color="dark" oreui-type="button">
+      <div class="category-label" onclick="toggleCategory(this);" oreui-color="dark" oreui-type="button">
        GUI &gt;
        <b>
         Hotbar Selector
@@ -5350,7 +5384,7 @@
       </div>
      </div>
      <div class="subcategory">
-      <div class="category-label" onclick="OreUI.toggleActive(this);toggleCategory(this);" oreui-color="dark" oreui-type="button">
+      <div class="category-label" onclick="toggleCategory(this);" oreui-color="dark" oreui-type="button">
        Menu Panoramas &gt;
        <b>
         Xisuma's Hermitcraft Bases
@@ -6297,7 +6331,7 @@
       </div>
      </div>
      <div class="subcategory">
-      <div class="category-label" onclick="OreUI.toggleActive(this);toggleCategory(this);" oreui-color="dark" oreui-type="button">
+      <div class="category-label" onclick="toggleCategory(this);" oreui-color="dark" oreui-type="button">
        World of Color &gt;
        <b>
         Colorful Slime
@@ -6571,7 +6605,7 @@
       </div>
      </div>
      <div class="subcategory">
-      <div class="category-label" onclick="OreUI.toggleActive(this);toggleCategory(this);" oreui-color="dark" oreui-type="button">
+      <div class="category-label" onclick="toggleCategory(this);" oreui-color="dark" oreui-type="button">
        World of Color &gt;
        <b>
         Elytra
@@ -6769,7 +6803,7 @@
       </div>
      </div>
      <div class="subcategory">
-      <div class="category-label" onclick="OreUI.toggleActive(this);toggleCategory(this);" oreui-color="dark" oreui-type="button">
+      <div class="category-label" onclick="toggleCategory(this);" oreui-color="dark" oreui-type="button">
        World of Color &gt;
        <b>
         Enchantment Glints

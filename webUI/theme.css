@@ -14,6 +14,13 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: "CaskaydiaMono";
+  src: url("font/CaskaydiaMono_Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 /*************\
 | OreUI HTML  |
 \*************/
@@ -467,7 +474,6 @@ select {
 #title {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   height: auto;
-  margin-top: 35px;
   position: relative;
   size: cover;
   text-align: center;
@@ -487,6 +493,7 @@ select {
 .category-controlled {
   position: relative;
   display: none;
+  gap: 10px;
   max-height: 0;
   z-index: 1;
   bottom: -2.5px;
@@ -554,30 +561,6 @@ select {
   width: auto;
 }
 
-.comp-hover-text {
-  bottom: 100%;
-  transform: translate(-50%, 100%) !important;
-}
-
-[class$="hover-text"] {
-  position: absolute;
-  border-radius: 3px;
-  display: none;
-  font-size: 13px;
-  left: 50%;
-  width: calc(100% - 20px);
-  word-wrap: anywhere;
-  padding: 5px;
-  text-align: center;
-  transform: translateX(-50%);
-  z-index: 100;
-  font-size: inherit;
-}
-
-.conf-hover-text {
-  bottom: 0%;
-}
-
 .container {
   background: #0000007f;
   border-radius: 5px;
@@ -592,24 +575,6 @@ select {
   padding: 20px;
   z-index: 5;
   text-align: left;
-}
-
-[class^="desc"] {
-  margin-top: 0;
-  margin-bottom: 0;
-  font-size: 0.875em;
-}
-
-.desc-error {
-  color: red;
-}
-
-.desc-info {
-  color: cyan;
-}
-
-.desc-warn {
-  color: orange;
 }
 
 .download-container {
@@ -669,7 +634,8 @@ select {
 }
 
 .half-dark,
-.loading-screen {
+.loading-screen,
+.capture-exit {
   background: #0000007f;
   position: fixed;
   z-index: 0;
@@ -679,8 +645,132 @@ select {
   bottom: 0;
 }
 
+.devtools {
+  display: flex;
+  justify-content: baseline;
+  padding-top: 0;
+  padding-left: 10px;
+  align-items: baseline;
+  flex-direction: column;
+  left: 12.5vw;
+  right: 12.5vw;
+  top: 12.5vh;
+  bottom: 12.5vh;
+  position: fixed;
+  z-index: 75;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  transform: translateY(-150vh);
+  > h3 {
+    margin-top: 10px;
+    margin-bottom: 0;
+  }
+}
+
+[class^="devtools-toggle"] {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-right: 15px;
+  > p {
+    transform: translateY(0) translateX(1em);
+    text-wrap: word;
+    margin-right: 15px;
+  }
+  > .switch {
+    top: 10px;
+  }
+}
+
+.devtools-toggle-console:has(> label > input:checked) ~ .devtools-console {
+  display: flex;
+}
+
+.devtools-console {
+  font-family: "CaskaydiaMono";
+  display: none;
+  flex-direction: column;
+  align-items: baseline;
+  padding: 10px;
+  background-color: rgb(12, 12, 13);
+  width: -webkit-fill-available;
+  position: relative;
+  > h3 {
+    margin-top: -5px;
+    margin-bottom: 5px;
+    left: 0;
+    border-bottom: 2px solid white;
+  }
+  > .devtools-console-content {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    word-wrap: anywhere;
+    text-align: left;
+    gap: 5px;
+  }
+}
+
+/* Adapted from https://uiverse.io/aasisodiya/sour-horse-29 */
+.switch {
+  font-size: 1rem;
+  position: relative;
+  display: inline-block;
+  width: 4em;
+  height: 2em;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.25);
+  transition: 0.4s;
+  border-radius: 0.5em;
+  box-shadow: 0 0.2em rgba(0, 0, 0, 0.5);
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 1.5em;
+  width: 1.4em;
+  border-radius: 0.3em;
+  left: 0.3em;
+  bottom: 0.7em;
+  background-color: var(--red-bg);
+  box-shadow: 0 0.4em rgba(0, 0, 0, 0.5);
+}
+
+.slider:hover::before {
+  box-shadow: 0 0.19em rgba(0, 0, 0, 0.5);
+  bottom: 0.5em;
+}
+
+input:checked + .slider:before {
+  transform: translateX(2em);
+  background: var(--green-bg);
+}
+
+.switch:has(> :is(input:disabled, input[disabled])) > .slider::before {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.capture-exit {
+  pointer-events: none;
+  z-index: 50;
+  opacity: 0;
+}
+
 .image-container {
-  margin-top: 45px;
+  margin-top: 62.5px;
+  margin-bottom: 12.5px;
 }
 
 .loader {
@@ -717,30 +807,6 @@ select {
   font-family: var(--font);
 }
 
-.nav-link:active {
-  background-color: transparent;
-  color: white;
-  text-decoration: underline;
-}
-
-.nav-link:hover {
-  background-color: transparent;
-  color: white;
-  text-decoration: underline;
-}
-
-.nav-link:link {
-  background-color: transparent;
-  color: white;
-  text-decoration: none;
-}
-
-.nav-link:visited {
-  background-color: transparent;
-  color: white;
-  text-decoration: none;
-}
-
 .preselected {
   position: fixed;
   z-index: 1000;
@@ -765,6 +831,7 @@ select {
     font-size: 1.05em;
   }
 }
+
 [class$="nav"] {
   background-color: #333;
   list-style-type: none;
@@ -775,11 +842,38 @@ select {
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 5;
+  z-index: 100;
+}
+
+.nav-link:active {
+  background-color: transparent;
+  color: white;
+  text-decoration: underline;
+}
+
+.nav-link:hover {
+  background-color: transparent;
+  color: white;
+  text-decoration: underline;
+}
+
+.nav-link:link {
+  background-color: transparent;
+  color: white;
+  text-decoration: none;
+}
+
+.nav-link:visited {
+  background-color: transparent;
+  color: white;
+  text-decoration: none;
 }
 
 .subcategory {
   width: 100%;
+  &:not(:last-child) {
+    margin-bottom: 20px;
+  }
 }
 
 .tile {
@@ -809,12 +903,53 @@ select {
   font-size: 0.99em;
 }
 
+[class^="desc"] {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 0.875em;
+}
+
+.desc-error {
+  color: red;
+}
+
+.desc-info {
+  color: cyan;
+}
+
+.desc-warn {
+  color: orange;
+}
+
 .tweak-info {
   margin-left: -5px;
   margin-right: -5px;
   > img {
     image-rendering: pixelated;
   }
+}
+.comp-hover-text {
+  bottom: 100%;
+  transform: translate(-50%, 100%) !important;
+}
+
+[class$="hover-text"] {
+  position: absolute;
+  border-radius: 3px;
+  display: none;
+  font-size: 13px;
+  left: 50%;
+  width: calc(100% - 20px);
+  word-wrap: anywhere;
+  padding: 5px;
+  text-align: center;
+  transform: translateX(-50%);
+  z-index: 100;
+  font-size: inherit;
+}
+
+.conf-hover-text {
+  bottom: 0%;
 }
 
 .tweak-list-category {
@@ -987,6 +1122,12 @@ select {
     transition: transform var(--transition-duration) ease-in-out;
   }
   .category-label-selectall {
+    transition: opacity var(--transition-duration) ease-in-out;
+  }
+  .devtools {
+    transition: transform var(--transition-duration) ease-in-out;
+  }
+  .capture-exit {
     transition: opacity var(--transition-duration) ease-in-out;
   }
 }

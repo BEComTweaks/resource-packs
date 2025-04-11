@@ -221,17 +221,19 @@ function toggleSelection(element) {
   const checkbox = element.querySelector('input[type="checkbox"]');
   if (checkbox.checked) {
     disableSelection(element, checkbox);
-    console.log(
-      `[%cselection%c]\nUnselected ${element.dataset.name}`,
-      "color: green",
-      "color: initial",
+    consoler(
+      "selection",
+      "green",
+      `Unselected ${element.dataset.name}`,
+      "white",
     );
   } else {
     enableSelection(element, checkbox);
-    console.log(
-      `[%cselection%c]\nSelected ${element.dataset.name}`,
-      "color: green",
-      "color: initial",
+    consoler(
+      "selection",
+      "green",
+      `Selected ${element.dataset.name}`,
+      "white",
     );
   }
   fallbackCheckboxChecker();
@@ -353,8 +355,18 @@ const loadedparams = new URLSearchParams(window.location.search);
 if (loadedparams.has("st_raw")) {
   const st_raw = loadedparams.get("st_raw");
   const st = JSON.parse(LZString.decompressFromEncodedURIComponent(st_raw));
-  console.log("Found query params, loading selected packs...");
-  console.log(st);
+  consoler(
+    "query",
+    "pink",
+    `Found query params, loading selected packs...`,
+    "white",
+  );
+  consoler(
+    "query",
+    "pink",
+    `Selected packs: ${st["raw"].join(", ")}`,
+    "cyan",
+  );
   processJsonData(st, "select");
   updateDownloadButton(st);
   const preselectAlerter = document.getElementsByClassName("preselected")[0];
@@ -373,10 +385,8 @@ function getTimeoutDuration() {
   return mediaQuery.matches ? 0 : 1000;
 }
 // toggle category
-function toggleCategory(label, do_fallback = true) {
-  if (do_fallback) {
-    fallbackCheckboxChecker();
-  }
+function toggleCategory(label) {
+  fallbackCheckboxChecker();
   const tweaksContainer = label.parentElement.querySelector(
     ".category-controlled",
   );
@@ -420,10 +430,11 @@ function downloadSelectedTweaks() {
   document.querySelector(".loading-screen").style =
     "opacity: 1; pointer-events: all;";
   var mcVersion = document.getElementById("mev").value;
-  console.log(
-    `[%cdownload%c]\nMinimum Engine Version is set to ${mcVersion}`,
-    "color: cyan",
-    "color: initial",
+  consoler(
+    "download",
+    "cyan",
+    `Minimum Engine Version is set to ${mcVersion}`,
+    "white",
   );
   // set pack name
   var packName = document.getElementById("fileNameInput").value;
@@ -434,10 +445,11 @@ function downloadSelectedTweaks() {
     )}`;
   }
   packName = packName.replaceAll("/", "-");
-  console.log(
-    `[%cdownload%c]\nPack Name is set to ${packName}`,
-    "color: cyan",
-    "color: initial",
+  consoler(
+    "download",
+    "cyan",
+    `Pack Name is set to ${packName}`,
+    "white",
   );
   // get selected tweaks
   jsonData = getSelectedTweaks();
@@ -469,7 +481,12 @@ function fetchPack(protocol, jsonData, packName, mcVersion) {
   }
   // become active
   OreUI.becomeDisabled(downloadbutton);
-  console.log("[%cfetch%c]\nFetching pack...", "color: blue", "color: initial");
+  consoler(
+    "fetch",
+    "blue",
+    `Fetching pack with ${protocol} protocol...`,
+    "white",
+  );
   // fetch
   fetch(`${protocol}://${serverip}/export${typeOfPack}`, {
     method: "POST",
@@ -483,21 +500,23 @@ function fetchPack(protocol, jsonData, packName, mcVersion) {
     .then((response) => {
       // when the response doesnt feel good
       if (!response.ok) {
-        console.log(
-          "[%cerror%c]\nResponse was not ok",
-          "color: red",
-          "color: initial",
-        );
+        consoler(
+          "error",
+          "red",
+          `Response was not ok`,
+          "white",
+        )
         throw new Error(response);
       }
       return response.blob();
     })
     .then(async (blob) => {
       // pack received
-      console.log(
-        "[%cfetch%c]\nReceived pack!",
-        "color: blue",
-        "color: initial",
+      consoler(
+        "fetch",
+        "blue",
+        `Pack received!`,
+        "white",
       );
       statusElement.innerText = "Obtained pack!";
       // Download the file
@@ -516,32 +535,37 @@ function fetchPack(protocol, jsonData, packName, mcVersion) {
       document.querySelector(".loading-screen").removeAttribute("style");
     })
     .catch(async (error) => {
-      console.log(error);
+      consoler(
+        "error",
+        "red",
+        `Error Dump: ${error}`,
+        "white",
+      )
       // when the response doesnt send
       if (protocol === "https") {
-        console.log(
-          `[%cerror%c]\nHTTPS error, trying HTTP: %c${error}`,
-          "color: red",
-          "color: initial",
-          "color: red",
+        consoler(
+          "error",
+          "red",
+          `HTTPS error, trying HTTP`,
+          "white",
         );
         fetchPack("http", jsonData, packName, mcVersion); // Retry with HTTP
       } else {
         if (error.text !== undefined) {
           const errorText = await error.text();
-          console.log(
-            `[%cerror%c]\nError: %c${errorText}`,
-            "color: red",
-            "color: initial",
-            "color: red",
+          consoler(
+            "error",
+            "red",
+            `Error: ${errorText}`,
+            "white",
           );
           statusElement.innerText = `Status Code: ${error.status}`;
         } else {
-          console.log(
-            `[%cerror%c] Error: %c${error}`,
-            "color: red",
-            "color: initial",
-            "color: red",
+          consoler(
+            "error",
+            "red",
+            `Error: ${error}`,
+            "white",
           );
           statusElement.innerText =
             "Couldn't fetch pack. Check console for error log.";
@@ -571,35 +595,39 @@ function processJsonData(jsonData, dowhat) {
         if (dowhat == "select") {
           if (!div.querySelector('input[type="checkbox"]').checked) {
             enableSelection(div, div.querySelector('input[type="checkbox"]'));
-            console.log(
-              `[%cmass%c]\nSelected ${pack}`,
-              "color: green",
-              "color: initial",
-            );
+            consoler(
+              "selection",
+              "green",
+              `Selected ${pack}`,
+              "white",
+            )
           }
         } else if (dowhat == "unselect") {
           if (div.querySelector('input[type="checkbox"]').checked) {
             disableSelection(div, div.querySelector('input[type="checkbox"]'));
-            console.log(
-              `[%cmass%c]\nUnselected ${pack}`,
-              "color: green",
-              "color: initial",
+            consoler(
+              "selection",
+              "green",
+              `Unselected ${pack}`,
+              "white",
             );
           }
         }
       } else {
-        console.log(
-          `[%cerror%c]\nDiv with data-name="${pack}" not found.`,
-          "color: red",
-          "color: initial",
-        );
+        consoler(
+          "error",
+          "red",
+          `Div with data-name="${pack}" not found.`,
+          "white",
+        )
       }
     });
   } else {
-    console.log(
-      "[%cerror%c]\n%cThe 'raw' field in selected_packs.json is not an array.",
-      "color: red",
-      "color: initial",
+    consoler(
+      "error",
+      "red",
+      `The 'raw' field in selected_packs.json is not an array.`,
+      "white",
     );
   }
   updateSelectedTweaks();
@@ -626,10 +654,11 @@ function getSelectedTweaks() {
     jsonData[tweak.category].push(tweak.name);
   });
   jsonData.raw = selectedTweaks.map((tweak) => tweak.name);
-  console.log(
-    "[%cget%c]\nObtained selected tweaks!",
-    "color: purple",
-    "color: initial",
+  consoler(
+    "get",
+    "purple",
+    "Obtained Selected Tweaks!",
+    "white",
   );
   return jsonData;
 }
@@ -667,11 +696,11 @@ zipInput.addEventListener("change", function (event) {
                       ".download-selected-button",
                     ).disabled = false;
                   } catch (error) {
-                    console.log(
-                      `[%cerror%c]\nError parsing JSON: %c${error}`,
-                      "color: red",
-                      "color: initial",
-                      "color: red",
+                    consoler(
+                      "error",
+                      "red",
+                      `Error parsing JSON: ${error}`,
+                      "white",
                     );
                     selectedFile.innerText = "Invalid JSON in pack";
                     sleep(3000).then(() => {
@@ -680,11 +709,11 @@ zipInput.addEventListener("change", function (event) {
                   }
                 })
                 .catch(function (error) {
-                  console.log(
-                    `[%cerror%c]\nError extracting selected_packs.json: %c${error}`,
-                    "color: red",
-                    "color: initial",
-                    "color: red",
+                  consoler(
+                    "error",
+                    "red",
+                    `Error extracting selected_packs.json: ${error}`,
+                    "white",
                   );
                   selectedFile.innerText = "Invalid pack";
                   sleep(3000).then(() => {
@@ -695,10 +724,11 @@ zipInput.addEventListener("change", function (event) {
           });
 
           if (!fileFound) {
-            console.log(
-              `[%cerror%c]\nselected_packs.json not found in any folder within the ZIP file.`,
-              "color: red",
-              "color: initial",
+            consoler(
+              "error",
+              "red",
+              `selected_packs.json not found in any folder within the ZIP file.`,
+              "white",
             );
             selectedFile.innerText = "Invalid pack";
             sleep(3000).then(() => {
@@ -707,11 +737,11 @@ zipInput.addEventListener("change", function (event) {
           }
         })
         .catch(function (error) {
-          console.log(
-            `[%cerror%c]\nError reading ZIP file: %c${error}`,
-            "color: red",
-            "color: initial",
-            "color: red",
+          consoler(
+            "error",
+            "red",
+            `Error reading ZIP file: ${error}`,
+            "white",
           );
           selectedFile.innerText = "Invalid file";
           sleep(3000).then(() => {
@@ -721,10 +751,11 @@ zipInput.addEventListener("change", function (event) {
     };
     reader.readAsArrayBuffer(file);
   } else {
-    console.log(
-      `[%cerror%c]\nNo file selected.`,
-      "color: red",
-      "color: initial",
+    consoler(
+      "error",
+      "red",
+      `No file selected.`,
+      "white",
     );
   }
 });
@@ -759,6 +790,7 @@ var fallbackCheckboxesChecked = false;
 
 function fallbackCheckboxChecker() {
   if (!fallbackCheckboxesChecked) {
+    let warned = false;
     document
       .querySelectorAll("input[type='checkbox']:checked")
       .forEach((checkbox) => {
@@ -767,11 +799,15 @@ function fallbackCheckboxChecker() {
           const checkboxState = OreUI.getCurrentState(tweak);
           if (checkboxState === "inactive") {
             OreUI.becomeActive(tweak);
-            console.warn(
-              "[%ccheckbox%c]\nCheckbox state mismatched with oreUI state, using fallback script",
-              "color: orange",
-              "color: initial",
-            );
+            if (!warned) {
+              consoler(
+                "checkbox",
+                "orange",
+                `Checkbox state mismatched with oreUI state, using fallback script`,
+                "white",
+              );
+              warned = true;
+            }
           }
         }
       });

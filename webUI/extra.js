@@ -343,3 +343,55 @@ if (Math.random() <= 0.9) {
   </style>
   `;
 }
+
+/* sleep */
+function sleep(ms) {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+}
+/* instant */
+function getTimeoutDuration() {
+  // for people who want instant stuff
+  const mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
+  return mediaQuery.matches ? 0 : 1000;
+}
+
+/* devtools */
+function showDevToolsPanel() {
+  document.querySelector(".devtools").style.transform = "translateY(0)";
+  document.querySelector(".capture-exit").setAttribute("close", ".devtools");
+  document.querySelector(".capture-exit").style =
+    "opacity: 1; pointer-events: all;";
+}
+
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape") {
+    const captureExitElement = document.querySelector(".capture-exit");
+    if (captureExitElement.style !== "") {
+      captureExitElement.click(); // Simulate a click on the element
+    }
+  }
+});
+
+function closePanel() {
+  const element = document.querySelector(".capture-exit");
+  document
+    .querySelector(element.getAttribute("close"))
+    .removeAttribute("style");
+  element.removeAttribute("style");
+}
+
+/* consoler object */
+function consoler(logTag, logColour, logMessage, logMessageColour) {
+  const err = new Error();
+  const stack = err.stack.split("\n");
+  console.log(`[%c${logTag}%c] %c${stack[1]}%c\n%c${logMessage}`, `color: ${logColour}`, "color: white", "color: #4fa1ff", `color: ${logMessageColour}`);
+  if (document.querySelector(
+    ".devtools-toggle-console input[type='checkbox']"
+  ).checked) {
+    const consoleElement = document.querySelector(".devtools-console-content");
+    const log = document.createElement("div");
+    log.className = "devtools-console-log";
+    log.innerHTML = `[<span style="color: ${logColour}">${logTag}</span>] <span style="color: #4fa1ff">${stack[1]}</span><br><span style="color: ${logMessageColour}">${logMessage}</span>`;
+    consoleElement.appendChild(log);
+  }
+}
