@@ -229,12 +229,7 @@ function toggleSelection(element) {
     );
   } else {
     enableSelection(element, checkbox);
-    consoler(
-      "selection",
-      "green",
-      `Selected ${element.dataset.name}`,
-      "white",
-    );
+    consoler("selection", "green", `Selected ${element.dataset.name}`, "white");
   }
   fallbackCheckboxChecker();
   updateSelectedTweaks();
@@ -361,12 +356,7 @@ if (loadedparams.has("st_raw")) {
     `Found query params, loading selected packs...`,
     "white",
   );
-  consoler(
-    "query",
-    "pink",
-    `Selected packs: ${st["raw"].join(", ")}`,
-    "cyan",
-  );
+  consoler("query", "pink", `Selected packs: ${st["raw"].join(", ")}`, "cyan");
   processJsonData(st, "select");
   updateDownloadButton(st);
   const preselectAlerter = document.getElementsByClassName("preselected")[0];
@@ -445,12 +435,7 @@ function downloadSelectedTweaks() {
     )}`;
   }
   packName = packName.replaceAll("/", "-");
-  consoler(
-    "download",
-    "cyan",
-    `Pack Name is set to ${packName}`,
-    "white",
-  );
+  consoler("download", "cyan", `Pack Name is set to ${packName}`, "white");
   // get selected tweaks
   jsonData = getSelectedTweaks();
   // fetch
@@ -500,24 +485,14 @@ function fetchPack(protocol, jsonData, packName, mcVersion) {
     .then((response) => {
       // when the response doesnt feel good
       if (!response.ok) {
-        consoler(
-          "error",
-          "red",
-          `Response was not ok`,
-          "white",
-        )
+        consoler("error", "red", `Response was not ok`, "white");
         throw new Error(response);
       }
       return response.blob();
     })
     .then(async (blob) => {
       // pack received
-      consoler(
-        "fetch",
-        "blue",
-        `Pack received!`,
-        "white",
-      );
+      consoler("fetch", "blue", `Pack received!`, "white");
       statusElement.innerText = "Obtained pack!";
       // Download the file
       const url = window.URL.createObjectURL(blob);
@@ -535,38 +510,18 @@ function fetchPack(protocol, jsonData, packName, mcVersion) {
       document.querySelector(".loading-screen").removeAttribute("style");
     })
     .catch(async (error) => {
-      consoler(
-        "error",
-        "red",
-        `Error Dump: ${error}`,
-        "white",
-      )
+      consoler("error", "red", `Error Dump: ${error}`, "white");
       // when the response doesnt send
       if (protocol === "https") {
-        consoler(
-          "error",
-          "red",
-          `HTTPS error, trying HTTP`,
-          "white",
-        );
+        consoler("error", "red", `HTTPS error, trying HTTP`, "white");
         fetchPack("http", jsonData, packName, mcVersion); // Retry with HTTP
       } else {
         if (error.text !== undefined) {
           const errorText = await error.text();
-          consoler(
-            "error",
-            "red",
-            `Error: ${errorText}`,
-            "white",
-          );
+          consoler("error", "red", `Error: ${errorText}`, "white");
           statusElement.innerText = `Status Code: ${error.status}`;
         } else {
-          consoler(
-            "error",
-            "red",
-            `Error: ${error}`,
-            "white",
-          );
+          consoler("error", "red", `Error: ${error}`, "white");
           statusElement.innerText =
             "Couldn't fetch pack. Check console for error log.";
         }
@@ -595,22 +550,12 @@ function processJsonData(jsonData, dowhat) {
         if (dowhat == "select") {
           if (!div.querySelector('input[type="checkbox"]').checked) {
             enableSelection(div, div.querySelector('input[type="checkbox"]'));
-            consoler(
-              "selection",
-              "green",
-              `Selected ${pack}`,
-              "white",
-            )
+            consoler("selection", "green", `Selected ${pack}`, "white");
           }
         } else if (dowhat == "unselect") {
           if (div.querySelector('input[type="checkbox"]').checked) {
             disableSelection(div, div.querySelector('input[type="checkbox"]'));
-            consoler(
-              "selection",
-              "green",
-              `Unselected ${pack}`,
-              "white",
-            );
+            consoler("selection", "green", `Unselected ${pack}`, "white");
           }
         }
       } else {
@@ -619,7 +564,7 @@ function processJsonData(jsonData, dowhat) {
           "red",
           `Div with data-name="${pack}" not found.`,
           "white",
-        )
+        );
       }
     });
   } else {
@@ -654,12 +599,7 @@ function getSelectedTweaks() {
     jsonData[tweak.category].push(tweak.name);
   });
   jsonData.raw = selectedTweaks.map((tweak) => tweak.name);
-  consoler(
-    "get",
-    "purple",
-    "Obtained Selected Tweaks!",
-    "white",
-  );
+  consoler("get", "purple", "Obtained Selected Tweaks!", "white");
   return jsonData;
 }
 // Extra code to trigger file input
@@ -737,12 +677,7 @@ zipInput.addEventListener("change", function (event) {
           }
         })
         .catch(function (error) {
-          consoler(
-            "error",
-            "red",
-            `Error reading ZIP file: ${error}`,
-            "white",
-          );
+          consoler("error", "red", `Error reading ZIP file: ${error}`, "white");
           selectedFile.innerText = "Invalid file";
           sleep(3000).then(() => {
             selectedFile.innerText = "Upload pack";
@@ -751,12 +686,7 @@ zipInput.addEventListener("change", function (event) {
     };
     reader.readAsArrayBuffer(file);
   } else {
-    consoler(
-      "error",
-      "red",
-      `No file selected.`,
-      "white",
-    );
+    consoler("error", "red", `No file selected.`, "white");
   }
 });
 

@@ -384,10 +384,17 @@ function closePanel() {
 function consoler(logTag, logColour, logMessage, logMessageColour) {
   const err = new Error();
   const stack = err.stack.split("\n");
-  console.log(`[%c${logTag}%c] %c${stack[1]}%c\n%c${logMessage}`, `color: ${logColour}`, "color: white", "color: #4fa1ff", `color: ${logMessageColour}`);
-  if (document.querySelector(
-    ".devtools-toggle-console input[type='checkbox']"
-  ).checked) {
+  console.log(
+    `[%c${logTag}%c] %c${stack[1]}%c\n%c${logMessage}`,
+    `color: ${logColour}`,
+    "color: white",
+    "color: #4fa1ff",
+    `color: ${logMessageColour}`,
+  );
+  if (
+    document.querySelector(".devtools-toggle-console input[type='checkbox']")
+      .checked
+  ) {
     const consoleElement = document.querySelector(".devtools-console-content");
     const log = document.createElement("div");
     log.className = "devtools-console-log";
