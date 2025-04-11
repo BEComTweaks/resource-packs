@@ -389,8 +389,8 @@ function toggleCategory(label) {
     setTimeout(() => {
       tweaksContainer.style.display = "none";
       selectallbutton.style.display = "none";
+      OreUI.becomeInactive(label);
     }, timeoutDuration); // Matches the transition duration
-    OreUI.becomeInactive(label);
   } else {
     // open category
     tweaksContainer.style.display = "block";
