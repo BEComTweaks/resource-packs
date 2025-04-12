@@ -49,7 +49,7 @@ jobs:
           pnpm install
 
       - name: Run pre_commit.py
-        run: python pys/pre_commit.py --format --no-stash
+        run: python pys/pre_commit.py --format --no-stash --dev --pull-js --no-spinner --branch=${{ github.head_ref }}
 
       - name: Commit changes
         run: |

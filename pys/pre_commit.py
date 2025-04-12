@@ -14,6 +14,7 @@ from custom_functions import console
 from markdown import markdown
 from bs4 import BeautifulSoup
 from lzstring import LZString
+import requests
 
 packs_supported = ["rp"]
 category_start = '<div class="category"><div oreui-type="button" oreui-color="dark" class="category-label" onclick="toggleCategory(this);">topic_name</div><button class="category-label-selectall" onclick="selectAll(this)" data-allpacks="<all_packs>" data-category="topic_name"><img src="images/select-all-button/chiseled_bookshelf_empty.png" class="category-label-selectall-img"><div class="category-label-selectall-hovertext">Select All</div></button><div class="category-controlled" oreui-color="dark" oreui-type="general"><div class="tweaks">'
@@ -51,9 +52,12 @@ parser.add_argument('--build', '-b', help='Builds stuff based on specification. 
 parser.add_argument('--no-stash', '-ns', action='store_true', help='Does not stash changes')
 parser.add_argument('--quiet', '-q', action='store_true', help='Quieten outputs of run statements (the commands will still be shown)')
 parser.add_argument('--dev', '-d', action='store_true', help='Show time and lines of each print statement')
-parser.add_argument('--no-spinner', action='store_true', help='Disables the spinner from rich')
-parser.add_argument('--repo', help='Use a custom repo while building', default="BEComTweaks/resource-packs")
-parser.add_argument('--branch', help='Use a custom branch while building', default="main")
+parser.add_argument('--no-spinner', '-xs', action='store_true', help='Disables the spinner from rich')
+parser.add_argument('--repo', '-gr', help='Use a custom repo while building', default="BEComTweaks/resource-packs")
+parser.add_argument('--branch', '-gb', help='Use a custom branch while building', default="main")
+parser.add_argument('--pull-js', '-pjs', action='store_true', help="Pulls JS modules from their sources")
+parser.add_argument('--pull-css', '-pcss', action='store_true', help="Pulls CSS from https://github.com/becomtweaks/resource-packs")
+
 args = parser.parse_args()
 
 if args.build == "both":
@@ -490,6 +494,27 @@ if "site" not in args.build or ("site" in args.build and (args.only_update_html 
         print(f"[green]Files are Prettier!")
     elif not args.only_update_html:
         print(f"[yellow]Remember to format the files!")
+
+with spinner(f"[yellow]Updting resources from remote...", spinner="hamburger"):
+    def request_save_to(url="", filename=""):
+        with requests.get(url, stream=True) as response:
+            response.raise_for_status()
+            with open(filename, "w") as file:
+                for chunk in response.iter_content(chunk_size=8192):
+                    file.write(chunk.decode("utf-8"))
+    if args.pull_js:
+        # Ignore LZString, it is fine
+        # JSZip
+        request_save_to("https://raw.githubusercontent.com/Stuk/jszip/refs/heads/main/dist/jszip.min.js", f"{cdir()}/webUI/extras/jszip.min.js")
+        # swup
+        request_save_to("https://unpkg.com/swup@4", f"{cdir()}/webUI/extras/swup.min.js")
+        # swup plugins
+        request_save_to("https://unpkg.com/@swup/progress-plugin@3", f"{cdir()}/webUI/extras/swup-plugin-progress.min.js")
+    if args.pull_css and args.branch == "main":
+        # pull css 
+        request_save_to("https://raw.githubusercontent.com/becomtweaks/resource-packs/refs/heads/main/webUI/theme.css", f"{cdir()}/webUI/theme.css")
+    if spinner == emptySpinner:
+        print(f"[green]Updated files from remote!")
 
 if "site" in args.build:
     if not (args.only_update_html or args.only_update_jsons or args.format):
