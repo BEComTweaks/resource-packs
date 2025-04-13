@@ -506,10 +506,6 @@ with spinner(f"[yellow]Updting resources from remote...", spinner="hamburger"):
         # Ignore LZString, it is fine
         # JSZip
         request_save_to("https://raw.githubusercontent.com/Stuk/jszip/refs/heads/main/dist/jszip.min.js", f"{cdir()}/webUI/extras/jszip.min.js")
-        # swup
-        request_save_to("https://unpkg.com/swup@4", f"{cdir()}/webUI/extras/swup.min.js")
-        # swup plugins
-        request_save_to("https://unpkg.com/@swup/progress-plugin@3", f"{cdir()}/webUI/extras/swup-plugin-progress.min.js")
     if args.pull_css and args.branch == "main":
         # pull css 
         request_save_to("https://raw.githubusercontent.com/becomtweaks/resource-packs/refs/heads/main/webUI/theme.css", f"{cdir()}/webUI/theme.css")
