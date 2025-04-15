@@ -771,10 +771,12 @@ document
     }
   });
 
-document.querySelector(".devtools-toggle-tweak-per-column input[type='checkbox']").addEventListener(
-  "change",
-  function () {
-    const numberInput = this.parentElement.parentElement.querySelector("input[type='number']");
+document
+  .querySelector(".devtools-toggle-tweak-per-column input[type='checkbox']")
+  .addEventListener("change", function () {
+    const numberInput = this.parentElement.parentElement.querySelector(
+      "input[type='number']",
+    );
     if (this.checked) {
       numberInput.removeAttribute("disabled");
       numberInput.dispatchEvent(new Event("input"));
@@ -785,8 +787,7 @@ document.querySelector(".devtools-toggle-tweak-per-column input[type='checkbox']
         styleBlock.remove();
       }
     }
-  },
-);
+  });
 
 document.querySelectorAll("input[type=checkbox]").forEach((checkbox) => {
   checkbox.checked = false;
