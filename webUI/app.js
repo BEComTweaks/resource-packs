@@ -746,3 +746,48 @@ function fallbackCheckboxChecker() {
     fallbackCheckboxesChecked = true;
   }
 }
+
+document
+  .querySelector(".devtools-toggle-tweak-per-column input[type='number']")
+  .addEventListener("input", function () {
+    const checkbox = this.parentElement.querySelector("input[type='checkbox']");
+    if (checkbox && checkbox.checked) {
+      let styleBlock = document.querySelector("#dynamic-grid-style");
+
+      // If the style block doesn't exist, create it
+      if (!styleBlock) {
+        styleBlock = document.createElement("style");
+        styleBlock.id = "dynamic-grid-style";
+        document.head.appendChild(styleBlock);
+      }
+
+      // Update the styles for `.tweaks` and `.subcattweaks`
+      styleBlock.textContent = `
+        .tweaks, .subcattweaks {
+          grid-template-columns: repeat(${this.value}, 1fr) !important;
+        }
+      `;
+      updateCategoryHeight();
+    }
+  });
+
+document.querySelector(".devtools-toggle-tweak-per-column input[type='checkbox']").addEventListener(
+  "change",
+  function () {
+    const numberInput = this.parentElement.parentElement.querySelector("input[type='number']");
+    if (this.checked) {
+      numberInput.removeAttribute("disabled");
+      numberInput.dispatchEvent(new Event("input"));
+    } else {
+      numberInput.setAttribute("disabled", "true");
+      const styleBlock = document.querySelector("#dynamic-grid-style");
+      if (styleBlock) {
+        styleBlock.remove();
+      }
+    }
+  },
+);
+
+document.querySelectorAll("input[type=checkbox]").forEach((checkbox) => {
+  checkbox.checked = false;
+});

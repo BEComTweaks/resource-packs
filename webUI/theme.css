@@ -680,6 +680,21 @@ select {
   > .switch {
     top: 10px;
   }
+  > input[type="number"] {
+    position: relative;
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 10px;
+    margin-left: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    appearance: none;
+    -moz-appearance: textfield;
+    &::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+  }
 }
 
 .devtools-toggle-console:has(> label > input:checked) ~ .devtools-console {

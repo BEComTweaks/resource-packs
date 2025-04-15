@@ -86,12 +86,27 @@
         <h3>Console</h3>
         <div class="devtools-console-content"></div>
       </code>
+      <div class="devtools-toggle-tweak-per-column">
+        <label class="switch">
+          <input type="checkbox"/>
+          <span class="slider"></span>
+        </label>
+        <p>Use a custom width for each column</p>
+        <input oreui-type="input" oreui-color="dark" type="number" placeholder="Enter a number" disabled/>
+      </div>
       <div class="devtools-toggle-save-to-cache">
         <label class="switch">
           <input type="checkbox" disabled/>
           <span class="slider"></span>
         </label>
         <p>Save settings to the browser cache</p>
+      </div>
+      <div class="devtools-toggle-mine-then-craft">
+        <label class="switch">
+          <input type="checkbox" disabled/>
+          <span class="slider"></span>
+        </label>
+        <p>Mine then craft</p>
       </div>
     </div>
     <div class="capture-exit" onclick="closePanel();"></div>
