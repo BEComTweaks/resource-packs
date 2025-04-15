@@ -8,3 +8,4 @@ jsons/map
 build
 # tf is venv doing here
 venv
+jsons/template_compatibilities.json

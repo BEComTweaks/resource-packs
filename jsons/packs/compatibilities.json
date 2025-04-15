@@ -1,48 +1,634 @@
 {
   "$schema": "https://becomtweaks.github.io/schema/compatibilities.json",
-  "max_simultaneous": 3,
+  "max_simultaneous": 4,
+  "4way": [
+    {
+      "merge": [
+        "ConsistentBambooPlanks",
+        "OarlessBoats",
+        "OldPlanks",
+        "VariatedPlanks"
+      ],
+      "location": "compatibilities/bamboo/consistent_oarless_old_variated_bamboo",
+      "overwrite": false
+    },
+    {
+      "merge": ["Nether", "LowerCrimsonNylium", "LowerWarpedNylium", "Nether"],
+      "location": "compatibilities/terrain/brighter_black_nether_bricks_lower_crimson_warped_nylium",
+      "overwrite": false
+    },
+    {
+      "merge": ["Nether", "Nether", "UniformOres", "OreBorders"],
+      "location": "compatibilities/ores/uniform_brighter_black_nether_bricks_ore_borders",
+      "overwrite": false
+    },
+    {
+      "merge": [
+        "Village",
+        "UniformOres",
+        "OreBorders",
+        "Rename'Terracotta'to'HardenedClay'"
+      ],
+      "location": "compatibilities/ores/uniform_rubies_variated_villagers_ore_borders",
+      "overwrite": false
+    }
+  ],
   "3way": [
     {
-      "merge": ["AllayElytra", "DragonElytra", "PhantomElytra"],
-      "location": "compatibilities/3waymerge1false",
+      "merge": ["ConsistentBambooPlanks", "OldPlanks", "VariatedPlanks"],
+      "location": "compatibilities/bamboo/consistent_old_variated_bamboo",
       "overwrite": false
     },
     {
-      "merge": ["AllayElytra", "PhantomElytra", "VexElytra"],
-      "location": "compatibilities/3waymerge1true",
-      "overwrite": true
-    },
-    {
-      "merge": ["DragonElytra", "PhantomElytra", "VexElytra"],
-      "location": "compatibilities/3waymerge2false",
+      "merge": ["ConsistentBambooPlanks", "OarlessBoats", "OldPlanks"],
+      "location": "compatibilities/bamboo/consistent_oarless_old_bamboo",
       "overwrite": false
     },
     {
-      "merge": ["AllayElytra", "DragonElytra", "VexElytra"],
-      "location": "compatibilities/3waymerge2true",
-      "overwrite": true
+      "merge": ["Classic", "GoldenCrown", "ConsistentHelmets"],
+      "location": "compatibilities/aesthetic/classic_consistent_netherite_golden_crown",
+      "overwrite": false
+    },
+    {
+      "merge": ["PebblelessDirt", "DungeonsDirt", "DirtBackground"],
+      "location": "compatibilities/dirt/pebbleless_dungeons_dirt_background",
+      "overwrite": false
+    },
+    {
+      "merge": ["VariatedDirt", "PebblelessDirt", "PebblelessCoarseDirt"],
+      "location": "compatibilities/dirt/variated_pebbleless_dirt_and_coarse_dirt",
+      "overwrite": false
+    },
+    {
+      "merge": ["GoldenSavanna", "LushGrassAllRound", "GrassSides"],
+      "location": "compatibilities/dirt/golden_savanna_lush_grass_sides",
+      "overwrite": false
+    },
+    {
+      "merge": ["LushGrassAllRound", "ClearerWater", "OldWater"],
+      "location": "compatibilities/terrain/lush_grass_old_clearer_water",
+      "overwrite": false
+    },
+    {
+      "merge": ["Nether", "LowerCrimsonNylium", "LowerWarpedNylium"],
+      "location": "compatibilities/terrain/brighter_lower_crimson_warped_nylium",
+      "overwrite": false
+    },
+    {
+      "merge": ["Nether", "LowerCrimsonNylium", "Nether"],
+      "location": "compatibilities/terrain/brighter_black_nether_bricks_lower_crimson_nylium",
+      "overwrite": false
+    },
+    {
+      "merge": ["Nether", "LowerWarpedNylium", "Nether"],
+      "location": "compatibilities/terrain/brighter_black_nether_bricks_lower_warped_nylium",
+      "overwrite": false
+    },
+    {
+      "merge": ["Nether", "UniformOres", "OreBorders"],
+      "location": "compatibilities/ores/uniform_brighter_nether_ore_borders",
+      "overwrite": false
+    },
+    {
+      "merge": ["Nether", "Nether", "OreBorders"],
+      "location": "compatibilities/ores/brighter_black_nether_bricks_ore_borders",
+      "overwrite": false
+    },
+    {
+      "merge": ["Nether", "Nether", "UniformOres"],
+      "location": "compatibilities/ores/uniform_brighter_black_nether_bricks_ores",
+      "overwrite": false
+    },
+    {
+      "merge": ["Village", "UniformOres", "Rename'Terracotta'to'HardenedClay'"],
+      "location": "compatibilities/ores/uniform_rubies_variated_villagers_ores",
+      "overwrite": false
+    },
+    {
+      "merge": ["Village", "OreBorders", "Rename'Terracotta'to'HardenedClay'"],
+      "location": "compatibilities/ores/rubies_variated_villagers_ore_borders",
+      "overwrite": false
+    },
+    {
+      "merge": [
+        "UniformOres",
+        "OreBorders",
+        "Rename'Terracotta'to'HardenedClay'"
+      ],
+      "location": "compatibilities/ores/uniform_rubies_ore_borders",
+      "overwrite": false
+    },
+    {
+      "merge": ["UniformOres", "OreBorders", "Nether"],
+      "location": "compatibilities/ores/uniform_old_netherrack_ore_borders",
+      "overwrite": false
+    },
+    {
+      "merge": ["OarlessBoats", "OldPlanks", "VariatedPlanks"],
+      "location": "compatibilities/planks/oarless_old_variated_planks",
+      "overwrite": false
     }
   ],
   "2way": [
     {
-      "merge": ["AllayElytra", "DragonElytra"],
-      "location": "compatibilities/2waymerge1false",
+      "merge": ["ConsistentBambooPlanks", "OldPlanks"],
+      "location": "compatibilities/bamboo/consistent_old_bamboo",
       "overwrite": false
     },
     {
-      "merge": ["AllayElytra", "PhantomElytra"],
-      "location": "compatibilities/2waymerge1true",
-      "overwrite": true
-    },
-    {
-      "merge": ["DragonElytra", "PhantomElytra"],
-      "location": "compatibilities/2waymerge2false",
+      "merge": ["ConsistentBambooPlanks", "VariatedPlanks"],
+      "location": "compatibilities/bamboo/consistent_variated_bamboo",
       "overwrite": false
     },
     {
-      "merge": ["DragonElytra", "VexElytra"],
-      "location": "compatibilities/2waymerge2true",
-      "overwrite": true
+      "merge": ["DesaturatedDarkOak", "CircularLogTops"],
+      "location": "compatibilities/aesthetic/circular_desaturated_dark_oak_log_tops",
+      "overwrite": false
+    },
+    {
+      "merge": ["AccurateSpyglass", "TranslucentSpyglassOverlay"],
+      "location": "compatibilities/aesthetic/accurate_translucent_spyglass_overlay",
+      "overwrite": false
+    },
+    {
+      "merge": ["AccurateSpyglass", "UselessSpyglass"],
+      "location": "compatibilities/aesthetic/accurate_useless_spyglass",
+      "overwrite": false
+    },
+    {
+      "merge": ["Rename'Stem'to'Log'", "SmootherStones"],
+      "location": "compatibilities/aesthetic/smoother_polished_stones_to_bricks",
+      "overwrite": false
+    },
+    {
+      "merge": ["Classic", "ConsistentHelmets"],
+      "location": "compatibilities/aesthetic/classic_consistent_netherite_helmet",
+      "overwrite": false
+    },
+    {
+      "merge": ["GoldenCrown", "ConsistentHelmets"],
+      "location": "compatibilities/aesthetic/classic_consistent_golden_crown",
+      "overwrite": false
+    },
+    {
+      "merge": ["PebblelessDirt", "DungeonsDirt"],
+      "location": "compatibilities/dirt/pebbleless_dungeons_dirt",
+      "overwrite": false
+    },
+    {
+      "merge": ["DungeonsDirt", "DirtBackground"],
+      "location": "compatibilities/dirt/dungeons_dirt_background",
+      "overwrite": false
+    },
+    {
+      "merge": ["VariatedDirt", "PebblelessCoarseDirt"],
+      "location": "compatibilities/dirt/variated_pebbleless_coarse_dirt",
+      "overwrite": false
+    },
+    {
+      "merge": ["VariatedDirt", "PebblelessDirt"],
+      "location": "compatibilities/dirt/variated_pebbleless_dirt",
+      "overwrite": false
+    },
+    {
+      "merge": ["GoldenSavanna", "GrassSides"],
+      "location": "compatibilities/dirt/golden_savanna_grass_sides",
+      "overwrite": false
+    },
+    {
+      "merge": ["GoldenSavanna", "LushGrassAllRound"],
+      "location": "compatibilities/dirt/golden_savanna_lush_grass",
+      "overwrite": false
+    },
+    {
+      "merge": ["LushGrassAllRound", "GrassSides"],
+      "location": "compatibilities/dirt/lush_grass_sides",
+      "overwrite": false
+    },
+    {
+      "merge": ["WhiterSnow", "LowerSnow"],
+      "location": "compatibilities/snow/whiter_lower_snow",
+      "overwrite": false
+    },
+    {
+      "merge": ["WhiterSnow", "SnowSides"],
+      "location": "compatibilities/snow/whiter_snow_sides",
+      "overwrite": false
+    },
+    {
+      "merge": ["DarkUI", "BrewingStandIconsFix"],
+      "location": "compatibilities/gui/dark_brewing_stand_icons_fix",
+      "overwrite": false
+    },
+    {
+      "merge": ["LushGrassAllRound", "ClearerWater"],
+      "location": "compatibilities/terrain/lush_grass_clearer_water",
+      "overwrite": false
+    },
+    {
+      "merge": ["LushGrassAllRound", "OldWater"],
+      "location": "compatibilities/terrain/lush_grass_old_water",
+      "overwrite": false
+    },
+    {
+      "merge": ["ClearerWater", "OldWater"],
+      "location": "compatibilities/terrain/old_clearer_water",
+      "overwrite": false
+    },
+    {
+      "merge": ["Nether", "Nether"],
+      "location": "compatibilities/terrain/brighter_black_nether_bricks",
+      "overwrite": false
+    },
+    {
+      "merge": ["Nether", "LowerCrimsonNylium"],
+      "location": "compatibilities/terrain/brighter_lower_crimson_nylium",
+      "overwrite": false
+    },
+    {
+      "merge": ["Nether", "LowerWarpedNylium"],
+      "location": "compatibilities/terrain/brighter_lower_warped_nylium",
+      "overwrite": false
+    },
+    {
+      "merge": ["UniformOres", "OreBorders"],
+      "location": "compatibilities/ores/uniform_ore_borders",
+      "overwrite": false
+    },
+    {
+      "merge": ["OreBorders", "DungeonsStone"],
+      "location": "compatibilities/ores/dungeons_ore_borders",
+      "overwrite": false
+    },
+    {
+      "merge": ["OreBorders", "Classic"],
+      "location": "compatibilities/ores/classic_ores_borders",
+      "overwrite": false
+    },
+    {
+      "merge": ["UnlitRedstoneOre", "Classic"],
+      "location": "compatibilities/ores/classic_unlit_redstone_ores",
+      "overwrite": false
+    },
+    {
+      "merge": ["Nether", "OreBorders"],
+      "location": "compatibilities/ores/brighter_nether_ore_borders",
+      "overwrite": false
+    },
+    {
+      "merge": ["Nether", "UniformOres"],
+      "location": "compatibilities/ores/uniform_brighter_nether_ores",
+      "overwrite": false
+    },
+    {
+      "merge": ["OreBorders", "Rename'Terracotta'to'HardenedClay'"],
+      "location": "compatibilities/ores/rubies_ore_borders",
+      "overwrite": false
+    },
+    {
+      "merge": ["UniformOres", "Rename'Terracotta'to'HardenedClay'"],
+      "location": "compatibilities/ores/uniform_rubies_ores",
+      "overwrite": false
+    },
+    {
+      "merge": ["Village", "Rename'Terracotta'to'HardenedClay'"],
+      "location": "compatibilities/ores/rubies_variated_villagers_ores",
+      "overwrite": false
+    },
+    {
+      "merge": ["OreBorders", "Nether"],
+      "location": "compatibilities/ores/old_netherrack_ore_borders",
+      "overwrite": false
+    },
+    {
+      "merge": ["UniformOres", "Nether"],
+      "location": "compatibilities/ores/uniform_old_netherrack_ores",
+      "overwrite": false
+    },
+    {
+      "merge": ["VisualInfestedStoneItems", "DungeonsStone"],
+      "location": "compatibilities/utility/visual_infested_dungeons_stone",
+      "overwrite": false
+    },
+    {
+      "merge": ["WaxedCopperItems", "AlternateCutCopper"],
+      "location": "compatibilities/utility/visual_waxed_alternate_cut_copper",
+      "overwrite": false
+    },
+    {
+      "merge": ["UpdatedObserverTexture", "DirectionalObservers"],
+      "location": "compatibilities/utility/updated_directional_observers_texture",
+      "overwrite": false
+    },
+    {
+      "merge": ["SuspiciousSandGravelBorders", "OldGravel"],
+      "location": "compatibilities/utility/suspicious_sand_and_old_gravel_borders",
+      "overwrite": false
+    },
+    {
+      "merge": ["UnobtrusiveRain", "UnobtrusiveSnow"],
+      "location": "compatibilities/unobtrusive/unobtrusive_rain_and_snow",
+      "overwrite": false
+    },
+    {
+      "merge": ["AccurateScaffolding", "UnobtrusiveScaffolding"],
+      "location": "compatibilities/unobtrusive/accurate_unobtrusive_scaffolding",
+      "overwrite": false
+    },
+    {
+      "merge": ["BaconBeam", "BaconBeam"],
+      "location": "compatibilities/pixel_consistent/pixel_consistent_bacon_beam",
+      "overwrite": false
+    },
+    {
+      "merge": ["PixelConsistentWither", "WitherBee"],
+      "location": "compatibilities/pixel_consistent/pixel_consistent_wither_bee",
+      "overwrite": false
+    },
+    {
+      "merge": ["PixelConsistentSigns", "SmootherWarpedPlanks"],
+      "location": "compatibilities/pixel_consistent/pixel_consistent_warped_signs",
+      "overwrite": false
+    },
+    {
+      "merge": ["HungerPreview", "AppleHungerBars"],
+      "location": "compatibilities/hunger_preview/apple_hunger_preview",
+      "overwrite": false
+    },
+    {
+      "merge": ["HungerPreview", "PotatoHungerBars"],
+      "location": "compatibilities/hunger_preview/baked_potato_hunger_preview",
+      "overwrite": false
+    },
+    {
+      "merge": ["HungerPreview", "BeefHungerBars"],
+      "location": "compatibilities/hunger_preview/beef_hunger_preview",
+      "overwrite": false
+    },
+    {
+      "merge": ["HungerPreview", "BeetrootHungerBars"],
+      "location": "compatibilities/hunger_preview/beetroot_hunger_preview",
+      "overwrite": false
+    },
+    {
+      "merge": ["HungerPreview", "BeetrootSoupHungerBars"],
+      "location": "compatibilities/hunger_preview/beetroot_soup_hunger_preview",
+      "overwrite": false
+    },
+    {
+      "merge": ["HungerPreview", "BreadHungerBars"],
+      "location": "compatibilities/hunger_preview/bread_hunger_preview",
+      "overwrite": false
+    },
+    {
+      "merge": ["HungerPreview", "CakeHungerBars"],
+      "location": "compatibilities/hunger_preview/cake_hunger_preview",
+      "overwrite": false
+    },
+    {
+      "merge": ["HungerPreview", "CarrotHungerBars"],
+      "location": "compatibilities/hunger_preview/carrot_hunger_preview",
+      "overwrite": false
+    },
+    {
+      "merge": ["HungerPreview", "ChickenHungerBars"],
+      "location": "compatibilities/hunger_preview/chicken_hunger_preview",
+      "overwrite": false
+    },
+    {
+      "merge": ["HungerPreview", "ChorusFruitHungerBars"],
+      "location": "compatibilities/hunger_preview/chorus_fruit_hunger_preview",
+      "overwrite": false
+    },
+    {
+      "merge": ["HungerPreview", "CodHungerBars"],
+      "location": "compatibilities/hunger_preview/cod_hunger_preview",
+      "overwrite": false
+    },
+    {
+      "merge": ["HungerPreview", "CookieHungerBars"],
+      "location": "compatibilities/hunger_preview/cookie_hunger_preview",
+      "overwrite": false
+    },
+    {
+      "merge": ["HungerPreview", "GlowBerriesHungerBars"],
+      "location": "compatibilities/hunger_preview/glow_berries_hunger_preview",
+      "overwrite": false
+    },
+    {
+      "merge": ["HungerPreview", "AppleHungerBars"],
+      "location": "compatibilities/hunger_preview/golden_apple_hunger_preview",
+      "overwrite": false
+    },
+    {
+      "merge": ["HungerPreview", "CarrotHungerBars"],
+      "location": "compatibilities/hunger_preview/golden_carrot_hunger_preview",
+      "overwrite": false
+    },
+    {
+      "merge": ["HungerPreview", "HoneyHungerBars"],
+      "location": "compatibilities/hunger_preview/honey_hunger_preview",
+      "overwrite": false
+    },
+    {
+      "merge": ["HungerPreview", "MelonHungerBars"],
+      "location": "compatibilities/hunger_preview/melon_hunger_preview",
+      "overwrite": false
+    },
+    {
+      "merge": ["HungerPreview", "MushroomStewHungerBars"],
+      "location": "compatibilities/hunger_preview/mushroom_stew_hunger_preview",
+      "overwrite": false
+    },
+    {
+      "merge": ["HungerPreview", "MuttonHungerBars"],
+      "location": "compatibilities/hunger_preview/mutton_hunger_preview",
+      "overwrite": false
+    },
+    {
+      "merge": ["HungerPreview", "PoisonousPotatoHungerBars"],
+      "location": "compatibilities/hunger_preview/poisonous_potato_hunger_preview",
+      "overwrite": false
+    },
+    {
+      "merge": ["HungerPreview", "PorkchopHungerBars"],
+      "location": "compatibilities/hunger_preview/porkchop_hunger_preview",
+      "overwrite": false
+    },
+    {
+      "merge": ["HungerPreview", "PotatoHungerBars"],
+      "location": "compatibilities/hunger_preview/potato_hunger_preview",
+      "overwrite": false
+    },
+    {
+      "merge": ["HungerPreview", "PufferfishHungerBars"],
+      "location": "compatibilities/hunger_preview/pufferfish_hunger_preview",
+      "overwrite": false
+    },
+    {
+      "merge": ["HungerPreview", "PumpkinPieHungerBars"],
+      "location": "compatibilities/hunger_preview/pumpkin_pie_hunger_preview",
+      "overwrite": false
+    },
+    {
+      "merge": ["HungerPreview", "RabbitHungerBars"],
+      "location": "compatibilities/hunger_preview/rabbit_hunger_preview",
+      "overwrite": false
+    },
+    {
+      "merge": ["HungerPreview", "RabbitStewHungerBars"],
+      "location": "compatibilities/hunger_preview/rabbit_stew_hunger_preview",
+      "overwrite": false
+    },
+    {
+      "merge": ["HungerPreview", "SalmonHungerBars"],
+      "location": "compatibilities/hunger_preview/salmon_hunger_preview",
+      "overwrite": false
+    },
+    {
+      "merge": ["HungerPreview", "SpiderEyeHungerBars"],
+      "location": "compatibilities/hunger_preview/spider_eye_hunger_preview",
+      "overwrite": false
+    },
+    {
+      "merge": ["HungerPreview", "SuspiciousStewHungerBars"],
+      "location": "compatibilities/hunger_preview/suspicious_stew_hunger_preview",
+      "overwrite": false
+    },
+    {
+      "merge": ["HungerPreview", "SweetBerriesHungerBars"],
+      "location": "compatibilities/hunger_preview/sweet_berries_hunger_preview",
+      "overwrite": false
+    },
+    {
+      "merge": ["HungerPreview", "TropicalFishHungerBars"],
+      "location": "compatibilities/hunger_preview/tropical_fish_hunger_preview",
+      "overwrite": false
+    },
+    {
+      "merge": ["OldPlanks", "VariatedPlanks"],
+      "location": "compatibilities/planks/old_variated_planks",
+      "overwrite": false
+    },
+    {
+      "merge": ["OarlessBoats", "OldPlanks"],
+      "location": "compatibilities/planks/oarless_old_planks",
+      "overwrite": false
+    },
+    {
+      "merge": ["SmileyAxolotls", "GreenAxolotl"],
+      "location": "compatibilities/fun/smiley_green_axolotl",
+      "overwrite": false
+    },
+    {
+      "merge": ["HoneySlime", "SolidSlime"],
+      "location": "compatibilities/fun/honey_solid_slime",
+      "overwrite": false
+    },
+    {
+      "merge": ["SusSandandGravel", "OldGravel"],
+      "location": "compatibilities/fun/sus_sand_and_old_gravel",
+      "overwrite": false
+    },
+    {
+      "merge": ["BlackSlime", "SolidSlime"],
+      "location": "compatibilities/colored_solid_slime/black_solid_slime",
+      "overwrite": false
+    },
+    {
+      "merge": ["BlueSlime", "SolidSlime"],
+      "location": "compatibilities/colored_solid_slime/blue_solid_slime",
+      "overwrite": false
+    },
+    {
+      "merge": ["BrownSlime", "SolidSlime"],
+      "location": "compatibilities/colored_solid_slime/brown_solid_slime",
+      "overwrite": false
+    },
+    {
+      "merge": ["CyanSlime", "SolidSlime"],
+      "location": "compatibilities/colored_solid_slime/cyan_solid_slime",
+      "overwrite": false
+    },
+    {
+      "merge": ["GraySlime", "SolidSlime"],
+      "location": "compatibilities/colored_solid_slime/gray_solid_slime",
+      "overwrite": false
+    },
+    {
+      "merge": ["GreenSlime", "SolidSlime"],
+      "location": "compatibilities/colored_solid_slime/green_solid_slime",
+      "overwrite": false
+    },
+    {
+      "merge": ["BlueSlime", "SolidSlime"],
+      "location": "compatibilities/colored_solid_slime/light_blue_solid_slime",
+      "overwrite": false
+    },
+    {
+      "merge": ["GraySlime", "SolidSlime"],
+      "location": "compatibilities/colored_solid_slime/light_gray_solid_slime",
+      "overwrite": false
+    },
+    {
+      "merge": ["MagentaSlime", "SolidSlime"],
+      "location": "compatibilities/colored_solid_slime/magenta_solid_slime",
+      "overwrite": false
+    },
+    {
+      "merge": ["OrangeSlime", "SolidSlime"],
+      "location": "compatibilities/colored_solid_slime/orange_solid_slime",
+      "overwrite": false
+    },
+    {
+      "merge": ["PinkSlime", "SolidSlime"],
+      "location": "compatibilities/colored_solid_slime/pink_solid_slime",
+      "overwrite": false
+    },
+    {
+      "merge": ["PurpleSlime", "SolidSlime"],
+      "location": "compatibilities/colored_solid_slime/purple_solid_slime",
+      "overwrite": false
+    },
+    {
+      "merge": ["RedSlime", "SolidSlime"],
+      "location": "compatibilities/colored_solid_slime/red_solid_slime",
+      "overwrite": false
+    },
+    {
+      "merge": ["WhiteSlime", "SolidSlime"],
+      "location": "compatibilities/colored_solid_slime/white_solid_slime",
+      "overwrite": false
+    },
+    {
+      "merge": ["YellowSlime", "SolidSlime"],
+      "location": "compatibilities/colored_solid_slime/yellow_solid_slime",
+      "overwrite": false
+    },
+    {
+      "merge": ["RedEnchantmentGlint", "UnobtrusiveEnchantmentGlint"],
+      "location": "compatibilities/enchantment_glint/red_unobtrusive_enchantment_glint",
+      "overwrite": false
+    },
+    {
+      "merge": ["OrangeEnchantmentGlint", "UnobtrusiveEnchantmentGlint"],
+      "location": "compatibilities/enchantment_glint/orange_unobtrusive_enchantment_glint",
+      "overwrite": false
+    },
+    {
+      "merge": ["YellowEnchantmentGlint", "UnobtrusiveEnchantmentGlint"],
+      "location": "compatibilities/enchantment_glint/yellow_unobtrusive_enchantment_glint",
+      "overwrite": false
+    },
+    {
+      "merge": ["BlueEnchantmentGlint", "UnobtrusiveEnchantmentGlint"],
+      "location": "compatibilities/enchantment_glint/blue_unobtrusive_enchantment_glint",
+      "overwrite": false
+    },
+    {
+      "merge": ["RainbowEnchantmentGlint", "UnobtrusiveEnchantmentGlint"],
+      "location": "compatibilities/enchantment_glint/rainbow_unobtrusive_enchantment_glint",
+      "overwrite": false
     }
   ]
 }
