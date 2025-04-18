@@ -346,27 +346,34 @@ function updateURL(st) {
   window.history.replaceState({}, "", newUrl);
 }
 // if query params already exists
-const loadedparams = new URLSearchParams(window.location.search);
-if (loadedparams.has("st_raw")) {
-  const st_raw = loadedparams.get("st_raw");
-  const st = JSON.parse(LZString.decompressFromEncodedURIComponent(st_raw));
-  consoler(
-    "query",
-    "pink",
-    `Found query params, loading selected packs...`,
-    "white",
-  );
-  consoler("query", "pink", `Selected packs: ${st["raw"].join(", ")}`, "cyan");
-  processJsonData(st, "select");
-  updateDownloadButton(st);
-  const preselectAlerter = document.getElementsByClassName("preselected")[0];
-  sleep(500).then(() => {
-    // slow down before showing the alert
-    preselectAlerter.style.top = "20vh";
-  });
-  sleep(5000).then(() => {
-    preselectAlerter.style.top = "-20vh";
-  });
+function loadedParamsChecker() {
+  var loadedparams = new URLSearchParams(window.location.search);
+  if (loadedparams.has("st_raw")) {
+    const st_raw = loadedparams.get("st_raw");
+    const st = JSON.parse(LZString.decompressFromEncodedURIComponent(st_raw));
+    consoler(
+      "query",
+      "pink",
+      `Found query params, loading selected packs...`,
+      "white",
+    );
+    processJsonData(st, "select");
+    consoler(
+      "query",
+      "pink",
+      `Selected packs: ${st["raw"].join(", ")}`,
+      "cyan",
+    );
+    updateDownloadButton(st);
+    const preselectAlerter = document.getElementsByClassName("preselected")[0];
+    sleep(500).then(() => {
+      // slow down before showing the alert
+      preselectAlerter.style.top = "20vh";
+    });
+    sleep(5000).then(() => {
+      preselectAlerter.style.top = "-20vh";
+    });
+  }
 }
 
 function getTimeoutDuration() {
@@ -575,7 +582,7 @@ function processJsonData(jsonData, dowhat) {
       "white",
     );
   }
-  updateSelectedTweaks();
+  fallbackCheckboxChecker();
   const st = getSelectedTweaks();
   updateSelectAllButton(st);
   updateURL(st);
@@ -722,7 +729,7 @@ function fallbackCheckboxChecker() {
   if (!fallbackCheckboxesChecked) {
     let warned = false;
     document
-      .querySelectorAll("input[type='checkbox']:checked")
+      .querySelectorAll(".container input[type='checkbox']:checked")
       .forEach((checkbox) => {
         const tweak = checkbox.parentElement.parentElement;
         if (tweak) {
@@ -733,7 +740,7 @@ function fallbackCheckboxChecker() {
               consoler(
                 "checkbox",
                 "orange",
-                `Checkbox state mismatched with oreUI state, using fallback script`,
+                `Checkbox state for ${tweak} mismatched with oreUI state, using fallback script`,
                 "white",
               );
               warned = true;
@@ -792,3 +799,5 @@ document
 document.querySelectorAll("input[type=checkbox]").forEach((checkbox) => {
   checkbox.checked = false;
 });
+
+loadedParamsChecker();
