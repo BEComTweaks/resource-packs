@@ -113,8 +113,8 @@
       "pack_description": "Changes Bed item models to look like regular items (with updated textures) like before 1.12."
     },
     {
-      "pack_id": "OldShulkerColors",
-      "pack_name": "Old Shulker Colors",
+      "pack_id": "OldShulkerBoxes",
+      "pack_name": "Old Shulker Boxes",
       "pack_description": "Recolors Shulkers and Shulker Boxes to their pre-Java 1.12 colors."
     },
     {
