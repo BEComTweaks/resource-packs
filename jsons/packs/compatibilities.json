@@ -13,21 +13,31 @@
       "overwrite": false
     },
     {
-      "merge": ["Nether", "LowerCrimsonNylium", "LowerWarpedNylium", "Nether"],
+      "merge": [
+        "BrighterNether",
+        "LowerCrimsonNylium",
+        "LowerWarpedNylium",
+        "BlackNetherBricks"
+      ],
       "location": "compatibilities/terrain/brighter_black_nether_bricks_lower_crimson_warped_nylium",
       "overwrite": false
     },
     {
-      "merge": ["Nether", "Nether", "UniformOres", "OreBorders"],
+      "merge": [
+        "BlackNetherBricks",
+        "BrighterNether",
+        "UniformOres",
+        "OreBorders"
+      ],
       "location": "compatibilities/ores/uniform_brighter_black_nether_bricks_ore_borders",
       "overwrite": false
     },
     {
       "merge": [
-        "Village",
+        "VariatedVillagers",
         "UniformOres",
         "OreBorders",
-        "Rename'Terracotta'to'HardenedClay'"
+        "EmeraldstoRubies"
       ],
       "location": "compatibilities/ores/uniform_rubies_variated_villagers_ore_borders",
       "overwrite": false
@@ -45,7 +55,11 @@
       "overwrite": false
     },
     {
-      "merge": ["Classic", "GoldenCrown", "ConsistentHelmets"],
+      "merge": [
+        "ClassicStyleNetheriteArmor",
+        "GoldenCrown",
+        "ConsistentHelmets"
+      ],
       "location": "compatibilities/aesthetic/classic_consistent_netherite_golden_crown",
       "overwrite": false
     },
@@ -70,56 +84,52 @@
       "overwrite": false
     },
     {
-      "merge": ["Nether", "LowerCrimsonNylium", "LowerWarpedNylium"],
+      "merge": ["BrighterNether", "LowerCrimsonNylium", "LowerWarpedNylium"],
       "location": "compatibilities/terrain/brighter_lower_crimson_warped_nylium",
       "overwrite": false
     },
     {
-      "merge": ["Nether", "LowerCrimsonNylium", "Nether"],
+      "merge": ["BrighterNether", "LowerCrimsonNylium", "BlackNetherBricks"],
       "location": "compatibilities/terrain/brighter_black_nether_bricks_lower_crimson_nylium",
       "overwrite": false
     },
     {
-      "merge": ["Nether", "LowerWarpedNylium", "Nether"],
+      "merge": ["BrighterNether", "LowerWarpedNylium", "BlackNetherBricks"],
       "location": "compatibilities/terrain/brighter_black_nether_bricks_lower_warped_nylium",
       "overwrite": false
     },
     {
-      "merge": ["Nether", "UniformOres", "OreBorders"],
+      "merge": ["BrighterNether", "UniformOres", "OreBorders"],
       "location": "compatibilities/ores/uniform_brighter_nether_ore_borders",
       "overwrite": false
     },
     {
-      "merge": ["Nether", "Nether", "OreBorders"],
+      "merge": ["BlackNetherBricks", "BrighterNether", "OreBorders"],
       "location": "compatibilities/ores/brighter_black_nether_bricks_ore_borders",
       "overwrite": false
     },
     {
-      "merge": ["Nether", "Nether", "UniformOres"],
+      "merge": ["BlackNetherBricks", "BrighterNether", "UniformOres"],
       "location": "compatibilities/ores/uniform_brighter_black_nether_bricks_ores",
       "overwrite": false
     },
     {
-      "merge": ["Village", "UniformOres", "Rename'Terracotta'to'HardenedClay'"],
+      "merge": ["VariatedVillagers", "UniformOres", "EmeraldstoRubies"],
       "location": "compatibilities/ores/uniform_rubies_variated_villagers_ores",
       "overwrite": false
     },
     {
-      "merge": ["Village", "OreBorders", "Rename'Terracotta'to'HardenedClay'"],
+      "merge": ["VariatedVillagers", "OreBorders", "EmeraldstoRubies"],
       "location": "compatibilities/ores/rubies_variated_villagers_ore_borders",
       "overwrite": false
     },
     {
-      "merge": [
-        "UniformOres",
-        "OreBorders",
-        "Rename'Terracotta'to'HardenedClay'"
-      ],
+      "merge": ["UniformOres", "OreBorders", "EmeraldstoRubies"],
       "location": "compatibilities/ores/uniform_rubies_ore_borders",
       "overwrite": false
     },
     {
-      "merge": ["UniformOres", "OreBorders", "Nether"],
+      "merge": ["UniformOres", "OreBorders", "OldNetherrack"],
       "location": "compatibilities/ores/uniform_old_netherrack_ore_borders",
       "overwrite": false
     },
@@ -156,12 +166,12 @@
       "overwrite": false
     },
     {
-      "merge": ["Rename'Stem'to'Log'", "SmootherStones"],
+      "merge": ["PolishedStonestoBricks", "SmootherStones"],
       "location": "compatibilities/aesthetic/smoother_polished_stones_to_bricks",
       "overwrite": false
     },
     {
-      "merge": ["Classic", "ConsistentHelmets"],
+      "merge": ["ClassicStyleNetheriteArmor", "ConsistentHelmets"],
       "location": "compatibilities/aesthetic/classic_consistent_netherite_helmet",
       "overwrite": false
     },
@@ -236,17 +246,17 @@
       "overwrite": false
     },
     {
-      "merge": ["Nether", "Nether"],
+      "merge": ["BrighterNether", "BlackNetherBricks"],
       "location": "compatibilities/terrain/brighter_black_nether_bricks",
       "overwrite": false
     },
     {
-      "merge": ["Nether", "LowerCrimsonNylium"],
+      "merge": ["BrighterNether", "LowerCrimsonNylium"],
       "location": "compatibilities/terrain/brighter_lower_crimson_nylium",
       "overwrite": false
     },
     {
-      "merge": ["Nether", "LowerWarpedNylium"],
+      "merge": ["BrighterNether", "LowerWarpedNylium"],
       "location": "compatibilities/terrain/brighter_lower_warped_nylium",
       "overwrite": false
     },
@@ -261,47 +271,47 @@
       "overwrite": false
     },
     {
-      "merge": ["OreBorders", "Classic"],
+      "merge": ["OreBorders", "ClassicOres"],
       "location": "compatibilities/ores/classic_ores_borders",
       "overwrite": false
     },
     {
-      "merge": ["UnlitRedstoneOre", "Classic"],
+      "merge": ["UnlitRedstoneOre", "ClassicOres"],
       "location": "compatibilities/ores/classic_unlit_redstone_ores",
       "overwrite": false
     },
     {
-      "merge": ["Nether", "OreBorders"],
+      "merge": ["BrighterNether", "OreBorders"],
       "location": "compatibilities/ores/brighter_nether_ore_borders",
       "overwrite": false
     },
     {
-      "merge": ["Nether", "UniformOres"],
+      "merge": ["BrighterNether", "UniformOres"],
       "location": "compatibilities/ores/uniform_brighter_nether_ores",
       "overwrite": false
     },
     {
-      "merge": ["OreBorders", "Rename'Terracotta'to'HardenedClay'"],
+      "merge": ["OreBorders", "EmeraldstoRubies"],
       "location": "compatibilities/ores/rubies_ore_borders",
       "overwrite": false
     },
     {
-      "merge": ["UniformOres", "Rename'Terracotta'to'HardenedClay'"],
+      "merge": ["UniformOres", "EmeraldstoRubies"],
       "location": "compatibilities/ores/uniform_rubies_ores",
       "overwrite": false
     },
     {
-      "merge": ["Village", "Rename'Terracotta'to'HardenedClay'"],
+      "merge": ["VariatedVillagers", "EmeraldstoRubies"],
       "location": "compatibilities/ores/rubies_variated_villagers_ores",
       "overwrite": false
     },
     {
-      "merge": ["OreBorders", "Nether"],
+      "merge": ["OreBorders", "OldNetherrack"],
       "location": "compatibilities/ores/old_netherrack_ore_borders",
       "overwrite": false
     },
     {
-      "merge": ["UniformOres", "Nether"],
+      "merge": ["UniformOres", "OldNetherrack"],
       "location": "compatibilities/ores/uniform_old_netherrack_ores",
       "overwrite": false
     },
@@ -321,7 +331,7 @@
       "overwrite": false
     },
     {
-      "merge": ["SuspiciousSandGravelBorders", "OldGravel"],
+      "merge": ["SusSandandGravel", "OldGravel"],
       "location": "compatibilities/utility/suspicious_sand_and_old_gravel_borders",
       "overwrite": false
     },
@@ -336,7 +346,7 @@
       "overwrite": false
     },
     {
-      "merge": ["BaconBeam", "BaconBeam"],
+      "merge": ["PixelConsistentBeaconBeam", "BaconBeam"],
       "location": "compatibilities/pixel_consistent/pixel_consistent_bacon_beam",
       "overwrite": false
     },
@@ -356,7 +366,7 @@
       "overwrite": false
     },
     {
-      "merge": ["HungerPreview", "PotatoHungerBars"],
+      "merge": ["HungerPreview", "BakedPotatoHungerBars"],
       "location": "compatibilities/hunger_preview/baked_potato_hunger_preview",
       "overwrite": false
     },
@@ -416,12 +426,12 @@
       "overwrite": false
     },
     {
-      "merge": ["HungerPreview", "AppleHungerBars"],
+      "merge": ["HungerPreview", "GoldenAppleHungerBars"],
       "location": "compatibilities/hunger_preview/golden_apple_hunger_preview",
       "overwrite": false
     },
     {
-      "merge": ["HungerPreview", "CarrotHungerBars"],
+      "merge": ["HungerPreview", "GoldenCarrotHungerBars"],
       "location": "compatibilities/hunger_preview/golden_carrot_hunger_preview",
       "overwrite": false
     },
@@ -561,12 +571,12 @@
       "overwrite": false
     },
     {
-      "merge": ["BlueSlime", "SolidSlime"],
+      "merge": ["LightBlueSlime", "SolidSlime"],
       "location": "compatibilities/colored_solid_slime/light_blue_solid_slime",
       "overwrite": false
     },
     {
-      "merge": ["GraySlime", "SolidSlime"],
+      "merge": ["LightGraySlime", "SolidSlime"],
       "location": "compatibilities/colored_solid_slime/light_gray_solid_slime",
       "overwrite": false
     },
