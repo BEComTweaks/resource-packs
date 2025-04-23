@@ -64,6 +64,11 @@
       "pack_description": "Decreases Cow and Mooshroom sounds by 95%."
     },
     {
+      "pack_id": "QuieterCreakings",
+      "pack_name": "Quieter Creakings",
+      "pack_description": "Decreases Creaking sounds by 95%."
+    },
+    {
       "pack_id": "QuieterCreepers",
       "pack_name": "Quieter Creepers",
       "pack_description": "Decreases Creeper sounds by 95%.",
@@ -86,6 +91,11 @@
       "pack_id": "QuieterEndermen",
       "pack_name": "Quieter Endermen",
       "pack_description": "Decreases Endermen sounds by 95%."
+    },
+    {
+      "pack_id": "QuieterFish",
+      "pack_name": "Quieter Fish",
+      "pack_description": "Decreases Cod, Salmon, Tropical Fish and Pufferfish sounds by 95%"
     },
     {
       "pack_id": "QuieterFoxes",

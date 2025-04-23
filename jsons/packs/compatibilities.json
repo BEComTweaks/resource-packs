@@ -639,6 +639,11 @@
       "merge": ["RainbowEnchantmentGlint", "UnobtrusiveEnchantmentGlint"],
       "location": "compatibilities/enchantment_glint/rainbow_unobtrusive_enchantment_glint",
       "overwrite": false
+    },
+    {
+      "merge": ["EarthWoolyCow", "SnoutlessCow"],
+      "location": "compatibilities/mobs/snoutless_earth_wooly_cows",
+      "overwrite": false
     }
   ]
 }
