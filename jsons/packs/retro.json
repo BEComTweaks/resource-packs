@@ -28,6 +28,11 @@
       "pack_description": "Replaces the menu panorama with a dirt background, like in the classic versions of Minecraft. (This will appear on top of the rotating panorama, so any selected menu panorama will not appear)."
     },
     {
+      "pack_id": "AlphaFoliage",
+      "pack_name": "Alpha Foliage",
+      "pack_description": "Changes the foliage textures to those of Alpha Minecraft"
+    },
+    {
       "pack_id": "ClassicOres",
       "pack_name": "Classic Ores",
       "pack_description": "Revert all ores to their pre-1.17 textures, including Copper and Deepslate ores.",
@@ -118,6 +123,16 @@
       "pack_description": "Recolors Shulkers and Shulker Boxes to their pre-Java 1.12 colors."
     },
     {
+      "pack_id": "OldSpawnEggs",
+      "pack_name": "Old Spawn Eggs",
+      "pack_description": "Reverts Spawn Eggs to their classic polka-dot textures"
+    },
+    {
+      "pack_id": "SnoutlessCows",
+      "pack_name": "Snoutless Cows",
+      "pack_description": "Flattens all Cow and Mooshroom snouts like they appeared before 1.21.70"
+    },
+    {
       "pack_id": "PoppytoRose",
       "pack_name": "Poppy to Rose",
       "pack_description": "Changes the texture of the Poppy to the Rose from before Java 1.7.2."
@@ -172,6 +187,11 @@
       "pack_id": "OldPotionColors",
       "pack_name": "Old Potion Colors",
       "pack_description": "Brings back the old potion colors from before 1.19.4."
+    },
+    {
+      "pack_id": "LegacyBedrockDriedKelp",
+      "pack_name": "Legacy Bedrock Dried Kelp",
+      "pack_description": "Gives the Dried Kelp item its texture from previous versions of Minecraft: Bedrock Edition"
     }
   ]
 }

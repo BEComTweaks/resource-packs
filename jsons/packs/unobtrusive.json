@@ -20,6 +20,12 @@
       "conflict": ["JavaBoom"]
     },
     {
+      "pack_id": "NoFallingLeafParticles",
+      "pack_name": "No Falling Leaf Particles",
+      "pack_description": "Removes falling leaf particles from all leaf blocks"
+    },
+
+    {
       "pack_id": "NoCherryLeavesParticles",
       "pack_name": "No Cherry Leaves Particles",
       "pack_description": "Removes cherry leaves particles for easier visibility in cherry groves."

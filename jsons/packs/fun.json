@@ -29,6 +29,11 @@
       "pack_description": "Yeah..."
     },
     {
+      "pack_id": "FlatFish",
+      "pack_name": "Flat Fish",
+      "pack_description": "Fish but its FLAT!"
+    },
+    {
       "pack_id": "XisumaTurtle",
       "pack_name": "Xisuma Turtle",
       "pack_description": "Retextures Turtles to look like Xisuma!"

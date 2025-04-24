@@ -39,6 +39,12 @@
       "pack_description": "Adds numbers to the hotbar slots."
     },
     {
+      "pack_id": "HotbarStyleInventorySlotHighlight",
+      "pack_name": "Hotbar-Style Inventory Slot Highlight",
+      "pack_description": "Gives the inventory slot highlight the same texture as the hotbar selection slot",
+      "conflict": ["JavaInventorySlotHighlight"]
+    },
+    {
       "pack_id": "TranslucentTooltips",
       "pack_name": "Translucent Tooltips",
       "pack_description": "Makes item tooltips translucent."
