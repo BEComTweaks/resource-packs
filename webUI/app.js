@@ -240,7 +240,9 @@ function toggleSelection(element) {
 }
 
 function updateSelectedConflictsActiveColor() {
-  document.querySelectorAll(".tweak[oreui-active-color=purple").forEach((tweak) => OreUI.setActiveColor(tweak, "green"));
+  document
+    .querySelectorAll(".tweak[oreui-active-color=purple")
+    .forEach((tweak) => OreUI.setActiveColor(tweak, "green"));
   document.querySelectorAll(".tweak[oreui-state='active']").forEach((tweak) => {
     OreUI.setActiveColor(tweak, "green");
     const tweakConflicts = JSON.parse(tweak.dataset.conflicts);
