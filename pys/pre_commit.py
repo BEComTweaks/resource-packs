@@ -1,6 +1,8 @@
-import os, re, shutil, argparse
-from json import *
-from time import sleep
+import os
+import re
+import shutil
+import argparse
+from json import dumps
 
 if str(os.getcwd()).endswith("system32"):
     # This has to be in every script to prevent FileNotFoundError
@@ -9,7 +11,7 @@ if str(os.getcwd()).endswith("system32"):
     # Because that still brings up an error
     os.chdir(os.path.dirname(os.path.realpath(__file__)))
 
-from custom_functions import *
+from custom_functions import cdir, run, load_json, dump_json, remove_readonly, sendToCF, emptySpinner
 from custom_functions import console
 from markdown import markdown
 from bs4 import BeautifulSoup
@@ -19,7 +21,7 @@ import requests
 packs_supported = ["rp"]
 category_start = '<div class="category"><div oreui-type="button" oreui-color="dark" class="category-label" onclick="toggleCategory(this);">topic_name</div><button class="category-label-selectall" onclick="selectAll(this)" data-allpacks="<all_packs>" data-category="topic_name"><img src="images/select-all-button/chiseled_bookshelf_empty.png" class="category-label-selectall-img"><div class="category-label-selectall-hovertext">Select All</div></button><div class="category-controlled" oreui-color="dark" oreui-type="general"><div class="tweaks">'
 subcategory_start = '<div class="subcategory"><div oreui-type="button" class="category-label" oreui-color="dark" onclick="toggleCategory(this);">topic_name</div><button class="category-label-selectall sub" onclick="selectAll(this)" data-allpacks="<all_packs>" data-category="<topic_name>"><img src="images/select-all-button/chiseled_bookshelf_empty.png" class="category-label-selectall-img"><div class="category-label-selectall-hovertext">Select All</div></button><div class="category-controlled" oreui-color="dark" oreui-type="general"><div class="subcattweaks">'
-pack_start = '<div class="tweak" onclick="toggleSelection(this);" data-category="topic_name" data-name="pack_id" oreui-type="button" oreui-color="dark" oreui-active-color="green">'
+pack_start = '<div class="tweak" onclick="toggleSelection(this);" data-category="topic_name" data-name="pack_id" data-conflicts="<conflicts>" oreui-type="button" oreui-color="dark" oreui-active-color="green">'
 html_comp = '<div class="comp-hover-text" oreui-color="dark" oreui-type="general">Incompatible with: <incompatible></div>'
 pack_mid = '<div class="tweak-info"><input type="checkbox" name="tweak"><img src="../relloctopackicon" style="width:82px; height:82px;" alt="pack_name"><br><label id="tweak" class="tweak-title">pack_name</label><div class="tweak-description">pack_description</div></div>'
 html_conf = '<div class="conf-hover-text" oreui-color="dark" oreui-type="general">Conflicts with: <conflicts></div>'
@@ -64,7 +66,7 @@ if args.build == "both":
     args.build = "packsite"
 elif args.build == "server":
     args.build = "packsite server"
-elif args.build == None:
+elif args.build is None:
     args.build = ""
 
 if args.dev:
@@ -83,11 +85,11 @@ if not args.no_stash:
     print("[bold yellow]Stashing changes...")
     run('git stash --include-untracked --message "Stashed changes before pre-commit"', quiet=True)
     run('git stash apply', quiet=True)
-    print(f"[green]Stashed changes!")
+    print("[green]Stashed changes!")
 
 # Counts Packs and Compatibilities
 if "site" not in args.build or ("site" in args.build and (args.only_update_html or args.only_update_jsons or args.format or "pack" in args.build)):
-    print(f"[yellow]Going through packs...")
+    print("[yellow]Going through packs...")
     id_to_name = {}
     for j in cat_list:
         origj = j
@@ -107,24 +109,24 @@ if "site" not in args.build or ("site" in args.build and (args.only_update_html 
                 if "regolith" in file["packs"][i] and "pack" in args.build:
                     print(f"-> [cyan]Building {file['packs'][i]['pack_id']}")
                     os.chdir(f'{category_loc}/{file["packs"][i]["pack_id"]}')
-                    print(f"--> [bright_yellow]Checking the config file...")
+                    print("--> [bright_yellow]Checking the config file...")
                     regolith_config = load_json(f'{category_loc}/{file["packs"][i]["pack_id"]}/config.json')
-                    if regolith_config["regolith"]["profiles"]["build"]["export"]["readOnly"] == True:
+                    if regolith_config["regolith"]["profiles"]["build"]["export"]["readOnly"]:
                         regolith_config["regolith"]["profiles"]["build"]["export"]["readOnly"] = False
                     dump_json(f'{category_loc}/{file["packs"][i]["pack_id"]}/config.json', regolith_config)
                     # install filters
                     run("regolith install-all", quiet=True)
                     # check for previous builds
                     if os.path.exists(f'{category_loc}/{file["packs"][i]["pack_id"]}/files'):
-                        print(f"--> [yellow]Purging previous build...")
+                        print("--> [yellow]Purging previous build...")
                         shutil.rmtree(f'{category_loc}/{file["packs"][i]["pack_id"]}/files', onerror=remove_readonly)
                     if os.path.exists(f'{category_loc}/{file["packs"][i]["pack_id"]}/build'):
-                        print(f"--> [yellow]Purging previous incomplete build...")
+                        print("--> [yellow]Purging previous incomplete build...")
                         shutil.rmtree(f'{category_loc}/{file["packs"][i]["pack_id"]}/build', onerror=remove_readonly)
                     run(f"regolith run build {"--experiments size_time_check" if "server" in args.build else ""}", quiet=True)
                     # Check for .gitkeep and fix folder naming
                     if os.path.exists("build"):
-                        print(f"--> [yellow]Fixing build folder...")
+                        print("--> [yellow]Fixing build folder...")
                         build_dir = f"{category_loc}/{file["packs"][i]["pack_id"]}"
                         try:
                             os.mkdir(f"{build_dir}/files")
@@ -188,8 +190,11 @@ if "site" not in args.build or ("site" in args.build and (args.only_update_html 
                 # Adds Pack Conflicts
                 conflicts = []
                 try:
-                    for conf in range(len(file["packs"][i]["conflict"])):
-                        conflicts.append(file["packs"][i]["conflict"][conf])
+                    conflicts.extend(file["packs"][i]["conflict"])
+                except KeyError:
+                    pass # If it is empty, it just skips
+                try:
+                    conflicts.extend(file["packs"][i]["obvious_conflict"])
                 except KeyError:
                     pass # If it is empty, it just skips
 
@@ -203,12 +208,12 @@ if "site" not in args.build or ("site" in args.build and (args.only_update_html 
                 confs = ""
                 if pack_exists:
                     packs += 1
-                    to_add_pack = pack_start
+                    to_add_pack = pack_start.replace('<conflicts>', dumps(conflicts).replace('"', "&quot;"))
                     to_add_pack += pack_mid
-                    if conflicts != []:
-                        for c in conflicts:
-                            confs += f"{c}, "
-                        to_add_pack += html_conf.replace('<conflicts>',confs[:-2])
+                    try:
+                        to_add_pack += html_conf.replace('<conflicts>', ", ".join(file["packs"][i]["conflict"]))
+                    except KeyError:
+                        pass
                     to_add_pack += pack_end
                     # Replace vars
                     to_add_pack = to_add_pack.replace("topic_name", file["topic"])
@@ -279,24 +284,24 @@ if "site" not in args.build or ("site" in args.build and (args.only_update_html 
             if "regolith" in file["packs"][i] and "pack" in args.build:
                 print(f"-> [cyan]Building {file['packs'][i]['pack_id']}")
                 os.chdir(f'{category_loc}/{file["packs"][i]["pack_id"]}')
-                print(f"--> [bright_yellow]Checking the config file...")
+                print("--> [bright_yellow]Checking the config file...")
                 regolith_config = load_json(f'{category_loc}/{file["packs"][i]["pack_id"]}/config.json')
-                if regolith_config["regolith"]["profiles"]["build"]["export"]["readOnly"] == True:
+                if regolith_config["regolith"]["profiles"]["build"]["export"]["readOnly"]:
                     regolith_config["regolith"]["profiles"]["build"]["export"]["readOnly"] = False
                 dump_json(f'{category_loc}/{file["packs"][i]["pack_id"]}/config.json', regolith_config)
                 # install filters
                 run("regolith install-all", quiet=True)
                 # check for previous builds
                 if os.path.exists(f'{category_loc}/{file["packs"][i]["pack_id"]}/files'):
-                    print(f"--> [yellow]Purging previous build...")
+                    print("--> [yellow]Purging previous build...")
                     shutil.rmtree(f'{category_loc}/{file["packs"][i]["pack_id"]}/files', onerror=remove_readonly)
                 if os.path.exists(f'{category_loc}/{file["packs"][i]["pack_id"]}/build'):
-                    print(f"--> [yellow]Purging previous incomplete build...")
+                    print("--> [yellow]Purging previous incomplete build...")
                     shutil.rmtree(f'{category_loc}/{file["packs"][i]["pack_id"]}/build', onerror=remove_readonly)
                 run(f"regolith run build {"--experiments size_time_check" if "server" in args.build else ""}", quiet=True)
                 # Check for .gitkeep and fix folder naming
                 if os.path.exists("build"):
-                    print(f"--> [yellow]Fixing build folder...")
+                    print("--> [yellow]Fixing build folder...")
                     build_dir = f"{category_loc}/{file["packs"][i]["pack_id"]}"
                     try:
                         os.mkdir(f"{build_dir}/files")
@@ -361,8 +366,11 @@ if "site" not in args.build or ("site" in args.build and (args.only_update_html 
             # Adds Pack Conflicts
             conflicts = []
             try:
-                for conf in range(len(file["packs"][i]["conflict"])):
-                    conflicts.append(file["packs"][i]["conflict"][conf])
+                conflicts.extend(file["packs"][i]["conflict"])
+            except KeyError:
+                pass # If it is empty, it just skips
+            try:
+                conflicts.extend(file["packs"][i]["obvious_conflict"])
             except KeyError:
                 pass # If it is empty, it just skips
 
@@ -376,12 +384,12 @@ if "site" not in args.build or ("site" in args.build and (args.only_update_html 
             confs = ""
             if pack_exists:
                 packs += 1
-                to_add_pack = pack_start
+                to_add_pack = pack_start.replace('<conflicts>', dumps(conflicts).replace('"', "&quot;"))
                 to_add_pack += pack_mid
-                if conflicts != []:
-                    for c in conflicts:
-                        confs += f"{c}, "
-                    to_add_pack += html_conf.replace('<conflicts>',confs[:-2])
+                try:
+                    to_add_pack += html_conf.replace('<conflicts>', ", ".join(file["packs"][i]["conflict"]))
+                except KeyError:
+                    pass
                 to_add_pack += pack_end
                 # Replace vars
                 to_add_pack = to_add_pack.replace("topic_name", file["topic"])
@@ -432,7 +440,7 @@ if "site" not in args.build or ("site" in args.build and (args.only_update_html 
                 comp_stats[1] += 1
                 # appending an empty list for mapping sake
                 compat_map[f"{ways}way"].append([])
-    print(f"[green]Done!")
+    print("[green]Done!")
 
     # HTML formatting
     with open(f"{cdir()}/webUI/index.html.template", "r") as html_file:
@@ -444,7 +452,7 @@ if "site" not in args.build or ("site" in args.build and (args.only_update_html 
     html = soup.prettify()
     html = html.replace("<br/>", "<br>")
     # Update files
-    print(f"[yellow]Updating files...")
+    print("[yellow]Updating files...")
     if not args.only_update_html:
         try:
             os.mkdir(f"{cdir()}/jsons/map")
@@ -485,17 +493,17 @@ if "site" not in args.build or ("site" in args.build and (args.only_update_html 
     print("[green]Updated!")
 
     if args.format:
-        print(f"[yellow]Making files Prettier\u2122")
+        print("[yellow]Making files Prettier\u2122")
         os.chdir(cdir())
         try:
             run('pnpm exec prettier --write "**/*.{js,ts,css,json}"', quiet=True)
         except KeyboardInterrupt:
-            print(f"---> [red]You are a bit impatient...")
-        print(f"[green]Files are Prettier!")
+            print("---> [red]You are a bit impatient...")
+        print("[green]Files are Prettier!")
     elif not args.only_update_html:
-        print(f"[yellow]Remember to format the files!")
+        print("[yellow]Remember to format the files!")
 
-with spinner(f"[yellow]Updting resources from remote...", spinner="hamburger"):
+with spinner("[yellow]Updting resources from remote...", spinner="hamburger"):
     def request_save_to(url="", filename=""):
         with requests.get(url, stream=True) as response:
             response.raise_for_status()
@@ -510,11 +518,11 @@ with spinner(f"[yellow]Updting resources from remote...", spinner="hamburger"):
         # pull css 
         request_save_to("https://raw.githubusercontent.com/becomtweaks/resource-packs/refs/heads/main/webUI/theme.css", f"{cdir()}/webUI/theme.css")
     if spinner == emptySpinner:
-        print(f"[green]Updated files from remote!")
+        print("[green]Updated files from remote!")
 
 if "site" in args.build:
     if not (args.only_update_html or args.only_update_jsons or args.format):
-        print(f"[bright_cyan]Make sure you built the HTML!")
+        print("[bright_cyan]Make sure you built the HTML!")
     try:
         shutil.rmtree(f"{cdir()}/build", onerror=remove_readonly)
     except FileNotFoundError:
@@ -526,7 +534,7 @@ if "site" in args.build:
             content = file.read()
         with open(f"{cdir()}/build/index.html", "w") as file:
             file.write(content.replace("../", f"https://raw.githubusercontent.com/{args.repo}/{args.branch}/"))
-        print(f"[bright_cyan]Website build success!")
+        print("[bright_cyan]Website build success!")
     except Exception as e:
-        print(f"---> [red]Website build failed!")
+        print("---> [red]Website build failed!")
         print(e)

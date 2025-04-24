@@ -7,27 +7,57 @@
     {
       "pack_id": "RedEnchantmentGlint",
       "pack_name": "Red",
-      "pack_description": ""
+      "pack_description": "",
+      "obvious_conflict": [
+        "OrangeEnchantmentGlint",
+        "YellowEnchantmentGlint",
+        "BlueEnchantmentGlint",
+        "RainbowEnchantmentGlint"
+      ]
     },
     {
       "pack_id": "OrangeEnchantmentGlint",
       "pack_name": "Orange",
-      "pack_description": ""
+      "pack_description": "",
+      "obvious_conflict": [
+        "RedEnchantmentGlint",
+        "YellowEnchantmentGlint",
+        "BlueEnchantmentGlint",
+        "RainbowEnchantmentGlint"
+      ]
     },
     {
       "pack_id": "YellowEnchantmentGlint",
       "pack_name": "Yellow",
-      "pack_description": ""
+      "pack_description": "",
+      "obvious_conflict": [
+        "RedEnchantmentGlint",
+        "OrangeEnchantmentGlint",
+        "BlueEnchantmentGlint",
+        "RainbowEnchantmentGlint"
+      ]
     },
     {
       "pack_id": "BlueEnchantmentGlint",
       "pack_name": "Blue",
-      "pack_description": ""
+      "pack_description": "",
+      "obvious_conflict": [
+        "RedEnchantmentGlint",
+        "OrangeEnchantmentGlint",
+        "YellowEnchantmentGlint",
+        "RainbowEnchantmentGlint"
+      ]
     },
     {
       "pack_id": "RainbowEnchantmentGlint",
       "pack_name": "Rainbow",
-      "pack_description": ""
+      "pack_description": "",
+      "obvious_conflict": [
+        "RedEnchantmentGlint",
+        "OrangeEnchantmentGlint",
+        "YellowEnchantmentGlint",
+        "BlueEnchantmentGlint"
+      ]
     }
   ]
 }

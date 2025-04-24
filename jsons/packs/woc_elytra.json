@@ -7,77 +7,317 @@
     {
       "pack_id": "WhiteElytra",
       "pack_name": "White",
-      "pack_description": ""
+      "pack_description": "",
+      "obvious_conflict": [
+        "GrayElytra",
+        "BlackElytra",
+        "BrownElytra",
+        "RedElytra",
+        "OrangeElytra",
+        "YellowElytra",
+        "LimeElytra",
+        "GreenElytra",
+        "CyanElytra",
+        "LightBlueElytra",
+        "BlueElytra",
+        "PurpleElytra",
+        "MagentaElytra",
+        "PinkElytra"
+      ]
     },
     {
       "pack_id": "GrayElytra",
       "pack_name": "Gray",
-      "pack_description": ""
+      "pack_description": "",
+      "obvious_conflict": [
+        "WhiteElytra",
+        "BlackElytra",
+        "BrownElytra",
+        "RedElytra",
+        "OrangeElytra",
+        "YellowElytra",
+        "LimeElytra",
+        "GreenElytra",
+        "CyanElytra",
+        "LightBlueElytra",
+        "BlueElytra",
+        "PurpleElytra",
+        "MagentaElytra",
+        "PinkElytra"
+      ]
     },
     {
       "pack_id": "BlackElytra",
       "pack_name": "Black",
-      "pack_description": ""
+      "pack_description": "",
+      "obvious_conflict": [
+        "WhiteElytra",
+        "GrayElytra",
+        "BrownElytra",
+        "RedElytra",
+        "OrangeElytra",
+        "YellowElytra",
+        "LimeElytra",
+        "GreenElytra",
+        "CyanElytra",
+        "LightBlueElytra",
+        "BlueElytra",
+        "PurpleElytra",
+        "MagentaElytra",
+        "PinkElytra"
+      ]
     },
     {
       "pack_id": "BrownElytra",
       "pack_name": "Brown",
-      "pack_description": ""
+      "pack_description": "",
+      "obvious_conflict": [
+        "WhiteElytra",
+        "GrayElytra",
+        "BlackElytra",
+        "RedElytra",
+        "OrangeElytra",
+        "YellowElytra",
+        "LimeElytra",
+        "GreenElytra",
+        "CyanElytra",
+        "LightBlueElytra",
+        "BlueElytra",
+        "PurpleElytra",
+        "MagentaElytra",
+        "PinkElytra"
+      ]
     },
     {
       "pack_id": "RedElytra",
       "pack_name": "Red",
-      "pack_description": ""
+      "pack_description": "",
+      "obvious_conflict": [
+        "WhiteElytra",
+        "GrayElytra",
+        "BlackElytra",
+        "BrownElytra",
+        "OrangeElytra",
+        "YellowElytra",
+        "LimeElytra",
+        "GreenElytra",
+        "CyanElytra",
+        "LightBlueElytra",
+        "BlueElytra",
+        "PurpleElytra",
+        "MagentaElytra",
+        "PinkElytra"
+      ]
     },
     {
       "pack_id": "OrangeElytra",
       "pack_name": "Orange",
-      "pack_description": ""
+      "pack_description": "",
+      "obvious_conflict": [
+        "WhiteElytra",
+        "GrayElytra",
+        "BlackElytra",
+        "BrownElytra",
+        "RedElytra",
+        "YellowElytra",
+        "LimeElytra",
+        "GreenElytra",
+        "CyanElytra",
+        "LightBlueElytra",
+        "BlueElytra",
+        "PurpleElytra",
+        "MagentaElytra",
+        "PinkElytra"
+      ]
     },
     {
       "pack_id": "YellowElytra",
       "pack_name": "Yellow",
-      "pack_description": ""
+      "pack_description": "",
+      "obvious_conflict": [
+        "WhiteElytra",
+        "GrayElytra",
+        "BlackElytra",
+        "BrownElytra",
+        "RedElytra",
+        "OrangeElytra",
+        "LimeElytra",
+        "GreenElytra",
+        "CyanElytra",
+        "LightBlueElytra",
+        "BlueElytra",
+        "PurpleElytra",
+        "MagentaElytra",
+        "PinkElytra"
+      ]
     },
     {
       "pack_id": "LimeElytra",
       "pack_name": "Lime",
-      "pack_description": ""
+      "pack_description": "",
+      "obvious_conflict": [
+        "WhiteElytra",
+        "GrayElytra",
+        "BlackElytra",
+        "BrownElytra",
+        "RedElytra",
+        "OrangeElytra",
+        "YellowElytra",
+        "GreenElytra",
+        "CyanElytra",
+        "LightBlueElytra",
+        "BlueElytra",
+        "PurpleElytra",
+        "MagentaElytra",
+        "PinkElytra"
+      ]
     },
     {
       "pack_id": "GreenElytra",
       "pack_name": "Green",
-      "pack_description": ""
+      "pack_description": "",
+      "obvious_conflict": [
+        "WhiteElytra",
+        "GrayElytra",
+        "BlackElytra",
+        "BrownElytra",
+        "RedElytra",
+        "OrangeElytra",
+        "YellowElytra",
+        "LimeElytra",
+        "CyanElytra",
+        "LightBlueElytra",
+        "BlueElytra",
+        "PurpleElytra",
+        "MagentaElytra",
+        "PinkElytra"
+      ]
     },
     {
       "pack_id": "CyanElytra",
       "pack_name": "Cyan",
-      "pack_description": ""
+      "pack_description": "",
+      "obvious_conflict": [
+        "WhiteElytra",
+        "GrayElytra",
+        "BlackElytra",
+        "BrownElytra",
+        "RedElytra",
+        "OrangeElytra",
+        "YellowElytra",
+        "LimeElytra",
+        "GreenElytra",
+        "LightBlueElytra",
+        "BlueElytra",
+        "PurpleElytra",
+        "MagentaElytra",
+        "PinkElytra"
+      ]
     },
     {
       "pack_id": "LightBlueElytra",
       "pack_name": "Light Blue",
-      "pack_description": ""
+      "pack_description": "",
+      "obvious_conflict": [
+        "WhiteElytra",
+        "GrayElytra",
+        "BlackElytra",
+        "BrownElytra",
+        "RedElytra",
+        "OrangeElytra",
+        "YellowElytra",
+        "LimeElytra",
+        "GreenElytra",
+        "CyanElytra",
+        "BlueElytra",
+        "PurpleElytra",
+        "MagentaElytra",
+        "PinkElytra"
+      ]
     },
     {
       "pack_id": "BlueElytra",
       "pack_name": "Blue",
-      "pack_description": ""
+      "pack_description": "",
+      "obvious_conflict": [
+        "WhiteElytra",
+        "GrayElytra",
+        "BlackElytra",
+        "BrownElytra",
+        "RedElytra",
+        "OrangeElytra",
+        "YellowElytra",
+        "LimeElytra",
+        "GreenElytra",
+        "CyanElytra",
+        "LightBlueElytra",
+        "PurpleElytra",
+        "MagentaElytra",
+        "PinkElytra"
+      ]
     },
     {
       "pack_id": "PurpleElytra",
       "pack_name": "Purple",
-      "pack_description": ""
+      "pack_description": "",
+      "obvious_conflict": [
+        "WhiteElytra",
+        "GrayElytra",
+        "BlackElytra",
+        "BrownElytra",
+        "RedElytra",
+        "OrangeElytra",
+        "YellowElytra",
+        "LimeElytra",
+        "GreenElytra",
+        "CyanElytra",
+        "LightBlueElytra",
+        "BlueElytra",
+        "MagentaElytra",
+        "PinkElytra"
+      ]
     },
     {
       "pack_id": "MagentaElytra",
       "pack_name": "Magenta",
-      "pack_description": ""
+      "pack_description": "",
+      "obvious_conflict": [
+        "WhiteElytra",
+        "GrayElytra",
+        "BlackElytra",
+        "BrownElytra",
+        "RedElytra",
+        "OrangeElytra",
+        "YellowElytra",
+        "LimeElytra",
+        "GreenElytra",
+        "CyanElytra",
+        "LightBlueElytra",
+        "BlueElytra",
+        "PurpleElytra",
+        "PinkElytra"
+      ]
     },
     {
       "pack_id": "PinkElytra",
       "pack_name": "Pink",
-      "pack_description": ""
+      "pack_description": "",
+      "obvious_conflict": [
+        "WhiteElytra",
+        "GrayElytra",
+        "BlackElytra",
+        "BrownElytra",
+        "RedElytra",
+        "OrangeElytra",
+        "YellowElytra",
+        "LimeElytra",
+        "GreenElytra",
+        "CyanElytra",
+        "LightBlueElytra",
+        "BlueElytra",
+        "PurpleElytra",
+        "MagentaElytra"
+      ]
     }
   ]
 }
