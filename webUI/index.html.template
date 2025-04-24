@@ -109,11 +109,6 @@
         <p>Mine then craft</p>
       </div>
     </div>
-    <div class="capture-exit" onclick="closePanel();"></div>
-    <script src="extra.js"></script>
-    <div class="image-container" onclick="showDevToolsPanel();">
-      <img alt="Resource Packs" id="title" src="images/title.png" />
-    </div>
     <div class="preselected" oreui-type="general" oreui-color="dark">
       Pre-selected Tweaks!
       <div
@@ -122,6 +117,11 @@
       >
         Unselect?
       </div>
+    </div>
+    <div class="capture-exit" onclick="closePanel();"></div>
+    <script src="extra.js"></script>
+    <div class="image-container" onclick="showDevToolsPanel();">
+      <img alt="Resource Packs" id="title" src="images/title.png" />
     </div>
     <div class="container">
       <div class="search-container">
@@ -179,11 +179,11 @@
       </div>
     </div>
     <script src="app.js"></script>
+    <footer class="footer-container">
+      <div class="credits-footer" oreui-type="general" oreui-color="dark">
+        <!--credits-->
+        <p><a href="https://github.com/BEComTweaks/resource-packs">GitHub</a></p>
+      </div>
+    </footer>
   </body>
-  <footer class="footer-container">
-    <div class="credits-footer" oreui-type="general" oreui-color="dark">
-      <!--credits-->
-      <p><a href="https://github.com/BEComTweaks/resource-packs">GitHub</a></p>
-    </div>
-  </footer>
 </html>

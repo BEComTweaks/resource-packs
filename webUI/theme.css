@@ -495,7 +495,6 @@ select {
   display: none;
   gap: 10px;
   max-height: 0;
-  z-index: 1;
   bottom: -2.5px;
   right: -0.5px;
   overflow-y: hidden;
@@ -575,6 +574,16 @@ select {
   padding: 20px;
   z-index: 5;
   text-align: left;
+  margin-bottom: 20px;
+  p {
+    margin: 10px 0;
+  }
+  h2 {
+    margin: 0;
+  }
+  h3 {
+    margin: 20px 0 0px 0;
+  }
 }
 
 .download-container {
@@ -617,15 +626,6 @@ select {
     font-size: 0.875em;
     padding: 5px;
   }
-}
-
-.footer {
-  background: var(--dark-bg);
-  bottom: 0;
-  padding: 20px;
-  position: fixed;
-  text-align: center;
-  width: 100%;
 }
 
 .footer-container {
@@ -909,7 +909,8 @@ input:checked + .slider:before {
     display: none;
     font-family: var(--font);
   }
-  &:hover[oreui-state="active"] [class$="hover-text"] {
+  &:hover[oreui-state="active"][oreui-active-color="purple"]
+    [class$="hover-text"] {
     display: block;
   }
 }
@@ -949,18 +950,21 @@ input:checked + .slider:before {
 }
 
 [class$="hover-text"] {
-  position: absolute;
-  border-radius: 3px;
   display: none;
-  font-size: 13px;
-  left: 50%;
+  position: absolute;
+  left: 0%;
   width: calc(100% - 20px);
   word-wrap: anywhere;
   padding: 5px;
   text-align: center;
-  transform: translateX(-50%);
   z-index: 100;
   font-size: inherit;
+  overflow-x: scroll;
+  scrollbar-width: none;
+  font-size: 13px;
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 .conf-hover-text {
@@ -985,7 +989,8 @@ input:checked + .slider:before {
 
 .tweaks,
 .subcattweaks {
-  align-items: top;
+  position: relative;
+  align-items: stretch;
   display: grid;
   gap: 10px;
   grid-template-columns: repeat(auto-fit, minmax(137.5px, 1fr));
