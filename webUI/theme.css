@@ -672,7 +672,11 @@ select {
   flex-direction: row;
   justify-content: center;
   padding-right: 15px;
-  > p {
+  div {
+    display: flex;
+    flex-direction: column;
+  }
+  p {
     transform: translateY(0) translateX(1em);
     text-wrap: word;
     margin-right: 15px;
@@ -732,6 +736,7 @@ select {
   position: relative;
   display: inline-block;
   width: 4em;
+  min-width: 4em;
   height: 2em;
 }
 
