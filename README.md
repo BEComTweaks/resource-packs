@@ -10,16 +10,10 @@
 ![Completed Pack Icons](https://img.shields.io/badge/Pack%20Icons-526%2F529-green?style=for-the-badge&color=green)
 </div>
 
-> [!IMPORTANT]
-> As of 2/7/24, BedrockTweaks/Files will be more favoured compared to BEComTweaks.
->
-> Contributions here will also be directed to BedrockTweaks/Files.
-
 <div align="left">
 A repo containing every single tweak <b>possible</b> ported from <a href="https://vanillatweaks.net/picker/resource-packs">Vanilla Tweaks' Resource Packs</a> with a Web Interface.
 
-Docs are available at [here](https://becomtweaks.github.io/docs)
+Docs are available [here](https://becomtweaks.gitbook.io/docs)
 
 Pull Requests are greatly appreciated as I do not want this to be a single person project. I can get pretty drained out from projects.
-
 </div>
