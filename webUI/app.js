@@ -783,7 +783,9 @@ function fallbackCheckboxChecker() {
 document
   .querySelector(".devtools-toggle-tweak-per-column input[type='number']")
   .addEventListener("input", function () {
-    const checkbox = this.parentElement.parentElement.querySelector("input[type='checkbox']");
+    const checkbox = this.parentElement.parentElement.querySelector(
+      "input[type='checkbox']",
+    );
     if (checkbox && checkbox.checked) {
       let styleBlock = document.querySelector("#dynamic-grid-style");
 
@@ -813,7 +815,12 @@ document
     if (this.checked) {
       numberInput.removeAttribute("disabled");
       numberInput.dispatchEvent(new Event("input"));
-      consoler("tweak-per-column", "green", `Set tweaks container column width to ${numberInput.content}`, "white");
+      consoler(
+        "tweak-per-column",
+        "green",
+        `Set tweaks container column width to ${numberInput.content}`,
+        "white",
+      );
     } else {
       numberInput.setAttribute("disabled", "true");
       const styleBlock = document.querySelector("#dynamic-grid-style");
