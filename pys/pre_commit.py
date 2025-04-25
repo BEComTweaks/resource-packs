@@ -138,17 +138,17 @@ if "site" not in args.build or ("site" in args.build and (args.only_update_html 
                                     shutil.rmtree(f"build/{folder}", onerror=remove_readonly)
                                 else:
                                     if "rp" in packs_supported:
-                                        os.rename(f"{build_dir}/build/{folder}", f"{build_dir}/files/bp")
+                                        shutil.move(f"{build_dir}/build/{folder}", f"{build_dir}/files/bp")
                                     else:
-                                        os.rename(f"{build_dir}/build/{folder}", f"{build_dir}/files")
+                                        shutil.move(f"{build_dir}/build/{folder}", f"{build_dir}/files")
                             elif folder.endswith("rp"):
                                 if ".gitkeep" in os.listdir(f"build/{folder}") or "rp" not in packs_supported:
                                     shutil.rmtree(f"build/{folder}", onerror=remove_readonly)
                                 else:
                                     if "bp" in packs_supported:
-                                        os.rename(f"{build_dir}/build/{folder}", f"{build_dir}/files/rp")
+                                        shutil.move(f"{build_dir}/build/{folder}", f"{build_dir}/files/rp")
                                     else:
-                                        os.rename(f"{build_dir}/build/{folder}", f"{build_dir}/files")
+                                        shutil.move(f"{build_dir}/build/{folder}", f"{build_dir}/files")
                             else:
                                 print(f"[red]Unknown folder found in {os.path.relpath(os.getcwd(), cdir())}/build/: [yellow]{folder}")
                     # now move to proper folder
@@ -313,17 +313,17 @@ if "site" not in args.build or ("site" in args.build and (args.only_update_html 
                                 shutil.rmtree(f"build/{folder}", onerror=remove_readonly)
                             else:
                                 if "rp" in packs_supported:
-                                    os.rename(f"{build_dir}/build/{folder}", f"{build_dir}/files/bp")
+                                    shutil.move(f"{build_dir}/build/{folder}", f"{build_dir}/files/bp")
                                 else:
-                                    os.rename(f"{build_dir}/build/{folder}", f"{build_dir}/files")
+                                    shutil.move(f"{build_dir}/build/{folder}", f"{build_dir}/files")
                         elif folder.endswith("rp"):
                             if ".gitkeep" in os.listdir(f"build/{folder}") or "rp" not in packs_supported:
                                 shutil.rmtree(f"build/{folder}", onerror=remove_readonly)
                             else:
                                 if "bp" in packs_supported:
-                                    os.rename(f"{build_dir}/build/{folder}", f"{build_dir}/files/rp")
+                                    shutil.move(f"{build_dir}/build/{folder}", f"{build_dir}/files/rp")
                                 else:
-                                    os.rename(f"{build_dir}/build/{folder}", f"{build_dir}/files")
+                                    shutil.move(f"{build_dir}/build/{folder}", f"{build_dir}/files")
                         else:
                             print(f"[red]Unknown folder found in {os.path.relpath(os.getcwd(), cdir())}/build/: [yellow]{folder}")
                 # now move to proper folder
