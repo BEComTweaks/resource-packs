@@ -1,8 +1,7 @@
 {
   "name": "resource-packs",
-  "version": "1.0.0",
-  "description": "Subserver modules for resource packs",
-  "main": "index.js",
+  "version": "3.0.0",
+  "description": "Modules for resource packs",
   "scripts": {
     "test": "python pys/pre_commit.py --format --build server --no-stash --dev",
     "site": "pnpm exec live-server"
@@ -12,20 +11,14 @@
     "url": "git+https://github.com/BEComTweaks/resource-packs.git"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "BEComTweaks",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/BEComTweaks/resource-packs/issues"
   },
   "homepage": "https://github.com/BEComTweaks/resource-packs#readme",
   "dependencies": {
-    "body-parser": "^2.2.0",
-    "cors": "^2.8.5",
-    "express": "^4.21.2",
-    "live-server": "^1.2.2",
-    "lodash": "^4.17.21",
-    "nodemon": "^3.1.9",
-    "prettier": "^3.5.3",
-    "uuid": "^11.1.0"
+    "nodemon": "^3.1.10",
+    "prettier": "^3.5.3"
   }
 }
