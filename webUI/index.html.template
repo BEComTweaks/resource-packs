@@ -77,7 +77,7 @@
       <h3>Devtools</h3>
       <div class="devtools-toggle-console">
         <label class="switch">
-          <input type="checkbox"/>
+          <input type="checkbox" />
           <span class="slider"></span>
         </label>
         <p>Enable Console</p>
@@ -88,22 +88,30 @@
       </code>
       <div class="devtools-toggle-tweak-per-column">
         <label class="switch">
-          <input type="checkbox"/>
-          <span class="slider"></span>
+          <input type="checkbox" />
+          <span class="slider"> </span>
         </label>
-        <p>Use a custom width for each column</p>
-        <input oreui-type="input" oreui-color="dark" type="number" placeholder="Enter a number" disabled/>
+        <div>
+          <p>Use a custom width for each column</p>
+          <input
+            disabled=""
+            oreui-color="dark"
+            oreui-type="input"
+            placeholder="Enter a number"
+            type="number"
+          />
+        </div>
       </div>
       <div class="devtools-toggle-save-to-cache">
         <label class="switch">
-          <input type="checkbox" disabled/>
+          <input type="checkbox" disabled />
           <span class="slider"></span>
         </label>
         <p>Save settings to the browser cache</p>
       </div>
       <div class="devtools-toggle-mine-then-craft">
         <label class="switch">
-          <input type="checkbox" disabled/>
+          <input type="checkbox" disabled />
           <span class="slider"></span>
         </label>
         <p>Mine then craft</p>
@@ -182,7 +190,9 @@
     <footer class="footer-container">
       <div class="credits-footer" oreui-type="general" oreui-color="dark">
         <!--credits-->
-        <p><a href="https://github.com/BEComTweaks/resource-packs">GitHub</a></p>
+        <p>
+          <a href="https://github.com/BEComTweaks/resource-packs">GitHub</a>
+        </p>
       </div>
     </footer>
   </body>
