@@ -1,4 +1,5 @@
 {
+  "$schema": "https://becomtweaks.github.io/schema/packs.json",
   "topic": "Retro",
   "packs": [
     {
@@ -27,11 +28,15 @@
       "pack_description": "Replaces the menu panorama with a dirt background, like in the classic versions of Minecraft. (This will appear on top of the rotating panorama, so any selected menu panorama will not appear)."
     },
     {
+      "pack_id": "AlphaFoliage",
+      "pack_name": "Alpha Foliage",
+      "pack_description": "Changes the foliage textures to those of Alpha Minecraft"
+    },
+    {
       "pack_id": "ClassicOres",
       "pack_name": "Classic Ores",
       "pack_description": "Revert all ores to their pre-1.17 textures, including Copper and Deepslate ores.",
-      "conflict": ["UniformOres"],
-      "compatibility": ["EmeraldstoRubies", "OreBorders", "UnlitRedstoneOre"]
+      "conflict": ["UniformOres"]
     },
     {
       "pack_id": "OldCobblestone",
@@ -48,18 +53,12 @@
       "pack_id": "OldPlanks",
       "pack_name": "Old Planks",
       "pack_description": "Reverts all planks and signs to their old textures, including modern plank types.",
-      "conflict": ["SmootherWarpedPlanks"],
-      "compatibility": [
-        "ConsistentBambooPlanks",
-        "VariatedPlanks",
-        "OarlessBoats"
-      ]
+      "conflict": ["SmootherWarpedPlanks"]
     },
     {
       "pack_id": "OldGravel",
       "pack_name": "Old Gravel",
-      "pack_description": "Reverts Gravel to its Alpha texture.",
-      "compatibility": ["SuspiciousSandGravelBorders"]
+      "pack_description": "Reverts Gravel to its Alpha texture."
     },
     {
       "pack_id": "OldNetherrack",
@@ -90,8 +89,7 @@
     {
       "pack_id": "OldWater",
       "pack_name": "Old Water",
-      "pack_description": "Reverts Water to its old texture.",
-      "compatibility": ["ClearerWater"]
+      "pack_description": "Reverts Water to its old texture."
     },
     {
       "pack_id": "OldIce",
@@ -120,9 +118,19 @@
       "pack_description": "Changes Bed item models to look like regular items (with updated textures) like before 1.12."
     },
     {
-      "pack_id": "OldShulkerColors",
-      "pack_name": "Old Shulker Colors",
+      "pack_id": "OldShulkerBoxes",
+      "pack_name": "Old Shulker Boxes",
       "pack_description": "Recolors Shulkers and Shulker Boxes to their pre-Java 1.12 colors."
+    },
+    {
+      "pack_id": "OldSpawnEggs",
+      "pack_name": "Old Spawn Eggs",
+      "pack_description": "Reverts Spawn Eggs to their classic polka-dot textures"
+    },
+    {
+      "pack_id": "SnoutlessCows",
+      "pack_name": "Snoutless Cows",
+      "pack_description": "Flattens all Cow and Mooshroom snouts like they appeared before 1.21.70"
     },
     {
       "pack_id": "PoppytoRose",
@@ -153,8 +161,7 @@
     {
       "pack_id": "OarlessBoats",
       "pack_name": "Oarless Boats",
-      "pack_description": "Removes the oars from all boat types from their item textures and entity models.",
-      "compatibility": ["OldPlanks"]
+      "pack_description": "Removes the oars from all boat types from their item textures and entity models."
     },
     {
       "pack_id": "OldDoorSound",
@@ -180,6 +187,11 @@
       "pack_id": "OldPotionColors",
       "pack_name": "Old Potion Colors",
       "pack_description": "Brings back the old potion colors from before 1.19.4."
+    },
+    {
+      "pack_id": "LegacyBedrockDriedKelp",
+      "pack_name": "Legacy Bedrock Dried Kelp",
+      "pack_description": "Gives the Dried Kelp item its texture from previous versions of Minecraft: Bedrock Edition"
     }
   ]
 }

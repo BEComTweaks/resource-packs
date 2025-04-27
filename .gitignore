@@ -1,10 +1,11 @@
 # Ignore Python cache files as it forms merge conflicts
 pys/__pycache__/
 # node modules
-package.json
-package-lock.json
 node_modules
+# maps can be built again
+jsons/map
 # build
 build
 # tf is venv doing here
 venv
+jsons/template_compatibilities.json

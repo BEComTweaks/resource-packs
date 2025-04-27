@@ -1,58 +1,170 @@
 {
+  "$schema": "https://becomtweaks.github.io/schema/packs.json",
   "topic": "More Zombies",
   "subcategory_of": "Aesthetic",
+  "location": "aesthetic/more_zombies",
   "packs": [
     {
       "pack_id": "SteveZombies",
       "pack_name": "Steve Zombies",
-      "pack_description": "Retextures zombies to look like more like Steve"
+      "pack_description": "Retextures zombies to look like more like Steve",
+      "obvious_conflict": [
+        "AlexZombies",
+        "AriZombies",
+        "EfeZombies",
+        "KaiZombies",
+        "MakenaZombies",
+        "NoorZombies",
+        "SunnyZombies",
+        "ZuriZombies",
+        "AllZombies"
+      ]
     },
     {
       "pack_id": "AlexZombies",
       "pack_name": "Alex Zombies",
-      "pack_description": "Retextures zombies to look like Alex rather than Steve"
+      "pack_description": "Retextures zombies to look like Alex rather than Steve",
+      "obvious_conflict": [
+        "SteveZombies",
+        "AriZombies",
+        "EfeZombies",
+        "KaiZombies",
+        "MakenaZombies",
+        "NoorZombies",
+        "SunnyZombies",
+        "ZuriZombies",
+        "AllZombies"
+      ]
     },
     {
       "pack_id": "AriZombies",
       "pack_name": "Ari Zombies",
-      "pack_description": "Retextures zombies to look like Ari rather than Steve"
+      "pack_description": "Retextures zombies to look like Ari rather than Steve",
+      "obvious_conflict": [
+        "SteveZombies",
+        "AlexZombies",
+        "EfeZombies",
+        "KaiZombies",
+        "MakenaZombies",
+        "NoorZombies",
+        "SunnyZombies",
+        "ZuriZombies",
+        "AllZombies"
+      ]
     },
     {
       "pack_id": "EfeZombies",
       "pack_name": "Efe Zombies",
-      "pack_description": "Retextures zombies to look like Efe rather than Steve"
+      "pack_description": "Retextures zombies to look like Efe rather than Steve",
+      "obvious_conflict": [
+        "SteveZombies",
+        "AlexZombies",
+        "AriZombies",
+        "KaiZombies",
+        "MakenaZombies",
+        "NoorZombies",
+        "SunnyZombies",
+        "ZuriZombies",
+        "AllZombies"
+      ]
     },
     {
       "pack_id": "KaiZombies",
       "pack_name": "Kai Zombies",
-      "pack_description": "Retextures zombies to look like Kai rather than Steve"
+      "pack_description": "Retextures zombies to look like Kai rather than Steve",
+      "obvious_conflict": [
+        "SteveZombies",
+        "AlexZombies",
+        "AriZombies",
+        "EfeZombies",
+        "MakenaZombies",
+        "NoorZombies",
+        "SunnyZombies",
+        "ZuriZombies",
+        "AllZombies"
+      ]
     },
     {
       "pack_id": "MakenaZombies",
       "pack_name": "Makena Zombies",
-      "pack_description": "Retextures zombies to look like Makena rather than Steve"
+      "pack_description": "Retextures zombies to look like Makena rather than Steve",
+      "obvious_conflict": [
+        "SteveZombies",
+        "AlexZombies",
+        "AriZombies",
+        "EfeZombies",
+        "KaiZombies",
+        "NoorZombies",
+        "SunnyZombies",
+        "ZuriZombies",
+        "AllZombies"
+      ]
     },
     {
       "pack_id": "NoorZombies",
       "pack_name": "Noor Zombies",
-      "pack_description": "Retextures zombies to look like Noor rather than Steve"
+      "pack_description": "Retextures zombies to look like Noor rather than Steve",
+      "obvious_conflict": [
+        "SteveZombies",
+        "AlexZombies",
+        "AriZombies",
+        "EfeZombies",
+        "KaiZombies",
+        "MakenaZombies",
+        "SunnyZombies",
+        "ZuriZombies",
+        "AllZombies"
+      ]
     },
     {
       "pack_id": "SunnyZombies",
       "pack_name": "Sunny Zombies",
-      "pack_description": "Retextures zombies to look like Sunny rather than Steve"
+      "pack_description": "Retextures zombies to look like Sunny rather than Steve",
+      "obvious_conflict": [
+        "SteveZombies",
+        "AlexZombies",
+        "AriZombies",
+        "EfeZombies",
+        "KaiZombies",
+        "MakenaZombies",
+        "NoorZombies",
+        "ZuriZombies",
+        "AllZombies"
+      ]
     },
     {
       "pack_id": "ZuriZombies",
       "pack_name": "Zuri Zombies",
-      "pack_description": "Retextures zombies to look like Zuri rather than Steve"
+      "pack_description": "Retextures zombies to look like Zuri rather than Steve",
+      "obvious_conflict": [
+        "SteveZombies",
+        "AlexZombies",
+        "AriZombies",
+        "EfeZombies",
+        "KaiZombies",
+        "MakenaZombies",
+        "NoorZombies",
+        "SunnyZombies",
+        "AllZombies"
+      ]
     },
     {
       "pack_id": "AllZombies",
       "pack_name": "All Zombies",
       "pack_description": "Randomizes zombie textures.",
       "message": ["info", "They change textures when rejoining world!"],
-      "icon": "gif"
+      "icon": "gif",
+      "obvious_conflict": [
+        "SteveZombies",
+        "AlexZombies",
+        "AriZombies",
+        "EfeZombies",
+        "KaiZombies",
+        "MakenaZombies",
+        "NoorZombies",
+        "SunnyZombies",
+        "ZuriZombies"
+      ]
     }
   ]
 }

@@ -1,6 +1,8 @@
 {
+  "$schema": "https://becomtweaks.github.io/schema/packs.json",
   "topic": "Lower and Sides",
   "subcategory_of": "Terrain",
+  "location": "terrain/lower_and_sides",
   "packs": [
     {
       "pack_id": "LowerGrass",
@@ -12,8 +14,7 @@
       "pack_id": "GrassSides",
       "pack_name": "Grass Sides",
       "pack_description": "Completely covers the sides of Grass Blocks to provide a smoother and greener landscape.",
-      "conflict": ["LowerGrass", "DungeonsDirt"],
-      "compatibility": ["LushGrassAllRound"]
+      "conflict": ["LowerGrass", "DungeonsDirt"]
     },
     {
       "pack_id": "LowerMycelium",
@@ -68,8 +69,7 @@
       "pack_name": "Lower Crimson Nylium",
       "pack_description": "Lowers the sides of Crimson Nylium to provide a smoother and redder landscape.",
       "conflict": ["CrimsonNyliumSides", "OldNetherrack"],
-      "compatibility": ["BrighterNether"],
-      "priority": true
+      "priority": 5
     },
     {
       "pack_id": "CrimsonNyliumSides",
@@ -82,8 +82,7 @@
       "pack_name": "Lower Warped Nylium",
       "pack_description": "Lowers the sides of Warped Nylium to provide a smoother and bluer landscape.",
       "conflict": ["WarpedNyliumSides", "OldNetherrack"],
-      "compatibility": ["BrighterNether"],
-      "priority": true
+      "priority": 5
     },
     {
       "pack_id": "WarpedNyliumSides",

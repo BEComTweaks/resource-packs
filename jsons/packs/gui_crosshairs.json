@@ -1,76 +1,288 @@
 {
+  "$schema": "https://becomtweaks.github.io/schema/packs.json",
   "topic": "Crosshairs",
   "subcategory_of": "GUI",
+  "location": "gui/crosshairs",
   "packs": [
     {
       "pack_id": "NoCrosshair",
       "pack_name": "No Crosshair",
-      "pack_description": ""
+      "pack_description": "",
+      "obvious_conflict": [
+        "SmallerCrosshair",
+        "DotCrosshair",
+        "PlusDotCrosshair",
+        "CircleCrosshair",
+        "CircleDotCrosshair",
+        "SquareCrosshair",
+        "SquareDotCrosshair",
+        "SquarePlusCrosshair",
+        "SquarePlusDotCrosshair",
+        "4AngledCrosshair",
+        "4AngledDotCrosshair",
+        "HeartCrosshair",
+        "ArrowCrosshair"
+      ]
     },
     {
       "pack_id": "SmallerCrosshair",
       "pack_name": "Smaller Crosshair",
-      "pack_description": ""
+      "pack_description": "",
+      "obvious_conflict": [
+        "NoCrosshair",
+        "DotCrosshair",
+        "PlusDotCrosshair",
+        "CircleCrosshair",
+        "CircleDotCrosshair",
+        "SquareCrosshair",
+        "SquareDotCrosshair",
+        "SquarePlusCrosshair",
+        "SquarePlusDotCrosshair",
+        "4AngledCrosshair",
+        "4AngledDotCrosshair",
+        "HeartCrosshair",
+        "ArrowCrosshair"
+      ]
     },
     {
       "pack_id": "DotCrosshair",
       "pack_name": "Dot Crosshair",
-      "pack_description": ""
+      "pack_description": "",
+      "obvious_conflict": [
+        "NoCrosshair",
+        "SmallerCrosshair",
+        "PlusDotCrosshair",
+        "CircleCrosshair",
+        "CircleDotCrosshair",
+        "SquareCrosshair",
+        "SquareDotCrosshair",
+        "SquarePlusCrosshair",
+        "SquarePlusDotCrosshair",
+        "4AngledCrosshair",
+        "4AngledDotCrosshair",
+        "HeartCrosshair",
+        "ArrowCrosshair"
+      ]
     },
     {
       "pack_id": "PlusDotCrosshair",
       "pack_name": "Plus Dot Crosshair",
-      "pack_description": ""
+      "pack_description": "",
+      "obvious_conflict": [
+        "NoCrosshair",
+        "SmallerCrosshair",
+        "DotCrosshair",
+        "CircleCrosshair",
+        "CircleDotCrosshair",
+        "SquareCrosshair",
+        "SquareDotCrosshair",
+        "SquarePlusCrosshair",
+        "SquarePlusDotCrosshair",
+        "4AngledCrosshair",
+        "4AngledDotCrosshair",
+        "HeartCrosshair",
+        "ArrowCrosshair"
+      ]
     },
     {
       "pack_id": "CircleCrosshair",
       "pack_name": "Circle Crosshair",
-      "pack_description": ""
+      "pack_description": "",
+      "obvious_conflict": [
+        "NoCrosshair",
+        "SmallerCrosshair",
+        "DotCrosshair",
+        "PlusDotCrosshair",
+        "CircleDotCrosshair",
+        "SquareCrosshair",
+        "SquareDotCrosshair",
+        "SquarePlusCrosshair",
+        "SquarePlusDotCrosshair",
+        "4AngledCrosshair",
+        "4AngledDotCrosshair",
+        "HeartCrosshair",
+        "ArrowCrosshair"
+      ]
     },
     {
       "pack_id": "CircleDotCrosshair",
       "pack_name": "Circle Dot Crosshair",
-      "pack_description": ""
+      "pack_description": "",
+      "obvious_conflict": [
+        "NoCrosshair",
+        "SmallerCrosshair",
+        "DotCrosshair",
+        "PlusDotCrosshair",
+        "CircleCrosshair",
+        "SquareCrosshair",
+        "SquareDotCrosshair",
+        "SquarePlusCrosshair",
+        "SquarePlusDotCrosshair",
+        "4AngledCrosshair",
+        "4AngledDotCrosshair",
+        "HeartCrosshair",
+        "ArrowCrosshair"
+      ]
     },
     {
       "pack_id": "SquareCrosshair",
       "pack_name": "Square Crosshair",
-      "pack_description": ""
+      "pack_description": "",
+      "obvious_conflict": [
+        "NoCrosshair",
+        "SmallerCrosshair",
+        "DotCrosshair",
+        "PlusDotCrosshair",
+        "CircleCrosshair",
+        "CircleDotCrosshair",
+        "SquareDotCrosshair",
+        "SquarePlusCrosshair",
+        "SquarePlusDotCrosshair",
+        "4AngledCrosshair",
+        "4AngledDotCrosshair",
+        "HeartCrosshair",
+        "ArrowCrosshair"
+      ]
     },
     {
       "pack_id": "SquareDotCrosshair",
       "pack_name": "Square Dot Crosshair",
-      "pack_description": ""
+      "pack_description": "",
+      "obvious_conflict": [
+        "NoCrosshair",
+        "SmallerCrosshair",
+        "DotCrosshair",
+        "PlusDotCrosshair",
+        "CircleCrosshair",
+        "CircleDotCrosshair",
+        "SquareCrosshair",
+        "SquarePlusCrosshair",
+        "SquarePlusDotCrosshair",
+        "4AngledCrosshair",
+        "4AngledDotCrosshair",
+        "HeartCrosshair",
+        "ArrowCrosshair"
+      ]
     },
     {
       "pack_id": "SquarePlusCrosshair",
       "pack_name": "Square Plus Crosshair",
-      "pack_description": ""
+      "pack_description": "",
+      "obvious_conflict": [
+        "NoCrosshair",
+        "SmallerCrosshair",
+        "DotCrosshair",
+        "PlusDotCrosshair",
+        "CircleCrosshair",
+        "CircleDotCrosshair",
+        "SquareCrosshair",
+        "SquareDotCrosshair",
+        "SquarePlusDotCrosshair",
+        "4AngledCrosshair",
+        "4AngledDotCrosshair",
+        "HeartCrosshair",
+        "ArrowCrosshair"
+      ]
     },
     {
       "pack_id": "SquarePlusDotCrosshair",
       "pack_name": "Square Plus Dot Crosshair",
-      "pack_description": ""
+      "pack_description": "",
+      "obvious_conflict": [
+        "NoCrosshair",
+        "SmallerCrosshair",
+        "DotCrosshair",
+        "PlusDotCrosshair",
+        "CircleCrosshair",
+        "CircleDotCrosshair",
+        "SquareCrosshair",
+        "SquareDotCrosshair",
+        "SquarePlusCrosshair",
+        "4AngledCrosshair",
+        "4AngledDotCrosshair",
+        "HeartCrosshair",
+        "ArrowCrosshair"
+      ]
     },
     {
       "pack_id": "4AngledCrosshair",
       "pack_name": "4 Angled Crosshair",
-      "pack_description": ""
+      "pack_description": "",
+      "obvious_conflict": [
+        "NoCrosshair",
+        "SmallerCrosshair",
+        "DotCrosshair",
+        "PlusDotCrosshair",
+        "CircleCrosshair",
+        "CircleDotCrosshair",
+        "SquareCrosshair",
+        "SquareDotCrosshair",
+        "SquarePlusCrosshair",
+        "SquarePlusDotCrosshair",
+        "4AngledDotCrosshair",
+        "HeartCrosshair",
+        "ArrowCrosshair"
+      ]
     },
     {
       "pack_id": "4AngledDotCrosshair",
       "pack_name": "4 Angled Dot Crosshair",
-      "pack_description": ""
+      "pack_description": "",
+      "obvious_conflict": [
+        "NoCrosshair",
+        "SmallerCrosshair",
+        "DotCrosshair",
+        "PlusDotCrosshair",
+        "CircleCrosshair",
+        "CircleDotCrosshair",
+        "SquareCrosshair",
+        "SquareDotCrosshair",
+        "SquarePlusCrosshair",
+        "SquarePlusDotCrosshair",
+        "4AngledCrosshair",
+        "HeartCrosshair",
+        "ArrowCrosshair"
+      ]
     },
     {
       "pack_id": "HeartCrosshair",
       "pack_name": "Heart Crosshair",
-      "pack_description": ""
+      "pack_description": "",
+      "obvious_conflict": [
+        "NoCrosshair",
+        "SmallerCrosshair",
+        "DotCrosshair",
+        "PlusDotCrosshair",
+        "CircleCrosshair",
+        "CircleDotCrosshair",
+        "SquareCrosshair",
+        "SquareDotCrosshair",
+        "SquarePlusCrosshair",
+        "SquarePlusDotCrosshair",
+        "4AngledCrosshair",
+        "4AngledDotCrosshair",
+        "ArrowCrosshair"
+      ]
     },
     {
       "pack_id": "ArrowCrosshair",
       "pack_name": "Arrow Crosshair",
-      "pack_description": ""
+      "pack_description": "",
+      "obvious_conflict": [
+        "NoCrosshair",
+        "SmallerCrosshair",
+        "DotCrosshair",
+        "PlusDotCrosshair",
+        "CircleCrosshair",
+        "CircleDotCrosshair",
+        "SquareCrosshair",
+        "SquareDotCrosshair",
+        "SquarePlusCrosshair",
+        "SquarePlusDotCrosshair",
+        "4AngledCrosshair",
+        "4AngledDotCrosshair",
+        "HeartCrosshair"
+      ]
     }
   ]
 }

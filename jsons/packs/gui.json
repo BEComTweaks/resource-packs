@@ -1,4 +1,5 @@
 {
+  "$schema": "https://becomtweaks.github.io/schema/packs.json",
   "topic": "GUI",
   "packs": [
     {
@@ -36,6 +37,12 @@
       "pack_id": "NumberedHotbar",
       "pack_name": "Numbered Hotbar",
       "pack_description": "Adds numbers to the hotbar slots."
+    },
+    {
+      "pack_id": "HotbarStyleInventorySlotHighlight",
+      "pack_name": "Hotbar-Style Inventory Slot Highlight",
+      "pack_description": "Gives the inventory slot highlight the same texture as the hotbar selection slot",
+      "conflict": ["JavaInventorySlotHighlight"]
     },
     {
       "pack_id": "TranslucentTooltips",

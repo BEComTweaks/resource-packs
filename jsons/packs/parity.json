@@ -1,4 +1,5 @@
 {
+  "$schema": "https://becomtweaks.github.io/schema/packs.json",
   "topic": "Parity",
   "packs": [
     {
@@ -28,6 +29,13 @@
       "pack_description": "Gives the Ender Dragon's projectile its texture from Minecraft: Java Edition."
     },
     {
+      "pack_id": "JavaInventorySlotHighlight",
+      "pack_name": "Java Inventory Slot Highlight",
+      "pack_description": "Gives the inventory slot highlight its texture from Minecraft: Java Edition",
+      "priority": 1,
+      "conflict": ["HotbarStyleInventorySlotHighlight"]
+    },
+    {
       "pack_id": "JavaDriedKelp",
       "pack_name": "Java Dried Kelp",
       "pack_description": "Gives the Dried Kelp item its texture from Minecraft: Java Edition."
@@ -41,6 +49,11 @@
       "pack_id": "DungeonsCreepers",
       "pack_name": "Dungeons Creepers",
       "pack_description": "Gives the Creeper its texture from Minecraft: Dungeons."
+    },
+    {
+      "pack_id": "DungeonsMossySkeleton",
+      "pack_name": "Dungeons Mossy Skeleton",
+      "pack_description": "Retextures the Bogged to the Mossy Skeleton from Minecraft: Dungeons"
     },
     {
       "pack_id": "DungeonsDirt",
@@ -67,8 +80,7 @@
       "pack_id": "DungeonsStone",
       "pack_name": "Dungeons Stone",
       "pack_description": "Gives Stone its texture from Minecraft: Dungeons (with 12 texture variants).",
-      "conflict": ["VariatedStone"],
-      "compatibility": ["OreBorders", "VisualInfestedStoneItems"]
+      "conflict": ["VariatedStone"]
     },
     {
       "pack_id": "DungeonsTerracotta",
@@ -92,6 +104,11 @@
       "pack_name": "Legacy Console Snowball",
       "pack_description": "Gives the Snowball its texture from old legacy console editions of Minecraft.",
       "conflict": ["WhiterSnow"]
+    },
+    {
+      "pack_id": "EarthWoolyCow",
+      "pack_name": "Earth Wooly Cow",
+      "pack_description": "Retextures the Cold Cow to the Wooly Cow from Minecraft: Earth"
     }
   ]
 }

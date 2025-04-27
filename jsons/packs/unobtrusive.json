@@ -1,4 +1,5 @@
 {
+  "$schema": "https://becomtweaks.github.io/schema/packs.json",
   "topic": "Unobtrusive",
   "packs": [
     {
@@ -18,6 +19,12 @@
       "pack_description": "Makes many particles transparent or hollow for easier vision.",
       "conflict": ["JavaBoom"]
     },
+    {
+      "pack_id": "NoFallingLeafParticles",
+      "pack_name": "No Falling Leaf Particles",
+      "pack_description": "Removes falling leaf particles from all leaf blocks"
+    },
+
     {
       "pack_id": "NoCherryLeavesParticles",
       "pack_name": "No Cherry Leaves Particles",
@@ -67,8 +74,7 @@
     {
       "pack_id": "UnobtrusiveScaffolding",
       "pack_name": "Unobtrusive Scaffolding",
-      "pack_description": "Creates a hole in the top of scaffolding, allowing you to traverse up and down them more comfortably.",
-      "compatibility": ["AccurateScaffolding"]
+      "pack_description": "Creates a hole in the top of scaffolding, allowing you to traverse up and down them more comfortably."
     },
     {
       "pack_id": "UnobtrusiveEnchantmentGlint",
@@ -112,8 +118,7 @@
       "pack_id": "TranslucentSpyglassOverlay",
       "pack_name": "Translucent Spyglass Overlay",
       "pack_description": "Increases visibility when zooming in with a Spyglass.",
-      "conflict": ["WHAT", "NoSpyglassOverlay", "UselessSpyglassOverlay"],
-      "compatibility": ["AccurateSpyglass"]
+      "conflict": ["WHAT", "NoSpyglassOverlay", "UselessSpyglassOverlay"]
     },
     {
       "pack_id": "NoSpyglassOverlay",

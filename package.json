@@ -1,0 +1,24 @@
+{
+  "name": "resource-packs",
+  "version": "3.0.0",
+  "description": "Modules for resource packs",
+  "scripts": {
+    "test": "python pys/pre_commit.py --format --build server --no-stash --dev",
+    "site": "pnpm exec live-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BEComTweaks/resource-packs.git"
+  },
+  "keywords": [],
+  "author": "BEComTweaks",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/BEComTweaks/resource-packs/issues"
+  },
+  "homepage": "https://github.com/BEComTweaks/resource-packs#readme",
+  "dependencies": {
+    "live-server": "^1.2.2",
+    "prettier": "^3.5.3"
+  }
+}

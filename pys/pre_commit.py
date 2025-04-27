@@ -1,6 +1,8 @@
-import os, re, shutil, argparse
-from json import *
-from time import sleep
+import os
+import re
+import shutil
+import argparse
+from json import dumps
 
 if str(os.getcwd()).endswith("system32"):
     # This has to be in every script to prevent FileNotFoundError
@@ -9,19 +11,17 @@ if str(os.getcwd()).endswith("system32"):
     # Because that still brings up an error
     os.chdir(os.path.dirname(os.path.realpath(__file__)))
 
-from custom_functions import *
-check("clrprint")
-from clrprint import clrprint
-check("markdown")
+from custom_functions import cdir, run, load_json, dump_json, remove_readonly, sendToCF, emptySpinner
+from custom_functions import console
 from markdown import markdown
-check("bs4","beautifulsoup4")
 from bs4 import BeautifulSoup
-check("lzstring")
 from lzstring import LZString
+import requests
 
-category_start = '<div class="category"><div oreui-type="button" oreui-color="dark" class="category-label" onclick="OreUI.toggleActive(this);toggleCategory(this);">topic_name</div><button class="category-label-selectall" onclick="selectAll(this)" data-allpacks="<all_packs>"><img src="images/select-all-button/chiseled_bookshelf_empty.png" class="category-label-selectall-img"><div class="category-label-selectall-hovertext">Select All</div></button><div class="category-controlled" oreui-color="dark" oreui-type="general"><div class="tweaks">'
-subcategory_start = '<div class="subcategory"><div oreui-type="button" class="category-label" oreui-color="dark" onclick="OreUI.toggleActive(this);toggleCategory(this);">topic_name</div><button class="category-label-selectall sub" onclick="selectAll(this)" data-allpacks="<all_packs>"><img src="images/select-all-button/chiseled_bookshelf_empty.png" class="category-label-selectall-img"><div class="category-label-selectall-hovertext">Select All</div></button><div class="category-controlled" oreui-color="dark" oreui-type="general"><div class="subcattweaks">'
-pack_start = '<div class="tweak" onclick="toggleSelection(this);" data-category="topic_name" data-name="pack_id" data-index="pack_index" oreui-type="button" oreui-color="dark" oreui-active-color="green">'
+packs_supported = ["rp"]
+category_start = '<div class="category"><div oreui-type="button" oreui-color="dark" class="category-label" onclick="toggleCategory(this);">topic_name</div><button class="category-label-selectall" onclick="selectAll(this)" data-allpacks="<all_packs>" data-category="topic_name"><img src="images/select-all-button/chiseled_bookshelf_empty.png" class="category-label-selectall-img"><div class="category-label-selectall-hovertext">Select All</div></button><div class="category-controlled" oreui-color="dark" oreui-type="general"><div class="tweaks">'
+subcategory_start = '<div class="subcategory"><div oreui-type="button" class="category-label" oreui-color="dark" onclick="toggleCategory(this);">topic_name</div><button class="category-label-selectall sub" onclick="selectAll(this)" data-allpacks="<all_packs>" data-category="<topic_name>"><img src="images/select-all-button/chiseled_bookshelf_empty.png" class="category-label-selectall-img"><div class="category-label-selectall-hovertext">Select All</div></button><div class="category-controlled" oreui-color="dark" oreui-type="general"><div class="subcattweaks">'
+pack_start = '<div class="tweak" onclick="toggleSelection(this);" data-category="topic_name" data-name="pack_id" data-conflicts="<conflicts>" oreui-type="button" oreui-color="dark" oreui-active-color="green">'
 html_comp = '<div class="comp-hover-text" oreui-color="dark" oreui-type="general">Incompatible with: <incompatible></div>'
 pack_mid = '<div class="tweak-info"><input type="checkbox" name="tweak"><img src="../relloctopackicon" style="width:82px; height:82px;" alt="pack_name"><br><label id="tweak" class="tweak-title">pack_name</label><div class="tweak-description">pack_description</div></div>'
 html_conf = '<div class="conf-hover-text" oreui-color="dark" oreui-type="general">Conflicts with: <conflicts></div>'
@@ -31,139 +31,187 @@ cat_end_w_subcat_no_end = '</div><div class="subcat<index>">'
 
 html = ''
 stats = [0, 0]
-incomplete_packs = {}
-cstats = [0, 0]
-compatibilities = {}
-conflicts = {}
+comp_stats = [0, 0]
 pkicstats = [0, 0]
 subcats = 0
 ignore = False
 subcat_list = []
-incomplete_pkics = {}
 packs = -1
-pack_list = []
 name_to_json = {}
-with open(f"{cdir()}/jsons/others/pack_order_list.txt","r") as pol:
-    for i in pol:
-        pack_list.append(i)
+priority = {}
+
+
+with open(f"{cdir()}/jsons/pack_order_list.txt","r") as pol:
+    cat_list = pol.read().split("\n")
+    if cat_list[-1] == "":
+        cat_list.pop()
 
 parser = argparse.ArgumentParser(description='Run a massive script that updates Packs to-do, Icons to-do, Compatibilities to-do and the HTML')
 parser.add_argument('--format', '-f', action='store_true', help='Include flag to format files')
-parser.add_argument('--only-update-html', '-ouh', action='store_true', help='Only update the HTML')
-parser.add_argument('--only-update-jsons', '-ouj', action='store_true', help='Only update the JSONs')
-parser.add_argument('--build', '-b', action='store_true', help='Builds the website for production')
+parser.add_argument('--only-update-html', '-html', action='store_true', help='Only update the HTML')
+parser.add_argument('--only-update-jsons', '-json', action='store_true', help='Only update the JSONs')
+parser.add_argument('--build', '-b', help='Builds stuff based on specification. Can be "pack", "site", "both" or "server"')
+parser.add_argument('--no-stash', '-ns', action='store_true', help='Does not stash changes')
+parser.add_argument('--quiet', '-q', action='store_true', help='Quieten outputs of run statements (the commands will still be shown)')
+parser.add_argument('--dev', '-d', action='store_true', help='Show time and lines of each print statement')
+parser.add_argument('--no-spinner', '-xs', action='store_true', help='Disables the spinner from rich')
+parser.add_argument('--repo', '-gr', help='Use a custom repo while building', default="BEComTweaks/resource-packs")
+parser.add_argument('--branch', '-gb', help='Use a custom branch while building', default="main")
+parser.add_argument('--pull-js', '-pjs', action='store_true', help="Pulls JS modules from their sources")
+parser.add_argument('--pull-css', '-pcss', action='store_true', help="Pulls CSS from https://github.com/becomtweaks/resource-packs")
+
 args = parser.parse_args()
 
+if args.build == "both":
+    args.build = "packsite"
+elif args.build == "server":
+    args.build = "packsite server"
+elif args.build is None:
+    args.build = ""
+
+if args.dev:
+    print = console.log
+else:
+    print = console.print
+
+sendToCF(args)
+
+if args.no_spinner:
+    spinner = emptySpinner
+else:
+    spinner = console.status
+
+if not args.no_stash:
+    print("[bold yellow]Stashing changes...")
+    run('git stash --include-untracked --message "Stashed changes before pre-commit"', quiet=True)
+    run('git stash apply', quiet=True)
+    print("[green]Stashed changes!")
+
 # Counts Packs and Compatibilities
-if not args.build or (args.build and (args.only_update_html or args.only_update_jsons or args.format)):
-    clrprint("Going through Packs...", clr="yellow")
-    for j in pack_list:
+if "site" not in args.build or ("site" in args.build and (args.only_update_html or args.only_update_jsons or args.format or "pack" in args.build)):
+    print("[yellow]Going through packs...")
+    id_to_name = {}
+    for j in cat_list:
         origj = j
         if not ignore:
-            if j.endswith("\n"):
-                j = j[:-1]
             file = load_json(f"{cdir()}/jsons/packs/{j}")
             name_to_json[file["topic"]] = j
+            try:
+                category_loc = f'{cdir()}/packs/{file["location"]}'
+            except KeyError:
+                category_loc = f'{cdir()}/packs/{file["topic"].lower()}'
             # Adds the categories automatically
-            incomplete_pkics[file["topic"]] = []
-            incomplete_packs[file["topic"]] = []
             html += category_start.replace("topic_name", file["topic"])
             current_category_packs = { "raw": [] }
             # Runs through the packs
             for i in range(len(file["packs"])):
+                # Build first
+                if "regolith" in file["packs"][i] and "pack" in args.build:
+                    print(f"-> [cyan]Building {file['packs'][i]['pack_id']}")
+                    os.chdir(f'{category_loc}/{file["packs"][i]["pack_id"]}')
+                    print("--> [bright_yellow]Checking the config file...")
+                    regolith_config = load_json(f'{category_loc}/{file["packs"][i]["pack_id"]}/config.json')
+                    if regolith_config["regolith"]["profiles"]["build"]["export"]["readOnly"]:
+                        regolith_config["regolith"]["profiles"]["build"]["export"]["readOnly"] = False
+                    dump_json(f'{category_loc}/{file["packs"][i]["pack_id"]}/config.json', regolith_config)
+                    # install filters
+                    run("regolith install-all", quiet=True)
+                    # check for previous builds
+                    if os.path.exists(f'{category_loc}/{file["packs"][i]["pack_id"]}/files'):
+                        print("--> [yellow]Purging previous build...")
+                        shutil.rmtree(f'{category_loc}/{file["packs"][i]["pack_id"]}/files', onerror=remove_readonly)
+                    if os.path.exists(f'{category_loc}/{file["packs"][i]["pack_id"]}/build'):
+                        print("--> [yellow]Purging previous incomplete build...")
+                        shutil.rmtree(f'{category_loc}/{file["packs"][i]["pack_id"]}/build', onerror=remove_readonly)
+                    run(f"regolith run build {"--experiments size_time_check" if "server" in args.build else ""}", quiet=True)
+                    # Check for .gitkeep and fix folder naming
+                    if os.path.exists("build"):
+                        print("--> [yellow]Fixing build folder...")
+                        build_dir = f"{category_loc}/{file["packs"][i]["pack_id"]}"
+                        try:
+                            os.mkdir(f"{build_dir}/files")
+                        except FileExistsError:
+                            print(f"--> [yellow]Why does {os.path.relpath(build_dir, cdir())}/files exist?")
+                        for folder in os.listdir("build"):
+                            if folder.endswith("bp"):
+                                if ".gitkeep" in os.listdir(f"build/{folder}") or "bp" not in packs_supported:
+                                    shutil.rmtree(f"build/{folder}", onerror=remove_readonly)
+                                else:
+                                    if "rp" in packs_supported:
+                                        shutil.move(f"{build_dir}/build/{folder}", f"{build_dir}/files/bp")
+                                    else:
+                                        shutil.move(f"{build_dir}/build/{folder}", f"{build_dir}/files")
+                            elif folder.endswith("rp"):
+                                if ".gitkeep" in os.listdir(f"build/{folder}") or "rp" not in packs_supported:
+                                    shutil.rmtree(f"build/{folder}", onerror=remove_readonly)
+                                else:
+                                    if "bp" in packs_supported:
+                                        shutil.move(f"{build_dir}/build/{folder}", f"{build_dir}/files/rp")
+                                    else:
+                                        shutil.move(f"{build_dir}/build/{folder}", f"{build_dir}/files")
+                            else:
+                                print(f"[red]Unknown folder found in {os.path.relpath(os.getcwd(), cdir())}/build/: [yellow]{folder}")
+                    # now move to proper folder
+                    os.chdir(cdir())
                 # Updates Incomplete Packs
+                pack_exists = False
                 try:
-                    if os.listdir(f'{cdir()}/packs/{file["topic"].lower()}/{file["packs"][i]["pack_id"]}/default') == []:
-                        # Adds the packid to the topic list
-                        incomplete_packs[file["topic"]].append(file["packs"][i]["pack_id"])
-                        stats[1] += 1
-                    else:
-                        # When the packid directory has stuff inside
+                    if "regolith" in file["packs"][i] or os.listdir(f'{category_loc}/{file["packs"][i]["pack_id"]}/files') != []:
+                        # When the packid directory has stuff inside or is regolith
                         stats[0] += 1
+                        pack_exists = True
+                    else:
+                        # screw it go to filenotfounderror
+                        raise FileNotFoundError
                 except FileNotFoundError:
-                    # If the packs have not updated with the new directory type
                     stats[1] += 1
-                    incomplete_packs[file["topic"]].append(file["packs"][i]["pack_id"])
+                    print(f"[red]Incomplete Pack: [yellow]{file['packs'][i]['pack_id']}")
 
                 # Updates Incomplete pack_icon.png
                 try:
-                    if file["packs"][i]["pack_id"] in incomplete_packs[file["topic"]]:
+                    if not pack_exists:
                         pass
-                    elif os.path.getsize(f'{cdir()}/packs/{file["topic"].lower()}/{file["packs"][i]["pack_id"]}/pack_icon.png') == os.path.getsize(f'{cdir()}/pack_icons/missing_texture.png'):
-                        # Adds packid to topic list
-                        incomplete_pkics[file["topic"]].append(file["packs"][i]["pack_id"])
-                        pkicstats[1] += 1
+                    elif os.path.getsize(f'{category_loc}/{file["packs"][i]["pack_id"]}/pack_icon.png') == os.path.getsize(f'{cdir()}/pack_icons/missing_texture.png'):
+                        raise FileNotFoundError
                     else:
                         # When pack icon is complete
                         pkicstats[0] += 1
                 except FileNotFoundError:
                     try:
-                        if os.path.exists(f'{cdir()}/packs/{file["topic"].lower()}/{file["packs"][i]["pack_id"]}/pack_icon.{file["packs"][i]["icon"]}'):
+                        if os.path.exists(f'{category_loc}/{file["packs"][i]["pack_id"]}/pack_icon.{file["packs"][i]["icon"]}'):
                             pkicstats[0] += 1
                         else:
                             # When pack icon doesn't even exist
-                            incomplete_pkics[file["topic"]].append(file["packs"][i]["pack_id"])
-                            pkicstats[1] += 1
+                            raise KeyError # who cares
                     except KeyError:
-                            incomplete_pkics[file["topic"]].append(file["packs"][i]["pack_id"])
                             pkicstats[1] += 1
-                # Updates Incomplete Pack Compatibilities
+                            print(f"[red]Incomplete Pack Icon: [yellow]{file['packs'][i]['pack_id']}")
+
+                # Adds Pack Conflicts
+                conflicts = []
                 try:
-                    for comp in range(len(file["packs"][i]["compatibility"])):
-                        # Looks at compatibility folders
-                        try:
-                            if os.listdir(f'{cdir()}/packs/{file["topic"].lower()}/{file["packs"][i]["pack_id"]}/{file["packs"][i]["compatibility"][comp]}') == []:
-                                # Adds the packid to the list of incomplete compatibilities
-                                try:
-                                    compatibilities[file["packs"][i]["pack_id"]].append(file["packs"][i]["compatibility"][comp])
-                                except KeyError:
-                                    compatibilities[file["packs"][i]["pack_id"]] = [file["packs"][i]["compatibility"][comp]]
-                                cstats[1] += 1
-                            else:
-                                # When the compatibility directory has something inside
-                                cstats[0] += 1
-                        except FileNotFoundError:
-                            # When the compatibility folder isn't there
-                            # Adds the packid to the list of incomplete compatibilities
-                            try:
-                                compatibilities[file["packs"][i]["pack_id"]].append(file["packs"][i]["compatibility"][comp])
-                            except KeyError:
-                                compatibilities[file["packs"][i]["pack_id"]] = [file["packs"][i]["compatibility"][comp]]
-                            cstats[1] += 1
+                    conflicts.extend(file["packs"][i]["conflict"])
                 except KeyError:
                     pass # If it is empty, it just skips
-                
-                # Updates Pack Conflicts
-                conflicts[file["packs"][i]["pack_id"]] = []
                 try:
-                    for conf in range(len(file["packs"][i]["conflict"])):
-                        conflicts[file["packs"][i]["pack_id"]].append(file["packs"][i]["conflict"][conf])
+                    conflicts.extend(file["packs"][i]["obvious_conflict"])
                 except KeyError:
                     pass # If it is empty, it just skips
-                if conflicts[file["packs"][i]["pack_id"]] == []:
-                    del conflicts[file["packs"][i]["pack_id"]]
-                
+
+                # Add priority map
+                try:
+                    priority[file["packs"][i]["pack_id"]] = file["packs"][i]["priority"]
+                except KeyError:
+                    priority[file["packs"][i]["pack_id"]] = 0
+
                 # Adds respective HTML
-                compats = ""
                 confs = ""
-                if file["packs"][i]["pack_id"] not in incomplete_packs[file["topic"]]:
+                if pack_exists:
                     packs += 1
-                    to_add_pack = pack_start
-                    try:
-                        c = ""
-                        for c in compatibilities[file["packs"][i]["pack_id"]]:
-                            compats += c
-                            compats += ", "
-                        to_add_pack += html_comp.replace('<incompatible>',compats[:-2])
-                    except KeyError:
-                        pass
+                    to_add_pack = pack_start.replace('<conflicts>', dumps(conflicts).replace('"', "&quot;"))
                     to_add_pack += pack_mid
                     try:
-                        c = ""
-                        for c in conflicts[file["packs"][i]["pack_id"]]:
-                            confs += c
-                            confs += ", "
-                        to_add_pack += html_conf.replace('<conflicts>',confs[:-2])
+                        to_add_pack += html_conf.replace('<conflicts>', ", ".join(file["packs"][i]["conflict"]))
                     except KeyError:
                         pass
                     to_add_pack += pack_end
@@ -183,9 +231,9 @@ if not args.build or (args.build and (args.only_update_html or args.only_update_
                     except KeyError:
                         pass
                     to_add_pack = to_add_pack.replace("pack_description", desc)
-                    to_add_pack = to_add_pack.replace("relloctopackicon", f'packs/{file["topic"].lower()}/{file["packs"][i]["pack_id"]}/pack_icon.png')
+                    to_add_pack = to_add_pack.replace("relloctopackicon", f"{os.path.relpath(f'{category_loc}/{file["packs"][i]["pack_id"]}/pack_icon.png', start=cdir())}".replace("\\","/"))
                     try:
-                        if os.path.exists(f'{cdir()}/packs/{file["topic"].lower()}/{file["packs"][i]["pack_id"]}/pack_icon.{file["packs"][i]["icon"]}'):
+                        if os.path.exists(f'{category_loc}/{file["packs"][i]["pack_id"]}/pack_icon.{file["packs"][i]["icon"]}'):
                             # Because I can't make the html use a missing texture thing, so
                             # it only replaces when it exists
                             to_add_pack = to_add_pack.replace("png", file["packs"][i]["icon"])
@@ -193,19 +241,25 @@ if not args.build or (args.build and (args.only_update_html or args.only_update_
                         pass
                     html += to_add_pack
                     current_category_packs["raw"].append(file["packs"][i]["pack_id"])
+                    id_to_name[file["packs"][i]["pack_id"]] = file["packs"][i]["pack_name"]
         html = html.replace("<all_packs>", LZString.compressToEncodedURIComponent(dumps(current_category_packs)))
+        # handle subcategories
         try:
-            if pack_list[pack_list.index(origj) + 1].startswith("\t"):
+            indexoforigj = cat_list.index(origj)
+            if "\t" in cat_list[indexoforigj + 1] or "    " in cat_list[indexoforigj + 1]:
                 html += cat_end_w_subcat_no_end
                 try:
-                    if not pack_list[pack_list.index(origj) + 2].startswith("\t"):
+                    if not ("\t" in cat_list[indexoforigj + 2] or "    " in cat_list[indexoforigj + 2]):
                         html += category_end
                 except IndexError:
                     pass
                 html = html.replace("<index>", str(subcats))
                 subcats += 1
                 ignore = True
-                subcat_list.append(pack_list[pack_list.index(origj) + 1][1:])
+                if "\t" in cat_list[indexoforigj + 1]:
+                    subcat_list.append(cat_list[indexoforigj + 1][1:])
+                elif "    " in cat_list[indexoforigj + 1]:
+                    subcat_list.append(cat_list[indexoforigj + 1][4:])
             elif not ignore:
                 html += category_end
             else:
@@ -216,112 +270,124 @@ if not args.build or (args.build and (args.only_update_html or args.only_update_
     for j in range(len(subcat_list)):
         pack_html = ""
         k = subcat_list[j]
-        if k.endswith("\n"):
-            k = k[:-1]
-        if k.startswith("\t"):
-            k = k[1:]
         file = load_json(f"{cdir()}/jsons/packs/{k}")
         name_to_json[file["topic"]] = k
+        try:
+            category_loc = f'{cdir()}/packs/{file["location"]}'
+        except KeyError:
+            category_loc = f'{cdir()}/packs/{file["topic"].lower()}'
         # Adds the categories automatically
-        incomplete_pkics[file["topic"]] = []
-        incomplete_packs[file["topic"]] = []
-        pack_html += subcategory_start.replace("topic_name", f'{file["subcategory_of"]} > <b>{file["topic"]}</b>')
+        pack_html += subcategory_start.replace("<topic_name>",file["topic"]).replace("topic_name", f'{file["subcategory_of"]} > <b>{file["topic"]}</b>')
         current_category_packs = { "raw": [] }
+        # Runs through the packs
         for i in range(len(file["packs"])):
+            if "regolith" in file["packs"][i] and "pack" in args.build:
+                print(f"-> [cyan]Building {file['packs'][i]['pack_id']}")
+                os.chdir(f'{category_loc}/{file["packs"][i]["pack_id"]}')
+                print("--> [bright_yellow]Checking the config file...")
+                regolith_config = load_json(f'{category_loc}/{file["packs"][i]["pack_id"]}/config.json')
+                if regolith_config["regolith"]["profiles"]["build"]["export"]["readOnly"]:
+                    regolith_config["regolith"]["profiles"]["build"]["export"]["readOnly"] = False
+                dump_json(f'{category_loc}/{file["packs"][i]["pack_id"]}/config.json', regolith_config)
+                # install filters
+                run("regolith install-all", quiet=True)
+                # check for previous builds
+                if os.path.exists(f'{category_loc}/{file["packs"][i]["pack_id"]}/files'):
+                    print("--> [yellow]Purging previous build...")
+                    shutil.rmtree(f'{category_loc}/{file["packs"][i]["pack_id"]}/files', onerror=remove_readonly)
+                if os.path.exists(f'{category_loc}/{file["packs"][i]["pack_id"]}/build'):
+                    print("--> [yellow]Purging previous incomplete build...")
+                    shutil.rmtree(f'{category_loc}/{file["packs"][i]["pack_id"]}/build', onerror=remove_readonly)
+                run(f"regolith run build {"--experiments size_time_check" if "server" in args.build else ""}", quiet=True)
+                # Check for .gitkeep and fix folder naming
+                if os.path.exists("build"):
+                    print("--> [yellow]Fixing build folder...")
+                    build_dir = f"{category_loc}/{file["packs"][i]["pack_id"]}"
+                    try:
+                        os.mkdir(f"{build_dir}/files")
+                    except FileExistsError:
+                        print(f"--> [yellow]Why does {os.path.relpath(build_dir, cdir())}/files exist?")
+                    for folder in os.listdir("build"):
+                        if folder.endswith("bp"):
+                            if ".gitkeep" in os.listdir(f"build/{folder}") or "bp" not in packs_supported:
+                                shutil.rmtree(f"build/{folder}", onerror=remove_readonly)
+                            else:
+                                if "rp" in packs_supported:
+                                    shutil.move(f"{build_dir}/build/{folder}", f"{build_dir}/files/bp")
+                                else:
+                                    shutil.move(f"{build_dir}/build/{folder}", f"{build_dir}/files")
+                        elif folder.endswith("rp"):
+                            if ".gitkeep" in os.listdir(f"build/{folder}") or "rp" not in packs_supported:
+                                shutil.rmtree(f"build/{folder}", onerror=remove_readonly)
+                            else:
+                                if "bp" in packs_supported:
+                                    shutil.move(f"{build_dir}/build/{folder}", f"{build_dir}/files/rp")
+                                else:
+                                    shutil.move(f"{build_dir}/build/{folder}", f"{build_dir}/files")
+                        else:
+                            print(f"[red]Unknown folder found in {os.path.relpath(os.getcwd(), cdir())}/build/: [yellow]{folder}")
+                # now move to proper folder
+                os.chdir(cdir())
             # Updates Incomplete Packs
+            pack_exists = False
             try:
-                if os.listdir(f'{cdir()}/packs/{file["topic"].lower()}/{file["packs"][i]["pack_id"]}/default') == []:
-                    # Adds the packid to the topic list
-                    incomplete_packs[file["topic"]].append(file["packs"][i]["pack_id"])
-                    stats[1] += 1
-                else:
-                    # When the packid directory has stuff inside
+                if "regolith" in file["packs"][i] or os.listdir(f'{category_loc}/{file["packs"][i]["pack_id"]}/files') != []:
+                    # When the packid directory has stuff inside or is regolith
                     stats[0] += 1
+                    pack_exists = True
+                else:
+                    # screw it go to filenotfounderror
+                    raise FileNotFoundError
             except FileNotFoundError:
-                # If the packs have not updated with the new directory type
                 stats[1] += 1
-                incomplete_packs[file["topic"]].append(file["packs"][i]["pack_id"])
+                print(f"[red]Incomplete Pack: [yellow]{file['packs'][i]['pack_id']}")
 
             # Updates Incomplete pack_icon.png
             try:
-                if file["packs"][i]["pack_id"] in incomplete_packs[file["topic"]]:
+                if not pack_exists:
                     pass
-                elif os.path.getsize(f'{cdir()}/packs/{file["topic"].lower()}/{file["packs"][i]["pack_id"]}/pack_icon.png') == os.path.getsize(f'{cdir()}/pack_icons/missing_texture.png'):
+                elif os.path.getsize(f'{category_loc}/{file["packs"][i]["pack_id"]}/pack_icon.png') == os.path.getsize(f'{cdir()}/pack_icons/missing_texture.png'):
                     # Adds packid to topic list
-                    incomplete_pkics[file["topic"]].append(file["packs"][i]["pack_id"])
-                    pkicstats[1] += 1
+                    raise FileNotFoundError
                 else:
                     # When pack icon is complete
                     pkicstats[0] += 1
             except FileNotFoundError:
                 try:
-                    if os.path.exists(f'{cdir()}/packs/{file["topic"].lower()}/{file["packs"][i]["pack_id"]}/pack_icon.{file["packs"][i]["icon"]}'):
+                    if os.path.exists(f'{category_loc}/{file["packs"][i]["pack_id"]}/pack_icon.{file["packs"][i]["icon"]}'):
                         pkicstats[0] += 1
                     else:
                         # When pack icon doesn't even exist
-                        incomplete_pkics[file["topic"]].append(file["packs"][i]["pack_id"])
-                        pkicstats[1] += 1
+                        raise KeyError # who cares
                 except KeyError:
-                    incomplete_pkics[file["topic"]].append(file["packs"][i]["pack_id"])
-                    pkicstats[1] += 1
-            
-            # Updates Incomplete Pack Compatibilities
+                        pkicstats[1] += 1
+                        print(f"[red]Incomplete Pack Icon: [yellow]{file['packs'][i]['pack_id']}")
+
+            # Adds Pack Conflicts
+            conflicts = []
             try:
-                for comp in range(len(file["packs"][i]["compatibility"])):
-                    # Looks at compatibility folders
-                    try:
-                        if os.listdir(f'{cdir()}/packs/{file["topic"].lower()}/{file["packs"][i]["pack_id"]}/{file["packs"][i]["compatibility"][comp]}') == []:
-                            # Adds the packid to the list of incomplete compatibilities
-                            try:
-                                compatibilities[file["packs"][i]["pack_id"]].append(file["packs"][i]["compatibility"][comp])
-                            except KeyError:
-                                compatibilities[file["packs"][i]["pack_id"]] = [file["packs"][i]["compatibility"][comp]]
-                            cstats[1] += 1
-                        else:
-                            # When the compatibility directory has something inside
-                            cstats[0] += 1
-                    except FileNotFoundError:
-                        # When the compatibility folder isn't there
-                        # Adds the packid to the list of incomplete compatibilities
-                        try:
-                            compatibilities[file["packs"][i]["pack_id"]].append(file["packs"][i]["compatibility"][comp])
-                        except KeyError:
-                            compatibilities[file["packs"][i]["pack_id"]] = [file["packs"][i]["compatibility"][comp]]
-                        cstats[1] += 1
+                conflicts.extend(file["packs"][i]["conflict"])
+            except KeyError:
+                pass # If it is empty, it just skips
+            try:
+                conflicts.extend(file["packs"][i]["obvious_conflict"])
             except KeyError:
                 pass # If it is empty, it just skips
 
-            # Updates Pack Conflicts
-            conflicts[file["packs"][i]["pack_id"]] = []
+            # Add priority map
             try:
-                for conf in range(len(file["packs"][i]["conflict"])):
-                    conflicts[file["packs"][i]["pack_id"]].append(file["packs"][i]["conflict"][conf])
+                priority[file["packs"][i]["pack_id"]] = file["packs"][i]["priority"]
             except KeyError:
-                pass # If it is empty, it just skips
-            if conflicts[file["packs"][i]["pack_id"]] == []:
-                del conflicts[file["packs"][i]["pack_id"]]
-            
+                priority[file["packs"][i]["pack_id"]] = 0
+
             # Adds respective HTML
-            compats = ""
             confs = ""
-            if file["packs"][i]["pack_id"] not in incomplete_packs[file["topic"]]:
+            if pack_exists:
                 packs += 1
-                to_add_pack = pack_start
-                try:
-                    c = ""
-                    for c in compatibilities[file["packs"][i]["pack_id"]]:
-                        compats += c
-                        compats += ", "
-                    to_add_pack += html_comp.replace('<incompatible>',compats[:-2])
-                except KeyError:
-                    pass
+                to_add_pack = pack_start.replace('<conflicts>', dumps(conflicts).replace('"', "&quot;"))
                 to_add_pack += pack_mid
                 try:
-                    c = ""
-                    for c in conflicts[file["packs"][i]["pack_id"]]:
-                        confs += c
-                        confs += ", "
-                    to_add_pack += html_conf.replace('<conflicts>',confs[:-2])
+                    to_add_pack += html_conf.replace('<conflicts>', ", ".join(file["packs"][i]["conflict"]))
                 except KeyError:
                     pass
                 to_add_pack += pack_end
@@ -341,20 +407,40 @@ if not args.build or (args.build and (args.only_update_html or args.only_update_
                 except KeyError:
                     pass
                 to_add_pack = to_add_pack.replace("pack_description", desc)
-                to_add_pack = to_add_pack.replace("relloctopackicon", f'packs/{file["topic"].lower()}/{file["packs"][i]["pack_id"]}/pack_icon.png')
+                to_add_pack = to_add_pack.replace("relloctopackicon", f"{os.path.relpath(f'{category_loc}/{file["packs"][i]["pack_id"]}/pack_icon.png', start=cdir())}".replace("\\","/"))
                 try:
-                    if os.path.exists(f'{cdir()}/packs/{file["topic"].lower()}/{file["packs"][i]["pack_id"]}/pack_icon.{file["packs"][i]["icon"]}'):
-                        # Because I can't make the html use a missing texture thing, some
+                    if os.path.exists(f'{category_loc}/{file["packs"][i]["pack_id"]}/pack_icon.{file["packs"][i]["icon"]}'):
+                        # Because I can't make the html use a missing texture thing, so
                         # it only replaces when it exists
                         to_add_pack = to_add_pack.replace("png", file["packs"][i]["icon"])
                 except KeyError:
                     pass
                 pack_html += to_add_pack
                 current_category_packs["raw"].append(file["packs"][i]["pack_id"])
+                id_to_name[file["packs"][i]["pack_id"]] = file["packs"][i]["pack_name"]
         pack_html += category_end
         html = html.replace(f'<div class="subcat{j}"></div>',pack_html)
         html = html.replace("<all_packs>", LZString.compressToEncodedURIComponent(dumps(current_category_packs)))
-    clrprint("Finished Counting!", clr="green")
+    # compatibilities
+    compatibilities = load_json(f"{cdir()}/jsons/packs/compatibilities.json")
+    compat_map = {}
+    for ways in range(compatibilities["max_simultaneous"],1,-1):
+        compat_map[f"{ways}way"] = []
+        for compatibility in compatibilities[f"{ways}way"]:
+            if len(compatibility["merge"]) != ways:
+                print(f"[red]Incorrect Compatibility format: [yellow]{compatibility['location']}")
+                comp_stats[1] += 1
+                # appending an empty list for mapping sake
+                compat_map[f"{ways}way"].append([])
+            elif os.path.exists(f"{cdir()}/packs/{compatibility["location"]}"):
+                comp_stats[0] += 1
+                compat_map[f"{ways}way"].append(compatibility["merge"])
+            else:
+                print(f"[red]Incomplete Compatibility: [yellow]{compatibility['location']}")
+                comp_stats[1] += 1
+                # appending an empty list for mapping sake
+                compat_map[f"{ways}way"].append([])
+    print("[green]Done!")
 
     # HTML formatting
     with open(f"{cdir()}/webUI/index.html.template", "r") as html_file:
@@ -366,12 +452,16 @@ if not args.build or (args.build and (args.only_update_html or args.only_update_
     html = soup.prettify()
     html = html.replace("<br/>", "<br>")
     # Update files
-    clrprint("Updating files...", clr="yellow")
+    print("[yellow]Updating files...")
     if not args.only_update_html:
-        dump_json(f"{cdir()}/jsons/others/incomplete_packs.json", incomplete_packs)
-        dump_json(f"{cdir()}/jsons/others/incomplete_compatibilities.json", compatibilities)
-        dump_json(f"{cdir()}/jsons/others/incomplete_pack_icons.json", incomplete_pkics)
-        dump_json(f"{cdir()}/jsons/others/name_to_json.json", name_to_json)
+        try:
+            os.mkdir(f"{cdir()}/jsons/map")
+        except FileExistsError:
+            pass
+        dump_json(f"{cdir()}/jsons/map/name_to_json.json", name_to_json)
+        dump_json(f"{cdir()}/jsons/map/id_to_name.json", id_to_name)
+        dump_json(f"{cdir()}/jsons/map/priority.json", priority)
+        dump_json(f"{cdir()}/jsons/map/compatibility.json", compat_map)
     if not args.only_update_jsons:
         with open(f"{cdir()}/webUI/index.html", "w") as html_file:
             html_file.write(html)
@@ -390,7 +480,7 @@ if not args.build or (args.build and (args.only_update_html or args.only_update_
             # Replace the links using regex
             new_pack_url = f"{pack_match.group(1)}{stats[0]}%2F{stats[0] + stats[1]}{pack_match.group(3)}"
             updated_content = content.replace(pack_match.group(0), new_pack_url)
-            new_comp_url = f"{comp_match.group(1)}{int(cstats[0] / 2)}%2F{int(cstats[0] / 2 + cstats[1] / 2)}{comp_match.group(3)}"
+            new_comp_url = f"{comp_match.group(1)}{comp_stats[0]}%2F{comp_stats[0] + comp_stats[1]}{comp_match.group(3)}"
             updated_content = updated_content.replace(comp_match.group(0), new_comp_url)
             new_pkic_url = f"{pkic_match.group(1)}{pkicstats[0]}%2F{pkicstats[0] + pkicstats[1]}{pkic_match.group(3)}"
             updated_content = updated_content.replace(pkic_match.group(0), new_pkic_url)
@@ -400,23 +490,41 @@ if not args.build or (args.build and (args.only_update_html or args.only_update_
         else:
             # When the regex fails if I change the link
             raise IndexError("Regex Failed")
-    clrprint("Updated a lot of files!", clr="green")
+    print("[green]Updated!")
 
     if args.format:
-        clrprint("Making files Prettier", clr="yellow")
-        os.system(f"cd {cdir()}")
+        print("[yellow]Making files Prettier\u2122")
+        os.chdir(cdir())
         try:
-            os.system('npx prettier --write "**/*.{js,ts,css,json}" --log-level silent')
+            run('pnpm exec prettier --write "**/*.{js,ts,css,json}"', quiet=True)
         except KeyboardInterrupt:
-            clrprint("You are a bit impatient...", clr="red")
-        clrprint("Files are Prettier!", clr="green")
+            print("---> [red]You are a bit impatient...")
+        print("[green]Files are Prettier!")
     elif not args.only_update_html:
-        clrprint("Remember to format the files!", clr="y")
+        print("[yellow]Remember to format the files!")
 
-if args.build:
-    clrprint("Make sure you built the HTML!", clr="y")
+with spinner("[yellow]Updting resources from remote...", spinner="hamburger"):
+    def request_save_to(url="", filename=""):
+        with requests.get(url, stream=True) as response:
+            response.raise_for_status()
+            with open(filename, "w") as file:
+                for chunk in response.iter_content(chunk_size=8192):
+                    file.write(chunk.decode("utf-8"))
+    if args.pull_js:
+        # Ignore LZString, it is fine
+        # JSZip
+        request_save_to("https://raw.githubusercontent.com/Stuk/jszip/refs/heads/main/dist/jszip.min.js", f"{cdir()}/webUI/extras/jszip.min.js")
+    if args.pull_css and args.branch == "main":
+        # pull css 
+        request_save_to("https://raw.githubusercontent.com/becomtweaks/resource-packs/refs/heads/main/webUI/theme.css", f"{cdir()}/webUI/theme.css")
+    if spinner == emptySpinner:
+        print("[green]Updated files from remote!")
+
+if "site" in args.build:
+    if not (args.only_update_html or args.only_update_jsons or args.format):
+        print("[bright_cyan]Make sure you built the HTML!")
     try:
-        shutil.rmtree(f"{cdir()}/build")
+        shutil.rmtree(f"{cdir()}/build", onerror=remove_readonly)
     except FileNotFoundError:
         pass
     try:
@@ -425,8 +533,8 @@ if args.build:
         with open(f"{cdir()}/build/index.html", "r") as file:
             content = file.read()
         with open(f"{cdir()}/build/index.html", "w") as file:
-            file.write(content.replace("../", "https://raw.githubusercontent.com/BEComTweaks/resource-packs/main/"))
-        clrprint("Build success!", clr="g")
+            file.write(content.replace("../", f"https://raw.githubusercontent.com/{args.repo}/{args.branch}/"))
+        print("[bright_cyan]Website build success!")
     except Exception as e:
-        clrprint("Build failed!", clr="r")
-        clrprint(e, clr="y")
+        print("---> [red]Website build failed!")
+        print(e)
