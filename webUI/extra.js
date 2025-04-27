@@ -1,3 +1,25 @@
+/* consoler object */
+function consoler(logTag, logColour, logMessage, logMessageColour) {
+  const err = new Error();
+  const stack = err.stack.split("\n");
+  console.log(
+    `[%c${logTag}%c] %c${stack[1]}%c\n%c${logMessage}`,
+    `color: ${logColour}`,
+    "color: white",
+    "color: #4fa1ff",
+    `color: ${logMessageColour}`,
+  );
+  if (
+    document.querySelector(".devtools-toggle-console input[type='checkbox']")
+      .checked
+  ) {
+    const consoleElement = document.querySelector(".devtools-console-content");
+    const log = document.createElement("div");
+    log.className = "devtools-console-log";
+    log.innerHTML = `[<span style="color: ${logColour}">${logTag}</span>] <span style="color: #4fa1ff">${stack[1]}</span><br><span style="color: ${logMessageColour}">${logMessage}</span>`;
+    consoleElement.appendChild(log);
+  }
+}
 // Handle Backgrounds
 const textures = [
   { src: "images/blocks/stone.png", probability: 0.618 },
@@ -380,25 +402,52 @@ function closePanel() {
   element.removeAttribute("style");
 }
 
-/* consoler object */
-function consoler(logTag, logColour, logMessage, logMessageColour) {
-  const err = new Error();
-  const stack = err.stack.split("\n");
-  console.log(
-    `[%c${logTag}%c] %c${stack[1]}%c\n%c${logMessage}`,
-    `color: ${logColour}`,
-    "color: white",
-    "color: #4fa1ff",
-    `color: ${logMessageColour}`,
-  );
-  if (
-    document.querySelector(".devtools-toggle-console input[type='checkbox']")
-      .checked
-  ) {
-    const consoleElement = document.querySelector(".devtools-console-content");
-    const log = document.createElement("div");
-    log.className = "devtools-console-log";
-    log.innerHTML = `[<span style="color: ${logColour}">${logTag}</span>] <span style="color: #4fa1ff">${stack[1]}</span><br><span style="color: ${logMessageColour}">${logMessage}</span>`;
-    consoleElement.appendChild(log);
-  }
-}
+document
+  .querySelector(".devtools-toggle-tweak-per-column input[type='number']")
+  .addEventListener("input", function () {
+    const checkbox = this.parentElement.parentElement.querySelector(
+      "input[type='checkbox']",
+    );
+    if (checkbox && checkbox.checked) {
+      let styleBlock = document.querySelector("#dynamic-grid-style");
+
+      // If the style block doesn't exist, create it
+      if (!styleBlock) {
+        styleBlock = document.createElement("style");
+        styleBlock.id = "dynamic-grid-style";
+        document.head.appendChild(styleBlock);
+      }
+
+      // Update the styles for `.tweaks` and `.subcattweaks`
+      styleBlock.textContent = `
+        .tweaks, .subcattweaks {
+          grid-template-columns: repeat(${this.value}, 1fr) !important;
+        }
+      `;
+      updateCategoryHeight();
+    }
+  });
+
+document
+  .querySelector(".devtools-toggle-tweak-per-column input[type='checkbox']")
+  .addEventListener("change", function () {
+    const numberInput = this.parentElement.parentElement.querySelector(
+      "input[type='number']",
+    );
+    if (this.checked) {
+      numberInput.removeAttribute("disabled");
+      numberInput.dispatchEvent(new Event("input"));
+      consoler(
+        "tweak-per-column",
+        "green",
+        `Set tweaks container column width to ${numberInput.content}`,
+        "white",
+      );
+    } else {
+      numberInput.setAttribute("disabled", "true");
+      const styleBlock = document.querySelector("#dynamic-grid-style");
+      if (styleBlock) {
+        styleBlock.remove();
+      }
+    }
+  });
