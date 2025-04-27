@@ -92,6 +92,9 @@ jobs:
       - name: Activate venv
         run: source venv/bin/activate
 
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
       - name: Build
         run: python pys/pre_commit.py --build "website" --no-stash
 
