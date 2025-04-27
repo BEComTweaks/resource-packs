@@ -891,6 +891,9 @@ input:checked + .slider:before {
 
 .subcategory {
   width: 100%;
+  .category-controlled {
+    left: 0;
+  }
   &:not(:last-child) {
     margin-bottom: 20px;
   }
