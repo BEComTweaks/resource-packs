@@ -159,7 +159,7 @@
         oreui-type="input"
       />
       <select id="mev" name="mev" oreui-color="dark" oreui-type="general">
-        <option value="1.21.40">1.21.40</option>
+        <option value="1.21.70">1.21.70</option>
         <option value="1.21.0">1.21</option>
         <option value="1.20.0">1.20</option>
         <option value="1.19.0">1.19</option>
