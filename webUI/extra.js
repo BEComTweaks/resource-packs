@@ -4,9 +4,9 @@ function consoler(logTag, logColour, logMessage, logMessageColour) {
   const stack = err.stack.split("\n");
   let functionCall;
   if (stack[1].includes("consoler")) {
-    functionCall = stack[2]
+    functionCall = stack[2];
   } else {
-    functionCall = stack[1]
+    functionCall = stack[1];
   }
   console.log(
     `[%c${logTag}%c] %c${functionCall}%c\n%c${logMessage}`,
