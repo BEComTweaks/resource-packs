@@ -2,8 +2,14 @@
 function consoler(logTag, logColour, logMessage, logMessageColour) {
   const err = new Error();
   const stack = err.stack.split("\n");
+  let functionCall;
+  if (stack[1].includes("consoler")) {
+    functionCall = stack[2]
+  } else {
+    functionCall = stack[1]
+  }
   console.log(
-    `[%c${logTag}%c] %c${stack[1]}%c\n%c${logMessage}`,
+    `[%c${logTag}%c] %c${functionCall}%c\n%c${logMessage}`,
     `color: ${logColour}`,
     "color: white",
     "color: #4fa1ff",
@@ -16,7 +22,7 @@ function consoler(logTag, logColour, logMessage, logMessageColour) {
     const consoleElement = document.querySelector(".devtools-console-content");
     const log = document.createElement("div");
     log.className = "devtools-console-log";
-    log.innerHTML = `[<span style="color: ${logColour}">${logTag}</span>] <span style="color: #4fa1ff">${stack[1]}</span><br><span style="color: ${logMessageColour}">${logMessage}</span>`;
+    log.innerHTML = `[<span style="color: ${logColour}">${logTag}</span>] <span style="color: #4fa1ff">${functionCall}}</span><br><span style="color: ${logMessageColour}">${logMessage}</span>`;
     consoleElement.appendChild(log);
   }
 }
