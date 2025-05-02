@@ -12,6 +12,7 @@
       "pack_id": "BlackNetherBricks",
       "pack_name": "Black Nether Bricks",
       "pack_description": "Changes texture of Nether Bricks to make them black.",
+      "conflict": ["BrighterNether"],
       "priority": 5
     },
     {
