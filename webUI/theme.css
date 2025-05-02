@@ -312,6 +312,14 @@
   &::placeholder {
     color: white;
   }
+  &[disabled="true"], &:disabled {
+    background: color-mix(in srgb, rgb(51, 51, 51), black);
+    color: gray;
+    box-shadow: inset 0 5px 0 0 color-mix(in srgb, rgb(35, 35, 35), black);
+    &::placeholder {
+      color: gray;
+    }
+  }
 }
 
 /***********\
@@ -677,27 +685,29 @@ select {
     flex-direction: column;
   }
   p {
-    transform: translateY(0) translateX(1em);
     text-wrap: word;
-    margin-right: 15px;
   }
   > .switch {
     top: 10px;
   }
-  > input[type="number"] {
-    position: relative;
-    padding-top: 0;
-    padding-bottom: 0;
-    padding-left: 10px;
+  input[type="number"] {
+    padding: 5px 10px 5px 10px;
     margin-left: 10px;
     margin-top: 5px;
     margin-bottom: 5px;
-    appearance: none;
     -moz-appearance: textfield;
-    &::-webkit-inner-spin-button {
+    appearance: textfield;
+    margin: 0;
+    &::-webkit-inner-spin-button,
+    &::-webkit-outer-spin-button {
       -webkit-appearance: none;
       margin: 0;
+      display: none;
     }
+  }
+  .devtools-toggle-desc {
+    left: 1em;
+    position: relative;
   }
 }
 

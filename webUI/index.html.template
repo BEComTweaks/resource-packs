@@ -80,7 +80,7 @@
           <input type="checkbox" />
           <span class="slider"></span>
         </label>
-        <p>Enable Console</p>
+        <p class="devtools-toggle-desc">Enable Console</p>
       </div>
       <code class="devtools-console" oreui-color="dark">
         <h3>Console</h3>
@@ -91,7 +91,7 @@
           <input type="checkbox" />
           <span class="slider"> </span>
         </label>
-        <div>
+        <div class="devtools-toggle-desc">
           <p>Use a custom width for each column</p>
           <input
             disabled=""
@@ -107,14 +107,14 @@
           <input type="checkbox" disabled />
           <span class="slider"></span>
         </label>
-        <p>Save settings to the browser cache</p>
+        <p class="devtools-toggle-desc">Save settings to the browser cache</p>
       </div>
       <div class="devtools-toggle-mine-then-craft">
         <label class="switch">
           <input type="checkbox" disabled />
           <span class="slider"></span>
         </label>
-        <p>Mine then craft</p>
+        <p class="devtools-toggle-desc">Mine then craft</p>
       </div>
     </div>
     <div class="preselected" oreui-type="general" oreui-color="dark">
