@@ -615,6 +615,7 @@ function processJsonData(jsonData, dowhat) {
   updateSelectAllButton(st);
   updateURL(st);
   updateDownloadButton(st);
+  updateSelectedTweaks();
 }
 // get selected tweaks
 function getSelectedTweaks() {
