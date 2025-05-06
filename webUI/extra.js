@@ -1,5 +1,16 @@
 /* other vars necessary */
 const serverip = "localhost";
+const textures = [
+  { src: "images/blocks/stone.png", probability: 0.618 },
+  { src: "images/blocks/copper_ore.png", probability: 0.128 },
+  { src: "images/blocks/coal_ore.png", probability: 0.128 },
+  { src: "images/blocks/iron_ore.png", probability: 0.064 },
+  { src: "images/blocks/lapis_ore.png", probability: 0.032 },
+  { src: "images/blocks/redstone_ore.png", probability: 0.016 },
+  { src: "images/blocks/gold_ore.png", probability: 0.008 },
+  { src: "images/blocks/emerald_ore.png", probability: 0.004 },
+  { src: "images/blocks/diamond_ore.png", probability: 0.002 },
+];
 
 /* consoler object */
 function consoler(logTag, logColour, logMessage, logMessageColour) {
@@ -29,18 +40,6 @@ function consoler(logTag, logColour, logMessage, logMessageColour) {
     consoleElement.appendChild(log);
   }
 }
-// Handle Backgrounds
-const textures = [
-  { src: "images/blocks/stone.png", probability: 0.618 },
-  { src: "images/blocks/copper_ore.png", probability: 0.128 },
-  { src: "images/blocks/coal_ore.png", probability: 0.128 },
-  { src: "images/blocks/iron_ore.png", probability: 0.064 },
-  { src: "images/blocks/lapis_ore.png", probability: 0.032 },
-  { src: "images/blocks/redstone_ore.png", probability: 0.016 },
-  { src: "images/blocks/gold_ore.png", probability: 0.008 },
-  { src: "images/blocks/emerald_ore.png", probability: 0.004 },
-  { src: "images/blocks/diamond_ore.png", probability: 0.002 },
-];
 
 function selectTexture() {
   const rand = Math.random();
