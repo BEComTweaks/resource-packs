@@ -100,7 +100,7 @@ jobs:
 
       - name: Replace server IP in JavaScript
         run: |
-          sed -i 's|const serverip = "localhost";|const serverip = "${{ secrets.IP_FOR_SERVER }}";|g' build/app.js
+          sed -i 's|const serverip = "localhost";|const serverip = "${{ secrets.IP_FOR_SERVER }}";|g' build/extra.js
 
       - name: Upload Artifact
         uses: actions/upload-pages-artifact@v3

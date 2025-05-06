@@ -1,3 +1,6 @@
+/* other vars necessary */
+const serverip = "localhost";
+
 /* consoler object */
 function consoler(logTag, logColour, logMessage, logMessageColour) {
   const err = new Error();
@@ -134,28 +137,6 @@ if (Math.random() <= 0.9) {
     margin-top: 64px;
     margin-left: 0px;
   }
-
-  25% {
-    width: 48px;
-    height: 48px;
-    margin-top: 64px;
-    margin-left: 0px;
-  }
-
-  37.5% {
-    width: 48px;
-    height: 48px;
-    margin-top: 64px;
-    margin-left: 0px;
-  }
-
-  50% {
-    width: 48px;
-    height: 48px;
-    margin-top: 64px;
-    margin-left: 0px;
-  }
-
   62.5% {
     width: 48px;
     height: 48px;
@@ -192,21 +173,6 @@ if (Math.random() <= 0.9) {
     margin-top: 0px;
     margin-left: 0px;
   }
-
-  12.5% {
-    width: 48px;
-    height: 48px;
-    margin-top: 0px;
-    margin-left: 0px;
-  }
-
-  25% {
-    width: 48px;
-    height: 48px;
-    margin-top: 0px;
-    margin-left: 0px;
-  }
-
   37.5% {
     width: 48px;
     height: 48px;
@@ -222,20 +188,6 @@ if (Math.random() <= 0.9) {
   }
 
   62.5% {
-    width: 48px;
-    height: 48px;
-    margin-top: 0px;
-    margin-left: 64px;
-  }
-
-  75% {
-    width: 48px;
-    height: 48px;
-    margin-top: 0px;
-    margin-left: 64px;
-  }
-
-  87.5% {
     width: 48px;
     height: 48px;
     margin-top: 0px;
@@ -273,27 +225,6 @@ if (Math.random() <= 0.9) {
   }
 
   37.5% {
-    width: 48px;
-    height: 48px;
-    margin-top: 64px;
-    margin-left: 64px;
-  }
-
-  50% {
-    width: 48px;
-    height: 48px;
-    margin-top: 64px;
-    margin-left: 64px;
-  }
-
-  62.5% {
-    width: 48px;
-    height: 48px;
-    margin-top: 64px;
-    margin-left: 64px;
-  }
-
-  75% {
     width: 48px;
     height: 48px;
     margin-top: 64px;
@@ -456,4 +387,65 @@ document
         styleBlock.remove();
       }
     }
+  });
+
+document
+  .querySelector(".devtools-pinger-inner")
+  .addEventListener("click", async () => {
+    const pingerAnimElement = document.querySelector(".pinger-anim");
+    if (pingerAnimElement.hasAttribute("spin")) {
+      return;
+    }
+    const pingerGeneralSpan = document.querySelector(
+      ".devtools-pinger-console-content-general span",
+    );
+    pingerGeneralSpan.innerText = "Fetching...";
+    const pingerServerSpan = document.querySelector(
+      ".devtools-pinger-console-content-server span",
+    );
+    pingerServerSpan.innerText = "";
+    pingerAnimElement.setAttribute("spin", "");
+    // get internet connection status
+    const googleStatus = await fetch("https://www.google.com", {
+      method: "HEAD",
+      mode: "no-cors",
+    })
+      .then(() => true)
+      .catch(() => false);
+    const githubStatus = await fetch("https://www.github.com", {
+      method: "HEAD",
+      mode: "no-cors",
+    })
+      .then(() => true)
+      .catch(() => false);
+    const githubIOStatus = await fetch("https://becomtweaks.github.io", {
+      method: "HEAD",
+      mode: "no-cors",
+    })
+      .then(() => true)
+      .catch(() => false);
+    if (googleStatus && githubStatus && githubIOStatus) {
+      pingerGeneralSpan.innerText = "Active";
+    } else {
+      pingerGeneralSpan.innerText = "Inactive";
+    }
+    pingerServerSpan.innerText = "Fetching...";
+    const serverStatusHttps = await fetch(`https://${serverip}/ping`, {
+      method: "HEAD",
+      mode: "no-cors",
+    })
+      .then(() => true)
+      .catch(() => false);
+    const serverStatusHttp = await fetch(`http://${serverip}/ping`, {
+      method: "HEAD",
+      mode: "no-cors",
+    })
+      .then(() => true)
+      .catch(() => false);
+    if (serverStatusHttps || serverStatusHttp) {
+      pingerServerSpan.innerText = "Active";
+    } else {
+      pingerServerSpan.innerText = "Inactive";
+    }
+    pingerAnimElement.removeAttribute("spin");
   });

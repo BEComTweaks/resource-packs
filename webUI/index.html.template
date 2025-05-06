@@ -116,6 +116,24 @@
         </label>
         <p class="devtools-toggle-desc">Mine then craft</p>
       </div>
+      <div class="devtools-pinger">
+        <div class="devtools-pinger-inner">
+          <div class="pinger-anim">
+            <span></span>
+          </div>
+        </div>
+        <code class="devtools-console" style="display: flex">
+          <h3>Ping Status</h3>
+          <div class="devtools-pinger-console-content">
+            <p class="devtools-pinger-console-content-general">
+              Internet Connection: <span></span>
+            </p>
+            <p class="devtools-pinger-console-content-server">
+              Server Connection:   <span></span>
+            </p>
+          </div>
+        </code>
+      </div>
     </div>
     <div class="preselected" oreui-type="general" oreui-color="dark">
       Pre-selected Tweaks!
