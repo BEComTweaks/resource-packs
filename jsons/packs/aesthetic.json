@@ -187,22 +187,101 @@
     {
       "pack_id": "AllayElytra",
       "pack_name": "Allay Elytra",
-      "pack_description": "Retextures the Elytra to match the Allay's wings!"
+      "pack_description": "Retextures the Elytra to match the Allay's wings!",
+      "obvious_conflict": [
+        "DragonElytra",
+        "PhantomElytra",
+        "VexElytra",
+        "WhiteElytra",
+        "GrayElytra",
+        "BlackElytra",
+        "BrownElytra",
+        "RedElytra",
+        "OrangeElytra",
+        "YellowElytra",
+        "LimeElytra",
+        "GreenElytra",
+        "CyanElytra",
+        "LightBlueElytra",
+        "BlueElytra",
+        "PurpleElytra",
+        "MagentaElytra",
+        "PinkElytra"
+      ]
     },
     {
       "pack_id": "DragonElytra",
       "pack_name": "Dragon Elytra",
-      "pack_description": "Retextures the Elytra to match the Ender Dragon's wings!"
+      "pack_description": "Retextures the Elytra to match the Ender Dragon's wings!",
+      "obvious_conflict": [
+        "AllayElytra",
+        "PhantomElytra",
+        "VexElytra",
+        "WhiteElytra",
+        "GrayElytra",
+        "BlackElytra",
+        "BrownElytra",
+        "RedElytra",
+        "OrangeElytra",
+        "YellowElytra",
+        "LimeElytra",
+        "GreenElytra",
+        "CyanElytra",
+        "LightBlueElytra",
+        "BlueElytra",
+        "PurpleElytra",
+        "MagentaElytra",
+        "PinkElytra"
+      ]
     },
     {
       "pack_id": "PhantomElytra",
       "pack_name": "Phantom Elytra",
-      "pack_description": "Retextures the Elytra to match the Phantom's wings!"
+      "pack_description": "Retextures the Elytra to match the Phantom's wings!",
+      "obvious_conflict": [
+        "AllayElytra",
+        "DragonElytra",
+        "VexElytra",
+        "WhiteElytra",
+        "GrayElytra",
+        "BlackElytra",
+        "BrownElytra",
+        "RedElytra",
+        "OrangeElytra",
+        "YellowElytra",
+        "LimeElytra",
+        "GreenElytra",
+        "CyanElytra",
+        "LightBlueElytra",
+        "BlueElytra",
+        "PurpleElytra",
+        "MagentaElytra"
+      ]
     },
     {
       "pack_id": "VexElytra",
       "pack_name": "Vex Elytra",
-      "pack_description": "Retextures the Elytra to match the Vex's wings!"
+      "pack_description": "Retextures the Elytra to match the Vex's wings!",
+      "obvious_conflict": [
+        "AllayElytra",
+        "DragonElytra",
+        "PhantomElytra",
+        "WhiteElytra",
+        "GrayElytra",
+        "BlackElytra",
+        "BrownElytra",
+        "RedElytra",
+        "OrangeElytra",
+        "YellowElytra",
+        "LimeElytra",
+        "GreenElytra",
+        "CyanElytra",
+        "LightBlueElytra",
+        "BlueElytra",
+        "PurpleElytra",
+        "MagentaElytra",
+        "PinkElytra"
+      ]
     }
   ]
 }

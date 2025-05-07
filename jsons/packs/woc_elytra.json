@@ -9,6 +9,10 @@
       "pack_name": "White",
       "pack_description": "",
       "obvious_conflict": [
+        "AllayElytra",
+        "DragonElytra",
+        "PhantomElytra",
+        "VexElytra",
         "GrayElytra",
         "BlackElytra",
         "BrownElytra",
@@ -30,6 +34,11 @@
       "pack_name": "Gray",
       "pack_description": "",
       "obvious_conflict": [
+        "AllayElytra",
+        "DragonElytra",
+        "PhantomElytra",
+        "VexElytra",
+
         "WhiteElytra",
         "BlackElytra",
         "BrownElytra",
@@ -51,6 +60,11 @@
       "pack_name": "Black",
       "pack_description": "",
       "obvious_conflict": [
+        "AllayElytra",
+        "DragonElytra",
+        "PhantomElytra",
+        "VexElytra",
+
         "WhiteElytra",
         "GrayElytra",
         "BrownElytra",
@@ -72,6 +86,11 @@
       "pack_name": "Brown",
       "pack_description": "",
       "obvious_conflict": [
+        "AllayElytra",
+        "DragonElytra",
+        "PhantomElytra",
+        "VexElytra",
+
         "WhiteElytra",
         "GrayElytra",
         "BlackElytra",
@@ -93,6 +112,11 @@
       "pack_name": "Red",
       "pack_description": "",
       "obvious_conflict": [
+        "AllayElytra",
+        "DragonElytra",
+        "PhantomElytra",
+        "VexElytra",
+
         "WhiteElytra",
         "GrayElytra",
         "BlackElytra",
@@ -114,6 +138,11 @@
       "pack_name": "Orange",
       "pack_description": "",
       "obvious_conflict": [
+        "AllayElytra",
+        "DragonElytra",
+        "PhantomElytra",
+        "VexElytra",
+
         "WhiteElytra",
         "GrayElytra",
         "BlackElytra",
@@ -135,6 +164,11 @@
       "pack_name": "Yellow",
       "pack_description": "",
       "obvious_conflict": [
+        "AllayElytra",
+        "DragonElytra",
+        "PhantomElytra",
+        "VexElytra",
+
         "WhiteElytra",
         "GrayElytra",
         "BlackElytra",
@@ -156,6 +190,11 @@
       "pack_name": "Lime",
       "pack_description": "",
       "obvious_conflict": [
+        "AllayElytra",
+        "DragonElytra",
+        "PhantomElytra",
+        "VexElytra",
+
         "WhiteElytra",
         "GrayElytra",
         "BlackElytra",
@@ -177,6 +216,11 @@
       "pack_name": "Green",
       "pack_description": "",
       "obvious_conflict": [
+        "AllayElytra",
+        "DragonElytra",
+        "PhantomElytra",
+        "VexElytra",
+
         "WhiteElytra",
         "GrayElytra",
         "BlackElytra",
@@ -198,6 +242,11 @@
       "pack_name": "Cyan",
       "pack_description": "",
       "obvious_conflict": [
+        "AllayElytra",
+        "DragonElytra",
+        "PhantomElytra",
+        "VexElytra",
+
         "WhiteElytra",
         "GrayElytra",
         "BlackElytra",
@@ -219,6 +268,11 @@
       "pack_name": "Light Blue",
       "pack_description": "",
       "obvious_conflict": [
+        "AllayElytra",
+        "DragonElytra",
+        "PhantomElytra",
+        "VexElytra",
+
         "WhiteElytra",
         "GrayElytra",
         "BlackElytra",
@@ -240,6 +294,11 @@
       "pack_name": "Blue",
       "pack_description": "",
       "obvious_conflict": [
+        "AllayElytra",
+        "DragonElytra",
+        "PhantomElytra",
+        "VexElytra",
+
         "WhiteElytra",
         "GrayElytra",
         "BlackElytra",
@@ -261,6 +320,11 @@
       "pack_name": "Purple",
       "pack_description": "",
       "obvious_conflict": [
+        "AllayElytra",
+        "DragonElytra",
+        "PhantomElytra",
+        "VexElytra",
+
         "WhiteElytra",
         "GrayElytra",
         "BlackElytra",
@@ -282,6 +346,11 @@
       "pack_name": "Magenta",
       "pack_description": "",
       "obvious_conflict": [
+        "AllayElytra",
+        "DragonElytra",
+        "PhantomElytra",
+        "VexElytra",
+
         "WhiteElytra",
         "GrayElytra",
         "BlackElytra",
@@ -303,6 +372,11 @@
       "pack_name": "Pink",
       "pack_description": "",
       "obvious_conflict": [
+        "AllayElytra",
+        "DragonElytra",
+        "PhantomElytra",
+        "VexElytra",
+
         "WhiteElytra",
         "GrayElytra",
         "BlackElytra",
