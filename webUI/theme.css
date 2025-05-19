@@ -742,7 +742,7 @@ select {
     margin-bottom: 6px;
   }
   .devtools-console {
-    height: 100px;
+    min-height: 100px;
     box-sizing: border-box;
     text-align: left;
   }
