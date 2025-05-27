@@ -16,6 +16,7 @@
     <link href="theme.css" rel="stylesheet" />
     <script src="extras/jszip.min.js"></script>
     <script src="extras/lz-string.min.js"></script>
+    <script src="app.js"></script>
   </head>
   <body>
     <ul class="large-nav">
@@ -204,7 +205,6 @@
         </div>
       </div>
     </div>
-    <script src="app.js"></script>
     <footer class="footer-container">
       <div class="credits-footer" oreui-type="general" oreui-color="dark">
         <!--credits-->
