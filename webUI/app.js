@@ -220,6 +220,9 @@ function disableSelection(element, checkbox) {
 }
 
 function toggleSelection(element) {
+  if (element.hasAttribute("disabled")) {
+    return;
+  }
   const checkbox = element.querySelector('input[type="checkbox"]');
   if (checkbox.checked) {
     disableSelection(element, checkbox);
