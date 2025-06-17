@@ -211,7 +211,7 @@ if "site" not in args.build or ("site" in args.build and (args.only_update_html 
                     to_add_pack = pack_start.replace('<conflicts>', dumps(conflicts).replace('"', "&quot;"))
                     try:
                         if file["packs"][i]["disabled"]:
-                            to_add_pack = to_add_pack.replace("green\">", "green\"> disabled=true")
+                            to_add_pack = to_add_pack.replace("green\">", "green\" disabled=true>")
                             print(f"[grey]Disabled Pack: {file["packs"][i]["pack_id"]}")
                     except KeyError:
                         pass
@@ -393,7 +393,7 @@ if "site" not in args.build or ("site" in args.build and (args.only_update_html 
                 to_add_pack = pack_start.replace('<conflicts>', dumps(conflicts).replace('"', "&quot;"))
                 try:
                     if file["packs"][i]["disabled"]:
-                        to_add_pack = to_add_pack.replace("green\">", "green\"> disabled=true")
+                        to_add_pack = to_add_pack.replace("green\">", "green\" disabled=true>")
                         print(f"[grey]Disabled Pack: {file["packs"][i]["pack_id"]}")
                 except KeyError:
                     pass

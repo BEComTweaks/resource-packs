@@ -15,7 +15,8 @@
     {
       "pack_id": "LushGrassAllRound",
       "pack_name": "Lush Grass All Round",
-      "pack_description": "Makes most of the world use a lush green colormap."
+      "pack_description": "Makes most of the world use a lush green colormap.",
+      "disabled": true
     },
     {
       "pack_id": "AlternateBedrock",
@@ -64,7 +65,8 @@
     {
       "pack_id": "ClearerWater",
       "pack_name": "Clearer Water",
-      "pack_description": "Makes Water clearer."
+      "pack_description": "Makes Water clearer.",
+      "disabled": true
     },
     {
       "pack_id": "UniformOres",
