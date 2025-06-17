@@ -143,6 +143,11 @@
       "pack_id": "SilentwispererArmorTrim",
       "pack_name": "Silentwisperer Armor Trim",
       "pack_description": "Changes the Silence Armor trim to match Silentwisperer's face."
+    },
+    {
+      "pack_id": "TridentStick",
+      "pack_name": "Trident Stick",
+      "pack_description": "Turns a Trident into a stick. So you can throw and attack with sticks."
     }
   ]
 }

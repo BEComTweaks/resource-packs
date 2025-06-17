@@ -1,0 +1,12 @@
+enchantment.tridentChanneling=Zap
+enchantment.tridentLoyalty=Boomerang
+enchantment.tridentRiptide=Whee
+enchantment.tridentImpaling=Penetration
+entity.thrown_trident.name=Throwing Stick
+item.trident.name=Throwing Stick
+howtoplay.weapons.header.4=Throwing Stick
+howtoplay.weapons.text.6.notTouch=The Throwing Stick is a dual-purpose melee and ranged weapon. Press :_input_key.attack: to attack. Press and hold :_input_key.use: to draw the trident back. Release :_input_key.use: to throw the trident. The Throwing Stick is the best weapon underwater.
+howtoplay.weapons.text.6.touch=The Throwing Stick is a dual-purpose melee and ranged weapon. Tap mobs to attack them. Press and hold the Screen to draw the trident back. Release the press to throw the trident. The Throwing Stick is the best weapon underwater.
+howtoplay.weapons.header.5=Enchanted Weapons
+howtoplay.weapons.text.7=The Sword, Bow, Crossbow, and Throwing Stick have specific enchantments that you can get from the Enchanting Table or Anvil that will improve damage, durability and even light mobs on fire!
+midgameTips.42=Throwing Sticks are dropped by the Drowned, and can be held or thrown.
