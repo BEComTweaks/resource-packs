@@ -109,7 +109,8 @@
     {
       "pack_id": "NoteBlockPitchParticle",
       "pack_name": "Note Block Pitch Particle",
-      "pack_description": "Modifies the note block pitch particle to show the pitch."
+      "pack_description": "Modifies the note block pitch particle to show the pitch.",
+      "disabled": true
     },
     {
       "pack_id": "ArabicNumerals",
