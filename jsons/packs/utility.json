@@ -179,6 +179,12 @@
       "pack_name": "Open Barrels",
       "pack_description": "Shows an open texture on all sides when barrel is open.",
       "icon": "gif"
+    },
+    {
+      "pack_id": "VisibleVibrations",
+      "pack_name": "Visible Vibrations",
+      "pack_description": "Makes the vibrations detected by Sculk Sensors much more visible",
+      "icon": "apng"
     }
   ]
 }
