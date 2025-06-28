@@ -19,7 +19,10 @@
 - Glass Door, Trapdoors and Circular Logs for 1.20, and most ore pack compatablities
 
 [lonelyang](https://github.com/lonelyang)
-- Note block pitch particles pack
+- Original Note block pitch particles pack
+
+[firegoo15071](https://discord.com/users/950343937397231636)
+- Updated Note block pitch particles pack, and Visible Vibrations pack
 
 [PAPISOP](https://github.com/PAPISOP) and [Arachi (Chi-a11y)](https://github.com/Chi-a11y)
 - A lot of packs from [BedrockTweaks/Files](https://github.com/BedrockTweaks/Files). [PAPISOP's PRs](https://github.com/BedrockTweaks/Files/pulls/PAPISOP) and [Arachi's PRs](https://github.com/BedrockTweaks/Files/pulls/Chi-a11y)
