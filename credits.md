@@ -21,7 +21,7 @@
 [lonelyang](https://github.com/lonelyang)
 - Original Note block pitch particles pack
 
-[firegoo15071](https://discord.com/users/950343937397231636)
+[firegoo15071](https://m.bilibili.com/space/37691488)
 - Updated Note block pitch particles pack, and Visible Vibrations pack
 
 [PAPISOP](https://github.com/PAPISOP) and [Arachi (Chi-a11y)](https://github.com/Chi-a11y)
