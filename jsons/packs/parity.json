@@ -37,6 +37,18 @@
       "conflict": ["HotbarStyleInventorySlotHighlight"]
     },
     {
+      "pack_id": "ClassicJavaSheep",
+      "pack_name": "Classic Java Sheep",
+      "pack_description": "Reverts Sheep back to having white wool around their head and legs, and white wool patches on their body when sheared from Minecraft: Java Edition before 1.21.5",
+      "obvious_conflict": ["KindaClassicJavaSheep"]
+    },
+    {
+      "pack_id": "KindaClassicJavaSheep",
+      "pack_name": "Kinda Classic Java Sheep",
+      "pack_description": "Reverts Sheep back to having white wool around their head and legs, but keeps the wool patches on their body colored when sheared from Minecraft: Java Edition before 1.21.5",
+      "obvious_conflict": ["ClassicJavaSheep"]
+    },
+    {
       "pack_id": "JavaDriedKelp",
       "pack_name": "Java Dried Kelp",
       "pack_description": "Gives the Dried Kelp item its texture from Minecraft: Java Edition."

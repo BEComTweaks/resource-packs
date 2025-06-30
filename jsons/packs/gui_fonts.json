@@ -1,0 +1,80 @@
+{
+  "$schema": "https://becomtweaks.github.io/schema/packs.json",
+  "location": "gui/fonts",
+  "topic": "Fonts",
+  "subcategory_of": "GUI",
+  "packs": [
+    {
+      "pack_id": "SmoothFont",
+      "pack_name": "Smooth Font",
+      "pack_description": "Changes the font to be smoother and higher-resolution, from the 'Faithful' resource pack",
+      "obvious_conflict": [
+        "AntiAliasFont",
+        "SmallCapsFont",
+        "SquareFont",
+        "DoodleFont",
+        "BlockyFont"
+      ]
+    },
+    {
+      "pack_id": "AntiAliasFont",
+      "pack_name": "Anti-Alias Font",
+      "pack_description": "Smoothens the font using anti-aliasing, from the 'Ice Cream' resource pack",
+      "obvious_conflict": [
+        "SmoothFont",
+        "SmallCapsFont",
+        "SquareFont",
+        "DoodleFont",
+        "BlockyFont"
+      ]
+    },
+    {
+      "pack_id": "SmallCapsFont",
+      "pack_name": "Small Caps Font",
+      "pack_description": "Changes all lower-case letters to be smaller versions of upper-case letters",
+      "obvious_conflict": [
+        "SmoothFont",
+        "AntiAliasFont",
+        "SquareFont",
+        "DoodleFont",
+        "BlockyFont"
+      ]
+    },
+    {
+      "pack_id": "SquareFont",
+      "pack_name": "Square Font",
+      "pack_description": "Retextures the font to be more square",
+      "obvious_conflict": [
+        "SmoothFont",
+        "AntiAliasFont",
+        "SmallCapsFont",
+        "DoodleFont",
+        "BlockyFont"
+      ]
+    },
+    {
+      "pack_id": "DoodleFont",
+      "pack_name": "Doodle Font",
+      "pack_description": "Changes the font to a cartoonish, doodly font, from the 'MS Painted' resource pack",
+      "obvious_conflict": [
+        "SmoothFont",
+        "AntiAliasFont",
+        "SmallCapsFont",
+        "SquareFont",
+        "BlockyFont"
+      ]
+    },
+    {
+      "pack_id": "BlockyFont",
+      "pack_name": "Blocky Font",
+      "pack_description": "Changes the font to be bold and blocky, from the 'F8thful' resource pack",
+      "obvious_conflict": [
+        "SmoothFont",
+        "AntiAliasFont",
+        "SmallCapsFont",
+        "SquareFont",
+        "DoodleFont"
+      ]
+    }
+  ]
+}

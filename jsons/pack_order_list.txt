@@ -11,6 +11,7 @@ utility.json
 unobtrusive.json
 3d.json
 gui.json
+	gui_fonts.json
 	gui_crosshairs.json
 	gui_hearts.json
 	gui_hearts_pride.json
