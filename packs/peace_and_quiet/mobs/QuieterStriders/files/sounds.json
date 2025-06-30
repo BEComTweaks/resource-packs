@@ -1,11 +1,16 @@
 {
   "entity_sounds": {
     "entities": {
-      "glow_squid": {
-        "volume": 0.02
-      },
-      "squid": {
-        "volume": 0.02
+      "strider": {
+        "events": {
+          "step": {
+            "volume": 0.0125
+          },
+          "step_lava": {
+            "volume": 0.01
+          }
+        },
+        "volume": 0.05
       }
     }
   }

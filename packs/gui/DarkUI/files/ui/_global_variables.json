@@ -27,5 +27,6 @@
   "$enchanting_runes_fail_color": [1.0, 1.0, 1.0],
   "$profile_create_character_selected_color": [1.0, 1.0, 1.0],
   "$dressing_room_semi_dark_bg_color": [0.13, 0.13, 0.13],
-  "$dressing_room_right_side_dark_text_color": [1.0, 1.0, 1.0]
+  "$dressing_room_right_side_dark_text_color": [1.0, 1.0, 1.0],
+  "$dressing_room_dark_button_color": [1.0, 1.0, 1.0]
 }

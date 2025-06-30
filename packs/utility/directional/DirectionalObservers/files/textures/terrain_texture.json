@@ -1,20 +1,9 @@
 {
-  "num_mip_levels": 4,
-  "padding": 8,
   "resource_pack_name": "vanilla",
+  "texture_name": "atlas.terrain",
+  "padding": 8,
+  "num_mip_levels": 4,
   "texture_data": {
-    "observer_bottom": {
-      "textures": [
-        "textures/blocks/observer_top",
-        "textures/blocks/observer_top_lit"
-      ]
-    },
-    "observer_east": {
-      "textures": [
-        "textures/blocks/observer_side",
-        "textures/blocks/observer_side_lit"
-      ]
-    },
     "observer_north": {
       "textures": [
         "textures/blocks/observer_front",
@@ -33,12 +22,23 @@
         "textures/blocks/observer_top_lit"
       ]
     },
+    "observer_bottom": {
+      "textures": [
+        "textures/blocks/observer_top",
+        "textures/blocks/observer_top_lit"
+      ]
+    },
+    "observer_east": {
+      "textures": [
+        "textures/blocks/observer_side",
+        "textures/blocks/observer_side_lit"
+      ]
+    },
     "observer_west": {
       "textures": [
         "textures/blocks/observer_side",
         "textures/blocks/observer_side_lit"
       ]
     }
-  },
-  "texture_name": "atlas.terrain"
+  }
 }

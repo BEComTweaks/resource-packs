@@ -16,8 +16,12 @@
       },
       "scripts": {
         "animate": [
-          { "third_person": "!c.is_first_person" },
-          { "first_person": "c.is_first_person" }
+          {
+            "third_person": "!c.is_first_person"
+          },
+          {
+            "first_person": "c.is_first_person"
+          }
         ]
       },
       "animations": {

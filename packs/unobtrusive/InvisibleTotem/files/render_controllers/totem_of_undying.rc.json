@@ -1,0 +1,28 @@
+{
+  "format_version": "1.10.0",
+  "render_controllers": {
+    "controller.render.bt.totem_third_person": {
+      "geometry": "Geometry.default",
+      "materials": [
+        {
+          "*": "variable.is_enchanted ? Material.enchanted : Material.default"
+        }
+      ],
+      "textures": ["Texture.default", "Texture.enchanted"]
+    },
+    "controller.render.bt.totem_first_person": {
+      "geometry": "Geometry.default",
+      "materials": [
+        {
+          "*": "variable.is_enchanted ? Material.enchanted : Material.default"
+        }
+      ],
+      "textures": ["Texture.default", "Texture.enchanted"],
+      "part_visibility": [
+        {
+          "totem": false
+        }
+      ]
+    }
+  }
+}

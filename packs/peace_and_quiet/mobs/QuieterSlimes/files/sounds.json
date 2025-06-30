@@ -3,10 +3,10 @@
     "entities": {
       "slime": {
         "volume": 0.05
+      },
+      "magma_cube": {
+        "volume": 0.05
       }
-    },
-    "magma_cube": {
-      "volume": 0.05
     }
   }
 }

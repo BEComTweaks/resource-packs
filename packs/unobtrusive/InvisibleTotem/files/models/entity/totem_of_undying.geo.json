@@ -1,0 +1,29 @@
+{
+  "format_version": "1.21.0",
+  "minecraft:geometry": [
+    {
+      "description": {
+        "identifier": "geometry.bt_totem_of_undying",
+        "texture_width": 16,
+        "texture_height": 16,
+        "visible_bounds_width": 2,
+        "visible_bounds_height": 1.5,
+        "visible_bounds_offset": [0, 0.25, 0]
+      },
+      "bones": [
+        {
+          "name": "totem",
+          "pivot": [0, 0, 0],
+          "binding": "q.item_slot_to_bone_name(c.item_slot)",
+          "texture_meshes": [
+            {
+              "texture": "default",
+              "position": [-8, 1, 0],
+              "rotation": [90, 0, 0]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
