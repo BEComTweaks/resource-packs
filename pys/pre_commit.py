@@ -182,7 +182,8 @@ if "site" not in args.build or ("site" in args.build and (args.only_update_html 
                             pkicstats[0] += 1
                         else:
                             # When pack icon doesn't even exist
-                            raise KeyError # who cares
+                            shutil.copy(f'{cdir()}/pack_icons/missing_texture.png', f'{category_loc}/{file["packs"][i]["pack_id"]}/pack_icon.png')
+                            raise KeyError
                     except KeyError:
                             pkicstats[1] += 1
                             print(f"[red]Incomplete Pack Icon: [yellow]{file['packs'][i]['pack_id']}")
@@ -364,7 +365,8 @@ if "site" not in args.build or ("site" in args.build and (args.only_update_html 
                         pkicstats[0] += 1
                     else:
                         # When pack icon doesn't even exist
-                        raise KeyError # who cares
+                        shutil.copy(f'{cdir()}/pack_icons/missing_texture.png', f'{category_loc}/{file["packs"][i]["pack_id"]}/pack_icon.png')
+                        raise KeyError
                 except KeyError:
                         pkicstats[1] += 1
                         print(f"[red]Incomplete Pack Icon: [yellow]{file['packs'][i]['pack_id']}")
@@ -527,7 +529,7 @@ with spinner("[yellow]Updting resources from remote...", spinner="hamburger"):
         # JSZip
         request_save_to("https://raw.githubusercontent.com/Stuk/jszip/refs/heads/main/dist/jszip.min.js", f"{cdir()}/webUI/extras/jszip.min.js")
     if args.pull_css and args.branch == "main":
-        # pull css 
+        # pull css
         request_save_to("https://raw.githubusercontent.com/becomtweaks/resource-packs/refs/heads/main/webUI/theme.css", f"{cdir()}/webUI/theme.css")
     if spinner == emptySpinner:
         print("[green]Updated files from remote!")

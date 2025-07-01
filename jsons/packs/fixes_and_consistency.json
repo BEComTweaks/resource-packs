@@ -153,6 +153,11 @@
       "pack_description": "Gives the Smooth Stone texture the same bevel as its slab counterpart."
     },
     {
+      "pack_id": "SandstoneWallTopFix",
+      "pack_name": "Sandstone Wall Top Fix",
+      "pack_description": "Gives Sandstone and Red Sandstone Walls their correct top and bottom textures to align with their block counterparts"
+    },
+    {
       "pack_id": "ConsistentBambooPlanks",
       "pack_name": "Consistent Bamboo Planks",
       "pack_description": "Makes Bamboo Planks and Bamboo Mosaics match the textures of the other plank types."

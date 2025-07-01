@@ -10,7 +10,8 @@
         "AlphaMinecraftLogo",
         "BedrockEditionSubtitle",
         "ClassicMinecraftLogo",
-        "JavaMenuTitle"
+        "JavaMenuTitle",
+        "AMinecraftMovieLogo"
       ]
     },
     {
@@ -21,7 +22,8 @@
         "BedrockEditionSubtitle",
         "ClassicMinecraftLogo",
         "OldBedrockMenuTitle",
-        "JavaMenuTitle"
+        "JavaMenuTitle",
+        "AMinecraftMovieLogo"
       ]
     },
     {
@@ -32,7 +34,8 @@
         "AlphaMinecraftLogo",
         "OldBedrockMenuTitle",
         "BedrockEditionSubtitle",
-        "JavaMenuTitle"
+        "JavaMenuTitle",
+        "AMinecraftMovieLogo"
       ]
     },
     {
@@ -90,6 +93,11 @@
       "pack_description": "Reverts Lava to its Alpha texture. Best with Old Netherrack."
     },
     {
+      "pack_id": "OldGhasts",
+      "pack_name": "Old Ghasts",
+      "pack_description": "Reverts Ghasts to their lower resolution textures, including Happy Ghasts and their harnesses"
+    },
+    {
       "pack_id": "OldObsidian",
       "pack_name": "Old Obsidian",
       "pack_description": "Revers Obsidian and Crying Obsidian to their old textures."
@@ -142,6 +150,11 @@
       "pack_description": "Reverts Spawn Eggs to their classic polka-dot textures"
     },
     {
+      "pack_id": "SnoutlessPigs",
+      "pack_name": "Snoutless Pigs",
+      "pack_description": "Flattens all Pigs' snouts like they appeared before Beta 1.8"
+    },
+    {
       "pack_id": "SnoutlessCows",
       "pack_name": "Snoutless Cows",
       "pack_description": "Flattens all Cow and Mooshroom snouts like they appeared before 1.21.70"
@@ -167,6 +180,11 @@
       "pack_description": "Renames 'Pottery Sherds' back to 'Pottery Shards'."
     },
     {
+      "pack_id": "BetaItemTooltip",
+      "pack_name": "Beta Item Tooltip",
+      "pack_description": "Reverts the texture of the purple item tooltip back to the translucent black box"
+    },
+    {
       "pack_id": "ZombiePigman",
       "pack_name": "Zombie Pigman",
       "pack_description": "Changes the texture and model of the Zombified Piglin to be closer to the old Zombie Pigman.",
@@ -176,6 +194,11 @@
       "pack_id": "OarlessBoats",
       "pack_name": "Oarless Boats",
       "pack_description": "Removes the oars from all boat types from their item textures and entity models."
+    },
+    {
+      "pack_id": "OldClouds",
+      "pack_name": "Old Clouds",
+      "pack_description": "Reverts clouds to their pre-1.21.90 texture"
     },
     {
       "pack_id": "OldDoorSound",

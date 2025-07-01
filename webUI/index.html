@@ -191,7 +191,7 @@
     <div class="category-label" onclick="toggleCategory(this);" oreui-color="dark" oreui-type="button">
      Aesthetic
     </div>
-    <button class="category-label-selectall" data-allpacks="N4IgTghg7iBcAEBtEBBANgFwKZgHYWwCE0B7AYwGsARLAZwzAFcyMBLE3EAGnhGIkoA5LBgAWOQmFaVa3XgGFxYMAE8ACtIqtcAczkgAqrgBGjXABM0WcwAkIKwhCuyehk2cvWqU6wGksaAAO+gDKJGisthxYKqHhkSERALZY+jS0BIyQ2OZqWYFZaXSZ2V4QYBQA8hAU+jYkUgBeHBhOgow6OiIuvABqOGxkbR1dGD0gYQBm2GAA6iTh+vJWELjzi66SJFC4ADJYBEr6AErWAJJgHADi4VhJAGKkUDjjp-gpAOQh2EkfGCQfXYkHQfJbhBqTRhoACiuDIolWbF0ABUIMYrGpyoNnHUqCFRKwAuZHLhcDhMRgZrhxhpcBRYeZjiRzOMULRRM5aPIIElApNWGA6PormgILRaFQFmBxiKxbRkZBAuYpeNHtoMMjWIFAtYUMptuMQoFRezCCRKVYAbD4YjtHpXAAmPGBFQ6E2sshkLIELBG13u-T3LBwwlgINwoWuEJJBZiHCzco63KiunjeRSJK0aJgdOsTMcfToKk++SMDDyEjanD6NTxdnWb7RegkSSaQ12qHlWWNazInCQMjm1o10XafaHHB6mNgYXhczB9PbTiuZZy6TfFRWYRxqTYKcNQtoUUqaFoFQMCBpSA6Din8+QGsI3D-JJ3i-6foADzfD4AugBfIA" data-category="Aesthetic" onclick="selectAll(this)">
+    <button class="category-label-selectall" data-allpacks="N4IgTghg7iBcAEBtEBBANgFwKZgHYWwCE0B7AYwGsARLAZwzAFcyMBLE3EAGnhGIkoA5LBgAWOQmFaVa3XgGFxYMAE8ACtIqtcAczkgAqrgBGjXABM0WcwAkIKwhCuyehk2cvWqU6wGksaAAO+gDKJGisthxYKqHhkSERALZY+jS0BIyQ2OYASnTaaXSZ2dZqWYFZRRkYWQReEGAUAPIQFPo2JFIAXhwYToKMOjoiLrwAajhsZANDIxhjIGEAZthgAOok4fryVhC4m9uukiRQuAAyWARK+vnmAJJgHADi4VhJAGKkUDiL+fgpADkIWwSUBGBIgPOJB0gJ24S6y0YaAAorgyKJ9mxdAAVCDGKxqRrTZwdKghUSsALmRy4XA4IkYNa4RYaXAUNF5EjmRYoWiiZy0eQQJKBZasMB0fTPNAQWi0KhbMCLGVy2g4yCBcxKxZfbQYHGsQKBawoZSnRYhQKy-mEEhMqyQtEYrHaPSuABM5MCKh0Nt5ZDIdWwVt9-v0Hyw6KpYEj6KlrhCSS2Yhw60aJvMall7MW8ikSVo0TA+dYhY4+nQzPq8kYGHkJGNOH0ani-OsIOi9BIkk0lrdyMaqu61hxOEgZHt-Rbsu0l2uODNybA0vC5ij+dOnFcuzV0hBKiswlTUmwS66lbQspUKLQKgYEDSkB0HFv98gLcxuAhSTfD-0kwAB5-h+AC6AC+QA" data-category="Aesthetic" onclick="selectAll(this)">
      <img class="category-label-selectall-img" src="images/select-all-button/chiseled_bookshelf_empty.png"/>
      <div class="category-label-selectall-hovertext">
       Select All
@@ -293,6 +293,19 @@
         </label>
         <div class="tweak-description">
          Eliminates Slime Block transparency.
+        </div>
+       </div>
+      </div>
+      <div class="tweak" data-category="Aesthetic" data-conflicts="[]" data-name="DesaturatedResin" onclick="toggleSelection(this);" oreui-active-color="green" oreui-color="dark" oreui-type="button">
+       <div class="tweak-info">
+        <input name="tweak" type="checkbox"/>
+        <img alt="Desaturated Resin" src="../packs/aesthetic/DesaturatedResin/pack_icon.png" style="width:82px; height:82px;"/>
+        <br>
+        <label class="tweak-title" id="tweak">
+         Desaturated Resin
+        </label>
+        <div class="tweak-description">
+         Desaturates the color of all Resin blocks and items
         </div>
        </div>
       </div>
@@ -3893,7 +3906,7 @@
         </div>
        </div>
       </div>
-      <div class="tweak" data-category="GUI" data-conflicts='["AlphaMinecraftLogo", "JavaMenuTitle", "OldBedrockMenuTitle", "ClassicMinecraftLogo"]' data-name="BedrockEditionSubtitle" onclick="toggleSelection(this);" oreui-active-color="green" oreui-color="dark" oreui-type="button">
+      <div class="tweak" data-category="GUI" data-conflicts='["AlphaMinecraftLogo", "JavaMenuTitle", "OldBedrockMenuTitle", "ClassicMinecraftLogo", "AMinecraftMovieLogo"]' data-name="BedrockEditionSubtitle" onclick="toggleSelection(this);" oreui-active-color="green" oreui-color="dark" oreui-type="button">
        <div class="tweak-info">
         <input name="tweak" type="checkbox"/>
         <img alt="Bedrock Edition Subtitle" src="../packs/gui/BedrockEditionSubtitle/pack_icon.png" style="width:82px; height:82px;"/>
@@ -3906,7 +3919,7 @@
         </div>
        </div>
        <div class="conf-hover-text" oreui-color="dark" oreui-type="general">
-        Conflicts with: AlphaMinecraftLogo, JavaMenuTitle, OldBedrockMenuTitle, ClassicMinecraftLogo
+        Conflicts with: AlphaMinecraftLogo, JavaMenuTitle, OldBedrockMenuTitle, ClassicMinecraftLogo, AMinecraftMovieLogo
        </div>
       </div>
      </div>
@@ -5326,7 +5339,7 @@
     <div class="category-label" onclick="toggleCategory(this);" oreui-color="dark" oreui-type="button">
      Menu Panoramas
     </div>
-    <button class="category-label-selectall" data-allpacks="N4IgTghg7iBcAEBtEBhANhAzpglgYwAUIA7Ae0gFsIQAaeEAeTwFMSizLq6QA1HNDAHNm7chCq16AIWbNMozpJAA5ZgBcAFszALxXegEEK6jQE9MagOLNSAExEkxE7gGUArsUzqeEAc1O6zvQAsiSCYKQAbswuUOIADoH6IAAqWgCixLZJSvEQeADWAHTxxII53MqkFr6COBAV9Eysnjj26QAeamDMxgAS-GjyjorcADIQBXJtMR5eao0gAKpZ2uGkHrYTkQ2kpGiLBnj59XwCEMKLKFpgYKaWEdGLfb5opFCyxABMAAxfAIzPV7vT6-L5fRYpMD1NDXcQAI20ww4eiURDQzEsEDA9mIkKWADYAJwpNxqcgwgDq5DQW2YgnyphQpE8+wcKKCIBc3RmpgA5JgAEpyDZgFhEQoAEWYkWpYFpOQAugBfIA" data-category="Menu Panoramas" onclick="selectAll(this)">
+    <button class="category-label-selectall" data-allpacks="N4IgTghg7iBcAEBtEBhANhAzpglgYwAUIA7Ae0gFsIQAaeEAeTwFMSizLq6QA1HNDAHNm7chCq16AIWbNMozpJAA5ZgBcAFszALxXegEEK6jQE9MagOLNSAExEkxE7gGUArsUzqeEAc1O6zvQAsiSCYKQAbswuUOIADoH6IAAqWgCixLZJSvEQeADWAHTxxII53MqkFr6COBAV9Eysnjj26QAeamDMxgAS-GjyjorcADIQBXJtMR5eao0gAKpZ2uGkHrYTkQ2kpGiLBnj59XwCEMKLKFpgYKaWEdGLfb5opFCyxABMAAxfAIzPV7vT6-L5fRYpMD1NDXcQAI20ww4eiULni0LKKVIYxwADMHCigiAiGhmJYIGB7MRIUsAGwAThSbjU5BhAHVyGgtsxBPlTChSJ59oSnMkXN0ZqYAOSYABKcg2YBYREKABFmJFOWBuTkALoAXyAA" data-category="Menu Panoramas" onclick="selectAll(this)">
      <img class="category-label-selectall-img" src="images/select-all-button/chiseled_bookshelf_empty.png"/>
      <div class="category-label-selectall-hovertext">
       Select All
@@ -5334,7 +5347,7 @@
     </button>
     <div class="category-controlled" oreui-color="dark" oreui-type="general">
      <div class="tweaks">
-      <div class="tweak" data-category="Menu Panoramas" data-conflicts="[&quot;OceanPanorama&quot;, &quot;VillagePanorama&quot;, &quot;BeesPanorama&quot;, &quot;NetherPanorama&quot;, &quot;AmethystGeodePanorama&quot;, &quot;SunsetValleyPanorama&quot;, &quot;MangroveSwampPanorama&quot;, &quot;TheEndPanorama&quot;, &quot;pack.pngPanorama&quot;, &quot;NostalgiaPanorama&quot;, &quot;OceansideExtremeHillsPanorama&quot;, &quot;LakesideSunsetPanorama&quot;, &quot;UndergroundLavaPoolPanorama&quot;, &quot;AcaciaVillagePanorama&quot;, &quot;CherryGrovePanorama&quot;, &quot;Halloween2021Panorama&quot;, &quot;Halloween2022Panorama&quot;, &quot;TrialChambersPanorama&quot;, &quot;PaleGardenPanorama&quot;, &quot;TU69TutorialWorldLegacyConsolePanorama&quot;, &quot;Stridey'sResourcePackDevWorldPanorama&quot;, &quot;Xisuma'sHermitcraftBaseSeason1&quot;, &quot;Xisuma'sHermitcraftBaseSeason2&quot;, &quot;Xisuma'sHermitcraftBaseSeason3&quot;, &quot;Xisuma'sHermitcraftBaseSeason4&quot;, &quot;Xisuma'sHermitcraftBaseSeason5&quot;, &quot;Xisuma'sHermitcraftBaseSeason6&quot;, &quot;Xisuma'sHermitcraftBaseSeason7&quot;, &quot;Xisuma'sHermitcraftBaseSeason8&quot;, &quot;Xisuma'sHermitcraftBaseSeason9&quot;]" data-name="ClassicPanorama" onclick="toggleSelection(this);" oreui-active-color="green" oreui-color="dark" oreui-type="button">
+      <div class="tweak" data-category="Menu Panoramas" data-conflicts="[&quot;OceanPanorama&quot;, &quot;VillagePanorama&quot;, &quot;BeesPanorama&quot;, &quot;NetherPanorama&quot;, &quot;AmethystGeodePanorama&quot;, &quot;SunsetValleyPanorama&quot;, &quot;MangroveSwampPanorama&quot;, &quot;TheEndPanorama&quot;, &quot;pack.pngPanorama&quot;, &quot;NostalgiaPanorama&quot;, &quot;OceansideExtremeHillsPanorama&quot;, &quot;LakesideSunsetPanorama&quot;, &quot;UndergroundLavaPoolPanorama&quot;, &quot;AcaciaVillagePanorama&quot;, &quot;CherryGrovePanorama&quot;, &quot;Halloween2021Panorama&quot;, &quot;Halloween2022Panorama&quot;, &quot;SpringToLifePanorama&quot;, &quot;TrialChambersPanorama&quot;, &quot;PaleGardenPanorama&quot;, &quot;TU69TutorialWorldLegacyConsolePanorama&quot;, &quot;Stridey'sResourcePackDevWorldPanorama&quot;, &quot;Xisuma'sHermitcraftBaseSeason1&quot;, &quot;Xisuma'sHermitcraftBaseSeason2&quot;, &quot;Xisuma'sHermitcraftBaseSeason3&quot;, &quot;Xisuma'sHermitcraftBaseSeason4&quot;, &quot;Xisuma'sHermitcraftBaseSeason5&quot;, &quot;Xisuma'sHermitcraftBaseSeason6&quot;, &quot;Xisuma'sHermitcraftBaseSeason7&quot;, &quot;Xisuma'sHermitcraftBaseSeason8&quot;, &quot;Xisuma'sHermitcraftBaseSeason9&quot;]" data-name="ClassicPanorama" onclick="toggleSelection(this);" oreui-active-color="green" oreui-color="dark" oreui-type="button">
        <div class="tweak-info">
         <input name="tweak" type="checkbox"/>
         <img alt="Classic" src="../packs/menu_panoramas/ClassicPanorama/pack_icon.png" style="width:82px; height:82px;"/>
@@ -5346,7 +5359,7 @@
         </div>
        </div>
       </div>
-      <div class="tweak" data-category="Menu Panoramas" data-conflicts="[&quot;ClassicPanorama&quot;, &quot;VillagePanorama&quot;, &quot;BeesPanorama&quot;, &quot;NetherPanorama&quot;, &quot;AmethystGeodePanorama&quot;, &quot;SunsetValleyPanorama&quot;, &quot;MangroveSwampPanorama&quot;, &quot;TheEndPanorama&quot;, &quot;pack.pngPanorama&quot;, &quot;NostalgiaPanorama&quot;, &quot;OceansideExtremeHillsPanorama&quot;, &quot;LakesideSunsetPanorama&quot;, &quot;UndergroundLavaPoolPanorama&quot;, &quot;AcaciaVillagePanorama&quot;, &quot;CherryGrovePanorama&quot;, &quot;Halloween2021Panorama&quot;, &quot;Halloween2022Panorama&quot;, &quot;TrialChambersPanorama&quot;, &quot;PaleGardenPanorama&quot;, &quot;TU69TutorialWorldLegacyConsolePanorama&quot;, &quot;Stridey'sResourcePackDevWorldPanorama&quot;, &quot;Xisuma'sHermitcraftBaseSeason1&quot;, &quot;Xisuma'sHermitcraftBaseSeason2&quot;, &quot;Xisuma'sHermitcraftBaseSeason3&quot;, &quot;Xisuma'sHermitcraftBaseSeason4&quot;, &quot;Xisuma'sHermitcraftBaseSeason5&quot;, &quot;Xisuma'sHermitcraftBaseSeason6&quot;, &quot;Xisuma'sHermitcraftBaseSeason7&quot;, &quot;Xisuma'sHermitcraftBaseSeason8&quot;, &quot;Xisuma'sHermitcraftBaseSeason9&quot;]" data-name="OceanPanorama" onclick="toggleSelection(this);" oreui-active-color="green" oreui-color="dark" oreui-type="button">
+      <div class="tweak" data-category="Menu Panoramas" data-conflicts="[&quot;ClassicPanorama&quot;, &quot;VillagePanorama&quot;, &quot;BeesPanorama&quot;, &quot;NetherPanorama&quot;, &quot;AmethystGeodePanorama&quot;, &quot;SunsetValleyPanorama&quot;, &quot;MangroveSwampPanorama&quot;, &quot;TheEndPanorama&quot;, &quot;pack.pngPanorama&quot;, &quot;NostalgiaPanorama&quot;, &quot;OceansideExtremeHillsPanorama&quot;, &quot;LakesideSunsetPanorama&quot;, &quot;UndergroundLavaPoolPanorama&quot;, &quot;AcaciaVillagePanorama&quot;, &quot;CherryGrovePanorama&quot;, &quot;Halloween2021Panorama&quot;, &quot;Halloween2022Panorama&quot;, &quot;SpringToLifePanorama&quot;, &quot;TrialChambersPanorama&quot;, &quot;PaleGardenPanorama&quot;, &quot;TU69TutorialWorldLegacyConsolePanorama&quot;, &quot;Stridey'sResourcePackDevWorldPanorama&quot;, &quot;Xisuma'sHermitcraftBaseSeason1&quot;, &quot;Xisuma'sHermitcraftBaseSeason2&quot;, &quot;Xisuma'sHermitcraftBaseSeason3&quot;, &quot;Xisuma'sHermitcraftBaseSeason4&quot;, &quot;Xisuma'sHermitcraftBaseSeason5&quot;, &quot;Xisuma'sHermitcraftBaseSeason6&quot;, &quot;Xisuma'sHermitcraftBaseSeason7&quot;, &quot;Xisuma'sHermitcraftBaseSeason8&quot;, &quot;Xisuma'sHermitcraftBaseSeason9&quot;]" data-name="OceanPanorama" onclick="toggleSelection(this);" oreui-active-color="green" oreui-color="dark" oreui-type="button">
        <div class="tweak-info">
         <input name="tweak" type="checkbox"/>
         <img alt="Ocean" src="../packs/menu_panoramas/OceanPanorama/pack_icon.png" style="width:82px; height:82px;"/>
@@ -5358,7 +5371,7 @@
         </div>
        </div>
       </div>
-      <div class="tweak" data-category="Menu Panoramas" data-conflicts="[&quot;ClassicPanorama&quot;, &quot;OceanPanorama&quot;, &quot;BeesPanorama&quot;, &quot;NetherPanorama&quot;, &quot;AmethystGeodePanorama&quot;, &quot;SunsetValleyPanorama&quot;, &quot;MangroveSwampPanorama&quot;, &quot;TheEndPanorama&quot;, &quot;pack.pngPanorama&quot;, &quot;NostalgiaPanorama&quot;, &quot;OceansideExtremeHillsPanorama&quot;, &quot;LakesideSunsetPanorama&quot;, &quot;UndergroundLavaPoolPanorama&quot;, &quot;AcaciaVillagePanorama&quot;, &quot;CherryGrovePanorama&quot;, &quot;Halloween2021Panorama&quot;, &quot;Halloween2022Panorama&quot;, &quot;TrialChambersPanorama&quot;, &quot;PaleGardenPanorama&quot;, &quot;TU69TutorialWorldLegacyConsolePanorama&quot;, &quot;Stridey'sResourcePackDevWorldPanorama&quot;, &quot;Xisuma'sHermitcraftBaseSeason1&quot;, &quot;Xisuma'sHermitcraftBaseSeason2&quot;, &quot;Xisuma'sHermitcraftBaseSeason3&quot;, &quot;Xisuma'sHermitcraftBaseSeason4&quot;, &quot;Xisuma'sHermitcraftBaseSeason5&quot;, &quot;Xisuma'sHermitcraftBaseSeason6&quot;, &quot;Xisuma'sHermitcraftBaseSeason7&quot;, &quot;Xisuma'sHermitcraftBaseSeason8&quot;, &quot;Xisuma'sHermitcraftBaseSeason9&quot;]" data-name="VillagePanorama" onclick="toggleSelection(this);" oreui-active-color="green" oreui-color="dark" oreui-type="button">
+      <div class="tweak" data-category="Menu Panoramas" data-conflicts="[&quot;ClassicPanorama&quot;, &quot;OceanPanorama&quot;, &quot;BeesPanorama&quot;, &quot;NetherPanorama&quot;, &quot;AmethystGeodePanorama&quot;, &quot;SunsetValleyPanorama&quot;, &quot;MangroveSwampPanorama&quot;, &quot;TheEndPanorama&quot;, &quot;pack.pngPanorama&quot;, &quot;NostalgiaPanorama&quot;, &quot;OceansideExtremeHillsPanorama&quot;, &quot;LakesideSunsetPanorama&quot;, &quot;UndergroundLavaPoolPanorama&quot;, &quot;AcaciaVillagePanorama&quot;, &quot;CherryGrovePanorama&quot;, &quot;Halloween2021Panorama&quot;, &quot;Halloween2022Panorama&quot;, &quot;SpringToLifePanorama&quot;, &quot;TrialChambersPanorama&quot;, &quot;PaleGardenPanorama&quot;, &quot;TU69TutorialWorldLegacyConsolePanorama&quot;, &quot;Stridey'sResourcePackDevWorldPanorama&quot;, &quot;Xisuma'sHermitcraftBaseSeason1&quot;, &quot;Xisuma'sHermitcraftBaseSeason2&quot;, &quot;Xisuma'sHermitcraftBaseSeason3&quot;, &quot;Xisuma'sHermitcraftBaseSeason4&quot;, &quot;Xisuma'sHermitcraftBaseSeason5&quot;, &quot;Xisuma'sHermitcraftBaseSeason6&quot;, &quot;Xisuma'sHermitcraftBaseSeason7&quot;, &quot;Xisuma'sHermitcraftBaseSeason8&quot;, &quot;Xisuma'sHermitcraftBaseSeason9&quot;]" data-name="VillagePanorama" onclick="toggleSelection(this);" oreui-active-color="green" oreui-color="dark" oreui-type="button">
        <div class="tweak-info">
         <input name="tweak" type="checkbox"/>
         <img alt="Village" src="../packs/menu_panoramas/VillagePanorama/pack_icon.png" style="width:82px; height:82px;"/>
@@ -5370,7 +5383,7 @@
         </div>
        </div>
       </div>
-      <div class="tweak" data-category="Menu Panoramas" data-conflicts="[&quot;ClassicPanorama&quot;, &quot;OceanPanorama&quot;, &quot;VillagePanorama&quot;, &quot;NetherPanorama&quot;, &quot;AmethystGeodePanorama&quot;, &quot;SunsetValleyPanorama&quot;, &quot;MangroveSwampPanorama&quot;, &quot;TheEndPanorama&quot;, &quot;pack.pngPanorama&quot;, &quot;NostalgiaPanorama&quot;, &quot;OceansideExtremeHillsPanorama&quot;, &quot;LakesideSunsetPanorama&quot;, &quot;UndergroundLavaPoolPanorama&quot;, &quot;AcaciaVillagePanorama&quot;, &quot;CherryGrovePanorama&quot;, &quot;Halloween2021Panorama&quot;, &quot;Halloween2022Panorama&quot;, &quot;TrialChambersPanorama&quot;, &quot;PaleGardenPanorama&quot;, &quot;TU69TutorialWorldLegacyConsolePanorama&quot;, &quot;Stridey'sResourcePackDevWorldPanorama&quot;, &quot;Xisuma'sHermitcraftBaseSeason1&quot;, &quot;Xisuma'sHermitcraftBaseSeason2&quot;, &quot;Xisuma'sHermitcraftBaseSeason3&quot;, &quot;Xisuma'sHermitcraftBaseSeason4&quot;, &quot;Xisuma'sHermitcraftBaseSeason5&quot;, &quot;Xisuma'sHermitcraftBaseSeason6&quot;, &quot;Xisuma'sHermitcraftBaseSeason7&quot;, &quot;Xisuma'sHermitcraftBaseSeason8&quot;, &quot;Xisuma'sHermitcraftBaseSeason9&quot;]" data-name="BeesPanorama" onclick="toggleSelection(this);" oreui-active-color="green" oreui-color="dark" oreui-type="button">
+      <div class="tweak" data-category="Menu Panoramas" data-conflicts="[&quot;ClassicPanorama&quot;, &quot;OceanPanorama&quot;, &quot;VillagePanorama&quot;, &quot;NetherPanorama&quot;, &quot;AmethystGeodePanorama&quot;, &quot;SunsetValleyPanorama&quot;, &quot;MangroveSwampPanorama&quot;, &quot;TheEndPanorama&quot;, &quot;pack.pngPanorama&quot;, &quot;NostalgiaPanorama&quot;, &quot;OceansideExtremeHillsPanorama&quot;, &quot;LakesideSunsetPanorama&quot;, &quot;UndergroundLavaPoolPanorama&quot;, &quot;AcaciaVillagePanorama&quot;, &quot;CherryGrovePanorama&quot;, &quot;Halloween2021Panorama&quot;, &quot;Halloween2022Panorama&quot;, &quot;SpringToLifePanorama&quot;, &quot;TrialChambersPanorama&quot;, &quot;PaleGardenPanorama&quot;, &quot;TU69TutorialWorldLegacyConsolePanorama&quot;, &quot;Stridey'sResourcePackDevWorldPanorama&quot;, &quot;Xisuma'sHermitcraftBaseSeason1&quot;, &quot;Xisuma'sHermitcraftBaseSeason2&quot;, &quot;Xisuma'sHermitcraftBaseSeason3&quot;, &quot;Xisuma'sHermitcraftBaseSeason4&quot;, &quot;Xisuma'sHermitcraftBaseSeason5&quot;, &quot;Xisuma'sHermitcraftBaseSeason6&quot;, &quot;Xisuma'sHermitcraftBaseSeason7&quot;, &quot;Xisuma'sHermitcraftBaseSeason8&quot;, &quot;Xisuma'sHermitcraftBaseSeason9&quot;]" data-name="BeesPanorama" onclick="toggleSelection(this);" oreui-active-color="green" oreui-color="dark" oreui-type="button">
        <div class="tweak-info">
         <input name="tweak" type="checkbox"/>
         <img alt="Bees" src="../packs/menu_panoramas/BeesPanorama/pack_icon.png" style="width:82px; height:82px;"/>
@@ -5382,7 +5395,7 @@
         </div>
        </div>
       </div>
-      <div class="tweak" data-category="Menu Panoramas" data-conflicts="[&quot;ClassicPanorama&quot;, &quot;OceanPanorama&quot;, &quot;VillagePanorama&quot;, &quot;BeesPanorama&quot;, &quot;AmethystGeodePanorama&quot;, &quot;SunsetValleyPanorama&quot;, &quot;MangroveSwampPanorama&quot;, &quot;TheEndPanorama&quot;, &quot;pack.pngPanorama&quot;, &quot;NostalgiaPanorama&quot;, &quot;OceansideExtremeHillsPanorama&quot;, &quot;LakesideSunsetPanorama&quot;, &quot;UndergroundLavaPoolPanorama&quot;, &quot;AcaciaVillagePanorama&quot;, &quot;CherryGrovePanorama&quot;, &quot;Halloween2021Panorama&quot;, &quot;Halloween2022Panorama&quot;, &quot;TrialChambersPanorama&quot;, &quot;PaleGardenPanorama&quot;, &quot;TU69TutorialWorldLegacyConsolePanorama&quot;, &quot;Stridey'sResourcePackDevWorldPanorama&quot;, &quot;Xisuma'sHermitcraftBaseSeason1&quot;, &quot;Xisuma'sHermitcraftBaseSeason2&quot;, &quot;Xisuma'sHermitcraftBaseSeason3&quot;, &quot;Xisuma'sHermitcraftBaseSeason4&quot;, &quot;Xisuma'sHermitcraftBaseSeason5&quot;, &quot;Xisuma'sHermitcraftBaseSeason6&quot;, &quot;Xisuma'sHermitcraftBaseSeason7&quot;, &quot;Xisuma'sHermitcraftBaseSeason8&quot;, &quot;Xisuma'sHermitcraftBaseSeason9&quot;]" data-name="NetherPanorama" onclick="toggleSelection(this);" oreui-active-color="green" oreui-color="dark" oreui-type="button">
+      <div class="tweak" data-category="Menu Panoramas" data-conflicts="[&quot;ClassicPanorama&quot;, &quot;OceanPanorama&quot;, &quot;VillagePanorama&quot;, &quot;BeesPanorama&quot;, &quot;AmethystGeodePanorama&quot;, &quot;SunsetValleyPanorama&quot;, &quot;MangroveSwampPanorama&quot;, &quot;TheEndPanorama&quot;, &quot;pack.pngPanorama&quot;, &quot;NostalgiaPanorama&quot;, &quot;OceansideExtremeHillsPanorama&quot;, &quot;LakesideSunsetPanorama&quot;, &quot;UndergroundLavaPoolPanorama&quot;, &quot;AcaciaVillagePanorama&quot;, &quot;CherryGrovePanorama&quot;, &quot;Halloween2021Panorama&quot;, &quot;Halloween2022Panorama&quot;, &quot;SpringToLifePanorama&quot;, &quot;TrialChambersPanorama&quot;, &quot;PaleGardenPanorama&quot;, &quot;TU69TutorialWorldLegacyConsolePanorama&quot;, &quot;Stridey'sResourcePackDevWorldPanorama&quot;, &quot;Xisuma'sHermitcraftBaseSeason1&quot;, &quot;Xisuma'sHermitcraftBaseSeason2&quot;, &quot;Xisuma'sHermitcraftBaseSeason3&quot;, &quot;Xisuma'sHermitcraftBaseSeason4&quot;, &quot;Xisuma'sHermitcraftBaseSeason5&quot;, &quot;Xisuma'sHermitcraftBaseSeason6&quot;, &quot;Xisuma'sHermitcraftBaseSeason7&quot;, &quot;Xisuma'sHermitcraftBaseSeason8&quot;, &quot;Xisuma'sHermitcraftBaseSeason9&quot;]" data-name="NetherPanorama" onclick="toggleSelection(this);" oreui-active-color="green" oreui-color="dark" oreui-type="button">
        <div class="tweak-info">
         <input name="tweak" type="checkbox"/>
         <img alt="Nether" src="../packs/menu_panoramas/NetherPanorama/pack_icon.png" style="width:82px; height:82px;"/>
@@ -5394,7 +5407,7 @@
         </div>
        </div>
       </div>
-      <div class="tweak" data-category="Menu Panoramas" data-conflicts="[&quot;ClassicPanorama&quot;, &quot;OceanPanorama&quot;, &quot;VillagePanorama&quot;, &quot;BeesPanorama&quot;, &quot;NetherPanorama&quot;, &quot;SunsetValleyPanorama&quot;, &quot;MangroveSwampPanorama&quot;, &quot;TheEndPanorama&quot;, &quot;pack.pngPanorama&quot;, &quot;NostalgiaPanorama&quot;, &quot;OceansideExtremeHillsPanorama&quot;, &quot;LakesideSunsetPanorama&quot;, &quot;UndergroundLavaPoolPanorama&quot;, &quot;AcaciaVillagePanorama&quot;, &quot;CherryGrovePanorama&quot;, &quot;Halloween2021Panorama&quot;, &quot;Halloween2022Panorama&quot;, &quot;TrialChambersPanorama&quot;, &quot;PaleGardenPanorama&quot;, &quot;TU69TutorialWorldLegacyConsolePanorama&quot;, &quot;Stridey'sResourcePackDevWorldPanorama&quot;, &quot;Xisuma'sHermitcraftBaseSeason1&quot;, &quot;Xisuma'sHermitcraftBaseSeason2&quot;, &quot;Xisuma'sHermitcraftBaseSeason3&quot;, &quot;Xisuma'sHermitcraftBaseSeason4&quot;, &quot;Xisuma'sHermitcraftBaseSeason5&quot;, &quot;Xisuma'sHermitcraftBaseSeason6&quot;, &quot;Xisuma'sHermitcraftBaseSeason7&quot;, &quot;Xisuma'sHermitcraftBaseSeason8&quot;, &quot;Xisuma'sHermitcraftBaseSeason9&quot;]" data-name="AmethystGeodePanorama" onclick="toggleSelection(this);" oreui-active-color="green" oreui-color="dark" oreui-type="button">
+      <div class="tweak" data-category="Menu Panoramas" data-conflicts="[&quot;ClassicPanorama&quot;, &quot;OceanPanorama&quot;, &quot;VillagePanorama&quot;, &quot;BeesPanorama&quot;, &quot;NetherPanorama&quot;, &quot;SunsetValleyPanorama&quot;, &quot;MangroveSwampPanorama&quot;, &quot;TheEndPanorama&quot;, &quot;pack.pngPanorama&quot;, &quot;NostalgiaPanorama&quot;, &quot;OceansideExtremeHillsPanorama&quot;, &quot;LakesideSunsetPanorama&quot;, &quot;UndergroundLavaPoolPanorama&quot;, &quot;AcaciaVillagePanorama&quot;, &quot;CherryGrovePanorama&quot;, &quot;Halloween2021Panorama&quot;, &quot;Halloween2022Panorama&quot;, &quot;SpringToLifePanorama&quot;, &quot;TrialChambersPanorama&quot;, &quot;PaleGardenPanorama&quot;, &quot;TU69TutorialWorldLegacyConsolePanorama&quot;, &quot;Stridey'sResourcePackDevWorldPanorama&quot;, &quot;Xisuma'sHermitcraftBaseSeason1&quot;, &quot;Xisuma'sHermitcraftBaseSeason2&quot;, &quot;Xisuma'sHermitcraftBaseSeason3&quot;, &quot;Xisuma'sHermitcraftBaseSeason4&quot;, &quot;Xisuma'sHermitcraftBaseSeason5&quot;, &quot;Xisuma'sHermitcraftBaseSeason6&quot;, &quot;Xisuma'sHermitcraftBaseSeason7&quot;, &quot;Xisuma'sHermitcraftBaseSeason8&quot;, &quot;Xisuma'sHermitcraftBaseSeason9&quot;]" data-name="AmethystGeodePanorama" onclick="toggleSelection(this);" oreui-active-color="green" oreui-color="dark" oreui-type="button">
        <div class="tweak-info">
         <input name="tweak" type="checkbox"/>
         <img alt="Amethyst Geode" src="../packs/menu_panoramas/AmethystGeodePanorama/pack_icon.png" style="width:82px; height:82px;"/>
@@ -5406,7 +5419,7 @@
         </div>
        </div>
       </div>
-      <div class="tweak" data-category="Menu Panoramas" data-conflicts="[&quot;ClassicPanorama&quot;, &quot;OceanPanorama&quot;, &quot;VillagePanorama&quot;, &quot;BeesPanorama&quot;, &quot;NetherPanorama&quot;, &quot;AmethystGeodePanorama&quot;, &quot;MangroveSwampPanorama&quot;, &quot;TheEndPanorama&quot;, &quot;pack.pngPanorama&quot;, &quot;NostalgiaPanorama&quot;, &quot;OceansideExtremeHillsPanorama&quot;, &quot;LakesideSunsetPanorama&quot;, &quot;UndergroundLavaPoolPanorama&quot;, &quot;AcaciaVillagePanorama&quot;, &quot;CherryGrovePanorama&quot;, &quot;Halloween2021Panorama&quot;, &quot;Halloween2022Panorama&quot;, &quot;TrialChambersPanorama&quot;, &quot;PaleGardenPanorama&quot;, &quot;TU69TutorialWorldLegacyConsolePanorama&quot;, &quot;Stridey'sResourcePackDevWorldPanorama&quot;, &quot;Xisuma'sHermitcraftBaseSeason1&quot;, &quot;Xisuma'sHermitcraftBaseSeason2&quot;, &quot;Xisuma'sHermitcraftBaseSeason3&quot;, &quot;Xisuma'sHermitcraftBaseSeason4&quot;, &quot;Xisuma'sHermitcraftBaseSeason5&quot;, &quot;Xisuma'sHermitcraftBaseSeason6&quot;, &quot;Xisuma'sHermitcraftBaseSeason7&quot;, &quot;Xisuma'sHermitcraftBaseSeason8&quot;, &quot;Xisuma'sHermitcraftBaseSeason9&quot;]" data-name="SunsetValleyPanorama" onclick="toggleSelection(this);" oreui-active-color="green" oreui-color="dark" oreui-type="button">
+      <div class="tweak" data-category="Menu Panoramas" data-conflicts="[&quot;ClassicPanorama&quot;, &quot;OceanPanorama&quot;, &quot;VillagePanorama&quot;, &quot;BeesPanorama&quot;, &quot;NetherPanorama&quot;, &quot;AmethystGeodePanorama&quot;, &quot;MangroveSwampPanorama&quot;, &quot;TheEndPanorama&quot;, &quot;pack.pngPanorama&quot;, &quot;NostalgiaPanorama&quot;, &quot;OceansideExtremeHillsPanorama&quot;, &quot;LakesideSunsetPanorama&quot;, &quot;UndergroundLavaPoolPanorama&quot;, &quot;AcaciaVillagePanorama&quot;, &quot;CherryGrovePanorama&quot;, &quot;Halloween2021Panorama&quot;, &quot;Halloween2022Panorama&quot;, &quot;SpringToLifePanorama&quot;, &quot;TrialChambersPanorama&quot;, &quot;PaleGardenPanorama&quot;, &quot;TU69TutorialWorldLegacyConsolePanorama&quot;, &quot;Stridey'sResourcePackDevWorldPanorama&quot;, &quot;Xisuma'sHermitcraftBaseSeason1&quot;, &quot;Xisuma'sHermitcraftBaseSeason2&quot;, &quot;Xisuma'sHermitcraftBaseSeason3&quot;, &quot;Xisuma'sHermitcraftBaseSeason4&quot;, &quot;Xisuma'sHermitcraftBaseSeason5&quot;, &quot;Xisuma'sHermitcraftBaseSeason6&quot;, &quot;Xisuma'sHermitcraftBaseSeason7&quot;, &quot;Xisuma'sHermitcraftBaseSeason8&quot;, &quot;Xisuma'sHermitcraftBaseSeason9&quot;]" data-name="SunsetValleyPanorama" onclick="toggleSelection(this);" oreui-active-color="green" oreui-color="dark" oreui-type="button">
        <div class="tweak-info">
         <input name="tweak" type="checkbox"/>
         <img alt="Sunset Valley" src="../packs/menu_panoramas/SunsetValleyPanorama/pack_icon.png" style="width:82px; height:82px;"/>
@@ -5418,7 +5431,7 @@
         </div>
        </div>
       </div>
-      <div class="tweak" data-category="Menu Panoramas" data-conflicts="[&quot;ClassicPanorama&quot;, &quot;OceanPanorama&quot;, &quot;VillagePanorama&quot;, &quot;BeesPanorama&quot;, &quot;NetherPanorama&quot;, &quot;AmethystGeodePanorama&quot;, &quot;SunsetValleyPanorama&quot;, &quot;TheEndPanorama&quot;, &quot;pack.pngPanorama&quot;, &quot;NostalgiaPanorama&quot;, &quot;OceansideExtremeHillsPanorama&quot;, &quot;LakesideSunsetPanorama&quot;, &quot;UndergroundLavaPoolPanorama&quot;, &quot;AcaciaVillagePanorama&quot;, &quot;CherryGrovePanorama&quot;, &quot;Halloween2021Panorama&quot;, &quot;Halloween2022Panorama&quot;, &quot;TrialChambersPanorama&quot;, &quot;PaleGardenPanorama&quot;, &quot;TU69TutorialWorldLegacyConsolePanorama&quot;, &quot;Stridey'sResourcePackDevWorldPanorama&quot;, &quot;Xisuma'sHermitcraftBaseSeason1&quot;, &quot;Xisuma'sHermitcraftBaseSeason2&quot;, &quot;Xisuma'sHermitcraftBaseSeason3&quot;, &quot;Xisuma'sHermitcraftBaseSeason4&quot;, &quot;Xisuma'sHermitcraftBaseSeason5&quot;, &quot;Xisuma'sHermitcraftBaseSeason6&quot;, &quot;Xisuma'sHermitcraftBaseSeason7&quot;, &quot;Xisuma'sHermitcraftBaseSeason8&quot;, &quot;Xisuma'sHermitcraftBaseSeason9&quot;]" data-name="MangroveSwampPanorama" onclick="toggleSelection(this);" oreui-active-color="green" oreui-color="dark" oreui-type="button">
+      <div class="tweak" data-category="Menu Panoramas" data-conflicts="[&quot;ClassicPanorama&quot;, &quot;OceanPanorama&quot;, &quot;VillagePanorama&quot;, &quot;BeesPanorama&quot;, &quot;NetherPanorama&quot;, &quot;AmethystGeodePanorama&quot;, &quot;SunsetValleyPanorama&quot;, &quot;TheEndPanorama&quot;, &quot;pack.pngPanorama&quot;, &quot;NostalgiaPanorama&quot;, &quot;OceansideExtremeHillsPanorama&quot;, &quot;LakesideSunsetPanorama&quot;, &quot;UndergroundLavaPoolPanorama&quot;, &quot;AcaciaVillagePanorama&quot;, &quot;CherryGrovePanorama&quot;, &quot;Halloween2021Panorama&quot;, &quot;Halloween2022Panorama&quot;, &quot;SpringToLifePanorama&quot;, &quot;TrialChambersPanorama&quot;, &quot;PaleGardenPanorama&quot;, &quot;TU69TutorialWorldLegacyConsolePanorama&quot;, &quot;Stridey'sResourcePackDevWorldPanorama&quot;, &quot;Xisuma'sHermitcraftBaseSeason1&quot;, &quot;Xisuma'sHermitcraftBaseSeason2&quot;, &quot;Xisuma'sHermitcraftBaseSeason3&quot;, &quot;Xisuma'sHermitcraftBaseSeason4&quot;, &quot;Xisuma'sHermitcraftBaseSeason5&quot;, &quot;Xisuma'sHermitcraftBaseSeason6&quot;, &quot;Xisuma'sHermitcraftBaseSeason7&quot;, &quot;Xisuma'sHermitcraftBaseSeason8&quot;, &quot;Xisuma'sHermitcraftBaseSeason9&quot;]" data-name="MangroveSwampPanorama" onclick="toggleSelection(this);" oreui-active-color="green" oreui-color="dark" oreui-type="button">
        <div class="tweak-info">
         <input name="tweak" type="checkbox"/>
         <img alt="Mangrove Swamp" src="../packs/menu_panoramas/MangroveSwampPanorama/pack_icon.png" style="width:82px; height:82px;"/>
@@ -5430,7 +5443,7 @@
         </div>
        </div>
       </div>
-      <div class="tweak" data-category="Menu Panoramas" data-conflicts="[&quot;ClassicPanorama&quot;, &quot;OceanPanorama&quot;, &quot;VillagePanorama&quot;, &quot;BeesPanorama&quot;, &quot;NetherPanorama&quot;, &quot;AmethystGeodePanorama&quot;, &quot;SunsetValleyPanorama&quot;, &quot;MangroveSwampPanorama&quot;, &quot;pack.pngPanorama&quot;, &quot;NostalgiaPanorama&quot;, &quot;OceansideExtremeHillsPanorama&quot;, &quot;LakesideSunsetPanorama&quot;, &quot;UndergroundLavaPoolPanorama&quot;, &quot;AcaciaVillagePanorama&quot;, &quot;CherryGrovePanorama&quot;, &quot;Halloween2021Panorama&quot;, &quot;Halloween2022Panorama&quot;, &quot;TrialChambersPanorama&quot;, &quot;PaleGardenPanorama&quot;, &quot;TU69TutorialWorldLegacyConsolePanorama&quot;, &quot;Stridey'sResourcePackDevWorldPanorama&quot;, &quot;Xisuma'sHermitcraftBaseSeason1&quot;, &quot;Xisuma'sHermitcraftBaseSeason2&quot;, &quot;Xisuma'sHermitcraftBaseSeason3&quot;, &quot;Xisuma'sHermitcraftBaseSeason4&quot;, &quot;Xisuma'sHermitcraftBaseSeason5&quot;, &quot;Xisuma'sHermitcraftBaseSeason6&quot;, &quot;Xisuma'sHermitcraftBaseSeason7&quot;, &quot;Xisuma'sHermitcraftBaseSeason8&quot;, &quot;Xisuma'sHermitcraftBaseSeason9&quot;]" data-name="TheEndPanorama" onclick="toggleSelection(this);" oreui-active-color="green" oreui-color="dark" oreui-type="button">
+      <div class="tweak" data-category="Menu Panoramas" data-conflicts="[&quot;ClassicPanorama&quot;, &quot;OceanPanorama&quot;, &quot;VillagePanorama&quot;, &quot;BeesPanorama&quot;, &quot;NetherPanorama&quot;, &quot;AmethystGeodePanorama&quot;, &quot;SunsetValleyPanorama&quot;, &quot;MangroveSwampPanorama&quot;, &quot;pack.pngPanorama&quot;, &quot;NostalgiaPanorama&quot;, &quot;OceansideExtremeHillsPanorama&quot;, &quot;LakesideSunsetPanorama&quot;, &quot;UndergroundLavaPoolPanorama&quot;, &quot;AcaciaVillagePanorama&quot;, &quot;CherryGrovePanorama&quot;, &quot;Halloween2021Panorama&quot;, &quot;Halloween2022Panorama&quot;, &quot;SpringToLifePanorama&quot;, &quot;TrialChambersPanorama&quot;, &quot;PaleGardenPanorama&quot;, &quot;TU69TutorialWorldLegacyConsolePanorama&quot;, &quot;Stridey'sResourcePackDevWorldPanorama&quot;, &quot;Xisuma'sHermitcraftBaseSeason1&quot;, &quot;Xisuma'sHermitcraftBaseSeason2&quot;, &quot;Xisuma'sHermitcraftBaseSeason3&quot;, &quot;Xisuma'sHermitcraftBaseSeason4&quot;, &quot;Xisuma'sHermitcraftBaseSeason5&quot;, &quot;Xisuma'sHermitcraftBaseSeason6&quot;, &quot;Xisuma'sHermitcraftBaseSeason7&quot;, &quot;Xisuma'sHermitcraftBaseSeason8&quot;, &quot;Xisuma'sHermitcraftBaseSeason9&quot;]" data-name="TheEndPanorama" onclick="toggleSelection(this);" oreui-active-color="green" oreui-color="dark" oreui-type="button">
        <div class="tweak-info">
         <input name="tweak" type="checkbox"/>
         <img alt="The End" src="../packs/menu_panoramas/TheEndPanorama/pack_icon.png" style="width:82px; height:82px;"/>
@@ -5442,7 +5455,7 @@
         </div>
        </div>
       </div>
-      <div class="tweak" data-category="Menu Panoramas" data-conflicts="[&quot;ClassicPanorama&quot;, &quot;OceanPanorama&quot;, &quot;VillagePanorama&quot;, &quot;BeesPanorama&quot;, &quot;NetherPanorama&quot;, &quot;AmethystGeodePanorama&quot;, &quot;SunsetValleyPanorama&quot;, &quot;MangroveSwampPanorama&quot;, &quot;TheEndPanorama&quot;, &quot;NostalgiaPanorama&quot;, &quot;OceansideExtremeHillsPanorama&quot;, &quot;LakesideSunsetPanorama&quot;, &quot;UndergroundLavaPoolPanorama&quot;, &quot;AcaciaVillagePanorama&quot;, &quot;CherryGrovePanorama&quot;, &quot;Halloween2021Panorama&quot;, &quot;Halloween2022Panorama&quot;, &quot;TrialChambersPanorama&quot;, &quot;PaleGardenPanorama&quot;, &quot;TU69TutorialWorldLegacyConsolePanorama&quot;, &quot;Stridey'sResourcePackDevWorldPanorama&quot;, &quot;Xisuma'sHermitcraftBaseSeason1&quot;, &quot;Xisuma'sHermitcraftBaseSeason2&quot;, &quot;Xisuma'sHermitcraftBaseSeason3&quot;, &quot;Xisuma'sHermitcraftBaseSeason4&quot;, &quot;Xisuma'sHermitcraftBaseSeason5&quot;, &quot;Xisuma'sHermitcraftBaseSeason6&quot;, &quot;Xisuma'sHermitcraftBaseSeason7&quot;, &quot;Xisuma'sHermitcraftBaseSeason8&quot;, &quot;Xisuma'sHermitcraftBaseSeason9&quot;]" data-name="pack.pngPanorama" onclick="toggleSelection(this);" oreui-active-color="green" oreui-color="dark" oreui-type="button">
+      <div class="tweak" data-category="Menu Panoramas" data-conflicts="[&quot;ClassicPanorama&quot;, &quot;OceanPanorama&quot;, &quot;VillagePanorama&quot;, &quot;BeesPanorama&quot;, &quot;NetherPanorama&quot;, &quot;AmethystGeodePanorama&quot;, &quot;SunsetValleyPanorama&quot;, &quot;MangroveSwampPanorama&quot;, &quot;TheEndPanorama&quot;, &quot;NostalgiaPanorama&quot;, &quot;OceansideExtremeHillsPanorama&quot;, &quot;LakesideSunsetPanorama&quot;, &quot;UndergroundLavaPoolPanorama&quot;, &quot;AcaciaVillagePanorama&quot;, &quot;CherryGrovePanorama&quot;, &quot;Halloween2021Panorama&quot;, &quot;Halloween2022Panorama&quot;, &quot;SpringToLifePanorama&quot;, &quot;TrialChambersPanorama&quot;, &quot;PaleGardenPanorama&quot;, &quot;TU69TutorialWorldLegacyConsolePanorama&quot;, &quot;Stridey'sResourcePackDevWorldPanorama&quot;, &quot;Xisuma'sHermitcraftBaseSeason1&quot;, &quot;Xisuma'sHermitcraftBaseSeason2&quot;, &quot;Xisuma'sHermitcraftBaseSeason3&quot;, &quot;Xisuma'sHermitcraftBaseSeason4&quot;, &quot;Xisuma'sHermitcraftBaseSeason5&quot;, &quot;Xisuma'sHermitcraftBaseSeason6&quot;, &quot;Xisuma'sHermitcraftBaseSeason7&quot;, &quot;Xisuma'sHermitcraftBaseSeason8&quot;, &quot;Xisuma'sHermitcraftBaseSeason9&quot;]" data-name="pack.pngPanorama" onclick="toggleSelection(this);" oreui-active-color="green" oreui-color="dark" oreui-type="button">
        <div class="tweak-info">
         <input name="tweak" type="checkbox"/>
         <img alt="pack.png" src="../packs/menu_panoramas/pack.pngPanorama/pack_icon.png" style="width:82px; height:82px;"/>
@@ -5454,7 +5467,7 @@
         </div>
        </div>
       </div>
-      <div class="tweak" data-category="Menu Panoramas" data-conflicts="[&quot;ClassicPanorama&quot;, &quot;OceanPanorama&quot;, &quot;VillagePanorama&quot;, &quot;BeesPanorama&quot;, &quot;NetherPanorama&quot;, &quot;AmethystGeodePanorama&quot;, &quot;SunsetValleyPanorama&quot;, &quot;MangroveSwampPanorama&quot;, &quot;TheEndPanorama&quot;, &quot;pack.pngPanorama&quot;, &quot;OceansideExtremeHillsPanorama&quot;, &quot;LakesideSunsetPanorama&quot;, &quot;UndergroundLavaPoolPanorama&quot;, &quot;AcaciaVillagePanorama&quot;, &quot;CherryGrovePanorama&quot;, &quot;Halloween2021Panorama&quot;, &quot;Halloween2022Panorama&quot;, &quot;TrialChambersPanorama&quot;, &quot;PaleGardenPanorama&quot;, &quot;TU69TutorialWorldLegacyConsolePanorama&quot;, &quot;Stridey'sResourcePackDevWorldPanorama&quot;, &quot;Xisuma'sHermitcraftBaseSeason1&quot;, &quot;Xisuma'sHermitcraftBaseSeason2&quot;, &quot;Xisuma'sHermitcraftBaseSeason3&quot;, &quot;Xisuma'sHermitcraftBaseSeason4&quot;, &quot;Xisuma'sHermitcraftBaseSeason5&quot;, &quot;Xisuma'sHermitcraftBaseSeason6&quot;, &quot;Xisuma'sHermitcraftBaseSeason7&quot;, &quot;Xisuma'sHermitcraftBaseSeason8&quot;, &quot;Xisuma'sHermitcraftBaseSeason9&quot;]" data-name="NostalgiaPanorama" onclick="toggleSelection(this);" oreui-active-color="green" oreui-color="dark" oreui-type="button">
+      <div class="tweak" data-category="Menu Panoramas" data-conflicts="[&quot;ClassicPanorama&quot;, &quot;OceanPanorama&quot;, &quot;VillagePanorama&quot;, &quot;BeesPanorama&quot;, &quot;NetherPanorama&quot;, &quot;AmethystGeodePanorama&quot;, &quot;SunsetValleyPanorama&quot;, &quot;MangroveSwampPanorama&quot;, &quot;TheEndPanorama&quot;, &quot;pack.pngPanorama&quot;, &quot;OceansideExtremeHillsPanorama&quot;, &quot;LakesideSunsetPanorama&quot;, &quot;UndergroundLavaPoolPanorama&quot;, &quot;AcaciaVillagePanorama&quot;, &quot;CherryGrovePanorama&quot;, &quot;Halloween2021Panorama&quot;, &quot;Halloween2022Panorama&quot;, &quot;SpringToLifePanorama&quot;, &quot;TrialChambersPanorama&quot;, &quot;PaleGardenPanorama&quot;, &quot;TU69TutorialWorldLegacyConsolePanorama&quot;, &quot;Stridey'sResourcePackDevWorldPanorama&quot;, &quot;Xisuma'sHermitcraftBaseSeason1&quot;, &quot;Xisuma'sHermitcraftBaseSeason2&quot;, &quot;Xisuma'sHermitcraftBaseSeason3&quot;, &quot;Xisuma'sHermitcraftBaseSeason4&quot;, &quot;Xisuma'sHermitcraftBaseSeason5&quot;, &quot;Xisuma'sHermitcraftBaseSeason6&quot;, &quot;Xisuma'sHermitcraftBaseSeason7&quot;, &quot;Xisuma'sHermitcraftBaseSeason8&quot;, &quot;Xisuma'sHermitcraftBaseSeason9&quot;]" data-name="NostalgiaPanorama" onclick="toggleSelection(this);" oreui-active-color="green" oreui-color="dark" oreui-type="button">
        <div class="tweak-info">
         <input name="tweak" type="checkbox"/>
         <img alt="Nostalgia" src="../packs/menu_panoramas/NostalgiaPanorama/pack_icon.png" style="width:82px; height:82px;"/>
@@ -5466,7 +5479,7 @@
         </div>
        </div>
       </div>
-      <div class="tweak" data-category="Menu Panoramas" data-conflicts="[&quot;ClassicPanorama&quot;, &quot;OceanPanorama&quot;, &quot;VillagePanorama&quot;, &quot;BeesPanorama&quot;, &quot;NetherPanorama&quot;, &quot;AmethystGeodePanorama&quot;, &quot;SunsetValleyPanorama&quot;, &quot;MangroveSwampPanorama&quot;, &quot;TheEndPanorama&quot;, &quot;pack.pngPanorama&quot;, &quot;NostalgiaPanorama&quot;, &quot;LakesideSunsetPanorama&quot;, &quot;UndergroundLavaPoolPanorama&quot;, &quot;AcaciaVillagePanorama&quot;, &quot;CherryGrovePanorama&quot;, &quot;Halloween2021Panorama&quot;, &quot;Halloween2022Panorama&quot;, &quot;TrialChambersPanorama&quot;, &quot;PaleGardenPanorama&quot;, &quot;TU69TutorialWorldLegacyConsolePanorama&quot;, &quot;Stridey'sResourcePackDevWorldPanorama&quot;, &quot;Xisuma'sHermitcraftBaseSeason1&quot;, &quot;Xisuma'sHermitcraftBaseSeason2&quot;, &quot;Xisuma'sHermitcraftBaseSeason3&quot;, &quot;Xisuma'sHermitcraftBaseSeason4&quot;, &quot;Xisuma'sHermitcraftBaseSeason5&quot;, &quot;Xisuma'sHermitcraftBaseSeason6&quot;, &quot;Xisuma'sHermitcraftBaseSeason7&quot;, &quot;Xisuma'sHermitcraftBaseSeason8&quot;, &quot;Xisuma'sHermitcraftBaseSeason9&quot;]" data-name="OceansideExtremeHillsPanorama" onclick="toggleSelection(this);" oreui-active-color="green" oreui-color="dark" oreui-type="button">
+      <div class="tweak" data-category="Menu Panoramas" data-conflicts="[&quot;ClassicPanorama&quot;, &quot;OceanPanorama&quot;, &quot;VillagePanorama&quot;, &quot;BeesPanorama&quot;, &quot;NetherPanorama&quot;, &quot;AmethystGeodePanorama&quot;, &quot;SunsetValleyPanorama&quot;, &quot;MangroveSwampPanorama&quot;, &quot;TheEndPanorama&quot;, &quot;pack.pngPanorama&quot;, &quot;NostalgiaPanorama&quot;, &quot;LakesideSunsetPanorama&quot;, &quot;UndergroundLavaPoolPanorama&quot;, &quot;AcaciaVillagePanorama&quot;, &quot;CherryGrovePanorama&quot;, &quot;Halloween2021Panorama&quot;, &quot;Halloween2022Panorama&quot;, &quot;SpringToLifePanorama&quot;, &quot;TrialChambersPanorama&quot;, &quot;PaleGardenPanorama&quot;, &quot;TU69TutorialWorldLegacyConsolePanorama&quot;, &quot;Stridey'sResourcePackDevWorldPanorama&quot;, &quot;Xisuma'sHermitcraftBaseSeason1&quot;, &quot;Xisuma'sHermitcraftBaseSeason2&quot;, &quot;Xisuma'sHermitcraftBaseSeason3&quot;, &quot;Xisuma'sHermitcraftBaseSeason4&quot;, &quot;Xisuma'sHermitcraftBaseSeason5&quot;, &quot;Xisuma'sHermitcraftBaseSeason6&quot;, &quot;Xisuma'sHermitcraftBaseSeason7&quot;, &quot;Xisuma'sHermitcraftBaseSeason8&quot;, &quot;Xisuma'sHermitcraftBaseSeason9&quot;]" data-name="OceansideExtremeHillsPanorama" onclick="toggleSelection(this);" oreui-active-color="green" oreui-color="dark" oreui-type="button">
        <div class="tweak-info">
         <input name="tweak" type="checkbox"/>
         <img alt="Oceanside Extreme Hills" src="../packs/menu_panoramas/OceansideExtremeHillsPanorama/pack_icon.png" style="width:82px; height:82px;"/>
@@ -5478,7 +5491,7 @@
         </div>
        </div>
       </div>
-      <div class="tweak" data-category="Menu Panoramas" data-conflicts="[&quot;ClassicPanorama&quot;, &quot;OceanPanorama&quot;, &quot;VillagePanorama&quot;, &quot;BeesPanorama&quot;, &quot;NetherPanorama&quot;, &quot;AmethystGeodePanorama&quot;, &quot;SunsetValleyPanorama&quot;, &quot;MangroveSwampPanorama&quot;, &quot;TheEndPanorama&quot;, &quot;pack.pngPanorama&quot;, &quot;NostalgiaPanorama&quot;, &quot;OceansideExtremeHillsPanorama&quot;, &quot;UndergroundLavaPoolPanorama&quot;, &quot;AcaciaVillagePanorama&quot;, &quot;CherryGrovePanorama&quot;, &quot;Halloween2021Panorama&quot;, &quot;Halloween2022Panorama&quot;, &quot;TrialChambersPanorama&quot;, &quot;PaleGardenPanorama&quot;, &quot;TU69TutorialWorldLegacyConsolePanorama&quot;, &quot;Stridey'sResourcePackDevWorldPanorama&quot;, &quot;Xisuma'sHermitcraftBaseSeason1&quot;, &quot;Xisuma'sHermitcraftBaseSeason2&quot;, &quot;Xisuma'sHermitcraftBaseSeason3&quot;, &quot;Xisuma'sHermitcraftBaseSeason4&quot;, &quot;Xisuma'sHermitcraftBaseSeason5&quot;, &quot;Xisuma'sHermitcraftBaseSeason6&quot;, &quot;Xisuma'sHermitcraftBaseSeason7&quot;, &quot;Xisuma'sHermitcraftBaseSeason8&quot;, &quot;Xisuma'sHermitcraftBaseSeason9&quot;]" data-name="LakesideSunsetPanorama" onclick="toggleSelection(this);" oreui-active-color="green" oreui-color="dark" oreui-type="button">
+      <div class="tweak" data-category="Menu Panoramas" data-conflicts="[&quot;ClassicPanorama&quot;, &quot;OceanPanorama&quot;, &quot;VillagePanorama&quot;, &quot;BeesPanorama&quot;, &quot;NetherPanorama&quot;, &quot;AmethystGeodePanorama&quot;, &quot;SunsetValleyPanorama&quot;, &quot;MangroveSwampPanorama&quot;, &quot;TheEndPanorama&quot;, &quot;pack.pngPanorama&quot;, &quot;NostalgiaPanorama&quot;, &quot;OceansideExtremeHillsPanorama&quot;, &quot;UndergroundLavaPoolPanorama&quot;, &quot;AcaciaVillagePanorama&quot;, &quot;CherryGrovePanorama&quot;, &quot;Halloween2021Panorama&quot;, &quot;Halloween2022Panorama&quot;, &quot;SpringToLifePanorama&quot;, &quot;TrialChambersPanorama&quot;, &quot;PaleGardenPanorama&quot;, &quot;TU69TutorialWorldLegacyConsolePanorama&quot;, &quot;Stridey'sResourcePackDevWorldPanorama&quot;, &quot;Xisuma'sHermitcraftBaseSeason1&quot;, &quot;Xisuma'sHermitcraftBaseSeason2&quot;, &quot;Xisuma'sHermitcraftBaseSeason3&quot;, &quot;Xisuma'sHermitcraftBaseSeason4&quot;, &quot;Xisuma'sHermitcraftBaseSeason5&quot;, &quot;Xisuma'sHermitcraftBaseSeason6&quot;, &quot;Xisuma'sHermitcraftBaseSeason7&quot;, &quot;Xisuma'sHermitcraftBaseSeason8&quot;, &quot;Xisuma'sHermitcraftBaseSeason9&quot;]" data-name="LakesideSunsetPanorama" onclick="toggleSelection(this);" oreui-active-color="green" oreui-color="dark" oreui-type="button">
        <div class="tweak-info">
         <input name="tweak" type="checkbox"/>
         <img alt="Lakeside Sunset" src="../packs/menu_panoramas/LakesideSunsetPanorama/pack_icon.png" style="width:82px; height:82px;"/>
@@ -5490,7 +5503,7 @@
         </div>
        </div>
       </div>
-      <div class="tweak" data-category="Menu Panoramas" data-conflicts="[&quot;ClassicPanorama&quot;, &quot;OceanPanorama&quot;, &quot;VillagePanorama&quot;, &quot;BeesPanorama&quot;, &quot;NetherPanorama&quot;, &quot;AmethystGeodePanorama&quot;, &quot;SunsetValleyPanorama&quot;, &quot;MangroveSwampPanorama&quot;, &quot;TheEndPanorama&quot;, &quot;pack.pngPanorama&quot;, &quot;NostalgiaPanorama&quot;, &quot;OceansideExtremeHillsPanorama&quot;, &quot;LakesideSunsetPanorama&quot;, &quot;AcaciaVillagePanorama&quot;, &quot;CherryGrovePanorama&quot;, &quot;Halloween2021Panorama&quot;, &quot;Halloween2022Panorama&quot;, &quot;TrialChambersPanorama&quot;, &quot;PaleGardenPanorama&quot;, &quot;TU69TutorialWorldLegacyConsolePanorama&quot;, &quot;Stridey'sResourcePackDevWorldPanorama&quot;, &quot;Xisuma'sHermitcraftBaseSeason1&quot;, &quot;Xisuma'sHermitcraftBaseSeason2&quot;, &quot;Xisuma'sHermitcraftBaseSeason3&quot;, &quot;Xisuma'sHermitcraftBaseSeason4&quot;, &quot;Xisuma'sHermitcraftBaseSeason5&quot;, &quot;Xisuma'sHermitcraftBaseSeason6&quot;, &quot;Xisuma'sHermitcraftBaseSeason7&quot;, &quot;Xisuma'sHermitcraftBaseSeason8&quot;, &quot;Xisuma'sHermitcraftBaseSeason9&quot;]" data-name="UndergroundLavaPoolPanorama" onclick="toggleSelection(this);" oreui-active-color="green" oreui-color="dark" oreui-type="button">
+      <div class="tweak" data-category="Menu Panoramas" data-conflicts="[&quot;ClassicPanorama&quot;, &quot;OceanPanorama&quot;, &quot;VillagePanorama&quot;, &quot;BeesPanorama&quot;, &quot;NetherPanorama&quot;, &quot;AmethystGeodePanorama&quot;, &quot;SunsetValleyPanorama&quot;, &quot;MangroveSwampPanorama&quot;, &quot;TheEndPanorama&quot;, &quot;pack.pngPanorama&quot;, &quot;NostalgiaPanorama&quot;, &quot;OceansideExtremeHillsPanorama&quot;, &quot;LakesideSunsetPanorama&quot;, &quot;AcaciaVillagePanorama&quot;, &quot;CherryGrovePanorama&quot;, &quot;Halloween2021Panorama&quot;, &quot;Halloween2022Panorama&quot;, &quot;SpringToLifePanorama&quot;, &quot;TrialChambersPanorama&quot;, &quot;PaleGardenPanorama&quot;, &quot;TU69TutorialWorldLegacyConsolePanorama&quot;, &quot;Stridey'sResourcePackDevWorldPanorama&quot;, &quot;Xisuma'sHermitcraftBaseSeason1&quot;, &quot;Xisuma'sHermitcraftBaseSeason2&quot;, &quot;Xisuma'sHermitcraftBaseSeason3&quot;, &quot;Xisuma'sHermitcraftBaseSeason4&quot;, &quot;Xisuma'sHermitcraftBaseSeason5&quot;, &quot;Xisuma'sHermitcraftBaseSeason6&quot;, &quot;Xisuma'sHermitcraftBaseSeason7&quot;, &quot;Xisuma'sHermitcraftBaseSeason8&quot;, &quot;Xisuma'sHermitcraftBaseSeason9&quot;]" data-name="UndergroundLavaPoolPanorama" onclick="toggleSelection(this);" oreui-active-color="green" oreui-color="dark" oreui-type="button">
        <div class="tweak-info">
         <input name="tweak" type="checkbox"/>
         <img alt="Underground Lava Pool" src="../packs/menu_panoramas/UndergroundLavaPoolPanorama/pack_icon.png" style="width:82px; height:82px;"/>
@@ -5502,7 +5515,7 @@
         </div>
        </div>
       </div>
-      <div class="tweak" data-category="Menu Panoramas" data-conflicts="[&quot;ClassicPanorama&quot;, &quot;OceanPanorama&quot;, &quot;VillagePanorama&quot;, &quot;BeesPanorama&quot;, &quot;NetherPanorama&quot;, &quot;AmethystGeodePanorama&quot;, &quot;SunsetValleyPanorama&quot;, &quot;MangroveSwampPanorama&quot;, &quot;TheEndPanorama&quot;, &quot;pack.pngPanorama&quot;, &quot;NostalgiaPanorama&quot;, &quot;OceansideExtremeHillsPanorama&quot;, &quot;LakesideSunsetPanorama&quot;, &quot;UndergroundLavaPoolPanorama&quot;, &quot;CherryGrovePanorama&quot;, &quot;Halloween2021Panorama&quot;, &quot;Halloween2022Panorama&quot;, &quot;TrialChambersPanorama&quot;, &quot;PaleGardenPanorama&quot;, &quot;TU69TutorialWorldLegacyConsolePanorama&quot;, &quot;Stridey'sResourcePackDevWorldPanorama&quot;, &quot;Xisuma'sHermitcraftBaseSeason1&quot;, &quot;Xisuma'sHermitcraftBaseSeason2&quot;, &quot;Xisuma'sHermitcraftBaseSeason3&quot;, &quot;Xisuma'sHermitcraftBaseSeason4&quot;, &quot;Xisuma'sHermitcraftBaseSeason5&quot;, &quot;Xisuma'sHermitcraftBaseSeason6&quot;, &quot;Xisuma'sHermitcraftBaseSeason7&quot;, &quot;Xisuma'sHermitcraftBaseSeason8&quot;, &quot;Xisuma'sHermitcraftBaseSeason9&quot;]" data-name="AcaciaVillagePanorama" onclick="toggleSelection(this);" oreui-active-color="green" oreui-color="dark" oreui-type="button">
+      <div class="tweak" data-category="Menu Panoramas" data-conflicts="[&quot;ClassicPanorama&quot;, &quot;OceanPanorama&quot;, &quot;VillagePanorama&quot;, &quot;BeesPanorama&quot;, &quot;NetherPanorama&quot;, &quot;AmethystGeodePanorama&quot;, &quot;SunsetValleyPanorama&quot;, &quot;MangroveSwampPanorama&quot;, &quot;TheEndPanorama&quot;, &quot;pack.pngPanorama&quot;, &quot;NostalgiaPanorama&quot;, &quot;OceansideExtremeHillsPanorama&quot;, &quot;LakesideSunsetPanorama&quot;, &quot;UndergroundLavaPoolPanorama&quot;, &quot;CherryGrovePanorama&quot;, &quot;Halloween2021Panorama&quot;, &quot;Halloween2022Panorama&quot;, &quot;SpringToLifePanorama&quot;, &quot;TrialChambersPanorama&quot;, &quot;PaleGardenPanorama&quot;, &quot;TU69TutorialWorldLegacyConsolePanorama&quot;, &quot;Stridey'sResourcePackDevWorldPanorama&quot;, &quot;Xisuma'sHermitcraftBaseSeason1&quot;, &quot;Xisuma'sHermitcraftBaseSeason2&quot;, &quot;Xisuma'sHermitcraftBaseSeason3&quot;, &quot;Xisuma'sHermitcraftBaseSeason4&quot;, &quot;Xisuma'sHermitcraftBaseSeason5&quot;, &quot;Xisuma'sHermitcraftBaseSeason6&quot;, &quot;Xisuma'sHermitcraftBaseSeason7&quot;, &quot;Xisuma'sHermitcraftBaseSeason8&quot;, &quot;Xisuma'sHermitcraftBaseSeason9&quot;]" data-name="AcaciaVillagePanorama" onclick="toggleSelection(this);" oreui-active-color="green" oreui-color="dark" oreui-type="button">
        <div class="tweak-info">
         <input name="tweak" type="checkbox"/>
         <img alt="Acacia Village" src="../packs/menu_panoramas/AcaciaVillagePanorama/pack_icon.png" style="width:82px; height:82px;"/>
@@ -5514,7 +5527,7 @@
         </div>
        </div>
       </div>
-      <div class="tweak" data-category="Menu Panoramas" data-conflicts="[&quot;ClassicPanorama&quot;, &quot;OceanPanorama&quot;, &quot;VillagePanorama&quot;, &quot;BeesPanorama&quot;, &quot;NetherPanorama&quot;, &quot;AmethystGeodePanorama&quot;, &quot;SunsetValleyPanorama&quot;, &quot;MangroveSwampPanorama&quot;, &quot;TheEndPanorama&quot;, &quot;pack.pngPanorama&quot;, &quot;NostalgiaPanorama&quot;, &quot;OceansideExtremeHillsPanorama&quot;, &quot;LakesideSunsetPanorama&quot;, &quot;UndergroundLavaPoolPanorama&quot;, &quot;AcaciaVillagePanorama&quot;, &quot;Halloween2021Panorama&quot;, &quot;Halloween2022Panorama&quot;, &quot;TrialChambersPanorama&quot;, &quot;PaleGardenPanorama&quot;, &quot;TU69TutorialWorldLegacyConsolePanorama&quot;, &quot;Stridey'sResourcePackDevWorldPanorama&quot;, &quot;Xisuma'sHermitcraftBaseSeason1&quot;, &quot;Xisuma'sHermitcraftBaseSeason2&quot;, &quot;Xisuma'sHermitcraftBaseSeason3&quot;, &quot;Xisuma'sHermitcraftBaseSeason4&quot;, &quot;Xisuma'sHermitcraftBaseSeason5&quot;, &quot;Xisuma'sHermitcraftBaseSeason6&quot;, &quot;Xisuma'sHermitcraftBaseSeason7&quot;, &quot;Xisuma'sHermitcraftBaseSeason8&quot;, &quot;Xisuma'sHermitcraftBaseSeason9&quot;]" data-name="CherryGrovePanorama" onclick="toggleSelection(this);" oreui-active-color="green" oreui-color="dark" oreui-type="button">
+      <div class="tweak" data-category="Menu Panoramas" data-conflicts="[&quot;ClassicPanorama&quot;, &quot;OceanPanorama&quot;, &quot;VillagePanorama&quot;, &quot;BeesPanorama&quot;, &quot;NetherPanorama&quot;, &quot;AmethystGeodePanorama&quot;, &quot;SunsetValleyPanorama&quot;, &quot;MangroveSwampPanorama&quot;, &quot;TheEndPanorama&quot;, &quot;pack.pngPanorama&quot;, &quot;NostalgiaPanorama&quot;, &quot;OceansideExtremeHillsPanorama&quot;, &quot;LakesideSunsetPanorama&quot;, &quot;UndergroundLavaPoolPanorama&quot;, &quot;AcaciaVillagePanorama&quot;, &quot;Halloween2021Panorama&quot;, &quot;Halloween2022Panorama&quot;, &quot;SpringToLifePanorama&quot;, &quot;TrialChambersPanorama&quot;, &quot;PaleGardenPanorama&quot;, &quot;TU69TutorialWorldLegacyConsolePanorama&quot;, &quot;Stridey'sResourcePackDevWorldPanorama&quot;, &quot;Xisuma'sHermitcraftBaseSeason1&quot;, &quot;Xisuma'sHermitcraftBaseSeason2&quot;, &quot;Xisuma'sHermitcraftBaseSeason3&quot;, &quot;Xisuma'sHermitcraftBaseSeason4&quot;, &quot;Xisuma'sHermitcraftBaseSeason5&quot;, &quot;Xisuma'sHermitcraftBaseSeason6&quot;, &quot;Xisuma'sHermitcraftBaseSeason7&quot;, &quot;Xisuma'sHermitcraftBaseSeason8&quot;, &quot;Xisuma'sHermitcraftBaseSeason9&quot;]" data-name="CherryGrovePanorama" onclick="toggleSelection(this);" oreui-active-color="green" oreui-color="dark" oreui-type="button">
        <div class="tweak-info">
         <input name="tweak" type="checkbox"/>
         <img alt="Cherry Grove" src="../packs/menu_panoramas/CherryGrovePanorama/pack_icon.png" style="width:82px; height:82px;"/>
@@ -5526,7 +5539,7 @@
         </div>
        </div>
       </div>
-      <div class="tweak" data-category="Menu Panoramas" data-conflicts="[&quot;ClassicPanorama&quot;, &quot;OceanPanorama&quot;, &quot;VillagePanorama&quot;, &quot;BeesPanorama&quot;, &quot;NetherPanorama&quot;, &quot;AmethystGeodePanorama&quot;, &quot;SunsetValleyPanorama&quot;, &quot;MangroveSwampPanorama&quot;, &quot;TheEndPanorama&quot;, &quot;pack.pngPanorama&quot;, &quot;NostalgiaPanorama&quot;, &quot;OceansideExtremeHillsPanorama&quot;, &quot;LakesideSunsetPanorama&quot;, &quot;UndergroundLavaPoolPanorama&quot;, &quot;AcaciaVillagePanorama&quot;, &quot;CherryGrovePanorama&quot;, &quot;Halloween2022Panorama&quot;, &quot;TrialChambersPanorama&quot;, &quot;PaleGardenPanorama&quot;, &quot;TU69TutorialWorldLegacyConsolePanorama&quot;, &quot;Stridey'sResourcePackDevWorldPanorama&quot;, &quot;Xisuma'sHermitcraftBaseSeason1&quot;, &quot;Xisuma'sHermitcraftBaseSeason2&quot;, &quot;Xisuma'sHermitcraftBaseSeason3&quot;, &quot;Xisuma'sHermitcraftBaseSeason4&quot;, &quot;Xisuma'sHermitcraftBaseSeason5&quot;, &quot;Xisuma'sHermitcraftBaseSeason6&quot;, &quot;Xisuma'sHermitcraftBaseSeason7&quot;, &quot;Xisuma'sHermitcraftBaseSeason8&quot;, &quot;Xisuma'sHermitcraftBaseSeason9&quot;]" data-name="Halloween2021Panorama" onclick="toggleSelection(this);" oreui-active-color="green" oreui-color="dark" oreui-type="button">
+      <div class="tweak" data-category="Menu Panoramas" data-conflicts="[&quot;ClassicPanorama&quot;, &quot;OceanPanorama&quot;, &quot;VillagePanorama&quot;, &quot;BeesPanorama&quot;, &quot;NetherPanorama&quot;, &quot;AmethystGeodePanorama&quot;, &quot;SunsetValleyPanorama&quot;, &quot;MangroveSwampPanorama&quot;, &quot;TheEndPanorama&quot;, &quot;pack.pngPanorama&quot;, &quot;NostalgiaPanorama&quot;, &quot;OceansideExtremeHillsPanorama&quot;, &quot;LakesideSunsetPanorama&quot;, &quot;UndergroundLavaPoolPanorama&quot;, &quot;AcaciaVillagePanorama&quot;, &quot;CherryGrovePanorama&quot;, &quot;Halloween2022Panorama&quot;, &quot;SpringToLifePanorama&quot;, &quot;TrialChambersPanorama&quot;, &quot;PaleGardenPanorama&quot;, &quot;TU69TutorialWorldLegacyConsolePanorama&quot;, &quot;Stridey'sResourcePackDevWorldPanorama&quot;, &quot;Xisuma'sHermitcraftBaseSeason1&quot;, &quot;Xisuma'sHermitcraftBaseSeason2&quot;, &quot;Xisuma'sHermitcraftBaseSeason3&quot;, &quot;Xisuma'sHermitcraftBaseSeason4&quot;, &quot;Xisuma'sHermitcraftBaseSeason5&quot;, &quot;Xisuma'sHermitcraftBaseSeason6&quot;, &quot;Xisuma'sHermitcraftBaseSeason7&quot;, &quot;Xisuma'sHermitcraftBaseSeason8&quot;, &quot;Xisuma'sHermitcraftBaseSeason9&quot;]" data-name="Halloween2021Panorama" onclick="toggleSelection(this);" oreui-active-color="green" oreui-color="dark" oreui-type="button">
        <div class="tweak-info">
         <input name="tweak" type="checkbox"/>
         <img alt="Halloween 2021" src="../packs/menu_panoramas/Halloween2021Panorama/pack_icon.png" style="width:82px; height:82px;"/>
@@ -5550,7 +5563,7 @@
         </div>
        </div>
       </div>
-      <div class="tweak" data-category="Menu Panoramas" data-conflicts="[&quot;ClassicPanorama&quot;, &quot;OceanPanorama&quot;, &quot;VillagePanorama&quot;, &quot;BeesPanorama&quot;, &quot;NetherPanorama&quot;, &quot;AmethystGeodePanorama&quot;, &quot;SunsetValleyPanorama&quot;, &quot;MangroveSwampPanorama&quot;, &quot;TheEndPanorama&quot;, &quot;pack.pngPanorama&quot;, &quot;NostalgiaPanorama&quot;, &quot;OceansideExtremeHillsPanorama&quot;, &quot;LakesideSunsetPanorama&quot;, &quot;UndergroundLavaPoolPanorama&quot;, &quot;AcaciaVillagePanorama&quot;, &quot;CherryGrovePanorama&quot;, &quot;Halloween2021Panorama&quot;, &quot;Halloween2022Panorama&quot;, &quot;PaleGardenPanorama&quot;, &quot;TU69TutorialWorldLegacyConsolePanorama&quot;, &quot;Stridey'sResourcePackDevWorldPanorama&quot;, &quot;Xisuma'sHermitcraftBaseSeason1&quot;, &quot;Xisuma'sHermitcraftBaseSeason2&quot;, &quot;Xisuma'sHermitcraftBaseSeason3&quot;, &quot;Xisuma'sHermitcraftBaseSeason4&quot;, &quot;Xisuma'sHermitcraftBaseSeason5&quot;, &quot;Xisuma'sHermitcraftBaseSeason6&quot;, &quot;Xisuma'sHermitcraftBaseSeason7&quot;, &quot;Xisuma'sHermitcraftBaseSeason8&quot;, &quot;Xisuma'sHermitcraftBaseSeason9&quot;]" data-name="TrialChambersPanorama" onclick="toggleSelection(this);" oreui-active-color="green" oreui-color="dark" oreui-type="button">
+      <div class="tweak" data-category="Menu Panoramas" data-conflicts="[&quot;ClassicPanorama&quot;, &quot;OceanPanorama&quot;, &quot;VillagePanorama&quot;, &quot;BeesPanorama&quot;, &quot;NetherPanorama&quot;, &quot;AmethystGeodePanorama&quot;, &quot;SunsetValleyPanorama&quot;, &quot;MangroveSwampPanorama&quot;, &quot;TheEndPanorama&quot;, &quot;pack.pngPanorama&quot;, &quot;NostalgiaPanorama&quot;, &quot;OceansideExtremeHillsPanorama&quot;, &quot;LakesideSunsetPanorama&quot;, &quot;UndergroundLavaPoolPanorama&quot;, &quot;AcaciaVillagePanorama&quot;, &quot;CherryGrovePanorama&quot;, &quot;Halloween2021Panorama&quot;, &quot;Halloween2022Panorama&quot;, &quot;SpringToLifePanorama&quot;, &quot;PaleGardenPanorama&quot;, &quot;TU69TutorialWorldLegacyConsolePanorama&quot;, &quot;Stridey'sResourcePackDevWorldPanorama&quot;, &quot;Xisuma'sHermitcraftBaseSeason1&quot;, &quot;Xisuma'sHermitcraftBaseSeason2&quot;, &quot;Xisuma'sHermitcraftBaseSeason3&quot;, &quot;Xisuma'sHermitcraftBaseSeason4&quot;, &quot;Xisuma'sHermitcraftBaseSeason5&quot;, &quot;Xisuma'sHermitcraftBaseSeason6&quot;, &quot;Xisuma'sHermitcraftBaseSeason7&quot;, &quot;Xisuma'sHermitcraftBaseSeason8&quot;, &quot;Xisuma'sHermitcraftBaseSeason9&quot;]" data-name="TrialChambersPanorama" onclick="toggleSelection(this);" oreui-active-color="green" oreui-color="dark" oreui-type="button">
        <div class="tweak-info">
         <input name="tweak" type="checkbox"/>
         <img alt="Trial Chambers" src="../packs/menu_panoramas/TrialChambersPanorama/pack_icon.png" style="width:82px; height:82px;"/>
@@ -5562,7 +5575,20 @@
         </div>
        </div>
       </div>
-      <div class="tweak" data-category="Menu Panoramas" data-conflicts="[&quot;ClassicPanorama&quot;, &quot;OceanPanorama&quot;, &quot;VillagePanorama&quot;, &quot;BeesPanorama&quot;, &quot;NetherPanorama&quot;, &quot;AmethystGeodePanorama&quot;, &quot;SunsetValleyPanorama&quot;, &quot;MangroveSwampPanorama&quot;, &quot;TheEndPanorama&quot;, &quot;pack.pngPanorama&quot;, &quot;NostalgiaPanorama&quot;, &quot;OceansideExtremeHillsPanorama&quot;, &quot;LakesideSunsetPanorama&quot;, &quot;UndergroundLavaPoolPanorama&quot;, &quot;AcaciaVillagePanorama&quot;, &quot;CherryGrovePanorama&quot;, &quot;Halloween2021Panorama&quot;, &quot;Halloween2022Panorama&quot;, &quot;TrialChambersPanorama&quot;, &quot;TU69TutorialWorldLegacyConsolePanorama&quot;, &quot;Stridey'sResourcePackDevWorldPanorama&quot;, &quot;Xisuma'sHermitcraftBaseSeason1&quot;, &quot;Xisuma'sHermitcraftBaseSeason2&quot;, &quot;Xisuma'sHermitcraftBaseSeason3&quot;, &quot;Xisuma'sHermitcraftBaseSeason4&quot;, &quot;Xisuma'sHermitcraftBaseSeason5&quot;, &quot;Xisuma'sHermitcraftBaseSeason6&quot;, &quot;Xisuma'sHermitcraftBaseSeason7&quot;, &quot;Xisuma'sHermitcraftBaseSeason8&quot;, &quot;Xisuma'sHermitcraftBaseSeason9&quot;]" data-name="PaleGardenPanorama" onclick="toggleSelection(this);" oreui-active-color="green" oreui-color="dark" oreui-type="button">
+      <div class="tweak" data-category="Menu Panoramas" data-conflicts="[&quot;ClassicPanorama&quot;, &quot;OceanPanorama&quot;, &quot;VillagePanorama&quot;, &quot;BeesPanorama&quot;, &quot;NetherPanorama&quot;, &quot;AmethystGeodePanorama&quot;, &quot;SunsetValleyPanorama&quot;, &quot;MangroveSwampPanorama&quot;, &quot;TheEndPanorama&quot;, &quot;pack.pngPanorama&quot;, &quot;NostalgiaPanorama&quot;, &quot;OceansideExtremeHillsPanorama&quot;, &quot;LakesideSunsetPanorama&quot;, &quot;UndergroundLavaPoolPanorama&quot;, &quot;AcaciaVillagePanorama&quot;, &quot;CherryGrovePanorama&quot;, &quot;Halloween2021Panorama&quot;, &quot;Halloween2022Panorama&quot;, &quot;SpringToLifePanorama&quot;, &quot;TrialChambersPanorama&quot;, &quot;PaleGardenPanorama&quot;, &quot;TU69TutorialWorldLegacyConsolePanorama&quot;, &quot;Stridey'sResourcePackDevWorldPanorama&quot;, &quot;Xisuma'sHermitcraftBaseSeason1&quot;, &quot;Xisuma'sHermitcraftBaseSeason2&quot;, &quot;Xisuma'sHermitcraftBaseSeason3&quot;, &quot;Xisuma'sHermitcraftBaseSeason4&quot;, &quot;Xisuma'sHermitcraftBaseSeason5&quot;, &quot;Xisuma'sHermitcraftBaseSeason6&quot;, &quot;Xisuma'sHermitcraftBaseSeason7&quot;, &quot;Xisuma'sHermitcraftBaseSeason8&quot;, &quot;Xisuma'sHermitcraftBaseSeason9&quot;]" data-name="SpringToLifePanorama" onclick="toggleSelection(this);" oreui-active-color="green" oreui-color="dark" oreui-type="button">
+       <div class="tweak-info">
+        <input name="tweak" type="checkbox"/>
+        <img alt="Spring to Life Panorama" src="../packs/menu_panoramas/SpringToLifePanorama/pack_icon.png" style="width:82px; height:82px;"/>
+        <br>
+        <label class="tweak-title" id="tweak">
+         Spring to Life Panorama
+        </label>
+        <div class="tweak-description">
+         Replaces the default Minecraft menu panorama with a 360° view of a forest and desert (from 1.21.70)
+        </div>
+       </div>
+      </div>
+      <div class="tweak" data-category="Menu Panoramas" data-conflicts="[&quot;ClassicPanorama&quot;, &quot;OceanPanorama&quot;, &quot;VillagePanorama&quot;, &quot;BeesPanorama&quot;, &quot;NetherPanorama&quot;, &quot;AmethystGeodePanorama&quot;, &quot;SunsetValleyPanorama&quot;, &quot;MangroveSwampPanorama&quot;, &quot;TheEndPanorama&quot;, &quot;pack.pngPanorama&quot;, &quot;NostalgiaPanorama&quot;, &quot;OceansideExtremeHillsPanorama&quot;, &quot;LakesideSunsetPanorama&quot;, &quot;UndergroundLavaPoolPanorama&quot;, &quot;AcaciaVillagePanorama&quot;, &quot;CherryGrovePanorama&quot;, &quot;Halloween2021Panorama&quot;, &quot;Halloween2022Panorama&quot;, &quot;SpringToLifePanorama&quot;, &quot;TrialChambersPanorama&quot;, &quot;TU69TutorialWorldLegacyConsolePanorama&quot;, &quot;Stridey'sResourcePackDevWorldPanorama&quot;, &quot;Xisuma'sHermitcraftBaseSeason1&quot;, &quot;Xisuma'sHermitcraftBaseSeason2&quot;, &quot;Xisuma'sHermitcraftBaseSeason3&quot;, &quot;Xisuma'sHermitcraftBaseSeason4&quot;, &quot;Xisuma'sHermitcraftBaseSeason5&quot;, &quot;Xisuma'sHermitcraftBaseSeason6&quot;, &quot;Xisuma'sHermitcraftBaseSeason7&quot;, &quot;Xisuma'sHermitcraftBaseSeason8&quot;, &quot;Xisuma'sHermitcraftBaseSeason9&quot;]" data-name="PaleGardenPanorama" onclick="toggleSelection(this);" oreui-active-color="green" oreui-color="dark" oreui-type="button">
        <div class="tweak-info">
         <input name="tweak" type="checkbox"/>
         <img alt="Pale Garden (Winter Drop)" src="../packs/menu_panoramas/PaleGardenPanorama/pack_icon.png" style="width:82px; height:82px;"/>
@@ -5574,7 +5600,7 @@
         </div>
        </div>
       </div>
-      <div class="tweak" data-category="Menu Panoramas" data-conflicts="[&quot;ClassicPanorama&quot;, &quot;OceanPanorama&quot;, &quot;VillagePanorama&quot;, &quot;BeesPanorama&quot;, &quot;NetherPanorama&quot;, &quot;AmethystGeodePanorama&quot;, &quot;SunsetValleyPanorama&quot;, &quot;MangroveSwampPanorama&quot;, &quot;TheEndPanorama&quot;, &quot;pack.pngPanorama&quot;, &quot;NostalgiaPanorama&quot;, &quot;OceansideExtremeHillsPanorama&quot;, &quot;LakesideSunsetPanorama&quot;, &quot;UndergroundLavaPoolPanorama&quot;, &quot;AcaciaVillagePanorama&quot;, &quot;CherryGrovePanorama&quot;, &quot;Halloween2021Panorama&quot;, &quot;Halloween2022Panorama&quot;, &quot;TrialChambersPanorama&quot;, &quot;PaleGardenPanorama&quot;, &quot;Stridey'sResourcePackDevWorldPanorama&quot;, &quot;Xisuma'sHermitcraftBaseSeason1&quot;, &quot;Xisuma'sHermitcraftBaseSeason2&quot;, &quot;Xisuma'sHermitcraftBaseSeason3&quot;, &quot;Xisuma'sHermitcraftBaseSeason4&quot;, &quot;Xisuma'sHermitcraftBaseSeason5&quot;, &quot;Xisuma'sHermitcraftBaseSeason6&quot;, &quot;Xisuma'sHermitcraftBaseSeason7&quot;, &quot;Xisuma'sHermitcraftBaseSeason8&quot;, &quot;Xisuma'sHermitcraftBaseSeason9&quot;]" data-name="TU69TutorialWorldLegacyConsolePanorama" onclick="toggleSelection(this);" oreui-active-color="green" oreui-color="dark" oreui-type="button">
+      <div class="tweak" data-category="Menu Panoramas" data-conflicts="[&quot;ClassicPanorama&quot;, &quot;OceanPanorama&quot;, &quot;VillagePanorama&quot;, &quot;BeesPanorama&quot;, &quot;NetherPanorama&quot;, &quot;AmethystGeodePanorama&quot;, &quot;SunsetValleyPanorama&quot;, &quot;MangroveSwampPanorama&quot;, &quot;TheEndPanorama&quot;, &quot;pack.pngPanorama&quot;, &quot;NostalgiaPanorama&quot;, &quot;OceansideExtremeHillsPanorama&quot;, &quot;LakesideSunsetPanorama&quot;, &quot;UndergroundLavaPoolPanorama&quot;, &quot;AcaciaVillagePanorama&quot;, &quot;CherryGrovePanorama&quot;, &quot;Halloween2021Panorama&quot;, &quot;Halloween2022Panorama&quot;, &quot;SpringToLifePanorama&quot;, &quot;TrialChambersPanorama&quot;, &quot;PaleGardenPanorama&quot;, &quot;Stridey'sResourcePackDevWorldPanorama&quot;, &quot;Xisuma'sHermitcraftBaseSeason1&quot;, &quot;Xisuma'sHermitcraftBaseSeason2&quot;, &quot;Xisuma'sHermitcraftBaseSeason3&quot;, &quot;Xisuma'sHermitcraftBaseSeason4&quot;, &quot;Xisuma'sHermitcraftBaseSeason5&quot;, &quot;Xisuma'sHermitcraftBaseSeason6&quot;, &quot;Xisuma'sHermitcraftBaseSeason7&quot;, &quot;Xisuma'sHermitcraftBaseSeason8&quot;, &quot;Xisuma'sHermitcraftBaseSeason9&quot;]" data-name="TU69TutorialWorldLegacyConsolePanorama" onclick="toggleSelection(this);" oreui-active-color="green" oreui-color="dark" oreui-type="button">
        <div class="tweak-info">
         <input name="tweak" type="checkbox"/>
         <img alt="TU69 Tutorial World (Legacy Console)" src="../packs/menu_panoramas/TU69TutorialWorldLegacyConsolePanorama/pack_icon.png" style="width:82px; height:82px;"/>
@@ -5586,7 +5612,7 @@
         </div>
        </div>
       </div>
-      <div class="tweak" data-category="Menu Panoramas" data-conflicts="[&quot;ClassicPanorama&quot;, &quot;OceanPanorama&quot;, &quot;VillagePanorama&quot;, &quot;BeesPanorama&quot;, &quot;NetherPanorama&quot;, &quot;AmethystGeodePanorama&quot;, &quot;SunsetValleyPanorama&quot;, &quot;MangroveSwampPanorama&quot;, &quot;TheEndPanorama&quot;, &quot;pack.pngPanorama&quot;, &quot;NostalgiaPanorama&quot;, &quot;OceansideExtremeHillsPanorama&quot;, &quot;LakesideSunsetPanorama&quot;, &quot;UndergroundLavaPoolPanorama&quot;, &quot;AcaciaVillagePanorama&quot;, &quot;CherryGrovePanorama&quot;, &quot;Halloween2021Panorama&quot;, &quot;Halloween2022Panorama&quot;, &quot;TrialChambersPanorama&quot;, &quot;PaleGardenPanorama&quot;, &quot;TU69TutorialWorldLegacyConsolePanorama&quot;, &quot;Xisuma'sHermitcraftBaseSeason1&quot;, &quot;Xisuma'sHermitcraftBaseSeason2&quot;, &quot;Xisuma'sHermitcraftBaseSeason3&quot;, &quot;Xisuma'sHermitcraftBaseSeason4&quot;, &quot;Xisuma'sHermitcraftBaseSeason5&quot;, &quot;Xisuma'sHermitcraftBaseSeason6&quot;, &quot;Xisuma'sHermitcraftBaseSeason7&quot;, &quot;Xisuma'sHermitcraftBaseSeason8&quot;, &quot;Xisuma'sHermitcraftBaseSeason9&quot;]" data-name="Stridey'sResourcePackDevWorldPanorama" onclick="toggleSelection(this);" oreui-active-color="green" oreui-color="dark" oreui-type="button">
+      <div class="tweak" data-category="Menu Panoramas" data-conflicts="[&quot;ClassicPanorama&quot;, &quot;OceanPanorama&quot;, &quot;VillagePanorama&quot;, &quot;BeesPanorama&quot;, &quot;NetherPanorama&quot;, &quot;AmethystGeodePanorama&quot;, &quot;SunsetValleyPanorama&quot;, &quot;MangroveSwampPanorama&quot;, &quot;TheEndPanorama&quot;, &quot;pack.pngPanorama&quot;, &quot;NostalgiaPanorama&quot;, &quot;OceansideExtremeHillsPanorama&quot;, &quot;LakesideSunsetPanorama&quot;, &quot;UndergroundLavaPoolPanorama&quot;, &quot;AcaciaVillagePanorama&quot;, &quot;CherryGrovePanorama&quot;, &quot;Halloween2021Panorama&quot;, &quot;Halloween2022Panorama&quot;, &quot;SpringToLifePanorama&quot;, &quot;TrialChambersPanorama&quot;, &quot;PaleGardenPanorama&quot;, &quot;TU69TutorialWorldLegacyConsolePanorama&quot;, &quot;Xisuma'sHermitcraftBaseSeason1&quot;, &quot;Xisuma'sHermitcraftBaseSeason2&quot;, &quot;Xisuma'sHermitcraftBaseSeason3&quot;, &quot;Xisuma'sHermitcraftBaseSeason4&quot;, &quot;Xisuma'sHermitcraftBaseSeason5&quot;, &quot;Xisuma'sHermitcraftBaseSeason6&quot;, &quot;Xisuma'sHermitcraftBaseSeason7&quot;, &quot;Xisuma'sHermitcraftBaseSeason8&quot;, &quot;Xisuma'sHermitcraftBaseSeason9&quot;]" data-name="Stridey'sResourcePackDevWorldPanorama" onclick="toggleSelection(this);" oreui-active-color="green" oreui-color="dark" oreui-type="button">
        <div class="tweak-info">
         <input name="tweak" type="checkbox"/>
         <img alt="Stridey's RP Development World" src="../packs/menu_panoramas/Stridey'sResourcePackDevWorldPanorama/pack_icon.png" style="width:82px; height:82px;"/>
@@ -5731,7 +5757,7 @@
     <div class="category-label" onclick="toggleCategory(this);" oreui-color="dark" oreui-type="button">
      Retro
     </div>
-    <button class="category-label-selectall" data-allpacks="N4IgTghg7iBcAEBtEB5ANgEwEIFMNgHsBjAawFkcA7AVwBUBLAFzRxABp4QBBNABwAsIZepRxFIAM0YAZAgHMC7TgGE0EAM7r6RYaPEQpshUpAARemEZYIpOYWqUMJngIgAxAmnoQ5rDiFUNLSIUMBx1E3QMZQIAI1iWdUYCURMABTCAWgBGADpsgA4AZUYwel5ePFMIMBIUCBJIzDS1ShII-yiAcUgANxw0JowAORxGfhwwSFIh6QheiCGUWK0Mb0ohikYINCw0YnahgHUIRkmhgEkiP04oud56DtvMIt4U32OCTxj9sCfUTC4DBXFL-KJFfjUNAkSZYAgAD3CQ1e0EoAFE5HJ-kVKARqMxwuoYlB-mkCBUAJ7JABKBHUNxA1KoEAAtjgAOS0SbTAiMbbs5LsgASNQwVDwgQp7JMTMorI55ksaVO-AFBHZPSCyvG0v8svlZL5kylEMmGDV7Ihot1nAAWgQWbF6Dg0vQ5CyIBtOjVEuo4acwZhTF8wEU8Y4htUPb4ww4nJ1MGj4bx9loUrGIwmMNIcP00ABVXgZ+PPDCG+gpH4EP4mHNyGwUoGEUimMp4ADSA14IAAugBfIA" data-category="Retro" onclick="selectAll(this)">
+    <button class="category-label-selectall" data-allpacks="N4IgTghg7iBcAEBtEB5ANgEwEIFMNgHsBjAawFkcA7AVwBUBLAFzRxABp4QBBNABwAsIZepRxFIAM0YAZAgHMC7TgGE0EAM7r6RYaPEQpshUpAARemEZYIpOYWqUMJngIgAxAmnoQ5rDiFUNLSIUMBx1E3QMZQIAI1iWdUYCURMABTCAWgBGADpsgA4AZUYwel5ePFMIMBIUCBJIzDS1ShII-yiAcUgANxw0JowAORxGfhwwSFIh6QheiCGuwSSOziiUWK0Mb0ohikYINCw0YnahgHUIRkmhgEkiP3XMOd56NdRMIt4U30uCTwxU5gD5RXAYB4pUFffjUNAkSZYAgAD3CQ2+0EoAFE5HIPkVKARqMxwuo0vQ8SYCUSSZoYlAPmkCBUAJ7JABKBHUTxA7KoEAAtjgAOS0SbTAiMQ7C5LCgASNQwVDwgRZwpMfMogpF5ksaWu-BlBGFPSC+vG6v8mu1TKlkzVRQmYAwRuFjsVls4uEOdxuAtoALQjHKJgAWgQBbF6DhyXIBRA9p0aol1EjrtDoqdqBgM6YAWAikTHENqvHfIWHE5OpgscjeKctCkK8XqxhpDh+mgAKq8ZtV54YW30FJAgggkztuQ2FngwikUxlPAAaQGvBAAF0AL5AA" data-category="Retro" onclick="selectAll(this)">
      <img class="category-label-selectall-img" src="images/select-all-button/chiseled_bookshelf_empty.png"/>
      <div class="category-label-selectall-hovertext">
       Select All
@@ -5739,7 +5765,7 @@
     </button>
     <div class="category-controlled" oreui-color="dark" oreui-type="general">
      <div class="tweaks">
-      <div class="tweak" data-category="Retro" data-conflicts='["AlphaMinecraftLogo", "BedrockEditionSubtitle", "ClassicMinecraftLogo", "JavaMenuTitle"]' data-name="OldBedrockMenuTitle" onclick="toggleSelection(this);" oreui-active-color="green" oreui-color="dark" oreui-type="button">
+      <div class="tweak" data-category="Retro" data-conflicts='["AlphaMinecraftLogo", "BedrockEditionSubtitle", "ClassicMinecraftLogo", "JavaMenuTitle", "AMinecraftMovieLogo"]' data-name="OldBedrockMenuTitle" onclick="toggleSelection(this);" oreui-active-color="green" oreui-color="dark" oreui-type="button">
        <div class="tweak-info">
         <input name="tweak" type="checkbox"/>
         <img alt="Old Bedrock Menu Title" src="../packs/retro/OldBedrockMenuTitle/pack_icon.png" style="width:82px; height:82px;"/>
@@ -5752,10 +5778,10 @@
         </div>
        </div>
        <div class="conf-hover-text" oreui-color="dark" oreui-type="general">
-        Conflicts with: AlphaMinecraftLogo, BedrockEditionSubtitle, ClassicMinecraftLogo, JavaMenuTitle
+        Conflicts with: AlphaMinecraftLogo, BedrockEditionSubtitle, ClassicMinecraftLogo, JavaMenuTitle, AMinecraftMovieLogo
        </div>
       </div>
-      <div class="tweak" data-category="Retro" data-conflicts='["BedrockEditionSubtitle", "ClassicMinecraftLogo", "OldBedrockMenuTitle", "JavaMenuTitle"]' data-name="AlphaMinecraftLogo" onclick="toggleSelection(this);" oreui-active-color="green" oreui-color="dark" oreui-type="button">
+      <div class="tweak" data-category="Retro" data-conflicts='["BedrockEditionSubtitle", "ClassicMinecraftLogo", "OldBedrockMenuTitle", "JavaMenuTitle", "AMinecraftMovieLogo"]' data-name="AlphaMinecraftLogo" onclick="toggleSelection(this);" oreui-active-color="green" oreui-color="dark" oreui-type="button">
        <div class="tweak-info">
         <input name="tweak" type="checkbox"/>
         <img alt="Alpha Minecraft Logo" src="../packs/retro/AlphaMinecraftLogo/pack_icon.png" style="width:82px; height:82px;"/>
@@ -5768,10 +5794,10 @@
         </div>
        </div>
        <div class="conf-hover-text" oreui-color="dark" oreui-type="general">
-        Conflicts with: BedrockEditionSubtitle, ClassicMinecraftLogo, OldBedrockMenuTitle, JavaMenuTitle
+        Conflicts with: BedrockEditionSubtitle, ClassicMinecraftLogo, OldBedrockMenuTitle, JavaMenuTitle, AMinecraftMovieLogo
        </div>
       </div>
-      <div class="tweak" data-category="Retro" data-conflicts='["AlphaMinecraftLogo", "OldBedrockMenuTitle", "BedrockEditionSubtitle", "JavaMenuTitle"]' data-name="ClassicMinecraftLogo" onclick="toggleSelection(this);" oreui-active-color="green" oreui-color="dark" oreui-type="button">
+      <div class="tweak" data-category="Retro" data-conflicts='["AlphaMinecraftLogo", "OldBedrockMenuTitle", "BedrockEditionSubtitle", "JavaMenuTitle", "AMinecraftMovieLogo"]' data-name="ClassicMinecraftLogo" onclick="toggleSelection(this);" oreui-active-color="green" oreui-color="dark" oreui-type="button">
        <div class="tweak-info">
         <input name="tweak" type="checkbox"/>
         <img alt="Classic Minecraft Logo" src="../packs/retro/ClassicMinecraftLogo/pack_icon.png" style="width:82px; height:82px;"/>
@@ -5784,7 +5810,7 @@
         </div>
        </div>
        <div class="conf-hover-text" oreui-color="dark" oreui-type="general">
-        Conflicts with: AlphaMinecraftLogo, OldBedrockMenuTitle, BedrockEditionSubtitle, JavaMenuTitle
+        Conflicts with: AlphaMinecraftLogo, OldBedrockMenuTitle, BedrockEditionSubtitle, JavaMenuTitle, AMinecraftMovieLogo
        </div>
       </div>
       <div class="tweak" data-category="Retro" data-conflicts="[]" data-name="DirtBackground" onclick="toggleSelection(this);" oreui-active-color="green" oreui-color="dark" oreui-type="button">
@@ -5913,6 +5939,19 @@
         </label>
         <div class="tweak-description">
          Reverts Lava to its Alpha texture. Best with Old Netherrack.
+        </div>
+       </div>
+      </div>
+      <div class="tweak" data-category="Retro" data-conflicts="[]" data-name="OldGhasts" onclick="toggleSelection(this);" oreui-active-color="green" oreui-color="dark" oreui-type="button">
+       <div class="tweak-info">
+        <input name="tweak" type="checkbox"/>
+        <img alt="Old Ghasts" src="../packs/retro/OldGhasts/pack_icon.png" style="width:82px; height:82px;"/>
+        <br>
+        <label class="tweak-title" id="tweak">
+         Old Ghasts
+        </label>
+        <div class="tweak-description">
+         Reverts Ghasts to their lower resolution textures, including Happy Ghasts and their harnesses
         </div>
        </div>
       </div>
@@ -6049,6 +6088,19 @@
         </div>
        </div>
       </div>
+      <div class="tweak" data-category="Retro" data-conflicts="[]" data-name="SnoutlessPigs" onclick="toggleSelection(this);" oreui-active-color="green" oreui-color="dark" oreui-type="button">
+       <div class="tweak-info">
+        <input name="tweak" type="checkbox"/>
+        <img alt="Snoutless Pigs" src="../packs/retro/SnoutlessPigs/pack_icon.png" style="width:82px; height:82px;"/>
+        <br>
+        <label class="tweak-title" id="tweak">
+         Snoutless Pigs
+        </label>
+        <div class="tweak-description">
+         Flattens all Pigs' snouts like they appeared before Beta 1.8
+        </div>
+       </div>
+      </div>
       <div class="tweak" data-category="Retro" data-conflicts="[]" data-name="SnoutlessCows" onclick="toggleSelection(this);" oreui-active-color="green" oreui-color="dark" oreui-type="button">
        <div class="tweak-info">
         <input name="tweak" type="checkbox"/>
@@ -6114,6 +6166,19 @@
         </div>
        </div>
       </div>
+      <div class="tweak" data-category="Retro" data-conflicts="[]" data-name="BetaItemTooltip" onclick="toggleSelection(this);" oreui-active-color="green" oreui-color="dark" oreui-type="button">
+       <div class="tweak-info">
+        <input name="tweak" type="checkbox"/>
+        <img alt="Beta Item Tooltip" src="../packs/retro/BetaItemTooltip/pack_icon.png" style="width:82px; height:82px;"/>
+        <br>
+        <label class="tweak-title" id="tweak">
+         Beta Item Tooltip
+        </label>
+        <div class="tweak-description">
+         Reverts the texture of the purple item tooltip back to the translucent black box
+        </div>
+       </div>
+      </div>
       <div class="tweak" data-category="Retro" data-conflicts='["DarthXisumaPiglins"]' data-name="ZombiePigman" onclick="toggleSelection(this);" oreui-active-color="green" oreui-color="dark" oreui-type="button">
        <div class="tweak-info">
         <input name="tweak" type="checkbox"/>
@@ -6140,6 +6205,19 @@
         </label>
         <div class="tweak-description">
          Removes the oars from all boat types from their item textures and entity models.
+        </div>
+       </div>
+      </div>
+      <div class="tweak" data-category="Retro" data-conflicts="[]" data-name="OldClouds" onclick="toggleSelection(this);" oreui-active-color="green" oreui-color="dark" oreui-type="button">
+       <div class="tweak-info">
+        <input name="tweak" type="checkbox"/>
+        <img alt="Old Clouds" src="../packs/retro/OldClouds/pack_icon.png" style="width:82px; height:82px;"/>
+        <br>
+        <label class="tweak-title" id="tweak">
+         Old Clouds
+        </label>
+        <div class="tweak-description">
+         Reverts clouds to their pre-1.21.90 texture
         </div>
        </div>
       </div>
@@ -7196,7 +7274,7 @@
     <div class="category-label" onclick="toggleCategory(this);" oreui-color="dark" oreui-type="button">
      Parity
     </div>
-    <button class="category-label-selectall" data-allpacks="N4IgTghg7iBcAEBtEApCA3CBZApgOwFcAVASwBcAbHEAGnlQwgCEB7FgW1vrUywgAcuDTAFE8AExxgAIpADmLPEwgUKQnhACSedPjIswATwDKFFmQASJOQAsK1m2SEBhChADO7kgGMNxmzg4gnQgANIkEhCuHl6+jP6BwdyMsiQ44qE4FEnCEMZkYCT8-OnG-GAE3jgAMixy7kLSBHhyOIruzmCJUg0hTS1teO5YLJ4mANZZOPp4jc2t7dIkYE5984Pu+YrUawPtRFKQ3uZkEELGBCVgxuweNkxgo2KSYLezIdU4chDehs7tLCoInYUhU4iEn2+v3+Q0BOGMeBYUAARio1CERBAVjYAOpsCh-JEgAC6AF8gA" data-category="Parity" onclick="selectAll(this)">
+    <button class="category-label-selectall" data-allpacks="N4IgTghg7iBcAEBtEBBAsgSwHYFMDGkAZgC5oD2AbhjgDJkDmZIANPCAFIQURo5YCuAFQzEANjhZtO3AEJkyAW0kcuPCAAdl0iAFEsAExxgAIpEZYZEUaK2qAklgp9iZMAE8AyqLLEAEhnoAC1EAwOJlAGFRCABnGIw8bQ9AnBxNVhAAaWx9CCjY+MTVZNT0qVVTan1MnFEylW4PYjAMdXUcfQ91MH48WgYY5WN+LHocMiwYiLBSo0GM4dHxyfI4zwBrWpwXLCGRsYmY4wwwcIX95ZimiYlzpcPBI0g8H2IIZQ9+drAPBVjAmRgMgxPSGMB-XYZGg4egQPBuCKHMjiHQKIxWfTKaGw+GIybInAeLBkKAAIysNgyOggp0CAHV5KIESSQABdAC+QA" data-category="Parity" onclick="selectAll(this)">
      <img class="category-label-selectall-img" src="images/select-all-button/chiseled_bookshelf_empty.png"/>
      <div class="category-label-selectall-hovertext">
       Select All
@@ -7204,7 +7282,23 @@
     </button>
     <div class="category-controlled" oreui-color="dark" oreui-type="general">
      <div class="tweaks">
-      <div class="tweak" data-category="Parity" data-conflicts='["AlphaMinecraftLogo", "BedrockEditionSubtitle", "ClassicMinecraftLogo", "OldBedrockMenuTitle"]' data-name="JavaMenuTitle" onclick="toggleSelection(this);" oreui-active-color="green" oreui-color="dark" oreui-type="button">
+      <div class="tweak" data-category="Parity" data-conflicts='["AlphaMinecraftLogo", "BedrockEditionSubtitle", "ClassicMinecraftLogo", "OldBedrockMenuTitle", "JavaMenuTitle"]' data-name="AMinecraftMovieLogo" onclick="toggleSelection(this);" oreui-active-color="green" oreui-color="dark" oreui-type="button">
+       <div class="tweak-info">
+        <input name="tweak" type="checkbox"/>
+        <img alt="'A Minecraft Movie' Logo" src="../packs/parity/AMinecraftMovieLogo/pack_icon.png" style="width:82px; height:82px;"/>
+        <br>
+        <label class="tweak-title" id="tweak">
+         'A Minecraft Movie' Logo
+        </label>
+        <div class="tweak-description">
+         Gives the game its logo from 'A Minecraft Movie'
+        </div>
+       </div>
+       <div class="conf-hover-text" oreui-color="dark" oreui-type="general">
+        Conflicts with: AlphaMinecraftLogo, BedrockEditionSubtitle, ClassicMinecraftLogo, OldBedrockMenuTitle, JavaMenuTitle
+       </div>
+      </div>
+      <div class="tweak" data-category="Parity" data-conflicts='["AlphaMinecraftLogo", "BedrockEditionSubtitle", "ClassicMinecraftLogo", "OldBedrockMenuTitle", "AMinecraftMovieLogo"]' data-name="JavaMenuTitle" onclick="toggleSelection(this);" oreui-active-color="green" oreui-color="dark" oreui-type="button">
        <div class="tweak-info">
         <input name="tweak" type="checkbox"/>
         <img alt="Java Menu Title" src="../packs/parity/JavaMenuTitle/pack_icon.png" style="width:82px; height:82px;"/>
@@ -7217,7 +7311,7 @@
         </div>
        </div>
        <div class="conf-hover-text" oreui-color="dark" oreui-type="general">
-        Conflicts with: AlphaMinecraftLogo, BedrockEditionSubtitle, ClassicMinecraftLogo, OldBedrockMenuTitle
+        Conflicts with: AlphaMinecraftLogo, BedrockEditionSubtitle, ClassicMinecraftLogo, OldBedrockMenuTitle, AMinecraftMovieLogo
        </div>
       </div>
       <div class="tweak" data-category="Parity" data-conflicts='["UnobtrusiveParticles"]' data-name="JavaBoom" onclick="toggleSelection(this);" oreui-active-color="green" oreui-color="dark" oreui-type="button">
@@ -7469,7 +7563,7 @@
     <div class="category-label" onclick="toggleCategory(this);" oreui-color="dark" oreui-type="button">
      Fixes and Consistency
     </div>
-    <button class="category-label-selectall" data-allpacks="N4IgTghg7iBcAEBtEBVADgEwgFwKYYHkAjAZ1zADdyAVXAD2wFcxcQAaeEAYQHsA7EgEsSePtgBCAGwh8A1gBFcAYx6Q8GAAo9s7TrwHDRExktm5sJXd35CRuMdQgY0PSbnEmzOjiCkQAXrgA5CQASjwYJABignRWofgi-LgA6oIsMXE+XBBKTCTi2tg8ALaZVvI8jERuAMrSROU+ABI8uE2cGob8AJJ8fOQdILUlPGZghdjFZbFWvCoQ4rgy0bM+4mCCAOYAFnhgoYJEAIJgo2DUmyVWzTJbgnxbtdt8ADI8W5Y+XXS4kvq2IwAcR2EBEVh+fwBhns2AAopIMOQgYwIGAMIIZBDYlCbDCxGlsDtyNjfv88XYxM8tgJSbiDJT4XQ0ORBPYlLgCGBSHTyQyjEtcvxBddvji+YDYbV+IIlIVSrzoYyUWiMTIRVZpYxJNLBDqqv8ICU0AAzdKsHwAOVlgzB2FeyyoXz0FKMzT+JXMzus-Klo20O1qxQGc1dsPERqIPB4Gmkcm9xyUSmYOFwtSUEBNJtcGMeVg2uCgDye2BkGB6KgEQy4kh4EFk5QAugBfIA" data-category="Fixes and Consistency" onclick="selectAll(this)">
+    <button class="category-label-selectall" data-allpacks="N4IgTghg7iBcAEBtEBVADgEwgFwKYYHkAjAZ1zADdyAVXAD2wFcxcQAaeEAYQHsA7EgEsSePtgBCAGwh8A1gBFcAYx6Q8GAAo9s7TrwHDRExktm5sJXd35CRuMdQgY0PSbnEmzOjiCkQAXrgA5CQASjwYJABignRWofgi-LgA6oIsMXE+XBBKTCTi2tg8ALaZVvI8jERuAMrSROU+ABI8uE2cGob8AJJ8fOQdILUlPGZghdjFZbFWvCoQ4rgy0bM+4mCCAOYAFnhgoYJEAIJgo2DUmyVWzTJbgnxbtdt8ADI8W5Y+XXS4kvq2IwAcR2EBEVh+fwBhns2AAopIMOQgYwIGAMIIZBDYlCbDCxGlsDtyNjfv88XYxM8tgJSbiDJT4XQ0ORBPYlLgCGBSHTyQyjEtcvxBddvji+YDYbV+IIlIVSrzoYyUWiMTIRVZpYxJNLBDqqv8ICU0AAzdKsHwAOVlgzB2FeyyoXz0FKMzT+JXMzus-Klo20O1qxQGmpkkWDqQgkkk1B4aCGSoFRqIPB4Gmkcm9xyUSmYOFwtSUEBNJtcGMeVg2uCgDye2DDPRUAgTkh4EFk5QAugBfIA" data-category="Fixes and Consistency" onclick="selectAll(this)">
      <img class="category-label-selectall-img" src="images/select-all-button/chiseled_bookshelf_empty.png"/>
      <div class="category-label-selectall-hovertext">
       Select All
@@ -7818,6 +7912,19 @@
         </label>
         <div class="tweak-description">
          Gives the Smooth Stone texture the same bevel as its slab counterpart.
+        </div>
+       </div>
+      </div>
+      <div class="tweak" data-category="Fixes and Consistency" data-conflicts="[]" data-name="SandstoneWallTopFix" onclick="toggleSelection(this);" oreui-active-color="green" oreui-color="dark" oreui-type="button">
+       <div class="tweak-info">
+        <input name="tweak" type="checkbox"/>
+        <img alt="Sandstone Wall Top Fix" src="../packs/fixes_and_consistency/SandstoneWallTopFix/pack_icon.png" style="width:82px; height:82px;"/>
+        <br>
+        <label class="tweak-title" id="tweak">
+         Sandstone Wall Top Fix
+        </label>
+        <div class="tweak-description">
+         Gives Sandstone and Red Sandstone Walls their correct top and bottom textures to align with their block counterparts
         </div>
        </div>
       </div>

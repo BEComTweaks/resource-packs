@@ -3,6 +3,18 @@
   "topic": "Parity",
   "packs": [
     {
+      "pack_id": "AMinecraftMovieLogo",
+      "pack_name": "'A Minecraft Movie' Logo",
+      "pack_description": "Gives the game its logo from 'A Minecraft Movie'",
+      "conflict": [
+        "AlphaMinecraftLogo",
+        "BedrockEditionSubtitle",
+        "ClassicMinecraftLogo",
+        "OldBedrockMenuTitle",
+        "JavaMenuTitle"
+      ]
+    },
+    {
       "pack_id": "JavaMenuTitle",
       "pack_name": "Java Menu Title",
       "pack_description": "Gives the title on the main menu screen its look from Minecraft: Java Edition.",
@@ -10,7 +22,8 @@
         "AlphaMinecraftLogo",
         "BedrockEditionSubtitle",
         "ClassicMinecraftLogo",
-        "OldBedrockMenuTitle"
+        "OldBedrockMenuTitle",
+        "AMinecraftMovieLogo"
       ]
     },
     {
