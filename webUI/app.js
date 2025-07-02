@@ -15,6 +15,7 @@ const categoryDicts = {
   Unobtrusive: [],
   "3D": [],
   GUI: [],
+  Fonts: [],
   Crosshairs: [],
   Hearts: [],
   "LGBTQ+ Pride": [],
