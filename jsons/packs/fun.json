@@ -83,14 +83,11 @@
     {
       "pack_id": "EnglishEnchantingTable",
       "pack_name": "English Enchanting Table",
-      "pack_description": "Changes the Enchanting Table language (AKA Standard Galactic) to use English alphabet characters. This will not help you with enchanting, as the words and phrases used in the Enchanting Table are randomly generated gibberish.",
-      "conflict": ["SmootherFont"]
-    },
+      "pack_description": "Changes the Enchanting Table language (AKA Standard Galactic) to use English alphabet characters. This will not help you with enchanting, as the words and phrases used in the Enchanting Table are randomly generated gibberish."    },
     {
       "pack_id": "StandardGalacticAlphabet",
       "pack_name": "Standard Galactic Alphabet",
-      "pack_description": "Changes English alphabet characters to Standard Galactic alphabet characters (AKA the Enchanting Table language).",
-      "conflict": ["SmootherFont"]
+      "pack_description": "Changes English alphabet characters to Standard Galactic alphabet characters (AKA the Enchanting Table language)."
     },
     {
       "pack_id": "BaconBeam",

@@ -13,12 +13,6 @@
       "pack_description": "Changes the default green XP bar to a rainbow XP bar."
     },
     {
-      "pack_id": "SmootherFont",
-      "pack_name": "Smoother Font",
-      "pack_description": "Changes the Font to be smoother and higher-resolution.",
-      "conflict": ["StandardGalacticAlphabet", "EnglishEnchantingTable"]
-    },
-    {
       "pack_id": "QuickCrafting",
       "pack_name": "Quick Crafting",
       "pack_description": "Adds a button to stack craft items in the inventory, crafting table, stonecutter, and trade faster with villagers."
