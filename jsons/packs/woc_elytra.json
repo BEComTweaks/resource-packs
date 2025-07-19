@@ -6,7 +6,7 @@
   "packs": [
     {
       "pack_id": "WhiteElytra",
-      "pack_name": "White",
+      "pack_name": "White Elytra",
       "pack_description": "",
       "obvious_conflict": [
         "AllayElytra",
@@ -31,7 +31,7 @@
     },
     {
       "pack_id": "GrayElytra",
-      "pack_name": "Gray",
+      "pack_name": "Gray Elytra",
       "pack_description": "",
       "obvious_conflict": [
         "AllayElytra",
@@ -57,7 +57,7 @@
     },
     {
       "pack_id": "BlackElytra",
-      "pack_name": "Black",
+      "pack_name": "Black Elytra",
       "pack_description": "",
       "obvious_conflict": [
         "AllayElytra",
@@ -83,7 +83,7 @@
     },
     {
       "pack_id": "BrownElytra",
-      "pack_name": "Brown",
+      "pack_name": "Brown Elytra",
       "pack_description": "",
       "obvious_conflict": [
         "AllayElytra",
@@ -109,7 +109,7 @@
     },
     {
       "pack_id": "RedElytra",
-      "pack_name": "Red",
+      "pack_name": "Red Elytra",
       "pack_description": "",
       "obvious_conflict": [
         "AllayElytra",
@@ -135,7 +135,7 @@
     },
     {
       "pack_id": "OrangeElytra",
-      "pack_name": "Orange",
+      "pack_name": "Orange Elytra",
       "pack_description": "",
       "obvious_conflict": [
         "AllayElytra",
@@ -161,7 +161,7 @@
     },
     {
       "pack_id": "YellowElytra",
-      "pack_name": "Yellow",
+      "pack_name": "Yellow Elytra",
       "pack_description": "",
       "obvious_conflict": [
         "AllayElytra",
@@ -187,7 +187,7 @@
     },
     {
       "pack_id": "LimeElytra",
-      "pack_name": "Lime",
+      "pack_name": "Lime Elytra",
       "pack_description": "",
       "obvious_conflict": [
         "AllayElytra",
@@ -213,7 +213,7 @@
     },
     {
       "pack_id": "GreenElytra",
-      "pack_name": "Green",
+      "pack_name": "Green Elytra",
       "pack_description": "",
       "obvious_conflict": [
         "AllayElytra",
@@ -239,7 +239,7 @@
     },
     {
       "pack_id": "CyanElytra",
-      "pack_name": "Cyan",
+      "pack_name": "Cyan Elytra",
       "pack_description": "",
       "obvious_conflict": [
         "AllayElytra",
@@ -265,7 +265,7 @@
     },
     {
       "pack_id": "LightBlueElytra",
-      "pack_name": "Light Blue",
+      "pack_name": "Light Blue Elytra",
       "pack_description": "",
       "obvious_conflict": [
         "AllayElytra",
@@ -291,7 +291,7 @@
     },
     {
       "pack_id": "BlueElytra",
-      "pack_name": "Blue",
+      "pack_name": "Blue Elytra",
       "pack_description": "",
       "obvious_conflict": [
         "AllayElytra",
@@ -317,7 +317,7 @@
     },
     {
       "pack_id": "PurpleElytra",
-      "pack_name": "Purple",
+      "pack_name": "Purple Elytra",
       "pack_description": "",
       "obvious_conflict": [
         "AllayElytra",
@@ -343,7 +343,7 @@
     },
     {
       "pack_id": "MagentaElytra",
-      "pack_name": "Magenta",
+      "pack_name": "Magenta Elytra",
       "pack_description": "",
       "obvious_conflict": [
         "AllayElytra",
@@ -369,7 +369,7 @@
     },
     {
       "pack_id": "PinkElytra",
-      "pack_name": "Pink",
+      "pack_name": "Pink Elytra",
       "pack_description": "",
       "obvious_conflict": [
         "AllayElytra",

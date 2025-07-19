@@ -6,49 +6,49 @@
   "packs": [
     {
       "pack_id": "FullyAgedAmethyst",
-      "pack_name": "Amethyst",
+      "pack_name": "Fully Aged Amethyst",
       "pack_description": "Adds indicators onto Amethyst Clusters to show the growth stages.",
       "icon": "apng"
     },
     {
       "pack_id": "FullyAgedBeetroot",
-      "pack_name": "Beetroot",
+      "pack_name": "Fully Aged Beetroot",
       "pack_description": "Adds indicators onto Beetroot to show the growth stages.",
       "icon": "apng"
     },
     {
       "pack_id": "FullyAgedCarrot",
-      "pack_name": "Carrot",
+      "pack_name": "Fully Aged Carrot",
       "pack_description": "Adds indicators onto Carrots to show the growth stages.",
       "icon": "apng"
     },
     {
       "pack_id": "FullyAgedCocoaBean",
-      "pack_name": "Cocoa Bean",
+      "pack_name": "Fully Aged Cocoa Bean",
       "pack_description": "Adds indicators onto Cocoa Beans to show the growth stages.",
       "icon": "apng"
     },
     {
       "pack_id": "FullyAgedNetherWart",
-      "pack_name": "Nether Wart",
+      "pack_name": "Fully Aged Nether Wart",
       "pack_description": "Adds indicators onto Nether Wart to show the growth stages.",
       "icon": "apng"
     },
     {
       "pack_id": "FullyAgedPotato",
-      "pack_name": "Potato",
+      "pack_name": "Fully Aged Potato",
       "pack_description": "Adds indicators onto Potatoes to show the growth stages.",
       "icon": "apng"
     },
     {
       "pack_id": "FullyAgedSweetBerryBush",
-      "pack_name": "Sweet Berry Bush",
+      "pack_name": "Fully Aged Sweet Berry Bush",
       "pack_description": "Adds indicators onto Sweet Berry Bushes to show the growth stages.",
       "icon": "apng"
     },
     {
       "pack_id": "FullyAgedWheat",
-      "pack_name": "Wheat",
+      "pack_name": "Fully Aged Wheat",
       "pack_description": "Adds indicators onto Wheat to show the growth stages.",
       "icon": "apng"
     }

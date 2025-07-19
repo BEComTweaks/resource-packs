@@ -6,7 +6,7 @@
   "packs": [
     {
       "pack_id": "AppleHungerBars",
-      "pack_name": "Apple",
+      "pack_name": "Apple Hunger Bars",
       "pack_description": "",
       "compatibility": ["HungerPreview"],
       "obvious_conflict": [
@@ -46,7 +46,7 @@
     },
     {
       "pack_id": "GoldenAppleHungerBars",
-      "pack_name": "Golden Apple",
+      "pack_name": "Golden Apple Hunger Bars",
       "pack_description": "",
       "compatibility": ["HungerPreview"],
       "obvious_conflict": [
@@ -86,7 +86,7 @@
     },
     {
       "pack_id": "MelonHungerBars",
-      "pack_name": "Melon",
+      "pack_name": "Melon Hunger Bars",
       "pack_description": "",
       "compatibility": ["HungerPreview"],
       "obvious_conflict": [
@@ -126,7 +126,7 @@
     },
     {
       "pack_id": "SweetBerriesHungerBars",
-      "pack_name": "Sweet Berries",
+      "pack_name": "Sweet Berries Hunger Bars",
       "pack_description": "",
       "compatibility": ["HungerPreview"],
       "obvious_conflict": [
@@ -166,7 +166,7 @@
     },
     {
       "pack_id": "GlowBerriesHungerBars",
-      "pack_name": "Glow Berries",
+      "pack_name": "Glow Berries Hunger Bars",
       "pack_description": "",
       "compatibility": ["HungerPreview"],
       "obvious_conflict": [
@@ -206,7 +206,7 @@
     },
     {
       "pack_id": "ChorusFruitHungerBars",
-      "pack_name": "Chorus Fruit",
+      "pack_name": "Chorus Fruit Hunger Bars",
       "pack_description": "",
       "compatibility": ["HungerPreview"],
       "obvious_conflict": [
@@ -246,7 +246,7 @@
     },
     {
       "pack_id": "CarrotHungerBars",
-      "pack_name": "Carrot",
+      "pack_name": "Carrot Hunger Bars",
       "pack_description": "",
       "compatibility": ["HungerPreview"],
       "obvious_conflict": [
@@ -286,7 +286,7 @@
     },
     {
       "pack_id": "GoldenCarrotHungerBars",
-      "pack_name": "Golden Carrot",
+      "pack_name": "Golden Carrot Hunger Bars",
       "pack_description": "",
       "compatibility": ["HungerPreview"],
       "obvious_conflict": [
@@ -326,7 +326,7 @@
     },
     {
       "pack_id": "PotatoHungerBars",
-      "pack_name": "Potato",
+      "pack_name": "Potato Hunger Bars",
       "pack_description": "",
       "compatibility": ["HungerPreview"],
       "obvious_conflict": [
@@ -366,7 +366,7 @@
     },
     {
       "pack_id": "BakedPotatoHungerBars",
-      "pack_name": "Baked Potato",
+      "pack_name": "Baked Potato Hunger Bars",
       "pack_description": "",
       "compatibility": ["HungerPreview"],
       "obvious_conflict": [
@@ -406,7 +406,7 @@
     },
     {
       "pack_id": "PoisonousPotatoHungerBars",
-      "pack_name": "Poisonous Potato",
+      "pack_name": "Poisonous Potato Hunger Bars",
       "pack_description": "",
       "compatibility": ["HungerPreview"],
       "obvious_conflict": [
@@ -446,7 +446,7 @@
     },
     {
       "pack_id": "BeetrootHungerBars",
-      "pack_name": "Beetroot",
+      "pack_name": "Beetroot Hunger Bars",
       "pack_description": "",
       "compatibility": ["HungerPreview"],
       "obvious_conflict": [
@@ -486,7 +486,7 @@
     },
     {
       "pack_id": "DriedKelpHungerBars",
-      "pack_name": "Dried Kelp",
+      "pack_name": "Dried Kelp Hunger Bars",
       "pack_description": "",
       "compatibility": ["HungerPreview"],
       "obvious_conflict": [
@@ -526,7 +526,7 @@
     },
     {
       "pack_id": "BeefHungerBars",
-      "pack_name": "Beef",
+      "pack_name": "Beef Hunger Bars",
       "pack_description": "",
       "compatibility": ["HungerPreview"],
       "obvious_conflict": [
@@ -566,7 +566,7 @@
     },
     {
       "pack_id": "PorkchopHungerBars",
-      "pack_name": "Porkchop",
+      "pack_name": "Porkchop Hunger Bars",
       "pack_description": "",
       "compatibility": ["HungerPreview"],
       "obvious_conflict": [
@@ -606,7 +606,7 @@
     },
     {
       "pack_id": "MuttonHungerBars",
-      "pack_name": "Mutton",
+      "pack_name": "Mutton Hunger Bars",
       "pack_description": "",
       "compatibility": ["HungerPreview"],
       "obvious_conflict": [
@@ -646,7 +646,7 @@
     },
     {
       "pack_id": "ChickenHungerBars",
-      "pack_name": "Chicken",
+      "pack_name": "Chicken Hunger Bars",
       "pack_description": "",
       "compatibility": ["HungerPreview"],
       "obvious_conflict": [
@@ -686,7 +686,7 @@
     },
     {
       "pack_id": "RabbitHungerBars",
-      "pack_name": "Rabbit",
+      "pack_name": "Rabbit Hunger Bars",
       "pack_description": "",
       "compatibility": ["HungerPreview"],
       "obvious_conflict": [
@@ -726,7 +726,7 @@
     },
     {
       "pack_id": "CodHungerBars",
-      "pack_name": "Cod",
+      "pack_name": "Cod Hunger Bars",
       "pack_description": "",
       "compatibility": ["HungerPreview"],
       "obvious_conflict": [
@@ -766,7 +766,7 @@
     },
     {
       "pack_id": "SalmonHungerBars",
-      "pack_name": "Salmon",
+      "pack_name": "Salmon Hunger Bars",
       "pack_description": "",
       "compatibility": ["HungerPreview"],
       "obvious_conflict": [
@@ -806,7 +806,7 @@
     },
     {
       "pack_id": "TropicalFishHungerBars",
-      "pack_name": "Tropical Fish",
+      "pack_name": "Tropical Fish Hunger Bars",
       "pack_description": "",
       "compatibility": ["HungerPreview"],
       "obvious_conflict": [
@@ -846,7 +846,7 @@
     },
     {
       "pack_id": "PufferfishHungerBars",
-      "pack_name": "Pufferfish",
+      "pack_name": "Pufferfish Hunger Bars",
       "pack_description": "",
       "compatibility": ["HungerPreview"],
       "obvious_conflict": [
@@ -886,7 +886,7 @@
     },
     {
       "pack_id": "BreadHungerBars",
-      "pack_name": "Bread",
+      "pack_name": "Bread Hunger Bars",
       "pack_description": "",
       "compatibility": ["HungerPreview"],
       "obvious_conflict": [
@@ -926,7 +926,7 @@
     },
     {
       "pack_id": "CookieHungerBars",
-      "pack_name": "Cookie",
+      "pack_name": "Cookie Hunger Bars",
       "pack_description": "",
       "compatibility": ["HungerPreview"],
       "obvious_conflict": [
@@ -966,7 +966,7 @@
     },
     {
       "pack_id": "CakeHungerBars",
-      "pack_name": "Cake",
+      "pack_name": "Cake Hunger Bars",
       "pack_description": "",
       "compatibility": ["HungerPreview"],
       "obvious_conflict": [
@@ -1006,7 +1006,7 @@
     },
     {
       "pack_id": "PumpkinPieHungerBars",
-      "pack_name": "Pumpkin Pie",
+      "pack_name": "Pumpkin Pie Hunger Bars",
       "pack_description": "",
       "compatibility": ["HungerPreview"],
       "obvious_conflict": [
@@ -1046,7 +1046,7 @@
     },
     {
       "pack_id": "RottenFleshHungerBars",
-      "pack_name": "Rotten Flesh",
+      "pack_name": "Rotten Flesh Hunger Bars",
       "pack_description": "",
       "compatibility": ["HungerPreview"],
       "obvious_conflict": [
@@ -1086,7 +1086,7 @@
     },
     {
       "pack_id": "SpiderEyeHungerBars",
-      "pack_name": "Spider Eye",
+      "pack_name": "Spider Eye Hunger Bars",
       "pack_description": "",
       "compatibility": ["HungerPreview"],
       "obvious_conflict": [
@@ -1126,7 +1126,7 @@
     },
     {
       "pack_id": "MushroomStewHungerBars",
-      "pack_name": "Mushroom Stew",
+      "pack_name": "Mushroom Stew Hunger Bars",
       "pack_description": "",
       "compatibility": ["HungerPreview"],
       "obvious_conflict": [
@@ -1166,7 +1166,7 @@
     },
     {
       "pack_id": "BeetrootSoupHungerBars",
-      "pack_name": "Beetroot Soup",
+      "pack_name": "Beetroot Soup Hunger Bars",
       "pack_description": "",
       "compatibility": ["HungerPreview"],
       "obvious_conflict": [
@@ -1206,7 +1206,7 @@
     },
     {
       "pack_id": "RabbitStewHungerBars",
-      "pack_name": "Rabbit Stew",
+      "pack_name": "Rabbit Stew Hunger Bars",
       "pack_description": "",
       "compatibility": ["HungerPreview"],
       "obvious_conflict": [
@@ -1246,7 +1246,7 @@
     },
     {
       "pack_id": "SuspiciousStewHungerBars",
-      "pack_name": "Suspicious Stew",
+      "pack_name": "Suspicious Stew Hunger Bars",
       "pack_description": "",
       "compatibility": ["HungerPreview"],
       "obvious_conflict": [
@@ -1286,7 +1286,7 @@
     },
     {
       "pack_id": "HoneyHungerBars",
-      "pack_name": "Honey",
+      "pack_name": "Honey Hunger Bars",
       "pack_description": "",
       "compatibility": ["HungerPreview"],
       "obvious_conflict": [

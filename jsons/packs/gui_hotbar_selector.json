@@ -6,7 +6,7 @@
   "packs": [
     {
       "pack_id": "LimeHotbarSelector",
-      "pack_name": "Lime",
+      "pack_name": "Lime Hotbar Selector",
       "pack_description": "",
       "obvious_conflict": [
         "GrayHotbarSelector",
@@ -27,7 +27,7 @@
     },
     {
       "pack_id": "GrayHotbarSelector",
-      "pack_name": "Gray",
+      "pack_name": "Gray Hotbar Selector",
       "pack_description": "",
       "obvious_conflict": [
         "LimeHotbarSelector",
@@ -48,7 +48,7 @@
     },
     {
       "pack_id": "BlackHotbarSelector",
-      "pack_name": "Black",
+      "pack_name": "Black Hotbar Selector",
       "pack_description": "",
       "obvious_conflict": [
         "LimeHotbarSelector",
@@ -69,7 +69,7 @@
     },
     {
       "pack_id": "BrownHotbarSelector",
-      "pack_name": "Brown",
+      "pack_name": "Brown Hotbar Selector",
       "pack_description": "",
       "obvious_conflict": [
         "LimeHotbarSelector",
@@ -90,7 +90,7 @@
     },
     {
       "pack_id": "RedHotbarSelector",
-      "pack_name": "Red",
+      "pack_name": "Red Hotbar Selector",
       "pack_description": "",
       "obvious_conflict": [
         "LimeHotbarSelector",
@@ -111,7 +111,7 @@
     },
     {
       "pack_id": "OrangeHotbarSelector",
-      "pack_name": "Orange",
+      "pack_name": "Orange Hotbar Selector",
       "pack_description": "",
       "obvious_conflict": [
         "LimeHotbarSelector",
@@ -132,7 +132,7 @@
     },
     {
       "pack_id": "YellowHotbarSelector",
-      "pack_name": "Yellow",
+      "pack_name": "Yellow Hotbar Selector",
       "pack_description": "",
       "obvious_conflict": [
         "LimeHotbarSelector",
@@ -153,7 +153,7 @@
     },
     {
       "pack_id": "GreenHotbarSelector",
-      "pack_name": "Green",
+      "pack_name": "Green Hotbar Selector",
       "pack_description": "",
       "obvious_conflict": [
         "LimeHotbarSelector",
@@ -174,7 +174,7 @@
     },
     {
       "pack_id": "CyanHotbarSelector",
-      "pack_name": "Cyan",
+      "pack_name": "Cyan Hotbar Selector",
       "pack_description": "",
       "obvious_conflict": [
         "LimeHotbarSelector",
@@ -195,7 +195,7 @@
     },
     {
       "pack_id": "LightBlueHotbarSelector",
-      "pack_name": "Light Blue",
+      "pack_name": "Light Blue Hotbar Selector",
       "pack_description": "",
       "obvious_conflict": [
         "LimeHotbarSelector",
@@ -216,7 +216,7 @@
     },
     {
       "pack_id": "BlueHotbarSelector",
-      "pack_name": "Blue",
+      "pack_name": "Blue Hotbar Selector",
       "pack_description": "",
       "obvious_conflict": [
         "LimeHotbarSelector",
@@ -237,7 +237,7 @@
     },
     {
       "pack_id": "PurpleHotbarSelector",
-      "pack_name": "Purple",
+      "pack_name": "Purple Hotbar Selector",
       "pack_description": "",
       "obvious_conflict": [
         "LimeHotbarSelector",
@@ -258,7 +258,7 @@
     },
     {
       "pack_id": "MagentaHotbarSelector",
-      "pack_name": "Magenta",
+      "pack_name": "Magenta Hotbar Selector",
       "pack_description": "",
       "obvious_conflict": [
         "LimeHotbarSelector",
@@ -279,7 +279,7 @@
     },
     {
       "pack_id": "PinkHotbarSelector",
-      "pack_name": "Pink",
+      "pack_name": "Pink Hotbar Selector",
       "pack_description": "",
       "obvious_conflict": [
         "LimeHotbarSelector",

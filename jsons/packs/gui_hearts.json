@@ -6,7 +6,7 @@
   "packs": [
     {
       "pack_id": "WhiteHearts",
-      "pack_name": "White",
+      "pack_name": "White Hearts",
       "pack_description": "",
       "obvious_conflict": [
         "LightGrayHearts",
@@ -53,7 +53,7 @@
     },
     {
       "pack_id": "LightGrayHearts",
-      "pack_name": "Light Gray",
+      "pack_name": "Light Gray Hearts",
       "pack_description": "",
       "obvious_conflict": [
         "WhiteHearts",
@@ -100,7 +100,7 @@
     },
     {
       "pack_id": "GrayHearts",
-      "pack_name": "Gray",
+      "pack_name": "Gray Hearts",
       "pack_description": "",
       "obvious_conflict": [
         "WhiteHearts",
@@ -147,7 +147,7 @@
     },
     {
       "pack_id": "BlackHearts",
-      "pack_name": "Black",
+      "pack_name": "Black Hearts",
       "pack_description": "",
       "obvious_conflict": [
         "WhiteHearts",
@@ -194,7 +194,7 @@
     },
     {
       "pack_id": "BrownHearts",
-      "pack_name": "Brown",
+      "pack_name": "Brown Hearts",
       "pack_description": "",
       "obvious_conflict": [
         "WhiteHearts",
@@ -241,7 +241,7 @@
     },
     {
       "pack_id": "OrangeHearts",
-      "pack_name": "Orange",
+      "pack_name": "Orange Hearts",
       "pack_description": "",
       "obvious_conflict": [
         "WhiteHearts",
@@ -288,7 +288,7 @@
     },
     {
       "pack_id": "YellowHearts",
-      "pack_name": "Yellow",
+      "pack_name": "Yellow Hearts",
       "pack_description": "",
       "obvious_conflict": [
         "WhiteHearts",
@@ -335,7 +335,7 @@
     },
     {
       "pack_id": "LimeHearts",
-      "pack_name": "Lime",
+      "pack_name": "Lime Hearts",
       "pack_description": "",
       "obvious_conflict": [
         "WhiteHearts",
@@ -382,7 +382,7 @@
     },
     {
       "pack_id": "GreenHearts",
-      "pack_name": "Green",
+      "pack_name": "Green Hearts",
       "pack_description": "",
       "obvious_conflict": [
         "WhiteHearts",
@@ -429,7 +429,7 @@
     },
     {
       "pack_id": "CyanHearts",
-      "pack_name": "Cyan",
+      "pack_name": "Cyan Hearts",
       "pack_description": "",
       "obvious_conflict": [
         "WhiteHearts",
@@ -476,7 +476,7 @@
     },
     {
       "pack_id": "LightBlueHearts",
-      "pack_name": "Light Blue",
+      "pack_name": "Light Blue Hearts",
       "pack_description": "",
       "obvious_conflict": [
         "WhiteHearts",
@@ -523,7 +523,7 @@
     },
     {
       "pack_id": "BlueHearts",
-      "pack_name": "Blue",
+      "pack_name": "Blue Hearts",
       "pack_description": "",
       "obvious_conflict": [
         "WhiteHearts",
@@ -570,7 +570,7 @@
     },
     {
       "pack_id": "PurpleHearts",
-      "pack_name": "Purple",
+      "pack_name": "Purple Hearts",
       "pack_description": "",
       "obvious_conflict": [
         "WhiteHearts",
@@ -617,7 +617,7 @@
     },
     {
       "pack_id": "MagentaHearts",
-      "pack_name": "Magenta",
+      "pack_name": "Magenta Hearts",
       "pack_description": "",
       "obvious_conflict": [
         "WhiteHearts",
@@ -664,7 +664,7 @@
     },
     {
       "pack_id": "PinkHearts",
-      "pack_name": "Pink",
+      "pack_name": "Pink Hearts",
       "pack_description": "",
       "obvious_conflict": [
         "WhiteHearts",

@@ -6,7 +6,7 @@
   "packs": [
     {
       "pack_id": "RedEnchantmentGlint",
-      "pack_name": "Red",
+      "pack_name": "Red Enchantment Glint",
       "pack_description": "",
       "obvious_conflict": [
         "OrangeEnchantmentGlint",
@@ -17,7 +17,7 @@
     },
     {
       "pack_id": "OrangeEnchantmentGlint",
-      "pack_name": "Orange",
+      "pack_name": "Orange Enchantment Glint",
       "pack_description": "",
       "obvious_conflict": [
         "RedEnchantmentGlint",
@@ -28,7 +28,7 @@
     },
     {
       "pack_id": "YellowEnchantmentGlint",
-      "pack_name": "Yellow",
+      "pack_name": "Yellow Enchantment Glint",
       "pack_description": "",
       "obvious_conflict": [
         "RedEnchantmentGlint",
@@ -39,7 +39,7 @@
     },
     {
       "pack_id": "BlueEnchantmentGlint",
-      "pack_name": "Blue",
+      "pack_name": "Blue Enchantment Glint",
       "pack_description": "",
       "obvious_conflict": [
         "RedEnchantmentGlint",
@@ -50,7 +50,7 @@
     },
     {
       "pack_id": "RainbowEnchantmentGlint",
-      "pack_name": "Rainbow",
+      "pack_name": "Rainbow Enchantment Glint",
       "pack_description": "",
       "obvious_conflict": [
         "RedEnchantmentGlint",

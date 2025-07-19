@@ -5,7 +5,7 @@
   "packs": [
     {
       "pack_id": "ClassicPanorama",
-      "pack_name": "Classic",
+      "pack_name": "Classic Panorama",
       "pack_description": "",
       "obvious_conflict": [
         "OceanPanorama",
@@ -43,7 +43,7 @@
     },
     {
       "pack_id": "OceanPanorama",
-      "pack_name": "Ocean",
+      "pack_name": "Ocean Panorama",
       "pack_description": "",
       "obvious_conflict": [
         "ClassicPanorama",
@@ -81,7 +81,7 @@
     },
     {
       "pack_id": "VillagePanorama",
-      "pack_name": "Village",
+      "pack_name": "Village Panorama",
       "pack_description": "",
       "obvious_conflict": [
         "ClassicPanorama",
@@ -119,7 +119,7 @@
     },
     {
       "pack_id": "BeesPanorama",
-      "pack_name": "Bees",
+      "pack_name": "Bees Panorama",
       "pack_description": "",
       "obvious_conflict": [
         "ClassicPanorama",
@@ -157,7 +157,7 @@
     },
     {
       "pack_id": "NetherPanorama",
-      "pack_name": "Nether",
+      "pack_name": "Nether Panorama",
       "pack_description": "",
       "obvious_conflict": [
         "ClassicPanorama",
@@ -195,7 +195,7 @@
     },
     {
       "pack_id": "AmethystGeodePanorama",
-      "pack_name": "Amethyst Geode",
+      "pack_name": "Amethyst Geode Panorama",
       "pack_description": "",
       "obvious_conflict": [
         "ClassicPanorama",
@@ -233,7 +233,7 @@
     },
     {
       "pack_id": "SunsetValleyPanorama",
-      "pack_name": "Sunset Valley",
+      "pack_name": "Sunset Valley Panorama",
       "pack_description": "",
       "obvious_conflict": [
         "ClassicPanorama",
@@ -271,7 +271,7 @@
     },
     {
       "pack_id": "MangroveSwampPanorama",
-      "pack_name": "Mangrove Swamp",
+      "pack_name": "Mangrove Swamp Panorama",
       "pack_description": "",
       "obvious_conflict": [
         "ClassicPanorama",
@@ -309,7 +309,7 @@
     },
     {
       "pack_id": "TheEndPanorama",
-      "pack_name": "The End",
+      "pack_name": "The End Panorama",
       "pack_description": "",
       "obvious_conflict": [
         "ClassicPanorama",
@@ -347,7 +347,7 @@
     },
     {
       "pack_id": "pack.pngPanorama",
-      "pack_name": "pack.png",
+      "pack_name": "pack.png Panorama",
       "pack_description": "",
       "obvious_conflict": [
         "ClassicPanorama",
@@ -385,7 +385,7 @@
     },
     {
       "pack_id": "NostalgiaPanorama",
-      "pack_name": "Nostalgia",
+      "pack_name": "Nostalgia Panorama",
       "pack_description": "",
       "obvious_conflict": [
         "ClassicPanorama",
@@ -423,7 +423,7 @@
     },
     {
       "pack_id": "OceansideExtremeHillsPanorama",
-      "pack_name": "Oceanside Extreme Hills",
+      "pack_name": "Oceanside Extreme Hills Panorama",
       "pack_description": "",
       "obvious_conflict": [
         "ClassicPanorama",
@@ -461,7 +461,7 @@
     },
     {
       "pack_id": "LakesideSunsetPanorama",
-      "pack_name": "Lakeside Sunset",
+      "pack_name": "Lakeside Sunset Panorama",
       "pack_description": "",
       "obvious_conflict": [
         "ClassicPanorama",
@@ -499,7 +499,7 @@
     },
     {
       "pack_id": "UndergroundLavaPoolPanorama",
-      "pack_name": "Underground Lava Pool",
+      "pack_name": "Underground Lava Pool Panorama",
       "pack_description": "",
       "obvious_conflict": [
         "ClassicPanorama",
@@ -537,7 +537,7 @@
     },
     {
       "pack_id": "AcaciaVillagePanorama",
-      "pack_name": "Acacia Village",
+      "pack_name": "Acacia Village Panorama",
       "pack_description": "",
       "obvious_conflict": [
         "ClassicPanorama",
@@ -575,7 +575,7 @@
     },
     {
       "pack_id": "CherryGrovePanorama",
-      "pack_name": "Cherry Grove",
+      "pack_name": "Cherry Grove Panorama",
       "pack_description": "",
       "obvious_conflict": [
         "ClassicPanorama",
@@ -613,7 +613,7 @@
     },
     {
       "pack_id": "Halloween2021Panorama",
-      "pack_name": "Halloween 2021",
+      "pack_name": "Halloween 2021 Panorama",
       "pack_description": "",
       "obvious_conflict": [
         "ClassicPanorama",
@@ -651,7 +651,7 @@
     },
     {
       "pack_id": "Halloween2022Panorama",
-      "pack_name": "Halloween 2022",
+      "pack_name": "Halloween 2022 Panorama",
       "pack_description": "",
       "obvious_conflict": [
         "ClassicPanorama",
@@ -688,7 +688,7 @@
     },
     {
       "pack_id": "TrialChambersPanorama",
-      "pack_name": "Trial Chambers",
+      "pack_name": "Trial Chambers Panorama",
       "pack_description": "",
       "obvious_conflict": [
         "ClassicPanorama",
@@ -726,7 +726,7 @@
     },
     {
       "pack_id": "SpringToLifePanorama",
-      "pack_name": "Spring to Life Panorama",
+      "pack_name": "Spring to Life Panorama Panorama",
       "pack_description": "Replaces the default Minecraft menu panorama with a 360° view of a forest and desert (from 1.21.70)",
       "obvious_conflict": [
         "ClassicPanorama",
@@ -765,7 +765,7 @@
     },
     {
       "pack_id": "PaleGardenPanorama",
-      "pack_name": "Pale Garden (Winter Drop)",
+      "pack_name": "Pale Garden (Winter Drop) Panorama",
       "pack_description": "",
       "obvious_conflict": [
         "ClassicPanorama",
@@ -803,7 +803,7 @@
     },
     {
       "pack_id": "TU69TutorialWorldLegacyConsolePanorama",
-      "pack_name": "TU69 Tutorial World (Legacy Console)",
+      "pack_name": "TU69 Tutorial World (Legacy Console) Panorama",
       "pack_description": "",
       "obvious_conflict": [
         "ClassicPanorama",
@@ -841,7 +841,7 @@
     },
     {
       "pack_id": "Stridey'sResourcePackDevWorldPanorama",
-      "pack_name": "Stridey's RP Development World",
+      "pack_name": "Stridey's RP Development World Panorama",
       "pack_description": "",
       "obvious_conflict": [
         "ClassicPanorama",
