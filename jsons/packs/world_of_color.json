@@ -6,7 +6,8 @@
     {
       "pack_id": "UniqueDyes",
       "pack_name": "Unique Dyes",
-      "pack_description": "Adds variation to dyes by making each one different."
+      "pack_description": "Adds variation to dyes by making each one different.",
+      "priority": 1
     }
   ]
 }
