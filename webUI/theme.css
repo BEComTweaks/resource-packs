@@ -415,16 +415,6 @@ body.miner.hideall {
   }
 }
 
-.container,
-.download-container,
-.footer-container,
-.image-container,
-.half-dark {
-  transition:
-    transform 1s ease,
-    opacity 1s ease;
-}
-
 .search-result-item {
   display: flex;
   align-items: center;
@@ -1350,5 +1340,17 @@ input:checked + .slider:before {
   }
   .pinger-anim span::before {
     transition: background var(--transition-duration) ease-in-out;
+  }
+  body.miner {
+    .container,
+    .download-container,
+    .footer-container,
+    .image-container,
+    .half-dark,
+    #startMining {
+      transition:
+        transform 1s ease,
+        opacity 1s ease;
+    }
   }
 }
