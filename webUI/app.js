@@ -271,7 +271,14 @@ function updateSelectedConflictsActiveColor() {
 
 function updateDownloadButton(st) {
   const downloadButton = document.querySelector(".download-selected-button");
-  if (st["raw"].length == 0) {
+  if (
+    st["raw"].length == 0 ||
+    (document.querySelector(
+      ".devtools-toggle-mine-then-craft input[type='checkbox']",
+    ).checked &&
+      Number(numberElement.textContent) <
+        getSelectedTweaks()["raw"].length * 20)
+  ) {
     downloadButton.disabled = true;
   } else {
     downloadButton.disabled = false;
@@ -454,7 +461,8 @@ function toggleCategory(label) {
 
 // i wonder what this is for
 function downloadSelectedTweaks() {
-  // set min_engine_version
+  // get selected tweaks
+  const jsonData = getSelectedTweaks();
   document.querySelector(".loading-screen").style =
     "opacity: 1; pointer-events: all;";
   var mcVersion = document.getElementById("mev").value;
@@ -474,8 +482,6 @@ function downloadSelectedTweaks() {
   }
   packName = packName.replaceAll("/", "-");
   consoler("download", "cyan", `Pack Name is set to ${packName}`, "white");
-  // get selected tweaks
-  jsonData = getSelectedTweaks();
   // fetch
   fetchPack("https", jsonData, packName, mcVersion);
 }
@@ -545,6 +551,16 @@ function fetchPack(protocol, jsonData, packName, mcVersion) {
       OreUI.becomeEnabled(downloadbutton);
       statusElement.innerText = "";
       document.querySelector(".loading-screen").removeAttribute("style");
+      // do the minethencraft stuff
+      const numberElement = document.querySelector(
+        "#mineThenCraftPoints > .number",
+      );
+      // if it fails, skill issue
+      numberElement.innerText =
+        Number(numberElement.textContent) - jsonData["raw"].length * 20;
+      if (Number(numberElement.textContent) > jsonData["raw"].length * 20) {
+        document.querySelector(".download-selected-button");
+      }
     })
     .catch(async (error) => {
       consoler("error", "red", `Error Dump: ${error}`, "white");
