@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Miner.js Unit Tests</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+            line-height: 1.6;
+        }
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 25px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .header h1 {
+            margin: 0 0 10px 0;
+            font-size: 2.2em;
+        }
+        .header p {
+            margin: 0;
+            opacity: 0.9;
+            font-size: 1.1em;
+        }
+        .test-container {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+        .console-output {
+            background: #1e1e1e;
+            color: #e6e6e6;
+            padding: 20px;
+            border-radius: 8px;
+            font-family: 'Consolas', 'Monaco', 'courier new', monospace;
+            font-size: 13px;
+            max-height: 600px;
+            overflow-y: auto;
+            white-space: pre-wrap;
+            border: 1px solid #333;
+        }
+        .controls {
+            margin-bottom: 20px;
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+        .run-button {
+            background: linear-gradient(135deg, #4CAF50, #45a049);
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        .run-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(76, 175, 80, 0.3);
+        }
+        .clear-button {
+            background: linear-gradient(135deg, #f44336, #da190b);
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        .clear-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(244, 67, 54, 0.3);
+        }
+        .status {
+            padding: 8px 12px;
+            border-radius: 4px;
+            font-weight: 600;
+            margin-left: auto;
+        }
+        .status.running {
+            background: #fff3cd;
+            color: #856404;
+            border: 1px solid #ffeaa7;
+        }
+        .status.success {
+            background: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+        .status.failed {
+            background: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+        .coverage-list {
+            list-style: none;
+            padding: 0;
+        }
+        .coverage-list li {
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+        }
+        .coverage-list li:last-child {
+            border-bottom: none;
+        }
+        .coverage-list strong {
+            color: #333;
+            font-weight: 600;
+        }
+        h3 {
+            color: #333;
+            margin-top: 0;
+            font-size: 1.3em;
+        }
+        .info-box {
+            background: #e3f2fd;
+            border-left: 4px solid #2196f3;
+            padding: 15px;
+            border-radius: 4px;
+            margin-bottom: 20px;
+        }
+        .info-box strong {
+            color: #1976d2;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🔨 Miner.js Unit Tests</h1>
+        <p>Comprehensive test suite for the mining functionality in webUI/miner.js</p>
+    </div>
+
+    <div class="test-container">
+        <div class="info-box">
+            <strong>Testing Framework:</strong> Simple browser-based testing (no external dependencies)<br>
+            <strong>Target File:</strong> webUI/miner.js<br>
+            <strong>Total Test Cases:</strong> 40+ comprehensive tests covering all functionality
+        </div>
+        
+        <div class="controls">
+            <button class="run-button" onclick="runTests()">🚀 Run All Tests</button>
+            <button class="clear-button" onclick="clearConsole()">🧹 Clear Console</button>
+            <div id="status" class="status" style="display: none;"></div>
+        </div>
+        
+        <h3>Console Output:</h3>
+        <div id="console-output" class="console-output">
+            Click "Run All Tests" to execute the comprehensive test suite...
+        </div>
+    </div>
+
+    <div class="test-container">
+        <h3>📋 Test Coverage Overview</h3>
+        <ul class="coverage-list">
+            <li><strong>Miner Toggle Functionality:</strong> Tests for checkbox behavior, body class changes, download button state management based on points vs threshold calculations</li>
+            <li><strong>toggleViewAll Function:</strong> Tests for view state management, UI element updates, and OreUI interaction handling</li>
+            <li><strong>Tile Click Event Handlers:</strong> Tests for point calculation across all 8 ore types, point accumulation, and button state updates</li>
+            <li><strong>Integration Tests:</strong> Complete end-to-end workflow testing, rapid state changes, and mixed interaction scenarios</li>
+            <li><strong>Error Handling:</strong> Edge cases including missing DOM elements, malformed data, null/undefined values, and boundary conditions</li>
+            <li><strong>Boundary Value Testing:</strong> Threshold edge cases, zero values, negative numbers, and floating point precision</li>
+        </ul>
+    </div>
+
+    <div class="test-container">
+        <h3>🎯 Key Test Scenarios</h3>
+        <ul class="coverage-list">
+            <li><strong>Point System Validation:</strong> Stone(1), Copper/Coal(2), Iron(4), Lapis/Redstone(6), Emerald(8), Diamond(10)</li>
+            <li><strong>Threshold Logic:</strong> Download button disabled when points &lt; (selectedTweaks.length * 20)</li>
+            <li><strong>Toggle States:</strong> Mining enabled/disabled, body class changes, consoler logging</li>
+            <li><strong>State Management:</strong> OreUI active/inactive states, element text updates</li>
+            <li><strong>Data Validation:</strong> Non-numeric inputs, extreme values, null/undefined handling</li>
+        </ul>
+    </div>
+
+    <script>
+        // Capture console output
+        const originalLog = console.log;
+        const originalError = console.error;
+        const originalGroup = console.group;
+        const originalGroupEnd = console.groupEnd;
+        let consoleOutput = '';
+        let testStatus = 'idle';
+
+        function updateStatus(status, message) {
+            const statusEl = document.getElementById('status');
+            statusEl.style.display = 'block';
+            statusEl.className = `status ${status}`;
+            statusEl.textContent = message;
+        }
+
+        function captureConsole() {
+            console.log = function(...args) {
+                const message = args.join(' ');
+                consoleOutput += message + '\n';
+                originalLog.apply(console, args);
+                updateConsoleOutput();
+                
+                // Parse test results
+                if (message.includes('Test Results:')) {
+                    const match = message.match(/(\d+) passed, (\d+) failed/);
+                    if (match) {
+                        const passed = parseInt(match[1]);
+                        const failed = parseInt(match[2]);
+                        if (failed === 0) {
+                            updateStatus('success', `✅ All ${passed} tests passed!`);
+                        } else {
+                            updateStatus('failed', `❌ ${failed} failed, ${passed} passed`);
+                        }
+                    }
+                }
+            };
+
+            console.error = function(...args) {
+                consoleOutput += '❌ ERROR: ' + args.join(' ') + '\n';
+                originalError.apply(console, args);
+                updateConsoleOutput();
+            };
+
+            console.group = function(...args) {
+                consoleOutput += '\n📂 ' + args.join(' ') + '\n';
+                originalGroup.apply(console, args);
+                updateConsoleOutput();
+            };
+
+            console.groupEnd = function() {
+                consoleOutput += '\n';
+                originalGroupEnd.apply(console);
+                updateConsoleOutput();
+            };
+        }
+
+        function updateConsoleOutput() {
+            const outputEl = document.getElementById('console-output');
+            outputEl.textContent = consoleOutput;
+            // Auto-scroll to bottom
+            outputEl.scrollTop = outputEl.scrollHeight;
+        }
+
+        function runTests() {
+            consoleOutput = '';
+            testStatus = 'running';
+            updateStatus('running', '🔄 Running tests...');
+            document.getElementById('console-output').textContent = 'Initializing test suite...\n';
+            
+            // Remove any existing test script
+            const existingScript = document.getElementById('test-script');
+            if (existingScript) {
+                existingScript.remove();
+            }
+            
+            // Load and run the test script
+            const script = document.createElement('script');
+            script.id = 'test-script';
+            script.src = 'miner.test.js';
+            script.onload = function() {
+                console.log('\n✨ Test execution completed!');
+                console.log('\n📝 Summary: Comprehensive unit tests for webUI/miner.js functionality');
+            };
+            script.onerror = function() {
+                console.error('❌ Failed to load test script: miner.test.js');
+                updateStatus('failed', '❌ Failed to load test script');
+            };
+            document.head.appendChild(script);
+        }
+
+        function clearConsole() {
+            consoleOutput = '';
+            document.getElementById('console-output').textContent = 'Click "Run All Tests" to execute the comprehensive test suite...';
+            document.getElementById('status').style.display = 'none';
+        }
+
+        // Initialize console capture
+        captureConsole();
+        
+        // Auto-run tests on page load (optional)
+        // window.addEventListener('load', runTests);
+    </script>
+</body>
+</html>

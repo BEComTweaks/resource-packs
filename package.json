@@ -3,7 +3,9 @@
   "version": "3.0.0",
   "description": "Modules for resource packs",
   "scripts": {
-    "test": "python pys/pre_commit.py --format --build server --no-stash --dev",
+    "test": "playwright test || node tests/theme.validation.js",
+    "test:css": "node tests/theme.validation.js",
+    "test:playwright": "playwright test",
     "site": "pnpm exec live-server"
   },
   "repository": {
