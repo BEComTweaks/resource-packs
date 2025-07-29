@@ -552,14 +552,20 @@ function fetchPack(protocol, jsonData, packName, mcVersion) {
       statusElement.innerText = "";
       document.querySelector(".loading-screen").removeAttribute("style");
       // do the minethencraft stuff
-      const numberElement = document.querySelector(
-        "#mineThenCraftPoints > .number",
-      );
-      // if it fails, skill issue
-      numberElement.innerText =
-        Number(numberElement.textContent) - jsonData["raw"].length * 20;
-      if (Number(numberElement.textContent) > jsonData["raw"].length * 20) {
-        document.querySelector(".download-selected-button");
+      if (
+        document.querySelector(
+          ".devtools-toggle-mine-then-craft input[type='checkbox']",
+        ).checked
+      ) {
+        const numberElement = document.querySelector(
+          "#mineThenCraftPoints > .number",
+        );
+        // if it fails, skill issue
+        numberElement.innerText =
+          Number(numberElement.textContent) - jsonData["raw"].length * 20;
+        if (Number(numberElement.textContent) > jsonData["raw"].length * 20) {
+          document.querySelector(".download-selected-button");
+        }
       }
     })
     .catch(async (error) => {
