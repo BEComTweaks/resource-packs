@@ -8,14 +8,7 @@ document
     );
     if (this.checked) {
       document.querySelector("body").className = "miner";
-      if (
-        Number(numberElement.textContent) <
-        getSelectedTweaks()["raw"].length * 20
-      ) {
-        document.querySelector(".download-selected-button").disabled = true;
-      } else {
-        document.querySelector(".download-selected-button").disabled = false;
-      }
+      updateDownloadButton(getSelectedTweaks());
     } else {
       document.querySelector("body").className = "";
       document.querySelector(".download-selected-button").disabled = false;
