@@ -134,7 +134,7 @@
    </div>
    <div class="devtools-toggle-mine-then-craft">
     <label class="switch">
-     <input disabled="" type="checkbox"/>
+     <input checked="" type="checkbox"/>
      <span class="slider">
      </span>
     </label>
@@ -174,9 +174,17 @@
     Unselect?
    </div>
   </div>
+  <div id="mineThenCraftPoints" oreui-color="purple" oreui-type="general">
+   <span class="number">
+    0
+   </span>
+   points
+  </div>
   <div class="capture-exit" onclick="closePanel();">
   </div>
   <script src="extra.js">
+  </script>
+  <script src="miner.js">
   </script>
   <div class="image-container" onclick="showDevToolsPanel();">
    <img alt="Resource Packs" id="title" src="images/title.png"/>
@@ -185,6 +193,9 @@
    <div class="search-container">
     <input id="searchBar" oninput="filterPacks()" oreui-color="dark" oreui-type="input" placeholder="Search for a pack..." type="text"/>
     <div class="search-results" id="searchResults" oreui-color="dark" oreui-type="general">
+    </div>
+    <div id="startMining" onclick="toggleViewAll(this)" oreui-active-color="green" oreui-color="dark" oreui-type="button" style="--bezel-size: 0px">
+     Start Mining
     </div>
    </div>
    <div class="category">
@@ -7963,46 +7974,44 @@
    </div>
   </div>
   <div class="download-container">
-   <input id="fileNameInput" oreui-color="dark" oreui-type="input" placeholder="Enter Pack name" type="text">
-    <select id="mev" name="mev" oreui-color="dark" oreui-type="general">
-     <option value="1.21.70">
-      1.21.70
-     </option>
-     <option value="1.21.0">
-      1.21
-     </option>
-     <option value="1.20.0">
-      1.20
-     </option>
-     <option value="1.19.0">
-      1.19
-     </option>
-     <option value="1.18.0">
-      1.18
-     </option>
-     <option value="1.17.0">
-      1.17
-     </option>
-     <option value="1.16.0">
-      1.16
-     </option>
-    </select>
-    <div class="zipinputcontainer" oreui-color="purple" oreui-type="button">
-     <input id="zipInput" type="file">
-      <span class="selectedFile">
-       Upload Pack
-      </span>
-     </input>
+   <input id="fileNameInput" oreui-color="dark" oreui-type="input" placeholder="Enter Pack name" type="text"/>
+   <select id="mev" name="mev" oreui-color="dark" oreui-type="general">
+    <option value="1.21.70">
+     1.21.70
+    </option>
+    <option value="1.21.0">
+     1.21
+    </option>
+    <option value="1.20.0">
+     1.20
+    </option>
+    <option value="1.19.0">
+     1.19
+    </option>
+    <option value="1.18.0">
+     1.18
+    </option>
+    <option value="1.17.0">
+     1.17
+    </option>
+    <option value="1.16.0">
+     1.16
+    </option>
+   </select>
+   <div class="zipinputcontainer" oreui-color="purple" oreui-type="button">
+    <input id="zipInput" type="file"/>
+    <span class="selectedFile">
+     Upload Pack
+    </span>
+   </div>
+   <button class="download-selected-button" disabled="" onclick="downloadSelectedTweaks()" oreui-color="dark" oreui-type="button">
+    Download
+   </button>
+   <div id="selected-tweaks" oreui-color="dark" oreui-type="general">
+    <div class="tweak-list-pack" no-pack="">
+     Select some packs and see them appear here!
     </div>
-    <button class="download-selected-button" disabled="" onclick="downloadSelectedTweaks()" oreui-color="dark" oreui-type="button">
-     Download
-    </button>
-    <div id="selected-tweaks" oreui-color="dark" oreui-type="general">
-     <div class="tweak-list-pack" no-pack="">
-      Select some packs and see them appear here!
-     </div>
-    </div>
-   </input>
+   </div>
   </div>
   <script src="app.js">
   </script>

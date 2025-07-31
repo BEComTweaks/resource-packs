@@ -1,218 +1,175 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta
-      content="Bedrock Edition Community Tweaks Resource Packs"
-      name="author"
-    />
-    <meta
-      content="A Resource Pack selector for Minecraft: Bedrock Edition. Unofficially updated by BEComTweaks on GitHub"
-      name="description"
-    />
-    <meta charset="utf-8" />
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>Resource Packs</title>
-    <link href="images/icon.png" rel="icon" type="image/x-icon" />
-    <link href="theme.css" rel="stylesheet" />
-    <script src="extras/jszip.min.js"></script>
-    <script src="extras/lz-string.min.js"></script>
-    <link href="app.js" rel="preload" as="script">
-  </head>
-  <body>
-    <ul class="large-nav">
-      <li><a class="nav-link" href="https://becomtweaks.github.io">Home</a></li>
-      <li>
-        <a class="nav-link" href="https://becomtweaks.gitbook.io/docs">Docs</a>
-      </li>
-      <li>
-        <a class="nav-link" href="https://becomtweaks.github.io/discord"
-          >Discord</a
-        >
-      </li>
-      <li style="float: right">
-        <a class="nav-link" href="https://becomtweaks.github.io/crafting-tweaks"
-          >Crafting Tweaks</a
-        >
-      </li>
-      <li style="float: right">
-        <a class="nav-link" href="https://becomtweaks.github.io/behaviour-packs"
-          >Behaviour Packs</a
-        >
-      </li>
-      <li style="float: right">
-        <a class="nav-link" href="https://becomtweaks.github.io/resource-packs"
-          >Resource Packs</a
-        >
-      </li>
-    </ul>
-    <ul class="small-nav">
-      <li><a class="nav-link" href="https://becomtweaks.github.io">Home</a></li>
-      <li style="float: right">
-        <a class="nav-link" href="https://becomtweaks.github.io/crafting-tweaks"
-          >CTs</a
-        >
-      </li>
-      <li style="float: right">
-        <a class="nav-link" href="https://becomtweaks.github.io/behaviour-packs"
-          >BPs</a
-        >
-      </li>
-      <li style="float: right">
-        <a class="nav-link" href="https://becomtweaks.github.io/resource-packs"
-          >RPs</a
-        >
-      </li>
-    </ul>
-    <!--The full screen elements-->
-    <div id="background-container"></div>
-    <div class="half-dark"></div>
-    <div class="loading-screen">
-      <div class="loader">
-        <div class="box1"></div>
-        <div class="box2"></div>
-        <div class="box3"></div>
-      </div>
-      <p class="loading-status"></p>
+
+<head>
+  <meta content="Bedrock Edition Community Tweaks Resource Packs" name="author">
+  <meta content="A Resource Pack selector for Minecraft: Bedrock Edition. Unofficially updated by BEComTweaks on GitHub"
+    name="description">
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Resource Packs</title>
+  <link href="images/icon.png" rel="icon" type="image/x-icon">
+  <link href="theme.css" rel="stylesheet">
+  <script src="extras/jszip.min.js"></script>
+  <script src="extras/lz-string.min.js"></script>
+  <link href="app.js" rel="preload" as="script">
+</head>
+
+<body>
+  <ul class="large-nav">
+    <li><a class="nav-link" href="https://becomtweaks.github.io">Home</a></li>
+    <li>
+      <a class="nav-link" href="https://becomtweaks.gitbook.io/docs">Docs</a>
+    </li>
+    <li>
+      <a class="nav-link" href="https://becomtweaks.github.io/discord">Discord</a>
+    </li>
+    <li style="float: right">
+      <a class="nav-link" href="https://becomtweaks.github.io/crafting-tweaks">Crafting Tweaks</a>
+    </li>
+    <li style="float: right">
+      <a class="nav-link" href="https://becomtweaks.github.io/behaviour-packs">Behaviour Packs</a>
+    </li>
+    <li style="float: right">
+      <a class="nav-link" href="https://becomtweaks.github.io/resource-packs">Resource Packs</a>
+    </li>
+  </ul>
+  <ul class="small-nav">
+    <li><a class="nav-link" href="https://becomtweaks.github.io">Home</a></li>
+    <li style="float: right">
+      <a class="nav-link" href="https://becomtweaks.github.io/crafting-tweaks">CTs</a>
+    </li>
+    <li style="float: right">
+      <a class="nav-link" href="https://becomtweaks.github.io/behaviour-packs">BPs</a>
+    </li>
+    <li style="float: right">
+      <a class="nav-link" href="https://becomtweaks.github.io/resource-packs">RPs</a>
+    </li>
+  </ul>
+  <!--The full screen elements-->
+  <div id="background-container"></div>
+  <div class="half-dark"></div>
+  <div class="loading-screen">
+    <div class="loader">
+      <div class="box1"></div>
+      <div class="box2"></div>
+      <div class="box3"></div>
     </div>
-    <div class="devtools" oreui-type="general" oreui-color="dark">
-      <h3>Devtools</h3>
-      <div class="devtools-toggle-console">
-        <label class="switch">
-          <input type="checkbox" />
-          <span class="slider"></span>
-        </label>
-        <p class="devtools-toggle-desc">Enable Console</p>
+    <p class="loading-status"></p>
+  </div>
+  <div class="devtools" oreui-type="general" oreui-color="dark">
+    <h3>Devtools</h3>
+    <div class="devtools-toggle-console">
+      <label class="switch">
+        <input type="checkbox">
+        <span class="slider"></span>
+      </label>
+      <p class="devtools-toggle-desc">Enable Console</p>
+    </div>
+    <code class="devtools-console" oreui-color="dark">
+      <h3>Console</h3>
+      <div class="devtools-console-content"></div>
+    </code>
+    <div class="devtools-toggle-tweak-per-column">
+      <label class="switch">
+        <input type="checkbox">
+        <span class="slider"> </span>
+      </label>
+      <div class="devtools-toggle-desc">
+        <p>Use a custom width for each column</p>
+        <input disabled="" oreui-color="dark" oreui-type="input" placeholder="Enter a number" type="number">
       </div>
-      <code class="devtools-console" oreui-color="dark">
-        <h3>Console</h3>
-        <div class="devtools-console-content"></div>
+    </div>
+    <div class="devtools-toggle-save-to-cache">
+      <label class="switch">
+        <input type="checkbox" disabled>
+        <span class="slider"></span>
+      </label>
+      <p class="devtools-toggle-desc">Save settings to the browser cache</p>
+    </div>
+    <div class="devtools-toggle-mine-then-craft">
+      <label class="switch">
+        <input type="checkbox" checked>
+        <span class="slider"></span>
+      </label>
+      <p class="devtools-toggle-desc">Mine then craft</p>
+    </div>
+    <div class="devtools-pinger">
+      <div class="devtools-pinger-inner">
+        <div class="pinger-anim">
+          <span></span>
+        </div>
+      </div>
+      <code class="devtools-console" style="display: flex">
+        <h3>Ping Status</h3>
+        <div class="devtools-pinger-console-content">
+          <p class="devtools-pinger-console-content-general">
+            Internet Connection: <span></span>
+          </p>
+          <p class="devtools-pinger-console-content-server">
+            Server Connection: <span></span>
+          </p>
+        </div>
       </code>
-      <div class="devtools-toggle-tweak-per-column">
-        <label class="switch">
-          <input type="checkbox" />
-          <span class="slider"> </span>
-        </label>
-        <div class="devtools-toggle-desc">
-          <p>Use a custom width for each column</p>
-          <input
-            disabled=""
-            oreui-color="dark"
-            oreui-type="input"
-            placeholder="Enter a number"
-            type="number"
-          />
-        </div>
-      </div>
-      <div class="devtools-toggle-save-to-cache">
-        <label class="switch">
-          <input type="checkbox" disabled />
-          <span class="slider"></span>
-        </label>
-        <p class="devtools-toggle-desc">Save settings to the browser cache</p>
-      </div>
-      <div class="devtools-toggle-mine-then-craft">
-        <label class="switch">
-          <input type="checkbox" disabled />
-          <span class="slider"></span>
-        </label>
-        <p class="devtools-toggle-desc">Mine then craft</p>
-      </div>
-      <div class="devtools-pinger">
-        <div class="devtools-pinger-inner">
-          <div class="pinger-anim">
-            <span></span>
-          </div>
-        </div>
-        <code class="devtools-console" style="display: flex">
-          <h3>Ping Status</h3>
-          <div class="devtools-pinger-console-content">
-            <p class="devtools-pinger-console-content-general">
-              Internet Connection: <span></span>
-            </p>
-            <p class="devtools-pinger-console-content-server">
-              Server Connection:   <span></span>
-            </p>
-          </div>
-        </code>
+    </div>
+  </div>
+  <div class="preselected" oreui-type="general" oreui-color="dark">
+    Pre-selected Tweaks!
+    <div class="preselected-unselect"
+      onclick="processJsonData(getSelectedTweaks(),'unselect'); this.parentElement.style.top = '-20vh'; this.parentElement.innerText = 'Unselected!';">
+      Unselect?
+    </div>
+  </div>
+  <div oreui-color="purple" oreui-type="general" id="mineThenCraftPoints"><span class="number">0</span> points</div>
+  <div class="capture-exit" onclick="closePanel();"></div>
+  <script src="extra.js"></script>
+  <script src="miner.js"></script>
+  <div class="image-container" onclick="showDevToolsPanel();">
+    <img alt="Resource Packs" id="title" src="images/title.png">
+  </div>
+  <div class="container">
+    <div class="search-container">
+      <input id="searchBar" oninput="filterPacks()" oreui-color="dark" oreui-type="input"
+        placeholder="Search for a pack..." type="text">
+      <div class="search-results" id="searchResults" oreui-color="dark" oreui-type="general"></div>
+      <div oreui-type="button" oreui-color="dark" oreui-active-color="green" id="startMining" style="--bezel-size: 0px" onclick="toggleViewAll(this)">Start Mining</div>
+    </div>
+    <!--Packs-->
+  </div>
+  <div class="download-container">
+    <input id="fileNameInput" placeholder="Enter Pack name" type="text" oreui-color="dark" oreui-type="input">
+    <select id="mev" name="mev" oreui-color="dark" oreui-type="general">
+      <option value="1.21.70">1.21.70</option>
+      <option value="1.21.0">1.21</option>
+      <option value="1.20.0">1.20</option>
+      <option value="1.19.0">1.19</option>
+      <option value="1.18.0">1.18</option>
+      <option value="1.17.0">1.17</option>
+      <option value="1.16.0">1.16</option>
+    </select>
+    <div class="zipinputcontainer" oreui-type="button" oreui-color="purple">
+      <input id="zipInput" type="file">
+      <span class="selectedFile">Upload Pack</span>
+    </div>
+    <button class="download-selected-button" onclick="downloadSelectedTweaks()" disabled oreui-type="button"
+      oreui-color="dark">
+      Download
+    </button>
+    <div id="selected-tweaks" oreui-color="dark" oreui-type="general">
+      <div class="tweak-list-pack" no-pack>
+        Select some packs and see them appear here!
       </div>
     </div>
-    <div class="preselected" oreui-type="general" oreui-color="dark">
-      Pre-selected Tweaks!
-      <div
-        class="preselected-unselect"
-        onclick="processJsonData(getSelectedTweaks(),'unselect'); this.parentElement.style.top = '-20vh'; this.parentElement.innerText = 'Unselected!';"
-      >
-        Unselect?
-      </div>
+  </div>
+  <script src="app.js"></script>
+  <footer class="footer-container">
+    <div class="credits-footer" oreui-type="general" oreui-color="dark">
+      <!--credits-->
+      <p>
+        <a href="https://github.com/BEComTweaks/resource-packs">GitHub</a>
+      </p>
     </div>
-    <div class="capture-exit" onclick="closePanel();"></div>
-    <script src="extra.js"></script>
-    <div class="image-container" onclick="showDevToolsPanel();">
-      <img alt="Resource Packs" id="title" src="images/title.png" />
-    </div>
-    <div class="container">
-      <div class="search-container">
-        <input
-          id="searchBar"
-          oninput="filterPacks()"
-          oreui-color="dark"
-          oreui-type="input"
-          placeholder="Search for a pack..."
-          type="text"
-        />
-        <div
-          class="search-results"
-          id="searchResults"
-          oreui-color="dark"
-          oreui-type="general"
-        ></div>
-      </div>
-      <!--Packs-->
-    </div>
-    <div class="download-container">
-      <input
-        id="fileNameInput"
-        placeholder="Enter Pack name"
-        type="text"
-        oreui-color="dark"
-        oreui-type="input"
-      />
-      <select id="mev" name="mev" oreui-color="dark" oreui-type="general">
-        <option value="1.21.70">1.21.70</option>
-        <option value="1.21.0">1.21</option>
-        <option value="1.20.0">1.20</option>
-        <option value="1.19.0">1.19</option>
-        <option value="1.18.0">1.18</option>
-        <option value="1.17.0">1.17</option>
-        <option value="1.16.0">1.16</option>
-      </select>
-      <div class="zipinputcontainer" oreui-type="button" oreui-color="purple">
-        <input id="zipInput" type="file" />
-        <span class="selectedFile">Upload Pack</span>
-      </div>
-      <button
-        class="download-selected-button"
-        onclick="downloadSelectedTweaks()"
-        disabled
-        oreui-type="button"
-        oreui-color="dark"
-      >
-        Download
-      </button>
-      <div id="selected-tweaks" oreui-color="dark" oreui-type="general">
-        <div class="tweak-list-pack" no-pack>
-          Select some packs and see them appear here!
-        </div>
-      </div>
-    </div>
-    <script src="app.js"></script>
-    <footer class="footer-container">
-      <div class="credits-footer" oreui-type="general" oreui-color="dark">
-        <!--credits-->
-        <p>
-          <a href="https://github.com/BEComTweaks/resource-packs">GitHub</a>
-        </p>
-      </div>
-    </footer>
-  </body>
+  </footer>
+</body>
+
 </html>

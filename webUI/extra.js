@@ -1,15 +1,15 @@
 /* other vars necessary */
 const serverip = "localhost";
 const textures = [
-  { src: "images/blocks/stone.png", probability: 0.618 },
-  { src: "images/blocks/copper_ore.png", probability: 0.128 },
-  { src: "images/blocks/coal_ore.png", probability: 0.128 },
-  { src: "images/blocks/iron_ore.png", probability: 0.064 },
-  { src: "images/blocks/lapis_ore.png", probability: 0.032 },
-  { src: "images/blocks/redstone_ore.png", probability: 0.016 },
-  { src: "images/blocks/gold_ore.png", probability: 0.008 },
-  { src: "images/blocks/emerald_ore.png", probability: 0.004 },
-  { src: "images/blocks/diamond_ore.png", probability: 0.002 },
+  { src: "stone.png", probability: 0.59 },
+  { src: "copper_ore.png", probability: 0.128 },
+  { src: "coal_ore.png", probability: 0.128 },
+  { src: "iron_ore.png", probability: 0.064 },
+  { src: "lapis_ore.png", probability: 0.032 },
+  { src: "redstone_ore.png", probability: 0.032 },
+  { src: "gold_ore.png", probability: 0.016 },
+  { src: "emerald_ore.png", probability: 0.008 },
+  { src: "diamond_ore.png", probability: 0.002 },
 ];
 
 /* consoler object */
@@ -50,8 +50,9 @@ function selectTexture() {
       return texture.src;
     }
   }
+  // on the off chance that it breaks
+  return "stone.png";
 }
-
 function createTiles() {
   const container = document.getElementById("background-container");
   const numColumns = Math.ceil(window.innerWidth / 100) + 2;
@@ -63,7 +64,9 @@ function createTiles() {
     for (let j = 0; j < numRows; j++) {
       const tile = document.createElement("div");
       tile.className = "tile";
-      tile.style.backgroundImage = `url("${selectTexture()}")`;
+      const tile_image = `${selectTexture()}`;
+      tile.style.backgroundImage = `url("images/blocks/${tile_image}")`;
+      tile.dataset.type = tile_image;
       rowDiv.appendChild(tile);
     }
     container.appendChild(rowDiv);
@@ -91,6 +94,13 @@ function createTiles() {
 createTiles();
 
 window.addEventListener("resize", createTiles);
+
+// utility for miner.js
+function updateTile(element) {
+  const tile_image = `${selectTexture()}`;
+  element.style.backgroundImage = `url("images/blocks/${tile_image}")`;
+  element.dataset.type = tile_image;
+}
 
 // Handle Loading Screen
 const loading_screen_element = document.querySelector(".loading-screen");
