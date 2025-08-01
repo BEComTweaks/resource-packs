@@ -276,7 +276,9 @@ function updateDownloadButton(st) {
     (document.querySelector(
       ".devtools-toggle-mine-then-craft input[type='checkbox']",
     ).checked &&
-      Number(numberElement.textContent) <
+      Number(document.querySelector(
+      "#mineThenCraftPoints > .number",
+    ).textContent) <
         getSelectedTweaks()["raw"].length * 20)
   ) {
     downloadButton.disabled = true;
