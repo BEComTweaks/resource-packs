@@ -68,6 +68,9 @@ document.querySelectorAll("#background-container .tile").forEach((element) => {
         case "redstone_ore.png":
           numberElement.textContent = Number(numberElement.textContent) + 6;
           break;
+        case "gold_ore.png":
+          numberElement.textContent = Number(numberElement.textContent) + 8;
+          break
         case "emerald_ore.png":
           numberElement.textContent = Number(numberElement.textContent) + 8;
           break;
