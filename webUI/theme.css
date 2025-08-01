@@ -376,7 +376,6 @@ body.miner #startMining {
   display: block;
   position: relative;
   width: 105px;
-  transition: transform 1s ease;
 }
 
 body.miner #mineThenCraftPoints {
