@@ -565,8 +565,8 @@ function fetchPack(protocol, jsonData, packName, mcVersion) {
         // if it fails, skill issue
         numberElement.innerText =
           Number(numberElement.textContent) - jsonData["raw"].length * 20;
-        if (Number(numberElement.textContent) > jsonData["raw"].length * 20) {
-          document.querySelector(".download-selected-button");
+        if (Number(numberElement.textContent) < jsonData["raw"].length * 20) {
+          document.querySelector(".download-selected-button").disabled = true;
         }
       }
     })
