@@ -815,7 +815,4 @@ document.querySelectorAll("input[type=checkbox]").forEach((checkbox) => {
 });
 
 loadedParamsChecker();
-document
-  .querySelector(".devtools-toggle-mine-then-craft input[type='checkbox']")
-  .click();
 updateDownloadButton(getSelectedTweaks());
