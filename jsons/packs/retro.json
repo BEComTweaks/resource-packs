@@ -110,8 +110,7 @@
     {
       "pack_id": "OldWater",
       "pack_name": "Old Water",
-      "pack_description": "Reverts Water to its old texture.",
-      "disabled": true
+      "pack_description": "Reverts Water to its old texture."
     },
     {
       "pack_id": "OldIce",
