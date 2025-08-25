@@ -16,7 +16,7 @@
     {
       "pack_id": "ConsistentBuckets",
       "pack_name": "Consistent Buckets",
-      "pack_description": "Moves empty, Water, Lava and Powder Snow Buckets down by 1 pixel to make them consistent with Fix and Axolotl Buckets."
+      "pack_description": "Moves empty, Water, Lava and Powder Snow Buckets down by 1 pixel to make them consistent with Fish and Axolotl Buckets."
     },
     {
       "pack_id": "ConsistentTadpoleBucket",
