@@ -16,6 +16,7 @@
   ],
   "metadata": {
     "authors": ["BEComTweaks"],
-    "url": "https://github.com/BEComTweaks/resource-packs"
+    "url": "https://github.com/BEComTweaks/resource-packs",
+    "product_type": "addon"
   }
 }
