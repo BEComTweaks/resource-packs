@@ -68,6 +68,14 @@
     "sound": "wood",
     "textures": "oak_fence"
   },
+  "pale_oak_fence": {
+    "sound": "wood",
+    "textures": "pale_oak_fence"
+  },
+  "pale_oak_fence_gate": {
+    "sound": "wood",
+    "textures": "pale_oak_fence_gate"
+  },
   "spruce_fence": {
     "sound": "wood",
     "textures": "spruce_fence"

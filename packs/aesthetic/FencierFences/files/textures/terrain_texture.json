@@ -37,6 +37,9 @@
     "oak_fence": {
       "textures": "textures/blocks/oak_fence"
     },
+    "pale_oak_fence": {
+      "textures": "textures/blocks/pale_oak_fence"
+    },
     "spruce_fence": {
       "textures": "textures/blocks/spruce_fence"
     },
@@ -66,6 +69,9 @@
     },
     "oak_fence_gate": {
       "textures": "textures/blocks/oak_fence_gate"
+    },
+    "pale_oak_fence_gate": {
+      "textures": "textures/blocks/pale_oak_fence_gate"
     },
     "spruce_fence_gate": {
       "textures": "textures/blocks/spruce_fence_gate"
