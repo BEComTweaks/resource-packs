@@ -4,10 +4,14 @@
   "location": "world_of_color",
   "packs": [
     {
-      "pack_id": "UniqueDyes",
-      "pack_name": "Unique Dyes",
-      "pack_description": "Adds variation to dyes by making each one different.",
-      "priority": 1
+      "pack_id": "AlternateDyes",
+      "pack_name": "Alternate Dyes",
+      "pack_description": "Retextures dyes to make them even more unique to each other."
+    },
+    {
+      "pack_id": "PalettelessDyes",
+      "pack_name": "Paletteless Dyes",
+      "pack_description": "Removes the palettes from under all dyes."
     }
   ]
 }
