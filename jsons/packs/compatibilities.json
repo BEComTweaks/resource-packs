@@ -541,6 +541,11 @@
       "overwrite": false
     },
     {
+      "merge": ["AlternateDyes", "PalettelessDyes"],
+      "location": "compatibilities/world_of_color/alternate_paletteless_dyes",
+      "overwrite": false
+    },
+    {
       "merge": ["BlackSlime", "SolidSlime"],
       "location": "compatibilities/colored_solid_slime/black_solid_slime",
       "overwrite": false
