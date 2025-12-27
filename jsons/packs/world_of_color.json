@@ -6,12 +6,14 @@
     {
       "pack_id": "AlternateDyes",
       "pack_name": "Alternate Dyes",
-      "pack_description": "Retextures dyes to make them even more unique to each other."
+      "pack_description": "Retextures dyes to make them even more unique to each other.",
+      "obvious_conflict": ["OldDyes"]
     },
     {
       "pack_id": "PalettelessDyes",
       "pack_name": "Paletteless Dyes",
-      "pack_description": "Removes the palettes from under all dyes."
+      "pack_description": "Removes the palettes from under all dyes.",
+      "obvious_conflict": ["OldDyes"]
     }
   ]
 }
