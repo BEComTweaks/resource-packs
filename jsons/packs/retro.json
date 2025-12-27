@@ -232,7 +232,8 @@
     {
       "pack_id": "OldDyes",
       "pack_name": "Old Dyes",
-      "pack_description": "Reverts the textures of Dyes to their pre-1.21.110 textures"
+      "pack_description": "Reverts the textures of Dyes to their pre-1.21.110 textures",
+      "obvious_conflict": ["AlternateDyes", "PalettelessDyes"]
     }
   ]
 }
