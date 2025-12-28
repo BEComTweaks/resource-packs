@@ -6294,7 +6294,7 @@
         </div>
        </div>
       </div>
-      <div class="tweak" data-category="Retro" data-conflicts="[]" data-name="OldDyes" onclick="toggleSelection(this);" oreui-active-color="green" oreui-color="dark" oreui-type="button">
+      <div class="tweak" data-category="Retro" data-conflicts='["AlternateDyes", "PalettelessDyes"]' data-name="OldDyes" onclick="toggleSelection(this);" oreui-active-color="green" oreui-color="dark" oreui-type="button">
        <div class="tweak-info">
         <input name="tweak" type="checkbox"/>
         <img alt="Old Dyes" src="../packs/retro/OldDyes/pack_icon.png" style="width:82px; height:82px;"/>
@@ -6698,7 +6698,7 @@
     <div class="category-label" onclick="toggleCategory(this);" oreui-color="dark" oreui-type="button">
      World of Color
     </div>
-    <button class="category-label-selectall" data-allpacks="N4IgTghg7iBcAEBtEBVAdgSwI4FcCmAIgJ54DOIAugL5A" data-category="World of Color" onclick="selectAll(this)">
+    <button class="category-label-selectall" data-allpacks="N4IgTghg7iBcAEBtEBBANgFwKZgHYWwBEBPLAZxABp4QAFCNLDbRssk8kAXQF8g" data-category="World of Color" onclick="selectAll(this)">
      <img class="category-label-selectall-img" src="images/select-all-button/chiseled_bookshelf_empty.png"/>
      <div class="category-label-selectall-hovertext">
       Select All
@@ -6706,16 +6706,29 @@
     </button>
     <div class="category-controlled" oreui-color="dark" oreui-type="general">
      <div class="tweaks">
-      <div class="tweak" data-category="World of Color" data-conflicts="[]" data-name="UniqueDyes" onclick="toggleSelection(this);" oreui-active-color="green" oreui-color="dark" oreui-type="button">
+      <div class="tweak" data-category="World of Color" data-conflicts='["OldDyes"]' data-name="AlternateDyes" onclick="toggleSelection(this);" oreui-active-color="green" oreui-color="dark" oreui-type="button">
        <div class="tweak-info">
         <input name="tweak" type="checkbox"/>
-        <img alt="Unique Dyes" src="../packs/world_of_color/UniqueDyes/pack_icon.png" style="width:82px; height:82px;"/>
+        <img alt="Alternate Dyes" src="../packs/world_of_color/AlternateDyes/pack_icon.png" style="width:82px; height:82px;"/>
         <br>
         <label class="tweak-title" id="tweak">
-         Unique Dyes
+         Alternate Dyes
         </label>
         <div class="tweak-description">
-         Adds variation to dyes by making each one different.
+         Retextures dyes to make them even more unique to each other.
+        </div>
+       </div>
+      </div>
+      <div class="tweak" data-category="World of Color" data-conflicts='["OldDyes"]' data-name="PalettelessDyes" onclick="toggleSelection(this);" oreui-active-color="green" oreui-color="dark" oreui-type="button">
+       <div class="tweak-info">
+        <input name="tweak" type="checkbox"/>
+        <img alt="Paletteless Dyes" src="../packs/world_of_color/PalettelessDyes/pack_icon.png" style="width:82px; height:82px;"/>
+        <br>
+        <label class="tweak-title" id="tweak">
+         Paletteless Dyes
+        </label>
+        <div class="tweak-description">
+         Removes the palettes from under all dyes.
         </div>
        </div>
       </div>
