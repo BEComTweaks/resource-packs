@@ -29,14 +29,14 @@
       "conflict": ["LowerMycelium", "DungeonsDirt"]
     },
     {
-      "pack_id": "LowerGrassPaths",
-      "pack_name": "Lower Grass Paths",
+      "pack_id": "LowerDirtPaths",
+      "pack_name": "Lower Dirt Paths",
       "pack_description": "Lowers the sides of Path Blocks to provide a smoother-looking pathway.",
       "conflict": ["GrassPathSides", "DungeonsDirt"]
     },
     {
-      "pack_id": "GrassPathSides",
-      "pack_name": "Grass Path Sides",
+      "pack_id": "DirtPathSides",
+      "pack_name": "Dirt Path Sides",
       "pack_description": "Completely covers the sides of Path Blocks to provide a smoother-looking pathway",
       "conflict": ["LowerGrassPaths", "DungeonsDirt"]
     },
