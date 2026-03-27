@@ -59,6 +59,11 @@
       "pack_description": "Decreases Chicken sounds by 95%."
     },
     {
+      "pack_id": "QuieterCopperGolems",
+      "pack_name": "Quieter Copper Golems",
+      "pack_description": "Decreases Copper Golem sounds by 95%."
+    },
+    {
       "pack_id": "QuieterCows",
       "pack_name": "Quieter Cows",
       "pack_description": "Decreases Cow and Mooshroom sounds by 95%."

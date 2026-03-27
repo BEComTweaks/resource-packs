@@ -1,0 +1,80 @@
+{
+  "$schema": "https://becomtweaks.github.io/schema/packs.json",
+  "topic": "Armor Bars",
+  "subcategory_of": "GUI",
+  "location": "gui/armor_bars",
+  "packs": [
+    {
+      "pack_id": "LeatherArmorBar",
+      "pack_name": "Leather Armor Bar",
+      "pack_description": "",
+      "obvious_conflict": [
+        "ChainmailArmorBar",
+        "CopperArmorBar",
+        "IronArmorBar",
+        "DiamondArmorBar",
+        "NetheriteArmorBar"
+      ]
+    },
+    {
+      "pack_id": "ChainmailArmorBar",
+      "pack_name": "Chainmail Armor Bar",
+      "pack_description": "",
+      "obvious_conflict": [
+        "LeatherArmorBar",
+        "CopperArmorBar",
+        "IronArmorBar",
+        "DiamondArmorBar",
+        "NetheriteArmorBar"
+      ]
+    },
+    {
+      "pack_id": "CopperArmorBar",
+      "pack_name": "Copper Armor Bar",
+      "pack_description": "",
+      "obvious_conflict": [
+        "LeatherArmorBar",
+        "ChainmailArmorBar",
+        "IronArmorBar",
+        "DiamondArmorBar",
+        "NetheriteArmorBar"
+      ]
+    },
+    {
+      "pack_id": "IronArmorBar",
+      "pack_name": "Iron Armor Bar",
+      "pack_description": "",
+      "obvious_conflict": [
+        "LeatherArmorBar",
+        "ChainmailArmorBar",
+        "CopperArmorBar",
+        "DiamondArmorBar",
+        "NetheriteArmorBar"
+      ]
+    },
+    {
+      "pack_id": "DiamondArmorBar",
+      "pack_name": "Diamond Armor Bar",
+      "pack_description": "",
+      "obvious_conflict": [
+        "LeatherArmorBar",
+        "ChainmailArmorBar",
+        "CopperArmorBar",
+        "IronArmorBar",
+        "NetheriteArmorBar"
+      ]
+    },
+    {
+      "pack_id": "NetheriteArmorBar",
+      "pack_name": "Netherite Armor Bar",
+      "pack_description": "",
+      "obvious_conflict": [
+        "LeatherArmorBar",
+        "ChainmailArmorBar",
+        "CopperArmorBar",
+        "IronArmorBar",
+        "DiamondArmorBar"
+      ]
+    }
+  ]
+}

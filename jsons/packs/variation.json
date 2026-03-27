@@ -83,6 +83,11 @@
       "pack_description": "Bookshelves will be randomized using a selection of 7 textures."
     },
     {
+      "pack_id": "VariatedCarvedPumpkins",
+      "pack_name": "Variated Carved Pumpkins",
+      "pack_description": "Carved Pumpkins will be randomized using a selection of 25 textures."
+    },
+    {
       "pack_id": "VariatedVillagers",
       "pack_name": "Variated Villagers",
       "pack_description": "Adds varying skin tones to Villagers depending on the heat of the biome."

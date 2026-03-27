@@ -5,7 +5,7 @@
 ![Commit Activity](https://img.shields.io/github/commit-activity/w/BEComTweaks/resource-packs?style=for-the-badge&label=Commits&color=purple)
 ![GitHub repo size](https://img.shields.io/github/repo-size/BEComTweaks/resource-packs?style=for-the-badge&label=Size&color=pink)
 <br>
-![Completed Packs](https://img.shields.io/badge/Packs-549%2F552-blue?style=for-the-badge&color=blue)
+![Completed Packs](https://img.shields.io/badge/Packs-549%2F559-blue?style=for-the-badge&color=blue)
 ![Completed Compatibilities for Packs](https://img.shields.io/badge/Compatibilities-124%2F124-cyan?style=for-the-badge&color=cyan)
 ![Completed Pack Icons](https://img.shields.io/badge/Pack%20Icons-545%2F549-green?style=for-the-badge&color=green)
 </div>

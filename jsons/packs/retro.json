@@ -234,6 +234,11 @@
       "pack_name": "Old Dyes",
       "pack_description": "Reverts the textures of Dyes to their pre-1.21.110 textures",
       "obvious_conflict": ["AlternateDyes", "PalettelessDyes"]
+    },
+    {
+      "pack_id": "Pre-26.0StrippedSpruce",
+      "pack_name": "Pre-26.0 Stripped Spruce",
+      "pack_description": "Reverts stripped spruce to use its pre-26.0 texture"
     }
   ]
 }
