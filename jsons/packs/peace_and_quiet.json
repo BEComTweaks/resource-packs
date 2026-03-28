@@ -14,6 +14,11 @@
       "pack_description": "Decreases Thunder sounds by 95%."
     },
     {
+      "pack_id": "QuieterChests",
+      "pack_name": "Quieter Chests",
+      "pack_description": "Decreases Chest and Copper Chest sounds by 95%."
+    },
+    {
       "pack_id": "QuieterExplosions",
       "pack_name": "Quieter Explosions",
       "pack_description": "Decreases Explosion sounds by 95%."
