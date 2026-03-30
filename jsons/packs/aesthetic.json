@@ -180,6 +180,11 @@
       "pack_description": "Removes the brown overlay from Leather Armor."
     },
     {
+      "pack_id": "PlainWolfArmor",
+      "pack_name": "Plain Wolf Armor",
+      "pack_description": "Dyeing Wolf Armor covers the whole armor instead of only small sections."
+    },
+    {
       "pack_id": "GoldenCrown",
       "pack_name": "Golden Crown",
       "pack_description": "Retextures the Golden Helmet to look like a crown. Also affects the look of some helmet Armor Trims."

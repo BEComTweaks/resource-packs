@@ -35,6 +35,11 @@
       "conflict": ["CleanRedstoneDust"]
     },
     {
+      "pack_id": "ConsistentChickenEggNames",
+      "pack_name": "Consistent Chicken Egg Names",
+      "pack_description": "Renames Chicken Eggs to be consistent with other mob eggs, specifying the mob it is from."
+    },
+    {
       "pack_id": "CactusBottomFix",
       "pack_name": "Cactus Bottom Fix",
       "pack_description": "Recolors the bottom of cacti to match the rest of the cactus."
