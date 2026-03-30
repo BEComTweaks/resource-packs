@@ -6,7 +6,7 @@ on:
       - '**'
   workflow_dispatch:
 # BOT_TOKEN is what I want to use most of the times,
-# But deploy hates is for no reason, so I use 
+# But deploy hates is for no reason, so I use
 # GITHUB_TOKEN just for the deploy job
 jobs:
   format_repo:
@@ -19,6 +19,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           ref: ${{ github.head_ref }} # Make sure PR is checked out
+          depth: 1
 
       - name: Install pnpm
         uses: pnpm/action-setup@v4
