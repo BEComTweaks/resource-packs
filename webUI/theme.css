@@ -1273,6 +1273,14 @@ input:checked + .slider:before {
     width: 180px;
   }
 
+  .fake-assistant-toggle {
+    bottom: 15px;
+  }
+
+  .fake-assistant-panel {
+    bottom: 15px;
+  }
+
   .large-nav {
     display: block;
     transform: translateY(0%);
