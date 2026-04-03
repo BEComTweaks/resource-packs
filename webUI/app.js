@@ -20,6 +20,7 @@ const categoryDicts = {
   Hearts: [],
   "LGBTQ+ Pride": [],
   "Hunger Bars": [],
+  "Armor Bars": [],
   "Hotbar Selector": [],
   "Menu Panoramas": [],
   "Xisuma's Hermitcraft Bases": [],
