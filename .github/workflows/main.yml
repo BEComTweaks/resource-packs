@@ -19,7 +19,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           ref: ${{ github.head_ref }} # Make sure PR is checked out
-          depth: 1
+          fetch-depth: 1
 
       - name: Install pnpm
         uses: pnpm/action-setup@v4
@@ -80,7 +80,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
         with:
-          submodules: recursive
+          fetch-depth: 1
 
       - name: Set up Python
         uses: actions/setup-python@v5
