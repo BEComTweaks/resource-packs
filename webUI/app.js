@@ -842,7 +842,7 @@ function appendFakeAssistantMessage(text, sender) {
 function openFakeAssistantPanel() {
   const panel = document.getElementById("fakeAssistantPanel");
   const toggleButton = document.querySelector(".fake-assistant-toggle");
-  if (!panel || !toggleButton) {
+  if (!panel || !toggleButton || toggleButton.style.display === "none") {
     return;
   }
   panel.classList.add("open");
@@ -865,9 +865,30 @@ function closeFakeAssistantPanel() {
   toggleButton.setAttribute("aria-expanded", "false");
 }
 
+function setFakeAssistantVisibility(isVisible) {
+  const panel = document.getElementById("fakeAssistantPanel");
+  const toggleButton = document.querySelector(".fake-assistant-toggle");
+  if (!panel || !toggleButton) {
+    return;
+  }
+  if (isVisible) {
+    toggleButton.removeAttribute("hidden");
+    panel.removeAttribute("hidden");
+    toggleButton.style.removeProperty("display");
+    panel.style.removeProperty("display");
+    return;
+  }
+  closeFakeAssistantPanel();
+  toggleButton.setAttribute("hidden", "true");
+  panel.setAttribute("hidden", "true");
+  toggleButton.style.display = "none";
+  panel.style.display = "none";
+}
+
 function toggleFakeAssistantPanel() {
   const panel = document.getElementById("fakeAssistantPanel");
-  if (!panel) {
+  const toggleButton = document.querySelector(".fake-assistant-toggle");
+  if (!panel || !toggleButton || toggleButton.style.display === "none") {
     return;
   }
   if (panel.classList.contains("open")) {
@@ -910,6 +931,15 @@ if (fakeAssistantInput) {
   });
 }
 
+const merlSettingsToggle = document.querySelector(
+  ".devtools-toggle-merl input[type='checkbox']",
+);
+if (merlSettingsToggle) {
+  merlSettingsToggle.addEventListener("change", function () {
+    setFakeAssistantVisibility(this.checked);
+  });
+}
+
 document.addEventListener("keydown", function (event) {
   if (event.key !== "Escape") {
     return;
@@ -924,6 +954,12 @@ document.addEventListener("keydown", function (event) {
 document.querySelectorAll("input[type=checkbox]").forEach((checkbox) => {
   checkbox.checked = false;
 });
+
+if (merlSettingsToggle) {
+  merlSettingsToggle.checked = false;
+}
+
+setFakeAssistantVisibility(false);
 
 loadedParamsChecker();
 updateDownloadButton(getSelectedTweaks());

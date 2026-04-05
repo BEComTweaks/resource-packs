@@ -94,6 +94,13 @@
       </label>
       <p class="devtools-toggle-desc">Mine then craft</p>
     </div>
+    <div class="devtools-toggle-merl">
+        <label class="switch">
+          <input type="checkbox"/>
+          <span class="slider"></span>
+        </label>
+        <p class="devtools-toggle-desc">Show Merl</p>
+      </div>
     <div class="devtools-pinger">
       <div class="devtools-pinger-inner">
         <div class="pinger-anim">
