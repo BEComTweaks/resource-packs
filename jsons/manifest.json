@@ -17,5 +17,6 @@
   "metadata": {
     "authors": ["BEComTweaks"],
     "url": "https://github.com/BEComTweaks/resource-packs"
-  }
+  },
+  "capabilities": ["pbr"]
 }
