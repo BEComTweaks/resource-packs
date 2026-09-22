@@ -584,15 +584,34 @@ function fetchPack(protocol, jsonData, packName, mcVersion) {
           statusElement.innerText = `Status Code: ${error.status}`;
         } else {
           consoler("error", "red", `Error: ${error}`, "white");
-          statusElement.innerText =
-            "Couldn't fetch pack. Check console for error log.";
+          statusElement.innerText = "Checking your connection...";
+
+          const { internetAvailable, runPlaceAvailable } =
+            await diagnosePackConnection();
+          consoler(
+            "diagnostics",
+            "orange",
+            `example.com: ${internetAvailable ? "reachable" : "unreachable"}; run.place: ${runPlaceAvailable ? "reachable" : "unreachable"}`,
+            "white",
+          );
+
+          if (!internetAvailable && !runPlaceAvailable) {
+            statusElement.innerText =
+              "Couldn't reach the internet. Check your connection and try again.";
+          } else if (internetAvailable && !runPlaceAvailable) {
+            statusElement.innerText =
+              "Your internet is working, but run.place could not be reached. Your ISP, DNS provider, or network may be blocking it. Try another network, DNS provider, or a VPN.";
+          } else {
+            statusElement.innerText =
+              "Your internet and run.place are reachable, but the pack server did not respond. Please try again later.";
+          }
         }
         statusElementBoxes.forEach((element) => {
           element.style.borderColor = "red";
           element.style.animationPlayState = "paused";
         });
         OreUI.becomeEnabled(downloadbutton);
-        await sleep(3000);
+        await sleep(8000);
         document.querySelector(".loading-screen").style = "opacity: 0;";
         await sleep(1000);
         statusElementBoxes.forEach((element) => (element.style = ""));

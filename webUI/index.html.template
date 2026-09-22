@@ -55,7 +55,7 @@
       <div class="box2"></div>
       <div class="box3"></div>
     </div>
-    <p class="loading-status"></p>
+    <p aria-live="polite" class="loading-status"></p>
   </div>
   <div class="devtools" oreui-type="general" oreui-color="dark">
     <h3>Devtools</h3>

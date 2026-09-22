@@ -1029,6 +1029,8 @@ input:checked + .slider:before {
   > p {
     padding: 10px;
     font-family: "Futura Heavy";
+    max-width: 650px;
+    text-align: center;
   }
 }
 

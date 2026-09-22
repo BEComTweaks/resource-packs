@@ -41,6 +41,34 @@ function consoler(logTag, logColour, logMessage, logMessageColour) {
   }
 }
 
+async function canReach(url, timeout = 5000) {
+  const controller = new AbortController();
+  const timeoutId = setTimeout(() => controller.abort(), timeout);
+
+  try {
+    await fetch(url, {
+      method: "HEAD",
+      mode: "no-cors",
+      cache: "no-store",
+      signal: controller.signal,
+    });
+    return true;
+  } catch {
+    return false;
+  } finally {
+    clearTimeout(timeoutId);
+  }
+}
+
+async function diagnosePackConnection() {
+  const [internetAvailable, runPlaceAvailable] = await Promise.all([
+    canReach("https://example.com/"),
+    canReach("https://run.place/"),
+  ]);
+
+  return { internetAvailable, runPlaceAvailable };
+}
+
 function selectTexture() {
   const rand = Math.random();
   let cumulativeProbability = 0;
