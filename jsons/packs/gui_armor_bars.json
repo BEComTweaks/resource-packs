@@ -11,6 +11,7 @@
       "obvious_conflict": [
         "ChainmailArmorBar",
         "CopperArmorBar",
+        "GoldenArmorBar",
         "DiamondArmorBar",
         "NetheriteArmorBar"
       ]
@@ -22,6 +23,7 @@
       "obvious_conflict": [
         "LeatherArmorBar",
         "CopperArmorBar",
+        "GoldenArmorBar",
         "DiamondArmorBar",
         "NetheriteArmorBar"
       ]
@@ -33,6 +35,19 @@
       "obvious_conflict": [
         "LeatherArmorBar",
         "ChainmailArmorBar",
+        "GoldenArmorBar",
+        "DiamondArmorBar",
+        "NetheriteArmorBar"
+      ]
+    },
+    {
+      "pack_id": "GoldenArmorBar",
+      "pack_name": "Golden Armor Bar",
+      "pack_description": "",
+      "obvious_conflict": [
+        "LeatherArmorBar",
+        "ChainmailArmorBar",
+        "CopperArmorBar",
         "DiamondArmorBar",
         "NetheriteArmorBar"
       ]
@@ -45,6 +60,7 @@
         "LeatherArmorBar",
         "ChainmailArmorBar",
         "CopperArmorBar",
+        "GoldenArmorBar",
         "NetheriteArmorBar"
       ]
     },
@@ -56,6 +72,7 @@
         "LeatherArmorBar",
         "ChainmailArmorBar",
         "CopperArmorBar",
+        "GoldenArmorBar",
         "DiamondArmorBar"
       ]
     }

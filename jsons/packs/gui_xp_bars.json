@@ -1,0 +1,224 @@
+{
+  "$schema": "https://becomtweaks.github.io/schema/packs.json",
+  "topic": "XP Bars",
+  "subcategory_of": "GUI",
+  "location": "gui/xp_bars",
+  "packs": [
+    {
+      "pack_id": "white_xp_bar",
+      "pack_name": "White XP bar",
+      "pack_description": "",
+      "obvious_conflict": [
+        "brown_xp_bar",
+        "red_xp_bar",
+        "orange_xp_bar",
+        "yellow_xp_bar",
+        "green_xp_bar",
+        "cyan_xp_bar",
+        "light_blue_xp_bar",
+        "blue_xp_bar",
+        "purple_xp_bar",
+        "magenta_xp_bar",
+        "pink_xp_bar"
+      ]
+    },
+    {
+      "pack_id": "brown_xp_bar",
+      "pack_name": "Brown XP bar",
+      "pack_description": "",
+      "obvious_conflict": [
+        "white_xp_bar",
+        "red_xp_bar",
+        "orange_xp_bar",
+        "yellow_xp_bar",
+        "green_xp_bar",
+        "cyan_xp_bar",
+        "light_blue_xp_bar",
+        "blue_xp_bar",
+        "purple_xp_bar",
+        "magenta_xp_bar",
+        "pink_xp_bar"
+      ]
+    },
+    {
+      "pack_id": "red_xp_bar",
+      "pack_name": "Red XP bar",
+      "pack_description": "",
+      "obvious_conflict": [
+        "white_xp_bar",
+        "brown_xp_bar",
+        "orange_xp_bar",
+        "yellow_xp_bar",
+        "green_xp_bar",
+        "cyan_xp_bar",
+        "light_blue_xp_bar",
+        "blue_xp_bar",
+        "purple_xp_bar",
+        "magenta_xp_bar",
+        "pink_xp_bar"
+      ]
+    },
+    {
+      "pack_id": "orange_xp_bar",
+      "pack_name": "Orange XP bar",
+      "pack_description": "",
+      "obvious_conflict": [
+        "white_xp_bar",
+        "brown_xp_bar",
+        "red_xp_bar",
+        "yellow_xp_bar",
+        "green_xp_bar",
+        "cyan_xp_bar",
+        "light_blue_xp_bar",
+        "blue_xp_bar",
+        "purple_xp_bar",
+        "magenta_xp_bar",
+        "pink_xp_bar"
+      ]
+    },
+    {
+      "pack_id": "yellow_xp_bar",
+      "pack_name": "Yellow XP bar",
+      "pack_description": "",
+      "obvious_conflict": [
+        "white_xp_bar",
+        "brown_xp_bar",
+        "red_xp_bar",
+        "orange_xp_bar",
+        "green_xp_bar",
+        "cyan_xp_bar",
+        "light_blue_xp_bar",
+        "blue_xp_bar",
+        "purple_xp_bar",
+        "magenta_xp_bar",
+        "pink_xp_bar"
+      ]
+    },
+    {
+      "pack_id": "green_xp_bar",
+      "pack_name": "Green XP bar",
+      "pack_description": "",
+      "obvious_conflict": [
+        "white_xp_bar",
+        "brown_xp_bar",
+        "red_xp_bar",
+        "orange_xp_bar",
+        "yellow_xp_bar",
+        "cyan_xp_bar",
+        "light_blue_xp_bar",
+        "blue_xp_bar",
+        "purple_xp_bar",
+        "magenta_xp_bar",
+        "pink_xp_bar"
+      ]
+    },
+    {
+      "pack_id": "cyan_xp_bar",
+      "pack_name": "Cyan XP bar",
+      "pack_description": "",
+      "obvious_conflict": [
+        "white_xp_bar",
+        "brown_xp_bar",
+        "red_xp_bar",
+        "orange_xp_bar",
+        "yellow_xp_bar",
+        "green_xp_bar",
+        "light_blue_xp_bar",
+        "blue_xp_bar",
+        "purple_xp_bar",
+        "magenta_xp_bar",
+        "pink_xp_bar"
+      ]
+    },
+    {
+      "pack_id": "light_blue_xp_bar",
+      "pack_name": "Light Blue XP Bar",
+      "pack_description": "",
+      "obvious_conflict": [
+        "white_xp_bar",
+        "brown_xp_bar",
+        "red_xp_bar",
+        "orange_xp_bar",
+        "yellow_xp_bar",
+        "green_xp_bar",
+        "cyan_xp_bar",
+        "blue_xp_bar",
+        "purple_xp_bar",
+        "magenta_xp_bar",
+        "pink_xp_bar"
+      ]
+    },
+    {
+      "pack_id": "blue_xp_bar",
+      "pack_name": "Blue XP bar",
+      "pack_description": "",
+      "obvious_conflict": [
+        "white_xp_bar",
+        "brown_xp_bar",
+        "red_xp_bar",
+        "orange_xp_bar",
+        "yellow_xp_bar",
+        "green_xp_bar",
+        "cyan_xp_bar",
+        "light_blue_xp_bar",
+        "purple_xp_bar",
+        "magenta_xp_bar",
+        "pink_xp_bar"
+      ]
+    },
+    {
+      "pack_id": "purple_xp_bar",
+      "pack_name": "Purple XP bar",
+      "pack_description": "",
+      "obvious_conflict": [
+        "white_xp_bar",
+        "brown_xp_bar",
+        "red_xp_bar",
+        "orange_xp_bar",
+        "yellow_xp_bar",
+        "green_xp_bar",
+        "cyan_xp_bar",
+        "light_blue_xp_bar",
+        "blue_xp_bar",
+        "magenta_xp_bar",
+        "pink_xp_bar"
+      ]
+    },
+    {
+      "pack_id": "magenta_xp_bar",
+      "pack_name": "Magenta XP bar",
+      "pack_description": "",
+      "obvious_conflict": [
+        "white_xp_bar",
+        "brown_xp_bar",
+        "red_xp_bar",
+        "orange_xp_bar",
+        "yellow_xp_bar",
+        "green_xp_bar",
+        "cyan_xp_bar",
+        "light_blue_xp_bar",
+        "blue_xp_bar",
+        "purple_xp_bar",
+        "pink_xp_bar"
+      ]
+    },
+    {
+      "pack_id": "pink_xp_bar",
+      "pack_name": "Pink XP bar",
+      "pack_description": "",
+      "obvious_conflict": [
+        "white_xp_bar",
+        "brown_xp_bar",
+        "red_xp_bar",
+        "orange_xp_bar",
+        "yellow_xp_bar",
+        "green_xp_bar",
+        "cyan_xp_bar",
+        "light_blue_xp_bar",
+        "blue_xp_bar",
+        "purple_xp_bar",
+        "magenta_xp_bar"
+      ]
+    }
+  ]
+}
