@@ -32,25 +32,19 @@ jobs:
           node-version: ${{ matrix.node-version }}
           cache: "pnpm"
 
-      - name: Set up Python
-        uses: actions/setup-python@v5
+      - name: Setup uv
+        uses: astral-sh/setup-uv@cec208311dfd045dd5311c1add060b2062131d57
         with:
-          python-version: "3.x"
-
-      - name: Create Virtual Environment
-        run: python -m venv venv
-
-      - name: Activate venv
-        run: source venv/bin/activate
+          python-version: 3.13
+          activate-environment: true
 
       - name: Install dependencies
         run: |
-          python -m pip install --upgrade pip
-          pip install -r requirements.txt
+          uv pip install -r requirements.txt
           pnpm install
 
       - name: Run pre_commit.py
-        run: python pys/pre_commit.py --format --no-stash --dev --pull-js --no-spinner --branch=${{ github.head_ref }}
+        run: uv run pys/pre_commit.py --format --no-stash --dev --pull-js --no-spinner --branch=${{ github.head_ref }}
 
       - name: Commit changes
         run: |
@@ -82,22 +76,19 @@ jobs:
         with:
           fetch-depth: 1
 
-      - name: Set up Python
-        uses: actions/setup-python@v5
+      - name: Setup uv
+        uses: astral-sh/setup-uv@cec208311dfd045dd5311c1add060b2062131d57
         with:
-          python-version: "3.x"
-
-      - name: Create Virtual Environment
-        run: python -m venv venv
-
-      - name: Activate venv
-        run: source venv/bin/activate
+          python-version: 3.13
+          activate-environment: true
 
       - name: Install dependencies
-        run: pip install -r requirements.txt
+        run: |
+          uv pip install -r requirements.txt
+          pnpm install
 
       - name: Build
-        run: python pys/pre_commit.py --build "website" --no-stash
+        run: uv run pys/pre_commit.py --build "website" --no-stash
 
       - name: Replace server IP in JavaScript
         run: |
