@@ -21,6 +21,7 @@ const categoryDicts = {
   "LGBTQ+ Pride": [],
   "Hunger Bars": [],
   "Armor Bars": [],
+  "XP Bars": [],
   "Hotbar Selector": [],
   "Menu Panoramas": [],
   "Xisuma's Hermitcraft Bases": [],
