@@ -380,7 +380,9 @@ function loadedParamsChecker() {
     raw = params.get("st").split("*");
   } else if (params.has("st_raw")) {
     try {
-      const json = LZString.decompressFromEncodedURIComponent(params.get("st_raw"));
+      const json = LZString.decompressFromEncodedURIComponent(
+        params.get("st_raw"),
+      );
       raw = JSON.parse(json)?.raw;
     } catch {
       return;
@@ -389,7 +391,10 @@ function loadedParamsChecker() {
   if (!Array.isArray(raw)) return;
 
   const knownNames = new Set(
-    Array.from(document.querySelectorAll(".tweak[data-name]"), (tweak) => tweak.dataset.name),
+    Array.from(
+      document.querySelectorAll(".tweak[data-name]"),
+      (tweak) => tweak.dataset.name,
+    ),
   );
   raw = raw.filter((name) => knownNames.has(name));
   if (!raw.length) return;
