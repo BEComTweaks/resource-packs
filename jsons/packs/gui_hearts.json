@@ -1,5 +1,5 @@
 {
-  "$schema": "https://becomtweaks.github.io/schema/packs.json",
+  "$schema": "https://becomtweaks.com/schema/packs.json",
   "topic": "Hearts",
   "subcategory_of": "GUI",
   "location": "gui/hearts",

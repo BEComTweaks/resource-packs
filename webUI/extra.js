@@ -455,7 +455,7 @@ document
     })
       .then(() => true)
       .catch(() => false);
-    const githubIOStatus = await fetch("https://becomtweaks.github.io", {
+    const githubIOStatus = await fetch("https://becomtweaks.com", {
       method: "HEAD",
       mode: "no-cors",
     })

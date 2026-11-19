@@ -17,33 +17,33 @@
 
 <body>
   <ul class="large-nav">
-    <li><a class="nav-link" href="https://becomtweaks.github.io">Home</a></li>
+    <li><a class="nav-link" href="https://becomtweaks.com">Home</a></li>
     <li>
       <a class="nav-link" href="https://becomtweaks.gitbook.io/docs">Docs</a>
     </li>
     <li>
-      <a class="nav-link" href="https://becomtweaks.github.io/discord">Discord</a>
+      <a class="nav-link" href="https://becomtweaks.com/discord">Discord</a>
     </li>
     <li style="float: right">
-      <a class="nav-link" href="https://becomtweaks.github.io/crafting-tweaks">Crafting Tweaks</a>
+      <a class="nav-link" href="https://becomtweaks.com/crafting-tweaks">Crafting Tweaks</a>
     </li>
     <li style="float: right">
-      <a class="nav-link" href="https://becomtweaks.github.io/behaviour-packs">Behaviour Packs</a>
+      <a class="nav-link" href="https://becomtweaks.com/behaviour-packs">Behaviour Packs</a>
     </li>
     <li style="float: right">
-      <a class="nav-link" href="https://becomtweaks.github.io/resource-packs">Resource Packs</a>
+      <a class="nav-link" href="https://becomtweaks.com/resource-packs">Resource Packs</a>
     </li>
   </ul>
   <ul class="small-nav">
-    <li><a class="nav-link" href="https://becomtweaks.github.io">Home</a></li>
+    <li><a class="nav-link" href="https://becomtweaks.com">Home</a></li>
     <li style="float: right">
-      <a class="nav-link" href="https://becomtweaks.github.io/crafting-tweaks">CTs</a>
+      <a class="nav-link" href="https://becomtweaks.com/crafting-tweaks">CTs</a>
     </li>
     <li style="float: right">
-      <a class="nav-link" href="https://becomtweaks.github.io/behaviour-packs">BPs</a>
+      <a class="nav-link" href="https://becomtweaks.com/behaviour-packs">BPs</a>
     </li>
     <li style="float: right">
-      <a class="nav-link" href="https://becomtweaks.github.io/resource-packs">RPs</a>
+      <a class="nav-link" href="https://becomtweaks.com/resource-packs">RPs</a>
     </li>
   </ul>
   <!--The full screen elements-->
