@@ -363,59 +363,53 @@ function updateSelectedTweaks() {
 }
 // query params function
 function updateURL(st) {
-  for (var key in st) {
-    try {
-      if (key !== "raw") {
-        // remove categories
-        delete st[key];
-      }
-    } catch (e) {
-      // keep raw
-    }
-  }
-  const params = new URLSearchParams(window.location.search);
-  let newUrl;
-  // remove st raw if empty
-  if (st["raw"].length == 0) {
-    params.delete("st_raw");
-    newUrl = `${window.location.pathname}`;
+  const url = new URL(window.location.href);
+  url.searchParams.delete("st_raw");
+  if (st.raw.length) {
+    url.searchParams.set("st", st.raw.join("*"));
   } else {
-    const stcomp = LZString.compressToEncodedURIComponent(JSON.stringify(st));
-    params.set("st_raw", stcomp);
-    newUrl = `${window.location.pathname}?${params.toString()}`;
+    url.searchParams.delete("st");
   }
-  // update url
-  window.history.replaceState({}, "", newUrl);
+  window.history.replaceState({}, "", url);
 }
 // if query params already exists
 function loadedParamsChecker() {
-  var loadedparams = new URLSearchParams(window.location.search);
-  if (loadedparams.has("st_raw")) {
-    const st_raw = loadedparams.get("st_raw");
-    const st = JSON.parse(LZString.decompressFromEncodedURIComponent(st_raw));
-    consoler(
-      "query",
-      "pink",
-      `Found query params, loading selected packs...`,
-      "white",
-    );
-    processJsonData(st, "select");
-    consoler(
-      "query",
-      "pink",
-      `Selected packs: ${st["raw"].join(", ")}`,
-      "cyan",
-    );
-    updateDownloadButton(st);
-    const preselectAlerter = document.getElementsByClassName("preselected")[0];
-    sleep(500).then(() => {
-      // slow down before showing the alert
-      preselectAlerter.style.top = "20vh";
-    });
-    sleep(5000).then(() => {
-      preselectAlerter.style.top = "-20vh";
-    });
+  const params = new URLSearchParams(window.location.search);
+  let raw;
+  if (params.has("st")) {
+    raw = params.get("st").split("*");
+  } else if (params.has("st_raw")) {
+    try {
+      const json = LZString.decompressFromEncodedURIComponent(params.get("st_raw"));
+      raw = JSON.parse(json)?.raw;
+    } catch {
+      return;
+    }
   }
+  if (!Array.isArray(raw)) return;
+
+  const knownNames = new Set(
+    Array.from(document.querySelectorAll(".tweak[data-name]"), (tweak) => tweak.dataset.name),
+  );
+  raw = raw.filter((name) => knownNames.has(name));
+  if (!raw.length) return;
+
+  consoler(
+    "query",
+    "pink",
+    `Found query params, loading selected packs...`,
+    "white",
+  );
+  processJsonData({ raw }, "select");
+  consoler("query", "pink", `Selected packs: ${raw.join(", ")}`, "cyan");
+  const preselectAlerter = document.getElementsByClassName("preselected")[0];
+  sleep(500).then(() => {
+    // slow down before showing the alert
+    preselectAlerter.style.top = "20vh";
+  });
+  sleep(5000).then(() => {
+    preselectAlerter.style.top = "-20vh";
+  });
 }
 
 function getTimeoutDuration() {
