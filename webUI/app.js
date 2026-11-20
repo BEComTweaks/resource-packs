@@ -1,42 +1,4 @@
-/**************\
-| Not constant |
-\**************/
-const categoryDicts = {
-  Aesthetic: [],
-  "More Zombies": [],
-  Terrain: [],
-  "Lower and Sides": [],
-  Variation: [],
-  "Peace and Quiet": [],
-  Mobs: [],
-  Utility: [],
-  Directional: [],
-  "Growth Stages": [],
-  Unobtrusive: [],
-  "3D": [],
-  GUI: [],
-  Fonts: [],
-  Crosshairs: [],
-  Hearts: [],
-  "LGBTQ+ Pride": [],
-  "Hunger Bars": [],
-  "Armor Bars": [],
-  "XP Bars": [],
-  "Hotbar Selector": [],
-  "Menu Panoramas": [],
-  "Xisuma's Hermitcraft Bases": [],
-  Retro: [],
-  Fun: [],
-  "World of Color": [],
-  "Colorful Slime": [],
-  Elytra: [],
-  "Enchantment Glints": [],
-  Parity: [],
-  "Fixes and Consistency": [],
-};
-
-const typeOfPack = "ResourcePack";
-const extOfPack = "mcpack";
+// Shared picker logic; edit this file in resource-packs.
 
 /************\
 | OreUI HTML |
@@ -272,16 +234,18 @@ function updateSelectedConflictsActiveColor() {
 }
 
 function updateDownloadButton(st) {
+  // well nspc911, behaviour packs and crafting tweaks dont have a mine-then-craft
+  // thing, then what do we do? well just ignore it :3
   const downloadButton = document.querySelector(".download-selected-button");
   if (
     st["raw"].length == 0 ||
     (document.querySelector(
       ".devtools-toggle-mine-then-craft input[type='checkbox']",
-    ).checked &&
+    )?.checked &&
       Number(
         document.querySelector("#mineThenCraftPoints > .number").textContent,
       ) <
-        getSelectedTweaks()["raw"].length * 20)
+        st["raw"].length * 20)
   ) {
     downloadButton.disabled = true;
   } else {
@@ -558,7 +522,7 @@ function fetchPack(protocol, jsonData, packName, mcVersion) {
       if (
         document.querySelector(
           ".devtools-toggle-mine-then-craft input[type='checkbox']",
-        ).checked
+        )?.checked
       ) {
         const numberElement = document.querySelector(
           "#mineThenCraftPoints > .number",

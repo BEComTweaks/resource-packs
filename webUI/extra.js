@@ -1,16 +1,4 @@
-/* other vars necessary */
-const serverip = "localhost";
-const textures = [
-  { src: "stone.png", probability: 0.59 },
-  { src: "copper_ore.png", probability: 0.128 },
-  { src: "coal_ore.png", probability: 0.128 },
-  { src: "iron_ore.png", probability: 0.064 },
-  { src: "lapis_ore.png", probability: 0.032 },
-  { src: "redstone_ore.png", probability: 0.032 },
-  { src: "gold_ore.png", probability: 0.016 },
-  { src: "emerald_ore.png", probability: 0.008 },
-  { src: "diamond_ore.png", probability: 0.002 },
-];
+// Shared picker logic; edit this file in resource-packs.
 
 /* consoler object */
 function consoler(logTag, logColour, logMessage, logMessageColour) {
@@ -78,8 +66,7 @@ function selectTexture() {
       return texture.src;
     }
   }
-  // on the off chance that it breaks
-  return "stone.png";
+  return textures[0].src;
 }
 function createTiles() {
   const container = document.getElementById("background-container");
@@ -89,14 +76,6 @@ function createTiles() {
   for (let i = container.children.length; i < numColumns; i++) {
     const rowDiv = document.createElement("div");
     rowDiv.className = "row";
-    for (let j = 0; j < numRows; j++) {
-      const tile = document.createElement("div");
-      tile.className = "tile";
-      const tile_image = `${selectTexture()}`;
-      tile.style.backgroundImage = `url("images/blocks/${tile_image}")`;
-      tile.dataset.type = tile_image;
-      rowDiv.appendChild(tile);
-    }
     container.appendChild(rowDiv);
   }
 
@@ -106,7 +85,7 @@ function createTiles() {
     for (let j = rowDiv.children.length; j < numRows; j++) {
       const tile = document.createElement("div");
       tile.className = "tile";
-      tile.style.backgroundImage = `url("${selectTexture()}")`;
+      updateTile(tile);
       rowDiv.appendChild(tile);
     }
     while (rowDiv.children.length > numRows) {
@@ -125,7 +104,7 @@ window.addEventListener("resize", createTiles);
 
 // utility for miner.js
 function updateTile(element) {
-  const tile_image = `${selectTexture()}`;
+  const tile_image = selectTexture();
   element.style.backgroundImage = `url("images/blocks/${tile_image}")`;
   element.dataset.type = tile_image;
 }

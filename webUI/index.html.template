@@ -129,6 +129,7 @@
   </div>
   <div oreui-color="purple" oreui-type="general" id="mineThenCraftPoints"><span class="number">0</span> points</div>
   <div class="capture-exit" onclick="closePanel();"></div>
+  <script src="constants.js"></script>
   <script src="extra.js"></script>
   <script src="miner.js"></script>
   <div class="image-container" onclick="showDevToolsPanel();">

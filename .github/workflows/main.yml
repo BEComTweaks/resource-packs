@@ -41,7 +41,7 @@ jobs:
           pnpm install
 
       - name: Run pre_commit.py
-        run: uv run pys/pre_commit.py --format --no-stash --dev --pull-js --no-spinner --branch=${{ github.head_ref }}
+        run: uv run pys/pre_commit.py --format --no-stash --dev --no-spinner --branch=${{ github.head_ref }}
 
       - name: Commit changes
         run: |
@@ -100,7 +100,7 @@ jobs:
 
       - name: Replace server IP in JavaScript
         run: |
-          sed -i 's|const serverip = "localhost";|const serverip = "${{ secrets.IP_FOR_SERVER }}";|g' build/extra.js
+          sed -i 's|const serverip = "localhost";|const serverip = "${{ secrets.IP_FOR_SERVER }}";|g' build/constants.js
 
       - name: Upload Artifact
         uses: actions/upload-pages-artifact@v3
