@@ -46,6 +46,17 @@ with open(f"{cdir()}/jsons/pack_order_list.txt","r") as pol:
     if cat_list[-1] == "":
         cat_list.pop()
 
+
+def pack_conflicts(category, pack, exclusive_groups):
+    conflicts = pack.get("conflict", []) + pack.get("obvious_conflict", [])
+    conflicts.extend(
+        pack_id
+        for pack_id in exclusive_groups.get(category.get("exclusive_group"), [])
+        if pack_id != pack["pack_id"]
+    )
+    return list(dict.fromkeys(conflicts))
+
+
 parser = argparse.ArgumentParser(description='Run a massive script that updates Packs to-do, Icons to-do, Compatibilities to-do and the HTML')
 parser.add_argument('--format', '-f', action='store_true', help='Include flag to format files')
 parser.add_argument('--only-update-html', '-html', action='store_true', help='Only update the HTML')
@@ -89,11 +100,20 @@ if not args.no_stash:
 # Counts Packs and Compatibilities
 if "site" not in args.build or ("site" in args.build and (args.only_update_html or args.only_update_jsons or args.format or "pack" in args.build)):
     print("[yellow]Going through packs...")
+    categories = {
+        j.lstrip(): load_json(f"{cdir()}/jsons/packs/{j.lstrip()}") for j in cat_list
+    }
+    exclusive_groups = {}
+    for category in categories.values():
+        if "exclusive_group" in category:
+            exclusive_groups.setdefault(category["exclusive_group"], []).extend(
+                pack["pack_id"] for pack in category["packs"]
+            )
     id_to_name = {}
     for j in cat_list:
         origj = j
         if not ignore:
-            file = load_json(f"{cdir()}/jsons/packs/{j}")
+            file = categories[j]
             name_to_json[file["topic"]] = j
             try:
                 category_loc = f'{cdir()}/packs/{file["location"]}'
@@ -188,15 +208,7 @@ if "site" not in args.build or ("site" in args.build and (args.only_update_html 
                             print(f"[red]Incomplete Pack Icon: [yellow]{file['packs'][i]['pack_id']}")
 
                 # Adds Pack Conflicts
-                conflicts = []
-                try:
-                    conflicts.extend(file["packs"][i]["conflict"])
-                except KeyError:
-                    pass # If it is empty, it just skips
-                try:
-                    conflicts.extend(file["packs"][i]["obvious_conflict"])
-                except KeyError:
-                    pass # If it is empty, it just skips
+                conflicts = pack_conflicts(file, file["packs"][i], exclusive_groups)
 
                 # Add priority map
                 try:
@@ -276,7 +288,7 @@ if "site" not in args.build or ("site" in args.build and (args.only_update_html 
     for j in range(len(subcat_list)):
         pack_html = ""
         k = subcat_list[j]
-        file = load_json(f"{cdir()}/jsons/packs/{k}")
+        file = categories[k]
         name_to_json[file["topic"]] = k
         try:
             category_loc = f'{cdir()}/packs/{file["location"]}'
@@ -371,15 +383,7 @@ if "site" not in args.build or ("site" in args.build and (args.only_update_html 
                         print(f"[red]Incomplete Pack Icon: [yellow]{file['packs'][i]['pack_id']}")
 
             # Adds Pack Conflicts
-            conflicts = []
-            try:
-                conflicts.extend(file["packs"][i]["conflict"])
-            except KeyError:
-                pass # If it is empty, it just skips
-            try:
-                conflicts.extend(file["packs"][i]["obvious_conflict"])
-            except KeyError:
-                pass # If it is empty, it just skips
+            conflicts = pack_conflicts(file, file["packs"][i], exclusive_groups)
 
             # Add priority map
             try:

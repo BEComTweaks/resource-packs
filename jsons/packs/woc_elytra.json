@@ -3,6 +3,7 @@
   "topic": "Elytra",
   "subcategory_of": "World of Color",
   "location": "world_of_color/elytra",
+  "exclusive_group": "woc_elytra",
   "packs": [
     {
       "pack_id": "WhiteElytra",
@@ -12,21 +13,7 @@
         "AllayElytra",
         "DragonElytra",
         "PhantomElytra",
-        "VexElytra",
-        "GrayElytra",
-        "BlackElytra",
-        "BrownElytra",
-        "RedElytra",
-        "OrangeElytra",
-        "YellowElytra",
-        "LimeElytra",
-        "GreenElytra",
-        "CyanElytra",
-        "LightBlueElytra",
-        "BlueElytra",
-        "PurpleElytra",
-        "MagentaElytra",
-        "PinkElytra"
+        "VexElytra"
       ]
     },
     {
@@ -37,22 +24,7 @@
         "AllayElytra",
         "DragonElytra",
         "PhantomElytra",
-        "VexElytra",
-
-        "WhiteElytra",
-        "BlackElytra",
-        "BrownElytra",
-        "RedElytra",
-        "OrangeElytra",
-        "YellowElytra",
-        "LimeElytra",
-        "GreenElytra",
-        "CyanElytra",
-        "LightBlueElytra",
-        "BlueElytra",
-        "PurpleElytra",
-        "MagentaElytra",
-        "PinkElytra"
+        "VexElytra"
       ]
     },
     {
@@ -63,22 +35,7 @@
         "AllayElytra",
         "DragonElytra",
         "PhantomElytra",
-        "VexElytra",
-
-        "WhiteElytra",
-        "GrayElytra",
-        "BrownElytra",
-        "RedElytra",
-        "OrangeElytra",
-        "YellowElytra",
-        "LimeElytra",
-        "GreenElytra",
-        "CyanElytra",
-        "LightBlueElytra",
-        "BlueElytra",
-        "PurpleElytra",
-        "MagentaElytra",
-        "PinkElytra"
+        "VexElytra"
       ]
     },
     {
@@ -89,22 +46,7 @@
         "AllayElytra",
         "DragonElytra",
         "PhantomElytra",
-        "VexElytra",
-
-        "WhiteElytra",
-        "GrayElytra",
-        "BlackElytra",
-        "RedElytra",
-        "OrangeElytra",
-        "YellowElytra",
-        "LimeElytra",
-        "GreenElytra",
-        "CyanElytra",
-        "LightBlueElytra",
-        "BlueElytra",
-        "PurpleElytra",
-        "MagentaElytra",
-        "PinkElytra"
+        "VexElytra"
       ]
     },
     {
@@ -115,22 +57,7 @@
         "AllayElytra",
         "DragonElytra",
         "PhantomElytra",
-        "VexElytra",
-
-        "WhiteElytra",
-        "GrayElytra",
-        "BlackElytra",
-        "BrownElytra",
-        "OrangeElytra",
-        "YellowElytra",
-        "LimeElytra",
-        "GreenElytra",
-        "CyanElytra",
-        "LightBlueElytra",
-        "BlueElytra",
-        "PurpleElytra",
-        "MagentaElytra",
-        "PinkElytra"
+        "VexElytra"
       ]
     },
     {
@@ -141,22 +68,7 @@
         "AllayElytra",
         "DragonElytra",
         "PhantomElytra",
-        "VexElytra",
-
-        "WhiteElytra",
-        "GrayElytra",
-        "BlackElytra",
-        "BrownElytra",
-        "RedElytra",
-        "YellowElytra",
-        "LimeElytra",
-        "GreenElytra",
-        "CyanElytra",
-        "LightBlueElytra",
-        "BlueElytra",
-        "PurpleElytra",
-        "MagentaElytra",
-        "PinkElytra"
+        "VexElytra"
       ]
     },
     {
@@ -167,22 +79,7 @@
         "AllayElytra",
         "DragonElytra",
         "PhantomElytra",
-        "VexElytra",
-
-        "WhiteElytra",
-        "GrayElytra",
-        "BlackElytra",
-        "BrownElytra",
-        "RedElytra",
-        "OrangeElytra",
-        "LimeElytra",
-        "GreenElytra",
-        "CyanElytra",
-        "LightBlueElytra",
-        "BlueElytra",
-        "PurpleElytra",
-        "MagentaElytra",
-        "PinkElytra"
+        "VexElytra"
       ]
     },
     {
@@ -193,22 +90,7 @@
         "AllayElytra",
         "DragonElytra",
         "PhantomElytra",
-        "VexElytra",
-
-        "WhiteElytra",
-        "GrayElytra",
-        "BlackElytra",
-        "BrownElytra",
-        "RedElytra",
-        "OrangeElytra",
-        "YellowElytra",
-        "GreenElytra",
-        "CyanElytra",
-        "LightBlueElytra",
-        "BlueElytra",
-        "PurpleElytra",
-        "MagentaElytra",
-        "PinkElytra"
+        "VexElytra"
       ]
     },
     {
@@ -219,22 +101,7 @@
         "AllayElytra",
         "DragonElytra",
         "PhantomElytra",
-        "VexElytra",
-
-        "WhiteElytra",
-        "GrayElytra",
-        "BlackElytra",
-        "BrownElytra",
-        "RedElytra",
-        "OrangeElytra",
-        "YellowElytra",
-        "LimeElytra",
-        "CyanElytra",
-        "LightBlueElytra",
-        "BlueElytra",
-        "PurpleElytra",
-        "MagentaElytra",
-        "PinkElytra"
+        "VexElytra"
       ]
     },
     {
@@ -245,22 +112,7 @@
         "AllayElytra",
         "DragonElytra",
         "PhantomElytra",
-        "VexElytra",
-
-        "WhiteElytra",
-        "GrayElytra",
-        "BlackElytra",
-        "BrownElytra",
-        "RedElytra",
-        "OrangeElytra",
-        "YellowElytra",
-        "LimeElytra",
-        "GreenElytra",
-        "LightBlueElytra",
-        "BlueElytra",
-        "PurpleElytra",
-        "MagentaElytra",
-        "PinkElytra"
+        "VexElytra"
       ]
     },
     {
@@ -271,22 +123,7 @@
         "AllayElytra",
         "DragonElytra",
         "PhantomElytra",
-        "VexElytra",
-
-        "WhiteElytra",
-        "GrayElytra",
-        "BlackElytra",
-        "BrownElytra",
-        "RedElytra",
-        "OrangeElytra",
-        "YellowElytra",
-        "LimeElytra",
-        "GreenElytra",
-        "CyanElytra",
-        "BlueElytra",
-        "PurpleElytra",
-        "MagentaElytra",
-        "PinkElytra"
+        "VexElytra"
       ]
     },
     {
@@ -297,22 +134,7 @@
         "AllayElytra",
         "DragonElytra",
         "PhantomElytra",
-        "VexElytra",
-
-        "WhiteElytra",
-        "GrayElytra",
-        "BlackElytra",
-        "BrownElytra",
-        "RedElytra",
-        "OrangeElytra",
-        "YellowElytra",
-        "LimeElytra",
-        "GreenElytra",
-        "CyanElytra",
-        "LightBlueElytra",
-        "PurpleElytra",
-        "MagentaElytra",
-        "PinkElytra"
+        "VexElytra"
       ]
     },
     {
@@ -323,22 +145,7 @@
         "AllayElytra",
         "DragonElytra",
         "PhantomElytra",
-        "VexElytra",
-
-        "WhiteElytra",
-        "GrayElytra",
-        "BlackElytra",
-        "BrownElytra",
-        "RedElytra",
-        "OrangeElytra",
-        "YellowElytra",
-        "LimeElytra",
-        "GreenElytra",
-        "CyanElytra",
-        "LightBlueElytra",
-        "BlueElytra",
-        "MagentaElytra",
-        "PinkElytra"
+        "VexElytra"
       ]
     },
     {
@@ -349,22 +156,7 @@
         "AllayElytra",
         "DragonElytra",
         "PhantomElytra",
-        "VexElytra",
-
-        "WhiteElytra",
-        "GrayElytra",
-        "BlackElytra",
-        "BrownElytra",
-        "RedElytra",
-        "OrangeElytra",
-        "YellowElytra",
-        "LimeElytra",
-        "GreenElytra",
-        "CyanElytra",
-        "LightBlueElytra",
-        "BlueElytra",
-        "PurpleElytra",
-        "PinkElytra"
+        "VexElytra"
       ]
     },
     {
@@ -375,22 +167,7 @@
         "AllayElytra",
         "DragonElytra",
         "PhantomElytra",
-        "VexElytra",
-
-        "WhiteElytra",
-        "GrayElytra",
-        "BlackElytra",
-        "BrownElytra",
-        "RedElytra",
-        "OrangeElytra",
-        "YellowElytra",
-        "LimeElytra",
-        "GreenElytra",
-        "CyanElytra",
-        "LightBlueElytra",
-        "BlueElytra",
-        "PurpleElytra",
-        "MagentaElytra"
+        "VexElytra"
       ]
     }
   ]
